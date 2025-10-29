@@ -1,0 +1,65 @@
+# Knowledge Extraction Pipeline Configuration
+
+# Content Filtering Settings
+filtering:
+  # Enable/disable all filtering (master switch)
+  enabled: true
+
+  # Priority 1: Pattern-based filtering
+  pattern_filtering:
+    enabled: true
+    skip_patterns:
+      - "^table of contents$"
+      - "^index$"
+      - "warranty"
+      - "legal notice"
+      - "page \\d+"
+      - "^appendix"
+      - "^bibliography"
+      - "^references$"
+    case_sensitive: false
+
+  # Priority 1: Minimum content quality
+  content_quality:
+    enabled: true
+    min_text_length: 100            # Minimum characters of actual text
+    max_whitespace_ratio: 0.8        # Skip if > 80% whitespace
+    min_non_whitespace_chars: 50     # Minimum meaningful characters
+
+  # Priority 2: Language detection
+  language_detection:
+    enabled: true
+    target_language: "en"            # Keep only English content
+    min_text_for_detection: 50       # Minimum chars needed for reliable detection
+    confidence_threshold: 0.7        # Detection confidence (0-1)
+    fallback_on_error: true          # Keep section if detection fails
+
+  # Section structure filtering
+  structural_filtering:
+    enabled: true
+    skip_section_titles:
+      - "table of contents"
+      - "index"
+      - "warranty"
+      - "legal notice"
+      - "disclaimer"
+      - "copyright"
+      - "trademark"
+    max_chars_per_section: 10000     # Split large sections
+
+# PDF Processing Settings
+pdf_processing:
+  datasource_code: "SRC_DOCS_PIPELINE5"
+  default_language: "en"
+
+# Output Settings
+output:
+  individual_files: true
+  batch_file: true
+  indent: 2
+  ensure_ascii: false
+
+# Logging Settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
