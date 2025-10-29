@@ -11,7 +11,16 @@ from typing import List, Dict, Any, Optional
 from pathlib import Path
 from PyPDF2 import PdfReader
 import logging
-from jsonschema import validate, ValidationError
+try:
+    from jsonschema import validate, ValidationError
+    _JSONSCHEMA_AVAILABLE = True
+except ModuleNotFoundError:
+    validate = None  # type: ignore[assignment]
+    _JSONSCHEMA_AVAILABLE = False
+
+    class ValidationError(Exception):
+        """Fallback ValidationError when jsonschema is unavailable."""
+        pass
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -227,10 +236,17 @@ class PDFReader:
         }
 
         # Validate against schema
-        try:
-            validate(instance=parsed_document, schema=self.schema)
-        except ValidationError as e:
-            logger.warning(f"Schema validation failed for {pdf_path.name}: {e.message}")
+        if _JSONSCHEMA_AVAILABLE:
+            try:
+                validate(instance=parsed_document, schema=self.schema)  # type: ignore[arg-type]
+            except ValidationError as e:
+                logger.warning(f"Schema validation failed for {pdf_path.name}: {getattr(e, 'message', e)}")
+        else:
+            logger.warning(
+                "Skipping schema validation for %s because 'jsonschema' is not installed. "
+                "Install it with 'pip install -r requirements.txt' to enable validation.",
+                pdf_path.name,
+            )
 
         logger.info(f"Successfully parsed {pdf_path.name}: {len(sections)} sections, {page_count} pages")
         return parsed_document

@@ -1,15 +1,15 @@
 {
-  "batch_id": "batch_20251029162946",
-  "processed_utc": "2025-10-29T15:29:46.064554Z",
+  "batch_id": "batch_20251029165550",
+  "processed_utc": "2025-10-29T15:55:50.317906Z",
   "document_count": 3,
   "documents": [
     {
-      "document_code": "doc_14470_MA_QSG_WARRANTY_PROD_2023_03_30_20251029162928",
+      "document_code": "doc_14470_MA_QSG_WARRANTY_PROD_2023_03_30_20251029165534",
       "title": "14470 Ma Qsg Warranty Prod 2023 03 30",
       "datasource_code": "SRC_DOCS_PIPELINE5",
       "language": "en",
-      "ingestion_id": "ing_20251029162928",
-      "created_utc": "2025-10-29T15:29:28.328315Z",
+      "ingestion_id": "ing_20251029165534",
+      "created_utc": "2025-10-29T15:55:34.894551Z",
       "source": {
         "uri": "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/Source/14470_MA_QSG_WARRANTY_PROD_2023_03_30.pdf",
         "filename": "14470_MA_QSG_WARRANTY_PROD_2023_03_30.pdf",
@@ -112,12 +112,12 @@
       }
     },
     {
-      "document_code": "doc_17303_MA_QSG_SAFETY_Z2_PROD_2024_01_11_20251029162929",
+      "document_code": "doc_17303_MA_QSG_SAFETY_Z2_PROD_2024_01_11_20251029165535",
       "title": "17303 Ma Qsg Safety Z2 Prod 2024 01 11",
       "datasource_code": "SRC_DOCS_PIPELINE5",
       "language": "en",
-      "ingestion_id": "ing_20251029162929",
-      "created_utc": "2025-10-29T15:29:29.027954Z",
+      "ingestion_id": "ing_20251029165535",
+      "created_utc": "2025-10-29T15:55:35.532898Z",
       "source": {
         "uri": "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/Source/17303_MA_QSG_SAFETY_Z2_PROD_2024_01_11.pdf",
         "filename": "17303_MA_QSG_SAFETY_Z2_PROD_2024_01_11.pdf",
@@ -220,12 +220,12 @@
       }
     },
     {
-      "document_code": "doc_service_manual_Citiz_20251029162946",
+      "document_code": "doc_service_manual_Citiz_20251029165550",
       "title": "Service Manual Citiz",
       "datasource_code": "SRC_DOCS_PIPELINE5",
       "language": "en",
-      "ingestion_id": "ing_20251029162946",
-      "created_utc": "2025-10-29T15:29:46.063246Z",
+      "ingestion_id": "ing_20251029165550",
+      "created_utc": "2025-10-29T15:55:50.316751Z",
       "source": {
         "uri": "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/Source/service_manual_Citiz.pdf",
         "filename": "service_manual_Citiz.pdf",

@@ -42,10 +42,48 @@ def main():
 
     reader = PDFReader(source_dir=str(SOURCE_DIR), schema_path=str(SCHEMA_PATH))
 
+    pdf_files = sorted(SOURCE_DIR.glob("*.pdf"))
+    print(f"\n▶ Found {len(pdf_files)} PDF file(s) ready for parsing.")
+    if pdf_files:
+        for pdf in pdf_files:
+            print(f"   - {pdf.name}")
+
     print("\n▶ Parsing PDFs...")
     parsed_docs = reader.process_directory(output_dir=str(OUTPUT_DIR))
 
     if parsed_docs:
+        stats_rows = []
+        for doc in parsed_docs:
+            source_info = doc.get("source", {})
+            sections = doc.get("sections", [])
+            page_count = source_info.get("page_count", 0)
+            char_count = sum(len(section.get("text") or "") for section in sections)
+            tables_count = sum(len(section.get("tables") or []) for section in sections)
+            figures_count = sum(len(section.get("figures") or []) for section in sections)
+            stats_rows.append(
+                (
+                    source_info.get("filename", "N/A"),
+                    page_count,
+                    char_count,
+                    tables_count,
+                    figures_count,
+                )
+            )
+
+        headers = ("Filename", "Pages", "Characters", "Tables", "Images")
+        col_widths = [
+            max(len(str(row[idx])) for row in stats_rows + [headers]) for idx in range(len(headers))
+        ]
+
+        def format_row(row):
+            return " | ".join(str(value).ljust(col_widths[idx]) for idx, value in enumerate(row))
+
+        print("\n📊 Document statistics:")
+        print(f"   {format_row(headers)}")
+        print(f"   {'-+-'.join('-' * width for width in col_widths)}")
+        for row in stats_rows:
+            print(f"   {format_row(row)}")
+
         batch_file = OUTPUT_DIR / "test_batch.json"
         reader.save_batch(parsed_documents=parsed_docs, output_file=str(batch_file))
 
@@ -53,9 +91,6 @@ def main():
         print(f"   Per-document JSON written to: {OUTPUT_DIR}")
         print(f"   Batch file: {batch_file}")
 
-        # Preview first document (safe truncation)
-        print("\n--- Preview of first parsed document ---")
-        print(json.dumps(parsed_docs[0], indent=2, ensure_ascii=False)[:1200], "...")
     else:
         print("\n⚠️  No PDFs found or parsing produced no output.")
         print("   Check that there is at least one .pdf (lowercase) in the Source/ folder.")
