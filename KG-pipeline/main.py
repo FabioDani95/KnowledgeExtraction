@@ -1,6 +1,7 @@
 from pathlib import Path
 import sys
 import json
+import yaml
 
 # === Make project root importable ===
 BASE_DIR = Path(__file__).resolve().parent
@@ -25,6 +26,7 @@ def main():
     # Use paths relative to the repo root to avoid surprises
     SOURCE_DIR = BASE_DIR / "Source"
     SCHEMA_PATH = BASE_DIR / "schemas" / "parsed_document.json"
+    CONFIG_PATH = BASE_DIR / "config.yaml"
     OUTPUT_DIR = BASE_DIR / "output" / "test_parsed"
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -35,12 +37,26 @@ def main():
     if not SCHEMA_PATH.exists():
         raise FileNotFoundError(f"Schema file not found: {SCHEMA_PATH}")
 
+    # Load configuration
+    config = {}
+    if CONFIG_PATH.exists():
+        with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+            config = yaml.safe_load(f) or {}
+        print(f"• Loaded config from: {CONFIG_PATH}")
+        if config.get("filtering", {}).get("enabled"):
+            print("  → Content filtering: ENABLED")
+        else:
+            print("  → Content filtering: DISABLED")
+    else:
+        print(f"⚠️  Config file not found: {CONFIG_PATH}")
+        print("  → Using default settings (no filtering)")
+
     # Show where we are writing
     print(f"\n• Using SOURCE_DIR  : {SOURCE_DIR}")
     print(f"• Using SCHEMA_PATH : {SCHEMA_PATH}")
     print(f"• Using OUTPUT_DIR  : {OUTPUT_DIR}")
 
-    reader = PDFReader(source_dir=str(SOURCE_DIR), schema_path=str(SCHEMA_PATH))
+    reader = PDFReader(source_dir=str(SOURCE_DIR), schema_path=str(SCHEMA_PATH), config=config)
 
     pdf_files = sorted(SOURCE_DIR.glob("*.pdf"))
     print(f"\n▶ Found {len(pdf_files)} PDF file(s) ready for parsing.")

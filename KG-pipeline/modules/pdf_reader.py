@@ -6,6 +6,8 @@ Parses PDF documents from the source directory and structures them according to 
 import os
 import json
 import hashlib
+import re
+import yaml
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 from pathlib import Path
@@ -22,6 +24,17 @@ except ModuleNotFoundError:
         """Fallback ValidationError when jsonschema is unavailable."""
         pass
 
+try:
+    from langdetect import detect, LangDetectException
+    _LANGDETECT_AVAILABLE = True
+except ModuleNotFoundError:
+    detect = None  # type: ignore[assignment]
+    _LANGDETECT_AVAILABLE = False
+
+    class LangDetectException(Exception):
+        """Fallback LangDetectException when langdetect is unavailable."""
+        pass
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -32,13 +45,14 @@ class PDFReader:
     Handles PDF document parsing and conversion to structured format.
     """
 
-    def __init__(self, source_dir: str, schema_path: str):
+    def __init__(self, source_dir: str, schema_path: str, config: Optional[Dict[str, Any]] = None):
         """
         Initialize the PDF reader with source directory and schema.
 
         Args:
             source_dir: Path to directory containing PDF files
             schema_path: Path to the parsed_document.json schema file
+            config: Optional configuration dictionary for filtering and processing
         """
         self.source_dir = Path(source_dir)
         self.schema_path = Path(schema_path)
@@ -53,7 +67,160 @@ class PDFReader:
         with open(self.schema_path, "r", encoding="utf-8") as f:
             self.schema = json.load(f)
 
+        # Load configuration
+        self.config = config or self._load_default_config()
+
         logger.info(f"PDFReader initialized with source: {self.source_dir}")
+        if self.config.get("filtering", {}).get("enabled"):
+            logger.info("Content filtering is ENABLED")
+
+    def _load_default_config(self) -> Dict[str, Any]:
+        """
+        Load default configuration if no config is provided.
+        """
+        return {
+            "filtering": {
+                "enabled": False,
+                "pattern_filtering": {"enabled": False},
+                "content_quality": {"enabled": False},
+                "language_detection": {"enabled": False},
+                "structural_filtering": {"enabled": False}
+            }
+        }
+
+    def _is_english(self, text: str) -> bool:
+        """
+        Check if text is in English using language detection.
+        Returns True if English, False otherwise.
+        """
+        if not _LANGDETECT_AVAILABLE:
+            logger.warning("langdetect not available, skipping language detection")
+            return True
+
+        lang_config = self.config.get("filtering", {}).get("language_detection", {})
+        min_length = lang_config.get("min_text_for_detection", 50)
+        fallback = lang_config.get("fallback_on_error", True)
+
+        if len(text.strip()) < min_length:
+            logger.debug(f"Text too short for language detection ({len(text)} chars)")
+            return fallback
+
+        try:
+            detected_lang = detect(text)  # type: ignore[misc]
+            target_lang = lang_config.get("target_language", "en")
+            return detected_lang == target_lang
+        except (LangDetectException, Exception) as e:
+            logger.debug(f"Language detection failed: {e}")
+            return fallback
+
+    def _matches_skip_pattern(self, title: str, text: str) -> bool:
+        """
+        Check if section matches any skip pattern.
+        """
+        pattern_config = self.config.get("filtering", {}).get("pattern_filtering", {})
+        if not pattern_config.get("enabled", False):
+            return False
+
+        skip_patterns = pattern_config.get("skip_patterns", [])
+        case_sensitive = pattern_config.get("case_sensitive", False)
+
+        content = f"{title} {text}"
+        if not case_sensitive:
+            content = content.lower()
+
+        for pattern in skip_patterns:
+            try:
+                flags = 0 if case_sensitive else re.IGNORECASE
+                if re.search(pattern, content, flags):
+                    logger.debug(f"Section matched skip pattern: {pattern}")
+                    return True
+            except re.error as e:
+                logger.warning(f"Invalid regex pattern '{pattern}': {e}")
+
+        return False
+
+    def _has_sufficient_quality(self, text: str) -> bool:
+        """
+        Check if section has sufficient content quality.
+        """
+        quality_config = self.config.get("filtering", {}).get("content_quality", {})
+        if not quality_config.get("enabled", False):
+            return True
+
+        min_text_length = quality_config.get("min_text_length", 100)
+        max_whitespace_ratio = quality_config.get("max_whitespace_ratio", 0.8)
+        min_non_whitespace = quality_config.get("min_non_whitespace_chars", 50)
+
+        # Check minimum length
+        if len(text) < min_text_length:
+            logger.debug(f"Section too short: {len(text)} < {min_text_length}")
+            return False
+
+        # Check whitespace ratio
+        total_chars = len(text)
+        non_whitespace_chars = len(text.replace(" ", "").replace("\n", "").replace("\t", ""))
+
+        if non_whitespace_chars < min_non_whitespace:
+            logger.debug(f"Insufficient non-whitespace chars: {non_whitespace_chars}")
+            return False
+
+        whitespace_ratio = 1 - (non_whitespace_chars / total_chars) if total_chars > 0 else 1
+        if whitespace_ratio > max_whitespace_ratio:
+            logger.debug(f"Too much whitespace: {whitespace_ratio:.2f} > {max_whitespace_ratio}")
+            return False
+
+        return True
+
+    def _should_skip_section_title(self, title: str) -> bool:
+        """
+        Check if section title is in the skip list.
+        """
+        struct_config = self.config.get("filtering", {}).get("structural_filtering", {})
+        if not struct_config.get("enabled", False):
+            return False
+
+        skip_titles = struct_config.get("skip_section_titles", [])
+        title_lower = title.lower().strip()
+
+        for skip_title in skip_titles:
+            if skip_title.lower() in title_lower:
+                logger.debug(f"Skipping section with title: {title}")
+                return True
+
+        return False
+
+    def _apply_filters(self, section: Dict[str, Any]) -> bool:
+        """
+        Apply all enabled filters to a section.
+        Returns True if section should be kept, False if it should be filtered out.
+        """
+        if not self.config.get("filtering", {}).get("enabled", False):
+            return True
+
+        title = section.get("title", "")
+        text = section.get("text", "")
+
+        # Priority 1 Filters
+        if self._should_skip_section_title(title):
+            logger.info(f"Filtered out section by title: {title}")
+            return False
+
+        if self._matches_skip_pattern(title, text):
+            logger.info(f"Filtered out section by pattern: {title}")
+            return False
+
+        if not self._has_sufficient_quality(text):
+            logger.info(f"Filtered out section by quality: {title}")
+            return False
+
+        # Priority 2 Filter: Language Detection
+        lang_config = self.config.get("filtering", {}).get("language_detection", {})
+        if lang_config.get("enabled", False):
+            if not self._is_english(text):
+                logger.info(f"Filtered out non-English section: {title}")
+                return False
+
+        return True
 
     def calculate_checksum(self, filepath: Path) -> str:
         """
@@ -96,6 +263,7 @@ class PDFReader:
         """
         Detect and structure sections from extracted text.
         Basic version (single section). Can be expanded with NLP later.
+        Applies filtering based on configuration.
         """
         sections = []
         current_section = {
@@ -111,7 +279,14 @@ class PDFReader:
             "figures": [],
             "tags": [],
         }
-        sections.append(current_section)
+
+        # Apply filters to section
+        if self._apply_filters(current_section):
+            sections.append(current_section)
+            logger.debug(f"Section '{current_section['title']}' passed all filters")
+        else:
+            logger.info(f"Section '{current_section['title']}' was filtered out")
+
         return sections
 
     def extract_metadata(
@@ -317,9 +492,16 @@ def main():
     BASE_DIR = Path(__file__).resolve().parent.parent
     SOURCE_DIR = BASE_DIR / "Source"
     SCHEMA_PATH = BASE_DIR / "schemas" / "parsed_document.json"
+    CONFIG_PATH = BASE_DIR / "config.yaml"
     OUTPUT_DIR = BASE_DIR / "output" / "parsed"
 
-    reader = PDFReader(source_dir=str(SOURCE_DIR), schema_path=str(SCHEMA_PATH))
+    # Load configuration if available
+    config = {}
+    if CONFIG_PATH.exists():
+        with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+            config = yaml.safe_load(f) or {}
+
+    reader = PDFReader(source_dir=str(SOURCE_DIR), schema_path=str(SCHEMA_PATH), config=config)
 
     parsed_docs = reader.process_directory(output_dir=str(OUTPUT_DIR))
 
