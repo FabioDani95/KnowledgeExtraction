@@ -1,0 +1,97 @@
+
+{
+  "document_code": "string",
+  "ingestion_id": "string",
+  "extraction_version": "string",
+  "datasource_code": "string",
+  "extractor": {
+    "model": "string",
+    "prompt_id": "string",
+    "temperature": "number",
+    "max_tokens": "integer"
+  },
+  "allowed_types": [
+    "Product",
+    "Subsystem",
+    "ComponentType",
+    "Component",
+    "ParameterSpec",
+    "Unit",
+    "SensorType",
+    "Sensor",
+    "FailureMode",
+    "RepairAction",
+    "MaintenanceTask",
+    "Tool",
+    "Consumable",
+    "Core",
+    "ProcessStep",
+    "RoutingDecision",
+    "State",
+    "Document",
+    "DataSource",
+    "AnomalyThreshold",
+    "DiagnosticRule",
+    "MachineMode",
+    "TestSpec",
+    "RatingPlate"
+  ],
+  "entities": [
+    {
+      "id": "string",
+      "type": "string",
+      "name": "string",
+      "aliases": [
+        "string"
+      ],
+      "notes": "string",
+      "spans": [
+        {
+          "section_id": "string",
+          "page": "integer",
+          "char_start": "integer",
+          "char_end": "integer",
+          "source_text": "string"
+        }
+      ],
+      "confidence": "number",
+      "ofType_ref": "string",
+      "unit_raw": "string",
+      "nominal_value": "number",
+      "min_value": "number",
+      "max_value": "number",
+      "tolerance": "number",
+      "machine_mode_ref": "string"
+    }
+  ],
+  "relations": [
+    {
+      "type": "string",
+      "from_ref": "string",
+      "to_ref": "string",
+      "spans": [
+        {
+          "section_id": "string",
+          "page": "integer",
+          "source_text": "string"
+        }
+      ],
+      "confidence": "number"
+    }
+  ],
+  "provenance": {
+    "overall_confidence": "number",
+    "sections_used": [
+      "string"
+    ],
+    "notes": "string"
+  },
+  "quality": {
+    "json_valid": "boolean",
+    "entities_count": "integer",
+    "relations_count": "integer",
+    "warnings": [
+      "string"
+    ]
+  }
+}

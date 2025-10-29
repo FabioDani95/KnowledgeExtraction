@@ -1,0 +1,65 @@
+{
+    "document_code": "string",
+    "title": "string",
+    "datasource_code": "string",
+    "language": "string",
+    "ingestion_id": "string",
+    "created_utc": "string",
+    "source": {
+      "uri": "string",
+      "filename": "string",
+      "mime_type": "string",
+      "checksum_sha256": "string",
+      "page_count": "integer"
+    },
+    "metadata": {
+      "product_hint": "string",
+      "model_hint": "string",
+      "brand_hint": "string",
+      "doc_type": "string",
+      "version": "string",
+      "year": "integer"
+    },
+    "sections": [
+      {
+        "section_id": "string",
+        "title": "string",
+        "level": "integer",
+        "page_start": "integer",
+        "page_end": "integer",
+        "char_start": "integer",
+        "char_end": "integer",
+        "text": "string",
+        "tables": [
+          {
+            "table_id": "string",
+            "page": "integer",
+            "caption": "string",
+            "n_rows": "integer",
+            "n_cols": "integer",
+            "csv": "string"
+          }
+        ],
+        "figures": [
+          {
+            "figure_id": "string",
+            "page": "integer",
+            "caption": "string"
+          }
+        ],
+        "tags": ["string"]
+      }
+    ],
+    "extraction_constraints": {
+      "skip_patterns": ["string"],
+      "max_chars_per_section": "integer",
+      "allowed_entities": ["string"],
+      "allowed_relations": ["string"]
+    },
+    "quality": {
+      "text_coverage_ratio": "number",
+      "tables_extracted": "integer",
+      "figures_detected": "integer",
+      "notes": "string"
+    }
+}
