@@ -1,0 +1,7 @@
+cat > requirements.txt << 'EOF'
+pypdf2
+openai
+neo4j
+pyyaml
+jsonschema
+EOF
