@@ -551,11 +551,11 @@ class PDFReader:
                 })
                 continue
             # Assembla nuova sezione
+            # is_suspect is True if any of the two heuristics apply
+            is_suspect = bool(suspect_title_body_mismatch or suspect_layout_split)
             section_norm = {
                 "section_id": sid_norm,
-                "logical_id": logical_id,
                 "parent_id": parent_id,
-                "structure_code": structure_code,
                 "title": raw_title,
                 "title_normalized": sec.get("title_normalized", ""),
                 "role": role,
@@ -564,12 +564,10 @@ class PDFReader:
                 "language_confidence": lang_conf,
                 "page_start": page_start,
                 "page_end": page_end,
-                "page_hint": page_hint,
                 "char_start": sec.get("char_start", 0),
                 "char_end": sec.get("char_end", 0),
                 "text": sec.get("text", ""),
-                "suspect_title_body_mismatch": suspect_title_body_mismatch or False,
-                "suspect_layout_split": suspect_layout_split or False,
+                "is_suspect": is_suspect,
                 "tables": sec.get("tables", []),
                 "figures": sec.get("figures", []),
                 "tags": tags

@@ -10,9 +10,11 @@ import json
 import logging
 import os
 from dataclasses import dataclass
+import re
+from textwrap import dedent
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Set, Tuple
 
 try:
     from jsonschema import validate, ValidationError
@@ -206,39 +208,102 @@ class NeuralExtractor:
 
     def extract_document(self, parsed_document: Dict[str, Any]) -> Dict[str, Any]:
         base_payload = self._build_base_payload(parsed_document)
-        prompt, section_ids = self._build_prompt(parsed_document)
+        prompt_batches = self._build_prompt_batches(parsed_document)
 
-        llm_data: Dict[str, Any] = {}
         warnings: List[str] = []
-        json_valid = False
+        entities: List[Dict[str, Any]] = []
+        relations: List[Dict[str, Any]] = []
+        sections_used: Set[str] = set()
+        existing_ids: Set[str] = set()
+        overall_confidences: List[float] = []
+        json_valid = True
+
+        if not prompt_batches:
+            warnings.append("No sections available for neural extraction.")
+            json_valid = False
 
         if self._client is None:
             warnings.append("LLM client not initialised; skipping extraction.")
-        else:
+            json_valid = False
+
+        for batch_index, batch in enumerate(prompt_batches, start=1):
+            sections_used.update(batch["section_ids"])
+
+            if self._client is None:
+                break
+
             try:
-                llm_data = self._invoke_model(prompt)
-                json_valid = True
+                chunk_data = self._invoke_model(batch["prompt"])
             except json.JSONDecodeError as exc:
-                warnings.append(f"Model response was not valid JSON: {exc}")
-                logger.warning("JSON decoding failed for neural extraction: %s", exc)
+                json_valid = False
+                warnings.append(f"Chunk {batch_index}: response was not valid JSON ({exc}).")
+                logger.warning("Chunk %s JSON decoding failed: %s", batch_index, exc)
+                continue
             except OpenAIAPIError as exc:
-                warnings.append(f"OpenAI API error: {exc}")
-                logger.error("OpenAI API error during neural extraction: %s", exc)
+                json_valid = False
+                warnings.append(f"Chunk {batch_index}: OpenAI API error: {exc}")
+                logger.error("OpenAI API error during neural extraction chunk %s: %s", batch_index, exc)
+                continue
             except Exception as exc:  # pragma: no cover - defensive
-                warnings.append(f"Unexpected error during neural extraction: {exc}")
-                logger.error("Unexpected neural extraction error: %s", exc)
+                json_valid = False
+                warnings.append(f"Chunk {batch_index}: unexpected error: {exc}")
+                logger.error("Unexpected neural extraction error for chunk %s: %s", batch_index, exc)
+                continue
 
-        entities = llm_data.get("entities", []) if isinstance(llm_data, dict) else []
-        relations = llm_data.get("relations", []) if isinstance(llm_data, dict) else []
-        provenance = llm_data.get("provenance", {}) if isinstance(llm_data, dict) else {}
+            if not isinstance(chunk_data, dict):
+                json_valid = False
+                warnings.append(f"Chunk {batch_index}: response not a JSON object.")
+                continue
 
-        if provenance:
-            base_payload["provenance"].update(provenance)
-        else:
-            base_payload["provenance"]["sections_used"] = section_ids
+            chunk_entities = self._ensure_entity_list(chunk_data.get("entities"))
+            chunk_relations = self._ensure_relation_list(chunk_data.get("relations"))
+            chunk_provenance = chunk_data.get("provenance", {})
 
-        base_payload["entities"] = self._ensure_entity_list(entities)
-        base_payload["relations"] = self._ensure_relation_list(relations)
+            if chunk_provenance:
+                conf = chunk_provenance.get("overall_confidence")
+                if conf is not None:
+                    try:
+                        overall_confidences.append(float(conf))
+                    except (TypeError, ValueError):
+                        warnings.append(
+                            f"Chunk {batch_index}: could not parse overall_confidence '{conf}'."
+                        )
+                sections_used.update(chunk_provenance.get("sections_used", []))
+
+            entity_id_map: Dict[str, str] = {}
+            for entity in chunk_entities:
+                original_id = entity.get("id") or f"ent-{len(entities)+1:04d}"
+                final_id = original_id
+                while final_id in existing_ids:
+                    final_id = f"{original_id}-{batch_index}"
+                entity["id"] = final_id
+                entity_id_map[original_id] = final_id
+                existing_ids.add(final_id)
+                entities.append(entity)
+
+            for relation in chunk_relations:
+                from_ref = entity_id_map.get(relation.get("from_ref"), relation.get("from_ref"))
+                to_ref = entity_id_map.get(relation.get("to_ref"), relation.get("to_ref"))
+
+                if from_ref not in existing_ids or to_ref not in existing_ids:
+                    warnings.append(
+                        f"Chunk {batch_index}: skipped relation '{relation.get('type')}' "
+                        "due to missing referenced entities."
+                    )
+                    continue
+
+                relation["from_ref"] = from_ref
+                relation["to_ref"] = to_ref
+                relations.append(relation)
+
+        base_payload["entities"] = entities
+        base_payload["relations"] = relations
+        base_payload["provenance"]["sections_used"] = sorted(sections_used)
+
+        if overall_confidences:
+            base_payload["provenance"]["overall_confidence"] = sum(overall_confidences) / len(
+                overall_confidences
+            )
 
         warnings.extend(self._validate_payload(base_payload))
 
@@ -268,7 +333,6 @@ class NeuralExtractor:
             input=prompt,
             temperature=self.settings.temperature,
             max_output_tokens=self.settings.max_output_tokens,
-            response_format={"type": "json_object"},
         )
 
         response_text = getattr(response, "output_text", None)
@@ -278,7 +342,7 @@ class NeuralExtractor:
         if not response_text:
             raise json.JSONDecodeError("empty response", "", 0)
 
-        return json.loads(response_text)
+        return self._parse_json_response(response_text)
 
     @staticmethod
     def _concatenate_response_content(response: Any) -> str:
@@ -301,6 +365,77 @@ class NeuralExtractor:
                             if isinstance(args, str):
                                 chunks.append(args)
         return "".join(chunks)
+
+    @staticmethod
+    def _parse_json_response(text: str) -> Dict[str, Any]:
+        """
+        Try to coerce the model output into valid JSON.
+        Applies several cleanup attempts before giving up.
+        """
+        for candidate in NeuralExtractor._yield_json_candidates(text):
+            # First attempt: raw candidate
+            try:
+                return json.loads(candidate)
+            except json.JSONDecodeError:
+                pass
+
+            # Second attempt: sanitized candidate
+            sanitized = NeuralExtractor._sanitize_json_candidate(candidate)
+            if sanitized != candidate:
+                try:
+                    return json.loads(sanitized)
+                except json.JSONDecodeError:
+                    continue
+
+        # If all attempts failed, raise using the first candidate for context.
+        first_candidate = next(iter(NeuralExtractor._yield_json_candidates(text)), text.strip())
+        raise json.JSONDecodeError("Unable to parse LLM response as JSON", first_candidate, 0)
+
+    @staticmethod
+    def _yield_json_candidates(text: str) -> Iterable[str]:
+        """
+        Return progressively more constrained slices that might contain valid JSON.
+        """
+        stripped = text.strip()
+        if stripped:
+            yield stripped
+
+        # Code fences ```json ... ```
+        fence_pattern = re.compile(r"```(?:json)?\s*(.*?)```", re.DOTALL | re.IGNORECASE)
+        for match in fence_pattern.finditer(text):
+            block = match.group(1).strip()
+            if block:
+                yield block
+
+        # Balanced braces from first { to last }
+        first_brace = text.find("{")
+        last_brace = text.rfind("}")
+        if first_brace != -1 and last_brace != -1 and last_brace > first_brace:
+            yield text[first_brace : last_brace + 1].strip()
+
+    @staticmethod
+    def _sanitize_json_candidate(candidate: str) -> str:
+        """
+        Apply lightweight sanitisation to help with common JSON formatting mistakes.
+        """
+        cleaned = candidate.strip()
+        # Remove BOM if present
+        cleaned = cleaned.lstrip("\ufeff")
+        # Normalise line endings
+        cleaned = cleaned.replace("\r\n", "\n").replace("\r", "\n")
+        # Remove // comments
+        cleaned = re.sub(r"//.*", "", cleaned)
+        # Remove /* */ comments
+        cleaned = re.sub(r"/\*.*?\*/", "", cleaned, flags=re.DOTALL)
+        # Replace Python boolean/null literals with JSON equivalents
+        cleaned = re.sub(r"\bTrue\b", "true", cleaned)
+        cleaned = re.sub(r"\bFalse\b", "false", cleaned)
+        cleaned = re.sub(r"\bNone\b", "null", cleaned)
+        # Remove trailing commas before } or ]
+        cleaned = re.sub(r",(\s*[}\]])", r"\1", cleaned)
+        # Collapse multiple consecutive commas (rare hallucination)
+        cleaned = re.sub(r",\s*,+", ",", cleaned)
+        return cleaned
 
     # --------------------------------------------------------------------- #
     # Payload helpers
@@ -340,7 +475,72 @@ class NeuralExtractor:
 
         return base_payload
 
-    def _build_prompt(self, parsed_document: Dict[str, Any]) -> Tuple[str, List[str]]:
+    def _build_prompt_batches(self, parsed_document: Dict[str, Any]) -> List[Dict[str, Any]]:
+        sections = parsed_document.get("sections", []) or []
+        section_batches = self._chunk_sections(sections)
+
+        prompts: List[Dict[str, Any]] = []
+        total_batches = max(len(section_batches), 1)
+
+        for idx, batch in enumerate(section_batches, start=1):
+            prompt = self._render_prompt(parsed_document, batch, idx, total_batches)
+            section_ids = [item["section_id"] for item in batch]
+            prompts.append({"prompt": prompt, "section_ids": section_ids})
+
+        return prompts
+
+    def _chunk_sections(self, sections: List[Dict[str, Any]]) -> List[List[Dict[str, str]]]:
+        batches: List[List[Dict[str, str]]] = []
+        current_batch: List[Dict[str, str]] = []
+        current_chars = 0
+
+        for section in sections:
+            text = (section.get("text") or "").strip()
+            if not text:
+                continue
+
+            snippet = text[: self.settings.max_chars_per_section]
+            if not snippet:
+                continue
+
+            section_id = section.get("section_id") or section.get("id") or f"sec-{len(current_batch)+1}"
+            title = section.get("title") or section.get("title_normalized") or "Untitled section"
+            page_span = f"pages {section.get('page_start', '?')}-{section.get('page_end', '?')}"
+            snippet_len = len(snippet)
+
+            exceed_char_limit = current_batch and (current_chars + snippet_len > self.settings.max_total_chars)
+            exceed_section_limit = current_batch and len(current_batch) >= self.settings.max_sections
+
+            if exceed_char_limit or exceed_section_limit:
+                batches.append(current_batch)
+                current_batch = []
+                current_chars = 0
+
+            current_batch.append(
+                {
+                    "section_id": section_id,
+                    "title": title,
+                    "page_span": page_span,
+                    "snippet": snippet,
+                }
+            )
+            current_chars += snippet_len
+
+        if current_batch:
+            batches.append(current_batch)
+
+        if not batches:
+            batches.append([])
+
+        return batches
+
+    def _render_prompt(
+        self,
+        parsed_document: Dict[str, Any],
+        batch: List[Dict[str, str]],
+        chunk_index: int,
+        chunk_total: int,
+    ) -> str:
         metadata_lines = [
             f"Document code: {parsed_document.get('document_code', 'N/A')}",
             f"Title: {parsed_document.get('title', parsed_document.get('document_title', 'N/A'))}",
@@ -348,246 +548,44 @@ class NeuralExtractor:
             f"Page count: {parsed_document.get('page_count', 'N/A')}",
         ]
 
-        sections = parsed_document.get("sections", []) or []
-        section_snippets, section_ids = self._collect_section_snippets(sections)
-
         allowed_types_str = ", ".join(self.allowed_types)
 
-        instructions = (
-            "You are a knowledge extraction system specialized in technical and industrial documents. "
-            "Extract entities and relations that match the provided allowed types. Only create entries "
-            "when the information is explicitly supported by the context.\n\n"
-            "CORE RULES:\n"
-            "1. Output MUST be valid JSON matching the specified schema (no extra commentary).\n"
-            "2. Use section_id references from the provided context in spans.\n"
-            "3. Always include at least one span per entity/relation with exact source_text.\n"
-            "4. Provide confidence scores between 0 and 1 (see scoring guidelines below).\n"
-            "5. Include provenance.sections_used with section ids you actually used.\n"
-        )
+        instructions = dedent(
+            """
+            You are a knowledge extraction assistant specialized in technical documentation.
+            Analyze only the sections provided in this chunk and extract structured entities and relations
+            that conform to the schema.
 
-        extraction_guidelines = (
-            "EXTRACTION GUIDELINES:\n\n"
-            "1. NAME NORMALIZATION:\n"
-            "   - Preserve original casing from document for technical terms\n"
-            "   - Extract the most complete form as primary name\n"
-            "   - Put abbreviations, codes, and alternative names in aliases array\n"
-            "   - Example: name='Primary Cooling Pump', aliases=['PCP', 'Pump-01', 'P1']\n"
-            "   - For part numbers/codes: preserve exact format (e.g., 'XR-500' not 'xr500')\n\n"
-            "2. NUMERICAL VALUES WITH UNITS:\n"
-            "   - Extract all numbers as floats (nominal_value, min_value, max_value, tolerance)\n"
-            "   - Parse ranges: '70-100°C' → min_value=70.0, max_value=100.0, unit_raw='°C'\n"
-            "   - Parse tolerance: '85±5°C' → nominal_value=85.0, tolerance=5.0, unit_raw='°C'\n"
-            "   - Parse nominal only: '1500 RPM' → nominal_value=1500.0, unit_raw='RPM'\n"
-            "   - If unit is unclear or complex, extract text as-is in unit_raw\n"
-            "   - If range without nominal, set nominal to midpoint: min=70, max=100 → nominal=85.0\n\n"
-            "3. CONFIDENCE SCORING:\n"
-            "   - 0.9-1.0: Explicitly stated with clear context and full details\n"
-            "   - 0.7-0.8: Clearly stated but may lack some details or context\n"
-            "   - 0.5-0.6: Reasonably inferred from context or partial information\n"
-            "   - 0.3-0.4: Weakly inferred, ambiguous, or conflicting information\n"
-            "   - Below 0.3: DO NOT extract (too uncertain)\n\n"
-            "4. HANDLING AMBIGUITY:\n"
-            "   - If entity type is uncertain, use the most specific type that fits\n"
-            "   - If name varies in text, use most complete form as name, add variants to aliases\n"
-            "   - If information is partial, extract what you have with appropriate confidence (0.4-0.6)\n"
-            "   - If information conflicts, extract the most reliable version and note conflict\n"
-            "   - Add clarifying details in 'notes' field when confidence < 0.8\n\n"
-            "5. ENTITY REFERENCES:\n"
-            "   - Use ofType_ref to link an entity to its type (e.g., Sensor → SensorType)\n"
-            "   - Use machine_mode_ref to link parameters to operational modes\n"
-            "   - Ensure referenced entity IDs exist in the entities array\n"
-            "   - Create intermediate entities if needed (e.g., extract SensorType for a Sensor)\n\n"
-            "6. ALIASES AND DISAMBIGUATION:\n"
-            "   - If text uses multiple names for same entity, extract once with all names in aliases\n"
-            "   - Example: 'Motor M1 (primary drive)' → name='Motor M1', aliases=['M1', 'primary drive']\n"
-            "   - Use consistent IDs: prefer pattern '{type}-{identifier}' (e.g., 'sensor-t1', 'motor-m1')\n"
-        )
+            RESPONSE REQUIREMENTS:
+              1. Output strict JSON without commentary.
+              2. The root object should contain 'entities', 'relations', and optional 'provenance'.
+              3. Use provided section_id values in spans.
+              4. Provide confidence scores between 0 and 1.
+              5. Do not reference sections outside this chunk.
+            """
+        ).strip()
 
-        examples = (
-            "EXTRACTION EXAMPLES:\n\n"
-            "Example 1 - Component with numerical specs:\n"
-            "Input: 'The XR-500 motor operates at 1500±50 RPM in normal mode.'\n"
-            "Output entities:\n"
-            "{\n"
-            '  "id": "component-xr500",\n'
-            '  "type": "Component",\n'
-            '  "name": "XR-500 motor",\n'
-            '  "aliases": ["XR-500"],\n'
-            '  "nominal_value": 1500.0,\n'
-            '  "tolerance": 50.0,\n'
-            '  "unit_raw": "RPM",\n'
-            '  "machine_mode_ref": "mode-normal",\n'
-            '  "confidence": 0.95,\n'
-            '  "spans": [{"section_id": "sec-3", "source_text": "XR-500 motor operates at 1500±50 RPM"}]\n'
-            "}\n\n"
-            "Example 2 - Sensor with type and aliases:\n"
-            "Input: 'Temperature sensor T1 (primary thermometer) monitors the cooling system.'\n"
-            "Output entities:\n"
-            "{\n"
-            '  "id": "sensor-t1",\n'
-            '  "type": "Sensor",\n'
-            '  "name": "Temperature sensor T1",\n'
-            '  "aliases": ["T1", "primary thermometer"],\n'
-            '  "ofType_ref": "sensortype-temperature",\n'
-            '  "confidence": 0.9,\n'
-            '  "spans": [{"section_id": "sec-2", "source_text": "Temperature sensor T1 (primary thermometer)"}]\n'
-            "},\n"
-            "{\n"
-            '  "id": "sensortype-temperature",\n'
-            '  "type": "SensorType",\n'
-            '  "name": "Temperature",\n'
-            '  "confidence": 0.85,\n'
-            '  "spans": [{"section_id": "sec-2", "source_text": "Temperature sensor"}]\n'
-            "}\n"
-            "Output relation:\n"
-            "{\n"
-            '  "type": "monitors",\n'
-            '  "from_ref": "sensor-t1",\n'
-            '  "to_ref": "subsystem-cooling",\n'
-            '  "confidence": 0.9,\n'
-            '  "spans": [{"section_id": "sec-2", "source_text": "monitors the cooling system"}]\n'
-            "}\n\n"
-            "Example 3 - Parameter with range:\n"
-            "Input: 'Operating temperature range: 70-100°C (nominal 85°C)'\n"
-            "Output entity:\n"
-            "{\n"
-            '  "id": "param-temp-operating",\n'
-            '  "type": "ParameterSpec",\n'
-            '  "name": "Operating temperature",\n'
-            '  "nominal_value": 85.0,\n'
-            '  "min_value": 70.0,\n'
-            '  "max_value": 100.0,\n'
-            '  "unit_raw": "°C",\n'
-            '  "confidence": 0.95,\n'
-            '  "spans": [{"section_id": "sec-4", "source_text": "Operating temperature range: 70-100°C (nominal 85°C)"}]\n'
-            "}\n\n"
-            "Example 4 - Partial information with low confidence:\n"
-            "Input: 'The pump may require maintenance after extended use.'\n"
-            "Output entity:\n"
-            "{\n"
-            '  "id": "component-pump-generic",\n'
-            '  "type": "Component",\n'
-            '  "name": "pump",\n'
-            '  "confidence": 0.5,\n'
-            '  "notes": "Generic mention, no specific identifier or details provided",\n'
-            '  "spans": [{"section_id": "sec-5", "source_text": "The pump"}]\n'
-            "}\n"
-        )
+        sections_text: List[str] = []
+        for item in batch:
+            sections_text.append(
+                f"[Chunk {chunk_index}/{chunk_total} | Section {item['section_id']} | "
+                f"{item['title']} | {item['page_span']}]\n{item['snippet']}\n"
+            )
 
-        edge_cases = (
-            "EDGE CASES:\n"
-            "- Multiple values with same unit: Create separate ParameterSpec entities for each\n"
-            "- Entity mentioned without details: Extract with confidence 0.4-0.6, add note 'limited information'\n"
-            "- Conflicting information: Extract highest confidence version, note conflict in 'notes'\n"
-            "- Acronym without expansion: Use acronym as name, leave aliases empty or add known variants\n"
-            "- Implicit relationships: Only create relations when explicitly stated or strongly implied (confidence ≥ 0.6)\n"
-            "- Missing information: Omit optional fields rather than guessing\n"
-            "- Tables with specs: Extract each row as separate entity if it represents distinct item\n"
-        )
-
-        schema_expectations = (
-            "JSON SCHEMA OUTLINE:\n"
-            "{\n"
-            '  "document_code": string,\n'
-            '  "ingestion_id": string,\n'
-            '  "extraction_version": string,\n'
-            '  "datasource_code": string,\n'
-            '  "extractor": { "model": string, "prompt_id": string, "temperature": number, "max_tokens": integer },\n'
-            f'  "allowed_types": [{allowed_types_str}],\n'
-            '  "entities": [\n'
-            '    {\n'
-            '      "id": string,                    // Required: unique ID, prefer pattern "{type}-{identifier}"\n'
-            '      "type": string,                  // Required: one of allowed_types\n'
-            '      "name": string,                  // Required: primary name (most complete form)\n'
-            '      "aliases": [string],             // Optional: alternative names, codes, abbreviations\n'
-            '      "notes": string,                 // Optional: clarifications, especially if confidence < 0.8\n'
-            '      "spans": [                       // Required: at least one span\n'
-            '        {"section_id": string, "page": int, "source_text": string}\n'
-            '      ],\n'
-            '      "confidence": number,            // Required: 0.0-1.0 (see scoring guidelines)\n'
-            '      "ofType_ref": string,            // Optional: reference to type entity (e.g., Sensor → SensorType)\n'
-            '      "unit_raw": string,              // Optional: unit as-is from text\n'
-            '      "nominal_value": number,         // Optional: target/nominal value\n'
-            '      "min_value": number,             // Optional: minimum in range\n'
-            '      "max_value": number,             // Optional: maximum in range\n'
-            '      "tolerance": number,             // Optional: ± tolerance value\n'
-            '      "machine_mode_ref": string       // Optional: reference to MachineMode entity\n'
-            '    }\n'
-            '  ],\n'
-            '  "relations": [\n'
-            '    {\n'
-            '      "type": string,                  // Required: relation type (e.g., "monitors", "contains", "uses")\n'
-            '      "from_ref": string,              // Required: source entity ID\n'
-            '      "to_ref": string,                // Required: target entity ID\n'
-            '      "spans": [{"section_id": string, "source_text": string}],  // Required\n'
-            '      "confidence": number             // Required: 0.0-1.0\n'
-            '    }\n'
-            '  ],\n'
-            '  "provenance": {\n'
-            '    "overall_confidence": number,      // Average confidence of all extractions\n'
-            '    "sections_used": [string],         // List of section IDs used\n'
-            '    "notes": string                    // Any additional provenance notes\n'
-            '  }\n'
-            "}\n"
-            "(Note: 'quality' field will be recalculated automatically, you may omit it)\n"
-        )
+        if not sections_text:
+            sections_text.append("[No usable sections provided in this chunk]\n")
 
         prompt = (
-            f"{instructions}\n"
-            f"{extraction_guidelines}\n"
-            f"{examples}\n"
-            f"{edge_cases}\n\n"
-            f"{schema_expectations}\n"
-            f"Allowed entity types: {allowed_types_str}\n\n"
-            "=" * 80 + "\n"
-            "DOCUMENT TO EXTRACT:\n"
-            "=" * 80 + "\n\n"
+            f"{instructions}\n\n"
+            f"Allowed entity types: {allowed_types_str}\n"
+            f"This is chunk {chunk_index} of {chunk_total}.\n\n"
             "Document metadata:\n"
             + "\n".join(f"- {line}" for line in metadata_lines)
-            + "\n\nContext sections:\n"
-            + "\n".join(section_snippets)
-            + "\n\n" + "=" * 80 + "\n"
-            + "OUTPUT INSTRUCTIONS:\n"
-            + "Respond with valid JSON only. No markdown, no explanations, just the JSON object.\n"
-            + "Apply all guidelines above. Ensure all entity IDs referenced in relations exist in entities array.\n"
+            + "\n\nChunk context:\n"
+            + "\n".join(sections_text)
+            + "\nRespond with JSON."
         )
-
-        return prompt, section_ids
-
-    def _collect_section_snippets(self, sections: List[Dict[str, Any]]) -> Tuple[List[str], List[str]]:
-        snippets: List[str] = []
-        section_ids: List[str] = []
-        total_chars = 0
-
-        for section in sections:
-            text = (section.get("text") or "").strip()
-            if not text:
-                continue
-
-            section_id = section.get("section_id") or section.get("id") or f"sec-{len(section_ids)+1}"
-            snippet = text[: self.settings.max_chars_per_section]
-
-            total_chars += len(snippet)
-            if total_chars > self.settings.max_total_chars:
-                logger.info("Reached prompt character budget; truncating remaining sections.")
-                break
-
-            title = section.get("title") or section.get("title_normalized") or "Untitled section"
-            page_span = f"pages {section.get('page_start', '?')}-{section.get('page_end', '?')}"
-            snippets.append(
-                f"[Section {section_id} | {title} | {page_span}]:\n{snippet}\n"
-            )
-            section_ids.append(section_id)
-
-            if len(section_ids) >= self.settings.max_sections:
-                logger.info("Reached maximum number of sections (%s) for prompt.", self.settings.max_sections)
-                break
-
-        if not snippets:
-            snippets.append("[No usable sections found in parsed document]\n")
-
-        return snippets, section_ids
-
+        return prompt
     @staticmethod
     def _ensure_entity_list(entities: Any) -> List[Dict[str, Any]]:
         if not isinstance(entities, list):

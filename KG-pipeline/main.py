@@ -78,19 +78,15 @@ def main():
             sections = doc.get("sections", [])
             page_count = source_info.get("page_count", 0)
             char_count = sum(len(section.get("text") or "") for section in sections)
-            tables_count = sum(len(section.get("tables") or []) for section in sections)
-            figures_count = sum(len(section.get("figures") or []) for section in sections)
             stats_rows.append(
                 (
                     source_info.get("filename", "N/A"),
                     page_count,
                     char_count,
-                    tables_count,
-                    figures_count,
                 )
             )
 
-        headers = ("Filename", "Pages", "Characters", "Tables", "Images")
+        headers = ("Filename", "Pages", "Characters")
         col_widths = [
             max(len(str(row[idx])) for row in stats_rows + [headers]) for idx in range(len(headers))
         ]
@@ -132,7 +128,7 @@ def main():
 
             if neural_results:
                 neural_batch_file = NEURAL_OUTPUT_DIR / "neural_batch.json"
-                extractor.save_batch(neural_results, str(neural_batch_file))
+                #extractor.save_batch(neural_results, str(neural_batch_file))  # Disabilitato: salvataggio batch non voluto, solo output individuali.
                 print(f"\n✅ Neural extraction complete for {len(neural_results)} document(s).")
                 print(f"   Neural outputs: {NEURAL_OUTPUT_DIR}")
                 print(f"   Batch file: {neural_batch_file}")
