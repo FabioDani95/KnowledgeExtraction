@@ -15,6 +15,7 @@ if not MODULES_DIR.exists():
 # Import AFTER sys.path manipulation
 try:
     from modules.pdf_reader import PDFReader
+    from modules.neural_extractor import NeuralExtractor
 except Exception as e:
     # Print helpful diagnostics, then raise
     print("⛔ Import failed for 'modules.pdf_reader.PDFReader'")
@@ -26,10 +27,13 @@ def main():
     # Use paths relative to the repo root to avoid surprises
     SOURCE_DIR = BASE_DIR / "Source"
     SCHEMA_PATH = BASE_DIR / "schemas" / "parsed_document.json"
+    NEURAL_SCHEMA_PATH = BASE_DIR / "schemas" / "neural_extraction.json"
     CONFIG_PATH = BASE_DIR / "config.yaml"
-    OUTPUT_DIR = BASE_DIR / "output" / "test_parsed"
+    OUTPUT_BASE = BASE_DIR / "output"
+    PDF_OUTPUT_DIR = OUTPUT_BASE / "test_parsed"
+    NEURAL_OUTPUT_DIR = OUTPUT_BASE / "neural_extraction"
 
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    PDF_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     # Sanity checks
     if not SOURCE_DIR.exists():
@@ -54,7 +58,7 @@ def main():
     # Show where we are writing
     print(f"\n• Using SOURCE_DIR  : {SOURCE_DIR}")
     print(f"• Using SCHEMA_PATH : {SCHEMA_PATH}")
-    print(f"• Using OUTPUT_DIR  : {OUTPUT_DIR}")
+    print(f"• Using PDF_OUTPUT  : {PDF_OUTPUT_DIR}")
 
     reader = PDFReader(source_dir=str(SOURCE_DIR), schema_path=str(SCHEMA_PATH), config=config)
 
@@ -65,7 +69,7 @@ def main():
             print(f"   - {pdf.name}")
 
     print("\n▶ Parsing PDFs...")
-    parsed_docs = reader.process_directory(output_dir=str(OUTPUT_DIR))
+    parsed_docs = reader.process_directory(output_dir=str(PDF_OUTPUT_DIR))
 
     if parsed_docs:
         stats_rows = []
@@ -100,16 +104,42 @@ def main():
         for row in stats_rows:
             print(f"   {format_row(row)}")
 
-        batch_file = OUTPUT_DIR / "test_batch.json"
-        reader.save_batch(parsed_documents=parsed_docs, output_file=str(batch_file))
+        batch_file = PDF_OUTPUT_DIR / "test_batch.json"
+        if config.get("output", {}).get("batch_file", True):
+            reader.save_batch(parsed_documents=parsed_docs, output_file=str(batch_file))
+            print(f"   Batch file: {batch_file}")
 
         print(f"\n✅ Parsed {len(parsed_docs)} document(s).")
-        print(f"   Per-document JSON written to: {OUTPUT_DIR}")
+        print(f"   Per-document JSON written to: {PDF_OUTPUT_DIR}")
         print(f"   Batch file: {batch_file}")
 
     else:
         print("\n⚠️  No PDFs found or parsing produced no output.")
         print("   Check that there is at least one .pdf (lowercase) in the Source/ folder.")
+
+    # === Neural extraction module ===
+    neural_config = config.get("neural_extractor", {}) or {}
+    if neural_config.get("enabled", False):
+        if not parsed_docs:
+            print("\nℹ️  Neural extractor enabled but no parsed documents available; skipping.")
+        elif not NEURAL_SCHEMA_PATH.exists():
+            print(f"\n⚠️  Neural extraction schema not found: {NEURAL_SCHEMA_PATH}")
+        else:
+            print("\n▶ Running neural extraction...")
+            extractor = NeuralExtractor(schema_path=str(NEURAL_SCHEMA_PATH), config=config)
+            NEURAL_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+            neural_results = extractor.run_batch(parsed_documents=parsed_docs, output_dir=str(NEURAL_OUTPUT_DIR))
+
+            if neural_results:
+                neural_batch_file = NEURAL_OUTPUT_DIR / "neural_batch.json"
+                extractor.save_batch(neural_results, str(neural_batch_file))
+                print(f"\n✅ Neural extraction complete for {len(neural_results)} document(s).")
+                print(f"   Neural outputs: {NEURAL_OUTPUT_DIR}")
+                print(f"   Batch file: {neural_batch_file}")
+            else:
+                print("\n⚠️  Neural extractor did not produce any outputs. Check logs for details.")
+    else:
+        print("\nℹ️  Neural extractor disabled in configuration. Skipping module 2.")
 
 if __name__ == "__main__":
     main()

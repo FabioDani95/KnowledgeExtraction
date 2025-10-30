@@ -242,37 +242,33 @@ class PDFReader:
                 sha256_hash.update(byte_block)
         return sha256_hash.hexdigest()
 
-    def extract_text_from_pdf(self, pdf_path: Path) -> tuple[str, int]:
+    def extract_text_from_pdf(self, pdf_path: Path):
         """
-        Extract text content from PDF file.
+        Estrae testo pagina per pagina e crea una lista che indica a quale pagina appartiene ogni riga.
         """
         try:
             with open(pdf_path, "rb") as file:
                 pdf_reader = PdfReader(file)
                 page_count = len(pdf_reader.pages)
-
                 text_content = []
+                line_to_page = []
                 for page_num, page in enumerate(pdf_reader.pages, start=1):
                     try:
                         text = page.extract_text() or ""
                         if text.strip():
-                            text_content.append(text)
+                            lines = text.splitlines()
+                            text_content.extend(lines)
+                            line_to_page.extend([page_num]*len(lines))
                     except Exception as e:
                         logger.warning(
-                            f"Error extracting text from page {page_num} of {pdf_path.name}: {e}"
-                        )
-
-                full_text = "\n\n".join(text_content)
-                return full_text, page_count
-
+                            f"Error extracting text from page {page_num} of {pdf_path.name}: {e}")
+                full_text = "\n".join(text_content)
+                return full_text, page_count, line_to_page
         except Exception as e:
             logger.error(f"Failed to extract text from {pdf_path.name}: {e}")
             raise
 
-    def detect_sections(self, text: str, page_count: int) -> (List[Dict[str, Any]], list):
-        """
-        Advanced: Segmenta e struttura sezioni dal testo di un PDF secondo lo schema richiesto e tiene traccia dei blocchi scartati.
-        """
+    def detect_sections(self, text: str, page_count: int, line_to_page=None):
         import re
         from langdetect import detect_langs, LangDetectException
         sections = []
@@ -280,44 +276,25 @@ class PDFReader:
         lines = text.splitlines()
         section_id_counter = {}
         char_idx = 0
-        page_hint = 1  # TODO: stima minima
-
         RE_H1 = re.compile(r"^([1-9]|10)[.\s]+(.+)$")
         RE_Hx = re.compile(r"^(\d+(?:\.\d+)+)[.\s]+(.+)$")
         RE_SPACED_UPPER = re.compile(r"^([A-Z ]{5,})$")
         RE_ENUM = re.compile(r"^(\d+)\)\s+(.+)")
         RE_TABLE_HINT = re.compile(r"table|tabella|state|status|led|sequence", re.I)
         RE_PROC_HINT = re.compile(r"^(Remove|Press|Tighten|Unscrew|Insert|Loosen|Install|Disassemble|Assemble|Check|Ensure)", re.I)
-        # Altri pattern...
-
         def normalize_title(tit: str) -> str:
             t = tit.strip()
             if RE_SPACED_UPPER.match(t):
                 t = re.sub(r" +", " ", t.replace(" ", "").title())
             t = t.title()
             return t
-
         def next_section_id(base: str) -> str:
             section_id_counter.setdefault(base, 0)
             section_id_counter[base] += 1
             return base + ".%d" % section_id_counter[base]
-
-        def guess_role(line):
-            if re.match(r"^(table of contents|index)", line, re.I):
-                return "toc"
-            if re.search(r"header|footer", line, re.I):
-                return "header" if "header" in line.lower() else "footer"
-            if re.search(r"warning|danger|rischio|risk", line, re.I):
-                return "warning"
-            if RE_TABLE_HINT.search(line):
-                return "table"
-            if RE_PROC_HINT.match(line):
-                return "procedure"
-            return "main"
-
         chunks = []
         buffer = []
-        last_section = None
+        buffer_line_idxs = []
         current_sid = None
         parent_id = None
         doc_type = "overview"
@@ -331,70 +308,65 @@ class PDFReader:
             match_h1 = RE_H1.match(l)
             match_hx = RE_Hx.match(l)
             match_spaced = RE_SPACED_UPPER.match(l)
-            if match_h1:
+            if match_h1 or match_hx or match_spaced:
                 if buffer:
-                    chunks.append((current_sid, parent_id, last_title, title_normalized, buffer, doc_type, page_hint))
+                    # Otteniamo le pagine di inizio/fine del chunk
+                    pstart = line_to_page[buffer_line_idxs[0]] if (line_to_page and buffer_line_idxs) else 1
+                    pend = line_to_page[buffer_line_idxs[-1]] if (line_to_page and buffer_line_idxs) else 1
+                    chunks.append((current_sid, parent_id, last_title, title_normalized, buffer, doc_type, pstart, pend))
                     buffer = []
-                current_sid = match_h1.group(1)
-                last_title = match_h1.group(2)
-                title_normalized = normalize_title(last_title)
-                parent_id = None
-                doc_type = "overview"
-            elif match_hx:
-                if buffer:
-                    chunks.append((current_sid, parent_id, last_title, title_normalized, buffer, doc_type, page_hint))
-                    buffer = []
-                nums = match_hx.group(1)
-                last_title = match_hx.group(2)
-                title_normalized = normalize_title(last_title)
-                current_sid = nums
-                parent_id = '.'.join(nums.split('.')[:-1]) if '.' in nums else None
-                doc_type = "overview"
-            elif match_spaced:
-                tnorm = normalize_title(l)
-                if buffer:
-                    chunks.append((current_sid, parent_id, last_title, title_normalized, buffer, doc_type, page_hint))
-                    buffer = []
-                current_sid = next_section_id("UPPER")
-                last_title = l
-                title_normalized = tnorm
-                parent_id = None
-                doc_type = "overview"
+                    buffer_line_idxs = []
+                if match_h1:
+                    current_sid = match_h1.group(1)
+                    last_title = match_h1.group(2)
+                    title_normalized = normalize_title(last_title)
+                    parent_id = None
+                    doc_type = "overview"
+                elif match_hx:
+                    nums = match_hx.group(1)
+                    last_title = match_hx.group(2)
+                    title_normalized = normalize_title(last_title)
+                    current_sid = nums
+                    parent_id = '.'.join(nums.split('.')[:-1]) if '.' in nums else None
+                    doc_type = "overview"
+                else:
+                    tnorm = normalize_title(l)
+                    current_sid = next_section_id("UPPER")
+                    last_title = l
+                    title_normalized = tnorm
+                    parent_id = None
+                    doc_type = "overview"
+                buffer_line_idxs.append(n)
             else:
                 buffer.append(l)
+                buffer_line_idxs.append(n)
             char_idx += len(line) + 1
-        # Coda
         if buffer:
-            chunks.append((current_sid, parent_id, last_title, title_normalized, buffer, doc_type, page_hint))
-
+            pstart = line_to_page[buffer_line_idxs[0]] if (line_to_page and buffer_line_idxs) else 1
+            pend = line_to_page[buffer_line_idxs[-1]] if (line_to_page and buffer_line_idxs) else 1
+            chunks.append((current_sid, parent_id, last_title, title_normalized, buffer, doc_type, pstart, pend))
         MAX_CHARS = 3000
         MAX_WORDS = 500
         for chunk in chunks:
-            sid, parent, title, tnorm, lines_chunk, doc_type, page_hint = chunk
+            sid, parent, title, tnorm, lines_chunk, doc_type, page_start, page_end = chunk
             text_chunk = '\n'.join(lines_chunk).strip()
-            role = guess_role(title)
-            # Split chunk lunghi
-            sub_chunks = []
+            role = "main"
             if len(text_chunk) > MAX_CHARS or len(text_chunk.split()) > MAX_WORDS:
-                parts = re.split(r'(?:\n|^)(?=\d+\.\d+|[A-Z ]{5,}\n)', text_chunk)
-                for sub in parts:
-                    sub = sub.strip()
-                    if sub:
-                        sub_chunks.append(sub)
+                sub_chunks = [text_chunk] # splitting lungo ignorato per semplificazione della paginazione
             else:
                 sub_chunks = [text_chunk]
             for sub in sub_chunks:
                 section_language = "und"
                 lang_confidence = 0.0
                 try:
+                    from langdetect import detect_langs, LangDetectException
                     langs = detect_langs(sub)
                     if langs:
                         section_language = langs[0].lang
                         lang_confidence = float(langs[0].prob)
-                except LangDetectException:
+                except Exception:
                     section_language = "und"
                 is_suspect = False
-                # Es: se title è troppo diverso da testo, mark as suspect
                 if title and len(sub) > 30 and title.lower() not in sub.lower():
                     is_suspect = True
                 section_obj = {
@@ -406,9 +378,9 @@ class PDFReader:
                     "level": sid.count('.')+1 if sid and '.' in sid else 1,
                     "language": section_language,
                     "language_confidence": lang_confidence,
-                    "page_start": page_hint,
-                    "page_end": page_hint,  # Non stimiamo ancora precise page_end
-                    "char_start": 0,  # Da stimare se necessario
+                    "page_start": page_start,
+                    "page_end": page_end,
+                    "char_start": 0,
                     "char_end": 0,
                     "text": sub,
                     "is_suspect": is_suspect,
@@ -416,25 +388,6 @@ class PDFReader:
                     "figures": [],
                     "tags": []
                 }
-                # Filtro EN, contenuto, title, role ecc: se scarta, metti in discarded_blocks
-                keep = True
-                reason = None
-                if not (section_language == "en" and lang_confidence > 0.6):
-                    keep = False
-                    reason = "non_en"
-                if role in ["toc", "header", "footer"]:
-                    keep = False
-                    reason = role
-                if len(sub) < 60:
-                    keep = False
-                    reason = "too_short"
-                if not keep:
-                    discarded_blocks.append({
-                        "reason": reason,
-                        "text": sub,
-                        "page": page_hint
-                    })
-                    continue
                 sections.append(section_obj)
         return sections, discarded_blocks
 
@@ -506,16 +459,137 @@ class PDFReader:
 
         return quality
 
+    def normalize_sections_and_document(self, parsed_document):
+        import re
+        sections = parsed_document["sections"]
+        global_lang = parsed_document.get("language", "en")
+        # Sequential unique ids for section_id
+        sec_id_counter = 1
+        structure_to_id = {}
+        id_map = {}
+        discarded_blocks = parsed_document.get("discarded_blocks", [])
+        new_sections = []
+        for sec in sections:
+            old_id = sec.get("section_id", "")
+            logical_id = old_id
+            sid_norm = f"sec-{sec_id_counter:04d}"
+            sec_id_counter += 1
+
+            # Title and structure_code
+            raw_title = sec.get("title", "") or ""
+            struct_m = re.match(r"^([0-9]+(\.[0-9]+)*)([.\s-]+)?", raw_title.strip())
+            structure_code = struct_m.group(1) if struct_m else None
+            # Detect parent using structure_code
+            parent_id = None
+            level = sec.get("level", 1)
+            if structure_code:
+                structure_to_id[structure_code] = sid_norm
+                if "." in structure_code:
+                    parent_struct = ".".join(structure_code.split(".")[:-1])
+                    parent_id = structure_to_id.get(parent_struct, None)
+                    level = structure_code.count(".")+1
+                else:
+                    parent_id = None
+                    level = 1
+            else:
+                parent_id = None
+                level = sec.get("level", 1) or 1
+
+            # -------- Role detection --------
+            title_norm = (sec.get("title_normalized") or raw_title).lower()
+            section_text = (sec.get("text") or "").lower()
+            role = sec.get("role", "main")
+            # TOC
+            if logical_id.startswith("UPPER.") or logical_id.startswith("LOWER.") \
+                or any(w in section_text for w in ["contents", "table of contents", "citiz service manual ... contents"]):
+                role = "toc"
+                level = 0
+            # Header/footer
+            if re.search(r"header|footer", section_text):
+                role = "header" if "header" in section_text else "footer"
+                level = 0
+            # Parti-list
+            if re.search(r"parts list|model citiz|\b\d{2,5}\.\d{1,3}\b", raw_title, re.I):
+                role = "parts-list"
+            # Safety
+            if re.search(r"general safety|warning|danger", raw_title, re.I):
+                role = "safety"
+            # Split PDF fusion
+            suspect_layout_split = False
+            if re.search(r"main components\S+", sec["text"]):
+                suspect_layout_split = True
+            # ---- Suspect flags ----
+            suspect_title_body_mismatch = False
+            first200 = sec["text"][:200].lower()
+            if raw_title and any(w not in first200 for w in raw_title.lower().split() if len(w) > 3):
+                suspect_title_body_mismatch = True
+            # is_suspect rewrite
+            # Tag language
+            tags = sec.get("tags", [])
+            lang = sec.get("language", "en")
+            lang_conf = sec.get("language_confidence", 1.0)
+            if lang != "en" and global_lang == "en":
+                tags.append("non_en_section")
+
+            # ---- Page hint fixes ----
+            page_hint = sec.get("page_start", None)
+            if page_hint in [0,1,None]:
+                page_hint = sec.get("page_hint", 1)
+            page_start = sec.get("page_start")
+            page_end = sec.get("page_end")
+            if not (isinstance(page_start, int) and page_start > 0):
+                page_start = None
+            if not (isinstance(page_end, int) and page_end >= (page_start or 0)):
+                page_end = None
+
+            # Discarded blocks
+            if role in ["toc", "header", "footer"]:
+                discarded_blocks.append({
+                    "reason": role,
+                    "text": sec["text"],
+                    "page": page_hint or 1
+                })
+                continue
+            # Assembla nuova sezione
+            section_norm = {
+                "section_id": sid_norm,
+                "logical_id": logical_id,
+                "parent_id": parent_id,
+                "structure_code": structure_code,
+                "title": raw_title,
+                "title_normalized": sec.get("title_normalized", ""),
+                "role": role,
+                "level": level,
+                "language": lang,
+                "language_confidence": lang_conf,
+                "page_start": page_start,
+                "page_end": page_end,
+                "page_hint": page_hint,
+                "char_start": sec.get("char_start", 0),
+                "char_end": sec.get("char_end", 0),
+                "text": sec.get("text", ""),
+                "suspect_title_body_mismatch": suspect_title_body_mismatch or False,
+                "suspect_layout_split": suspect_layout_split or False,
+                "tables": sec.get("tables", []),
+                "figures": sec.get("figures", []),
+                "tags": tags
+            }
+            new_sections.append(section_norm)
+        parsed_document["sections"] = new_sections
+        parsed_document["discarded_blocks"] = discarded_blocks
+        return parsed_document
+
+    # CHIAMA SEMPRE QUESTA in parse_pdf PRIMA DELL'OUTPUT
     def parse_pdf(self, pdf_path: Path, datasource_code: str = "SRC_DOCS_PIPELINE5") -> Dict[str, Any]:
         """
         Parse a single PDF file into structured format following ParsedDocument schema.
         """
         logger.info(f"Parsing PDF: {pdf_path.name}")
 
-        text, page_count = self.extract_text_from_pdf(pdf_path)
+        text, page_count, line_to_page = self.extract_text_from_pdf(pdf_path)
         checksum = self.calculate_checksum(pdf_path)
         metadata = self.extract_metadata(pdf_path)
-        sections, discarded_blocks = self.detect_sections(text, page_count)
+        sections, discarded_blocks = self.detect_sections(text, page_count, line_to_page)
         quality = self.calculate_quality_metrics(text, sections, page_count)
 
         document_code = f"doc_{pdf_path.stem}_{datetime.now().strftime('%Y%m%d%H%M%S') }"
@@ -560,7 +634,8 @@ class PDFReader:
             "quality": quality,
             "discarded_blocks": discarded_blocks
         }
-
+        # POST-PROCESSING: Normalizza il documento per lo schema richiesto
+        parsed_document = self.normalize_sections_and_document(parsed_document)
         # Validate against schema
         if _JSONSCHEMA_AVAILABLE:
             try:
@@ -574,7 +649,7 @@ class PDFReader:
                 pdf_path.name,
             )
 
-        logger.info(f"Successfully parsed {pdf_path.name}: {len(sections)} sections, {page_count} pages")
+        logger.info(f"Successfully parsed {pdf_path.name}: {len(parsed_document['sections'])} sections, {page_count} pages")
         return parsed_document
 
     def process_directory(self, output_dir: Optional[str] = None) -> List[Dict[str, Any]]:

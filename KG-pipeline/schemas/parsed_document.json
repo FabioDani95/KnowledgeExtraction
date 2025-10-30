@@ -23,9 +23,9 @@
   "sections": [
     {
       "section_id": "string",
-      "parent_id": "string",             // <— per ricostruire la gerarchia (1 → 1.1 → 1.1.1)
-      "title": "string",                 // <— titolo così come letto
-      "title_normalized": "string",      // <— "General safety notes" senza puntini, maiuscole etc.
+      "parent_id": "string",
+      "title": "string",
+      "title_normalized": "string",
       "role": "main|toc|header|footer|warning|table|figure|suspicious",
       "level": "integer",
       "language": "string",
@@ -35,7 +35,7 @@
       "char_start": "integer",
       "char_end": "integer",
       "text": "string",
-      "is_suspect": "boolean",           // <— titolo ≠ contenuto, o TOC mascherato
+      "is_suspect": "boolean",
       "tables": [
         {
           "table_id": "string",
@@ -68,7 +68,7 @@
     "figures_detected": "integer",
     "notes": "string"
   },
-  "discarded_blocks": [                  // <— opzionale, per tenere traccia di TOC, header, pagine
+  "discarded_blocks": [
     {
       "reason": "toc|header|non_en|too_short|pattern_match",
       "text": "string",
