@@ -89,6 +89,10 @@ class PDFReader:
                 "content_quality": {"enabled": False},
                 "language_detection": {"enabled": False},
                 "structural_filtering": {"enabled": False}
+            },
+            "pdf_processing": {
+                "skip_start_pages": 0,
+                "skip_end_pages": 0
             }
         }
 
@@ -244,24 +248,32 @@ class PDFReader:
 
     def extract_text_from_pdf(self, pdf_path: Path):
         """
-        Estrae testo pagina per pagina e crea una lista che indica a quale pagina appartiene ogni riga.
+        Estrae testo solo dalle pagine non skippate da config (inizio e fine), ma la mappatura line_to_page mantiene la pagina ORIGINALE del pdf.
         """
+        skip_start = self.config.get("pdf_processing", {}).get("skip_start_pages", 0)
+        skip_end = self.config.get("pdf_processing", {}).get("skip_end_pages", 0)
         try:
             with open(pdf_path, "rb") as file:
                 pdf_reader = PdfReader(file)
                 page_count = len(pdf_reader.pages)
+                start_page = skip_start
+                end_page = page_count - skip_end
+                if end_page < start_page:
+                    end_page = start_page
                 text_content = []
                 line_to_page = []
-                for page_num, page in enumerate(pdf_reader.pages, start=1):
+                for page_num in range(start_page, end_page):
+                    page = pdf_reader.pages[page_num]
                     try:
                         text = page.extract_text() or ""
                         if text.strip():
                             lines = text.splitlines()
+                            # Qui page_num+1 dà la pagina REALE del PDF
+                            line_to_page.extend([page_num+1]*len(lines))
                             text_content.extend(lines)
-                            line_to_page.extend([page_num]*len(lines))
                     except Exception as e:
                         logger.warning(
-                            f"Error extracting text from page {page_num} of {pdf_path.name}: {e}")
+                            f"Error extracting text from page {page_num+1} of {pdf_path.name}: {e}")
                 full_text = "\n".join(text_content)
                 return full_text, page_count, line_to_page
         except Exception as e:

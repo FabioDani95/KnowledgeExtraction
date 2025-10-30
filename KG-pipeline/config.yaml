@@ -52,6 +52,8 @@ filtering:
 pdf_processing:
   datasource_code: "SRC_DOCS_PIPELINE5"
   default_language: "en"
+  skip_start_pages: 5  # Numero di pagine da saltare all'inizio del PDF (per escludere copertine, copyright, ecc)
+  skip_end_pages: 5     # Numero di pagine finali da saltare (per escludere appendici inutili, pubblicità, ecc)
 
 # === Output Settings ===
 output:
