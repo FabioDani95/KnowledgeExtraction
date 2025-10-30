@@ -81,7 +81,11 @@ class PDFReader:
         return {
             "filtering": {
                 "enabled": False,
-                "pattern_filtering": {"enabled": False},
+                "pattern_filtering": {
+                    "enabled": False,
+                    "match_scope": "title",
+                    "max_text_scan_chars": 2000,
+                },
                 "content_quality": {"enabled": False},
                 "language_detection": {"enabled": False},
                 "structural_filtering": {"enabled": False}
@@ -123,17 +127,23 @@ class PDFReader:
 
         skip_patterns = pattern_config.get("skip_patterns", [])
         case_sensitive = pattern_config.get("case_sensitive", False)
+        match_scope = pattern_config.get("match_scope", "title")  # title, text, both
+        max_text_scan_chars = int(pattern_config.get("max_text_scan_chars", 2000))
 
-        content = f"{title} {text}"
-        if not case_sensitive:
-            content = content.lower()
+        scopes = []
+        if match_scope in ("title", "both"):
+            scopes.append(title)
+        if match_scope in ("text", "both") and text:
+            scopes.append(text[:max_text_scan_chars])
 
         for pattern in skip_patterns:
             try:
                 flags = 0 if case_sensitive else re.IGNORECASE
-                if re.search(pattern, content, flags):
-                    logger.debug(f"Section matched skip pattern: {pattern}")
-                    return True
+                for scope in scopes:
+                    candidate = scope if case_sensitive else scope.lower()
+                    if re.search(pattern, candidate, flags):
+                        logger.debug(f"Section matched skip pattern: {pattern}")
+                        return True
             except re.error as e:
                 logger.warning(f"Invalid regex pattern '{pattern}': {e}")
 
@@ -259,35 +269,174 @@ class PDFReader:
             logger.error(f"Failed to extract text from {pdf_path.name}: {e}")
             raise
 
-    def detect_sections(self, text: str, page_count: int) -> List[Dict[str, Any]]:
+    def detect_sections(self, text: str, page_count: int) -> (List[Dict[str, Any]], list):
         """
-        Detect and structure sections from extracted text.
-        Basic version (single section). Can be expanded with NLP later.
-        Applies filtering based on configuration.
+        Advanced: Segmenta e struttura sezioni dal testo di un PDF secondo lo schema richiesto e tiene traccia dei blocchi scartati.
         """
+        import re
+        from langdetect import detect_langs, LangDetectException
         sections = []
-        current_section = {
-            "section_id": "S1",
-            "title": "Main Content",
-            "level": 1,
-            "page_start": 1,
-            "page_end": page_count,
-            "char_start": 0,
-            "char_end": len(text),
-            "text": text,
-            "tables": [],
-            "figures": [],
-            "tags": [],
-        }
+        discarded_blocks = []
+        lines = text.splitlines()
+        section_id_counter = {}
+        char_idx = 0
+        page_hint = 1  # TODO: stima minima
 
-        # Apply filters to section
-        if self._apply_filters(current_section):
-            sections.append(current_section)
-            logger.debug(f"Section '{current_section['title']}' passed all filters")
-        else:
-            logger.info(f"Section '{current_section['title']}' was filtered out")
+        RE_H1 = re.compile(r"^([1-9]|10)[.\s]+(.+)$")
+        RE_Hx = re.compile(r"^(\d+(?:\.\d+)+)[.\s]+(.+)$")
+        RE_SPACED_UPPER = re.compile(r"^([A-Z ]{5,})$")
+        RE_ENUM = re.compile(r"^(\d+)\)\s+(.+)")
+        RE_TABLE_HINT = re.compile(r"table|tabella|state|status|led|sequence", re.I)
+        RE_PROC_HINT = re.compile(r"^(Remove|Press|Tighten|Unscrew|Insert|Loosen|Install|Disassemble|Assemble|Check|Ensure)", re.I)
+        # Altri pattern...
 
-        return sections
+        def normalize_title(tit: str) -> str:
+            t = tit.strip()
+            if RE_SPACED_UPPER.match(t):
+                t = re.sub(r" +", " ", t.replace(" ", "").title())
+            t = t.title()
+            return t
+
+        def next_section_id(base: str) -> str:
+            section_id_counter.setdefault(base, 0)
+            section_id_counter[base] += 1
+            return base + ".%d" % section_id_counter[base]
+
+        def guess_role(line):
+            if re.match(r"^(table of contents|index)", line, re.I):
+                return "toc"
+            if re.search(r"header|footer", line, re.I):
+                return "header" if "header" in line.lower() else "footer"
+            if re.search(r"warning|danger|rischio|risk", line, re.I):
+                return "warning"
+            if RE_TABLE_HINT.search(line):
+                return "table"
+            if RE_PROC_HINT.match(line):
+                return "procedure"
+            return "main"
+
+        chunks = []
+        buffer = []
+        last_section = None
+        current_sid = None
+        parent_id = None
+        doc_type = "overview"
+        last_title = ""
+        title_normalized = ""
+        for n, line in enumerate(lines):
+            l = line.strip()
+            if not l:
+                char_idx += len(line) + 1
+                continue
+            match_h1 = RE_H1.match(l)
+            match_hx = RE_Hx.match(l)
+            match_spaced = RE_SPACED_UPPER.match(l)
+            if match_h1:
+                if buffer:
+                    chunks.append((current_sid, parent_id, last_title, title_normalized, buffer, doc_type, page_hint))
+                    buffer = []
+                current_sid = match_h1.group(1)
+                last_title = match_h1.group(2)
+                title_normalized = normalize_title(last_title)
+                parent_id = None
+                doc_type = "overview"
+            elif match_hx:
+                if buffer:
+                    chunks.append((current_sid, parent_id, last_title, title_normalized, buffer, doc_type, page_hint))
+                    buffer = []
+                nums = match_hx.group(1)
+                last_title = match_hx.group(2)
+                title_normalized = normalize_title(last_title)
+                current_sid = nums
+                parent_id = '.'.join(nums.split('.')[:-1]) if '.' in nums else None
+                doc_type = "overview"
+            elif match_spaced:
+                tnorm = normalize_title(l)
+                if buffer:
+                    chunks.append((current_sid, parent_id, last_title, title_normalized, buffer, doc_type, page_hint))
+                    buffer = []
+                current_sid = next_section_id("UPPER")
+                last_title = l
+                title_normalized = tnorm
+                parent_id = None
+                doc_type = "overview"
+            else:
+                buffer.append(l)
+            char_idx += len(line) + 1
+        # Coda
+        if buffer:
+            chunks.append((current_sid, parent_id, last_title, title_normalized, buffer, doc_type, page_hint))
+
+        MAX_CHARS = 3000
+        MAX_WORDS = 500
+        for chunk in chunks:
+            sid, parent, title, tnorm, lines_chunk, doc_type, page_hint = chunk
+            text_chunk = '\n'.join(lines_chunk).strip()
+            role = guess_role(title)
+            # Split chunk lunghi
+            sub_chunks = []
+            if len(text_chunk) > MAX_CHARS or len(text_chunk.split()) > MAX_WORDS:
+                parts = re.split(r'(?:\n|^)(?=\d+\.\d+|[A-Z ]{5,}\n)', text_chunk)
+                for sub in parts:
+                    sub = sub.strip()
+                    if sub:
+                        sub_chunks.append(sub)
+            else:
+                sub_chunks = [text_chunk]
+            for sub in sub_chunks:
+                section_language = "und"
+                lang_confidence = 0.0
+                try:
+                    langs = detect_langs(sub)
+                    if langs:
+                        section_language = langs[0].lang
+                        lang_confidence = float(langs[0].prob)
+                except LangDetectException:
+                    section_language = "und"
+                is_suspect = False
+                # Es: se title è troppo diverso da testo, mark as suspect
+                if title and len(sub) > 30 and title.lower() not in sub.lower():
+                    is_suspect = True
+                section_obj = {
+                    "section_id": sid or f"S{len(sections)+1}",
+                    "parent_id": parent,
+                    "title": title,
+                    "title_normalized": tnorm,
+                    "role": role,
+                    "level": sid.count('.')+1 if sid and '.' in sid else 1,
+                    "language": section_language,
+                    "language_confidence": lang_confidence,
+                    "page_start": page_hint,
+                    "page_end": page_hint,  # Non stimiamo ancora precise page_end
+                    "char_start": 0,  # Da stimare se necessario
+                    "char_end": 0,
+                    "text": sub,
+                    "is_suspect": is_suspect,
+                    "tables": [],
+                    "figures": [],
+                    "tags": []
+                }
+                # Filtro EN, contenuto, title, role ecc: se scarta, metti in discarded_blocks
+                keep = True
+                reason = None
+                if not (section_language == "en" and lang_confidence > 0.6):
+                    keep = False
+                    reason = "non_en"
+                if role in ["toc", "header", "footer"]:
+                    keep = False
+                    reason = role
+                if len(sub) < 60:
+                    keep = False
+                    reason = "too_short"
+                if not keep:
+                    discarded_blocks.append({
+                        "reason": reason,
+                        "text": sub,
+                        "page": page_hint
+                    })
+                    continue
+                sections.append(section_obj)
+        return sections, discarded_blocks
 
     def extract_metadata(
         self, pdf_path: Path, pdf_reader: Optional[PdfReader] = None
@@ -308,8 +457,9 @@ class PDFReader:
             if pdf_reader is None:
                 with open(pdf_path, "rb") as file:
                     pdf_reader = PdfReader(file)
-
-            info = pdf_reader.metadata or {}
+                    info = pdf_reader.metadata or {}
+            else:
+                info = pdf_reader.metadata or {}
 
             title = (info.get("/Title") or "").strip()
             subject = (info.get("/Subject") or "").strip()
@@ -365,10 +515,10 @@ class PDFReader:
         text, page_count = self.extract_text_from_pdf(pdf_path)
         checksum = self.calculate_checksum(pdf_path)
         metadata = self.extract_metadata(pdf_path)
-        sections = self.detect_sections(text, page_count)
+        sections, discarded_blocks = self.detect_sections(text, page_count)
         quality = self.calculate_quality_metrics(text, sections, page_count)
 
-        document_code = f"doc_{pdf_path.stem}_{datetime.now().strftime('%Y%m%d%H%M%S')}"
+        document_code = f"doc_{pdf_path.stem}_{datetime.now().strftime('%Y%m%d%H%M%S') }"
 
         parsed_document = {
             "document_code": document_code,
@@ -390,24 +540,25 @@ class PDFReader:
                 "skip_patterns": ["^table of contents$", "warranty", "legal notice", "page \\d+"],
                 "max_chars_per_section": 10000,
                 "allowed_entities": [
-                    "Product","Subsystem","ComponentType","Component",
-                    "ParameterSpec","Unit","SensorType","Sensor",
-                    "FailureMode","RepairAction","MaintenanceTask","Tool","Consumable",
-                    "Core","ProcessStep","RoutingDecision","State",
-                    "Document","DataSource","AnomalyThreshold","DiagnosticRule",
-                    "MachineMode","TestSpec","RatingPlate"
+                    "Product", "Subsystem", "ComponentType", "Component",
+                    "ParameterSpec", "Unit", "SensorType", "Sensor",
+                    "FailureMode", "RepairAction", "MaintenanceTask", "Tool", "Consumable",
+                    "Core", "ProcessStep", "RoutingDecision", "State",
+                    "Document", "DataSource", "AnomalyThreshold", "DiagnosticRule",
+                    "MachineMode", "TestSpec", "RatingPlate"
                 ],
                 "allowed_relations": [
-                    "hasPart","instanceOf","hasSpec","hasUnit","measuredBy",
-                    "affects","requiresAction","canCause",
-                    "implements","uses","requiresTool","requiresConsumable",
-                    "justifies","definedFrom","belongsTo",
-                    "hasThreshold","appliesTo","diagnoses","targets",
-                    "hasMode","hasSetpoint","appliesDuring","verifies","hasRatingPlate",
-                    "dependsOn","controls","connectedTo"
+                    "hasPart", "instanceOf", "hasSpec", "hasUnit", "measuredBy",
+                    "affects", "requiresAction", "canCause",
+                    "implements", "uses", "requiresTool", "requiresConsumable",
+                    "justifies", "definedFrom", "belongsTo",
+                    "hasThreshold", "appliesTo", "diagnoses", "targets",
+                    "hasMode", "hasSetpoint", "appliesDuring", "verifies", "hasRatingPlate",
+                    "dependsOn", "controls", "connectedTo"
                 ]
             },
             "quality": quality,
+            "discarded_blocks": discarded_blocks
         }
 
         # Validate against schema

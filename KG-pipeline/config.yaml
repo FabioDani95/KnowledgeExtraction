@@ -3,11 +3,13 @@
 # Content Filtering Settings
 filtering:
   # Enable/disable all filtering (master switch)
-  enabled: true
+  enabled: false
 
   # Priority 1: Pattern-based filtering
   pattern_filtering:
     enabled: true
+    match_scope: title         # title, text, or both
+    max_text_scan_chars: 2000  # only used when scanning text
     skip_patterns:
       - "^table of contents$"
       - "^index$"
