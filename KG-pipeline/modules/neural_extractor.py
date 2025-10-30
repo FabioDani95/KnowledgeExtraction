@@ -354,19 +354,38 @@ class NeuralExtractor:
         allowed_types_str = ", ".join(self.allowed_types)
 
         instructions = (
-            "You are a knowledge extraction system specialized in technical and industrial documents. "
-            "Extract entities and relations that match the provided allowed types. Only create entries "
-            "when the information is explicitly supported by the context.\n\n"
+            "You are a knowledge extraction system specialized in technical and industrial documents "
+            "(service manuals, datasheets, specifications). Extract entities and relations that match "
+            "the provided allowed types. Only create entries when the information is explicitly "
+            "supported by the context.\n\n"
             "CORE RULES:\n"
-            "1. Output MUST be valid JSON matching the specified schema (no extra commentary).\n"
+            "1. Output MUST be valid JSON matching the specified schema:\n"
+            "   - NO extra fields beyond the schema\n"
+            "   - Keep field order as shown in schema outline\n"
+            "   - Field names are case-sensitive (use exact spelling)\n"
+            "   - NO markdown formatting, NO explanations, ONLY the JSON object\n"
             "2. Use section_id references from the provided context in spans.\n"
-            "3. Always include at least one span per entity/relation with exact source_text.\n"
+            "3. Always include at least one span per entity/relation with:\n"
+            "   - section_id (use provided section IDs)\n"
+            "   - page (integer)\n"
+            "   - source_text (exact quote from document)\n"
             "4. Provide confidence scores between 0 and 1 (see scoring guidelines below).\n"
             "5. Include provenance.sections_used with section ids you actually used.\n"
+            "6. WORKFLOW: First extract ALL entities, then create relations (ensures all IDs exist).\n"
         )
 
         extraction_guidelines = (
             "EXTRACTION GUIDELINES:\n\n"
+            "0. ALLOWED TYPES (CLOSED LIST):\n"
+            "   - Extract ONLY entities with type in allowed_types list\n"
+            "   - If text describes something not in list → DO NOT extract it\n"
+            "   - If uncertain: map to closest type and lower confidence to 0.4-0.6\n"
+            "   - IMPORTANT DISTINCTIONS:\n"
+            "     * Sensor (physical device) ≠ SensorType (family/category)\n"
+            "       Example: 'NTC temperature sensor T1' → Sensor entity\n"
+            "       Example: 'temperature sensors' (generic) → SensorType entity\n"
+            "     * Component (physical part) ≠ ComponentType (category)\n"
+            "     * Use ofType_ref to link: Sensor entity → SensorType entity\n\n"
             "1. NAME NORMALIZATION:\n"
             "   - Preserve original casing from document for technical terms\n"
             "   - Extract the most complete form as primary name\n"
@@ -379,7 +398,9 @@ class NeuralExtractor:
             "   - Parse tolerance: '85±5°C' → nominal_value=85.0, tolerance=5.0, unit_raw='°C'\n"
             "   - Parse nominal only: '1500 RPM' → nominal_value=1500.0, unit_raw='RPM'\n"
             "   - If unit is unclear or complex, extract text as-is in unit_raw\n"
-            "   - If range without nominal, set nominal to midpoint: min=70, max=100 → nominal=85.0\n\n"
+            "   - If range without nominal, set nominal to midpoint: min=70, max=100 → nominal=85.0\n"
+            "   - CRITICAL: DO NOT convert units (NO °C→K, NO W→kW, NO bar→Pa)\n"
+            "   - If unit is implicit from context, add it but lower confidence to 0.5-0.6\n\n"
             "3. CONFIDENCE SCORING:\n"
             "   - 0.9-1.0: Explicitly stated with clear context and full details\n"
             "   - 0.7-0.8: Clearly stated but may lack some details or context\n"
@@ -404,7 +425,9 @@ class NeuralExtractor:
         )
 
         examples = (
-            "EXTRACTION EXAMPLES:\n\n"
+            "EXTRACTION EXAMPLES (ILLUSTRATIVE ONLY - DO NOT COPY):\n"
+            "These examples show the extraction format. DO NOT copy entities or values from examples.\n"
+            "Extract only from the actual document context provided below.\n\n"
             "Example 1 - Component with numerical specs:\n"
             "Input: 'The XR-500 motor operates at 1500±50 RPM in normal mode.'\n"
             "Output entities:\n"
@@ -474,6 +497,26 @@ class NeuralExtractor:
             "}\n"
         )
 
+        anti_hallucination = (
+            "ANTI-HALLUCINATION RULES (CRITICAL):\n"
+            "1. DO NOT invent numerical values if not present in text\n"
+            "   - If document mentions 'pump' without pressure → omit nominal_value\n"
+            "   - If Italian text lacks numbers → DO NOT create numerical fields\n"
+            "2. DO NOT invent part numbers, model codes, or version numbers\n"
+            "   - Extract only what is explicitly written\n"
+            "3. DO NOT modify metadata fields:\n"
+            "   - Use document_code EXACTLY as provided in metadata\n"
+            "   - Use ingestion_id EXACTLY as provided\n"
+            "   - Use datasource_code EXACTLY as provided\n"
+            "   - DO NOT generate new document codes\n"
+            "4. For multilingual documents:\n"
+            "   - Keep source_text in original language from document\n"
+            "   - If language unclear, add warning: 'multilingual document, language ambiguous'\n"
+            "5. For vague/generic mentions:\n"
+            "   - 'the pump' without identifier → confidence 0.4-0.5, add note 'generic reference'\n"
+            "   - 'standard sensors' → SensorType (not Sensor), confidence 0.5\n\n"
+        )
+
         edge_cases = (
             "EDGE CASES:\n"
             "- Multiple values with same unit: Create separate ParameterSpec entities for each\n"
@@ -536,20 +579,25 @@ class NeuralExtractor:
             f"{instructions}\n"
             f"{extraction_guidelines}\n"
             f"{examples}\n"
+            f"{anti_hallucination}\n"
             f"{edge_cases}\n\n"
             f"{schema_expectations}\n"
-            f"Allowed entity types: {allowed_types_str}\n\n"
+            f"Allowed entity types (CLOSED LIST): {allowed_types_str}\n\n"
             "=" * 80 + "\n"
             "DOCUMENT TO EXTRACT:\n"
             "=" * 80 + "\n\n"
-            "Document metadata:\n"
+            "Document metadata (DO NOT modify these values):\n"
             + "\n".join(f"- {line}" for line in metadata_lines)
             + "\n\nContext sections:\n"
             + "\n".join(section_snippets)
             + "\n\n" + "=" * 80 + "\n"
             + "OUTPUT INSTRUCTIONS:\n"
-            + "Respond with valid JSON only. No markdown, no explanations, just the JSON object.\n"
-            + "Apply all guidelines above. Ensure all entity IDs referenced in relations exist in entities array.\n"
+            + "1. Respond with valid JSON only. No markdown, no explanations, just the JSON object.\n"
+            + "2. Apply ALL guidelines above, especially anti-hallucination rules.\n"
+            + "3. Extract entities first (ALL of them), then create relations.\n"
+            + "4. Ensure all entity IDs referenced in relations exist in entities array.\n"
+            + "5. Use metadata values EXACTLY as provided above (do not modify document_code, etc.).\n"
+            + "6. Remember: examples are illustrative only, extract from actual document context.\n"
         )
 
         return prompt, section_ids
