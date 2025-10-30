@@ -354,18 +354,139 @@ class NeuralExtractor:
         allowed_types_str = ", ".join(self.allowed_types)
 
         instructions = (
-            "You are a knowledge extraction system. Extract entities and relations that match "
-            "the provided allowed types. Only create entries when the information is explicitly "
-            "supported by the context. Follow these rules:\n"
+            "You are a knowledge extraction system specialized in technical and industrial documents. "
+            "Extract entities and relations that match the provided allowed types. Only create entries "
+            "when the information is explicitly supported by the context.\n\n"
+            "CORE RULES:\n"
             "1. Output MUST be valid JSON matching the specified schema (no extra commentary).\n"
-            "2. Use section_id references from the provided context.\n"
-            "3. For numerical values, prefer floats. Omit fields when information is missing.\n"
-            "4. Provide confidence scores between 0 and 1.\n"
+            "2. Use section_id references from the provided context in spans.\n"
+            "3. Always include at least one span per entity/relation with exact source_text.\n"
+            "4. Provide confidence scores between 0 and 1 (see scoring guidelines below).\n"
             "5. Include provenance.sections_used with section ids you actually used.\n"
         )
 
+        extraction_guidelines = (
+            "EXTRACTION GUIDELINES:\n\n"
+            "1. NAME NORMALIZATION:\n"
+            "   - Preserve original casing from document for technical terms\n"
+            "   - Extract the most complete form as primary name\n"
+            "   - Put abbreviations, codes, and alternative names in aliases array\n"
+            "   - Example: name='Primary Cooling Pump', aliases=['PCP', 'Pump-01', 'P1']\n"
+            "   - For part numbers/codes: preserve exact format (e.g., 'XR-500' not 'xr500')\n\n"
+            "2. NUMERICAL VALUES WITH UNITS:\n"
+            "   - Extract all numbers as floats (nominal_value, min_value, max_value, tolerance)\n"
+            "   - Parse ranges: '70-100°C' → min_value=70.0, max_value=100.0, unit_raw='°C'\n"
+            "   - Parse tolerance: '85±5°C' → nominal_value=85.0, tolerance=5.0, unit_raw='°C'\n"
+            "   - Parse nominal only: '1500 RPM' → nominal_value=1500.0, unit_raw='RPM'\n"
+            "   - If unit is unclear or complex, extract text as-is in unit_raw\n"
+            "   - If range without nominal, set nominal to midpoint: min=70, max=100 → nominal=85.0\n\n"
+            "3. CONFIDENCE SCORING:\n"
+            "   - 0.9-1.0: Explicitly stated with clear context and full details\n"
+            "   - 0.7-0.8: Clearly stated but may lack some details or context\n"
+            "   - 0.5-0.6: Reasonably inferred from context or partial information\n"
+            "   - 0.3-0.4: Weakly inferred, ambiguous, or conflicting information\n"
+            "   - Below 0.3: DO NOT extract (too uncertain)\n\n"
+            "4. HANDLING AMBIGUITY:\n"
+            "   - If entity type is uncertain, use the most specific type that fits\n"
+            "   - If name varies in text, use most complete form as name, add variants to aliases\n"
+            "   - If information is partial, extract what you have with appropriate confidence (0.4-0.6)\n"
+            "   - If information conflicts, extract the most reliable version and note conflict\n"
+            "   - Add clarifying details in 'notes' field when confidence < 0.8\n\n"
+            "5. ENTITY REFERENCES:\n"
+            "   - Use ofType_ref to link an entity to its type (e.g., Sensor → SensorType)\n"
+            "   - Use machine_mode_ref to link parameters to operational modes\n"
+            "   - Ensure referenced entity IDs exist in the entities array\n"
+            "   - Create intermediate entities if needed (e.g., extract SensorType for a Sensor)\n\n"
+            "6. ALIASES AND DISAMBIGUATION:\n"
+            "   - If text uses multiple names for same entity, extract once with all names in aliases\n"
+            "   - Example: 'Motor M1 (primary drive)' → name='Motor M1', aliases=['M1', 'primary drive']\n"
+            "   - Use consistent IDs: prefer pattern '{type}-{identifier}' (e.g., 'sensor-t1', 'motor-m1')\n"
+        )
+
+        examples = (
+            "EXTRACTION EXAMPLES:\n\n"
+            "Example 1 - Component with numerical specs:\n"
+            "Input: 'The XR-500 motor operates at 1500±50 RPM in normal mode.'\n"
+            "Output entities:\n"
+            "{\n"
+            '  "id": "component-xr500",\n'
+            '  "type": "Component",\n'
+            '  "name": "XR-500 motor",\n'
+            '  "aliases": ["XR-500"],\n'
+            '  "nominal_value": 1500.0,\n'
+            '  "tolerance": 50.0,\n'
+            '  "unit_raw": "RPM",\n'
+            '  "machine_mode_ref": "mode-normal",\n'
+            '  "confidence": 0.95,\n'
+            '  "spans": [{"section_id": "sec-3", "source_text": "XR-500 motor operates at 1500±50 RPM"}]\n'
+            "}\n\n"
+            "Example 2 - Sensor with type and aliases:\n"
+            "Input: 'Temperature sensor T1 (primary thermometer) monitors the cooling system.'\n"
+            "Output entities:\n"
+            "{\n"
+            '  "id": "sensor-t1",\n'
+            '  "type": "Sensor",\n'
+            '  "name": "Temperature sensor T1",\n'
+            '  "aliases": ["T1", "primary thermometer"],\n'
+            '  "ofType_ref": "sensortype-temperature",\n'
+            '  "confidence": 0.9,\n'
+            '  "spans": [{"section_id": "sec-2", "source_text": "Temperature sensor T1 (primary thermometer)"}]\n'
+            "},\n"
+            "{\n"
+            '  "id": "sensortype-temperature",\n'
+            '  "type": "SensorType",\n'
+            '  "name": "Temperature",\n'
+            '  "confidence": 0.85,\n'
+            '  "spans": [{"section_id": "sec-2", "source_text": "Temperature sensor"}]\n'
+            "}\n"
+            "Output relation:\n"
+            "{\n"
+            '  "type": "monitors",\n'
+            '  "from_ref": "sensor-t1",\n'
+            '  "to_ref": "subsystem-cooling",\n'
+            '  "confidence": 0.9,\n'
+            '  "spans": [{"section_id": "sec-2", "source_text": "monitors the cooling system"}]\n'
+            "}\n\n"
+            "Example 3 - Parameter with range:\n"
+            "Input: 'Operating temperature range: 70-100°C (nominal 85°C)'\n"
+            "Output entity:\n"
+            "{\n"
+            '  "id": "param-temp-operating",\n'
+            '  "type": "ParameterSpec",\n'
+            '  "name": "Operating temperature",\n'
+            '  "nominal_value": 85.0,\n'
+            '  "min_value": 70.0,\n'
+            '  "max_value": 100.0,\n'
+            '  "unit_raw": "°C",\n'
+            '  "confidence": 0.95,\n'
+            '  "spans": [{"section_id": "sec-4", "source_text": "Operating temperature range: 70-100°C (nominal 85°C)"}]\n'
+            "}\n\n"
+            "Example 4 - Partial information with low confidence:\n"
+            "Input: 'The pump may require maintenance after extended use.'\n"
+            "Output entity:\n"
+            "{\n"
+            '  "id": "component-pump-generic",\n'
+            '  "type": "Component",\n'
+            '  "name": "pump",\n'
+            '  "confidence": 0.5,\n'
+            '  "notes": "Generic mention, no specific identifier or details provided",\n'
+            '  "spans": [{"section_id": "sec-5", "source_text": "The pump"}]\n'
+            "}\n"
+        )
+
+        edge_cases = (
+            "EDGE CASES:\n"
+            "- Multiple values with same unit: Create separate ParameterSpec entities for each\n"
+            "- Entity mentioned without details: Extract with confidence 0.4-0.6, add note 'limited information'\n"
+            "- Conflicting information: Extract highest confidence version, note conflict in 'notes'\n"
+            "- Acronym without expansion: Use acronym as name, leave aliases empty or add known variants\n"
+            "- Implicit relationships: Only create relations when explicitly stated or strongly implied (confidence ≥ 0.6)\n"
+            "- Missing information: Omit optional fields rather than guessing\n"
+            "- Tables with specs: Extract each row as separate entity if it represents distinct item\n"
+        )
+
         schema_expectations = (
-            "JSON schema outline:\n"
+            "JSON SCHEMA OUTLINE:\n"
             "{\n"
             '  "document_code": string,\n'
             '  "ingestion_id": string,\n'
@@ -373,22 +494,62 @@ class NeuralExtractor:
             '  "datasource_code": string,\n'
             '  "extractor": { "model": string, "prompt_id": string, "temperature": number, "max_tokens": integer },\n'
             f'  "allowed_types": [{allowed_types_str}],\n'
-            '  "entities": [ { "id": string, "type": string, "name": string, ... } ],\n'
-            '  "relations": [ { "type": string, "from_ref": string, "to_ref": string, ... } ],\n'
-            '  "provenance": { "overall_confidence": number, "sections_used": [string], "notes": string },\n'
-            '  "quality": { "json_valid": boolean, "entities_count": integer, "relations_count": integer, "warnings": [string] }\n'
-            "} (quality will be recalculated automatically, you may omit it)\n"
+            '  "entities": [\n'
+            '    {\n'
+            '      "id": string,                    // Required: unique ID, prefer pattern "{type}-{identifier}"\n'
+            '      "type": string,                  // Required: one of allowed_types\n'
+            '      "name": string,                  // Required: primary name (most complete form)\n'
+            '      "aliases": [string],             // Optional: alternative names, codes, abbreviations\n'
+            '      "notes": string,                 // Optional: clarifications, especially if confidence < 0.8\n'
+            '      "spans": [                       // Required: at least one span\n'
+            '        {"section_id": string, "page": int, "source_text": string}\n'
+            '      ],\n'
+            '      "confidence": number,            // Required: 0.0-1.0 (see scoring guidelines)\n'
+            '      "ofType_ref": string,            // Optional: reference to type entity (e.g., Sensor → SensorType)\n'
+            '      "unit_raw": string,              // Optional: unit as-is from text\n'
+            '      "nominal_value": number,         // Optional: target/nominal value\n'
+            '      "min_value": number,             // Optional: minimum in range\n'
+            '      "max_value": number,             // Optional: maximum in range\n'
+            '      "tolerance": number,             // Optional: ± tolerance value\n'
+            '      "machine_mode_ref": string       // Optional: reference to MachineMode entity\n'
+            '    }\n'
+            '  ],\n'
+            '  "relations": [\n'
+            '    {\n'
+            '      "type": string,                  // Required: relation type (e.g., "monitors", "contains", "uses")\n'
+            '      "from_ref": string,              // Required: source entity ID\n'
+            '      "to_ref": string,                // Required: target entity ID\n'
+            '      "spans": [{"section_id": string, "source_text": string}],  // Required\n'
+            '      "confidence": number             // Required: 0.0-1.0\n'
+            '    }\n'
+            '  ],\n'
+            '  "provenance": {\n'
+            '    "overall_confidence": number,      // Average confidence of all extractions\n'
+            '    "sections_used": [string],         // List of section IDs used\n'
+            '    "notes": string                    // Any additional provenance notes\n'
+            '  }\n'
+            "}\n"
+            "(Note: 'quality' field will be recalculated automatically, you may omit it)\n"
         )
 
         prompt = (
             f"{instructions}\n"
+            f"{extraction_guidelines}\n"
+            f"{examples}\n"
+            f"{edge_cases}\n\n"
             f"{schema_expectations}\n"
             f"Allowed entity types: {allowed_types_str}\n\n"
+            "=" * 80 + "\n"
+            "DOCUMENT TO EXTRACT:\n"
+            "=" * 80 + "\n\n"
             "Document metadata:\n"
             + "\n".join(f"- {line}" for line in metadata_lines)
             + "\n\nContext sections:\n"
             + "\n".join(section_snippets)
-            + "\n\nRespond with JSON only."
+            + "\n\n" + "=" * 80 + "\n"
+            + "OUTPUT INSTRUCTIONS:\n"
+            + "Respond with valid JSON only. No markdown, no explanations, just the JSON object.\n"
+            + "Apply all guidelines above. Ensure all entity IDs referenced in relations exist in entities array.\n"
         )
 
         return prompt, section_ids
