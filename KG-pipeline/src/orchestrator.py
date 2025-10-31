@@ -104,7 +104,10 @@ def summarize_symbolic_outputs(output_paths: List[Path]) -> Optional[dict]:
         for section in sections:
             stats["figures"] += len(section.get("figures") or [])
             stats["tables"] += len(section.get("tables") or [])
-            if (section.get("role") or "").lower() == "warning":
+            warning_entries = section.get("warnings") or []
+            if warning_entries:
+                stats["warnings"] += len(warning_entries)
+            elif (section.get("role") or "").lower() == "warning":
                 stats["warnings"] += 1
 
         quality = data.get("quality") or {}

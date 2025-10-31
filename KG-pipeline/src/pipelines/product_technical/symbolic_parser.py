@@ -4,12 +4,13 @@ import csv
 import hashlib
 import logging
 import re
+import copy
 from collections import Counter
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from io import StringIO
 from pathlib import Path
-from typing import Dict, List, Optional, Sequence
+from typing import Dict, List, Optional, Sequence, Set, Tuple
 from uuid import uuid4
 
 from PyPDF2 import PdfReader
@@ -145,18 +146,13 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
                 section.char_end = section.char_start + len(section.title)
 
         output_sections: List[dict] = []
-        covered_chars = 0
-        total_tables = 0
-        total_figures = 0
 
         for section in sections:
             text = "\n".join(section.lines).strip()
             figures = self._extract_figures(section, text)
-            tables = self._extract_tables(section, text)
+            tables = self._extract_tables(section, text, figures)
             tags = self._collect_tags(section, text, tables, figures)
             role = self._classify_role(section, text, tables, figures)
-
-            covered_chars += len(text)
 
             section_dict = {
                 "section_id": section.section_id,
@@ -178,8 +174,14 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
                 "tags": sorted(tags),
             }
             output_sections.append(section_dict)
-            total_tables += len(tables)
-            total_figures += len(figures)
+        output_sections = self._merge_consecutive_tables(output_sections)
+        output_sections = self._split_rating_plate_sections(output_sections)
+        output_sections = self._detect_implicit_subsections(output_sections)
+        output_sections = self._annotate_warning_sections(output_sections)
+
+        covered_chars = sum(len(sec.get("text", "")) for sec in output_sections)
+        total_tables = sum(len(sec.get("tables") or []) for sec in output_sections)
+        total_figures = sum(len(sec.get("figures") or []) for sec in output_sections)
 
         denominator = max(total_chars - discarded_chars, 1)
         text_coverage_ratio = covered_chars / denominator if denominator else 0.0
@@ -321,11 +323,10 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
     # --------------------------------------------------------------------- #
     def _extract_figures(self, section: SectionDraft, text: str) -> List[dict]:
         figure_keywords = [kw.lower() for kw in self.role_heuristics.get("figure_keywords", [])]
-        legend_pattern = re.compile(r"^\s*\d+\)\s+.+", re.MULTILINE)
         text_lower = text.lower()
 
         has_keyword = any(kw in section.title.lower() or kw in text_lower for kw in figure_keywords)
-        legend_items = legend_pattern.findall(text)
+        legend_items = self._extract_legend_items(text)
 
         if not has_keyword and not legend_items:
             return []
@@ -336,6 +337,8 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
                 figure_type = "photo"
         if "schematic" in text_lower:
             figure_type = "schematic"
+        if self._is_rating_plate_section(section, text):
+            figure_type = "photo"
 
         figure_id = f"fig_{section.section_id.replace('sec_', '')}"
         figure = {
@@ -346,11 +349,23 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
             "bbox": None,
             "has_legend": bool(legend_items),
             "legend_items_count": len(legend_items),
+            "legend_items": legend_items,
         }
         return [figure]
 
-    def _extract_tables(self, section: SectionDraft, text: str) -> List[dict]:
+    def _extract_tables(
+        self,
+        section: SectionDraft,
+        text: str,
+        figures: Sequence[dict],
+    ) -> List[dict]:
         if not text:
+            return []
+
+        if figures:
+            return []
+
+        if self._is_rating_plate_section(section, text):
             return []
 
         lines = [line for line in text.split("\n") if line.strip()]
@@ -368,6 +383,8 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
                 while idx < len(lines) and "|" in lines[idx]:
                     table_lines.append(lines[idx])
                     idx += 1
+                if not self._is_valid_pipe_table(table_lines, min_pipe_cols):
+                    continue
                 table = self._parse_pipe_table(
                     section, table_lines, table_index, min_pipe_cols
                 )
@@ -386,6 +403,8 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
                 ):
                     table_lines.append(lines[idx])
                     idx += 1
+                if not self._is_valid_dotted_table(table_lines):
+                    continue
                 table = self._parse_dotted_table(section, table_lines, table_index)
                 if table:
                     tables.append(table)
@@ -546,6 +565,381 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
             return "warning"
 
         return "main"
+
+    def _merge_consecutive_tables(self, sections: List[dict]) -> List[dict]:
+        merged: List[dict] = []
+        current: Optional[dict] = None
+
+        def is_mergeable(sec: dict) -> bool:
+            if sec.get("role") != "table":
+                return False
+            tables = sec.get("tables") or []
+            if not tables:
+                return False
+            return tables[0].get("format") == "dotted_leader"
+
+        for section in sections:
+            if is_mergeable(section):
+                if (
+                    current
+                    and is_mergeable(current)
+                    and section.get("parent_id") == current.get("parent_id")
+                ):
+                    dst_table = current["tables"][0]
+                    src_table = section["tables"][0]
+                    dst_lines = dst_table["csv"].splitlines()
+                    src_lines = src_table["csv"].splitlines()
+                    if src_lines:
+                        rows_to_add = src_lines[1:] if len(src_lines) > 1 else []
+                        if rows_to_add:
+                            dst_table["csv"] = "\n".join(dst_lines + rows_to_add)
+                            dst_table["n_rows"] = len(dst_lines + rows_to_add)
+                    current["text"] = "\n".join(
+                        filter(None, [current.get("text"), section.get("text")])
+                    ).strip()
+                    current["page_end"] = max(
+                        current.get("page_end", 0), section.get("page_end", 0)
+                    )
+                    current["char_end"] = max(
+                        current.get("char_end", 0), section.get("char_end", 0)
+                    )
+                    merged_tags = set(current.get("tags", [])) | set(
+                        section.get("tags", [])
+                    )
+                    current["tags"] = sorted(merged_tags)
+                    continue
+
+                if current:
+                    merged.append(current)
+                current = section
+                continue
+
+            if current:
+                merged.append(current)
+                current = None
+            merged.append(section)
+
+        if current:
+            merged.append(current)
+        return merged
+
+    def _split_rating_plate_sections(self, sections: List[dict]) -> List[dict]:
+        result: List[dict] = []
+        for section in sections:
+            if not self._is_rating_plate_section(section, section.get("text", "")):
+                result.append(section)
+                continue
+
+            rating_subsections = self._create_rating_plate_subsections(section)
+            if not rating_subsections:
+                result.append(section)
+                continue
+
+            section["text"] = ""
+            section["char_end"] = section.get("char_start", 0)
+            section["tables"] = []
+            section["figures"] = []
+            section["tags"] = sorted(
+                set(section.get("tags", [])) | {"rating_plate", "brand_specific"}
+            )
+            result.append(section)
+            result.extend(rating_subsections)
+        return result
+
+    def _create_rating_plate_subsections(self, section: dict) -> List[dict]:
+        original_text = section.get("text") or ""
+        if not original_text:
+            return []
+
+        normalized_text = (
+            original_text.replace("\u00ad", "-").replace("\u2010", "-").replace("\u2011", "-")
+        )
+        lines = normalized_text.split("\n")
+        line_positions: List[int] = []
+        cursor = 0
+        for line in lines:
+            line_positions.append(cursor)
+            cursor += len(line) + 1
+        line_positions.append(len(normalized_text))
+
+        brand_pattern = re.compile(
+            r"(Nespresso|DeLonghi|Koenig|Krups|Magimix|Turmix)"
+            r"(?:[, ]+([A-Za-z/]{2,5})[\s\u2010\u00ad-]*version)?",
+            re.IGNORECASE,
+        )
+
+        headers: List[Tuple[int, str, Optional[str]]] = []
+        for idx, line in enumerate(lines):
+            match = brand_pattern.search(line)
+            if match:
+                brand = match.group(1).strip()
+                region = match.group(2)
+                headers.append((idx, brand, region))
+
+        if not headers:
+            return []
+
+        headers.append((len(lines), "", None))
+        subsections: List[dict] = []
+        existing_tags = set(section.get("tags", []))
+
+        for i in range(len(headers) - 1):
+            start_idx, brand, region = headers[i]
+            next_idx = headers[i + 1][0]
+            if not brand:
+                continue
+            start_pos = line_positions[start_idx]
+            end_pos = line_positions[next_idx]
+            block_text = original_text[start_pos:end_pos].strip()
+            if not block_text:
+                continue
+
+            brand_slug = brand.lower().replace(" ", "_")
+            region_slug = f"_{region.lower()}" if region else ""
+            base_id = f"{section['section_id']}_{brand_slug}{region_slug}"
+            new_section = copy.deepcopy(section)
+            new_section.update(
+                {
+                    "section_id": base_id,
+                    "parent_id": section["section_id"],
+                    "title": f"{section['title']} - {brand}"
+                    + (f", {region}-version" if region else ""),
+                    "title_normalized": f"{section['title_normalized']}_{brand_slug}"
+                    + (f"_{region.lower()}" if region else ""),
+                    "role": "figure",
+                    "level": section["level"] + 1,
+                    "char_start": section.get("char_start", 0) + start_pos,
+                    "char_end": section.get("char_start", 0) + start_pos + len(block_text),
+                    "text": block_text,
+                    "tables": [],
+                    "figures": section.get("figures") or [],
+                    "tags": sorted(
+                        existing_tags
+                        | {
+                            "brand_specific",
+                            "rating_plate",
+                            brand_slug,
+                        }
+                        | ({region.lower()} if region else set())
+                    ),
+                }
+            )
+            new_section.pop("warnings", None)
+            subsections.append(new_section)
+
+        return subsections
+
+    def _detect_implicit_subsections(self, sections: List[dict]) -> List[dict]:
+        existing_ids = {sec["section_id"] for sec in sections}
+        result: List[dict] = []
+
+        for section in sections:
+            extracted = self._extract_implicit_subsections(section, existing_ids)
+            if not extracted:
+                result.append(section)
+                continue
+
+            prefix_text, new_sections = extracted
+            section["text"] = prefix_text
+            if prefix_text:
+                section["char_end"] = section.get("char_start", 0) + len(prefix_text)
+            else:
+                section["char_end"] = section.get("char_start", 0)
+            section["tags"] = sorted(set(section.get("tags", [])))
+            result.append(section)
+            for new_sec in new_sections:
+                existing_ids.add(new_sec["section_id"])
+                result.append(new_sec)
+        return result
+
+    def _extract_implicit_subsections(
+        self,
+        section: dict,
+        existing_ids: Set[str],
+    ) -> Optional[Tuple[str, List[dict]]]:
+        text = section.get("text") or ""
+        if not text:
+            return None
+
+        patterns = [
+            re.compile(r"^([A-Z][A-Za-z0-9\s,&-]+):?$"),
+            re.compile(r"^([A-Z][A-Z\s/&-]+)$"),
+        ]
+        lines = text.split("\n")
+        headings: List[Tuple[int, str]] = []
+        for idx, line in enumerate(lines):
+            stripped = line.strip()
+            if not stripped:
+                continue
+            for pattern in patterns:
+                match = pattern.match(stripped)
+                if match and len(stripped.split()) <= 8:
+                    headings.append((idx, match.group(1).strip(" :")))
+                    break
+
+        if len(headings) < 2:
+            return None
+
+        line_positions: List[int] = []
+        cursor = 0
+        for line in lines:
+            line_positions.append(cursor)
+            cursor += len(line) + 1
+        line_positions.append(len(text))
+
+        subsections: List[dict] = []
+        for i, (line_idx, title) in enumerate(headings):
+            next_idx = headings[i + 1][0] if i + 1 < len(headings) else len(lines)
+            start_pos = line_positions[line_idx]
+            end_pos = line_positions[next_idx]
+            block_text = text[start_pos:end_pos].strip()
+            if len(block_text) < 40:
+                continue
+
+            suffix = self._normalize_title(title) or "section"
+            candidate_id = f"{section['section_id']}_{suffix}"
+            counter = 1
+            new_id = candidate_id
+            while new_id in existing_ids:
+                counter += 1
+                new_id = f"{candidate_id}_{counter}"
+            new_section = {
+                "section_id": new_id,
+                "parent_id": section["section_id"],
+                "title": title,
+                "title_normalized": f"{section['title_normalized']}_{suffix}",
+                "role": "main",
+                "level": section["level"] + 1,
+                "language": section["language"],
+                "language_confidence": section["language_confidence"],
+                "page_start": section["page_start"],
+                "page_end": section["page_end"],
+                "char_start": section.get("char_start", 0) + start_pos,
+                "char_end": section.get("char_start", 0) + start_pos + len(block_text),
+                "text": block_text,
+                "is_suspect": section.get("is_suspect", False),
+                "tables": [],
+                "figures": [],
+                "tags": sorted(set(section.get("tags", []))),
+            }
+            subsections.append(new_section)
+            existing_ids.add(new_id)
+
+        if not subsections:
+            return None
+
+        first_heading_idx = headings[0][0]
+        prefix_end = line_positions[first_heading_idx]
+        prefix_text = text[:prefix_end].strip()
+
+        return prefix_text, subsections
+
+    def _annotate_warning_sections(self, sections: List[dict]) -> List[dict]:
+        for section in sections:
+            warnings = self._detect_warning_mentions(section.get("text", ""))
+            if not warnings:
+                continue
+            section.setdefault("tags", [])
+            if "warning" not in section["tags"]:
+                section["tags"].append("warning")
+            section["tags"] = sorted(set(section["tags"]))
+            section["warnings"] = warnings
+            if section.get("role") in {"main", "table"} and len(section.get("text", "")) < 600:
+                section["role"] = "warning"
+        return sections
+
+    def _detect_warning_mentions(self, text: str) -> List[dict]:
+        if not text:
+            return []
+
+        warning_patterns = [
+            r"(WARNING|CAUTION|DANGER|IMPORTANT|ATTENTION)",
+            r"(not compatible|incompatible)",
+            r"(do not|never|avoid).{0,50}(mix|combine|use with)",
+            r"(must not|cannot be used|will not work)",
+            r"^Note:?|^Nota:?",
+        ]
+        warnings: List[dict] = []
+        seen_snippets: set[str] = set()
+
+        for pattern in warning_patterns:
+            for match in re.finditer(pattern, text, re.IGNORECASE | re.MULTILINE):
+                start = max(0, match.start() - 120)
+                end = min(len(text), match.end() + 120)
+                window = text[start:end]
+                sentence_start = window.rfind(". ", 0, match.start() - start)
+                sentence_end = window.find(". ", match.end() - start)
+                if sentence_start != -1:
+                    window = window[sentence_start + 2 :]
+                if sentence_end != -1:
+                    window = window[: sentence_end + 1]
+                snippet = window.strip()
+                if not snippet or snippet in seen_snippets:
+                    continue
+                seen_snippets.add(snippet)
+                keyword = match.group(1) if match.lastindex else match.group(0)
+                severity = (
+                    "warning"
+                    if re.search(r"warning|caution|danger|not compatible", keyword, re.IGNORECASE)
+                    else "note"
+                )
+                warnings.append(
+                    {
+                        "type": severity,
+                        "text": snippet,
+                        "keyword": keyword,
+                    }
+                )
+
+        return warnings
+
+    def _is_rating_plate_section(self, section: object, text: str) -> bool:
+        title = getattr(section, "title", "") if hasattr(section, "title") else ""
+        if isinstance(section, dict):
+            title = section.get("title", title)
+        title_lower = (title or "").lower().replace("\u00a0", " ")
+        text_lower = (text or "").lower().replace("\u00a0", " ")
+        return "rating plate" in title_lower or "rating plate" in text_lower
+
+    def _is_valid_pipe_table(
+        self,
+        lines: Sequence[str],
+        min_pipe_cols: int,
+    ) -> bool:
+        if len(lines) < 2:
+            return False
+        column_counts = [
+            len([part for part in line.split("|") if part.strip()]) for line in lines
+        ]
+        if max(column_counts, default=0) < min_pipe_cols:
+            return False
+        return True
+
+    def _is_valid_dotted_table(self, lines: Sequence[str]) -> bool:
+        dotted_lines = [line for line in lines if re.search(r"\.{3,}", line)]
+        if len(dotted_lines) < 3:
+            return False
+        separator_counts = [
+            len(re.findall(r"\.{3,}", line)) for line in dotted_lines
+        ]
+        if separator_counts and len(set(separator_counts)) > 2:
+            return False
+        leading = lines[: min(3, len(lines))]
+        if leading and all(item.strip().startswith("-") for item in leading):
+            return False
+        return True
+
+    def _extract_legend_items(self, text: str) -> List[dict]:
+        pattern = re.compile(
+            r"^\s*(\d+)\s*[.)]\s+(.+?)(?=\n\s*\d+[.)]|\n\n|$)",
+            re.MULTILINE | re.DOTALL,
+        )
+        items: List[dict] = []
+        for match in pattern.finditer(text):
+            number = int(match.group(1))
+            description = " ".join(match.group(2).split())
+            items.append({"number": number, "description": description})
+        return items
 
     # --------------------------------------------------------------------- #
     # Helpers - metadata and utilities

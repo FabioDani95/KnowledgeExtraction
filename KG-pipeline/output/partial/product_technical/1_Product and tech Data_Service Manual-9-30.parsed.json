@@ -3,8 +3,8 @@
   "title": "1_Product and tech Data_Service Manual-9-30",
   "datasource_code": "SRC_DOCS_PIPELINE5",
   "language": "en",
-  "ingestion_id": "db0b20f8-adb1-417f-abc5-e3603080d584",
-  "created_utc": "2025-10-31T18:11:24.617415Z",
+  "ingestion_id": "797151b5-72d6-4012-b3b0-ccb89635966e",
+  "created_utc": "2025-10-31T20:56:02.119715Z",
   "source": {
     "uri": "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/source/product_technical/1_Product and tech Data_Service Manual-9-30.pdf",
     "filename": "1_Product and tech Data_Service Manual-9-30.pdf",
@@ -64,7 +64,41 @@
           "type": "diagram",
           "bbox": null,
           "has_legend": true,
-          "legend_items_count": 8
+          "legend_items_count": 8,
+          "legend_items": [
+            {
+              "number": 1,
+              "description": "Button prints"
+            },
+            {
+              "number": 2,
+              "description": "Capsule bay"
+            },
+            {
+              "number": 3,
+              "description": "Brewing unit (TMBU, Tolkien Mini"
+            },
+            {
+              "number": 4,
+              "description": "Pump (Invensys CP4/SP)"
+            },
+            {
+              "number": 5,
+              "description": "Flowmeter (FHKSC12) 6) Electronic control board"
+            },
+            {
+              "number": 7,
+              "description": "Self priming device (APD)"
+            },
+            {
+              "number": 8,
+              "description": "NTC temperature sensor"
+            },
+            {
+              "number": 9,
+              "description": "Thermoblock (EF 2003)"
+            }
+          ]
         }
       ],
       "tags": [
@@ -96,7 +130,53 @@
           "type": "diagram",
           "bbox": null,
           "has_legend": true,
-          "legend_items_count": 11
+          "legend_items_count": 11,
+          "legend_items": [
+            {
+              "number": 1,
+              "description": "Cup support"
+            },
+            {
+              "number": 2,
+              "description": "Waste water container"
+            },
+            {
+              "number": 3,
+              "description": "Capsule container (used capsules)"
+            },
+            {
+              "number": 4,
+              "description": "Side panel, left"
+            },
+            {
+              "number": 5,
+              "description": "Side panel, right"
+            },
+            {
+              "number": 6,
+              "description": "Coffee nozzle 7) Steam cover"
+            },
+            {
+              "number": 8,
+              "description": "Closing handle"
+            },
+            {
+              "number": 9,
+              "description": "Button \"small cup\" (Espresso)"
+            },
+            {
+              "number": 10,
+              "description": "Button \"large cup\" (Lungo)"
+            },
+            {
+              "number": 11,
+              "description": "Top cover"
+            },
+            {
+              "number": 12,
+              "description": "Rear cover"
+            }
+          ]
         }
       ],
       "tags": [
@@ -128,7 +208,41 @@
           "type": "diagram",
           "bbox": null,
           "has_legend": true,
-          "legend_items_count": 8
+          "legend_items_count": 8,
+          "legend_items": [
+            {
+              "number": 1,
+              "description": "Capsule bay"
+            },
+            {
+              "number": 2,
+              "description": "Brewing unit (TMBU, Tolkien Mini"
+            },
+            {
+              "number": 3,
+              "description": "Button prints (under top cover)"
+            },
+            {
+              "number": 4,
+              "description": "Pump (Invensys CP4/SP)"
+            },
+            {
+              "number": 5,
+              "description": "Flowmeter (FHKSC12) 6) Electronic control board"
+            },
+            {
+              "number": 7,
+              "description": "Self priming device (APD)"
+            },
+            {
+              "number": 8,
+              "description": "NTC temperature sensor"
+            },
+            {
+              "number": 9,
+              "description": "Thermoblock (EF 2003)"
+            }
+          ]
         }
       ],
       "tags": [
@@ -148,8 +262,8 @@
       "page_start": 5,
       "page_end": 6,
       "char_start": 1125,
-      "char_end": 1724,
-      "text": "This is the basic model with the smallest platform (9). \nThe drip grid (1) \n­ exists in 2 versions, \n­ matches with the cup holder of the core unit version (e.g. circular recesses). This model is pictured \nwith a  C­range core \nunit. \n1) Drip grid \n2) Drip tray \n3) Core unit (e.g. C­range) \n4) Water tank cover \n5) Water tank 6) Water tank connector \n7) Power cord \n8) ON/OFF switch (mains switch) \n9) Platform \nThe core units of \nmodel Citiz and Citiz \n& milk are not com­ \npatible due to different \nelectronic control boards.\n\nCitiz service manual  14 MAIN COMPONENTS",
+      "char_end": 1536,
+      "text": "This is the basic model with the smallest platform (9). \nThe drip grid (1) \n­ exists in 2 versions, \n­ matches with the cup holder of the core unit version (e.g. circular recesses). This model is pictured \nwith a  C­range core \nunit. \n1) Drip grid \n2) Drip tray \n3) Core unit (e.g. C­range) \n4) Water tank cover \n5) Water tank 6) Water tank connector \n7) Power cord \n8) ON/OFF switch (mains switch) \n9) Platform",
       "is_suspect": false,
       "tables": [],
       "figures": [
@@ -160,9 +274,87 @@
           "type": "photo",
           "bbox": null,
           "has_legend": true,
-          "legend_items_count": 8
+          "legend_items_count": 8,
+          "legend_items": [
+            {
+              "number": 1,
+              "description": "Drip grid"
+            },
+            {
+              "number": 2,
+              "description": "Drip tray"
+            },
+            {
+              "number": 3,
+              "description": "Core unit (e.g. C­range)"
+            },
+            {
+              "number": 4,
+              "description": "Water tank cover"
+            },
+            {
+              "number": 5,
+              "description": "Water tank 6) Water tank connector"
+            },
+            {
+              "number": 7,
+              "description": "Power cord"
+            },
+            {
+              "number": 8,
+              "description": "ON/OFF switch (mains switch)"
+            },
+            {
+              "number": 9,
+              "description": "Platform"
+            }
+          ]
         }
       ],
+      "tags": [
+        "component_list",
+        "figure_present"
+      ]
+    },
+    {
+      "section_id": "sec_3_3_the_core_units_of",
+      "parent_id": "sec_3_3",
+      "title": "The core units of",
+      "title_normalized": "overview_model_citiz_the_core_units_of",
+      "role": "main",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 5,
+      "page_end": 6,
+      "char_start": 1538,
+      "char_end": 1653,
+      "text": "The core units of \nmodel Citiz and Citiz \n& milk are not com­ \npatible due to different \nelectronic control boards.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "component_list",
+        "figure_present"
+      ]
+    },
+    {
+      "section_id": "sec_3_3_citiz_service_manual_14_main_components",
+      "parent_id": "sec_3_3",
+      "title": "Citiz service manual  14 MAIN COMPONENTS",
+      "title_normalized": "overview_model_citiz_citiz_service_manual_14_main_components",
+      "role": "main",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 5,
+      "page_end": 6,
+      "char_start": 1655,
+      "char_end": 1695,
+      "text": "Citiz service manual  14 MAIN COMPONENTS",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
       "tags": [
         "component_list",
         "figure_present"
@@ -180,8 +372,8 @@
       "page_start": 6,
       "page_end": 8,
       "char_start": 1725,
-      "char_end": 2931,
-      "text": "The platform of this model is equipped with a milk frother (8). \nThe drip grid (1) \n­ exists in 2 versions, \n­ matches with the cup holder of the core unit version (e.g. circular recesses). This model is pictured \nwith a C­range core \nunit. \n1) Drip grid \n2) Drip tray \n3) Platform \n4) Storage places for whisks \n5) Core unit (e.g. C­range) \n6) Water tank \n7) Water tank cover \n8) Milk frother (Aero 3) 9) Lid \n10)Milk frother start button \n11)Water tank connector \n12)Power cord \n13)Milk frother connector \n14)ON/OFF switch (mains switch) \n15)Cup storage (removable) \nThe core units of \nmodel Citiz and Citiz \n& milk are not com­ \npatible due to different \nelectronic control boards.\n\nCitiz service manual  15 MAIN COMPONENTS",
+      "char_end": 2292,
+      "text": "The platform of this model is equipped with a milk frother (8). \nThe drip grid (1) \n­ exists in 2 versions, \n­ matches with the cup holder of the core unit version (e.g. circular recesses). This model is pictured \nwith a C­range core \nunit. \n1) Drip grid \n2) Drip tray \n3) Platform \n4) Storage places for whisks \n5) Core unit (e.g. C­range) \n6) Water tank \n7) Water tank cover \n8) Milk frother (Aero 3) 9) Lid \n10)Milk frother start button \n11)Water tank connector \n12)Power cord \n13)Milk frother connector \n14)ON/OFF switch (mains switch) \n15)Cup storage (removable)",
       "is_suspect": false,
       "tables": [],
       "figures": [
@@ -192,9 +384,87 @@
           "type": "photo",
           "bbox": null,
           "has_legend": true,
-          "legend_items_count": 8
+          "legend_items_count": 8,
+          "legend_items": [
+            {
+              "number": 1,
+              "description": "Drip grid"
+            },
+            {
+              "number": 2,
+              "description": "Drip tray"
+            },
+            {
+              "number": 3,
+              "description": "Platform"
+            },
+            {
+              "number": 4,
+              "description": "Storage places for whisks"
+            },
+            {
+              "number": 5,
+              "description": "Core unit (e.g. C­range)"
+            },
+            {
+              "number": 6,
+              "description": "Water tank"
+            },
+            {
+              "number": 7,
+              "description": "Water tank cover"
+            },
+            {
+              "number": 8,
+              "description": "Milk frother (Aero 3) 9) Lid"
+            }
+          ]
         }
       ],
+      "tags": [
+        "component_list",
+        "figure_present"
+      ]
+    },
+    {
+      "section_id": "sec_3_4_the_core_units_of",
+      "parent_id": "sec_3_4",
+      "title": "The core units of",
+      "title_normalized": "overview_model_citiz_and_milk_the_core_units_of",
+      "role": "main",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 6,
+      "page_end": 8,
+      "char_start": 2294,
+      "char_end": 2409,
+      "text": "The core units of \nmodel Citiz and Citiz \n& milk are not com­ \npatible due to different \nelectronic control boards.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "component_list",
+        "figure_present"
+      ]
+    },
+    {
+      "section_id": "sec_3_4_citiz_service_manual_15_main_components",
+      "parent_id": "sec_3_4",
+      "title": "Citiz service manual  15 MAIN COMPONENTS",
+      "title_normalized": "overview_model_citiz_and_milk_citiz_service_manual_15_main_components",
+      "role": "main",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 6,
+      "page_end": 8,
+      "char_start": 2411,
+      "char_end": 2451,
+      "text": "Citiz service manual  15 MAIN COMPONENTS",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
       "tags": [
         "component_list",
         "figure_present"
@@ -212,8 +482,8 @@
       "page_start": 7,
       "page_end": 8,
       "char_start": 2488,
-      "char_end": 2931,
-      "text": "The inside of the jug (3) \n­ has level marks (6), \n­ is surface­coated for easy cleaning. The milk frother \nAERO3 is part of the \nstandard equipment \nof the model Citiz & milk. \n1) Lid \n2) Seal \n3) Jug \n4) Power plug \n5) Start button (red/blue backlighted) 6) Indication of 2 max. milk levels \n(120 ml/240 ml) \n7) Mixer for hot milk \n8) Spring whisk for milk foam\n\nCitiz service manual  16 MAIN COMPONENTS",
+      "char_end": 2594,
+      "text": "The inside of the jug (3) \n­ has level marks (6), \n­ is surface­coated for easy cleaning. The milk frother",
       "is_suspect": false,
       "tables": [],
       "figures": [
@@ -224,9 +494,83 @@
           "type": "diagram",
           "bbox": null,
           "has_legend": true,
-          "legend_items_count": 7
+          "legend_items_count": 7,
+          "legend_items": [
+            {
+              "number": 1,
+              "description": "Lid"
+            },
+            {
+              "number": 2,
+              "description": "Seal"
+            },
+            {
+              "number": 3,
+              "description": "Jug"
+            },
+            {
+              "number": 4,
+              "description": "Power plug"
+            },
+            {
+              "number": 5,
+              "description": "Start button (red/blue backlighted) 6) Indication of 2 max. milk levels"
+            },
+            {
+              "number": 7,
+              "description": "Mixer for hot milk"
+            },
+            {
+              "number": 8,
+              "description": "Spring whisk for milk foam"
+            }
+          ]
         }
       ],
+      "tags": [
+        "component_list",
+        "figure_present"
+      ]
+    },
+    {
+      "section_id": "sec_3_4_1_aero3_is_part_of_the",
+      "parent_id": "sec_3_4_1",
+      "title": "AERO3 is part of the",
+      "title_normalized": "overview_milk_frother_aero3_aero3_is_part_of_the",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 7,
+      "page_end": 8,
+      "char_start": 2596,
+      "char_end": 2851,
+      "text": "AERO3 is part of the \nstandard equipment \nof the model Citiz & milk. \n1) Lid \n2) Seal \n3) Jug \n4) Power plug \n5) Start button (red/blue backlighted) 6) Indication of 2 max. milk levels \n(120 ml/240 ml) \n7) Mixer for hot milk \n8) Spring whisk for milk foam",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "component_list",
+        "figure_present"
+      ]
+    },
+    {
+      "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+      "parent_id": "sec_3_4_1",
+      "title": "Citiz service manual  16 MAIN COMPONENTS",
+      "title_normalized": "overview_milk_frother_aero3_citiz_service_manual_16_main_components",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 7,
+      "page_end": 8,
+      "char_start": 2853,
+      "char_end": 2893,
+      "text": "Citiz service manual  16 MAIN COMPONENTS",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
       "tags": [
         "component_list",
         "figure_present"
@@ -256,7 +600,37 @@
           "type": "photo",
           "bbox": null,
           "has_legend": true,
-          "legend_items_count": 7
+          "legend_items_count": 7,
+          "legend_items": [
+            {
+              "number": 1,
+              "description": "Drip tray"
+            },
+            {
+              "number": 2,
+              "description": "Drip grid"
+            },
+            {
+              "number": 3,
+              "description": "ON/OFF switch (mains switch)"
+            },
+            {
+              "number": 4,
+              "description": "Power cord 5) Core units (e.g. 2 x C­range)"
+            },
+            {
+              "number": 6,
+              "description": "Water tank"
+            },
+            {
+              "number": 7,
+              "description": "Water tank cover"
+            },
+            {
+              "number": 8,
+              "description": "Platform"
+            }
+          ]
         }
       ],
       "tags": [
@@ -295,8 +669,8 @@
       "page_start": 9,
       "page_end": 10,
       "char_start": 3360,
-      "char_end": 3925,
-      "text": "Legend: \nThe self priming device (4) \n­ allows the pump to suck water when it is filled with air (new machine, empty water \ntank etc.) \n­ removes air bubbles from the water circuit \n­ feeds a water/air mix back into the water tank. 1) Water tank \n2) Flow meter \n3) Pump \n4) Self priming device \n5) Thermoblock 6) Mini brewing unit (MBU) \n7) Capsule container \n8) Waste water container \n9) Drip tray \nFresh cold water \nFresh hot water \nCoffee \nWaste/drip water\n\nCitiz service manual  18 MAIN COMPONENTS",
+      "char_end": 3360,
+      "text": "",
       "is_suspect": false,
       "tables": [],
       "figures": [
@@ -307,9 +681,83 @@
           "type": "diagram",
           "bbox": null,
           "has_legend": true,
-          "legend_items_count": 7
+          "legend_items_count": 7,
+          "legend_items": [
+            {
+              "number": 2,
+              "description": "Flow meter"
+            },
+            {
+              "number": 3,
+              "description": "Pump"
+            },
+            {
+              "number": 4,
+              "description": "Self priming device"
+            },
+            {
+              "number": 5,
+              "description": "Thermoblock 6) Mini brewing unit (MBU)"
+            },
+            {
+              "number": 7,
+              "description": "Capsule container"
+            },
+            {
+              "number": 8,
+              "description": "Waste water container"
+            },
+            {
+              "number": 9,
+              "description": "Drip tray"
+            }
+          ]
         }
       ],
+      "tags": [
+        "component_list",
+        "figure_present"
+      ]
+    },
+    {
+      "section_id": "sec_3_6_1_legend",
+      "parent_id": "sec_3_6_1",
+      "title": "Legend",
+      "title_normalized": "water_circuit_diagram_of_core_unit_all_citiz_versions_legend",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 9,
+      "page_end": 10,
+      "char_start": 3360,
+      "char_end": 3758,
+      "text": "Legend: \nThe self priming device (4) \n­ allows the pump to suck water when it is filled with air (new machine, empty water \ntank etc.) \n­ removes air bubbles from the water circuit \n­ feeds a water/air mix back into the water tank. 1) Water tank \n2) Flow meter \n3) Pump \n4) Self priming device \n5) Thermoblock 6) Mini brewing unit (MBU) \n7) Capsule container \n8) Waste water container \n9) Drip tray",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "component_list",
+        "figure_present"
+      ]
+    },
+    {
+      "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+      "parent_id": "sec_3_6_1",
+      "title": "Citiz service manual  18 MAIN COMPONENTS",
+      "title_normalized": "water_circuit_diagram_of_core_unit_all_citiz_versions_citiz_service_manual_18_main_components",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 9,
+      "page_end": 10,
+      "char_start": 3821,
+      "char_end": 3861,
+      "text": "Citiz service manual  18 MAIN COMPONENTS",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
       "tags": [
         "component_list",
         "figure_present"
@@ -339,7 +787,37 @@
           "type": "diagram",
           "bbox": null,
           "has_legend": true,
-          "legend_items_count": 7
+          "legend_items_count": 7,
+          "legend_items": [
+            {
+              "number": 1,
+              "description": "Water tank"
+            },
+            {
+              "number": 2,
+              "description": "Water tank connector"
+            },
+            {
+              "number": 3,
+              "description": "Self priming device"
+            },
+            {
+              "number": 4,
+              "description": "Thermoblock 5) Flow meter"
+            },
+            {
+              "number": 6,
+              "description": "Coffee outlet"
+            },
+            {
+              "number": 7,
+              "description": "Brewing unit"
+            },
+            {
+              "number": 8,
+              "description": "Pump"
+            }
+          ]
         }
       ],
       "tags": [
@@ -371,7 +849,37 @@
           "type": "diagram",
           "bbox": null,
           "has_legend": true,
-          "legend_items_count": 7
+          "legend_items_count": 7,
+          "legend_items": [
+            {
+              "number": 1,
+              "description": "Water tank"
+            },
+            {
+              "number": 2,
+              "description": "Pump"
+            },
+            {
+              "number": 3,
+              "description": "Brewing unit"
+            },
+            {
+              "number": 4,
+              "description": "Coffee outlet 5) Flow meter"
+            },
+            {
+              "number": 6,
+              "description": "Thermoblock"
+            },
+            {
+              "number": 7,
+              "description": "Water tank connector"
+            },
+            {
+              "number": 8,
+              "description": "Self priming device"
+            }
+          ]
         }
       ],
       "tags": [
@@ -429,8 +937,33 @@
       "page_start": 12,
       "page_end": 15,
       "char_start": 4413,
-      "char_end": 5725,
-      "text": "Nespresso, EU­version The type plate can be \nfound at the bottom of \nthe coffee machine’s \nplatform. \nThis overview shows \nexamples of various \nbrands and is subject \nto alterations. \nEF484 Citiz C110 red  EF483 Citiz D110 black \nEF486 Citiz & milk C120 red  EF485 Citiz & milk D120 black \nEF488 Citiz & Co C130 red  EF487 Citiz & Co D130 black\n\nCitiz service manual  21 TECHNICAL DATA \nDeLonghi, EU­version \nKoenig, CH­version EF483 Citiz D110 Limousine black/DeLonghi EN165.B  EF483 Citiz D110 60's White/DeLonghi EN165.CW \nEF485 Citiz & milk D120 Limousine black/DeLonghi \nEN265.BAE EF487 Citiz & Co. D130 Limousine black/DeLonghi \nEN325.B \nEF483 Citiz D110 Limousine black/Koenig Citiz  EF483 Citiz D110 60's White/Koenig Citiz \nEF485 Citiz & milk D120 Limousine black/Koenig Citiz & milk EF487 Citiz & Co. D130 Limousine black/Koenig Citiz & Co.\n\nCitiz service manual  22 TECHNICAL DATA \nKrups, EU­version \nMagimix, EU­version EF484 CitiZ XN700510 grey  EF484 CitiZ XN700610 red \nEF486 CitiZ & milk XN710610 red  EF488 CitiZ & Co XN750510 grey \nEF483 Citiz M190 ­ Ref 11290 black  EF483 Citiz M190 ­ Ref 11291 cream \nEF485 Citiz M190 Milk ­ Ref 113 00 black  EF487 Citiz M190 Duo ­ Ref 11305 black\n\nCitiz service manual  23 TECHNICAL DATA \nTurmix, AT­version",
+      "char_end": 4413,
+      "text": "",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "brand_specific",
+        "electrical_specs",
+        "figure_present",
+        "model_codes",
+        "rating_plate"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_1_nespresso",
+      "parent_id": "sec_4_1_1",
+      "title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+      "title_normalized": "examples_of_brand_specific_rating_plates_nespresso",
+      "role": "figure",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 4413,
+      "char_end": 4513,
+      "text": "Nespresso, EU­version The type plate can be \nfound at the bottom of \nthe coffee machine’s \nplatform.",
       "is_suspect": false,
       "tables": [],
       "figures": [
@@ -438,17 +971,405 @@
           "figure_id": "fig_4_1_1",
           "page": 12,
           "caption": "4.1.1 Examples of brand specific rating plates",
-          "type": "diagram",
+          "type": "photo",
           "bbox": null,
           "has_legend": false,
-          "legend_items_count": 0
+          "legend_items_count": 0,
+          "legend_items": []
         }
       ],
       "tags": [
         "brand_specific",
         "electrical_specs",
         "figure_present",
-        "model_codes"
+        "model_codes",
+        "nespresso",
+        "rating_plate"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+      "parent_id": "sec_4_1_1_nespresso",
+      "title": "This overview shows",
+      "title_normalized": "examples_of_brand_specific_rating_plates_nespresso_this_overview_shows",
+      "role": "main",
+      "level": 5,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 4515,
+      "char_end": 4595,
+      "text": "This overview shows \nexamples of various \nbrands and is subject \nto alterations.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "brand_specific",
+        "electrical_specs",
+        "figure_present",
+        "model_codes",
+        "nespresso",
+        "rating_plate"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+      "parent_id": "sec_4_1_1_nespresso",
+      "title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+      "title_normalized": "examples_of_brand_specific_rating_plates_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+      "role": "main",
+      "level": 5,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 4597,
+      "char_end": 4757,
+      "text": "EF484 Citiz C110 red  EF483 Citiz D110 black \nEF486 Citiz & milk C120 red  EF485 Citiz & milk D120 black \nEF488 Citiz & Co C130 red  EF487 Citiz & Co D130 black",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "brand_specific",
+        "electrical_specs",
+        "figure_present",
+        "model_codes",
+        "nespresso",
+        "rating_plate"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_1_delonghi",
+      "parent_id": "sec_4_1_1",
+      "title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+      "title_normalized": "examples_of_brand_specific_rating_plates_delonghi",
+      "role": "figure",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 4800,
+      "char_end": 4820,
+      "text": "DeLonghi, EU­version",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_4_1_1",
+          "page": 12,
+          "caption": "4.1.1 Examples of brand specific rating plates",
+          "type": "photo",
+          "bbox": null,
+          "has_legend": false,
+          "legend_items_count": 0,
+          "legend_items": []
+        }
+      ],
+      "tags": [
+        "brand_specific",
+        "delonghi",
+        "electrical_specs",
+        "figure_present",
+        "model_codes",
+        "rating_plate"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_1_koenig",
+      "parent_id": "sec_4_1_1",
+      "title": "4.1.1 Examples of brand specific rating plates - Koenig",
+      "title_normalized": "examples_of_brand_specific_rating_plates_koenig",
+      "role": "figure",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 4822,
+      "char_end": 4937,
+      "text": "Koenig, CH­version EF483 Citiz D110 Limousine black/DeLonghi EN165.B  EF483 Citiz D110 60's White/DeLonghi EN165.CW",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_4_1_1",
+          "page": 12,
+          "caption": "4.1.1 Examples of brand specific rating plates",
+          "type": "photo",
+          "bbox": null,
+          "has_legend": false,
+          "legend_items_count": 0,
+          "legend_items": []
+        }
+      ],
+      "tags": [
+        "brand_specific",
+        "electrical_specs",
+        "figure_present",
+        "koenig",
+        "model_codes",
+        "rating_plate"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_1_delonghi",
+      "parent_id": "sec_4_1_1",
+      "title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+      "title_normalized": "examples_of_brand_specific_rating_plates_delonghi",
+      "role": "figure",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 4939,
+      "char_end": 4987,
+      "text": "EF485 Citiz & milk D120 Limousine black/DeLonghi",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_4_1_1",
+          "page": 12,
+          "caption": "4.1.1 Examples of brand specific rating plates",
+          "type": "photo",
+          "bbox": null,
+          "has_legend": false,
+          "legend_items_count": 0,
+          "legend_items": []
+        }
+      ],
+      "tags": [
+        "brand_specific",
+        "delonghi",
+        "electrical_specs",
+        "figure_present",
+        "model_codes",
+        "rating_plate"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_1_delonghi",
+      "parent_id": "sec_4_1_1",
+      "title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+      "title_normalized": "examples_of_brand_specific_rating_plates_delonghi",
+      "role": "figure",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 4989,
+      "char_end": 5055,
+      "text": "EN265.BAE EF487 Citiz & Co. D130 Limousine black/DeLonghi \nEN325.B",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_4_1_1",
+          "page": 12,
+          "caption": "4.1.1 Examples of brand specific rating plates",
+          "type": "photo",
+          "bbox": null,
+          "has_legend": false,
+          "legend_items_count": 0,
+          "legend_items": []
+        }
+      ],
+      "tags": [
+        "brand_specific",
+        "delonghi",
+        "electrical_specs",
+        "figure_present",
+        "model_codes",
+        "rating_plate"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_1_koenig",
+      "parent_id": "sec_4_1_1",
+      "title": "4.1.1 Examples of brand specific rating plates - Koenig",
+      "title_normalized": "examples_of_brand_specific_rating_plates_koenig",
+      "role": "figure",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 5057,
+      "char_end": 5144,
+      "text": "EF483 Citiz D110 Limousine black/Koenig Citiz  EF483 Citiz D110 60's White/Koenig Citiz",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_4_1_1",
+          "page": 12,
+          "caption": "4.1.1 Examples of brand specific rating plates",
+          "type": "photo",
+          "bbox": null,
+          "has_legend": false,
+          "legend_items_count": 0,
+          "legend_items": []
+        }
+      ],
+      "tags": [
+        "brand_specific",
+        "electrical_specs",
+        "figure_present",
+        "koenig",
+        "model_codes",
+        "rating_plate"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_1_koenig",
+      "parent_id": "sec_4_1_1",
+      "title": "4.1.1 Examples of brand specific rating plates - Koenig",
+      "title_normalized": "examples_of_brand_specific_rating_plates_koenig",
+      "role": "figure",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 5146,
+      "char_end": 5304,
+      "text": "EF485 Citiz & milk D120 Limousine black/Koenig Citiz & milk EF487 Citiz & Co. D130 Limousine black/Koenig Citiz & Co.\n\nCitiz service manual  22 TECHNICAL DATA",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_4_1_1",
+          "page": 12,
+          "caption": "4.1.1 Examples of brand specific rating plates",
+          "type": "photo",
+          "bbox": null,
+          "has_legend": false,
+          "legend_items_count": 0,
+          "legend_items": []
+        }
+      ],
+      "tags": [
+        "brand_specific",
+        "electrical_specs",
+        "figure_present",
+        "koenig",
+        "model_codes",
+        "rating_plate"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_1_krups",
+      "parent_id": "sec_4_1_1",
+      "title": "4.1.1 Examples of brand specific rating plates - Krups",
+      "title_normalized": "examples_of_brand_specific_rating_plates_krups",
+      "role": "figure",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 5306,
+      "char_end": 5323,
+      "text": "Krups, EU­version",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_4_1_1",
+          "page": 12,
+          "caption": "4.1.1 Examples of brand specific rating plates",
+          "type": "photo",
+          "bbox": null,
+          "has_legend": false,
+          "legend_items_count": 0,
+          "legend_items": []
+        }
+      ],
+      "tags": [
+        "brand_specific",
+        "electrical_specs",
+        "figure_present",
+        "krups",
+        "model_codes",
+        "rating_plate"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_1_magimix",
+      "parent_id": "sec_4_1_1",
+      "title": "4.1.1 Examples of brand specific rating plates - Magimix",
+      "title_normalized": "examples_of_brand_specific_rating_plates_magimix",
+      "role": "figure",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 5325,
+      "char_end": 5656,
+      "text": "Magimix, EU­version EF484 CitiZ XN700510 grey  EF484 CitiZ XN700610 red \nEF486 CitiZ & milk XN710610 red  EF488 CitiZ & Co XN750510 grey \nEF483 Citiz M190 ­ Ref 11290 black  EF483 Citiz M190 ­ Ref 11291 cream \nEF485 Citiz M190 Milk ­ Ref 113 00 black  EF487 Citiz M190 Duo ­ Ref 11305 black\n\nCitiz service manual  23 TECHNICAL DATA",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_4_1_1",
+          "page": 12,
+          "caption": "4.1.1 Examples of brand specific rating plates",
+          "type": "photo",
+          "bbox": null,
+          "has_legend": false,
+          "legend_items_count": 0,
+          "legend_items": []
+        }
+      ],
+      "tags": [
+        "brand_specific",
+        "electrical_specs",
+        "figure_present",
+        "magimix",
+        "model_codes",
+        "rating_plate"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_1_turmix",
+      "parent_id": "sec_4_1_1",
+      "title": "4.1.1 Examples of brand specific rating plates - Turmix",
+      "title_normalized": "examples_of_brand_specific_rating_plates_turmix",
+      "role": "figure",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 5658,
+      "char_end": 5676,
+      "text": "Turmix, AT­version",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_4_1_1",
+          "page": 12,
+          "caption": "4.1.1 Examples of brand specific rating plates",
+          "type": "photo",
+          "bbox": null,
+          "has_legend": false,
+          "legend_items_count": 0,
+          "legend_items": []
+        }
+      ],
+      "tags": [
+        "brand_specific",
+        "electrical_specs",
+        "figure_present",
+        "model_codes",
+        "rating_plate",
+        "turmix"
       ]
     },
     {
@@ -463,8 +1384,35 @@
       "page_start": 15,
       "page_end": 16,
       "char_start": 5726,
-      "char_end": 6488,
-      "text": "EF486 Citiz & milk C120 fire engine red/ \nTurmix TX 270 ­ Citiz & milk EF488 Citiz & Co. C130 steel grey/ \nTurmix TX 370 ­ Citiz & Co. \n1) Brand name \n2) Voltage and power rating \n3) Place of manufacture \n4) National approval sign of Russia \n(GOST R) \n5) National approval sign of Germany \n(VDE) \n6) Barcode 7) Serial number \n8) Machine type \n9) Special disposal icon \n(do not dispose with ordinary waste) \n10) Sign of conformity (CE) \n11) Conform with RoHS guidelines (lead \nfree solder, etc.) \n12) Article number of the rating plate\n\nCitiz service manual  24 TECHNICAL DATA \nDecoding the alphanumeric serial number \nExample:",
+      "char_end": 5726,
+      "text": "",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "brand_specific",
+        "component_list",
+        "electrical_specs",
+        "figure_present",
+        "model_codes",
+        "rating_plate",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_2_turmix",
+      "parent_id": "sec_4_1_2",
+      "title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+      "title_normalized": "rating_plate_details_ef484_citiz_c110_fire_engine_red_turmix_tx_170_citiz_ef484_citiz_c110_steel_greyturmix_tx_170_citiz_turmix",
+      "role": "figure",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 15,
+      "page_end": 16,
+      "char_start": 5768,
+      "char_end": 5831,
+      "text": "Turmix TX 270 ­ Citiz & milk EF488 Citiz & Co. C130 steel grey/",
       "is_suspect": false,
       "tables": [],
       "figures": [
@@ -472,17 +1420,150 @@
           "figure_id": "fig_4_1_2",
           "page": 15,
           "caption": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz",
-          "type": "diagram",
+          "type": "photo",
           "bbox": null,
           "has_legend": true,
-          "legend_items_count": 11
+          "legend_items_count": 11,
+          "legend_items": [
+            {
+              "number": 1,
+              "description": "Brand name"
+            },
+            {
+              "number": 2,
+              "description": "Voltage and power rating"
+            },
+            {
+              "number": 3,
+              "description": "Place of manufacture"
+            },
+            {
+              "number": 4,
+              "description": "National approval sign of Russia"
+            },
+            {
+              "number": 5,
+              "description": "National approval sign of Germany"
+            },
+            {
+              "number": 6,
+              "description": "Barcode 7) Serial number"
+            },
+            {
+              "number": 8,
+              "description": "Machine type"
+            },
+            {
+              "number": 9,
+              "description": "Special disposal icon"
+            },
+            {
+              "number": 10,
+              "description": "Sign of conformity (CE)"
+            },
+            {
+              "number": 11,
+              "description": "Conform with RoHS guidelines (lead"
+            },
+            {
+              "number": 12,
+              "description": "Article number of the rating plate"
+            }
+          ]
         }
       ],
       "tags": [
+        "brand_specific",
         "component_list",
         "electrical_specs",
         "figure_present",
         "model_codes",
+        "rating_plate",
+        "turmix",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_2_turmix",
+      "parent_id": "sec_4_1_2",
+      "title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+      "title_normalized": "rating_plate_details_ef484_citiz_c110_fire_engine_red_turmix_tx_170_citiz_ef484_citiz_c110_steel_greyturmix_tx_170_citiz_turmix",
+      "role": "figure",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 15,
+      "page_end": 16,
+      "char_start": 5833,
+      "char_end": 6352,
+      "text": "Turmix TX 370 ­ Citiz & Co. \n1) Brand name \n2) Voltage and power rating \n3) Place of manufacture \n4) National approval sign of Russia \n(GOST R) \n5) National approval sign of Germany \n(VDE) \n6) Barcode 7) Serial number \n8) Machine type \n9) Special disposal icon \n(do not dispose with ordinary waste) \n10) Sign of conformity (CE) \n11) Conform with RoHS guidelines (lead \nfree solder, etc.) \n12) Article number of the rating plate\n\nCitiz service manual  24 TECHNICAL DATA \nDecoding the alphanumeric serial number \nExample:",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_4_1_2",
+          "page": 15,
+          "caption": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz",
+          "type": "photo",
+          "bbox": null,
+          "has_legend": true,
+          "legend_items_count": 11,
+          "legend_items": [
+            {
+              "number": 1,
+              "description": "Brand name"
+            },
+            {
+              "number": 2,
+              "description": "Voltage and power rating"
+            },
+            {
+              "number": 3,
+              "description": "Place of manufacture"
+            },
+            {
+              "number": 4,
+              "description": "National approval sign of Russia"
+            },
+            {
+              "number": 5,
+              "description": "National approval sign of Germany"
+            },
+            {
+              "number": 6,
+              "description": "Barcode 7) Serial number"
+            },
+            {
+              "number": 8,
+              "description": "Machine type"
+            },
+            {
+              "number": 9,
+              "description": "Special disposal icon"
+            },
+            {
+              "number": 10,
+              "description": "Sign of conformity (CE)"
+            },
+            {
+              "number": 11,
+              "description": "Conform with RoHS guidelines (lead"
+            },
+            {
+              "number": 12,
+              "description": "Article number of the rating plate"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "brand_specific",
+        "component_list",
+        "electrical_specs",
+        "figure_present",
+        "model_codes",
+        "rating_plate",
+        "turmix",
         "voltage"
       ]
     },
@@ -491,32 +1572,51 @@
       "parent_id": "sec_4_1",
       "title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
       "title_normalized": "rating_plate_of_milk_frother_model_citiz_and_milk_by_decoding_the_date",
-      "role": "table",
+      "role": "warning",
       "level": 3,
       "language": "en",
       "language_confidence": 1.0,
       "page_start": 16,
       "page_end": 17,
       "char_start": 6489,
-      "char_end": 7037,
-      "text": "of production and \nmachine type, the \ncoffee machine can be \nidentified exactly. \nChecksum (if available) \nColor version \nType of mains plug \nMains voltage \nDistributing partner \nIncremental number per production day \nManufacturing plant \nManufacturer designation of the machine type (EF 484) \n08312 ... Date of production \n(08 = year 2008, 312 = 312 day of the year) \nNote he mains volt­ \nage ranges of the dif­ \nferent models.\n\nCitiz service manual  25 TECHNICAL DATA",
+      "char_end": 6594,
+      "text": "of production and \nmachine type, the \ncoffee machine can be \nidentified exactly. \nChecksum (if available)",
       "is_suspect": false,
-      "tables": [
-        {
-          "table_id": "tbl_4_1_3_1",
-          "page": 16,
-          "caption": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
-          "n_rows": 2,
-          "n_cols": 2,
-          "csv": "Item,Value\r\n08312 ,Date of production",
-          "format": "dotted_leader"
-        }
-      ],
+      "tables": [],
       "figures": [],
       "tags": [
         "electrical_specs",
-        "table_present",
         "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_1_3_manufacturing_plant",
+      "parent_id": "sec_4_1_3",
+      "title": "Manufacturing plant",
+      "title_normalized": "rating_plate_of_milk_frother_model_citiz_and_milk_by_decoding_the_date_manufacturing_plant",
+      "role": "warning",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 16,
+      "page_end": 17,
+      "char_start": 6707,
+      "char_end": 6917,
+      "text": "Manufacturing plant \nManufacturer designation of the machine type (EF 484) \n08312 ... Date of production \n(08 = year 2008, 312 = 312 day of the year) \nNote he mains volt­ \nage ranges of the dif­ \nferent models.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "electrical_specs",
+        "voltage",
+        "warning"
+      ],
+      "warnings": [
+        {
+          "type": "note",
+          "text": "er designation of the machine type (EF 484) \n08312 ... Date of production \n(08 = year 2008, 312 = 312 day of the year) \nNote he mains volt­ \nage ranges of the dif­ \nferent models.",
+          "keyword": "Note"
+        }
       ]
     },
     {
@@ -548,77 +1648,23 @@
       "language": "en",
       "language_confidence": 1.0,
       "page_start": 17,
-      "page_end": 19,
+      "page_end": 21,
       "char_start": 7069,
-      "char_end": 12771,
-      "text": "Mains voltage ranges \nMains voltage for Citiz \n­ Europe, RU, AU, CN, KR, SG, HK, ME, ZA, IL, BR, AR........... 220­240 V / 50­60 Hz \n­ USA, Canada, BR, MX .............................................................. 120­127 V / 50­60 Hz \n­ Japan.............................................................................................. 100 V / 50­60 Hz* \nMains voltage for Citiz & milk \n­ Europe, RU, AU, CN, KR, SG, HK, ME, ZA, IL, BR, AR........... 220­240 V / 50­60 Hz \n­ USA, Canada, BR, MX .............................................................. 120­127 V / 50­60 Hz \nMains voltage for Citiz & Co \n­ Europe, RU, AU, ME, IL............................................................ 220­240 V / 50­60 Hz \nApprovals \nApprovals for Citiz........................ CE, UL \"for USA and Canada\", PSE, Gost R, Ctick, \nCCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM \nApprovals for Citiz & milk............ CE, UL \"for USA and Canada\", Gost R, Ctick, CCC, \nKTL, SPRING, SASO, SABS, ISI, IRAM, NOM \nApprovals for Citiz & Co.................................................. CE, Gost R, Ctick, SASO, ISI \nPower ratings of coffee machine main components \n(for all voltages and frequencies) \nThermoblock.....................................................................................................1200 W* \n*model Citiz & Co, Australia: 1080 W \nPump.................................................................................................................55/60 W \nPerformance data of core unit \nHeating up \n­ Citiz......................................................................................................approx. 7.6 Wh \n­ Citiz & milk...........................................................................................approx. 7.6 Wh \n­ Citiz & Co...........................................................................................approx. 14.9 Wh \n1 small cup (40 ml*) \n­ Citiz......................................................................................................approx. 4.3 Wh \n­ Citiz & milk...........................................................................................approx. 4.3 Wh \n­ Citiz & Co (both heads)........................................................................approx. 7.6 Wh \n* Default setting Technical data are \nvalid for all Citiz mod­ \nels unless explicitly \nstated otherwise.\n\nCitiz service manual  26 TECHNICAL DATA \n1 large cup (110 ml*) \n­ Citiz......................................................................................................approx. 8.7 Wh \n­ Citiz & milk...........................................................................................approx. 8.7 Wh \n­ Citiz & Co (both heads)......................................................................approx. 14.8 Wh \n* Default setting \nStandby operation (in 1 hour) \n­ Citiz......................................................................................................approx. 0.7 Wh \n­ Citiz & milk...........................................................................................approx. 0.7 Wh \n­ Citiz & Co.............................................................................................approx. 2.2 Wh \nPump \nPump pressure \n­ Max. permissible..............................................................................17.5 bar ± 1.5 bar \n­ During coffee preparation (depending on the type of coffee)..........................9­16 bar \nFlow performance.................................................................. 120­240 ml/min. at 12 bar \nCapacities \nWater tank \n­ Citiz........................................................................................................................1.0 l \n­ Citiz & milk.............................................................................................................1.0 l \n­ Citiz & Co...............................................................................................................1.4 l \nDrip tray \n­ Citiz....................................................................................................................100 ml \n­ Citiz & milk.........................................................................................................180 ml \n­ Citiz & Co...........................................................................................................250 ml \nCapsule container \n­ Citiz, Citiz & milk....................................................................................9­11 capsules \n­ Citiz & Co........................................................................................2x (9­12) capsules \nTemperatures \nOperating temperature...................................................................+ 5 °C up to + 45 °C \nStorage temperature .....................................................................­ 25 °C up to + 60 °C \nSafety temperature (thermal cut­off) ...................................................................167 °C \nCoffee temperature at outlet.......................................................................86 °C ± 3 °C \nVarious data \nNoise during brewing cycle ....................................................................max. 60 dB(A)* \n* model Citiz & milk: measured without milk frother \n* model Citiz & Co: measured with only one core unit running \nPreheating time.......................................................................................approx. 60 sec \nCable length..............................................................................................approx. 1.2m Advised water tank \ncapacities to avoid \nspilling.\n\nCitiz service manual  27 TECHNICAL DATA",
+      "char_end": 7069,
+      "text": "",
       "is_suspect": false,
       "tables": [
         {
           "table_id": "tbl_4_2_1_1",
           "page": 17,
           "caption": "4.2.1 Technical data of coffee machines",
-          "n_rows": 4,
+          "n_rows": 11,
           "n_cols": 2,
-          "csv": "Item,Value\r\n\"­ Europe, RU, AU, CN, KR, SG, HK, ME, ZA, IL, BR, AR\",220­240 V / 50­60 Hz\r\n\"­ USA, Canada, BR, MX \",120­127 V / 50­60 Hz\r\n­ Japan,100 V / 50­60 Hz*",
+          "csv": "Item,Value\n\"­ Europe, RU, AU, CN, KR, SG, HK, ME, ZA, IL, BR, AR\",220­240 V / 50­60 Hz\n\"­ USA, Canada, BR, MX \",120­127 V / 50­60 Hz\n­ Japan,100 V / 50­60 Hz*\n\"220­240 V, 50­60 Hz\",410­490 W\n\"110­127 V, 50­60 Hz\",380­505 W\nStandby operation,< 1 W\nDimensions (width x height x length),130 x 277 x 372 mm\nCup support down,\"85­90 mm, for espresso and lungo cups/glasses\"\nCup support up,\"150­155 mm, for macchiato glasses\"\nWeight (without water),approx. 3.4 kg The overall dimen­",
           "format": "dotted_leader"
         },
         {
           "table_id": "tbl_4_2_1_2",
-          "page": 17,
-          "caption": "4.2.1 Technical data of coffee machines",
-          "n_rows": 3,
-          "n_cols": 2,
-          "csv": "Item,Value\r\n\"­ Europe, RU, AU, CN, KR, SG, HK, ME, ZA, IL, BR, AR\",220­240 V / 50­60 Hz\r\n\"­ USA, Canada, BR, MX \",120­127 V / 50­60 Hz",
-          "format": "dotted_leader"
-        },
-        {
-          "table_id": "tbl_4_2_1_3",
-          "page": 17,
-          "caption": "4.2.1 Technical data of coffee machines",
-          "n_rows": 2,
-          "n_cols": 2,
-          "csv": "Item,Value\r\n\"­ Europe, RU, AU, ME, IL\",220­240 V / 50­60 Hz",
-          "format": "dotted_leader"
-        },
-        {
-          "table_id": "tbl_4_2_1_4",
-          "page": 17,
-          "caption": "4.2.1 Technical data of coffee machines",
-          "n_rows": 2,
-          "n_cols": 2,
-          "csv": "Item,Value\r\nApprovals for Citiz,\"CE, UL \"\"for USA and Canada\"\", PSE, Gost R, Ctick,\"",
-          "format": "dotted_leader"
-        },
-        {
-          "table_id": "tbl_4_2_1_5",
-          "page": 17,
-          "caption": "4.2.1 Technical data of coffee machines",
-          "n_rows": 2,
-          "n_cols": 2,
-          "csv": "Item,Value\r\nApprovals for Citiz & milk,\"CE, UL \"\"for USA and Canada\"\", Gost R, Ctick, CCC,\"",
-          "format": "dotted_leader"
-        },
-        {
-          "table_id": "tbl_4_2_1_6",
-          "page": 17,
-          "caption": "4.2.1 Technical data of coffee machines",
-          "n_rows": 2,
-          "n_cols": 2,
-          "csv": "Item,Value\r\nApprovals for Citiz & Co,\"CE, Gost R, Ctick, SASO, ISI\"",
-          "format": "dotted_leader"
-        },
-        {
-          "table_id": "tbl_4_2_1_7",
-          "page": 17,
-          "caption": "*model Citiz & Co, Australia: 1080 W",
-          "n_rows": 3,
-          "n_cols": 2,
-          "csv": "Item,Value\r\nThermoblock,1200 W*\r\nPump,55/60 W",
-          "format": "dotted_leader"
-        },
-        {
-          "table_id": "tbl_4_2_1_8",
           "page": 17,
           "caption": "4.2.1 Technical data of coffee machines",
           "n_rows": 4,
@@ -627,7 +1673,7 @@
           "format": "dotted_leader"
         },
         {
-          "table_id": "tbl_4_2_1_9",
+          "table_id": "tbl_4_2_1_3",
           "page": 17,
           "caption": "* Default setting Technical data are",
           "n_rows": 4,
@@ -636,7 +1682,7 @@
           "format": "dotted_leader"
         },
         {
-          "table_id": "tbl_4_2_1_10",
+          "table_id": "tbl_4_2_1_4",
           "page": 17,
           "caption": "* Default setting",
           "n_rows": 4,
@@ -645,7 +1691,7 @@
           "format": "dotted_leader"
         },
         {
-          "table_id": "tbl_4_2_1_11",
+          "table_id": "tbl_4_2_1_5",
           "page": 17,
           "caption": "4.2.1 Technical data of coffee machines",
           "n_rows": 4,
@@ -654,7 +1700,7 @@
           "format": "dotted_leader"
         },
         {
-          "table_id": "tbl_4_2_1_12",
+          "table_id": "tbl_4_2_1_6",
           "page": 17,
           "caption": "4.2.1 Technical data of coffee machines",
           "n_rows": 4,
@@ -663,7 +1709,7 @@
           "format": "dotted_leader"
         },
         {
-          "table_id": "tbl_4_2_1_13",
+          "table_id": "tbl_4_2_1_7",
           "page": 17,
           "caption": "4.2.1 Technical data of coffee machines",
           "n_rows": 4,
@@ -672,7 +1718,7 @@
           "format": "dotted_leader"
         },
         {
-          "table_id": "tbl_4_2_1_14",
+          "table_id": "tbl_4_2_1_8",
           "page": 17,
           "caption": "4.2.1 Technical data of coffee machines",
           "n_rows": 4,
@@ -681,16 +1727,7 @@
           "format": "dotted_leader"
         },
         {
-          "table_id": "tbl_4_2_1_15",
-          "page": 17,
-          "caption": "4.2.1 Technical data of coffee machines",
-          "n_rows": 3,
-          "n_cols": 2,
-          "csv": "Item,Value\r\n\"­ Citiz, Citiz & milk\",9­11 capsules\r\n­ Citiz & Co,2x (9­12) capsules",
-          "format": "dotted_leader"
-        },
-        {
-          "table_id": "tbl_4_2_1_16",
+          "table_id": "tbl_4_2_1_9",
           "page": 17,
           "caption": "4.2.1 Technical data of coffee machines",
           "n_rows": 5,
@@ -699,7 +1736,7 @@
           "format": "dotted_leader"
         },
         {
-          "table_id": "tbl_4_2_1_17",
+          "table_id": "tbl_4_2_1_10",
           "page": 17,
           "caption": "* model Citiz & Co: measured with only one core unit running",
           "n_rows": 4,
@@ -710,93 +1747,6 @@
       ],
       "figures": [],
       "tags": [
-        "electrical_specs",
-        "table_present",
-        "voltage"
-      ]
-    },
-    {
-      "section_id": "sec_4_2_2",
-      "parent_id": "sec_4_2",
-      "title": "4.2.2 Technical data of milk frother (model Citiz & milk)",
-      "title_normalized": "technical_data_of_milk_frother_model_citiz_and_milk",
-      "role": "table",
-      "level": 3,
-      "language": "en",
-      "language_confidence": 1.0,
-      "page_start": 19,
-      "page_end": 20,
-      "char_start": 12772,
-      "char_end": 15635,
-      "text": "Mains voltage \nEurope ........................................................................................ 220­240 V / 50­60 Hz \nUSA/Canada................................................................................ 120­127 V / 50­60 Hz \nThe milk frother \n­ is available in 2 different models, depending on above mains voltage ranges, \n­ has to match the mains voltage range of the associated coffee machine. \nPower rating (depending on mains voltage) \n220­240 V, 50­60 Hz.....................................................................................410­490 W \n110­127 V, 50­60 Hz.....................................................................................380­505 W \nStandby operation............................................................................................... < 1 W \nPower consumption \nCapacity \nHot milk...................................................................................................... max. 240 ml \nHot/cold milk for milk froth...........................................................................max. 130 ml If replacing a defect \nmilk frother, check \nmains voltage range. \nPreparation Voltage 120 V 127 V 220 V 230 V 240 V \nUnit \nFroth milk: hot \n(starting with cold device) \nMeasured power W  452 506 407 445 485 \nIntensity  A 3.77 3.98 1.85 1.93 2.02 \nConsumption for \n2 test preparations Wh 19  19  19  19  19 \nFroth milk: cold \n(starting with cold device) \nMeasured power W  1.98 2.24 2.72 2.80 3.01 \nIntensity of current \n(cos. = 0.58) A 40.93 44 30.82 27.51 25.97 \nConsumption for \n2 test preparations Wh 0.08 0.09 0.11 0.12 0.13 \nHot milk \n(starting with cold device) \nMeasured power W  452 506 407 445 485 \nIntensity of current A 3.77 3.98 1.85 1.93 2.02 \nConsumption for \n2 test preparations Wh 37  37  37  37  37\nCitiz service manual  28 TECHNICAL DATA \nPerformance data \nWhisk speed.........................................................................................2’000­2’700 rpm \nPreparation times \n(with full, semi­skimmed or skimmed milk at 8 °­10 °C fridge temperature) \nHot milk froth (120 ml).....................................................................................50­80 sec \nCold milk froth (120 ml)...................................................................................60­80 sec \nHot milk (240 ml).........................................................................................120­180 sec \nTemperature \nHot milk.............................................................................................+ 60 °C to + 70 °C \nFoam milk..........................................................................................+ 60 °C to + 70 °C \nVarious data \nNoise emission........................................................................................max. 55 dB(A)",
-      "is_suspect": false,
-      "tables": [
-        {
-          "table_id": "tbl_4_2_2_1",
-          "page": 19,
-          "caption": "4.2.2 Technical data of milk frother (model Citiz & milk)",
-          "n_rows": 3,
-          "n_cols": 2,
-          "csv": "Item,Value\r\nEurope ,220­240 V / 50­60 Hz\r\nUSA/Canada,120­127 V / 50­60 Hz",
-          "format": "dotted_leader"
-        },
-        {
-          "table_id": "tbl_4_2_2_2",
-          "page": 19,
-          "caption": "4.2.2 Technical data of milk frother (model Citiz & milk)",
-          "n_rows": 4,
-          "n_cols": 2,
-          "csv": "Item,Value\r\n\"220­240 V, 50­60 Hz\",410­490 W\r\n\"110­127 V, 50­60 Hz\",380­505 W\r\nStandby operation,< 1 W",
-          "format": "dotted_leader"
-        },
-        {
-          "table_id": "tbl_4_2_2_3",
-          "page": 19,
-          "caption": "4.2.2 Technical data of milk frother (model Citiz & milk)",
-          "n_rows": 3,
-          "n_cols": 2,
-          "csv": "Item,Value\r\nHot milk,max. 240 ml\r\nHot/cold milk for milk froth,max. 130 ml If replacing a defect",
-          "format": "dotted_leader"
-        },
-        {
-          "table_id": "tbl_4_2_2_4",
-          "page": 19,
-          "caption": "4.2.2 Technical data of milk frother (model Citiz & milk)",
-          "n_rows": 2,
-          "n_cols": 2,
-          "csv": "Item,Value\r\nWhisk speed,2’000­2’700 rpm",
-          "format": "dotted_leader"
-        },
-        {
-          "table_id": "tbl_4_2_2_5",
-          "page": 19,
-          "caption": "4.2.2 Technical data of milk frother (model Citiz & milk)",
-          "n_rows": 4,
-          "n_cols": 2,
-          "csv": "Item,Value\r\nHot milk froth (120 ml),50­80 sec\r\nCold milk froth (120 ml),60­80 sec\r\nHot milk (240 ml),120­180 sec",
-          "format": "dotted_leader"
-        },
-        {
-          "table_id": "tbl_4_2_2_6",
-          "page": 19,
-          "caption": "4.2.2 Technical data of milk frother (model Citiz & milk)",
-          "n_rows": 3,
-          "n_cols": 2,
-          "csv": "Item,Value\r\nHot milk,+ 60 °C to + 70 °C\r\nFoam milk,+ 60 °C to + 70 °C",
-          "format": "dotted_leader"
-        },
-        {
-          "table_id": "tbl_4_2_2_7",
-          "page": 19,
-          "caption": "4.2.2 Technical data of milk frother (model Citiz & milk)",
-          "n_rows": 2,
-          "n_cols": 2,
-          "csv": "Item,Value\r\nNoise emission,max. 55 dB(A)",
-          "format": "dotted_leader"
-        }
-      ],
-      "figures": [],
-      "tags": [
         "dimensions",
         "electrical_specs",
         "measurements",
@@ -805,36 +1755,728 @@
       ]
     },
     {
-      "section_id": "sec_4_2_3",
-      "parent_id": "sec_4_2",
-      "title": "4.2.3 Dimensions and weight ­ model Citiz",
-      "title_normalized": "dimensions_and_weight_model_citiz",
-      "role": "table",
-      "level": 3,
+      "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+      "parent_id": "sec_4_2_1",
+      "title": "Mains voltage for Citiz",
+      "title_normalized": "technical_data_of_coffee_machines_mains_voltage_for_citiz",
+      "role": "main",
+      "level": 4,
       "language": "en",
       "language_confidence": 1.0,
-      "page_start": 20,
+      "page_start": 17,
       "page_end": 21,
-      "char_start": 15636,
-      "char_end": 16241,
-      "text": "Dimensions (width x height x length)............................................. 130 x 277 x 372 mm \nCup support down..............................85­90 mm, for espresso and lungo cups/glasses \nCup support up.......................................................150­155 mm, for macchiato glasses \nWeight (without water)..............................................................................approx. 3.4 kg The overall dimen­ \nsions are the same \nfor both core unit ver­ \nsions (C­ and D­range). \nDimensions in mm\n\nCitiz service manual  29 TECHNICAL DATA",
+      "char_start": 7091,
+      "char_end": 7428,
+      "text": "Mains voltage for Citiz \n­ Europe, RU, AU, CN, KR, SG, HK, ME, ZA, IL, BR, AR........... 220­240 V / 50­60 Hz \n­ USA, Canada, BR, MX .............................................................. 120­127 V / 50­60 Hz \n­ Japan.............................................................................................. 100 V / 50­60 Hz*",
       "is_suspect": false,
-      "tables": [
-        {
-          "table_id": "tbl_4_2_3_1",
-          "page": 20,
-          "caption": "4.2.3 Dimensions and weight ­ model Citiz",
-          "n_rows": 5,
-          "n_cols": 2,
-          "csv": "Item,Value\r\nDimensions (width x height x length),130 x 277 x 372 mm\r\nCup support down,\"85­90 mm, for espresso and lungo cups/glasses\"\r\nCup support up,\"150­155 mm, for macchiato glasses\"\r\nWeight (without water),approx. 3.4 kg The overall dimen­",
-          "format": "dotted_leader"
-        }
-      ],
+      "tables": [],
       "figures": [],
       "tags": [
         "dimensions",
+        "electrical_specs",
         "measurements",
-        "table_present"
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+      "parent_id": "sec_4_2_1",
+      "title": "Mains voltage for Citiz & milk",
+      "title_normalized": "technical_data_of_coffee_machines_mains_voltage_for_citiz_and_milk",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 7430,
+      "char_end": 7653,
+      "text": "Mains voltage for Citiz & milk \n­ Europe, RU, AU, CN, KR, SG, HK, ME, ZA, IL, BR, AR........... 220­240 V / 50­60 Hz \n­ USA, Canada, BR, MX .............................................................. 120­127 V / 50­60 Hz",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+      "parent_id": "sec_4_2_1",
+      "title": "Mains voltage for Citiz & Co",
+      "title_normalized": "technical_data_of_coffee_machines_mains_voltage_for_citiz_and_co",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 7655,
+      "char_end": 7790,
+      "text": "Mains voltage for Citiz & Co \n­ Europe, RU, AU, ME, IL............................................................ 220­240 V / 50­60 Hz",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_approvals",
+      "parent_id": "sec_4_2_1",
+      "title": "Approvals",
+      "title_normalized": "technical_data_of_coffee_machines_approvals",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 7792,
+      "char_end": 7895,
+      "text": "Approvals \nApprovals for Citiz........................ CE, UL \"for USA and Canada\", PSE, Gost R, Ctick,",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+      "parent_id": "sec_4_2_1",
+      "title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+      "title_normalized": "technical_data_of_coffee_machines_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 7897,
+      "char_end": 8030,
+      "text": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM \nApprovals for Citiz & milk............ CE, UL \"for USA and Canada\", Gost R, Ctick, CCC,",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+      "parent_id": "sec_4_2_1",
+      "title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+      "title_normalized": "technical_data_of_coffee_machines_ktl_spring_saso_sabs_isi_iram_nom",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 8032,
+      "char_end": 8176,
+      "text": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM \nApprovals for Citiz & Co.................................................. CE, Gost R, Ctick, SASO, ISI",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+      "parent_id": "sec_4_2_1",
+      "title": "Power ratings of coffee machine main components",
+      "title_normalized": "technical_data_of_coffee_machines_power_ratings_of_coffee_machine_main_components",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 8178,
+      "char_end": 8546,
+      "text": "Power ratings of coffee machine main components \n(for all voltages and frequencies) \nThermoblock.....................................................................................................1200 W* \n*model Citiz & Co, Australia: 1080 W \nPump.................................................................................................................55/60 W",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_heating_up",
+      "parent_id": "sec_4_2_1",
+      "title": "Heating up",
+      "title_normalized": "technical_data_of_coffee_machines_heating_up",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 8579,
+      "char_end": 9442,
+      "text": "Heating up \n­ Citiz......................................................................................................approx. 7.6 Wh \n­ Citiz & milk...........................................................................................approx. 7.6 Wh \n­ Citiz & Co...........................................................................................approx. 14.9 Wh \n1 small cup (40 ml*) \n­ Citiz......................................................................................................approx. 4.3 Wh \n­ Citiz & milk...........................................................................................approx. 4.3 Wh \n­ Citiz & Co (both heads)........................................................................approx. 7.6 Wh \n* Default setting Technical data are \nvalid for all Citiz mod­ \nels unless explicitly \nstated otherwise.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+      "parent_id": "sec_4_2_1",
+      "title": "Citiz service manual  26 TECHNICAL DATA",
+      "title_normalized": "technical_data_of_coffee_machines_citiz_service_manual_26_technical_data",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 9444,
+      "char_end": 10281,
+      "text": "Citiz service manual  26 TECHNICAL DATA \n1 large cup (110 ml*) \n­ Citiz......................................................................................................approx. 8.7 Wh \n­ Citiz & milk...........................................................................................approx. 8.7 Wh \n­ Citiz & Co (both heads)......................................................................approx. 14.8 Wh \n* Default setting \nStandby operation (in 1 hour) \n­ Citiz......................................................................................................approx. 0.7 Wh \n­ Citiz & milk...........................................................................................approx. 0.7 Wh \n­ Citiz & Co.............................................................................................approx. 2.2 Wh",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_pump_pressure",
+      "parent_id": "sec_4_2_1",
+      "title": "Pump pressure",
+      "title_normalized": "technical_data_of_coffee_machines_pump_pressure",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 10289,
+      "char_end": 10625,
+      "text": "Pump pressure \n­ Max. permissible..............................................................................17.5 bar ± 1.5 bar \n­ During coffee preparation (depending on the type of coffee)..........................9­16 bar \nFlow performance.................................................................. 120­240 ml/min. at 12 bar",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_water_tank",
+      "parent_id": "sec_4_2_1",
+      "title": "Water tank",
+      "title_normalized": "technical_data_of_coffee_machines_water_tank",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 10639,
+      "char_end": 11043,
+      "text": "Water tank \n­ Citiz........................................................................................................................1.0 l \n­ Citiz & milk.............................................................................................................1.0 l \n­ Citiz & Co...............................................................................................................1.4 l",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_drip_tray",
+      "parent_id": "sec_4_2_1",
+      "title": "Drip tray",
+      "title_normalized": "technical_data_of_coffee_machines_drip_tray",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 11045,
+      "char_end": 11439,
+      "text": "Drip tray \n­ Citiz....................................................................................................................100 ml \n­ Citiz & milk.........................................................................................................180 ml \n­ Citiz & Co...........................................................................................................250 ml",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_capsule_container",
+      "parent_id": "sec_4_2_1",
+      "title": "Capsule container",
+      "title_normalized": "technical_data_of_coffee_machines_capsule_container",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 11441,
+      "char_end": 11698,
+      "text": "Capsule container \n­ Citiz, Citiz & milk....................................................................................9­11 capsules \n­ Citiz & Co........................................................................................2x (9­12) capsules",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_temperatures",
+      "parent_id": "sec_4_2_1",
+      "title": "Temperatures",
+      "title_normalized": "technical_data_of_coffee_machines_temperatures",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 11700,
+      "char_end": 12159,
+      "text": "Temperatures \nOperating temperature...................................................................+ 5 °C up to + 45 °C \nStorage temperature .....................................................................­ 25 °C up to + 60 °C \nSafety temperature (thermal cut­off) ...................................................................167 °C \nCoffee temperature at outlet.......................................................................86 °C ± 3 °C",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_various_data",
+      "parent_id": "sec_4_2_1",
+      "title": "Various data",
+      "title_normalized": "technical_data_of_coffee_machines_various_data",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 12161,
+      "char_end": 12688,
+      "text": "Various data \nNoise during brewing cycle ....................................................................max. 60 dB(A)* \n* model Citiz & milk: measured without milk frother \n* model Citiz & Co: measured with only one core unit running \nPreheating time.......................................................................................approx. 60 sec \nCable length..............................................................................................approx. 1.2m Advised water tank \ncapacities to avoid \nspilling.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_mains_voltage",
+      "parent_id": "sec_4_2_1",
+      "title": "Mains voltage",
+      "title_normalized": "technical_data_of_coffee_machines_mains_voltage",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 12730,
+      "char_end": 12974,
+      "text": "Mains voltage \nEurope ........................................................................................ 220­240 V / 50­60 Hz \nUSA/Canada................................................................................ 120­127 V / 50­60 Hz",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_the_milk_frother",
+      "parent_id": "sec_4_2_1",
+      "title": "The milk frother",
+      "title_normalized": "technical_data_of_coffee_machines_the_milk_frother",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 12976,
+      "char_end": 13539,
+      "text": "The milk frother \n­ is available in 2 different models, depending on above mains voltage ranges, \n­ has to match the mains voltage range of the associated coffee machine. \nPower rating (depending on mains voltage) \n220­240 V, 50­60 Hz.....................................................................................410­490 W \n110­127 V, 50­60 Hz.....................................................................................380­505 W \nStandby operation............................................................................................... < 1 W",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_capacity",
+      "parent_id": "sec_4_2_1",
+      "title": "Capacity",
+      "title_normalized": "technical_data_of_coffee_machines_capacity",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 13560,
+      "char_end": 13924,
+      "text": "Capacity \nHot milk...................................................................................................... max. 240 ml \nHot/cold milk for milk froth...........................................................................max. 130 ml If replacing a defect \nmilk frother, check \nmains voltage range. \nPreparation Voltage 120 V 127 V 220 V 230 V 240 V",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_unit",
+      "parent_id": "sec_4_2_1",
+      "title": "Unit",
+      "title_normalized": "technical_data_of_coffee_machines_unit",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 13926,
+      "char_end": 13976,
+      "text": "Unit \nFroth milk: hot \n(starting with cold device)",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
+      "parent_id": "sec_4_2_1",
+      "title": "Measured power W  452 506 407 445 485",
+      "title_normalized": "technical_data_of_coffee_machines_measured_power_w_452_506_407_445_485",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 13978,
+      "char_end": 14054,
+      "text": "Measured power W  452 506 407 445 485 \nIntensity  A 3.77 3.98 1.85 1.93 2.02",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_consumption_for",
+      "parent_id": "sec_4_2_1",
+      "title": "Consumption for",
+      "title_normalized": "technical_data_of_coffee_machines_consumption_for",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 14056,
+      "char_end": 14205,
+      "text": "Consumption for \n2 test preparations Wh 19  19  19  19  19 \nFroth milk: cold \n(starting with cold device) \nMeasured power W  1.98 2.24 2.72 2.80 3.01",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_intensity_of_current",
+      "parent_id": "sec_4_2_1",
+      "title": "Intensity of current",
+      "title_normalized": "technical_data_of_coffee_machines_intensity_of_current",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 14207,
+      "char_end": 14271,
+      "text": "Intensity of current \n(cos. = 0.58) A 40.93 44 30.82 27.51 25.97",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_consumption_for_2",
+      "parent_id": "sec_4_2_1",
+      "title": "Consumption for",
+      "title_normalized": "technical_data_of_coffee_machines_consumption_for",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 14273,
+      "char_end": 14337,
+      "text": "Consumption for \n2 test preparations Wh 0.08 0.09 0.11 0.12 0.13",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
+      "parent_id": "sec_4_2_1",
+      "title": "Measured power W  452 506 407 445 485",
+      "title_normalized": "technical_data_of_coffee_machines_measured_power_w_452_506_407_445_485",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 14378,
+      "char_end": 14464,
+      "text": "Measured power W  452 506 407 445 485 \nIntensity of current A 3.77 3.98 1.85 1.93 2.02",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_consumption_for_3",
+      "parent_id": "sec_4_2_1",
+      "title": "Consumption for",
+      "title_normalized": "technical_data_of_coffee_machines_consumption_for",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 14466,
+      "char_end": 14524,
+      "text": "Consumption for \n2 test preparations Wh 37  37  37  37  37",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_performance_data",
+      "parent_id": "sec_4_2_1",
+      "title": "Performance data",
+      "title_normalized": "technical_data_of_coffee_machines_performance_data",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 14566,
+      "char_end": 14699,
+      "text": "Performance data \nWhisk speed.........................................................................................2’000­2’700 rpm",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_preparation_times",
+      "parent_id": "sec_4_2_1",
+      "title": "Preparation times",
+      "title_normalized": "technical_data_of_coffee_machines_preparation_times",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 14701,
+      "char_end": 15149,
+      "text": "Preparation times \n(with full, semi­skimmed or skimmed milk at 8 °­10 °C fridge temperature) \nHot milk froth (120 ml).....................................................................................50­80 sec \nCold milk froth (120 ml)...................................................................................60­80 sec \nHot milk (240 ml).........................................................................................120­180 sec",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_temperature",
+      "parent_id": "sec_4_2_1",
+      "title": "Temperature",
+      "title_normalized": "technical_data_of_coffee_machines_temperature",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 15151,
+      "char_end": 15402,
+      "text": "Temperature \nHot milk.............................................................................................+ 60 °C to + 70 °C \nFoam milk..........................................................................................+ 60 °C to + 70 °C",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
+      ]
+    },
+    {
+      "section_id": "sec_4_2_1_various_data_2",
+      "parent_id": "sec_4_2_1",
+      "title": "Various data",
+      "title_normalized": "technical_data_of_coffee_machines_various_data",
+      "role": "main",
+      "level": 4,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 15404,
+      "char_end": 16036,
+      "text": "Various data \nNoise emission........................................................................................max. 55 dB(A)\nDimensions (width x height x length)............................................. 130 x 277 x 372 mm \nCup support down..............................85­90 mm, for espresso and lungo cups/glasses \nCup support up.......................................................150­155 mm, for macchiato glasses \nWeight (without water)..............................................................................approx. 3.4 kg The overall dimen­ \nsions are the same \nfor both core unit ver­ \nsions (C­ and D­range).",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "dimensions",
+        "electrical_specs",
+        "measurements",
+        "table_present",
+        "voltage"
       ]
     },
     {
@@ -842,7 +2484,7 @@
       "parent_id": "sec_4_2",
       "title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
       "title_normalized": "dimensions_and_weight_model_citiz_and_milk",
-      "role": "table",
+      "role": "main",
       "level": 3,
       "language": "en",
       "language_confidence": 1.0,
@@ -852,22 +2494,11 @@
       "char_end": 16496,
       "text": "Dimensions (width x height x length)............................................ 237 x 277 x 372 mm \nWeight (without water, milk frother included)...........................................approx. 4.6 kg",
       "is_suspect": false,
-      "tables": [
-        {
-          "table_id": "tbl_4_2_4_1",
-          "page": 21,
-          "caption": "4.2.4 Dimensions and weight ­ model Citiz & milk",
-          "n_rows": 3,
-          "n_cols": 2,
-          "csv": "Item,Value\r\nDimensions (width x height x length),237 x 277 x 372 mm\r\n\"Weight (without water, milk frother included)\",approx. 4.6 kg",
-          "format": "dotted_leader"
-        }
-      ],
+      "tables": [],
       "figures": [],
       "tags": [
         "dimensions",
-        "measurements",
-        "table_present"
+        "measurements"
       ]
     },
     {
@@ -916,9 +2547,9 @@
     "allowed_relations": []
   },
   "quality": {
-    "text_coverage_ratio": 0.941,
-    "tables_extracted": 28,
-    "figures_detected": 12,
+    "text_coverage_ratio": 0.9024,
+    "tables_extracted": 11,
+    "figures_detected": 22,
     "notes": ""
   },
   "discarded_blocks": []
