@@ -1,177 +1,417 @@
-# Knowledge Graph Extraction Pipeline
+# Knowledge Extraction Pipeline - Modular Architecture
 
-A proof-of-concept implementation for automated knowledge graph generation from unstructured documents. This pipeline transforms PDF documents into structured knowledge graphs by extracting entities, relationships, and their contextual information using Large Language Models.
+Sistema modulare per l'estrazione semantica di conoscenza da manuali tecnici e la costruzione di knowledge graphs strutturati.
 
-## Overview
+## 🎯 Paradigma Architetturale
 
-This project demonstrates an end-to-end workflow for converting document collections into machine-readable knowledge representations. The pipeline processes PDF files, extracts semantic information, and structures it into a graph format suitable for downstream applications such as semantic search, question answering, and knowledge discovery.
+Questo sistema implementa un **ecosistema di pipeline verticali** che sostituisce l'approccio monolitico tradizionale. Ogni pipeline è specializzata per una categoria documentale omogenea e progettata per popolare un sottoinsieme specifico dello schema JSON di riferimento.
 
-## Architecture
+### Motivazione
 
-The pipeline follows a modular architecture consisting of several core components:
+I manuali tecnici presentano forti variazioni strutturali e linguistiche:
+- Alcuni sono tabellari, altri descrittivi
+- Diversi livelli di dettaglio tecnico
+- Frammentazione delle informazioni
 
-### Document Processing Layer
-- **PDF Ingestion**: Handles document loading and text extraction from PDF files
-- **Text Chunking**: Implements intelligent document segmentation to maintain semantic coherence while respecting LLM context windows
-- **Preprocessing**: Normalizes and cleans extracted text for optimal processing
+Una pipeline unica produce:
+- ❌ Estrazioni parziali o ridondanti
+- ❌ Errori nella classificazione delle entità
+- ❌ Relazioni non coerenti
+- ❌ Difficoltà di validazione
 
-### Knowledge Extraction Layer
-- **Entity Recognition**: Identifies and extracts domain-specific entities from text
-- **Relationship Extraction**: Discovers semantic relationships between identified entities
-- **Context Preservation**: Maintains source references and contextual information for traceability
+### Soluzione: Pipeline Verticali
 
-### Graph Construction Layer
-- **Schema Definition**: Enforces consistent ontological structure across extracted knowledge
-- **Graph Builder**: Constructs the knowledge graph data structure with nodes (entities) and edges (relationships)
-- **Metadata Enrichment**: Augments graph elements with additional contextual information
+✅ **Precisione semantica**: Ogni LLM riceve contesto omogeneo e prompt calibrato
+✅ **Incrementalità**: Ogni pipeline può essere eseguita e validata indipendentemente
+✅ **Scalabilità**: Possibilità di aggiungere nuove pipeline per altre categorie
+✅ **Riutilizzabilità**: Le pipeline sono combinabili in base al dataset disponibile
 
-### Storage & Export Layer
-- **Serialization**: Converts graph structures to standard formats (JSON, RDF, GraphML)
-- **Persistence**: Manages storage of extracted knowledge graphs
-- **Query Interface**: Provides mechanisms for graph traversal and information retrieval
+---
 
-## Technical Stack
+## 📂 Struttura del Progetto
 
-- **Python 3.x**: Core programming language
-- **PyPDF2**: PDF document parsing and text extraction
-- **OpenAI API**: LLM-powered entity and relationship extraction
-- **PyYAML**: Configuration management
-- **tiktoken**: Token counting and context window management
+```
+KG-pipeline/
+├── source/                            # Input documenti organizzati per pipeline
+│   ├── product_technical/             # Pipeline 1: Dati prodotto/tecnici
+│   ├── operation_modes/               # Pipeline 2: Modalità operative
+│   ├── troubleshooting/               # Pipeline 3: Diagnostica
+│   ├── repair_structure/              # Pipeline 4: Riparazione e parti
+│   └── testing/                       # Pipeline 5: Test e verifica
+│
+├── src/                               # Codice sorgente
+│   ├── core/                          # Moduli riusabili
+│   │   ├── pdf_reader.py              # Lettura e parsing PDF
+│   │   ├── text_preprocessor.py       # Normalizzazione testo
+│   │   ├── schema_validator.py        # Validazione JSON schema
+│   │   └── llm_client.py              # Client OpenAI generico
+│   │
+│   ├── pipelines/                     # Pipeline verticali
+│   │   ├── base_pipeline.py           # Classe astratta base
+│   │   │
+│   │   ├── product_technical/         # Pipeline 1
+│   │   │   ├── symbolic_parser.py     # Parser basato su regole
+│   │   │   ├── neural_extractor.py    # Estrattore LLM-based
+│   │   │   └── prompts.py             # Template prompt specifici
+│   │   │
+│   │   ├── operation_modes/           # Pipeline 2
+│   │   ├── troubleshooting/           # Pipeline 3
+│   │   ├── repair_structure/          # Pipeline 4
+│   │   └── testing/                   # Pipeline 5
+│   │
+│   ├── merger/                        # Fusione JSON parziali
+│   │   ├── graph_merger.py            # Merge entities/relations
+│   │   ├── conflict_resolver.py       # Risoluzione conflitti
+│   │   └── provenance_tracker.py      # Tracciamento provenienza
+│   │
+│   ├── orchestrator.py                # Coordinatore pipeline
+│   ├── utils.py                       # Utilities generiche
+│   └── logger.py                      # Logging configurabile
+│
+├── output/                            # Risultati estrazione
+│   ├── partial/                       # JSON parziali per pipeline
+│   │   ├── product_technical/
+│   │   ├── operation_modes/
+│   │   ├── troubleshooting/
+│   │   ├── repair_structure/
+│   │   └── testing/
+│   ├── merged/                        # JSON finali fusi
+│   └── logs/                          # Log esecuzione
+│
+├── schemas/                           # Schema JSON di riferimento
+│   └── neural_extraction.json         # Schema universale
+│
+├── tests/                             # Test unitari e integrazione
+│
+├── config.yaml                        # Configurazione globale
+├── main.py                            # Entry point
+└── requirements.txt                   # Dipendenze Python
+```
 
-## Key Features
+---
 
-### Automated Knowledge Extraction
-The pipeline leverages advanced language models to automatically identify entities and relationships without requiring manual annotation or domain-specific training data.
+## 🔧 Le Cinque Pipeline Verticali
 
-### Scalable Processing
-Modular design allows for parallel processing of multiple documents and incremental graph construction, enabling handling of large document collections.
+### 1️⃣ Product & Technical Data
+**Input**: Capitoli 1-4 del service manual, specifiche tecniche
+**Output**: Entità fisiche e parametri tecnici
+**Entità**: `Product`, `Component`, `ComponentType`, `ParameterSpec`, `Unit`, `RatingPlate`
+**Relazioni**: `hasPart`, `hasSpec`, `hasUnit`, `hasRatingPlate`, `instanceOf`
+**Strumenti**: OCR + regex + LLM estrattivo per coppie componenti-specifiche
 
-### Flexible Schema
-Supports customizable entity types and relationship definitions, allowing adaptation to various domains and use cases.
+### 2️⃣ Operation & Machine Modes
+**Input**: User manual, guide operative
+**Output**: Sequenze operative e modalità macchina
+**Entità**: `ProcessStep`, `MachineMode`, `MaintenanceTask`, `Tool`, `State`
+**Relazioni**: `precedes`, `appliesDuring`, `requiresTool`
+**Focus**: Sequenze di azioni e logiche operative
 
-### Provenance Tracking
-Maintains links between extracted knowledge and source documents, enabling verification and audit trails.
+### 3️⃣ Troubleshooting & Diagnostics
+**Input**: Tabelle errori, codici guasto, regole di riparazione
+**Output**: Modalità di guasto e azioni correttive
+**Entità**: `FailureMode`, `RepairAction`, `DiagnosticRule`, `Component`
+**Relazioni**: `affects`, `mitigatedBy`, `requiresAction`, `requiresConsumable`
+**Focus**: Diagnosi e risoluzione problemi
 
-## Use Cases
+### 4️⃣ Repair & Parts Structure
+**Input**: Sezioni disassembly, parts list
+**Output**: Albero strutturale del prodotto e procedure di smontaggio
+**Entità**: `ComponentType`, `Component`, `Tool`, `ProcessStep`
+**Relazioni**: `hasPart`, `belongsTo`, `instanceOf`, `requiresTool`
+**Focus**: Gerarchia componenti e procedure riparazione
 
-This proof-of-concept addresses several practical applications:
+### 5️⃣ Testing & Verification
+**Input**: Procedure di test, specifiche di calibrazione
+**Output**: Logiche di verifica e soglie accettazione
+**Entità**: `TestSpec`, `AnomalyThreshold`, `ParameterSpec`, `Unit`
+**Relazioni**: `verifies`, `hasSpec`, `hasUnit`
+**Focus**: Collaudo e accettazione finale
 
-- **Document Understanding**: Transform unstructured reports, papers, and documentation into queryable knowledge bases
-- **Information Integration**: Merge knowledge from multiple sources into unified graph representations
-- **Semantic Search**: Enable conceptual search beyond keyword matching by leveraging entity and relationship information
-- **Knowledge Discovery**: Identify non-obvious connections and patterns across document collections
-- **Decision Support**: Provide structured information for analytical and decision-making processes
+---
 
-## Pipeline Workflow
+## 🧩 Architettura dei Componenti
 
-1. **Initialization**: Load configuration parameters and API credentials
-2. **Document Loading**: Read PDF files from specified input directory
-3. **Text Extraction**: Parse documents and extract textual content
-4. **Chunking**: Segment long documents into processable units
-5. **Entity Extraction**: Identify relevant entities within each chunk
-6. **Relationship Extraction**: Discover connections between entities
-7. **Graph Construction**: Build the knowledge graph structure
-8. **Serialization**: Export the graph to desired format
-9. **Validation**: Verify graph integrity and completeness
+### BasePipeline (Template Method Pattern)
 
-## Configuration
+Ogni pipeline eredita da una classe astratta base che definisce il workflow standard:
 
-The pipeline uses configuration files to manage:
+```python
+class BasePipeline(ABC):
+    def execute(self):
+        """Template method: orchestrazione standard"""
+        documents = self.load_documents()
+        parsed = self.run_symbolic_parsing(documents)
+        extracted = self.run_neural_extraction(parsed)
+        validated = self.validate_output(extracted)
+        return validated
 
-- API endpoints and credentials
-- Processing parameters (chunk size, overlap, etc.)
-- Entity and relationship schemas
-- Output format specifications
-- Logging and monitoring settings
+    @abstractmethod
+    def run_symbolic_parsing(self, documents):
+        """Parsing simbolico specifico della pipeline"""
+        pass
 
-## Installation
+    @abstractmethod
+    def run_neural_extraction(self, parsed_data):
+        """Estrazione neurale specifica della pipeline"""
+        pass
+
+    @abstractmethod
+    def get_target_entities(self):
+        """Ritorna subset di entità da estrarre"""
+        pass
+```
+
+### Due Livelli di Estrazione per Pipeline
+
+Ogni pipeline implementa:
+
+1. **Symbolic Parser** (`symbolic_parser.py`)
+   - Estrazione basata su pattern, regex, tabelle
+   - Identificazione sezioni rilevanti
+   - Pre-processing dominio-specifico
+   - Output: Struttura intermedia (parsed data)
+
+2. **Neural Extractor** (`neural_extractor.py`)
+   - Estrazione LLM-based (OpenAI GPT)
+   - Prompt calibrati sul contesto specifico
+   - Generazione entità e relazioni
+   - Output: JSON parziale conforme allo schema
+
+### Orchestrator
+
+Coordina l'esecuzione delle pipeline:
+
+```python
+class PipelineOrchestrator:
+    def run_all(self, parallel=False):
+        """Esegue tutte le pipeline"""
+        results = []
+        for pipeline in self.pipelines:
+            result = pipeline.execute()
+            results.append(result)
+
+        merged = self.merger.merge(results)
+        return merged
+
+    def run_single(self, pipeline_name):
+        """Esegue solo una pipeline specifica"""
+        pipeline = self.get_pipeline(pipeline_name)
+        return pipeline.execute()
+```
+
+### Graph Merger
+
+Fonde i JSON parziali in un grafo coerente:
+
+- **Deduplicazione**: Unisce entità identiche estratte da pipeline diverse
+- **Conflict Resolution**: Risolve attributi contrastanti (es. valori diversi per stessa proprietà)
+- **Provenance Tracking**: Mantiene traccia della pipeline di origine per ogni entità/relazione
+- **Schema Validation**: Verifica conformità del grafo finale allo schema universale
+
+---
+
+## 🚀 Installazione e Setup
+
+### 1. Clonare il repository
 
 ```bash
-# Install required dependencies
+git clone <repository-url>
+cd KnowledgeExtraction/KG-pipeline
+```
+
+### 2. Creare ambiente virtuale
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+# oppure
+.venv\Scripts\activate  # Windows
+```
+
+### 3. Installare dipendenze
+
+```bash
 pip install -r requirements.txt
-
-# Set up environment variables
-export OPENAI_API_KEY="your-api-key-here"
 ```
 
-## Usage
+### 4. Configurare API key OpenAI
 
 ```bash
-# Run the pipeline on a directory of PDFs
-python main.py --input ./documents --output ./graphs
-
-# Process a single document
-python main.py --input document.pdf --output output.json
+cp .env.example .env
+# Editare .env e inserire la propria API key
 ```
 
-## Output Format
+### 5. Aggiungere documenti
 
-The pipeline generates knowledge graphs in JSON format with the following structure:
+Copiare i PDF nelle rispettive cartelle in `source/` seguendo le indicazioni in `source/README.md`.
+
+---
+
+## 💻 Utilizzo
+
+### Eseguire tutte le pipeline
+
+```bash
+python main.py --mode all
+```
+
+### Eseguire una singola pipeline
+
+```bash
+# Pipeline 1: Product & Technical Data
+python main.py --mode single --pipeline product_technical
+
+# Pipeline 3: Troubleshooting
+python main.py --mode single --pipeline troubleshooting
+```
+
+### Validare output
+
+```bash
+python main.py --mode validate --output output/merged/final_graph.json
+```
+
+### Configurazione
+
+Modificare `config.yaml` per:
+- Parametri LLM (modello, temperatura, max tokens)
+- Filtraggio contenuti
+- Impostazioni logging
+- Configurazione pipeline-specific
+
+---
+
+## 📊 Schema JSON Universale
+
+Il file `schemas/neural_extraction.json` definisce:
+
+- **Entità**: 14 tipi (Product, Component, FailureMode, TestSpec, ecc.)
+- **Relazioni**: 14 tipi (hasPart, affects, requiresTool, verifies, ecc.)
+- **Metadati**: Provenance, confidence scores, source spans
+- **Quality metrics**: Validazione, conteggi, warning
+
+Ogni pipeline popola un **sottoinsieme** di questo schema.
+
+---
+
+## 🧪 Approccio Incrementale
+
+### Fase 1: Setup Struttura ✅
+- Struttura cartelle creata
+- Schema JSON universale definito
+- Configurazione di base
+
+### Fase 2: Pipeline Pilota (Product & Technical Data)
+- Implementare `symbolic_parser.py` per estrazione dati tecnici
+- Implementare `neural_extractor.py` con prompt calibrato
+- Test su documenti reali
+- Validazione output
+
+### Fase 3: Graph Merger
+- Implementare logica di merge
+- Conflict resolution
+- Provenance tracking
+
+### Fase 4: Orchestrator
+- Coordinamento pipeline
+- Logging e monitoraggio
+- Report esecuzione
+
+### Fase 5: Altre Pipeline
+- Replicare pattern per pipeline 2-5
+- Test integrazione end-to-end
+
+---
+
+## 🔍 Output Generati
+
+### JSON Parziali (output/partial/)
+
+Ogni pipeline genera un JSON parziale:
 
 ```json
 {
+  "document_code": "SERVICE_MANUAL_CH1-4",
+  "pipeline": "product_technical",
   "entities": [
     {
-      "id": "entity_id",
-      "type": "entity_type",
-      "name": "entity_name",
-      "attributes": {...},
-      "source": "document_reference"
+      "id": "ent_001",
+      "type": "Component",
+      "name": "Heating Element",
+      "confidence": 0.95
     }
   ],
-  "relationships": [
+  "relations": [
     {
-      "source": "entity_id_1",
-      "target": "entity_id_2",
-      "type": "relationship_type",
-      "properties": {...}
+      "type": "hasPart",
+      "from_ref": "prod_001",
+      "to_ref": "ent_001"
     }
   ]
 }
 ```
 
-## Performance Considerations
+### JSON Finale (output/merged/)
 
-- **API Rate Limits**: Implements throttling to respect OpenAI API constraints
-- **Cost Optimization**: Uses efficient chunking strategies to minimize token usage
-- **Error Handling**: Robust retry logic for API failures and malformed responses
-- **Memory Management**: Processes documents in batches to handle large collections
+Il merger produce un grafo unificato con:
+- Entità deduplicate
+- Relazioni consolidate
+- Provenance per ogni elemento
+- Quality metrics globali
 
-## Limitations & Future Work
+---
 
-As a proof-of-concept, this implementation has several areas for enhancement:
+## 🛡️ Quality Assurance
 
-- **Coreference Resolution**: Currently does not merge entity mentions across chunks
-- **Relationship Validation**: Limited verification of extracted relationship semantics
-- **Graph Deduplication**: Basic entity matching may create duplicate nodes
-- **Visualization**: No built-in graph visualization capabilities
-- **Incremental Updates**: Does not support updating existing graphs with new documents
+- **Schema Validation**: Tutti gli output sono validati contro `neural_extraction.json`
+- **Confidence Scores**: Ogni entità/relazione ha un punteggio di confidenza
+- **Source Tracing**: Ogni elemento è tracciato alla sezione/pagina sorgente
+- **Warning System**: Il sistema segnala anomalie, duplicati, inconsistenze
 
-## Project Structure
+---
 
-```
-simple-kg-pipeline/
-├── main.py                 # Pipeline orchestration
-├── config.yaml             # Configuration parameters
-├── requirements.txt        # Python dependencies
-├── schemas/               # Entity and relationship definitions
-├── modules/               # Core processing modules
-│   ├── document_loader.py
-│   ├── text_extractor.py
-│   ├── chunker.py
-│   ├── entity_extractor.py
-│   └── graph_builder.py
-└── README.md
-```
+## 📝 Logging
 
-## Contributing
+I log sono salvati in `output/logs/` con:
+- Timestamp esecuzione
+- Pipeline eseguita
+- Errori e warning
+- Statistiche performance (tempo, entità estratte, token usati)
 
-This is a proof-of-concept implementation intended for demonstration and experimentation purposes. Feedback and suggestions for improvements are welcome.
+---
 
-## License
+## 🤝 Contribuire
 
-This project is provided as-is for research and educational purposes.
+Questo progetto segue un approccio incrementale. Per contribuire:
 
-## Acknowledgments
+1. Implementare una pipeline seguendo il pattern di `BasePipeline`
+2. Aggiungere test in `tests/`
+3. Documentare prompt e strategie nel codice
+4. Testare su documenti reali
 
-Built with OpenAI's GPT models for natural language understanding and knowledge extraction capabilities.
+---
+
+## 📚 Riferimenti
+
+- **Schema JSON**: `schemas/neural_extraction.json`
+- **Configurazione**: `config.yaml`
+- **Documentazione source**: `source/README.md`
+
+---
+
+## 📄 Licenza
+
+Progetto di ricerca per estrazione semantica da documentazione tecnica.
+
+## ✨ Caratteristiche Tecniche
+
+- **Modularità**: Design SOLID con separation of concerns
+- **Estensibilità**: Facile aggiunta di nuove pipeline
+- **Tracciabilità**: Provenance completa da documento a entità
+- **Robustezza**: Validazione multi-livello e error handling
+- **Performance**: Possibilità di esecuzione parallela delle pipeline
+
+---
+
+**Versione**: 2.0 - Architettura Modulare
+**Status**: In sviluppo - Fase 2 (Pipeline Pilota)
