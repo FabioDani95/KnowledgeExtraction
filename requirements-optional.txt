@@ -1,4 +1,0 @@
-# Optional dependencies for advanced features
-# Language detection for content filtering (Priority 2 filters)
-# Note: May require specific build tools on some systems
-langdetect>=1.0.9

@@ -17,7 +17,7 @@ filtering:
       - "^bibliography"
       - "^references$"
     case_sensitive: false            # Ignora maiuscole/minuscole nei pattern
-    match_scope: "title"            # Dove applicare i pattern: title, text, both
+    match_scope: "title"             # Dove applicare i pattern: title, text, both
     max_text_scan_chars: 2000        # Numero max caratteri da esaminare nel testo per match
 
   # Content quality
@@ -76,3 +76,67 @@ neural_extractor:
   temperature: 0.0
   max_output_tokens: 1024
   request_timeout: 60              # timeout (secondi) per le chiamate al modello
+
+# === Pipeline Settings ===
+pipelines:
+  product_technical:
+    enabled: true
+    source_dir: "source/product_technical"
+    output_dir: "output/partial/product_technical"
+    document_glob: "*.pdf"
+    symbolic:
+      skip_header_footer_patterns:
+        footer: "citiz service manual\\s+\\d+$"
+        header: "^[A-Z\\s]+\\|$"
+        page_number: "^\\s*\\d+\\s*$"
+        decoration: "^[\\-|\\s─═]+$"
+      section_patterns:
+        level1: "^\\d+\\s+[A-Z][A-Z\\s&]+$"
+        level2: "^\\d+\\.\\d+\\s+.+$"
+        level3: "^\\d+\\.\\d+\\.\\d+\\s+.+$"
+      role_heuristics:
+        figure_keywords:
+          - "diagram"
+          - "view"
+          - "schematic"
+          - "overview"
+        table_keywords:
+          - "|"
+          - "table"
+          - "specification"
+          - "rating"
+        warning_keywords:
+          - "warning"
+          - "caution"
+          - "danger"
+          - "note"
+          - "important"
+      tagging_keywords:
+        component_list_pattern: "^\\s*\\d+\\)"
+        dimensions:
+          - "mm"
+          - "kg"
+          - "width"
+          - "height"
+          - "depth"
+          - "dimension"
+        electrical:
+          - "voltage"
+          - "hz"
+          - "amp"
+          - "watt"
+          - "v "
+        model_codes:
+          - "c110"
+          - "d120"
+          - "c170"
+        brand:
+          - "delonghi"
+          - "krups"
+          - "magimix"
+          - "nespresso"
+      table_detection:
+        dotted_leader_threshold: 3
+        min_pipe_columns: 3
+      quality_thresholds:
+        min_text_coverage: 0.7

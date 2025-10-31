@@ -1,6 +1,0 @@
-# Core dependencies - REQUIRED
-PyYAML>=6.0.1
-PyPDF2>=3.0.0
-
-# Schema validation - RECOMMENDED
-jsonschema>=4.17.0
