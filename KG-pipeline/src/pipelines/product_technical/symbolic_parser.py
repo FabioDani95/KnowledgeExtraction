@@ -63,6 +63,53 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
         self.tagging_keywords = self.symbolic_config.get("tagging_keywords", {})
         self.table_detection = self.symbolic_config.get("table_detection", {})
         self.quality_thresholds = self.symbolic_config.get("quality_thresholds", {})
+        self.rating_plate_config = self.symbolic_config.get("rating_plate", {}) or {}
+        self.rating_plate_enabled = self.rating_plate_config.get("enabled", True)
+        self.rating_plate_keywords = [
+            kw.lower() for kw in self.rating_plate_config.get("title_keywords", ["rating plate"])
+        ]
+        self.rating_plate_brands = [
+            brand.strip() for brand in self.rating_plate_config.get("brands", [])
+        ]
+        if not self.rating_plate_brands:
+            self.rating_plate_brands = [brand.strip() for brand in self.tagging_keywords.get("brand", [])]
+        self.rating_plate_region_tokens = [
+            token.lower().strip() for token in self.rating_plate_config.get("region_tokens", [])
+        ]
+        self.rating_plate_default_tags = set(self.rating_plate_config.get("default_tags", []))
+
+        self.implicit_config = self.symbolic_config.get("implicit_subsections", {}) or {}
+        self.implicit_enabled = self.implicit_config.get("enabled", True)
+        self.implicit_heading_patterns = [
+            re.compile(pattern)
+            for pattern in self.implicit_config.get(
+                "heading_patterns",
+                [r"^([A-Z][A-Za-z0-9\s,&-]+):?$", r"^([A-Z][A-Z\s/&-]+)$"],
+            )
+        ]
+        self.implicit_max_heading_words = int(self.implicit_config.get("max_heading_words", 8))
+        self.implicit_min_block_chars = int(self.implicit_config.get("min_block_chars", 40))
+
+        self.warning_config = self.symbolic_config.get("warning_detection", {}) or {}
+        self.warning_enabled = self.warning_config.get("enabled", True)
+        self.warning_patterns = [
+            re.compile(pattern, re.IGNORECASE | re.MULTILINE)
+            for pattern in self.warning_config.get(
+                "patterns",
+                [
+                    "(WARNING|CAUTION|DANGER|IMPORTANT|ATTENTION)",
+                    "(not compatible|incompatible)",
+                    "(do not|never|avoid).{0,50}(mix|combine|use with)",
+                    "(must not|cannot be used|will not work)",
+                    "^Note:?|^Nota:?",
+                ],
+            )
+        ]
+        self.warning_snippet_window = int(self.warning_config.get("snippet_window", 120))
+        self.warning_promote_limit = int(self.warning_config.get("promote_role_max_chars", 600))
+
+        self.dotted_min_rows = int(self.table_detection.get("min_consistent_rows", 3))
+        self.dotted_max_separator_variance = int(self.table_detection.get("max_separator_variance", 2))
         self.logger = logging.getLogger("pipeline.product_technical.symbolic")
 
     # --------------------------------------------------------------------- #
@@ -175,9 +222,12 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
             }
             output_sections.append(section_dict)
         output_sections = self._merge_consecutive_tables(output_sections)
-        output_sections = self._split_rating_plate_sections(output_sections)
-        output_sections = self._detect_implicit_subsections(output_sections)
-        output_sections = self._annotate_warning_sections(output_sections)
+        if self.rating_plate_enabled:
+            output_sections = self._split_rating_plate_sections(output_sections)
+        if self.implicit_enabled:
+            output_sections = self._detect_implicit_subsections(output_sections)
+        if self.warning_enabled:
+            output_sections = self._annotate_warning_sections(output_sections)
 
         covered_chars = sum(len(sec.get("text", "")) for sec in output_sections)
         total_tables = sum(len(sec.get("tables") or []) for sec in output_sections)
@@ -365,7 +415,7 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
         if figures:
             return []
 
-        if self._is_rating_plate_section(section, text):
+        if self.rating_plate_enabled and self._is_rating_plate_section(section, text):
             return []
 
         lines = [line for line in text.split("\n") if line.strip()]
@@ -624,6 +674,12 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
         return merged
 
     def _split_rating_plate_sections(self, sections: List[dict]) -> List[dict]:
+        if not self.rating_plate_enabled:
+            return sections
+
+        if not self.rating_plate_brands:
+            return sections
+
         result: List[dict] = []
         for section in sections:
             if not self._is_rating_plate_section(section, section.get("text", "")):
@@ -640,7 +696,7 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
             section["tables"] = []
             section["figures"] = []
             section["tags"] = sorted(
-                set(section.get("tags", [])) | {"rating_plate", "brand_specific"}
+                set(section.get("tags", [])) | self.rating_plate_default_tags
             )
             result.append(section)
             result.extend(rating_subsections)
@@ -650,6 +706,16 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
         original_text = section.get("text") or ""
         if not original_text:
             return []
+
+        brand_regex = "|".join(re.escape(name) for name in self.rating_plate_brands)
+        if not brand_regex:
+            return []
+
+        region_regex = ""
+        if self.rating_plate_region_tokens:
+            region_regex = "|".join(
+                re.escape(token) for token in self.rating_plate_region_tokens
+            )
 
         normalized_text = (
             original_text.replace("\u00ad", "-").replace("\u2010", "-").replace("\u2011", "-")
@@ -662,11 +728,12 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
             cursor += len(line) + 1
         line_positions.append(len(normalized_text))
 
-        brand_pattern = re.compile(
-            r"(Nespresso|DeLonghi|Koenig|Krups|Magimix|Turmix)"
-            r"(?:[, ]+([A-Za-z/]{2,5})[\s\u2010\u00ad-]*version)?",
-            re.IGNORECASE,
-        )
+        if region_regex:
+            region_group = rf"(?:[, ]+({region_regex})[\s\u2010\u00ad-]*version)?"
+        else:
+            region_group = r"(?:[, ]+([A-Za-z/]{2,5})[\s\u2010\u00ad-]*version)?"
+
+        brand_pattern = re.compile(rf"({brand_regex}){region_group}", re.IGNORECASE)
 
         headers: List[Tuple[int, str, Optional[str]]] = []
         for idx, line in enumerate(lines):
@@ -698,6 +765,7 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
             region_slug = f"_{region.lower()}" if region else ""
             base_id = f"{section['section_id']}_{brand_slug}{region_slug}"
             new_section = copy.deepcopy(section)
+            region_tag = region.lower() if region else None
             new_section.update(
                 {
                     "section_id": base_id,
@@ -715,12 +783,9 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
                     "figures": section.get("figures") or [],
                     "tags": sorted(
                         existing_tags
-                        | {
-                            "brand_specific",
-                            "rating_plate",
-                            brand_slug,
-                        }
-                        | ({region.lower()} if region else set())
+                        | self.rating_plate_default_tags
+                        | {brand_slug}
+                        | ({region_tag} if region_tag else set())
                     ),
                 }
             )
@@ -761,7 +826,7 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
         if not text:
             return None
 
-        patterns = [
+        patterns = self.implicit_heading_patterns or [
             re.compile(r"^([A-Z][A-Za-z0-9\s,&-]+):?$"),
             re.compile(r"^([A-Z][A-Z\s/&-]+)$"),
         ]
@@ -773,7 +838,7 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
                 continue
             for pattern in patterns:
                 match = pattern.match(stripped)
-                if match and len(stripped.split()) <= 8:
+                if match and len(stripped.split()) <= self.implicit_max_heading_words:
                     headings.append((idx, match.group(1).strip(" :")))
                     break
 
@@ -793,7 +858,7 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
             start_pos = line_positions[line_idx]
             end_pos = line_positions[next_idx]
             block_text = text[start_pos:end_pos].strip()
-            if len(block_text) < 40:
+            if len(block_text) < self.implicit_min_block_chars:
                 continue
 
             suffix = self._normalize_title(title) or "section"
@@ -835,6 +900,9 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
         return prefix_text, subsections
 
     def _annotate_warning_sections(self, sections: List[dict]) -> List[dict]:
+        if not self.warning_enabled:
+            return sections
+
         for section in sections:
             warnings = self._detect_warning_mentions(section.get("text", ""))
             if not warnings:
@@ -844,31 +912,29 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
                 section["tags"].append("warning")
             section["tags"] = sorted(set(section["tags"]))
             section["warnings"] = warnings
-            if section.get("role") in {"main", "table"} and len(section.get("text", "")) < 600:
+            if (
+                section.get("role") in {"main", "table"}
+                and len(section.get("text", "")) < self.warning_promote_limit
+            ):
                 section["role"] = "warning"
         return sections
 
     def _detect_warning_mentions(self, text: str) -> List[dict]:
-        if not text:
+        if not text or not self.warning_enabled or not self.warning_patterns:
             return []
 
-        warning_patterns = [
-            r"(WARNING|CAUTION|DANGER|IMPORTANT|ATTENTION)",
-            r"(not compatible|incompatible)",
-            r"(do not|never|avoid).{0,50}(mix|combine|use with)",
-            r"(must not|cannot be used|will not work)",
-            r"^Note:?|^Nota:?",
-        ]
         warnings: List[dict] = []
         seen_snippets: set[str] = set()
 
-        for pattern in warning_patterns:
-            for match in re.finditer(pattern, text, re.IGNORECASE | re.MULTILINE):
-                start = max(0, match.start() - 120)
-                end = min(len(text), match.end() + 120)
+        for pattern in self.warning_patterns:
+            for match in pattern.finditer(text):
+                start = max(0, match.start() - self.warning_snippet_window)
+                end = min(len(text), match.end() + self.warning_snippet_window)
                 window = text[start:end]
-                sentence_start = window.rfind(". ", 0, match.start() - start)
-                sentence_end = window.find(". ", match.end() - start)
+                match_relative_start = match.start() - start
+                match_relative_end = match.end() - start
+                sentence_start = window.rfind(". ", 0, match_relative_start)
+                sentence_end = window.find(". ", match_relative_end)
                 if sentence_start != -1:
                     window = window[sentence_start + 2 :]
                 if sentence_end != -1:
@@ -894,12 +960,16 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
         return warnings
 
     def _is_rating_plate_section(self, section: object, text: str) -> bool:
+        if not self.rating_plate_enabled:
+            return False
+
         title = getattr(section, "title", "") if hasattr(section, "title") else ""
         if isinstance(section, dict):
             title = section.get("title", title)
         title_lower = (title or "").lower().replace("\u00a0", " ")
         text_lower = (text or "").lower().replace("\u00a0", " ")
-        return "rating plate" in title_lower or "rating plate" in text_lower
+        keywords = self.rating_plate_keywords or ["rating plate"]
+        return any(keyword in title_lower or keyword in text_lower for keyword in keywords)
 
     def _is_valid_pipe_table(
         self,
@@ -917,12 +987,12 @@ class ProductTechnicalSymbolicParser(BaseSymbolicParser):
 
     def _is_valid_dotted_table(self, lines: Sequence[str]) -> bool:
         dotted_lines = [line for line in lines if re.search(r"\.{3,}", line)]
-        if len(dotted_lines) < 3:
+        if len(dotted_lines) < self.dotted_min_rows:
             return False
         separator_counts = [
             len(re.findall(r"\.{3,}", line)) for line in dotted_lines
         ]
-        if separator_counts and len(set(separator_counts)) > 2:
+        if separator_counts and len(set(separator_counts)) > self.dotted_max_separator_variance:
             return False
         leading = lines[: min(3, len(lines))]
         if leading and all(item.strip().startswith("-") for item in leading):

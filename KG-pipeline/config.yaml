@@ -138,5 +138,47 @@ pipelines:
       table_detection:
         dotted_leader_threshold: 3
         min_pipe_columns: 3
+        min_consistent_rows: 3
+        max_separator_variance: 2
       quality_thresholds:
         min_text_coverage: 0.7
+      rating_plate:
+        enabled: true
+        title_keywords:
+          - "rating plate"
+          - "rating plates"
+        brands:
+          - "nespresso"
+          - "delonghi"
+          - "koenig"
+          - "krups"
+          - "magimix"
+          - "turmix"
+        region_tokens:
+          - "eu"
+          - "ch"
+          - "at"
+          - "us"
+          - "uk"
+          - "apac"
+          - "me"
+        default_tags:
+          - "rating_plate"
+          - "brand_specific"
+      implicit_subsections:
+        enabled: true
+        heading_patterns:
+          - "^([A-Z][A-Za-z0-9\\s,&-]+):?$"
+          - "^([A-Z][A-Z\\s/&-]+)$"
+        max_heading_words: 8
+        min_block_chars: 40
+      warning_detection:
+        enabled: true
+        snippet_window: 120
+        promote_role_max_chars: 600
+        patterns:
+          - "(WARNING|CAUTION|DANGER|IMPORTANT|ATTENTION)"
+          - "(not compatible|incompatible)"
+          - "(do not|never|avoid).{0,50}(mix|combine|use with)"
+          - "(must not|cannot be used|will not work)"
+          - "^Note:?|^Nota:?"
