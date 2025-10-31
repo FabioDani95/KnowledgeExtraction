@@ -2,7 +2,7 @@
 
 # === Content Filtering Settings ===
 filtering:
-  enabled: true                      # Master switch (abilita/disabilita tutti i filtri)
+  enabled: false                      # Master switch (abilita/disabilita tutti i filtri)
 
   # Pattern-based filtering
   pattern_filtering:
@@ -52,8 +52,8 @@ filtering:
 pdf_processing:
   datasource_code: "SRC_DOCS_PIPELINE5"
   default_language: "en"
-  skip_start_pages: 5  # Numero di pagine da saltare all'inizio del PDF (per escludere copertine, copyright, ecc)
-  skip_end_pages: 5     # Numero di pagine finali da saltare (per escludere appendici inutili, pubblicità, ecc)
+  skip_start_pages: 1  # Numero di pagine da saltare all'inizio del PDF (per escludere copertine, copyright, ecc)
+  skip_end_pages: 1     # Numero di pagine finali da saltare (per escludere appendici inutili, pubblicità, ecc)
 
 # === Output Settings ===
 output:
@@ -69,7 +69,7 @@ logging:
 
 # === Neural Extractor Module ===
 neural_extractor:
-  enabled: true
+  enabled: false
   provider: "openai"               # 'openai' or other provider id used by the module
   model: "gpt-4o-mini"             # modello predefinito per il modulo neurale
   api_key_env: "OPENAI_API_KEY"

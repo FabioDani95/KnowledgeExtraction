@@ -1,4 +1,3 @@
-
 {
   "document_code": "string",
   "ingestion_id": "string",
@@ -12,38 +11,44 @@
   },
   "allowed_types": [
     "Product",
-    "Subsystem",
     "ComponentType",
     "Component",
     "ParameterSpec",
     "Unit",
-    "SensorType",
-    "Sensor",
     "FailureMode",
     "RepairAction",
     "MaintenanceTask",
     "Tool",
     "Consumable",
-    "Core",
     "ProcessStep",
-    "RoutingDecision",
     "State",
-    "Document",
-    "DataSource",
-    "AnomalyThreshold",
-    "DiagnosticRule",
     "MachineMode",
     "TestSpec",
-    "RatingPlate"
+    "RatingPlate",
+    "Document"
+  ],
+  "allowed_relations": [
+    "hasPart",
+    "belongsTo",
+    "instanceOf",
+    "hasSpec",
+    "hasUnit",
+    "affects",
+    "mitigatedBy",
+    "requiresTool",
+    "requiresConsumable",
+    "precedes",
+    "appliesDuring",
+    "verifies",
+    "hasRatingPlate",
+    "connectedTo"
   ],
   "entities": [
     {
       "id": "string",
       "type": "string",
       "name": "string",
-      "aliases": [
-        "string"
-      ],
+      "aliases": ["string"],
       "notes": "string",
       "spans": [
         {
@@ -81,17 +86,13 @@
   ],
   "provenance": {
     "overall_confidence": "number",
-    "sections_used": [
-      "string"
-    ],
+    "sections_used": ["string"],
     "notes": "string"
   },
   "quality": {
     "json_valid": "boolean",
     "entities_count": "integer",
     "relations_count": "integer",
-    "warnings": [
-      "string"
-    ]
+    "warnings": ["string"]
   }
 }
