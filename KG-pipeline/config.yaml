@@ -73,9 +73,62 @@ neural_extractor:
   provider: "openai"               # 'openai' or other provider id used by the module
   model: "gpt-4o-mini"             # modello predefinito per il modulo neurale
   api_key_env: "OPENAI_API_KEY"
-  temperature: 0.0
-  max_output_tokens: 1024
+  temperature: 0.2                 # temperatura per estrazione (0.1-0.3 consigliato)
+  max_output_tokens: 1500
   request_timeout: 60              # timeout (secondi) per le chiamate al modello
+  max_tokens_per_chunk: 1000       # massimo numero di token per chunk di testo
+  retry_on_failure: true           # retry automatico con prompt semplificato
+  save_raw_outputs: true           # salva input/output raw per debug
+
+# === Neural Extraction Profiles ===
+neural_extraction_profiles:
+  product_technical:
+    input_glob: "output/partial/product_technical/*.json"
+    output_dir: "output/neural_extraction/product_technical"
+    class_map:
+      - "Product"
+      - "ComponentType"
+      - "Component"
+      - "ParameterSpec"
+      - "Unit"
+      - "RatingPlate"
+    relation_map:
+      - "hasPart"
+      - "belongsTo"
+      - "instanceOf"
+      - "hasSpec"
+      - "hasUnit"
+      - "connectedTo"
+      - "hasRatingPlate"
+
+  operation_modes:
+    input_glob: "output/partial/operation_modes/*.json"
+    output_dir: "output/neural_extraction/operation_modes"
+    class_map:
+      - "MachineMode"
+      - "State"
+      - "ProcessStep"
+      - "TestSpec"
+    relation_map:
+      - "precedes"
+      - "appliesDuring"
+      - "verifies"
+
+  troubleshooting:
+    input_glob: "output/partial/troubleshooting/*.json"
+    output_dir: "output/neural_extraction/troubleshooting"
+    class_map:
+      - "FailureMode"
+      - "RepairAction"
+      - "MaintenanceTask"
+      - "Tool"
+      - "Consumable"
+    relation_map:
+      - "affects"
+      - "mitigatedBy"
+      - "requiresTool"
+      - "requiresConsumable"
+      - "verifies"
 
 # === Pipeline Settings ===
 pipelines:
