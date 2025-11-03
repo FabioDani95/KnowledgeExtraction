@@ -19,12 +19,18 @@ if __package__ in (None, ""):
     from pipelines.operation_modes.symbolic_parser import (  # type: ignore
         OperationModesSymbolicParser,
     )
+    from pipelines.troubleshooting.symbolic_parser import (  # type: ignore
+        TroubleshootingSymbolicParser,
+    )
 else:
     from .pipelines.product_technical.symbolic_parser import (
         ProductTechnicalSymbolicParser,
     )
     from .pipelines.operation_modes.symbolic_parser import (
         OperationModesSymbolicParser,
+    )
+    from .pipelines.troubleshooting.symbolic_parser import (
+        TroubleshootingSymbolicParser,
     )
 
 
@@ -34,6 +40,9 @@ PIPELINE_REGISTRY: Dict[str, Dict[str, object]] = {
     },
     "operation_modes": {
         "symbolic": OperationModesSymbolicParser,
+    },
+    "troubleshooting": {
+        "symbolic": TroubleshootingSymbolicParser,
     },
 }
 

@@ -237,3 +237,58 @@ pipelines:
         synchronized_figures: true
       generic:
         tag: "operation_text"
+  troubleshooting:
+    enabled: true
+    source_dir: "source/troubleshooting"
+    output_dir: "output/partial/troubleshooting"
+    document_glob: "*.pdf"
+    symbolic:
+      skip_header_footer_patterns:
+        footer: "citiz service manual\\s+\\d+$"
+        header: "^[A-Z\\s]+\\|$"
+        page_number: "^\\s*\\d+\\s*$"
+        decoration: "^[\\-|\\s─═]+$"
+      page_classification:
+        decision_keywords:
+          - "check"
+          - "error symptoms"
+          - "measure"
+        torque_keywords:
+          - "torque"
+          - "screw"
+        safety_keywords:
+          - "risk"
+          - "danger"
+          - "⚠"
+        max_warning_role_chars: 500
+      decision_tree:
+        check_pattern: "(\\d+)\\s+(.+)"
+        subcheck_pattern: "(\\d+\\.\\d+)\\s+(.+)"
+        branch_pattern: "(YES|NO)\\s*(?:[-–—:\\u00ad])?\\s*(.*?)(?=(YES|NO)\\s*(?:[-–—:\\u00ad]|$)|$)"
+        table_id: "tbl_troubleshooting"
+        format: "hierarchical_decision_tree"
+        tags:
+          - "troubleshooting"
+          - "checklist"
+      torque_table:
+        value_pattern: "(\\d+)\\s*\\(\\+(\\d+)/-(\\d+)\\)\\s*(Ncm|Nm)"
+        csv_headers:
+          - "Component"
+          - "Nominal"
+          - "Tolerance_plus"
+          - "Tolerance_minus"
+          - "Unit"
+        table_id: "tbl_torque_specs"
+        format: "technical_specs"
+        tags:
+          - "torque"
+          - "repair"
+      safety_detection:
+        snippet_chars: 220
+        tags:
+          - "safety"
+        patterns:
+          - "(⚠️|⚠|Risk of|Danger of)"
+          - "(fatal electrical shock|burns|hot parts|injury)"
+      generic:
+        tag: "troubleshooting_text"

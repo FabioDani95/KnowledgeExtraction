@@ -1,0 +1,305 @@
+{
+  "document_code": "3_DIAGNOSTIC_RULES_AND_FAILURES_SERVICE_MANUAL_49_54",
+  "title": "3_Diagnostic Rules and failures_Service Manual-49-54",
+  "datasource_code": "SRC_DOCS_PIPELINE5",
+  "language": "en",
+  "ingestion_id": "18283f76-ddb3-4727-9a3c-ac4c584cdffd",
+  "created_utc": "2025-11-03T10:03:08.108159Z",
+  "source": {
+    "uri": "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/source/troubleshooting/3_Diagnostic Rules and failures_Service Manual-49-54.pdf",
+    "filename": "3_Diagnostic Rules and failures_Service Manual-49-54.pdf",
+    "mime_type": "application/pdf",
+    "checksum_sha256": "73fb77bc3023a989c4031df4af1848dec82a6db864cb090eed5497e1c63f848a",
+    "page_count": 6
+  },
+  "metadata": {
+    "product_hint": null,
+    "model_hint": null,
+    "brand_hint": null,
+    "doc_type": null,
+    "version": null,
+    "year": null
+  },
+  "sections": [
+    {
+      "section_id": "sec_2",
+      "parent_id": null,
+      "title": "Citiz service manual  50 TROUBLESHOOTING",
+      "title_normalized": "citiz_service_manual_50_troubleshooting",
+      "role": "table",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 2,
+      "page_end": 2,
+      "char_start": 0,
+      "char_end": 1362,
+      "text": "Citiz service manual\nCitiz service manual  50 TROUBLESHOOTING\ntemperature dur\ning preparation\n(see page 136) 5.\ndevice (APD)\nNO  continue\nYES  b) flow meter blocked YES  clean or replace\nNO  continue\nYES  c) pyramide plate\nblocked YES  replace the compact\nbrewing unit\nNO  continue\nYES  d) coffee machine is cal\ncified\nNO  continue YES  descale coffee machine\n(see page 41)\n5.\nlow (below 83°C) YES  descale coffee machine\n(see page 41)\nNO  continue\n5.\nhigh (over\nture sensor\nNO  continue\n(see page 133)\nand measure flow\nrate (see page\n132) 6.\nunit leaks YES  replace compact brew\ning unit\nNO  continue\n6.\nleak YES  replace defective hoses\nand seals\nNO  continue\n6.\nthe standard range YES   coffee machine is calci\nfied\nNO  continue with point\n(see page 41)\nNO  replace pump\nmachine\n(if necessary) 7.\ncalcified YES  descale coffee machine\n(see page 41)\nNO  continue with point 9\ncontents after des\ncaling and rinising 8.\nand rust visible in\nwater YES  descale and rinse coffee\nmachine again to clean water\ncircuit (see page 41)\nNO  continue YES  inform customer to des\ncale coffee machine periodi\ncally and to use specified des\ncaling product only.\n(see page 38) No errors found according to\ncheck list? YES  for more information\nplease contact Nespresso\nService Division\nEnd of check list Check Error symptoms Measure /\nrepair work Further measures / repair\nwork",
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "tbl_troubleshooting",
+          "page": 2,
+          "caption": "Troubleshooting checks page 2",
+          "format": "hierarchical_decision_tree",
+          "structure": {
+            "checks": [
+              {
+                "id": "5",
+                "name": "Measure coffee",
+                "subchecks": []
+              },
+              {
+                "id": "1",
+                "name": "No coffee YES  a) water system is empty YES  replace self priming",
+                "subchecks": []
+              },
+              {
+                "id": "2",
+                "name": "Temperature is too",
+                "subchecks": []
+              },
+              {
+                "id": "3",
+                "name": "Temperature too",
+                "subchecks": []
+              },
+              {
+                "id": "89",
+                "name": "°C) YES  replace NTC tempera",
+                "subchecks": []
+              },
+              {
+                "id": "6",
+                "name": "Check for leakage",
+                "subchecks": []
+              },
+              {
+                "id": "1",
+                "name": "Compact brewing",
+                "subchecks": []
+              },
+              {
+                "id": "2",
+                "name": "Hose connections",
+                "subchecks": []
+              },
+              {
+                "id": "3",
+                "name": "Rate of flow not in",
+                "subchecks": []
+              },
+              {
+                "id": "9",
+                "name": "YES  descale coffee machine",
+                "subchecks": []
+              },
+              {
+                "id": "7",
+                "name": "Descale coffee",
+                "subchecks": []
+              },
+              {
+                "id": "1",
+                "name": "Coffee machine is",
+                "subchecks": []
+              },
+              {
+                "id": "8",
+                "name": "Check water tank",
+                "subchecks": []
+              },
+              {
+                "id": "1",
+                "name": "Particles of calcium",
+                "subchecks": []
+              },
+              {
+                "id": "9",
+                "name": "Final cleaning",
+                "subchecks": []
+              }
+            ]
+          }
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "checklist",
+        "troubleshooting"
+      ]
+    },
+    {
+      "section_id": "sec_3",
+      "parent_id": null,
+      "title": "Citiz service manual  51 TROUBLESHOOTING",
+      "title_normalized": "citiz_service_manual_51_troubleshooting",
+      "role": "table",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 3,
+      "page_end": 3,
+      "char_start": 1363,
+      "char_end": 2611,
+      "text": "Citiz service manual\nCitiz service manual  51 TROUBLESHOOTING\n7.\nThe milk frother is part\nof the Citiz & milk\nmodel.\nCheck Error symptoms Measure /\nrepair work Further measures / repair\nwork\nand accessory for\nvisible damage 1.\ndamaged YES  replace lid/seal\nNO  continue\n1.\njug badly scratched YES  replace milk frother in\nagreement with customer\nNO  continue YES  inform customer how to\nclean milk frother\n1.\ndamaged YES  replace whisks\nNO  continue\non platform con\nnector.\nAttach whisk.\nSwitch on coffee\nmachine.\nPress start button\nbriefly (hot milk\npreparation). 4.\nworking (does not\nfunction) YES  a) coffee machine is\nheating up YES  continue\nNO  continue with check list for\ncoffee machine\nYES  b) connector on platform\nis ok (test it with another milk\nfrother) YES  replace milk frother\nNO  replace connector on plat\nform (seepage 73)\n4.\nduring preparation YES  replace milk frother\nNO  continue\n4.\nnot switch off auto\nmatically YES  replace milk frother\nNO  continue\n4.\ncold YES  replace milk frother\nNO  continue\nfor at least\n(cold milk prepa\nration) 5.\nbacklighted in blue YES  replace milk frother\n(see page 40) No errors found according to\ncheck list? YES  for more information\nplease contact Nespresso\nService Division\nEnd of check list",
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "tbl_troubleshooting",
+          "page": 3,
+          "caption": "Troubleshooting checks page 3",
+          "format": "hierarchical_decision_tree",
+          "structure": {
+            "checks": [
+              {
+                "id": "2",
+                "name": "Check list for milk frother",
+                "subchecks": []
+              },
+              {
+                "id": "1",
+                "name": "Check milk frother",
+                "subchecks": []
+              },
+              {
+                "id": "1",
+                "name": "Lid/seal broken or",
+                "subchecks": []
+              },
+              {
+                "id": "2",
+                "name": "Inside coating of",
+                "subchecks": []
+              },
+              {
+                "id": "3",
+                "name": "Whisks broken or",
+                "subchecks": []
+              },
+              {
+                "id": "4",
+                "name": "Place milk frother",
+                "subchecks": []
+              },
+              {
+                "id": "1",
+                "name": "Milk frother is not",
+                "subchecks": []
+              },
+              {
+                "id": "2",
+                "name": "Abnormal noise",
+                "subchecks": []
+              },
+              {
+                "id": "3",
+                "name": "Milk frother does",
+                "subchecks": []
+              },
+              {
+                "id": "4",
+                "name": "Inside of jug stays",
+                "subchecks": []
+              },
+              {
+                "id": "5",
+                "name": "Press start button",
+                "subchecks": []
+              },
+              {
+                "id": "2",
+                "name": "sec",
+                "subchecks": []
+              },
+              {
+                "id": "1",
+                "name": "Start button is not",
+                "subchecks": []
+              },
+              {
+                "id": "6",
+                "name": "Final cleaning",
+                "subchecks": []
+              }
+            ]
+          }
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "checklist",
+        "troubleshooting"
+      ]
+    },
+    {
+      "section_id": "sec_4",
+      "parent_id": null,
+      "title": "Citiz service manual  52 REPAIRS",
+      "title_normalized": "citiz_service_manual_52_repairs",
+      "role": "main",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 4,
+      "page_end": 4,
+      "char_start": 2612,
+      "char_end": 4134,
+      "text": "Citiz service manual  52 REPAIRS\n8 REPAIRS\nThese repair instructions\n­ are based on exploded drawings with position numbers combined with repair and\nmounting tips,\n­ presuppose basic knowledge in repairing Nespresso coffee machines.\nAs a rule, identical components (e.g. pumps, thermoblocks etc.) are\npresented in detail only once.\n8.1 Safety instructions\n8.2 Repair and mounting tips\nThese general advices are completed with specific repair tips in this chapter.\nAdditional information\nFor components not mentioned in this repair chapter, refer to the chapters \"Explosion\nDrawings\" on page 148 and \"Parts List\" on page 154.\nSnap connections\nParts of the case and components of the coffee machine are connected screwless with\nlatches.\nWhen loosening these latches, proceed with care and patience to avoid\ncausing any damage.\nThe side panels of the core unit have delicate snap connections that can brake easily.\nWhen removing these side panels, use the special disassembly tool and\nprocceed according to the disassembly instructions.\nScrew connections\nDo not overtighten screws. Plastic threads and inserts are delicate.\nObserve max. torque for the screw connections according to the following table. Risk of fatal electrical shock!\nMains voltage inside the coffee machine.\nDisconnect the mains plug before disassembly ­ the coffee machine\nmust be free of voltage.\nDanger of burns!\nHot parts and water under pressure inside the coffee machine (ther­\nmoblock in particular).\nLet coffee machine cool down before disassembly.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "safety",
+        "troubleshooting_text"
+      ],
+      "warnings": [
+        {
+          "type": "safety_warning",
+          "severity": "danger",
+          "text": "voltage. Danger of burns! Hot parts and water under pressure inside the coffee machine (ther­ moblock in particular). Let coffee machine cool down before disassembly.",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "section_id": "sec_5",
+      "parent_id": null,
+      "title": "Citiz service manual  53 REPAIRS",
+      "title_normalized": "citiz_service_manual_53_repairs",
+      "role": "main",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 5,
+      "page_end": 5,
+      "char_start": 4135,
+      "char_end": 4584,
+      "text": "Citiz service manual  53 REPAIRS\nScrew / screw connection  Torque  Position\nScrew with oval shaped head 50 (+30/­0) Ncm\n0.5 (+0.3/­0) Nm Bottom of platform\nTX 10 screw (4 x) /\nbrewing unit (TMBU) 50 (+30/­0) Ncm\n0.5 (+0.3/­0) Nm\nTX 10 screw /\nthermoblock support (central) 150 (+30/­0) Ncm\n1.5 (+0.3/­0) Nm\nNTC fixation on thermoblock 80­100 Ncm\n0.8­1.0 Nm\nTX 20 screw (2 x) /\nthermo fuse fixations on ther­\nmoblock 150 (+30/­0) Ncm\n1.5 (+0.3/­0) Nm",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "troubleshooting_text"
+      ]
+    }
+  ],
+  "extraction_constraints": {
+    "skip_patterns": [
+      "citiz service manual\\s+\\d+$",
+      "^[A-Z\\s]+\\|$",
+      "^\\s*\\d+\\s*$",
+      "^[\\-|\\s─═]+$"
+    ],
+    "max_chars_per_section": 10000,
+    "allowed_entities": [],
+    "allowed_relations": []
+  },
+  "quality": {
+    "text_coverage_ratio": 0.8766,
+    "tables_extracted": 2,
+    "figures_detected": 0,
+    "notes": ""
+  },
+  "discarded_blocks": []
+}
