@@ -1,0 +1,695 @@
+{
+  "document_code": "2_OPERATIONS_AND_MODALITY_SERVICE_MANUAL_31_48",
+  "title": "2_Operations and Modality_Service Manual-31-48",
+  "datasource_code": "SRC_DOCS_PIPELINE5",
+  "language": "en",
+  "ingestion_id": "60ec23a1-af7a-4d26-a77e-05ccd11b9925",
+  "created_utc": "2025-11-03T09:36:01.752892Z",
+  "source": {
+    "uri": "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/source/operation_modes/2_Operations and Modality_Service Manual-31-48.pdf",
+    "filename": "2_Operations and Modality_Service Manual-31-48.pdf",
+    "mime_type": "application/pdf",
+    "checksum_sha256": "4c46bcbee32902f129bbc1d70ef005da42ad84575fd489df81d72ea8916c7edc",
+    "page_count": 18
+  },
+  "metadata": {
+    "product_hint": null,
+    "model_hint": null,
+    "brand_hint": null,
+    "doc_type": null,
+    "version": null,
+    "year": null
+  },
+  "sections": [
+    {
+      "section_id": "sec_status_table_p2",
+      "parent_id": null,
+      "title": "alternately 5 times Machine status etc. \"Small cup\"",
+      "title_normalized": "alternately_5_times_machine_status_etc_small_cup",
+      "role": "table",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 2,
+      "page_end": 2,
+      "char_start": 0,
+      "char_end": 895,
+      "text": "Citiz service manual  32 OPERATION\nVolume brewing small cup Blinking 1 Hz,\n0.5 s on, 0.5 s off\n(same as brewing small\ncup)\nVolume brewing big cup Blinking 1 Hz,\n0.5 s on, 0.5 s off\n(same as brewing big\ncup)\nDescaling ready Blinking 2 Hz,\n0.25 s on, 0.25 s off\nDescaling pump on (descal) Blinking 2 Hz,\n0.25 s on, 0.25 s off\n(same as descaling\nready mode)\nDescaling pump off (descal) Blinking 2 Hz,\n0.25 s on, 0.25 s off\n(same as descaling\nready mode)\nEmptying / Evaporating Blinking 2 Hz,\n0.25 s on, 0.25 s off\nStandby Blinking 0.5 Hz,\n1 s on, 1 s off\nalternately\nResetting Blinking 2 Hz,\n0.25 s on, 0.25 s off\nindication for 3 s\nPower save Blinking 0.2 Hz,\n2.5 s on, 2.5 s off\nalternately\nOverheat Blinking 1 Hz,\n0.5 s on, 0.5 s off\n(same as heat up)\nPower save activation Blinking 0.5 Hz,\n1 s on, 1 s off\nalternately 5 times Machine status etc. \"Small cup\"\nbutton \"Large cup\"\nbutton LED signal",
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "tbl_sec_status_table_p2",
+          "page": 2,
+          "caption": "Status",
+          "n_rows": 14,
+          "n_cols": 2,
+          "csv": "Status,LED_Signal\nVolume brewing small cup,\"Blinking 1 Hz, 0.5 s on, 0.5 s off (same as brewing small cup)\"\nVolume brewing big cup,\"Blinking 1 Hz, 0.5 s on, 0.5 s off (same as brewing big cup)\"\nDescaling ready,\"Blinking 2 Hz, 0.25 s on, 0.25 s off\"\nDescaling pump on (descal),\"Blinking 2 Hz, 0.25 s on, 0.25 s off (same as descaling ready mode)\"\nDescaling pump off (descal),\"Blinking 2 Hz, 0.25 s on, 0.25 s off (same as descaling ready mode)\"\nEmptying / Evaporating,\"Blinking 2 Hz, 0.25 s on, 0.25 s off\"\nStandby,\"Blinking 0.5 Hz, 1 s on, 1 s off\"\nStandby,alternately\nResetting,\"Blinking 2 Hz, 0.25 s on, 0.25 s off indication for 3 s\"\nPower save,\"Blinking 0.2 Hz, 2.5 s on, 2.5 s off\"\nPower save,alternately\nOverheat,\"Blinking 1 Hz, 0.5 s on, 0.5 s off (same as heat up)\"\nPower save activation,\"Blinking 0.5 Hz, 1 s on, 1 s off button \"\"Large cup\"\"\"",
+          "format": "icon_table_simplified"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "status_indicators"
+      ]
+    },
+    {
+      "section_id": "sec_status_table_p3",
+      "parent_id": null,
+      "title": "alternately 3 times Machine status etc. \"Small cup\"",
+      "title_normalized": "alternately_3_times_machine_status_etc_small_cup",
+      "role": "table",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 3,
+      "page_end": 3,
+      "char_start": 896,
+      "char_end": 1790,
+      "text": "Citiz service manual  33 OPERATION\n5.2.2 Status indication of milk frother AERO3\nThe operating button with red/blue backlight shows the status of the milk frother\naccording to the following table: Power save deactivation\n(only for model Citiz & Co) Blinking 0.5 Hz,\n1 s on, 1 s off\nalternately 3 times Machine status etc. \"Small cup\"\nbutton \"Large cup\"\nbutton LED signal\nTo reset a red blink­\ning backlight:\n1. Remove milk frother from\nplatform.\n2. Remove cause of failure if\npossible.\nMachine status etc. Operating button  Light signal\nOff  Backlight off\nOn ­ hot milk preparation  Red backlight on\nOn ­ cold milk froth prepara­\ntion Blue backlight on\nFailure/malfunction\n(e.g. overheating because of\nburnt milk, too less or no\nmilk) Blinking red backlight\n(1 Hz, 0.5 s on, 0.5 s off)\nFailure: milk frother has\nwrong mains voltage range Fast blinking red backlight\n(2 Hz, 0.25 s on, 0.25 s off",
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "tbl_sec_status_table_p3",
+          "page": 3,
+          "caption": "Status",
+          "n_rows": 9,
+          "n_cols": 2,
+          "csv": "Status,LED_Signal\n5.2.2 Status indication of milk frother AERO3,backlight shows the status of the milk frother according to the following table: Power save deactivation\n(only for model Citiz & Co),\"Blinking 0.5 Hz, 1 s on, 1 s off button \"\"Large cup\"\" To reset a red blink­\"\ning,backlight: 1. Remove milk frother from platform. 2. Remove cause of failure if possible.\nOff,Backlight off\nOn ­ hot milk preparation  Red,backlight on On ­ cold milk froth prepara­\ntion Blue,\"backlight on Failure/malfunction (e.g. overheating because of burnt milk, too less or no\"\nmilk),\"Blinking red backlight (1 Hz, 0.5 s on, 0.5 s off) Failure: milk frother has\"\nwrong mains voltage range Fast,\"blinking red backlight (2 Hz, 0.25 s on, 0.25 s off\"",
+          "format": "icon_table_simplified"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "status_indicators"
+      ]
+    },
+    {
+      "section_id": "sec_mode_table_p4",
+      "parent_id": null,
+      "title": "5.3 Machine modes",
+      "title_normalized": "53_machine_modes",
+      "role": "table",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 4,
+      "page_end": 4,
+      "char_start": 1791,
+      "char_end": 3493,
+      "text": "Citiz service manual  34 OPERATION\n5.3 Machine modes\n5.3.1 Machine modes of Citiz coffee machines\nThis table helps to understand the operating modes of a Citiz coffee machine:\nMachine mode  Enter mode  Actions  Exit mode\n1 Heat up mode Every time after switch­\ning on machine Heats up thermoblock\nto ready temperature\n90 °C within 60 s with­\nout overshooting target\ntemperature e.g. switching off\nmachine\n2 Self test mode Every time after switch­\ning on machine Tests:\n• NTC short circuit\n• NTC connected\n• Thermoblock heating\ncurve\nError handling:\nTracking of the last 5\nerrors by a ring buffer e.g. switching off\nmachine\n3 Ready mode • After heat up and self\ntest mode was ok\n• After brewing or\nvolume brewing\ncoffee\n• After reset mode\n• After leaving\ndescaling mode Keeps thermoblock\ntemperature at 90 °C e.g. switching off\nmachine\n4a Brewing mode\n4b Volume brewing\nmode (program­\nming cup size) • Press and release\nlarge or small coffee\nbutton (brewing\nmode)\n• Press and hold large\nor small coffee\nbutton for more than\n3 s (programming\nmode) • Press and release\nlarge or small coffee\nbutton when\nmachine was in\nbrewing mode or\nautomatic exit given\nby the flow meter\n• Release large or\nsmall coffee button\nwhen machine was\nin programming\nmode\n• Switching off\nmachine\n5 Descaling mode • Switch on machine,\nwait until ready\n• Press and hold both\ncoffee buttons for at\nleast 3 s • Regulate tempera­\nture to 65 °C (after\npump was started)\n• Stop and start pump\nwith any coffee\nbutton, no volume\nbrewing in descaling\nmode • Press and hold both\ncoffee buttons for at\nleast 0.5 s\nNote:\nWhen machine is\nswitched off during any\ndescaling mode, then it\ngoes to descaling\nmode ready state after\nnext switch on.",
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "tbl_sec_mode_table_p4",
+          "page": 4,
+          "caption": "5.3 Machine modes",
+          "n_rows": 77,
+          "n_cols": 1,
+          "csv": "5.3 Machine modes\n5.3.1 Machine modes of Citiz coffee machines\nThis table helps to understand the operating modes of a Citiz coffee machine\nMachine mode\n1 Heat up mode Every time after switch­\ning on machine Heats up thermoblock\nto ready temperature\n90 °C within 60 s with­\nout overshooting target\ntemperature e.g. switching off\nmachine\n2 Self test mode Every time after switch­\ning on machine Tests\nNTC short circuit\nNTC connected\nThermoblock heating\ncurve\nError handling\nTracking of the last 5\nerrors by a ring buffer e.g. switching off\nmachine\n\"3 Ready mode, After heat up and self\"\ntest mode was ok\nAfter brewing or\nvolume brewing\ncoffee\nAfter reset mode\nAfter leaving\ndescaling mode Keeps thermoblock\ntemperature at 90 °C e.g. switching off\nmachine\n4a Brewing mode\n4b Volume brewing\nmode (program­\n\"ming cup size), Press and release\"\nlarge or small coffee\nbutton (brewing\nmode)\nPress and hold large\nor small coffee\nbutton for more than\n3 s (programming\n\"mode), Press and release\"\nlarge or small coffee\nbutton when\nmachine was in\nbrewing mode or\nautomatic exit given\nby the flow meter\nRelease large or\nsmall coffee button\nwhen machine was\nin programming\nmode\nSwitching off\nmachine\n\"5 Descaling mode, Switch on machine\"\nwait until ready\nPress and hold both\ncoffee buttons for at\n\"least 3 s, Regulate tempera­\"\nture to 65 °C (after\npump was started)\nStop and start pump\nwith any coffee\n\"button, no volume\"\nbrewing in descaling\n\"mode, Press and hold both\"\ncoffee buttons for at\nleast 0.5 s\nNote\nWhen machine is\nswitched off during any\n\"descaling mode, then it\"\ngoes to descaling\nmode ready state after\nnext switch on.",
+          "format": "flattened_bullets"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "machine_modes"
+      ]
+    },
+    {
+      "section_id": "sec_mode_table_p5",
+      "parent_id": null,
+      "title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+      "title_normalized": "532_machine_modes_of_milk_frother_aero3_6_emptying_mode",
+      "role": "table",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 5,
+      "page_end": 5,
+      "char_start": 3494,
+      "char_end": 5504,
+      "text": "Citiz service manual  35 OPERATION\n5.3.2 Machine modes of milk frother AERO3 6 Emptying mode\n(evaporing) 1) Switch off machine\n2) Press and hold\nsmall coffee button\n3) Switch on machine 1) Start pump\n2) Stop pump after\n10s\n3) Heat up thermo­\nblock to 105°C\n(100% power)\n4) Switch off ther­\nmoblock\n5) Go to standby\nmode Switch off machine\n7 Resetting mode 1) Switch off machine\n2) Press and hold\nlarge coffee button\n3) Switch on machine • Reset the\nprogrammed large\nand small coffee\nvolumes to factory\nsetting\n• Indicate the resetting\nmode for 3 s\nFactory settings:\n• small cup ....  40 ml\n• large cup ... 110 ml proceeds with self test\nmode automatically\n8 Power save mode To enable power save\nmode:\n1) Switch off machine\n2) Press and hold\nboth coffee buttons\n3) Switch on machine\n4) Coffee button\nLED‘s blink 5 times\nalternatively as\nconfirmation\nAfter that automatically\nafter 30min of non use • Reduce thermoblock\ntemperature\n• Switch LED indica­\ntion to power save\nmode (blinking alter­\nnately every 2 sec) Press any coffee but­\nton to activate ready\nmode\nTo disable power save\nmode:\n1) Switch off machine\n2) Press and hold\nboth coffee buttons\n3) Switch on machine\n4) Coffee button\nLED‘s blink 3 times\nalternatively as\nconfirmation\n9 Failure mode Automatically by fol­\nlowing failures:\na) NTC short circuit\nb) NTC not connected\nc) Heat up too slow Machine indicates fail­\nure with coffee button\nLED‘s as long as the\nfailure is present When failure is fixed\n10 Standby mode Automatically after\nemptying mode • Switch thermoblock\noff\n• Switch LED indica­\ntion to standby mode Switch off the machine\nMachine mode  Enter mode  Actions  Exit mode\n1 Hot milk / milk froth\npreparation Press start button\nbriefly Start button lights up\nred. Milk is heated and\nmixed. Automatic switch­off\nafter preparation\n2 Cold milk froth prepa­\nration Keep start button\npressed for approx.\n2sec Start button lights up\nblue. Milk is mixed only. Automatic switch­off\nafter preparation Machine mode  Enter mode  Actions  Exit mode",
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "tbl_sec_mode_table_p5",
+          "page": 5,
+          "caption": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+          "n_rows": 83,
+          "n_cols": 1,
+          "csv": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode\n(evaporing) 1) Switch off machine\n2) Press and hold\nsmall coffee button\n3) Switch on machine 1) Start pump\n2) Stop pump after\n10s\n3) Heat up thermo­\nblock to 105°C\n(100% power)\n4) Switch off ther­\nmoblock\n5) Go to standby\nmode Switch off machine\n7 Resetting mode 1) Switch off machine\n2) Press and hold\nlarge coffee button\n\"3) Switch on machine, Reset the\"\nprogrammed large\nand small coffee\nvolumes to factory\nsetting\nIndicate the resetting\nmode for 3 s\nFactory settings\nsmall cup ....\nlarge cup ... 110 ml proceeds with self test\nmode automatically\n8 Power save mode To enable power save\nmode\n1) Switch off machine\n2) Press and hold\nboth coffee buttons\n3) Switch on machine\n4) Coffee button\nLED‘s blink 5 times\nalternatively as\nconfirmation\nAfter that automatically\n\"after 30min of non use, Reduce thermoblock\"\ntemperature\nSwitch LED indica­\ntion to power save\nmode (blinking alter­\nnately every 2 sec) Press any coffee but­\nton to activate ready\nmode\nTo disable power save\nmode\n1) Switch off machine\n2) Press and hold\nboth coffee buttons\n3) Switch on machine\n4) Coffee button\nLED‘s blink 3 times\nalternatively as\nconfirmation\n9 Failure mode Automatically by fol­\nlowing failures\na) NTC short circuit\nb) NTC not connected\nc) Heat up too slow Machine indicates fail­\nure with coffee button\nLED‘s as long as the\nfailure is present When failure is fixed\n10 Standby mode Automatically after\n\"emptying mode, Switch thermoblock\"\noff\nSwitch LED indica­\ntion to standby mode Switch off the machine\nMachine mode\n1 Hot milk / milk froth\npreparation Press start button\nbriefly Start button lights up\nred. Milk is heated and\nmixed. Automatic switch­off\nafter preparation\n2 Cold milk froth prepa­\nration Keep start button\npressed for approx.\n2sec Start button lights up\nblue. Milk is mixed only. Automatic switch­off\nafter preparation Machine mode",
+          "format": "flattened_bullets"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "machine_modes"
+      ]
+    },
+    {
+      "section_id": "sec_procedure_p6",
+      "parent_id": null,
+      "title": "Citiz service manual  36 OPERATION",
+      "title_normalized": "citiz_service_manual_36_operation",
+      "role": "procedure",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 6,
+      "page_end": 6,
+      "char_start": 5505,
+      "char_end": 6723,
+      "text": "Citiz service manual  36 OPERATION\n5.4 Program/reset fill up level\nEach coffee button can be programmed with a coffee volume for an individual cup size.\nThe procedure for programming/resetting is the same for both coffee buttons.\n5.4.1 Programming the fill up level\nProgrammable volume range..........................................................................10­750 ml\n5.4.2 Resetting the fill up level\nWith the following procedure all programmed fill up levels will be set back to this factory\nsettings:\nCoffee button \"small cup\".......................................................................................40 ml\nCoffee button \"large cup\" .....................................................................................110 ml Each new program­\nming cycle starts with\nthe min. volume\n(10ml after 3 sec), regard­\nless of a preprogrammed\ncoffee volume.\n1) Prepare coffee as usual (see user\nmanual), but keep the coffee button\npressed for at least 3 seconds in\norder to start programming mode. 2) Only release the button when the\ndesired fill level is reached.\n1) Switch off the coffee machine.  2) Press and hold the \"large cup\" button.\n3) Switch on the coffee machine.\n4) Release \"large cup\" button.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_sec_procedure_p6",
+          "page": 6,
+          "caption": "Citiz service manual  36 OPERATION",
+          "type": "diagram",
+          "synchronized_with_steps": true
+        }
+      ],
+      "tags": [
+        "procedure"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "text": "Prepare coffee as usual (see user manual), but keep the coffee button pressed for at least 3 seconds in order to start programming mode. 2) Only release the button when the desired fill level is reached."
+        },
+        {
+          "number": 1,
+          "text": "Switch off the coffee machine.  2) Press and hold the \"large cup\" button."
+        },
+        {
+          "number": 3,
+          "text": "Switch on the coffee machine."
+        },
+        {
+          "number": 4,
+          "text": "Release \"large cup\" button."
+        }
+      ],
+      "procedure_type": "step_by_step"
+    },
+    {
+      "section_id": "sec_procedure_p7",
+      "parent_id": null,
+      "title": "Citiz service manual  37 OPERATION",
+      "title_normalized": "citiz_service_manual_37_operation",
+      "role": "procedure",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 7,
+      "page_end": 7,
+      "char_start": 6724,
+      "char_end": 7611,
+      "text": "Citiz service manual  37 OPERATION\n5.5 Empty water system\nAfter every operation, some water remains in the coffee machine. Therefore the water\nsystem must be emptied\n­ if the coffee machine will not be used for a long time\n­ as antifreeze measure\n­ for repairs and shipment.\n1) Switch off coffee machine.  2) Remove water tank.\n3) Place a beaker under the coffee out­\nlet.\nModel Citiz & Co:\nOnly one core unit\nshould be emptied at\nthe same time (danger of\nmains supply overload).\nAfter this procedure,\nthe coffee machine\nwill not be ready for\napprox. 10 min (until the\nthermoblock cools to below\n100°C ).\n4) Press and hold button \"small cup\".\n5) Switch the coffee machine on again.\n6) Release button \"small cup\". ­ The pump starts to drain the water\nsystem and stops automatically.\n­ The coffee buttons blink fast simulta­\nneously.\n7) After automatic stop, switch off the\ncoffee machine.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_sec_procedure_p7",
+          "page": 7,
+          "caption": "Citiz service manual  37 OPERATION",
+          "type": "diagram",
+          "synchronized_with_steps": true
+        }
+      ],
+      "tags": [
+        "procedure"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "text": "Switch off coffee machine.  2) Remove water tank."
+        },
+        {
+          "number": 3,
+          "text": "Place a beaker under the coffee out­ let. Model Citiz & Co: Only one core unit should be emptied at the same time (danger of mains supply overload). After this procedure, the coffee machine will not be ready for approx. 10 min (until the thermoblock cools to below 100°C )."
+        },
+        {
+          "number": 4,
+          "text": "Press and hold button \"small cup\"."
+        },
+        {
+          "number": 5,
+          "text": "Switch the coffee machine on again."
+        },
+        {
+          "number": 6,
+          "text": "Release button \"small cup\". ­ The pump starts to drain the water system and stops automatically. ­ The coffee buttons blink fast simulta­ neously."
+        },
+        {
+          "number": 7,
+          "text": "After automatic stop, switch off the coffee machine."
+        }
+      ],
+      "procedure_type": "step_by_step"
+    },
+    {
+      "section_id": "sec_procedure_p8",
+      "parent_id": null,
+      "title": "Citiz service manual  38 MAINTENANCE",
+      "title_normalized": "citiz_service_manual_38_maintenance",
+      "role": "procedure",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 8,
+      "page_end": 8,
+      "char_start": 7612,
+      "char_end": 8166,
+      "text": "Citiz service manual  38 MAINTENANCE\n6 MAINTENANCE\n6.1 Daily maintenance and cleaning\n6.1.1 Before first coffee or at the start of day\nThe Citiz model is\nshown as example.\nMaintain and clean\nother models accordingly.\n1) Fill water tank with fresh potable\nwater.\n2) Insert water tank.\n3) For model Citiz & milk:\nAttach whisk to milk frother. Place milk\nfrother on base plate connector. 4) Switch machine on.\nAfter a longer period of non use:\n5) Place a container under coffee outlet. 6) Rinse coffee machine by pressing but­\nton \"large cup\" about 6 times.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_sec_procedure_p8",
+          "page": 8,
+          "caption": "Citiz service manual  38 MAINTENANCE",
+          "type": "diagram",
+          "synchronized_with_steps": true
+        }
+      ],
+      "tags": [
+        "procedure"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "text": "Fill water tank with fresh potable water."
+        },
+        {
+          "number": 2,
+          "text": "Insert water tank."
+        },
+        {
+          "number": 3,
+          "text": "For model Citiz & milk: Attach whisk to milk frother. Place milk frother on base plate connector. 4) Switch machine on. After a longer period of non use:"
+        },
+        {
+          "number": 5,
+          "text": "Place a container under coffee outlet. 6) Rinse coffee machine by pressing but­ ton \"large cup\" about 6 times."
+        }
+      ],
+      "procedure_type": "step_by_step"
+    },
+    {
+      "section_id": "sec_procedure_p9",
+      "parent_id": null,
+      "title": "Citiz service manual  39 MAINTENANCE",
+      "title_normalized": "citiz_service_manual_39_maintenance",
+      "role": "procedure",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 9,
+      "page_end": 9,
+      "char_start": 8167,
+      "char_end": 9033,
+      "text": "Citiz service manual  39 MAINTENANCE\n6.1.2 After last coffee or at the end of day\nRisk of fatal electrical shock and fire!\nNever clean wet or immerse plug, cord or appliance in any fluid.\nUnplug appliance and let it cool down to avoid burns.\nPlatform and drip tray\nsurfaces are not\nabrasion­proof.\nNever use brushes and/or\ncleaning agents that con­\ntain aggressive or chemical\ncomponents resp. sol­\nvents.\nDo not put any part in a\ndishwasher.\nUse only a damp cloth or\nsponge and a mild cleaning\nagent if necessary\n1) Switch machine off.\n2) Check if capsule is ejected. 3) Empty and clean\n­ capsule container (a)\n­ waste water container with cup\nsupport (b)\n­ drip tray with drip grid (c).\nDo not use a brush ­\nthe water tank can be\nscratched.\n4) Empty, rinse and clean water tank. 5) Reassemble coffee machine.\n6) Clean coffee machine with a damp\ncloth if necessary.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_sec_procedure_p9",
+          "page": 9,
+          "caption": "Citiz service manual  39 MAINTENANCE",
+          "type": "diagram",
+          "synchronized_with_steps": true
+        }
+      ],
+      "tags": [
+        "procedure"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "text": "Switch machine off."
+        },
+        {
+          "number": 2,
+          "text": "Check if capsule is ejected. 3) Empty and clean ­ capsule container (a) ­ waste water container with cup support (b) ­ drip tray with drip grid (c). Do not use a brush ­ the water tank can be scratched."
+        },
+        {
+          "number": 4,
+          "text": "Empty, rinse and clean water tank. 5) Reassemble coffee machine."
+        },
+        {
+          "number": 6,
+          "text": "Clean coffee machine with a damp cloth if necessary."
+        }
+      ],
+      "procedure_type": "step_by_step"
+    },
+    {
+      "section_id": "sec_procedure_p10",
+      "parent_id": null,
+      "title": "Citiz service manual  40 MAINTENANCE",
+      "title_normalized": "citiz_service_manual_40_maintenance",
+      "role": "procedure",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 10,
+      "page_end": 10,
+      "char_start": 9034,
+      "char_end": 9726,
+      "text": "Citiz service manual  40 MAINTENANCE\n6.1.3 Milk frother of model Citiz & milk\nRisk of damage!\nThe inside of the jug is coated for easy cleaning.\nNever use brushes and/or cleaning agents that contain abrasive or\naggressive, chemical components resp. solvents.\nDo not put any part in a dishwasher.\nUse only a damp cloth and a mild cleaning agent if necessary.\n1) Remove milk frother from platform. 2) Remove lid and dismantle whisk.\nKeep connectors\ndry (on platform and\nat underside of milk\nfrother).\n3) Remove seal from lid.\n4) Rinse and clean milk frother together\nwith whisk or mixer, lid and seal. 5) Clean outside of milk frother with a\ndamp cloth if necessary.\n6) Reassemble milk frother.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_sec_procedure_p10",
+          "page": 10,
+          "caption": "Citiz service manual  40 MAINTENANCE",
+          "type": "diagram",
+          "synchronized_with_steps": true
+        }
+      ],
+      "tags": [
+        "procedure"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "text": "Remove milk frother from platform. 2) Remove lid and dismantle whisk. Keep connectors dry (on platform and at underside of milk frother)."
+        },
+        {
+          "number": 3,
+          "text": "Remove seal from lid."
+        },
+        {
+          "number": 4,
+          "text": "Rinse and clean milk frother together with whisk or mixer, lid and seal. 5) Clean outside of milk frother with a damp cloth if necessary."
+        },
+        {
+          "number": 6,
+          "text": "Reassemble milk frother."
+        }
+      ],
+      "procedure_type": "step_by_step"
+    },
+    {
+      "section_id": "sec_generic_p11",
+      "parent_id": null,
+      "title": "Operational content (page 11)",
+      "title_normalized": "operational_content_page_11",
+      "role": "main",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 11,
+      "page_end": 11,
+      "char_start": 9727,
+      "char_end": 10478,
+      "text": "Citiz service manual  41 MAINTENANCE\n6.2 Descaling\nUse this chart to inform a customer when to descale the coffee machine depending on\nlocal water hardness and average coffee consumption. Double the estimated time\ninterval for model Citiz & Co.\n6.2.1 Descaling procedure for models Citiz and Citiz & milk Only use Nespresso descaler or descaling kit ­ never use vinegar!\nDescaler can damage casing and contact surfaces.\nImmediately clean drops of descaling solution.\nThe descaling chart is\nbased on a cup size of\n40 ml.\nfH ... French grade\ndH ... German grade\nCaCO 3 ... Calcium carbonate\nThe Citiz model is\nshown as example.\n1) Eject capsule or check if capsule is\nremoved. 2) Remove and empty capsule/waste\nwater container, drip tray and water\ntank.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "operation_text"
+      ]
+    },
+    {
+      "section_id": "sec_procedure_p12",
+      "parent_id": null,
+      "title": "Citiz service manual  42 MAINTENANCE",
+      "title_normalized": "citiz_service_manual_42_maintenance",
+      "role": "procedure",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 12,
+      "char_start": 10479,
+      "char_end": 10955,
+      "text": "Citiz service manual  42 MAINTENANCE\nObserve the safety\ninstructions on the\ndescaler package.\nUse a container with a\ncapacity of 1l min.\n3) Reassemble coffee machine without\nwater tank.\n4) Place a container on the cup support. 5) Fill the water tank with 0.1l decalcifier\n(1 bag) and 0.5l water.\n6) Insert water tank into the coffee\nmachine.\n7) Press both coffee buttons simulta­\nneously for at least 3sec. 8) The machine is in descaling mode now\n(both buttons blinking fast).",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_sec_procedure_p12",
+          "page": 12,
+          "caption": "Citiz service manual  42 MAINTENANCE",
+          "type": "diagram",
+          "synchronized_with_steps": true
+        }
+      ],
+      "tags": [
+        "procedure"
+      ],
+      "steps": [
+        {
+          "number": 3,
+          "text": "Reassemble coffee machine without water tank."
+        },
+        {
+          "number": 4,
+          "text": "Place a container on the cup support. 5) Fill the water tank with 0.1l decalcifier (1 bag) and 0.5l water."
+        },
+        {
+          "number": 6,
+          "text": "Insert water tank into the coffee machine."
+        },
+        {
+          "number": 7,
+          "text": "Press both coffee buttons simulta­ neously for at least 3sec. 8) The machine is in descaling mode now (both buttons blinking fast)."
+        }
+      ],
+      "procedure_type": "step_by_step"
+    },
+    {
+      "section_id": "sec_procedure_p13",
+      "parent_id": null,
+      "title": "Citiz service manual  43 MAINTENANCE",
+      "title_normalized": "citiz_service_manual_43_maintenance",
+      "role": "procedure",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 13,
+      "page_end": 13,
+      "char_start": 10956,
+      "char_end": 11374,
+      "text": "Citiz service manual  43 MAINTENANCE\nDanger!\nHot splashes of\ndescaling solution.\nDo not open handle dur­\ning descaling process.\n9) Press any button to start pump.\nLet the entire solution in the tank run\nthrough the system. 10)After water tank is empty, pour descal­\ning solution back into water tank.\n11) Place empty container back on cup\nsupport. 12)Descale again: press any button and\nwait until water tank is empty.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_sec_procedure_p13",
+          "page": 13,
+          "caption": "Citiz service manual  43 MAINTENANCE",
+          "type": "diagram",
+          "synchronized_with_steps": true
+        }
+      ],
+      "tags": [
+        "procedure"
+      ],
+      "steps": [
+        {
+          "number": 9,
+          "text": "Press any button to start pump. Let the entire solution in the tank run through the system. 10)After water tank is empty, pour descal­ ing solution back into water tank."
+        },
+        {
+          "number": 11,
+          "text": "Place empty container back on cup support. 12)Descale again: press any button and wait until water tank is empty."
+        }
+      ],
+      "procedure_type": "step_by_step"
+    },
+    {
+      "section_id": "sec_procedure_p14",
+      "parent_id": null,
+      "title": "Citiz service manual  44 MAINTENANCE",
+      "title_normalized": "citiz_service_manual_44_maintenance",
+      "role": "procedure",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 14,
+      "page_end": 14,
+      "char_start": 11375,
+      "char_end": 11986,
+      "text": "Citiz service manual  44 MAINTENANCE\nDanger of injury!\nResidual descaler\nmay be harmful.\nRinse thoroughly to\nremove any residue.\n13)Empty container and put it back on\ncup support.\n14)Rinse and clean water tank thoroughly\nand fill it with fresh potable water. 15)Rinse coffee machine by pressing any\nbutton and wait until water tank is\nempty.\n16)Press both coffee buttons simultane­\nously for at least 3sec to end descal­\ning mode.\n17)Remove and empty container. 18)Switch off coffee machine.\n19)Empty and clean capsule/waste water\ncontainer and drip tray.\n20)Clean coffee machine with a damp\ncloth if necessary.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_sec_procedure_p14",
+          "page": 14,
+          "caption": "Citiz service manual  44 MAINTENANCE",
+          "type": "diagram",
+          "synchronized_with_steps": true
+        }
+      ],
+      "tags": [
+        "procedure"
+      ],
+      "steps": [],
+      "procedure_type": "step_by_step"
+    },
+    {
+      "section_id": "sec_procedure_p15",
+      "parent_id": null,
+      "title": "Citiz service manual  45 MAINTENANCE",
+      "title_normalized": "citiz_service_manual_45_maintenance",
+      "role": "procedure",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 15,
+      "page_end": 15,
+      "char_start": 11987,
+      "char_end": 12511,
+      "text": "Citiz service manual  45 MAINTENANCE\n6.2.2 Descaling procedure for model Citiz & Co\n1) Eject capsules or check if capsules\nare removed. 2) Remove and empty capsule/waste\nwater containers, drip tray and water\ntank.\nObserve the safety\ninstructions on the\ndescaler package.\nUse containers with a\ncapacity of 1l min.\n3) Reassemble coffee machine without\nwater tank.\n4) Place a container under each coffee\noutlet. 5) Fill the water tank with 0.2l decalcifier\n(2 bags) and 1.0l water.\n6) Insert water tank into the coffee\nmachine.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_sec_procedure_p15",
+          "page": 15,
+          "caption": "Citiz service manual  45 MAINTENANCE",
+          "type": "diagram",
+          "synchronized_with_steps": true
+        }
+      ],
+      "tags": [
+        "procedure"
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "text": "Eject capsules or check if capsules are removed. 2) Remove and empty capsule/waste water containers, drip tray and water tank. Observe the safety instructions on the descaler package. Use containers with a capacity of 1l min."
+        },
+        {
+          "number": 3,
+          "text": "Reassemble coffee machine without water tank."
+        },
+        {
+          "number": 4,
+          "text": "Place a container under each coffee outlet. 5) Fill the water tank with 0.2l decalcifier (2 bags) and 1.0l water."
+        },
+        {
+          "number": 6,
+          "text": "Insert water tank into the coffee machine."
+        }
+      ],
+      "procedure_type": "step_by_step"
+    },
+    {
+      "section_id": "sec_procedure_p16",
+      "parent_id": null,
+      "title": "Citiz service manual  46 MAINTENANCE",
+      "title_normalized": "citiz_service_manual_46_maintenance",
+      "role": "procedure",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 16,
+      "page_end": 16,
+      "char_start": 12512,
+      "char_end": 13079,
+      "text": "Citiz service manual  46 MAINTENANCE\n7) Press both coffee buttons simulta\nneously for at least 3sec. on first core\nunit.\n8) Repeat procedure with second core\nunit. 9) The machine is in descaling mode now\n(both coffee buttons blinking fast on\ncore units).\nDanger of injury!\nHot splashes of\ndescaling solution.\nDo not open handles dur­\ning descaling process.\n10) Press any button on a core unit to start\npumps.\nLet the entire solution in the tank run\nthrough the system. 11)After water tank is empty, pour descal­\ning solution from both containers back\ninto water tank.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_sec_procedure_p16",
+          "page": 16,
+          "caption": "Citiz service manual  46 MAINTENANCE",
+          "type": "diagram",
+          "synchronized_with_steps": true
+        }
+      ],
+      "tags": [
+        "procedure"
+      ],
+      "steps": [
+        {
+          "number": 7,
+          "text": "Press both coffee buttons simulta neously for at least 3sec. on first core unit."
+        },
+        {
+          "number": 8,
+          "text": "Repeat procedure with second core unit. 9) The machine is in descaling mode now (both coffee buttons blinking fast on core units). Danger of injury! Hot splashes of descaling solution. Do not open handles dur­ ing descaling process."
+        },
+        {
+          "number": 10,
+          "text": "Press any button on a core unit to start pumps. Let the entire solution in the tank run through the system. 11)After water tank is empty, pour descal­ ing solution from both containers back into water tank."
+        }
+      ],
+      "procedure_type": "step_by_step"
+    },
+    {
+      "section_id": "sec_procedure_p17",
+      "parent_id": null,
+      "title": "Citiz service manual  47 MAINTENANCE",
+      "title_normalized": "citiz_service_manual_47_maintenance",
+      "role": "procedure",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 17,
+      "page_end": 17,
+      "char_start": 13080,
+      "char_end": 13532,
+      "text": "Citiz service manual  47 MAINTENANCE\n12) Place empty containers back on cup\nsupports. 13)Descale again: press any button on a\ncore unit and wait until water tank is\nempty.\n14) Empty containers and put them back\non cup supports.\n15) Rinse and clean water tank thoroughly\nand fill it with fresh potable water. 16) Rinse coffee machine by pressing any\nbutton on first core unit.\n17) Repeat procedure on second core\nunit and wait until water tank is empty.",
+      "is_suspect": false,
+      "tables": [],
+      "figures": [
+        {
+          "figure_id": "fig_sec_procedure_p17",
+          "page": 17,
+          "caption": "Citiz service manual  47 MAINTENANCE",
+          "type": "diagram",
+          "synchronized_with_steps": true
+        }
+      ],
+      "tags": [
+        "procedure"
+      ],
+      "steps": [
+        {
+          "number": 12,
+          "text": "Place empty containers back on cup supports. 13)Descale again: press any button on a core unit and wait until water tank is empty."
+        },
+        {
+          "number": 14,
+          "text": "Empty containers and put them back on cup supports."
+        },
+        {
+          "number": 15,
+          "text": "Rinse and clean water tank thoroughly and fill it with fresh potable water. 16) Rinse coffee machine by pressing any button on first core unit."
+        },
+        {
+          "number": 17,
+          "text": "Repeat procedure on second core unit and wait until water tank is empty."
+        }
+      ],
+      "procedure_type": "step_by_step"
+    }
+  ],
+  "extraction_constraints": {
+    "skip_patterns": [
+      "citiz service manual\\s+\\d+$",
+      "^[A-Z\\s]+\\|$",
+      "^\\s*\\d+\\s*$",
+      "^[\\-|\\s─═]+$"
+    ],
+    "max_chars_per_section": 10000,
+    "allowed_entities": [],
+    "allowed_relations": []
+  },
+  "quality": {
+    "text_coverage_ratio": 0.967,
+    "tables_extracted": 4,
+    "figures_detected": 11,
+    "notes": ""
+  },
+  "discarded_blocks": []
+}

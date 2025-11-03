@@ -182,3 +182,58 @@ pipelines:
           - "(do not|never|avoid).{0,50}(mix|combine|use with)"
           - "(must not|cannot be used|will not work)"
           - "^Note:?|^Nota:?"
+  operation_modes:
+    enabled: true
+    source_dir: "source/operation_modes"
+    output_dir: "output/partial/operation_modes"
+    document_glob: "*.pdf"
+    symbolic:
+      skip_header_footer_patterns:
+        footer: "citiz service manual\\s+\\d+$"
+        header: "^[A-Z\\s]+\\|$"
+        page_number: "^\\s*\\d+\\s*$"
+        decoration: "^[\\-|\\s─═]+$"
+      page_classification:
+        status_keywords:
+          must_include:
+            - "machine status"
+            - "led signal"
+        mode_keywords:
+          must_include:
+            - "machine mode"
+            - "enter mode"
+        procedure_pattern: "^\\s*\\d+\\)"
+        min_procedure_steps: 2
+      status_table:
+        csv_headers:
+          - "Status"
+          - "LED_Signal"
+        icon_tokens:
+          - "●"
+          - "◐"
+          - "◑"
+          - "◯"
+          - "○"
+          - "◦"
+          - "•"
+          - "▪"
+        tag: "status_indicators"
+        format: "icon_table_simplified"
+      mode_table:
+        header_keywords:
+          - "machine mode"
+          - "enter mode"
+        bullet_tokens:
+          - "•"
+          - "-"
+          - "–"
+        csv_format: "flattened_bullets"
+        tag: "machine_modes"
+      procedure:
+        step_pattern: "^\\s*(\\d+)\\)\\s+(.+)"
+        tag: "procedure"
+        procedure_type: "step_by_step"
+        figure_type: "diagram"
+        synchronized_figures: true
+      generic:
+        tag: "operation_text"

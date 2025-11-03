@@ -11,19 +11,29 @@ import yaml
 
 if __package__ in (None, ""):
     # Allow running the script directly: python src/orchestrator.py
-    sys.path.append(str(Path(__file__).resolve().parent))
+    script_path = Path(__file__).resolve().parent
+    sys.path.append(str(script_path))
     from pipelines.product_technical.symbolic_parser import (  # type: ignore
         ProductTechnicalSymbolicParser,
+    )
+    from pipelines.operation_modes.symbolic_parser import (  # type: ignore
+        OperationModesSymbolicParser,
     )
 else:
     from .pipelines.product_technical.symbolic_parser import (
         ProductTechnicalSymbolicParser,
+    )
+    from .pipelines.operation_modes.symbolic_parser import (
+        OperationModesSymbolicParser,
     )
 
 
 PIPELINE_REGISTRY: Dict[str, Dict[str, object]] = {
     "product_technical": {
         "symbolic": ProductTechnicalSymbolicParser,
+    },
+    "operation_modes": {
+        "symbolic": OperationModesSymbolicParser,
     },
 }
 
@@ -33,9 +43,7 @@ def load_config(config_path: Path) -> dict:
         return yaml.safe_load(fh) or {}
 
 
-def resolve_documents(
-    parser: ProductTechnicalSymbolicParser, document_args: Optional[List[str]]
-) -> Optional[List[Path]]:
+def resolve_documents(parser, document_args: Optional[List[str]]) -> Optional[List[Path]]:
     if not document_args:
         return None
 
@@ -146,11 +154,12 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
         default=None,
         help="Path to configuration YAML file (default: config.yaml next to this script)",
     )
+    pipeline_choices = list(PIPELINE_REGISTRY.keys()) + ["all"]
     parser.add_argument(
         "--pipeline",
-        choices=list(PIPELINE_REGISTRY.keys()),
-        default="product_technical",
-        help="Pipeline name to execute (default: product_technical)",
+        choices=pipeline_choices,
+        default="all",
+        help="Pipeline name to execute (default: all)",
     )
     parser.add_argument(
         "--stage",
@@ -191,42 +200,52 @@ def main(argv: Optional[List[str]] = None) -> int:
     configure_logging(config, args.verbose)
 
     root_dir = config_path.parent
-    try:
-        if args.stage == "symbolic":
+    if args.pipeline == "all" and args.documents:
+        logging.error("Cannot combine --document with --pipeline all")
+        return 1
+
+    if args.pipeline == "all":
+        pipelines_to_run = list(PIPELINE_REGISTRY.keys())
+    else:
+        pipelines_to_run = [args.pipeline]
+
+    overall_status = 0
+
+    for pipeline_name in pipelines_to_run:
+        try:
             outputs = run_symbolic_pipeline(
                 root_dir=root_dir,
-                pipeline_name=args.pipeline,
+                pipeline_name=pipeline_name,
                 config=config,
-                document_args=args.documents,
+                document_args=args.documents if args.pipeline != "all" else None,
             )
-        else:
-            raise ValueError(f"Unsupported stage: {args.stage}")
-    except Exception as exc:
-        logging.exception("Pipeline execution failed: %s", exc)
-        return 2
+        except Exception as exc:
+            logging.exception("Pipeline execution failed for %s: %s", pipeline_name, exc)
+            overall_status = 2
+            continue
 
-    if not outputs:
-        logging.warning("No output generated for pipeline '%s'", args.pipeline)
-        return 0
+        if not outputs:
+            logging.warning("No output generated for pipeline '%s'", pipeline_name)
+            continue
 
-    logging.info("Generated %d file(s):", len(outputs))
-    for path in outputs:
-        logging.info(" - %s", path)
+        logging.info("Generated %d file(s) for %s:", len(outputs), pipeline_name)
+        for path in outputs:
+            logging.info(" - %s", path)
 
-    summary = summarize_symbolic_outputs(outputs)
-    if summary:
-        print("\nSymbolic extraction summary")
-        print(f" - Documents processed: {summary['documents']}")
-        print(f" - Pages covered: {summary['pages']}")
-        print(f" - Sections parsed: {summary['sections']}")
-        print(f" - Tables detected: {summary['tables']}")
-        print(f" - Figures detected: {summary['figures']}")
-        print(f" - Warning sections: {summary['warnings']}")
-        if summary["avg_text_coverage"] is not None:
-            pct = summary['avg_text_coverage'] * 100
-            print(f" - Avg text coverage: {pct:.2f}%")
+        summary = summarize_symbolic_outputs(outputs)
+        if summary:
+            print(f"\n[{pipeline_name}] Symbolic extraction summary")
+            print(f" - Documents processed: {summary['documents']}")
+            print(f" - Pages covered: {summary['pages']}")
+            print(f" - Sections parsed: {summary['sections']}")
+            print(f" - Tables detected: {summary['tables']}")
+            print(f" - Figures detected: {summary['figures']}")
+            print(f" - Warning sections: {summary['warnings']}")
+            if summary["avg_text_coverage"] is not None:
+                pct = summary["avg_text_coverage"] * 100
+                print(f" - Avg text coverage: {pct:.2f}%")
 
-    return 0
+    return overall_status
 
 
 if __name__ == "__main__":
