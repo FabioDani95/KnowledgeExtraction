@@ -5,25 +5,201 @@
         "id": "MM_01",
         "type": "MachineMode",
         "name": "Descaling Mode",
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p12",
+            "section_title": "Citiz service manual  42 MAINTENANCE",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: Citiz service manual  42 MAINTENANCE... (p.12-12)"
+          },
+          {
+            "section_id": "sec_procedure_p13",
+            "section_title": "Citiz service manual  43 MAINTENANCE",
+            "page_start": 13,
+            "page_end": 13,
+            "source_text": "Section: Citiz service manual  43 MAINTENANCE... (p.13-13)"
+          },
+          {
+            "section_id": "sec_procedure_p14",
+            "section_title": "Citiz service manual  44 MAINTENANCE",
+            "page_start": 14,
+            "page_end": 14,
+            "source_text": "Section: Citiz service manual  44 MAINTENANCE... (p.14-14)"
+          },
+          {
+            "section_id": "sec_procedure_p15",
+            "section_title": "Citiz service manual  45 MAINTENANCE",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: Citiz service manual  45 MAINTENANCE... (p.15-15)"
+          },
+          {
+            "section_id": "sec_procedure_p16",
+            "section_title": "Citiz service manual  46 MAINTENANCE",
+            "page_start": 16,
+            "page_end": 16,
+            "source_text": "Section: Citiz service manual  46 MAINTENANCE... (p.16-16)"
+          },
+          {
+            "section_id": "sec_procedure_p17",
+            "section_title": "Citiz service manual  47 MAINTENANCE",
+            "page_start": 17,
+            "page_end": 17,
+            "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
+          }
+        ]
       },
       {
         "id": "PS_01",
         "type": "ProcessStep",
-        "name": "Press both coffee buttons simultaneously for at least 3 seconds",
-        "confidence": 0.9
+        "name": "Press both coffee buttons simultaneously for at least 3sec",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p12",
+            "section_title": "Citiz service manual  42 MAINTENANCE",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: Citiz service manual  42 MAINTENANCE... (p.12-12)"
+          },
+          {
+            "section_id": "sec_procedure_p13",
+            "section_title": "Citiz service manual  43 MAINTENANCE",
+            "page_start": 13,
+            "page_end": 13,
+            "source_text": "Section: Citiz service manual  43 MAINTENANCE... (p.13-13)"
+          },
+          {
+            "section_id": "sec_procedure_p14",
+            "section_title": "Citiz service manual  44 MAINTENANCE",
+            "page_start": 14,
+            "page_end": 14,
+            "source_text": "Section: Citiz service manual  44 MAINTENANCE... (p.14-14)"
+          },
+          {
+            "section_id": "sec_procedure_p15",
+            "section_title": "Citiz service manual  45 MAINTENANCE",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: Citiz service manual  45 MAINTENANCE... (p.15-15)"
+          },
+          {
+            "section_id": "sec_procedure_p16",
+            "section_title": "Citiz service manual  46 MAINTENANCE",
+            "page_start": 16,
+            "page_end": 16,
+            "source_text": "Section: Citiz service manual  46 MAINTENANCE... (p.16-16)"
+          },
+          {
+            "section_id": "sec_procedure_p17",
+            "section_title": "Citiz service manual  47 MAINTENANCE",
+            "page_start": 17,
+            "page_end": 17,
+            "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
+          }
+        ]
       },
       {
         "id": "PS_02",
         "type": "ProcessStep",
         "name": "Press any button to start pump",
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p12",
+            "section_title": "Citiz service manual  42 MAINTENANCE",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: Citiz service manual  42 MAINTENANCE... (p.12-12)"
+          },
+          {
+            "section_id": "sec_procedure_p13",
+            "section_title": "Citiz service manual  43 MAINTENANCE",
+            "page_start": 13,
+            "page_end": 13,
+            "source_text": "Section: Citiz service manual  43 MAINTENANCE... (p.13-13)"
+          },
+          {
+            "section_id": "sec_procedure_p14",
+            "section_title": "Citiz service manual  44 MAINTENANCE",
+            "page_start": 14,
+            "page_end": 14,
+            "source_text": "Section: Citiz service manual  44 MAINTENANCE... (p.14-14)"
+          },
+          {
+            "section_id": "sec_procedure_p15",
+            "section_title": "Citiz service manual  45 MAINTENANCE",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: Citiz service manual  45 MAINTENANCE... (p.15-15)"
+          },
+          {
+            "section_id": "sec_procedure_p16",
+            "section_title": "Citiz service manual  46 MAINTENANCE",
+            "page_start": 16,
+            "page_end": 16,
+            "source_text": "Section: Citiz service manual  46 MAINTENANCE... (p.16-16)"
+          },
+          {
+            "section_id": "sec_procedure_p17",
+            "section_title": "Citiz service manual  47 MAINTENANCE",
+            "page_start": 17,
+            "page_end": 17,
+            "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
+          }
+        ]
       },
       {
         "id": "PS_03",
         "type": "ProcessStep",
         "name": "Wait until water tank is empty",
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p12",
+            "section_title": "Citiz service manual  42 MAINTENANCE",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: Citiz service manual  42 MAINTENANCE... (p.12-12)"
+          },
+          {
+            "section_id": "sec_procedure_p13",
+            "section_title": "Citiz service manual  43 MAINTENANCE",
+            "page_start": 13,
+            "page_end": 13,
+            "source_text": "Section: Citiz service manual  43 MAINTENANCE... (p.13-13)"
+          },
+          {
+            "section_id": "sec_procedure_p14",
+            "section_title": "Citiz service manual  44 MAINTENANCE",
+            "page_start": 14,
+            "page_end": 14,
+            "source_text": "Section: Citiz service manual  44 MAINTENANCE... (p.14-14)"
+          },
+          {
+            "section_id": "sec_procedure_p15",
+            "section_title": "Citiz service manual  45 MAINTENANCE",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: Citiz service manual  45 MAINTENANCE... (p.15-15)"
+          },
+          {
+            "section_id": "sec_procedure_p16",
+            "section_title": "Citiz service manual  46 MAINTENANCE",
+            "page_start": 16,
+            "page_end": 16,
+            "source_text": "Section: Citiz service manual  46 MAINTENANCE... (p.16-16)"
+          },
+          {
+            "section_id": "sec_procedure_p17",
+            "section_title": "Citiz service manual  47 MAINTENANCE",
+            "page_start": 17,
+            "page_end": 17,
+            "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
+          }
+        ]
       }
     ],
     "relations": [
@@ -47,5 +223,61 @@
       }
     ]
   },
-  "timestamp": "2025-11-04T09:22:23.316808+00:00"
+  "chunk_provenance": [
+    {
+      "text": "Citiz service manual  42 MAINTENANCE\nObserve the safety\ninstructions on the\ndescaler package.\nUse a container with a\ncapacity of 1l min.\n3) Reassemble coffee machine without\nwater tank.\n4) Place a container on the cup support. 5) Fill the water tank with 0.1l decalcifier\n(1 bag) and 0.5l water.\n6) Insert water tank into the coffee\nmachine.\n7) Press both coffee buttons simulta­\nneously for at least 3sec. 8) The machine is in descaling mode now\n(both buttons blinking fast).\n\nFigure: Citiz service manual  42 MAINTENANCE",
+      "section_id": "sec_procedure_p12",
+      "section_title": "Citiz service manual  42 MAINTENANCE",
+      "page_start": 12,
+      "page_end": 12,
+      "char_start": 10837,
+      "char_end": 11359
+    },
+    {
+      "text": "Citiz service manual  43 MAINTENANCE\nDanger!\nHot splashes of\ndescaling solution.\nDo not open handle dur­\ning descaling process.\n9) Press any button to start pump.\nLet the entire solution in the tank run\nthrough the system. 10)After water tank is empty, pour descal­\ning solution back into water tank.\n11) Place empty container back on cup\nsupport. 12)Descale again: press any button and\nwait until water tank is empty.\n\nFigure: Citiz service manual  43 MAINTENANCE",
+      "section_id": "sec_procedure_p13",
+      "section_title": "Citiz service manual  43 MAINTENANCE",
+      "page_start": 13,
+      "page_end": 13,
+      "char_start": 11361,
+      "char_end": 11825
+    },
+    {
+      "text": "Citiz service manual  44 MAINTENANCE\nDanger of injury!\nResidual descaler\nmay be harmful.\nRinse thoroughly to\nremove any residue.\n13)Empty container and put it back on\ncup support.\n14)Rinse and clean water tank thoroughly\nand fill it with fresh potable water. 15)Rinse coffee machine by pressing any\nbutton and wait until water tank is\nempty.\n16)Press both coffee buttons simultane­\nously for at least 3sec to end descal­\ning mode.\n17)Remove and empty container. 18)Switch off coffee machine.\n19)Empty and clean capsule/waste water\ncontainer and drip tray.\n20)Clean coffee machine with a damp\ncloth if necessary.\n\nFigure: Citiz service manual  44 MAINTENANCE",
+      "section_id": "sec_procedure_p14",
+      "section_title": "Citiz service manual  44 MAINTENANCE",
+      "page_start": 14,
+      "page_end": 14,
+      "char_start": 11827,
+      "char_end": 12484
+    },
+    {
+      "text": "Citiz service manual  45 MAINTENANCE\n6.2.2 Descaling procedure for model Citiz & Co\n1) Eject capsules or check if capsules\nare removed. 2) Remove and empty capsule/waste\nwater containers, drip tray and water\ntank.\nObserve the safety\ninstructions on the\ndescaler package.\nUse containers with a\ncapacity of 1l min.\n3) Reassemble coffee machine without\nwater tank.\n4) Place a container under each coffee\noutlet. 5) Fill the water tank with 0.2l decalcifier\n(2 bags) and 1.0l water.\n6) Insert water tank into the coffee\nmachine.\n\nFigure: Citiz service manual  45 MAINTENANCE",
+      "section_id": "sec_procedure_p15",
+      "section_title": "Citiz service manual  45 MAINTENANCE",
+      "page_start": 15,
+      "page_end": 15,
+      "char_start": 12486,
+      "char_end": 13056
+    },
+    {
+      "text": "Citiz service manual  46 MAINTENANCE\n7) Press both coffee buttons simulta\nneously for at least 3sec. on first core\nunit.\n8) Repeat procedure with second core\nunit. 9) The machine is in descaling mode now\n(both coffee buttons blinking fast on\ncore units).\nDanger of injury!\nHot splashes of\ndescaling solution.\nDo not open handles dur­\ning descaling process.\n10) Press any button on a core unit to start\npumps.\nLet the entire solution in the tank run\nthrough the system. 11)After water tank is empty, pour descal­\ning solution from both containers back\ninto water tank.\n\nFigure: Citiz service manual  46 MAINTENANCE",
+      "section_id": "sec_procedure_p16",
+      "section_title": "Citiz service manual  46 MAINTENANCE",
+      "page_start": 16,
+      "page_end": 16,
+      "char_start": 13058,
+      "char_end": 13671
+    },
+    {
+      "text": "Citiz service manual  47 MAINTENANCE\n12) Place empty containers back on cup\nsupports. 13)Descale again: press any button on a\ncore unit and wait until water tank is\nempty.\n14) Empty containers and put them back\non cup supports.\n15) Rinse and clean water tank thoroughly\nand fill it with fresh potable water. 16) Rinse coffee machine by pressing any\nbutton on first core unit.\n17) Repeat procedure on second core\nunit and wait until water tank is empty.\n\nFigure: Citiz service manual  47 MAINTENANCE",
+      "section_id": "sec_procedure_p17",
+      "section_title": "Citiz service manual  47 MAINTENANCE",
+      "page_start": 17,
+      "page_end": 17,
+      "char_start": 13673,
+      "char_end": 14171
+    }
+  ],
+  "timestamp": "2025-11-04T10:44:12.836671+00:00"
 }

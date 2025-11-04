@@ -2,134 +2,441 @@
   "extraction": {
     "entities": [
       {
-        "id": "MM_01",
+        "id": "PM_01",
         "type": "MachineMode",
         "name": "Empty water system",
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p7",
+            "section_title": "Citiz service manual  37 OPERATION",
+            "page_start": 7,
+            "page_end": 7,
+            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+          },
+          {
+            "section_id": "sec_procedure_p8",
+            "section_title": "Citiz service manual  38 MAINTENANCE",
+            "page_start": 8,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+          },
+          {
+            "section_id": "sec_procedure_p9",
+            "section_title": "Citiz service manual  39 MAINTENANCE",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+          },
+          {
+            "section_id": "sec_procedure_p10",
+            "section_title": "Citiz service manual  40 MAINTENANCE",
+            "page_start": 10,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+          },
+          {
+            "section_id": "sec_generic_p11",
+            "section_title": "Operational content (page 11)",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Operational content (page 11)... (p.11-11)"
+          }
+        ]
       },
       {
-        "id": "SS_01",
+        "id": "PS_01",
         "type": "ProcessStep",
         "name": "Switch off coffee machine",
-        "confidence": 0.9
+        "confidence": 0.92,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p7",
+            "section_title": "Citiz service manual  37 OPERATION",
+            "page_start": 7,
+            "page_end": 7,
+            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+          },
+          {
+            "section_id": "sec_procedure_p8",
+            "section_title": "Citiz service manual  38 MAINTENANCE",
+            "page_start": 8,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+          },
+          {
+            "section_id": "sec_procedure_p9",
+            "section_title": "Citiz service manual  39 MAINTENANCE",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+          },
+          {
+            "section_id": "sec_procedure_p10",
+            "section_title": "Citiz service manual  40 MAINTENANCE",
+            "page_start": 10,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+          },
+          {
+            "section_id": "sec_generic_p11",
+            "section_title": "Operational content (page 11)",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Operational content (page 11)... (p.11-11)"
+          }
+        ]
       },
       {
-        "id": "SS_02",
+        "id": "PS_02",
         "type": "ProcessStep",
         "name": "Remove water tank",
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p7",
+            "section_title": "Citiz service manual  37 OPERATION",
+            "page_start": 7,
+            "page_end": 7,
+            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+          },
+          {
+            "section_id": "sec_procedure_p8",
+            "section_title": "Citiz service manual  38 MAINTENANCE",
+            "page_start": 8,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+          },
+          {
+            "section_id": "sec_procedure_p9",
+            "section_title": "Citiz service manual  39 MAINTENANCE",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+          },
+          {
+            "section_id": "sec_procedure_p10",
+            "section_title": "Citiz service manual  40 MAINTENANCE",
+            "page_start": 10,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+          },
+          {
+            "section_id": "sec_generic_p11",
+            "section_title": "Operational content (page 11)",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Operational content (page 11)... (p.11-11)"
+          }
+        ]
       },
       {
-        "id": "SS_03",
+        "id": "PS_03",
         "type": "ProcessStep",
         "name": "Place a beaker under the coffee outlet",
-        "confidence": 0.9
+        "confidence": 0.89,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p7",
+            "section_title": "Citiz service manual  37 OPERATION",
+            "page_start": 7,
+            "page_end": 7,
+            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+          },
+          {
+            "section_id": "sec_procedure_p8",
+            "section_title": "Citiz service manual  38 MAINTENANCE",
+            "page_start": 8,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+          },
+          {
+            "section_id": "sec_procedure_p9",
+            "section_title": "Citiz service manual  39 MAINTENANCE",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+          },
+          {
+            "section_id": "sec_procedure_p10",
+            "section_title": "Citiz service manual  40 MAINTENANCE",
+            "page_start": 10,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+          },
+          {
+            "section_id": "sec_generic_p11",
+            "section_title": "Operational content (page 11)",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Operational content (page 11)... (p.11-11)"
+          }
+        ]
       },
       {
-        "id": "SS_04",
+        "id": "PS_04",
         "type": "ProcessStep",
         "name": "Press and hold button 'small cup'",
-        "confidence": 0.9
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p7",
+            "section_title": "Citiz service manual  37 OPERATION",
+            "page_start": 7,
+            "page_end": 7,
+            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+          },
+          {
+            "section_id": "sec_procedure_p8",
+            "section_title": "Citiz service manual  38 MAINTENANCE",
+            "page_start": 8,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+          },
+          {
+            "section_id": "sec_procedure_p9",
+            "section_title": "Citiz service manual  39 MAINTENANCE",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+          },
+          {
+            "section_id": "sec_procedure_p10",
+            "section_title": "Citiz service manual  40 MAINTENANCE",
+            "page_start": 10,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+          },
+          {
+            "section_id": "sec_generic_p11",
+            "section_title": "Operational content (page 11)",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Operational content (page 11)... (p.11-11)"
+          }
+        ]
       },
       {
-        "id": "SS_05",
+        "id": "PS_05",
         "type": "ProcessStep",
         "name": "Switch the coffee machine on again",
-        "confidence": 0.9
+        "confidence": 0.93,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p7",
+            "section_title": "Citiz service manual  37 OPERATION",
+            "page_start": 7,
+            "page_end": 7,
+            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+          },
+          {
+            "section_id": "sec_procedure_p8",
+            "section_title": "Citiz service manual  38 MAINTENANCE",
+            "page_start": 8,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+          },
+          {
+            "section_id": "sec_procedure_p9",
+            "section_title": "Citiz service manual  39 MAINTENANCE",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+          },
+          {
+            "section_id": "sec_procedure_p10",
+            "section_title": "Citiz service manual  40 MAINTENANCE",
+            "page_start": 10,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+          },
+          {
+            "section_id": "sec_generic_p11",
+            "section_title": "Operational content (page 11)",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Operational content (page 11)... (p.11-11)"
+          }
+        ]
       },
       {
-        "id": "SS_06",
+        "id": "PS_06",
         "type": "ProcessStep",
         "name": "Release button 'small cup'",
-        "confidence": 0.9
+        "confidence": 0.88,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p7",
+            "section_title": "Citiz service manual  37 OPERATION",
+            "page_start": 7,
+            "page_end": 7,
+            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+          },
+          {
+            "section_id": "sec_procedure_p8",
+            "section_title": "Citiz service manual  38 MAINTENANCE",
+            "page_start": 8,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+          },
+          {
+            "section_id": "sec_procedure_p9",
+            "section_title": "Citiz service manual  39 MAINTENANCE",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+          },
+          {
+            "section_id": "sec_procedure_p10",
+            "section_title": "Citiz service manual  40 MAINTENANCE",
+            "page_start": 10,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+          },
+          {
+            "section_id": "sec_generic_p11",
+            "section_title": "Operational content (page 11)",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Operational content (page 11)... (p.11-11)"
+          }
+        ]
       },
       {
-        "id": "SS_07",
+        "id": "PS_07",
         "type": "ProcessStep",
         "name": "Switch off the coffee machine",
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p7",
+            "section_title": "Citiz service manual  37 OPERATION",
+            "page_start": 7,
+            "page_end": 7,
+            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+          },
+          {
+            "section_id": "sec_procedure_p8",
+            "section_title": "Citiz service manual  38 MAINTENANCE",
+            "page_start": 8,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+          },
+          {
+            "section_id": "sec_procedure_p9",
+            "section_title": "Citiz service manual  39 MAINTENANCE",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+          },
+          {
+            "section_id": "sec_procedure_p10",
+            "section_title": "Citiz service manual  40 MAINTENANCE",
+            "page_start": 10,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+          },
+          {
+            "section_id": "sec_generic_p11",
+            "section_title": "Operational content (page 11)",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Operational content (page 11)... (p.11-11)"
+          }
+        ]
       }
     ],
     "relations": [
       {
-        "type": "precedes",
-        "from_ref": "SS_01",
-        "to_ref": "SS_02",
-        "confidence": 0.85
-      },
-      {
-        "type": "precedes",
-        "from_ref": "SS_02",
-        "to_ref": "SS_03",
-        "confidence": 0.85
-      },
-      {
-        "type": "precedes",
-        "from_ref": "SS_03",
-        "to_ref": "SS_04",
-        "confidence": 0.85
-      },
-      {
-        "type": "precedes",
-        "from_ref": "SS_04",
-        "to_ref": "SS_05",
-        "confidence": 0.85
-      },
-      {
-        "type": "precedes",
-        "from_ref": "SS_05",
-        "to_ref": "SS_06",
-        "confidence": 0.85
-      },
-      {
-        "type": "precedes",
-        "from_ref": "SS_06",
-        "to_ref": "SS_07",
-        "confidence": 0.85
+        "type": "appliesDuring",
+        "from_ref": "PM_01",
+        "to_ref": "PS_01",
+        "confidence": 0.94
       },
       {
         "type": "appliesDuring",
-        "from_ref": "MM_01",
-        "to_ref": "SS_01",
+        "from_ref": "PM_01",
+        "to_ref": "PS_02",
+        "confidence": 0.93
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PM_01",
+        "to_ref": "PS_03",
+        "confidence": 0.91
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PM_01",
+        "to_ref": "PS_04",
+        "confidence": 0.92
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PM_01",
+        "to_ref": "PS_05",
         "confidence": 0.9
       },
       {
         "type": "appliesDuring",
-        "from_ref": "MM_01",
-        "to_ref": "SS_02",
-        "confidence": 0.9
+        "from_ref": "PM_01",
+        "to_ref": "PS_06",
+        "confidence": 0.89
       },
       {
         "type": "appliesDuring",
-        "from_ref": "MM_01",
-        "to_ref": "SS_03",
-        "confidence": 0.9
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "MM_01",
-        "to_ref": "SS_04",
-        "confidence": 0.9
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "MM_01",
-        "to_ref": "SS_05",
-        "confidence": 0.9
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "MM_01",
-        "to_ref": "SS_06",
-        "confidence": 0.9
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "MM_01",
-        "to_ref": "SS_07",
-        "confidence": 0.9
+        "from_ref": "PM_01",
+        "to_ref": "PS_07",
+        "confidence": 0.88
       }
     ]
   },
-  "timestamp": "2025-11-04T09:22:17.531363+00:00"
+  "chunk_provenance": [
+    {
+      "text": "Citiz service manual  37 OPERATION\n5.5 Empty water system\nAfter every operation, some water remains in the coffee machine. Therefore the water\nsystem must be emptied\n­ if the coffee machine will not be used for a long time\n­ as antifreeze measure\n­ for repairs and shipment.\n1) Switch off coffee machine.  2) Remove water tank.\n3) Place a beaker under the coffee out­\nlet.\nModel Citiz & Co:\nOnly one core unit\nshould be emptied at\nthe same time (danger of\nmains supply overload).\nAfter this procedure,\nthe coffee machine\nwill not be ready for\napprox. 10 min (until the\nthermoblock cools to below\n100°C ).\n4) Press and hold button \"small cup\".\n5) Switch the coffee machine on again.\n6) Release button \"small cup\". ­ The pump starts to drain the water\nsystem and stops automatically.\n­ The coffee buttons blink fast simulta­\nneously.\n7) After automatic stop, switch off the\ncoffee machine.\n\nFigure: Citiz service manual  37 OPERATION",
+      "section_id": "sec_procedure_p7",
+      "section_title": "Citiz service manual  37 OPERATION",
+      "page_start": 7,
+      "page_end": 7,
+      "char_start": 6895,
+      "char_end": 7826
+    },
+    {
+      "text": "Citiz service manual  38 MAINTENANCE\n6 MAINTENANCE\n6.1 Daily maintenance and cleaning\n6.1.1 Before first coffee or at the start of day\nThe Citiz model is\nshown as example.\nMaintain and clean\nother models accordingly.\n1) Fill water tank with fresh potable\nwater.\n2) Insert water tank.\n3) For model Citiz & milk:\nAttach whisk to milk frother. Place milk\nfrother on base plate connector. 4) Switch machine on.\nAfter a longer period of non use:\n5) Place a container under coffee outlet. 6) Rinse coffee machine by pressing but­\nton \"large cup\" about 6 times.\n\nFigure: Citiz service manual  38 MAINTENANCE",
+      "section_id": "sec_procedure_p8",
+      "section_title": "Citiz service manual  38 MAINTENANCE",
+      "page_start": 8,
+      "page_end": 8,
+      "char_start": 7828,
+      "char_end": 8428
+    },
+    {
+      "text": "Citiz service manual  39 MAINTENANCE\n6.1.2 After last coffee or at the end of day\nRisk of fatal electrical shock and fire!\nNever clean wet or immerse plug, cord or appliance in any fluid.\nUnplug appliance and let it cool down to avoid burns.\nPlatform and drip tray\nsurfaces are not\nabrasion­proof.\nNever use brushes and/or\ncleaning agents that con­\ntain aggressive or chemical\ncomponents resp. sol­\nvents.\nDo not put any part in a\ndishwasher.\nUse only a damp cloth or\nsponge and a mild cleaning\nagent if necessary\n1) Switch machine off.\n2) Check if capsule is ejected. 3) Empty and clean\n­ capsule container (a)\n­ waste water container with cup\nsupport (b)\n­ drip tray with drip grid (c).\nDo not use a brush ­\nthe water tank can be\nscratched.\n4) Empty, rinse and clean water tank. 5) Reassemble coffee machine.\n6) Clean coffee machine with a damp\ncloth if necessary.\n\nFigure: Citiz service manual  39 MAINTENANCE",
+      "section_id": "sec_procedure_p9",
+      "section_title": "Citiz service manual  39 MAINTENANCE",
+      "page_start": 9,
+      "page_end": 9,
+      "char_start": 8430,
+      "char_end": 9342
+    },
+    {
+      "text": "Citiz service manual  40 MAINTENANCE\n6.1.3 Milk frother of model Citiz & milk\nRisk of damage!\nThe inside of the jug is coated for easy cleaning.\nNever use brushes and/or cleaning agents that contain abrasive or\naggressive, chemical components resp. solvents.\nDo not put any part in a dishwasher.\nUse only a damp cloth and a mild cleaning agent if necessary.\n1) Remove milk frother from platform. 2) Remove lid and dismantle whisk.\nKeep connectors\ndry (on platform and\nat underside of milk\nfrother).\n3) Remove seal from lid.\n4) Rinse and clean milk frother together\nwith whisk or mixer, lid and seal. 5) Clean outside of milk frother with a\ndamp cloth if necessary.\n6) Reassemble milk frother.\n\nFigure: Citiz service manual  40 MAINTENANCE",
+      "section_id": "sec_procedure_p10",
+      "section_title": "Citiz service manual  40 MAINTENANCE",
+      "page_start": 10,
+      "page_end": 10,
+      "char_start": 9344,
+      "char_end": 10082
+    },
+    {
+      "text": "Citiz service manual  41 MAINTENANCE\n6.2 Descaling\nUse this chart to inform a customer when to descale the coffee machine depending on\nlocal water hardness and average coffee consumption. Double the estimated time\ninterval for model Citiz & Co.\n6.2.1 Descaling procedure for models Citiz and Citiz & milk Only use Nespresso descaler or descaling kit ­ never use vinegar!\nDescaler can damage casing and contact surfaces.\nImmediately clean drops of descaling solution.\nThe descaling chart is\nbased on a cup size of\n40 ml.\nfH ... French grade\ndH ... German grade\nCaCO 3 ... Calcium carbonate\nThe Citiz model is\nshown as example.\n1) Eject capsule or check if capsule is\nremoved. 2) Remove and empty capsule/waste\nwater container, drip tray and water\ntank.",
+      "section_id": "sec_generic_p11",
+      "section_title": "Operational content (page 11)",
+      "page_start": 11,
+      "page_end": 11,
+      "char_start": 10084,
+      "char_end": 10835
+    }
+  ],
+  "timestamp": "2025-11-04T10:44:07.775817+00:00"
 }

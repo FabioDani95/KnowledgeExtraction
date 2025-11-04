@@ -5,37 +5,175 @@
         "id": "MM_01",
         "type": "MachineMode",
         "name": "Heat up mode",
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
       },
       {
         "id": "MM_02",
         "type": "MachineMode",
         "name": "Self test mode",
-        "confidence": 0.93
+        "confidence": 0.93,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
       },
       {
         "id": "MM_03",
         "type": "MachineMode",
         "name": "Ready mode",
-        "confidence": 0.94
+        "confidence": 0.94,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
       },
       {
         "id": "MM_04",
         "type": "MachineMode",
         "name": "Brewing mode",
-        "confidence": 0.92
+        "confidence": 0.92,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
       },
       {
         "id": "MM_05",
         "type": "MachineMode",
         "name": "Volume brewing mode",
-        "confidence": 0.91
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
       },
       {
         "id": "MM_06",
         "type": "MachineMode",
         "name": "Descaling mode",
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
       }
     ],
     "relations": [
@@ -52,24 +190,53 @@
         "confidence": 0.88
       },
       {
-        "type": "precedes",
+        "type": "appliesDuring",
         "from_ref": "MM_03",
         "to_ref": "MM_04",
         "confidence": 0.87
       },
       {
-        "type": "precedes",
-        "from_ref": "MM_04",
+        "type": "appliesDuring",
+        "from_ref": "MM_03",
         "to_ref": "MM_05",
         "confidence": 0.86
       },
       {
-        "type": "precedes",
-        "from_ref": "MM_05",
+        "type": "appliesDuring",
+        "from_ref": "MM_03",
         "to_ref": "MM_06",
         "confidence": 0.85
       }
     ]
   },
-  "timestamp": "2025-11-04T09:21:55.053253+00:00"
+  "chunk_provenance": [
+    {
+      "text": "Citiz service manual  32 OPERATION\nVolume brewing small cup Blinking 1 Hz,\n0.5 s on, 0.5 s off\n(same as brewing small\ncup)\nVolume brewing big cup Blinking 1 Hz,\n0.5 s on, 0.5 s off\n(same as brewing big\ncup)\nDescaling ready Blinking 2 Hz,\n0.25 s on, 0.25 s off\nDescaling pump on (descal) Blinking 2 Hz,\n0.25 s on, 0.25 s off\n(same as descaling\nready mode)\nDescaling pump off (descal) Blinking 2 Hz,\n0.25 s on, 0.25 s off\n(same as descaling\nready mode)\nEmptying / Evaporating Blinking 2 Hz,\n0.25 s on, 0.25 s off\nStandby Blinking 0.5 Hz,\n1 s on, 1 s off\nalternately\nResetting Blinking 2 Hz,\n0.25 s on, 0.25 s off\nindication for 3 s\nPower save Blinking 0.2 Hz,\n2.5 s on, 2.5 s off\nalternately\nOverheat Blinking 1 Hz,\n0.5 s on, 0.5 s off\n(same as heat up)\nPower save activation Blinking 0.5 Hz,\n1 s on, 1 s off\nalternately 5 times Machine status etc. \"Small cup\"\nbutton \"Large cup\"\nbutton LED signal\n\nTable: Status",
+      "section_id": "sec_status_table_p2",
+      "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+      "page_start": 2,
+      "page_end": 2,
+      "char_start": 0,
+      "char_end": 910
+    },
+    {
+      "text": "Citiz service manual  33 OPERATION\n5.2.2 Status indication of milk frother AERO3\nThe operating button with red/blue backlight shows the status of the milk frother\naccording to the following table: Power save deactivation\n(only for model Citiz & Co) Blinking 0.5 Hz,\n1 s on, 1 s off\nalternately 3 times Machine status etc. \"Small cup\"\nbutton \"Large cup\"\nbutton LED signal\nTo reset a red blink­\ning backlight:\n1. Remove milk frother from\nplatform.\n2. Remove cause of failure if\npossible.\nMachine status etc. Operating button  Light signal\nOff  Backlight off\nOn ­ hot milk preparation  Red backlight on\nOn ­ cold milk froth prepara­\ntion Blue backlight on\nFailure/malfunction\n(e.g. overheating because of\nburnt milk, too less or no\nmilk) Blinking red backlight\n(1 Hz, 0.5 s on, 0.5 s off)\nFailure: milk frother has\nwrong mains voltage range Fast blinking red backlight\n(2 Hz, 0.25 s on, 0.25 s off\n\nTable: Status",
+      "section_id": "sec_status_table_p3",
+      "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+      "page_start": 3,
+      "page_end": 3,
+      "char_start": 912,
+      "char_end": 1821
+    },
+    {
+      "text": "Citiz service manual  34 OPERATION\n5.3 Machine modes\n5.3.1 Machine modes of Citiz coffee machines\nThis table helps to understand the operating modes of a Citiz coffee machine:\nMachine mode  Enter mode  Actions  Exit mode\n1 Heat up mode Every time after switch­\ning on machine Heats up thermoblock\nto ready temperature\n90 °C within 60 s with­\nout overshooting target\ntemperature e.g. switching off\nmachine\n2 Self test mode Every time after switch­\ning on machine Tests:\n• NTC short circuit\n• NTC connected\n• Thermoblock heating\ncurve\nError handling:\nTracking of the last 5\nerrors by a ring buffer e.g. switching off\nmachine\n3 Ready mode • After heat up and self\ntest mode was ok\n• After brewing or\nvolume brewing\ncoffee\n• After reset mode\n• After leaving\ndescaling mode Keeps thermoblock\ntemperature at 90 °C e.g. switching off\nmachine\n4a Brewing mode\n4b Volume brewing\nmode (program­\nming cup size) • Press and release\nlarge or small coffee\nbutton (brewing\nmode)\n• Press and hold large\nor small coffee\nbutton for more than\n3 s (programming\nmode) • Press and release\nlarge or small coffee\nbutton when\nmachine was in\nbrewing mode or\nautomatic exit given\nby the flow meter\n• Release large or\nsmall coffee button\nwhen machine was\nin programming\nmode\n• Switching off\nmachine\n5 Descaling mode • Switch on machine,\nwait until ready\n• Press and hold both\ncoffee buttons for at\nleast 3 s • Regulate tempera­\nture to 65 °C (after\npump was started)\n• Stop and start pump\nwith any coffee\nbutton, no volume\nbrewing in descaling\nmode • Press and hold both\ncoffee buttons for at\nleast 0.5 s\nNote:\nWhen machine is\nswitched off during any\ndescaling mode, then it\ngoes to descaling\nmode ready state after\nnext switch on.\n\nTable: 5.3 Machine modes",
+      "section_id": "sec_mode_table_p4",
+      "section_title": "5.3 Machine modes",
+      "page_start": 4,
+      "page_end": 4,
+      "char_start": 1823,
+      "char_end": 3551
+    }
+  ],
+  "timestamp": "2025-11-04T10:43:49.822728+00:00"
 }

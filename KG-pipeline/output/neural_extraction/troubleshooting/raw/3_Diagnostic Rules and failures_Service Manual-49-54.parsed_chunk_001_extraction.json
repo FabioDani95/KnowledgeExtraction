@@ -5,31 +5,111 @@
         "id": "RM_01",
         "type": "RepairAction",
         "name": "Disassembly",
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spans": [
+          {
+            "section_id": "sec_4",
+            "section_title": "Citiz service manual  52 REPAIRS",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: Citiz service manual  52 REPAIRS... (p.4-4)"
+          },
+          {
+            "section_id": "sec_5",
+            "section_title": "Citiz service manual  53 REPAIRS",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: Citiz service manual  53 REPAIRS... (p.5-5)"
+          }
+        ]
       },
       {
         "id": "T_01",
         "type": "Tool",
         "name": "Special disassembly tool",
-        "confidence": 0.92
+        "confidence": 0.92,
+        "spans": [
+          {
+            "section_id": "sec_4",
+            "section_title": "Citiz service manual  52 REPAIRS",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: Citiz service manual  52 REPAIRS... (p.4-4)"
+          },
+          {
+            "section_id": "sec_5",
+            "section_title": "Citiz service manual  53 REPAIRS",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: Citiz service manual  53 REPAIRS... (p.5-5)"
+          }
+        ]
       },
       {
         "id": "FM_01",
         "type": "FailureMode",
         "name": "Snap connections breaking",
-        "confidence": 0.89
+        "confidence": 0.89,
+        "spans": [
+          {
+            "section_id": "sec_4",
+            "section_title": "Citiz service manual  52 REPAIRS",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: Citiz service manual  52 REPAIRS... (p.4-4)"
+          },
+          {
+            "section_id": "sec_5",
+            "section_title": "Citiz service manual  53 REPAIRS",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: Citiz service manual  53 REPAIRS... (p.5-5)"
+          }
+        ]
       },
       {
         "id": "FM_02",
         "type": "FailureMode",
         "name": "Overtightened screws",
-        "confidence": 0.87
+        "confidence": 0.87,
+        "spans": [
+          {
+            "section_id": "sec_4",
+            "section_title": "Citiz service manual  52 REPAIRS",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: Citiz service manual  52 REPAIRS... (p.4-4)"
+          },
+          {
+            "section_id": "sec_5",
+            "section_title": "Citiz service manual  53 REPAIRS",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: Citiz service manual  53 REPAIRS... (p.5-5)"
+          }
+        ]
       },
       {
         "id": "MT_01",
         "type": "MaintenanceTask",
         "name": "Cooling down the coffee machine",
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4",
+            "section_title": "Citiz service manual  52 REPAIRS",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: Citiz service manual  52 REPAIRS... (p.4-4)"
+          },
+          {
+            "section_id": "sec_5",
+            "section_title": "Citiz service manual  53 REPAIRS",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: Citiz service manual  53 REPAIRS... (p.5-5)"
+          }
+        ]
       }
     ],
     "relations": [
@@ -41,23 +121,43 @@
       },
       {
         "type": "affects",
-        "from_ref": "RM_01",
-        "to_ref": "FM_01",
+        "from_ref": "FM_01",
+        "to_ref": "RM_01",
         "confidence": 0.88
       },
       {
         "type": "affects",
-        "from_ref": "RM_01",
-        "to_ref": "FM_02",
+        "from_ref": "FM_02",
+        "to_ref": "RM_01",
         "confidence": 0.85
       },
       {
         "type": "mitigatedBy",
         "from_ref": "FM_01",
         "to_ref": "MT_01",
-        "confidence": 0.9
+        "confidence": 0.91
       }
     ]
   },
-  "timestamp": "2025-11-04T09:22:44.675933+00:00"
+  "chunk_provenance": [
+    {
+      "text": "Citiz service manual  52 REPAIRS\n8 REPAIRS\nThese repair instructions\n­ are based on exploded drawings with position numbers combined with repair and\nmounting tips,\n­ presuppose basic knowledge in repairing Nespresso coffee machines.\nAs a rule, identical components (e.g. pumps, thermoblocks etc.) are\npresented in detail only once.\n8.1 Safety instructions\n8.2 Repair and mounting tips\nThese general advices are completed with specific repair tips in this chapter.\nAdditional information\nFor components not mentioned in this repair chapter, refer to the chapters \"Explosion\nDrawings\" on page 148 and \"Parts List\" on page 154.\nSnap connections\nParts of the case and components of the coffee machine are connected screwless with\nlatches.\nWhen loosening these latches, proceed with care and patience to avoid\ncausing any damage.\nThe side panels of the core unit have delicate snap connections that can brake easily.\nWhen removing these side panels, use the special disassembly tool and\nprocceed according to the disassembly instructions.\nScrew connections\nDo not overtighten screws. Plastic threads and inserts are delicate.\nObserve max. torque for the screw connections according to the following table. Risk of fatal electrical shock!\nMains voltage inside the coffee machine.\nDisconnect the mains plug before disassembly ­ the coffee machine\nmust be free of voltage.\nDanger of burns!\nHot parts and water under pressure inside the coffee machine (ther­\nmoblock in particular).\nLet coffee machine cool down before disassembly.",
+      "section_id": "sec_4",
+      "section_title": "Citiz service manual  52 REPAIRS",
+      "page_start": 4,
+      "page_end": 4,
+      "char_start": 2690,
+      "char_end": 4212
+    },
+    {
+      "text": "Citiz service manual  53 REPAIRS\nScrew / screw connection  Torque  Position\nScrew with oval shaped head 50 (+30/­0) Ncm\n0.5 (+0.3/­0) Nm Bottom of platform\nTX 10 screw (4 x) /\nbrewing unit (TMBU) 50 (+30/­0) Ncm\n0.5 (+0.3/­0) Nm\nTX 10 screw /\nthermoblock support (central) 150 (+30/­0) Ncm\n1.5 (+0.3/­0) Nm\nNTC fixation on thermoblock 80­100 Ncm\n0.8­1.0 Nm\nTX 20 screw (2 x) /\nthermo fuse fixations on ther­\nmoblock 150 (+30/­0) Ncm\n1.5 (+0.3/­0) Nm",
+      "section_id": "sec_5",
+      "section_title": "Citiz service manual  53 REPAIRS",
+      "page_start": 5,
+      "page_end": 5,
+      "char_start": 4214,
+      "char_end": 4663
+    }
+  ],
+  "timestamp": "2025-11-04T10:44:38.537975+00:00"
 }

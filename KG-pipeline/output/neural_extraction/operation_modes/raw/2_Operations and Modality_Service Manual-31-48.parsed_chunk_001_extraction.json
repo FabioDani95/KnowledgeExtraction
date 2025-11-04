@@ -5,43 +5,155 @@
         "id": "MM_01",
         "type": "MachineMode",
         "name": "Emptying mode",
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
       },
       {
         "id": "MM_02",
         "type": "MachineMode",
         "name": "Resetting mode",
-        "confidence": 0.92
+        "confidence": 0.92,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
       },
       {
         "id": "MM_03",
         "type": "MachineMode",
         "name": "Power save mode",
-        "confidence": 0.93
+        "confidence": 0.93,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
       },
       {
         "id": "MM_04",
         "type": "MachineMode",
         "name": "Failure mode",
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
       },
       {
         "id": "MM_05",
         "type": "MachineMode",
         "name": "Standby mode",
-        "confidence": 0.91
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
       },
       {
         "id": "MM_06",
         "type": "MachineMode",
         "name": "Hot milk preparation",
-        "confidence": 0.94
+        "confidence": 0.94,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
       },
       {
         "id": "MM_07",
         "type": "MachineMode",
         "name": "Cold milk preparation",
-        "confidence": 0.94
+        "confidence": 0.94,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
       }
     ],
     "relations": [
@@ -77,5 +189,25 @@
       }
     ]
   },
-  "timestamp": "2025-11-04T09:22:03.132246+00:00"
+  "chunk_provenance": [
+    {
+      "text": "Citiz service manual  35 OPERATION\n5.3.2 Machine modes of milk frother AERO3 6 Emptying mode\n(evaporing) 1) Switch off machine\n2) Press and hold\nsmall coffee button\n3) Switch on machine 1) Start pump\n2) Stop pump after\n10s\n3) Heat up thermo­\nblock to 105°C\n(100% power)\n4) Switch off ther­\nmoblock\n5) Go to standby\nmode Switch off machine\n7 Resetting mode 1) Switch off machine\n2) Press and hold\nlarge coffee button\n3) Switch on machine • Reset the\nprogrammed large\nand small coffee\nvolumes to factory\nsetting\n• Indicate the resetting\nmode for 3 s\nFactory settings:\n• small cup ....  40 ml\n• large cup ... 110 ml proceeds with self test\nmode automatically\n8 Power save mode To enable power save\nmode:\n1) Switch off machine\n2) Press and hold\nboth coffee buttons\n3) Switch on machine\n4) Coffee button\nLED‘s blink 5 times\nalternatively as\nconfirmation\nAfter that automatically\nafter 30min of non use • Reduce thermoblock\ntemperature\n• Switch LED indica­\ntion to power save\nmode (blinking alter­\nnately every 2 sec) Press any coffee but­\nton to activate ready\nmode\nTo disable power save\nmode:\n1) Switch off machine\n2) Press and hold\nboth coffee buttons\n3) Switch on machine\n4) Coffee button\nLED‘s blink 3 times\nalternatively as\nconfirmation\n9 Failure mode Automatically by fol­\nlowing failures:\na) NTC short circuit\nb) NTC not connected\nc) Heat up too slow Machine indicates fail­\nure with coffee button\nLED‘s as long as the\nfailure is present When failure is fixed\n10 Standby mode Automatically after\nemptying mode • Switch thermoblock\noff\n• Switch LED indica­\ntion to standby mode Switch off the machine\nMachine mode  Enter mode  Actions  Exit mode\n1 Hot milk / milk froth\npreparation Press start button\nbriefly Start button lights up\nred. Milk is heated and\nmixed. Automatic switch­off\nafter preparation\n2 Cold milk froth prepa­\nration Keep start button\npressed for approx.\n2sec Start button lights up\nblue. Milk is mixed only. Automatic switch­off\nafter preparation Machine mode  Enter mode  Actions  Exit mode\n\nTable: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+      "section_id": "sec_mode_table_p5",
+      "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+      "page_start": 5,
+      "page_end": 5,
+      "char_start": 3553,
+      "char_end": 5629
+    },
+    {
+      "text": "Citiz service manual  36 OPERATION\n5.4 Program/reset fill up level\nEach coffee button can be programmed with a coffee volume for an individual cup size.\nThe procedure for programming/resetting is the same for both coffee buttons.\n5.4.1 Programming the fill up level\nProgrammable volume range..........................................................................10­750 ml\n5.4.2 Resetting the fill up level\nWith the following procedure all programmed fill up levels will be set back to this factory\nsettings:\nCoffee button \"small cup\".......................................................................................40 ml\nCoffee button \"large cup\" .....................................................................................110 ml Each new program­\nming cycle starts with\nthe min. volume\n(10ml after 3 sec), regard­\nless of a preprogrammed\ncoffee volume.\n1) Prepare coffee as usual (see user\nmanual), but keep the coffee button\npressed for at least 3 seconds in\norder to start programming mode. 2) Only release the button when the\ndesired fill level is reached.\n1) Switch off the coffee machine.  2) Press and hold the \"large cup\" button.\n3) Switch on the coffee machine.\n4) Release \"large cup\" button.\n\nFigure: Citiz service manual  36 OPERATION",
+      "section_id": "sec_procedure_p6",
+      "section_title": "Citiz service manual  36 OPERATION",
+      "page_start": 6,
+      "page_end": 6,
+      "char_start": 5631,
+      "char_end": 6893
+    }
+  ],
+  "timestamp": "2025-11-04T10:43:58.567931+00:00"
 }

@@ -5,85 +5,102 @@
         "id": "C_01",
         "type": "Component",
         "name": "Jug",
-        "confidence": 0.95
+        "confidence": 0.95,
+        "nominal_value": "91 x 170",
+        "unit_raw": "mm",
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
       },
       {
         "id": "C_02",
         "type": "Component",
         "name": "Whisk",
-        "confidence": 0.92
+        "confidence": 0.93,
+        "nominal_value": "33 x 32",
+        "unit_raw": "mm",
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
       },
       {
         "id": "C_03",
         "type": "Component",
         "name": "Mixer",
-        "confidence": 0.9
+        "confidence": 0.92,
+        "nominal_value": "15 x 34 x 32",
+        "unit_raw": "mm",
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
       },
       {
         "id": "C_04",
         "type": "Component",
-        "name": "Core Unit",
-        "confidence": 0.93
-      },
-      {
-        "id": "P_01",
-        "type": "ParameterSpec",
-        "name": "Dimensions of jug",
-        "confidence": 0.89,
-        "nominal_value": "91 x 170",
-        "unit_raw": "mm"
-      },
-      {
-        "id": "P_02",
-        "type": "ParameterSpec",
-        "name": "Dimensions of whisk",
-        "confidence": 0.88,
-        "nominal_value": "33 x 32",
-        "unit_raw": "mm"
-      },
-      {
-        "id": "P_03",
-        "type": "ParameterSpec",
-        "name": "Dimensions of mixer",
-        "confidence": 0.87,
-        "nominal_value": "15 x 34 x 32",
-        "unit_raw": "mm"
-      },
-      {
-        "id": "P_04",
-        "type": "ParameterSpec",
         "name": "Weight",
-        "confidence": 0.91,
+        "confidence": 0.9,
         "nominal_value": "0.7",
-        "unit_raw": "kg"
+        "unit_raw": "kg",
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
       }
     ],
     "relations": [
       {
-        "type": "hasSpec",
+        "type": "hasPart",
         "from_ref": "C_01",
-        "to_ref": "P_01",
-        "confidence": 0.9
+        "to_ref": "C_02",
+        "confidence": 0.85
       },
       {
-        "type": "hasSpec",
-        "from_ref": "C_02",
-        "to_ref": "P_02",
-        "confidence": 0.89
+        "type": "hasPart",
+        "from_ref": "C_01",
+        "to_ref": "C_03",
+        "confidence": 0.85
       },
       {
-        "type": "hasSpec",
-        "from_ref": "C_03",
-        "to_ref": "P_03",
-        "confidence": 0.88
-      },
-      {
-        "type": "hasSpec",
-        "from_ref": "C_04",
-        "to_ref": "P_04",
-        "confidence": 0.92
+        "type": "hasPart",
+        "from_ref": "C_01",
+        "to_ref": "C_04",
+        "confidence": 0.85
       }
     ]
   },
-  "timestamp": "2025-11-04T09:21:47.430917+00:00"
+  "chunk_provenance": [
+    {
+      "text": "Dimensions of jug cpl. (diameter x height)................................................ 91 x 170 mm \nWhisk for foam (diameter x height)..............................................................33 x 32 mm \nMixer for hot milk..................................................................................15 x 34 x 32 mm \nWeight (with whisk and mixer)..............................................................................0.7 kg The overall dimen­ \nsions are the same \nfor both core unit ver­ \nsions (C­ and D­range). \nDimensions in mm\n\nTable: 4.2.5 Dimensions and weight ­ milk frother",
+      "section_id": "sec_4_2_5",
+      "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+      "page_start": 21,
+      "page_end": 21,
+      "char_start": 19303,
+      "char_end": 19903
+    }
+  ],
+  "timestamp": "2025-11-04T10:43:41.821880+00:00"
 }

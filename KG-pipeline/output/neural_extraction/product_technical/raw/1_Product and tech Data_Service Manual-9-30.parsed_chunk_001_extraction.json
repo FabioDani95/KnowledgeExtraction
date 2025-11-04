@@ -5,166 +5,3236 @@
         "id": "P_01",
         "type": "Product",
         "name": "Citiz & milk",
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
+      },
+      {
+        "id": "CT_01",
+        "type": "ComponentType",
+        "name": "Lid",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
+      },
+      {
+        "id": "CT_02",
+        "type": "ComponentType",
+        "name": "Seal",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
+      },
+      {
+        "id": "CT_03",
+        "type": "ComponentType",
+        "name": "Jug",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
+      },
+      {
+        "id": "CT_04",
+        "type": "ComponentType",
+        "name": "Power plug",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
+      },
+      {
+        "id": "CT_05",
+        "type": "ComponentType",
+        "name": "Start button",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
+      },
+      {
+        "id": "CT_06",
+        "type": "ComponentType",
+        "name": "Indication of milk levels",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
+      },
+      {
+        "id": "CT_07",
+        "type": "ComponentType",
+        "name": "Mixer for hot milk",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
+      },
+      {
+        "id": "CT_08",
+        "type": "ComponentType",
+        "name": "Spring whisk",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_01",
         "type": "Component",
-        "name": "Lid",
-        "confidence": 0.9
+        "name": "Drip tray",
+        "ofType_ref": "CT_01",
+        "confidence": 0.92,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_02",
         "type": "Component",
-        "name": "Seal",
-        "confidence": 0.9
+        "name": "Drip grid",
+        "ofType_ref": "CT_02",
+        "confidence": 0.92,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_03",
         "type": "Component",
-        "name": "Jug",
-        "confidence": 0.9
+        "name": "ON/OFF switch",
+        "ofType_ref": "CT_03",
+        "confidence": 0.92,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_04",
         "type": "Component",
-        "name": "Power plug",
-        "confidence": 0.9
+        "name": "Power cord",
+        "ofType_ref": "CT_04",
+        "confidence": 0.92,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_05",
         "type": "Component",
-        "name": "Start button",
-        "confidence": 0.9
+        "name": "Core units",
+        "ofType_ref": "CT_05",
+        "confidence": 0.92,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_06",
         "type": "Component",
-        "name": "Indication of milk levels",
-        "confidence": 0.9
+        "name": "Water tank",
+        "ofType_ref": "CT_06",
+        "confidence": 0.92,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_07",
         "type": "Component",
-        "name": "Mixer for hot milk",
-        "confidence": 0.9
+        "name": "Water tank cover",
+        "ofType_ref": "CT_07",
+        "confidence": 0.92,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_08",
         "type": "Component",
-        "name": "Spring whisk for milk foam",
-        "confidence": 0.9
+        "name": "Platform",
+        "ofType_ref": "CT_08",
+        "confidence": 0.92,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_09",
         "type": "Component",
-        "name": "Drip tray",
-        "confidence": 0.9
+        "name": "Flow meter",
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_10",
         "type": "Component",
-        "name": "Drip grid",
-        "confidence": 0.9
+        "name": "Pump",
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_11",
         "type": "Component",
-        "name": "ON/OFF switch",
-        "confidence": 0.9
+        "name": "Self priming device",
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_12",
         "type": "Component",
-        "name": "Power cord",
-        "confidence": 0.9
+        "name": "Thermoblock",
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_13",
         "type": "Component",
-        "name": "Core units",
-        "confidence": 0.9
+        "name": "Mini brewing unit",
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_14",
         "type": "Component",
-        "name": "Water tank",
-        "confidence": 0.9
+        "name": "Capsule container",
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_15",
         "type": "Component",
-        "name": "Water tank cover",
-        "confidence": 0.9
+        "name": "Waste water container",
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_16",
         "type": "Component",
-        "name": "Platform",
-        "confidence": 0.9
+        "name": "Coffee outlet",
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_17",
         "type": "Component",
-        "name": "Flow meter",
-        "confidence": 0.9
+        "name": "Brewing unit",
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       },
       {
         "id": "C_18",
         "type": "Component",
-        "name": "Pump",
-        "confidence": 0.9
-      },
-      {
-        "id": "C_19",
-        "type": "Component",
-        "name": "Self priming device",
-        "confidence": 0.9
-      },
-      {
-        "id": "C_20",
-        "type": "Component",
-        "name": "Thermoblock",
-        "confidence": 0.9
-      },
-      {
-        "id": "C_21",
-        "type": "Component",
-        "name": "Mini brewing unit",
-        "confidence": 0.9
-      },
-      {
-        "id": "C_22",
-        "type": "Component",
-        "name": "Capsule container",
-        "confidence": 0.9
-      },
-      {
-        "id": "C_23",
-        "type": "Component",
-        "name": "Waste water container",
-        "confidence": 0.9
-      },
-      {
-        "id": "C_24",
-        "type": "Component",
-        "name": "Coffee outlet",
-        "confidence": 0.9
-      },
-      {
-        "id": "C_25",
-        "type": "Component",
-        "name": "Brewing unit",
-        "confidence": 0.9
-      },
-      {
-        "id": "C_26",
-        "type": "Component",
         "name": "Water tank connector",
-        "confidence": 0.9
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_3_4_1_aero3_is_part_of_the",
+            "section_title": "AERO3 is part of the",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: AERO3 is part of the... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+          },
+          {
+            "section_id": "sec_3_5",
+            "section_title": "3.5 Overview ­ model Citiz & Co",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+          },
+          {
+            "section_id": "sec_3_6_1",
+            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_legend",
+            "section_title": "Legend",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Legend... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+          },
+          {
+            "section_id": "sec_3_6_2",
+            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+          },
+          {
+            "section_id": "sec_3_6_3",
+            "section_title": "3.6.3 Water circuit of model Citiz & Co",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+            "section_title": "This overview shows",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: This overview shows... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_delonghi",
+            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_koenig",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_krups",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_1_magimix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+          }
+        ]
       }
     ],
     "relations": []
   },
-  "timestamp": "2025-11-04T09:20:46.713854+00:00"
+  "chunk_provenance": [
+    {
+      "text": "AERO3 is part of the \nstandard equipment \nof the model Citiz & milk. \n1) Lid \n2) Seal \n3) Jug \n4) Power plug \n5) Start button (red/blue backlighted) 6) Indication of 2 max. milk levels \n(120 ml/240 ml) \n7) Mixer for hot milk \n8) Spring whisk for milk foam",
+      "section_id": "sec_3_4_1_aero3_is_part_of_the",
+      "section_title": "AERO3 is part of the",
+      "page_start": 7,
+      "page_end": 8,
+      "char_start": 3954,
+      "char_end": 4209
+    },
+    {
+      "text": "Citiz service manual  16 MAIN COMPONENTS",
+      "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+      "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+      "page_start": 7,
+      "page_end": 8,
+      "char_start": 4211,
+      "char_end": 4251
+    },
+    {
+      "text": "The drip grid (1) \n­ exists in 2 versions, \n­ matches with the cup holder of the core unit version (e.g. circular recesses). This model is pictured \nwith a C­range core \nunit. \n1) Drip tray \n2) Drip grid \n3) ON/OFF switch (mains switch) \n4) Power cord 5) Core units (e.g. 2 x C­range) \n6) Water tank \n7) Water tank cover \n8) Platform\n\nCitiz service manual  17 MAIN COMPONENTS\n\nFigure: 3.5 Overview ­ model Citiz & Co\n\n1) Drip tray\n\n2) Drip grid\n\n3) ON/OFF switch (mains switch)\n\n4) Power cord 5) Core units (e.g. 2 x C­range)\n\n6) Water tank\n\n7) Water tank cover\n\n8) Platform",
+      "section_id": "sec_3_5",
+      "section_title": "3.5 Overview ­ model Citiz & Co",
+      "page_start": 8,
+      "page_end": 9,
+      "char_start": 4253,
+      "char_end": 4827
+    },
+    {
+      "text": "Figure: 3.6.1 Water circuit diagram of core unit (all Citiz versions)\n\n2) Flow meter\n\n3) Pump\n\n4) Self priming device\n\n5) Thermoblock 6) Mini brewing unit (MBU)\n\n7) Capsule container\n\n8) Waste water container\n\n9) Drip tray",
+      "section_id": "sec_3_6_1",
+      "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+      "page_start": 9,
+      "page_end": 10,
+      "char_start": 4829,
+      "char_end": 5051
+    },
+    {
+      "text": "Legend: \nThe self priming device (4) \n­ allows the pump to suck water when it is filled with air (new machine, empty water \ntank etc.) \n­ removes air bubbles from the water circuit \n­ feeds a water/air mix back into the water tank. 1) Water tank \n2) Flow meter \n3) Pump \n4) Self priming device \n5) Thermoblock 6) Mini brewing unit (MBU) \n7) Capsule container \n8) Waste water container \n9) Drip tray",
+      "section_id": "sec_3_6_1_legend",
+      "section_title": "Legend",
+      "page_start": 9,
+      "page_end": 10,
+      "char_start": 5053,
+      "char_end": 5451
+    },
+    {
+      "text": "Citiz service manual  18 MAIN COMPONENTS",
+      "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+      "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+      "page_start": 9,
+      "page_end": 10,
+      "char_start": 5453,
+      "char_end": 5493
+    },
+    {
+      "text": "1) Water tank \n2) Water tank connector \n3) Self priming device \n4) Thermoblock 5) Flow meter \n6) Coffee outlet \n7) Brewing unit \n8) Pump\n\nCitiz service manual  19 MAIN COMPONENTS\n\nFigure: 3.6.2 Water circuit of models Citiz/Citiz & milk\n\n1) Water tank\n\n2) Water tank connector\n\n3) Self priming device\n\n4) Thermoblock 5) Flow meter\n\n6) Coffee outlet\n\n7) Brewing unit\n\n8) Pump",
+      "section_id": "sec_3_6_2",
+      "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+      "page_start": 10,
+      "page_end": 11,
+      "char_start": 5495,
+      "char_end": 5869
+    },
+    {
+      "text": "1) Water tank \n2) Pump \n3) Brewing unit \n4) Coffee outlet 5) Flow meter \n6) Thermoblock \n7) Water tank connector \n8) Self priming device\n\nCitiz service manual  20 TECHNICAL DATA\n\nFigure: 3.6.3 Water circuit of model Citiz & Co\n\n1) Water tank\n\n2) Pump\n\n3) Brewing unit\n\n4) Coffee outlet 5) Flow meter\n\n6) Thermoblock\n\n7) Water tank connector\n\n8) Self priming device",
+      "section_id": "sec_3_6_3",
+      "section_title": "3.6.3 Water circuit of model Citiz & Co",
+      "page_start": 11,
+      "page_end": 12,
+      "char_start": 5871,
+      "char_end": 6235
+    },
+    {
+      "text": "Nespresso, EU­version The type plate can be \nfound at the bottom of \nthe coffee machine’s \nplatform.\n\nFigure: 4.1.1 Examples of brand specific rating plates",
+      "section_id": "sec_4_1_1_nespresso",
+      "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 6237,
+      "char_end": 6393
+    },
+    {
+      "text": "This overview shows \nexamples of various \nbrands and is subject \nto alterations.",
+      "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+      "section_title": "This overview shows",
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 6395,
+      "char_end": 6475
+    },
+    {
+      "text": "EF484 Citiz C110 red  EF483 Citiz D110 black \nEF486 Citiz & milk C120 red  EF485 Citiz & milk D120 black \nEF488 Citiz & Co C130 red  EF487 Citiz & Co D130 black",
+      "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+      "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 6477,
+      "char_end": 6637
+    },
+    {
+      "text": "DeLonghi, EU­version\n\nFigure: 4.1.1 Examples of brand specific rating plates",
+      "section_id": "sec_4_1_1_delonghi",
+      "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 6639,
+      "char_end": 6715
+    },
+    {
+      "text": "Koenig, CH­version EF483 Citiz D110 Limousine black/DeLonghi EN165.B  EF483 Citiz D110 60's White/DeLonghi EN165.CW\n\nFigure: 4.1.1 Examples of brand specific rating plates",
+      "section_id": "sec_4_1_1_koenig",
+      "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 6717,
+      "char_end": 6888
+    },
+    {
+      "text": "EF485 Citiz & milk D120 Limousine black/DeLonghi\n\nFigure: 4.1.1 Examples of brand specific rating plates",
+      "section_id": "sec_4_1_1_delonghi",
+      "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 6890,
+      "char_end": 6994
+    },
+    {
+      "text": "EN265.BAE EF487 Citiz & Co. D130 Limousine black/DeLonghi \nEN325.B\n\nFigure: 4.1.1 Examples of brand specific rating plates",
+      "section_id": "sec_4_1_1_delonghi",
+      "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 6996,
+      "char_end": 7118
+    },
+    {
+      "text": "EF483 Citiz D110 Limousine black/Koenig Citiz  EF483 Citiz D110 60's White/Koenig Citiz\n\nFigure: 4.1.1 Examples of brand specific rating plates",
+      "section_id": "sec_4_1_1_koenig",
+      "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 7120,
+      "char_end": 7263
+    },
+    {
+      "text": "EF485 Citiz & milk D120 Limousine black/Koenig Citiz & milk EF487 Citiz & Co. D130 Limousine black/Koenig Citiz & Co.\n\nCitiz service manual  22 TECHNICAL DATA\n\nFigure: 4.1.1 Examples of brand specific rating plates",
+      "section_id": "sec_4_1_1_koenig",
+      "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 7265,
+      "char_end": 7479
+    },
+    {
+      "text": "Krups, EU­version\n\nFigure: 4.1.1 Examples of brand specific rating plates",
+      "section_id": "sec_4_1_1_krups",
+      "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 7481,
+      "char_end": 7554
+    },
+    {
+      "text": "Magimix, EU­version EF484 CitiZ XN700510 grey  EF484 CitiZ XN700610 red \nEF486 CitiZ & milk XN710610 red  EF488 CitiZ & Co XN750510 grey \nEF483 Citiz M190 ­ Ref 11290 black  EF483 Citiz M190 ­ Ref 11291 cream \nEF485 Citiz M190 Milk ­ Ref 113 00 black  EF487 Citiz M190 Duo ­ Ref 11305 black\n\nCitiz service manual  23 TECHNICAL DATA\n\nFigure: 4.1.1 Examples of brand specific rating plates",
+      "section_id": "sec_4_1_1_magimix",
+      "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 7556,
+      "char_end": 7943
+    }
+  ],
+  "timestamp": "2025-11-04T10:42:38.536580+00:00"
 }

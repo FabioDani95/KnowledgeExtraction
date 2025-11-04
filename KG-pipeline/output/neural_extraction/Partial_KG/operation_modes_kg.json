@@ -1,6 +1,6 @@
 {
   "document_code": "KG_OPERATION_MODES",
-  "ingestion_id": "b5930a62-c335-4419-a4c8-7dd3912e8972",
+  "ingestion_id": "34a16b1e-4ddc-4d70-8ad0-f2b5ee622441",
   "extraction_version": "neural_v1.2",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
@@ -438,7 +438,7 @@
       "id": "ns:Step/switch_off_coffee_machine",
       "type": "ProcessStep",
       "name": "Switch off coffee machine",
-      "confidence": 0.9,
+      "confidence": 0.92,
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -524,7 +524,7 @@
       "id": "ns:Step/place_a_beaker_under_the_coffee_outlet",
       "type": "ProcessStep",
       "name": "Place a beaker under the coffee outlet",
-      "confidence": 0.9,
+      "confidence": 0.89,
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -567,7 +567,7 @@
       "id": "ns:Step/press_and_hold_button_small_cup",
       "type": "ProcessStep",
       "name": "Press and hold button 'small cup'",
-      "confidence": 0.9,
+      "confidence": 0.91,
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -610,7 +610,7 @@
       "id": "ns:Step/switch_the_coffee_machine_on_again",
       "type": "ProcessStep",
       "name": "Switch the coffee machine on again",
-      "confidence": 0.9,
+      "confidence": 0.93,
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -653,7 +653,7 @@
       "id": "ns:Step/release_button_small_cup",
       "type": "ProcessStep",
       "name": "Release button 'small cup'",
-      "confidence": 0.9,
+      "confidence": 0.88,
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -736,9 +736,9 @@
       ]
     },
     {
-      "id": "ns:State/water_tank_empty",
-      "type": "State",
-      "name": "Water Tank Empty",
+      "id": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
+      "type": "ProcessStep",
+      "name": "Press both coffee buttons simultaneously for at least 3sec",
       "confidence": 0.9,
       "spans": [
         {
@@ -786,10 +786,10 @@
       ]
     },
     {
-      "id": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
+      "id": "ns:Step/press_any_button_to_start_pump",
       "type": "ProcessStep",
-      "name": "Press both coffee buttons simultaneously for at least 3sec",
-      "confidence": 0.92,
+      "name": "Press any button to start pump",
+      "confidence": 0.9,
       "spans": [
         {
           "section_id": "sec_procedure_p12",
@@ -836,10 +836,10 @@
       ]
     },
     {
-      "id": "ns:Test/descaling_procedure",
-      "type": "TestSpec",
-      "name": "Descaling Procedure",
-      "confidence": 0.89,
+      "id": "ns:Step/wait_until_water_tank_is_empty",
+      "type": "ProcessStep",
+      "name": "Wait until water tank is empty",
+      "confidence": 0.9,
       "spans": [
         {
           "section_id": "sec_procedure_p12",
@@ -891,31 +891,31 @@
       "type": "precedes",
       "from_ref": "ns:Mode/heat_up_mode",
       "to_ref": "ns:Mode/self_test_mode",
-      "confidence": 0.85
+      "confidence": 0.89
     },
     {
       "type": "precedes",
       "from_ref": "ns:Mode/self_test_mode",
       "to_ref": "ns:Mode/ready_mode",
-      "confidence": 0.87
-    },
-    {
-      "type": "precedes",
-      "from_ref": "ns:Mode/ready_mode",
-      "to_ref": "ns:Mode/brewing_mode",
       "confidence": 0.88
     },
     {
-      "type": "precedes",
-      "from_ref": "ns:Mode/brewing_mode",
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/ready_mode",
+      "to_ref": "ns:Mode/brewing_mode",
+      "confidence": 0.87
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/ready_mode",
       "to_ref": "ns:Mode/volume_brewing_mode",
       "confidence": 0.86
     },
     {
-      "type": "precedes",
-      "from_ref": "ns:Mode/volume_brewing_mode",
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/ready_mode",
       "to_ref": "ns:Mode/descaling_mode",
-      "confidence": 0.84
+      "confidence": 0.85
     },
     {
       "type": "precedes",
@@ -927,89 +927,89 @@
       "type": "appliesDuring",
       "from_ref": "ns:Mode/resetting_mode",
       "to_ref": "ns:Mode/emptying_mode",
-      "confidence": 0.88
+      "confidence": 0.87
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/power_save_mode",
       "to_ref": "ns:Mode/emptying_mode",
-      "confidence": 0.87
+      "confidence": 0.88
     },
     {
       "type": "verifies",
       "from_ref": "ns:Mode/failure_mode",
-      "to_ref": "ns:Mode/emptying_mode",
+      "to_ref": "ns:Mode/hot_milk_preparation",
       "confidence": 0.85
     },
     {
-      "type": "precedes",
-      "from_ref": "ns:Mode/hot_milk_preparation",
-      "to_ref": "ns:Mode/emptying_mode",
-      "confidence": 0.9
-    },
-    {
-      "type": "precedes",
-      "from_ref": "ns:Mode/cold_milk_preparation",
-      "to_ref": "ns:Mode/emptying_mode",
-      "confidence": 0.9
+      "type": "verifies",
+      "from_ref": "ns:Mode/failure_mode",
+      "to_ref": "ns:Mode/cold_milk_preparation",
+      "confidence": 0.85
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/empty_water_system",
       "to_ref": "ns:Step/switch_off_coffee_machine",
-      "confidence": 0.95
+      "confidence": 0.94
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/empty_water_system",
       "to_ref": "ns:Step/remove_water_tank",
-      "confidence": 0.95
+      "confidence": 0.93
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/empty_water_system",
       "to_ref": "ns:Step/place_a_beaker_under_the_coffee_outlet",
-      "confidence": 0.95
+      "confidence": 0.91
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/empty_water_system",
       "to_ref": "ns:Step/press_and_hold_button_small_cup",
-      "confidence": 0.95
+      "confidence": 0.92
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/empty_water_system",
       "to_ref": "ns:Step/switch_the_coffee_machine_on_again",
-      "confidence": 0.95
+      "confidence": 0.9
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/empty_water_system",
       "to_ref": "ns:Step/release_button_small_cup",
-      "confidence": 0.95
+      "confidence": 0.89
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/empty_water_system",
       "to_ref": "ns:Step/switch_off_the_coffee_machine",
-      "confidence": 0.95
+      "confidence": 0.88
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Test/descaling_procedure",
-      "to_ref": "ns:Mode/descaling_mode",
-      "confidence": 0.93
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
+      "confidence": 0.92
     },
     {
-      "type": "precedes",
-      "from_ref": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
-      "to_ref": "ns:State/water_tank_empty",
-      "confidence": 0.88
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:Step/press_any_button_to_start_pump",
+      "confidence": 0.92
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:Step/wait_until_water_tank_is_empty",
+      "confidence": 0.92
     }
   ],
   "provenance": {
-    "overall_confidence": 0.911,
+    "overall_confidence": 0.905,
     "documents_processed": [
       "2_Operations and Modality_Service Manual-31-48.parsed.json"
     ],
@@ -1135,21 +1135,19 @@
     "entities_count": 24,
     "relations_count": 20,
     "warnings": [],
-    "overall_confidence": 0.911,
-    "avg_entity_confidence": 0.919,
-    "avg_relation_confidence": 0.903,
+    "overall_confidence": 0.905,
+    "avg_entity_confidence": 0.92,
+    "avg_relation_confidence": 0.891,
     "entity_type_distribution": {
       "MachineMode": 14,
-      "ProcessStep": 8,
-      "State": 1,
-      "TestSpec": 1
+      "ProcessStep": 10
     },
     "relation_type_distribution": {
-      "precedes": 9,
-      "appliesDuring": 10,
-      "verifies": 1
+      "precedes": 3,
+      "appliesDuring": 15,
+      "verifies": 2
     },
     "profile": "operation_modes",
-    "generated_at": "2025-11-04T10:21:04.108210+00:00"
+    "generated_at": "2025-11-04T10:44:12.838434+00:00"
   }
 }

@@ -1,6 +1,6 @@
 {
   "document_code": "KG_TROUBLESHOOTING",
-  "ingestion_id": "81b4d9fb-fe3f-4121-af08-010c129177cb",
+  "ingestion_id": "f69ce884-a38f-4a45-b291-ec4b3bcfd339",
   "extraction_version": "neural_v1.2",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
@@ -160,7 +160,7 @@
       "id": "ns:FM/unit_leaks",
       "type": "FailureMode",
       "name": "Unit leaks",
-      "confidence": 0.89,
+      "confidence": 0.92,
       "spans": [
         {
           "section_id": "sec_2",
@@ -182,7 +182,7 @@
       "id": "ns:RA/replace_defective_hoses_and_seals",
       "type": "RepairAction",
       "name": "Replace defective hoses and seals",
-      "confidence": 0.87,
+      "confidence": 0.89,
       "spans": [
         {
           "section_id": "sec_2",
@@ -204,7 +204,7 @@
       "id": "ns:FM/rust_visible_in_water",
       "type": "FailureMode",
       "name": "Rust visible in water",
-      "confidence": 0.85,
+      "confidence": 0.88,
       "spans": [
         {
           "section_id": "sec_2",
@@ -226,7 +226,7 @@
       "id": "ns:RA/descale_and_rinse_coffee_machine",
       "type": "RepairAction",
       "name": "Descale and rinse coffee machine",
-      "confidence": 0.86,
+      "confidence": 0.87,
       "spans": [
         {
           "section_id": "sec_2",
@@ -270,7 +270,7 @@
       "id": "ns:RA/replace_lidseal",
       "type": "RepairAction",
       "name": "Replace lid/seal",
-      "confidence": 0.88,
+      "confidence": 0.85,
       "spans": [
         {
           "section_id": "sec_2",
@@ -292,7 +292,7 @@
       "id": "ns:FM/jug_badly_scratched",
       "type": "FailureMode",
       "name": "Jug badly scratched",
-      "confidence": 0.87,
+      "confidence": 0.89,
       "spans": [
         {
           "section_id": "sec_2",
@@ -314,7 +314,7 @@
       "id": "ns:RA/replace_milk_frother",
       "type": "RepairAction",
       "name": "Replace milk frother",
-      "confidence": 0.89,
+      "confidence": 0.86,
       "spans": [
         {
           "section_id": "sec_2",
@@ -336,7 +336,7 @@
       "id": "ns:FM/whisks_damaged",
       "type": "FailureMode",
       "name": "Whisks damaged",
-      "confidence": 0.86,
+      "confidence": 0.88,
       "spans": [
         {
           "section_id": "sec_2",
@@ -358,7 +358,7 @@
       "id": "ns:RA/replace_whisks",
       "type": "RepairAction",
       "name": "Replace whisks",
-      "confidence": 0.85,
+      "confidence": 0.84,
       "spans": [
         {
           "section_id": "sec_2",
@@ -377,9 +377,9 @@
       ]
     },
     {
-      "id": "ns:FM/coffee_machine_not_functioning",
+      "id": "ns:FM/coffee_machine_does_not_function",
       "type": "FailureMode",
-      "name": "Coffee machine not functioning",
+      "name": "Coffee machine does not function",
       "confidence": 0.91,
       "spans": [
         {
@@ -402,7 +402,7 @@
       "id": "ns:RA/replace_connector_on_platform",
       "type": "RepairAction",
       "name": "Replace connector on platform",
-      "confidence": 0.84,
+      "confidence": 0.83,
       "spans": [
         {
           "section_id": "sec_2",
@@ -509,9 +509,9 @@
       ]
     },
     {
-      "id": "ns:MT/cooling_down_coffee_machine",
+      "id": "ns:MT/cooling_down_the_coffee_machine",
       "type": "MaintenanceTask",
-      "name": "Cooling down coffee machine",
+      "name": "Cooling down the coffee machine",
       "confidence": 0.9,
       "spans": [
         {
@@ -533,64 +533,64 @@
   ],
   "relations": [
     {
-      "type": "mitigatedBy",
+      "type": "affects",
       "from_ref": "ns:FM/flow_meter_blocked",
       "to_ref": "ns:RA/clean_or_replace_flow_meter",
+      "confidence": 0.95
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/pyramide_plate_blocked",
+      "to_ref": "ns:RA/replace_compact_brewing_unit",
+      "confidence": 0.93
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/coffee_machine_is_calcified",
+      "to_ref": "ns:RA/descale_coffee_machine",
+      "confidence": 0.94
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/unit_leaks",
+      "to_ref": "ns:RA/replace_compact_brewing_unit",
       "confidence": 0.92
     },
     {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/pyramide_plate_blocked",
-      "to_ref": "ns:RA/replace_compact_brewing_unit",
+      "type": "affects",
+      "from_ref": "ns:FM/unit_leaks",
+      "to_ref": "ns:RA/replace_defective_hoses_and_seals",
+      "confidence": 0.89
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/rust_visible_in_water",
+      "to_ref": "ns:RA/descale_and_rinse_coffee_machine",
+      "confidence": 0.88
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/milk_frother_damaged",
+      "to_ref": "ns:RA/replace_lidseal",
       "confidence": 0.9
     },
     {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/coffee_machine_is_calcified",
-      "to_ref": "ns:RA/descale_coffee_machine",
-      "confidence": 0.91
-    },
-    {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/unit_leaks",
-      "to_ref": "ns:RA/replace_compact_brewing_unit",
-      "confidence": 0.88
-    },
-    {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/unit_leaks",
-      "to_ref": "ns:RA/replace_defective_hoses_and_seals",
-      "confidence": 0.87
-    },
-    {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/rust_visible_in_water",
-      "to_ref": "ns:RA/descale_and_rinse_coffee_machine",
-      "confidence": 0.86
-    },
-    {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/milk_frother_damaged",
-      "to_ref": "ns:RA/replace_lidseal",
-      "confidence": 0.88
-    },
-    {
-      "type": "mitigatedBy",
+      "type": "affects",
       "from_ref": "ns:FM/jug_badly_scratched",
       "to_ref": "ns:RA/replace_milk_frother",
       "confidence": 0.89
     },
     {
-      "type": "mitigatedBy",
+      "type": "affects",
       "from_ref": "ns:FM/whisks_damaged",
       "to_ref": "ns:RA/replace_whisks",
-      "confidence": 0.85
+      "confidence": 0.88
     },
     {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/coffee_machine_not_functioning",
+      "type": "affects",
+      "from_ref": "ns:FM/coffee_machine_does_not_function",
       "to_ref": "ns:RA/replace_connector_on_platform",
-      "confidence": 0.84
+      "confidence": 0.91
     },
     {
       "type": "requiresTool",
@@ -613,12 +613,12 @@
     {
       "type": "mitigatedBy",
       "from_ref": "ns:FM/snap_connections_breaking",
-      "to_ref": "ns:MT/cooling_down_coffee_machine",
-      "confidence": 0.9
+      "to_ref": "ns:MT/cooling_down_the_coffee_machine",
+      "confidence": 0.91
     }
   ],
   "provenance": {
-    "overall_confidence": 0.888,
+    "overall_confidence": 0.9,
     "documents_processed": [
       "3_Diagnostic Rules and failures_Service Manual-49-54.parsed.json"
     ],
@@ -660,9 +660,9 @@
     "entities_count": 23,
     "relations_count": 14,
     "warnings": [],
-    "overall_confidence": 0.888,
-    "avg_entity_confidence": 0.893,
-    "avg_relation_confidence": 0.883,
+    "overall_confidence": 0.9,
+    "avg_entity_confidence": 0.896,
+    "avg_relation_confidence": 0.904,
     "entity_type_distribution": {
       "FailureMode": 11,
       "RepairAction": 10,
@@ -670,11 +670,11 @@
       "MaintenanceTask": 1
     },
     "relation_type_distribution": {
-      "mitigatedBy": 11,
+      "affects": 12,
       "requiresTool": 1,
-      "affects": 2
+      "mitigatedBy": 1
     },
     "profile": "troubleshooting",
-    "generated_at": "2025-11-04T10:21:31.427911+00:00"
+    "generated_at": "2025-11-04T10:44:38.540157+00:00"
   }
 }

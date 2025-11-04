@@ -5,43 +5,400 @@
         "id": "P_01",
         "type": "Product",
         "name": "Citiz",
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_heating_up",
+            "section_title": "Heating up",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Heating up... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+            "section_title": "Citiz service manual  26 TECHNICAL DATA",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_pump_pressure",
+            "section_title": "Pump pressure",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Pump pressure... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_water_tank",
+            "section_title": "Water tank",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Water tank... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_drip_tray",
+            "section_title": "Drip tray",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Drip tray... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capsule_container",
+            "section_title": "Capsule container",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capsule container... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperatures",
+            "section_title": "Temperatures",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperatures... (p.17-21)"
+          }
+        ]
       },
       {
         "id": "CT_01",
         "type": "ComponentType",
         "name": "Water tank",
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_heating_up",
+            "section_title": "Heating up",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Heating up... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+            "section_title": "Citiz service manual  26 TECHNICAL DATA",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_pump_pressure",
+            "section_title": "Pump pressure",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Pump pressure... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_water_tank",
+            "section_title": "Water tank",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Water tank... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_drip_tray",
+            "section_title": "Drip tray",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Drip tray... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capsule_container",
+            "section_title": "Capsule container",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capsule container... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperatures",
+            "section_title": "Temperatures",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperatures... (p.17-21)"
+          }
+        ]
       },
       {
         "id": "C_01",
         "type": "Component",
         "name": "Drip tray",
-        "confidence": 0.88
+        "confidence": 0.88,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_heating_up",
+            "section_title": "Heating up",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Heating up... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+            "section_title": "Citiz service manual  26 TECHNICAL DATA",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_pump_pressure",
+            "section_title": "Pump pressure",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Pump pressure... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_water_tank",
+            "section_title": "Water tank",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Water tank... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_drip_tray",
+            "section_title": "Drip tray",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Drip tray... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capsule_container",
+            "section_title": "Capsule container",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capsule container... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperatures",
+            "section_title": "Temperatures",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperatures... (p.17-21)"
+          }
+        ]
       },
       {
         "id": "C_02",
         "type": "Component",
         "name": "Capsule container",
-        "confidence": 0.87
+        "confidence": 0.87,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_heating_up",
+            "section_title": "Heating up",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Heating up... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+            "section_title": "Citiz service manual  26 TECHNICAL DATA",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_pump_pressure",
+            "section_title": "Pump pressure",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Pump pressure... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_water_tank",
+            "section_title": "Water tank",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Water tank... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_drip_tray",
+            "section_title": "Drip tray",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Drip tray... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capsule_container",
+            "section_title": "Capsule container",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capsule container... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperatures",
+            "section_title": "Temperatures",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperatures... (p.17-21)"
+          }
+        ]
       },
       {
         "id": "CT_02",
         "type": "ComponentType",
         "name": "Pump",
-        "confidence": 0.92
+        "confidence": 0.92,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_heating_up",
+            "section_title": "Heating up",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Heating up... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+            "section_title": "Citiz service manual  26 TECHNICAL DATA",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_pump_pressure",
+            "section_title": "Pump pressure",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Pump pressure... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_water_tank",
+            "section_title": "Water tank",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Water tank... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_drip_tray",
+            "section_title": "Drip tray",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Drip tray... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capsule_container",
+            "section_title": "Capsule container",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capsule container... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperatures",
+            "section_title": "Temperatures",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperatures... (p.17-21)"
+          }
+        ]
       },
       {
         "id": "P_02",
         "type": "Product",
         "name": "Citiz & milk",
-        "confidence": 0.93
+        "confidence": 0.93,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_heating_up",
+            "section_title": "Heating up",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Heating up... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+            "section_title": "Citiz service manual  26 TECHNICAL DATA",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_pump_pressure",
+            "section_title": "Pump pressure",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Pump pressure... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_water_tank",
+            "section_title": "Water tank",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Water tank... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_drip_tray",
+            "section_title": "Drip tray",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Drip tray... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capsule_container",
+            "section_title": "Capsule container",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capsule container... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperatures",
+            "section_title": "Temperatures",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperatures... (p.17-21)"
+          }
+        ]
       },
       {
         "id": "P_03",
         "type": "Product",
         "name": "Citiz & Co",
-        "confidence": 0.91
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_heating_up",
+            "section_title": "Heating up",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Heating up... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+            "section_title": "Citiz service manual  26 TECHNICAL DATA",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_pump_pressure",
+            "section_title": "Pump pressure",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Pump pressure... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_water_tank",
+            "section_title": "Water tank",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Water tank... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_drip_tray",
+            "section_title": "Drip tray",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Drip tray... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capsule_container",
+            "section_title": "Capsule container",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capsule container... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperatures",
+            "section_title": "Temperatures",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperatures... (p.17-21)"
+          }
+        ]
       }
     ],
     "relations": [
@@ -107,5 +464,70 @@
       }
     ]
   },
-  "timestamp": "2025-11-04T09:21:12.458188+00:00"
+  "chunk_provenance": [
+    {
+      "text": "Heating up \n­ Citiz......................................................................................................approx. 7.6 Wh \n­ Citiz & milk...........................................................................................approx. 7.6 Wh \n­ Citiz & Co...........................................................................................approx. 14.9 Wh \n1 small cup (40 ml*) \n­ Citiz......................................................................................................approx. 4.3 Wh \n­ Citiz & milk...........................................................................................approx. 4.3 Wh \n­ Citiz & Co (both heads)........................................................................approx. 7.6 Wh \n* Default setting Technical data are \nvalid for all Citiz mod­ \nels unless explicitly \nstated otherwise.",
+      "section_id": "sec_4_2_1_heating_up",
+      "section_title": "Heating up",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 11795,
+      "char_end": 12658
+    },
+    {
+      "text": "Citiz service manual  26 TECHNICAL DATA \n1 large cup (110 ml*) \n­ Citiz......................................................................................................approx. 8.7 Wh \n­ Citiz & milk...........................................................................................approx. 8.7 Wh \n­ Citiz & Co (both heads)......................................................................approx. 14.8 Wh \n* Default setting \nStandby operation (in 1 hour) \n­ Citiz......................................................................................................approx. 0.7 Wh \n­ Citiz & milk...........................................................................................approx. 0.7 Wh \n­ Citiz & Co.............................................................................................approx. 2.2 Wh",
+      "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+      "section_title": "Citiz service manual  26 TECHNICAL DATA",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 12660,
+      "char_end": 13497
+    },
+    {
+      "text": "Pump pressure \n­ Max. permissible..............................................................................17.5 bar ± 1.5 bar \n­ During coffee preparation (depending on the type of coffee)..........................9­16 bar \nFlow performance.................................................................. 120­240 ml/min. at 12 bar",
+      "section_id": "sec_4_2_1_pump_pressure",
+      "section_title": "Pump pressure",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 13499,
+      "char_end": 13835
+    },
+    {
+      "text": "Water tank \n­ Citiz........................................................................................................................1.0 l \n­ Citiz & milk.............................................................................................................1.0 l \n­ Citiz & Co...............................................................................................................1.4 l",
+      "section_id": "sec_4_2_1_water_tank",
+      "section_title": "Water tank",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 13837,
+      "char_end": 14241
+    },
+    {
+      "text": "Drip tray \n­ Citiz....................................................................................................................100 ml \n­ Citiz & milk.........................................................................................................180 ml \n­ Citiz & Co...........................................................................................................250 ml",
+      "section_id": "sec_4_2_1_drip_tray",
+      "section_title": "Drip tray",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 14243,
+      "char_end": 14637
+    },
+    {
+      "text": "Capsule container \n­ Citiz, Citiz & milk....................................................................................9­11 capsules \n­ Citiz & Co........................................................................................2x (9­12) capsules",
+      "section_id": "sec_4_2_1_capsule_container",
+      "section_title": "Capsule container",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 14639,
+      "char_end": 14896
+    },
+    {
+      "text": "Temperatures \nOperating temperature...................................................................+ 5 °C up to + 45 °C \nStorage temperature .....................................................................­ 25 °C up to + 60 °C \nSafety temperature (thermal cut­off) ...................................................................167 °C \nCoffee temperature at outlet.......................................................................86 °C ± 3 °C",
+      "section_id": "sec_4_2_1_temperatures",
+      "section_title": "Temperatures",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 14898,
+      "char_end": 15357
+    }
+  ],
+  "timestamp": "2025-11-04T10:42:55.901915+00:00"
 }

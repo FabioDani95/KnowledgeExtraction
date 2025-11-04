@@ -1171,7 +1171,11 @@ def process_profile(
     kg_data["provenance"]["overall_confidence"] = quality["overall_confidence"]
 
     # Save KG
-    kg_file = output_dir / "kg.json"
+    partial_kg_dir = root_dir / "output" / "neural_extraction" / "Partial_KG"
+    partial_kg_dir.mkdir(parents=True, exist_ok=True)
+    kg_filename = f"{profile_name}_kg.json"
+    kg_file = partial_kg_dir / kg_filename
+
     with kg_file.open("w", encoding="utf-8") as fh:
         json.dump(kg_data, fh, indent=2, ensure_ascii=False)
 

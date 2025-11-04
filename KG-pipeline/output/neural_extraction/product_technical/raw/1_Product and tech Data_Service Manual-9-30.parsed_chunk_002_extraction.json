@@ -5,37 +5,553 @@
         "id": "P_01",
         "type": "Product",
         "name": "Turmix TX 270",
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spans": [
+          {
+            "section_id": "sec_4_1_1_turmix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_2_turmix",
+            "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+            "page_start": 15,
+            "page_end": 16,
+            "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
+          },
+          {
+            "section_id": "sec_4_1_3",
+            "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
+          },
+          {
+            "section_id": "sec_4_1_3_manufacturing_plant",
+            "section_title": "Manufacturing plant",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: Manufacturing plant... (p.16-17)"
+          },
+          {
+            "section_id": "sec_4_2_1",
+            "section_title": "4.2.1 Technical data of coffee machines",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+            "section_title": "Mains voltage for Citiz",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+            "section_title": "Mains voltage for Citiz & milk",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+            "section_title": "Mains voltage for Citiz & Co",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_approvals",
+            "section_title": "Approvals",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Approvals... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+            "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+            "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+            "section_title": "Power ratings of coffee machine main components",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
+          }
+        ]
       },
       {
         "id": "P_02",
         "type": "Product",
         "name": "Turmix TX 370",
-        "confidence": 0.95
+        "confidence": 0.95,
+        "spans": [
+          {
+            "section_id": "sec_4_1_1_turmix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_2_turmix",
+            "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+            "page_start": 15,
+            "page_end": 16,
+            "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
+          },
+          {
+            "section_id": "sec_4_1_3",
+            "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
+          },
+          {
+            "section_id": "sec_4_1_3_manufacturing_plant",
+            "section_title": "Manufacturing plant",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: Manufacturing plant... (p.16-17)"
+          },
+          {
+            "section_id": "sec_4_2_1",
+            "section_title": "4.2.1 Technical data of coffee machines",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+            "section_title": "Mains voltage for Citiz",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+            "section_title": "Mains voltage for Citiz & milk",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+            "section_title": "Mains voltage for Citiz & Co",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_approvals",
+            "section_title": "Approvals",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Approvals... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+            "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+            "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+            "section_title": "Power ratings of coffee machine main components",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
+          }
+        ]
       },
       {
         "id": "CT_01",
         "type": "ComponentType",
         "name": "Thermoblock",
-        "confidence": 0.94
+        "confidence": 0.94,
+        "spans": [
+          {
+            "section_id": "sec_4_1_1_turmix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_2_turmix",
+            "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+            "page_start": 15,
+            "page_end": 16,
+            "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
+          },
+          {
+            "section_id": "sec_4_1_3",
+            "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
+          },
+          {
+            "section_id": "sec_4_1_3_manufacturing_plant",
+            "section_title": "Manufacturing plant",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: Manufacturing plant... (p.16-17)"
+          },
+          {
+            "section_id": "sec_4_2_1",
+            "section_title": "4.2.1 Technical data of coffee machines",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+            "section_title": "Mains voltage for Citiz",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+            "section_title": "Mains voltage for Citiz & milk",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+            "section_title": "Mains voltage for Citiz & Co",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_approvals",
+            "section_title": "Approvals",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Approvals... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+            "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+            "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+            "section_title": "Power ratings of coffee machine main components",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
+          }
+        ]
       },
       {
         "id": "CT_02",
         "type": "ComponentType",
         "name": "Pump",
-        "confidence": 0.91
+        "confidence": 0.91,
+        "spans": [
+          {
+            "section_id": "sec_4_1_1_turmix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_2_turmix",
+            "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+            "page_start": 15,
+            "page_end": 16,
+            "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
+          },
+          {
+            "section_id": "sec_4_1_3",
+            "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
+          },
+          {
+            "section_id": "sec_4_1_3_manufacturing_plant",
+            "section_title": "Manufacturing plant",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: Manufacturing plant... (p.16-17)"
+          },
+          {
+            "section_id": "sec_4_2_1",
+            "section_title": "4.2.1 Technical data of coffee machines",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+            "section_title": "Mains voltage for Citiz",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+            "section_title": "Mains voltage for Citiz & milk",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+            "section_title": "Mains voltage for Citiz & Co",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_approvals",
+            "section_title": "Approvals",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Approvals... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+            "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+            "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+            "section_title": "Power ratings of coffee machine main components",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
+          }
+        ]
       },
       {
         "id": "RP_01",
         "type": "RatingPlate",
         "name": "EF488",
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_1_1_turmix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_2_turmix",
+            "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+            "page_start": 15,
+            "page_end": 16,
+            "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
+          },
+          {
+            "section_id": "sec_4_1_3",
+            "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
+          },
+          {
+            "section_id": "sec_4_1_3_manufacturing_plant",
+            "section_title": "Manufacturing plant",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: Manufacturing plant... (p.16-17)"
+          },
+          {
+            "section_id": "sec_4_2_1",
+            "section_title": "4.2.1 Technical data of coffee machines",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+            "section_title": "Mains voltage for Citiz",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+            "section_title": "Mains voltage for Citiz & milk",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+            "section_title": "Mains voltage for Citiz & Co",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_approvals",
+            "section_title": "Approvals",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Approvals... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+            "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+            "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+            "section_title": "Power ratings of coffee machine main components",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
+          }
+        ]
       },
       {
         "id": "RP_02",
         "type": "RatingPlate",
         "name": "EF484",
-        "confidence": 0.9
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_1_1_turmix",
+            "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+            "page_start": 12,
+            "page_end": 15,
+            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
+          },
+          {
+            "section_id": "sec_4_1_2_turmix",
+            "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+            "page_start": 15,
+            "page_end": 16,
+            "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
+          },
+          {
+            "section_id": "sec_4_1_3",
+            "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
+          },
+          {
+            "section_id": "sec_4_1_3_manufacturing_plant",
+            "section_title": "Manufacturing plant",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: Manufacturing plant... (p.16-17)"
+          },
+          {
+            "section_id": "sec_4_2_1",
+            "section_title": "4.2.1 Technical data of coffee machines",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+            "section_title": "Mains voltage for Citiz",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+            "section_title": "Mains voltage for Citiz & milk",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+            "section_title": "Mains voltage for Citiz & Co",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_approvals",
+            "section_title": "Approvals",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Approvals... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+            "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+            "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+            "section_title": "Power ratings of coffee machine main components",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
+          }
+        ]
       }
     ],
     "relations": [
@@ -77,5 +593,124 @@
       }
     ]
   },
-  "timestamp": "2025-11-04T09:20:58.246171+00:00"
+  "chunk_provenance": [
+    {
+      "text": "Turmix, AT­version\n\nFigure: 4.1.1 Examples of brand specific rating plates",
+      "section_id": "sec_4_1_1_turmix",
+      "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+      "page_start": 12,
+      "page_end": 15,
+      "char_start": 7945,
+      "char_end": 8019
+    },
+    {
+      "text": "Turmix TX 270 ­ Citiz & milk EF488 Citiz & Co. C130 steel grey/\n\nFigure: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz\n\n1) Brand name\n\n2) Voltage and power rating\n\n3) Place of manufacture\n\n4) National approval sign of Russia\n\n5) National approval sign of Germany\n\n6) Barcode 7) Serial number\n\n8) Machine type\n\n9) Special disposal icon\n\n10) Sign of conformity (CE)\n\n11) Conform with RoHS guidelines (lead\n\n12) Article number of the rating plate",
+      "section_id": "sec_4_1_2_turmix",
+      "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+      "page_start": 15,
+      "page_end": 16,
+      "char_start": 8021,
+      "char_end": 8552
+    },
+    {
+      "text": "Turmix TX 370 ­ Citiz & Co. \n1) Brand name \n2) Voltage and power rating \n3) Place of manufacture \n4) National approval sign of Russia \n(GOST R) \n5) National approval sign of Germany \n(VDE) \n6) Barcode 7) Serial number \n8) Machine type \n9) Special disposal icon \n(do not dispose with ordinary waste) \n10) Sign of conformity (CE) \n11) Conform with RoHS guidelines (lead \nfree solder, etc.) \n12) Article number of the rating plate\n\nCitiz service manual  24 TECHNICAL DATA \nDecoding the alphanumeric serial number \nExample:\n\nFigure: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz\n\n1) Brand name\n\n2) Voltage and power rating\n\n3) Place of manufacture\n\n4) National approval sign of Russia\n\n5) National approval sign of Germany\n\n6) Barcode 7) Serial number\n\n8) Machine type\n\n9) Special disposal icon\n\n10) Sign of conformity (CE)\n\n11) Conform with RoHS guidelines (lead\n\n12) Article number of the rating plate",
+      "section_id": "sec_4_1_2_turmix",
+      "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+      "page_start": 15,
+      "page_end": 16,
+      "char_start": 8554,
+      "char_end": 9541
+    },
+    {
+      "text": "of production and \nmachine type, the \ncoffee machine can be \nidentified exactly. \nChecksum (if available)",
+      "section_id": "sec_4_1_3",
+      "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+      "page_start": 16,
+      "page_end": 17,
+      "char_start": 9543,
+      "char_end": 9648
+    },
+    {
+      "text": "Manufacturing plant \nManufacturer designation of the machine type (EF 484) \n08312 ... Date of production \n(08 = year 2008, 312 = 312 day of the year) \nNote he mains volt­ \nage ranges of the dif­ \nferent models.",
+      "section_id": "sec_4_1_3_manufacturing_plant",
+      "section_title": "Manufacturing plant",
+      "page_start": 16,
+      "page_end": 17,
+      "char_start": 9650,
+      "char_end": 9860
+    },
+    {
+      "text": "Table: 4.2.1 Technical data of coffee machines\n\nTable: 4.2.1 Technical data of coffee machines\n\nTable: * Default setting Technical data are\n\nTable: * Default setting\n\nTable: 4.2.1 Technical data of coffee machines\n\nTable: 4.2.1 Technical data of coffee machines\n\nTable: 4.2.1 Technical data of coffee machines\n\nTable: 4.2.1 Technical data of coffee machines\n\nTable: 4.2.1 Technical data of coffee machines\n\nTable: * model Citiz & Co: measured with only one core unit running",
+      "section_id": "sec_4_2_1",
+      "section_title": "4.2.1 Technical data of coffee machines",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 9862,
+      "char_end": 10336
+    },
+    {
+      "text": "Mains voltage for Citiz \n­ Europe, RU, AU, CN, KR, SG, HK, ME, ZA, IL, BR, AR........... 220­240 V / 50­60 Hz \n­ USA, Canada, BR, MX .............................................................. 120­127 V / 50­60 Hz \n­ Japan.............................................................................................. 100 V / 50­60 Hz*",
+      "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+      "section_title": "Mains voltage for Citiz",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 10338,
+      "char_end": 10675
+    },
+    {
+      "text": "Mains voltage for Citiz & milk \n­ Europe, RU, AU, CN, KR, SG, HK, ME, ZA, IL, BR, AR........... 220­240 V / 50­60 Hz \n­ USA, Canada, BR, MX .............................................................. 120­127 V / 50­60 Hz",
+      "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+      "section_title": "Mains voltage for Citiz & milk",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 10677,
+      "char_end": 10900
+    },
+    {
+      "text": "Mains voltage for Citiz & Co \n­ Europe, RU, AU, ME, IL............................................................ 220­240 V / 50­60 Hz",
+      "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+      "section_title": "Mains voltage for Citiz & Co",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 10902,
+      "char_end": 11037
+    },
+    {
+      "text": "Approvals \nApprovals for Citiz........................ CE, UL \"for USA and Canada\", PSE, Gost R, Ctick,",
+      "section_id": "sec_4_2_1_approvals",
+      "section_title": "Approvals",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 11039,
+      "char_end": 11142
+    },
+    {
+      "text": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM \nApprovals for Citiz & milk............ CE, UL \"for USA and Canada\", Gost R, Ctick, CCC,",
+      "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+      "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 11144,
+      "char_end": 11277
+    },
+    {
+      "text": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM \nApprovals for Citiz & Co.................................................. CE, Gost R, Ctick, SASO, ISI",
+      "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+      "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 11279,
+      "char_end": 11423
+    },
+    {
+      "text": "Power ratings of coffee machine main components \n(for all voltages and frequencies) \nThermoblock.....................................................................................................1200 W* \n*model Citiz & Co, Australia: 1080 W \nPump.................................................................................................................55/60 W",
+      "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+      "section_title": "Power ratings of coffee machine main components",
+      "page_start": 17,
+      "page_end": 21,
+      "char_start": 11425,
+      "char_end": 11793
+    }
+  ],
+  "timestamp": "2025-11-04T10:42:46.434858+00:00"
 }
