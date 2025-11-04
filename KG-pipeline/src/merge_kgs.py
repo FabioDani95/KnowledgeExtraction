@@ -11,22 +11,51 @@ Funzionalità:
 - Validazione configurabile da config.yaml
 - Quality report completo
 
-Usage:
+Usage (from the KG-pipeline project root):
     python src/merge_kgs.py "output/neural_extraction/Partial_KG/*.json" \
         --out output/merged_kg/kg_merged.json \
         --priority NEURAL_EXTRACTION KG_PRODUCT_TECHNICAL KG_OPERATION_MODES KG_TROUBLESHOOTING
+
+Defaults (no arguments):
+    - Input pattern: output/neural_extraction/Partial_KG/*.json
+    - Output file:   output/merged_kg/kg_merged.json
+    - Priority list: NEURAL_EXTRACTION
 """
 
 import argparse
-import json
 import glob
+import hashlib
+import json
 import re
 import sys
+from copy import deepcopy
 from pathlib import Path
 from typing import Dict, List, Any, Tuple, Set, Optional
 from collections import defaultdict, Counter
 from datetime import datetime
 import yaml
+
+
+DEFAULT_VALIDATION_CONFIG = {
+    'json_shape': {'severity': 'error'},
+    'referential_integrity': {'severity': 'error'},
+    'no_self_loops': {'severity': 'warn'},
+    'domain_range': {
+        'severity': 'error',
+        'rules': {
+            'hasUnit': {'domain': ['ParameterSpec'], 'range': ['Unit']},
+            'hasSpec': {'domain': ['Product', 'Component', 'ComponentType'], 'range': ['ParameterSpec']},
+            'requiresTool': {'domain': ['RepairAction'], 'range': ['Tool']},
+            'requiresConsumable': {'domain': ['RepairAction'], 'range': ['Consumable']},
+            'precedes': {'domain': ['MachineMode', 'ProcessStep'], 'range': ['MachineMode', 'ProcessStep']},
+        }
+    },
+    'dedup_relations': {'severity': 'info'},
+    'precedes_acyclic': {'severity': 'error'},
+    'units_required_if_numeric': {'severity': 'warn'},
+    'min_confidence_entity': {'severity': 'warn', 'threshold': 0.75},
+    'min_confidence_relation': {'severity': 'warn', 'threshold': 0.75},
+}
 
 
 # ============================================================================
@@ -58,13 +87,54 @@ def normalize_type(entity_type: str) -> str:
     return entity_type.strip() if entity_type else ""
 
 
+def resolve_config_path(config_path: Optional[str], pipeline_root: Path) -> Path:
+    """
+    Risolve il percorso della config considerando percorsi relativi e namespace KG-pipeline.
+    """
+    if config_path is None:
+        return (pipeline_root / "config.yaml").resolve()
+
+    candidate = Path(config_path)
+    if candidate.is_absolute():
+        return candidate
+
+    candidate_from_cwd = (Path.cwd() / candidate).resolve()
+    if candidate_from_cwd.exists():
+        return candidate_from_cwd
+
+    parts = list(candidate.parts)
+    if parts and parts[0] == pipeline_root.name:
+        candidate = Path(*parts[1:])
+
+    return (pipeline_root / candidate).resolve()
+
+
 def get_entity_key(entity: Dict[str, Any]) -> Tuple[str, str]:
     """
     Restituisce la chiave di coalescenza per un'entità: (type, slug(name)).
     """
     entity_type = normalize_type(entity.get('type', ''))
-    entity_name = entity.get('name', '')
+    entity_name = (
+        entity.get('name')
+        or entity.get('label')
+        or entity.get('title')
+        or ''
+    )
     slug_name = slugify(entity_name)
+
+    if not slug_name:
+        fallback = (
+            entity.get('id')
+            or entity.get('external_id')
+            or entity.get('uuid')
+            or ''
+        )
+        if fallback:
+            slug_name = slugify(fallback)
+        else:
+            raw = json.dumps(entity, sort_keys=True)
+            slug_name = hashlib.sha1(raw.encode('utf-8')).hexdigest()
+
     return (entity_type, slug_name)
 
 
@@ -159,7 +229,7 @@ def merge_entity_properties(entities: List[Dict[str, Any]], priority_sources: Li
 def deduplicate_entities(
     all_entities: List[Dict[str, Any]],
     priority_sources: List[str]
-) -> Tuple[List[Dict[str, Any]], Dict[str, str], Dict[str, int]]:
+) -> Tuple[List[Dict[str, Any]], Dict[str, str], Dict[Tuple[str, str], int], Set[str]]:
     """
     Deduplicazione entità basata su (type, slug(name)).
 
@@ -167,6 +237,7 @@ def deduplicate_entities(
         - Lista di entità deduplicate
         - Dizionario di mapping {old_id -> canonical_id}
         - Contatore duplicati per chiave
+        - Insieme degli ID canonici risultanti
     """
     # Raggruppa entità per chiave
     entity_groups: Dict[Tuple[str, str], List[Dict[str, Any]]] = defaultdict(list)
@@ -179,6 +250,7 @@ def deduplicate_entities(
     deduplicated = []
     id_mapping = {}
     duplicate_counts = {}
+    canonical_ids: Set[str] = set()
 
     for key, entities in entity_groups.items():
         if len(entities) == 1:
@@ -186,22 +258,27 @@ def deduplicate_entities(
             entity = entities[0]
             entity_id = get_entity_id(entity)
             deduplicated.append(entity)
-            id_mapping[entity_id] = entity_id
+            if entity_id:
+                id_mapping[entity_id] = entity_id
+                canonical_ids.add(entity_id)
         else:
             # Duplicati: scegli ID canonico e unisci proprietà
             canonical_id = choose_canonical_id(entities, priority_sources)
             merged_entity = merge_entity_properties(entities, priority_sources)
             merged_entity['id'] = canonical_id
             deduplicated.append(merged_entity)
+            if canonical_id:
+                canonical_ids.add(canonical_id)
 
             # Mappa tutti gli ID al canonico
             for entity in entities:
                 old_id = get_entity_id(entity)
-                id_mapping[old_id] = canonical_id
+                if old_id:
+                    id_mapping[old_id] = canonical_id
 
             duplicate_counts[key] = len(entities)
 
-    return deduplicated, id_mapping, duplicate_counts
+    return deduplicated, id_mapping, duplicate_counts, canonical_ids
 
 
 # ============================================================================
@@ -210,7 +287,8 @@ def deduplicate_entities(
 
 def remap_relation_refs(
     relation: Dict[str, Any],
-    id_mapping: Dict[str, str]
+    id_mapping: Dict[str, str],
+    valid_ids: Set[str]
 ) -> Optional[Dict[str, Any]]:
     """
     Rimappa i riferimenti di una relazione agli ID canonici.
@@ -223,8 +301,8 @@ def remap_relation_refs(
     canonical_from = id_mapping.get(from_ref, from_ref)
     canonical_to = id_mapping.get(to_ref, to_ref)
 
-    # Verifica che entrambi esistano nel mapping
-    if canonical_from not in id_mapping.values() or canonical_to not in id_mapping.values():
+    # Verifica che entrambi esistano negli ID canonici validi
+    if canonical_from not in valid_ids or canonical_to not in valid_ids:
         # Riferimento inesistente
         return None
 
@@ -345,35 +423,19 @@ def fix_inverted_relations(
 # VALIDATION SYSTEM
 # ============================================================================
 
-def load_validation_config(config_path: str = "KG-pipeline/config.yaml") -> Dict[str, Any]:
+def load_validation_config(config_path: Optional[str] = None) -> Dict[str, Any]:
     """Carica la configurazione delle validazioni da config.yaml."""
-    if not Path(config_path).exists():
-        # Default config
-        return {
-            'json_shape': {'severity': 'error'},
-            'referential_integrity': {'severity': 'error'},
-            'no_self_loops': {'severity': 'warn'},
-            'domain_range': {
-                'severity': 'error',
-                'rules': {
-                    'hasUnit': {'domain': ['ParameterSpec'], 'range': ['Unit']},
-                    'hasSpec': {'domain': ['Product', 'Component', 'ComponentType'], 'range': ['ParameterSpec']},
-                    'requiresTool': {'domain': ['RepairAction'], 'range': ['Tool']},
-                    'requiresConsumable': {'domain': ['RepairAction'], 'range': ['Consumable']},
-                    'precedes': {'domain': ['MachineMode', 'ProcessStep'], 'range': ['MachineMode', 'ProcessStep']},
-                }
-            },
-            'dedup_relations': {'severity': 'info'},
-            'precedes_acyclic': {'severity': 'error'},
-            'units_required_if_numeric': {'severity': 'warn'},
-            'min_confidence_entity': {'severity': 'warn', 'threshold': 0.75},
-            'min_confidence_relation': {'severity': 'warn', 'threshold': 0.75},
-        }
+    pipeline_root = Path(__file__).resolve().parent.parent
+    resolved_path = resolve_config_path(config_path, pipeline_root)
 
-    with open(config_path, 'r', encoding='utf-8') as f:
-        config = yaml.safe_load(f)
+    if not resolved_path.exists():
+        return deepcopy(DEFAULT_VALIDATION_CONFIG)
 
-    return config.get('validations', {})
+    with open(resolved_path, 'r', encoding='utf-8') as f:
+        config = yaml.safe_load(f) or {}
+
+    validations = config.get('validations')
+    return validations if validations else deepcopy(DEFAULT_VALIDATION_CONFIG)
 
 
 def validate_kg(
@@ -682,6 +744,47 @@ def generate_quality_report(
     # Duplicati
     total_duplicates_entities = sum(duplicate_counts.values())
 
+    product_component_ids = {
+        e.get('id')
+        for e in entities
+        if e.get('id') and e.get('type') in {'Product', 'Component'}
+    }
+    product_component_with_spec = {
+        r.get('from_ref')
+        for r in relations
+        if r.get('type') == 'hasSpec' and r.get('from_ref')
+    } & product_component_ids
+
+    parameter_spec_ids = {
+        e.get('id')
+        for e in entities
+        if e.get('id') and e.get('type') == 'ParameterSpec'
+    }
+    parameter_spec_with_unit = {
+        r.get('from_ref')
+        for r in relations
+        if r.get('type') == 'hasUnit' and r.get('from_ref')
+    } & parameter_spec_ids
+
+    coverage_metrics = {
+        'product_component_hasSpec': {
+            'total_entities': len(product_component_ids),
+            'with_relation': len(product_component_with_spec),
+            'coverage_ratio': (
+                round(len(product_component_with_spec) / len(product_component_ids), 3)
+                if product_component_ids else 0.0
+            ),
+        },
+        'parameter_spec_hasUnit': {
+            'total_entities': len(parameter_spec_ids),
+            'with_relation': len(parameter_spec_with_unit),
+            'coverage_ratio': (
+                round(len(parameter_spec_with_unit) / len(parameter_spec_ids), 3)
+                if parameter_spec_ids else 0.0
+            ),
+        },
+    }
+
     return {
         'entities_count': entity_count,
         'relations_count': relation_count,
@@ -697,6 +800,7 @@ def generate_quality_report(
             'inverted_relations': inverted_count
         },
         'cycles_found': len(cycles),
+        'coverage_metrics': coverage_metrics,
         'generated_at': datetime.utcnow().isoformat() + 'Z'
     }
 
@@ -709,7 +813,7 @@ def merge_kgs(
     input_patterns: List[str],
     output_path: str,
     priority_sources: List[str],
-    config_path: str = "KG-pipeline/config.yaml"
+    config_path: Optional[str] = None
 ) -> None:
     """
     Funzione principale di merge dei KG.
@@ -720,6 +824,18 @@ def merge_kgs(
         priority_sources: Lista di datasource_code in ordine di priorità
         config_path: Path del file di configurazione YAML
     """
+    pipeline_root = Path(__file__).resolve().parent.parent
+
+    resolved_config_path = resolve_config_path(config_path, pipeline_root)
+    config_data: Dict[str, Any] = {}
+    if resolved_config_path.exists():
+        with resolved_config_path.open('r', encoding='utf-8') as fh:
+            config_data = yaml.safe_load(fh) or {}
+    else:
+        print(f"WARNING: configuration file not found at {resolved_config_path}; using default settings.")
+
+    merge_settings = config_data.get('merge_settings', {})
+
     print("=" * 80)
     print("KG Symbolic Merge - Starting")
     print("=" * 80)
@@ -731,7 +847,21 @@ def merge_kgs(
     all_kg_files = []
     for pattern in input_patterns:
         files = glob.glob(pattern, recursive=True)
+
+        if not files:
+            pattern_path = Path(pattern)
+            if not pattern_path.is_absolute():
+                parts = list(pattern_path.parts)
+                if parts and parts[0] == pipeline_root.name:
+                    rel_pattern = Path(*parts[1:])
+                else:
+                    rel_pattern = pattern_path
+                alt_pattern = str(pipeline_root / rel_pattern)
+                files = glob.glob(alt_pattern, recursive=True)
+
         all_kg_files.extend(files)
+
+    all_kg_files = sorted(set(all_kg_files))
 
     if not all_kg_files:
         print(f"ERROR: No KG files found matching patterns: {input_patterns}")
@@ -762,19 +892,75 @@ def merge_kgs(
         all_entities.extend(entities)
         all_relations.extend(relations)
 
-    print(f"  Total entities loaded: {len(all_entities)}")
-    print(f"  Total relations loaded: {len(all_relations)}")
+    total_entities_loaded = len(all_entities)
+    total_relations_loaded = len(all_relations)
+    print(f"  Total entities loaded: {total_entities_loaded}")
+    print(f"  Total relations loaded: {total_relations_loaded}")
+
+    raw_entity_type_counter = Counter(e.get('type', 'Unknown') for e in all_entities)
+    raw_relation_type_counter = Counter(r.get('type', 'Unknown') for r in all_relations)
+    print(f"  Entity types observed (top 10): {raw_entity_type_counter.most_common(10)}")
+    print(f"  Relation types observed (top 10): {raw_relation_type_counter.most_common(10)}")
+
+    allowed_entity_types: Set[str] = set()
+    for key in ("allowed_entity_types", "allowed_types", "entity_whitelist"):
+        values = merge_settings.get(key)
+        if values:
+            allowed_entity_types.update(values)
+
+    if allowed_entity_types:
+        required_entity_types = {"ParameterSpec", "Unit"}
+        missing_required = required_entity_types - allowed_entity_types
+        if missing_required:
+            print(f"  NOTICE: adding missing required entity types to whitelist: {missing_required}")
+            allowed_entity_types.update(missing_required)
+
+        before_filter_entities = len(all_entities)
+        all_entities = [e for e in all_entities if e.get('type') in allowed_entity_types]
+        after_filter_entities = len(all_entities)
+        print(f"  Entity whitelist applied: kept {after_filter_entities}/{before_filter_entities} entities")
+    else:
+        print("  Entity whitelist not configured; keeping all entity types.")
+
+    allowed_relation_types: Set[str] = set()
+    for key in ("allowed_relation_types", "relation_whitelist", "allowed_relations"):
+        values = merge_settings.get(key)
+        if values:
+            allowed_relation_types.update(values)
+
+    if allowed_relation_types:
+        required_relation_types = {"hasSpec", "hasUnit"}
+        missing_rel_required = required_relation_types - allowed_relation_types
+        if missing_rel_required:
+            print(f"  NOTICE: adding missing required relation types to whitelist: {missing_rel_required}")
+            allowed_relation_types.update(missing_rel_required)
+    else:
+        print("  Relation whitelist not configured; keeping all relation types.")
+
+    entity_type_counter_pre = Counter(e.get('type', 'Unknown') for e in all_entities)
+    relation_type_counter_pre = Counter(r.get('type', 'Unknown') for r in all_relations)
+    print(f"  Entity types after filtering (top 10): {entity_type_counter_pre.most_common(10)}")
+    print(f"  Relation types before remap (top 10): {relation_type_counter_pre.most_common(10)}")
 
     # -----------------------------------------------------------------------
     # 2. Deduplicazione entità
     # -----------------------------------------------------------------------
     print("\n[2/8] Deduplicating entities...")
-    deduplicated_entities, id_mapping, duplicate_counts = deduplicate_entities(
+    deduplicated_entities, id_mapping, duplicate_counts, canonical_ids = deduplicate_entities(
         all_entities, priority_sources
     )
     print(f"  Entities after deduplication: {len(deduplicated_entities)}")
     print(f"  Entity groups with duplicates: {len(duplicate_counts)}")
     print(f"  Total duplicates collapsed: {sum(duplicate_counts.values())}")
+    entity_type_counter_post = Counter(e.get('type', 'Unknown') for e in deduplicated_entities)
+    print(f"  Entity types after dedup (top 10): {entity_type_counter_post.most_common(10)}")
+
+    for critical_type in ("ParameterSpec", "Unit"):
+        before = entity_type_counter_pre.get(critical_type, 0)
+        after = entity_type_counter_post.get(critical_type, 0)
+        if before and not after:
+            print(f"  WARNING: entities of type '{critical_type}' disappeared during deduplication "
+                  f"(before={before}, after={after})")
 
     # -----------------------------------------------------------------------
     # 3. Remap relazioni
@@ -782,16 +968,26 @@ def merge_kgs(
     print("\n[3/8] Remapping relations...")
     remapped_relations = []
     orphaned_count = 0
+    orphaned_by_type: Counter = Counter()
 
     for relation in all_relations:
-        remapped = remap_relation_refs(relation, id_mapping)
+        remapped = remap_relation_refs(relation, id_mapping, canonical_ids)
         if remapped is not None:
             remapped_relations.append(remapped)
         else:
             orphaned_count += 1
+            orphaned_by_type[relation.get('type', 'UNKNOWN')] += 1
+
+    if allowed_relation_types:
+        before_filter_relations = len(remapped_relations)
+        remapped_relations = [r for r in remapped_relations if r.get('type') in allowed_relation_types]
+        after_filter_relations = len(remapped_relations)
+        print(f"  Relation whitelist applied post-remap: kept {after_filter_relations}/{before_filter_relations} relations")
 
     print(f"  Relations after remap: {len(remapped_relations)}")
     print(f"  Orphaned relations removed: {orphaned_count}")
+    if orphaned_count:
+        print(f"  Orphaned relations by type: {orphaned_by_type.most_common(10)}")
 
     # -----------------------------------------------------------------------
     # 4. Deduplicazione relazioni
@@ -815,7 +1011,22 @@ def merge_kgs(
     # 6. Validazione
     # -----------------------------------------------------------------------
     print("\n[6/8] Running validations...")
-    validation_config = load_validation_config(config_path)
+    validation_config = load_validation_config(resolved_config_path)
+    domain_range_cfg = validation_config.setdefault('domain_range', {'severity': 'error', 'rules': {}})
+    domain_range_cfg.setdefault('rules', {})
+    required_domain_rules = {
+        'hasUnit': {'domain': ['ParameterSpec'], 'range': ['Unit']},
+        'hasSpec': {'domain': ['Product', 'Component', 'ComponentType'], 'range': ['ParameterSpec']},
+    }
+    for rel_type, rule in required_domain_rules.items():
+        if rel_type not in domain_range_cfg['rules']:
+            domain_range_cfg['rules'][rel_type] = rule
+            print(f"    NOTICE: injecting missing domain_range rule for {rel_type}")
+
+    severity = domain_range_cfg.get('severity', 'error').lower()
+    if severity not in {'error', 'warn'}:
+        print(f"    NOTICE: elevating domain_range severity to 'error' for safety (was '{severity}')")
+        domain_range_cfg['severity'] = 'error'
 
     kg_to_validate = {
         'entities': deduplicated_entities,
@@ -842,6 +1053,24 @@ def merge_kgs(
         inverted_count
     )
     print(f"  Quality metrics computed")
+    coverage = quality_report.get('coverage_metrics', {})
+    if coverage:
+        pc_cov = coverage.get('product_component_hasSpec', {})
+        ps_cov = coverage.get('parameter_spec_hasUnit', {})
+        if pc_cov:
+            total = pc_cov.get('total_entities', 0)
+            covered = pc_cov.get('with_relation', 0)
+            ratio = pc_cov.get('coverage_ratio', 0.0)
+            print(f"    Coverage Product/Component hasSpec: {covered}/{total} ({ratio:.3f})")
+            if total and covered == 0:
+                print("    WARNING: No Product/Component entities with hasSpec relations detected.")
+        if ps_cov:
+            total = ps_cov.get('total_entities', 0)
+            covered = ps_cov.get('with_relation', 0)
+            ratio = ps_cov.get('coverage_ratio', 0.0)
+            print(f"    Coverage ParameterSpec hasUnit: {covered}/{total} ({ratio:.3f})")
+            if total and covered == 0:
+                print("    WARNING: No ParameterSpec entities with hasUnit relations detected.")
 
     # -----------------------------------------------------------------------
     # 8. Salva output
@@ -870,13 +1099,21 @@ def merge_kgs(
     }
 
     # Crea directory di output se non esiste
-    output_dir = Path(output_path).parent
+    output_path_obj = Path(output_path)
+    if not output_path_obj.is_absolute():
+        parts = list(output_path_obj.parts)
+        if parts and parts[0] == pipeline_root.name:
+            output_path_obj = pipeline_root / Path(*parts[1:])
+        else:
+            output_path_obj = pipeline_root / output_path_obj
+
+    output_dir = output_path_obj.parent
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    with open(output_path, 'w', encoding='utf-8') as f:
+    with output_path_obj.open('w', encoding='utf-8') as f:
         json.dump(merged_kg, f, indent=2, ensure_ascii=False)
 
-    print(f"  Output written to: {output_path}")
+    print(f"  Output written to: {output_path_obj}")
     print("\n" + "=" * 80)
     print("KG Symbolic Merge - Completed Successfully")
     print("=" * 80)
@@ -892,29 +1129,31 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Merge all KG files in Partial_KG directory
-  python src/merge_kgs.py "KG-pipeline/output/neural_extraction/Partial_KG/*.json" \\
+  # Run from inside the KG-pipeline directory (defaults are applied automatically)
+  python src/merge_kgs.py
+
+  # Override input/output paths explicitly
+  python src/merge_kgs.py "output/neural_extraction/Partial_KG/*.json" \\
       --out output/merged_kg/kg_merged.json \\
       --priority NEURAL_EXTRACTION KG_PRODUCT_TECHNICAL KG_OPERATION_MODES KG_TROUBLESHOOTING
 
-  # Merge with custom config
-  python src/merge_kgs.py "KG-pipeline/output/neural_extraction/**/*.json" \\
-      --out output/merged_kg/kg_merged.json \\
-      --config custom_config.yaml \\
+  # Run from the repository root with explicit paths
+  python KG-pipeline/src/merge_kgs.py "KG-pipeline/output/neural_extraction/Partial_KG/*.json" \\
+      --out KG-pipeline/output/merged_kg/kg_merged.json \\
       --priority NEURAL_EXTRACTION
         """
     )
 
     parser.add_argument(
         'input_patterns',
-        nargs='+',
-        help='Glob patterns for input KG JSON files (e.g., "output/neural_extraction/Partial_KG/*.json")'
+        nargs='*',
+        help='Glob patterns for input KG JSON files (default: output/neural_extraction/Partial_KG/*.json)'
     )
 
     parser.add_argument(
         '--out', '-o',
-        required=True,
-        help='Output path for merged KG JSON file'
+        default=None,
+        help='Output path for merged KG JSON file (default: output/merged_kg/kg_merged.json)'
     )
 
     parser.add_argument(
@@ -926,15 +1165,19 @@ Examples:
 
     parser.add_argument(
         '--config', '-c',
-        default='KG-pipeline/config.yaml',
-        help='Path to config.yaml file (default: KG-pipeline/config.yaml)'
+        default=None,
+        help='Path to config.yaml file (default resolved automatically inside KG-pipeline)'
     )
 
     args = parser.parse_args()
 
+    default_patterns = ["output/neural_extraction/Partial_KG/*.json"]
+    input_patterns = args.input_patterns or default_patterns
+    output_path = args.out or "output/merged_kg/kg_merged.json"
+
     merge_kgs(
-        input_patterns=args.input_patterns,
-        output_path=args.out,
+        input_patterns=input_patterns,
+        output_path=output_path,
         priority_sources=args.priority,
         config_path=args.config
     )

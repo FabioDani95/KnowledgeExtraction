@@ -2,10 +2,10 @@
   "extraction": {
     "entities": [
       {
-        "id": "MM_01",
         "type": "MachineMode",
         "name": "Heat up mode",
-        "confidence": 0.95,
+        "id": "MM_01",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -31,10 +31,10 @@
         ]
       },
       {
-        "id": "MM_02",
         "type": "MachineMode",
         "name": "Self test mode",
-        "confidence": 0.93,
+        "id": "MM_02",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -60,10 +60,10 @@
         ]
       },
       {
-        "id": "MM_03",
         "type": "MachineMode",
         "name": "Ready mode",
-        "confidence": 0.94,
+        "id": "MM_03",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -89,10 +89,10 @@
         ]
       },
       {
-        "id": "MM_04",
         "type": "MachineMode",
         "name": "Brewing mode",
-        "confidence": 0.92,
+        "id": "MM_04",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -118,10 +118,10 @@
         ]
       },
       {
-        "id": "MM_05",
         "type": "MachineMode",
         "name": "Volume brewing mode",
-        "confidence": 0.91,
+        "id": "MM_05",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -147,10 +147,271 @@
         ]
       },
       {
-        "id": "MM_06",
         "type": "MachineMode",
         "name": "Descaling mode",
-        "confidence": 0.9,
+        "id": "MM_06",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
+      },
+      {
+        "type": "State",
+        "name": "Descaling ready",
+        "id": "S_01",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
+      },
+      {
+        "type": "State",
+        "name": "Descaling pump on",
+        "id": "S_02",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
+      },
+      {
+        "type": "State",
+        "name": "Descaling pump off",
+        "id": "S_03",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
+      },
+      {
+        "type": "State",
+        "name": "Emptying / Evaporating",
+        "id": "S_04",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
+      },
+      {
+        "type": "State",
+        "name": "Standby",
+        "id": "S_05",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
+      },
+      {
+        "type": "State",
+        "name": "Resetting",
+        "id": "S_06",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
+      },
+      {
+        "type": "State",
+        "name": "Power save",
+        "id": "S_07",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
+      },
+      {
+        "type": "State",
+        "name": "Overheat",
+        "id": "S_08",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_status_table_p2",
+            "section_title": "alternately 5 times Machine status etc. \"Small cup\"",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: alternately 5 times Machine status etc. \"Small cup\"... (p.2-2)"
+          },
+          {
+            "section_id": "sec_status_table_p3",
+            "section_title": "alternately 3 times Machine status etc. \"Small cup\"",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: alternately 3 times Machine status etc. \"Small cup\"... (p.3-3)"
+          },
+          {
+            "section_id": "sec_mode_table_p4",
+            "section_title": "5.3 Machine modes",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: 5.3 Machine modes... (p.4-4)"
+          }
+        ]
+      },
+      {
+        "type": "State",
+        "name": "Power save activation",
+        "id": "S_09",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -179,33 +440,63 @@
     "relations": [
       {
         "type": "precedes",
-        "from_ref": "MM_01",
-        "to_ref": "MM_02",
-        "confidence": 0.89
+        "source": "MM_01",
+        "target": "MM_03"
       },
       {
         "type": "precedes",
-        "from_ref": "MM_02",
-        "to_ref": "MM_03",
-        "confidence": 0.88
+        "source": "MM_02",
+        "target": "MM_03"
       },
       {
         "type": "appliesDuring",
-        "from_ref": "MM_03",
-        "to_ref": "MM_04",
-        "confidence": 0.87
+        "source": "MM_04",
+        "target": "S_01"
       },
       {
         "type": "appliesDuring",
-        "from_ref": "MM_03",
-        "to_ref": "MM_05",
-        "confidence": 0.86
+        "source": "MM_05",
+        "target": "S_01"
       },
       {
         "type": "appliesDuring",
-        "from_ref": "MM_03",
-        "to_ref": "MM_06",
-        "confidence": 0.85
+        "source": "MM_06",
+        "target": "S_02"
+      },
+      {
+        "type": "appliesDuring",
+        "source": "MM_06",
+        "target": "S_03"
+      },
+      {
+        "type": "appliesDuring",
+        "source": "MM_06",
+        "target": "S_04"
+      },
+      {
+        "type": "appliesDuring",
+        "source": "MM_06",
+        "target": "S_05"
+      },
+      {
+        "type": "appliesDuring",
+        "source": "MM_06",
+        "target": "S_06"
+      },
+      {
+        "type": "appliesDuring",
+        "source": "MM_06",
+        "target": "S_07"
+      },
+      {
+        "type": "appliesDuring",
+        "source": "MM_06",
+        "target": "S_08"
+      },
+      {
+        "type": "appliesDuring",
+        "source": "MM_06",
+        "target": "S_09"
       }
     ]
   },
@@ -238,5 +529,5 @@
       "char_end": 3551
     }
   ],
-  "timestamp": "2025-11-04T10:43:49.822728+00:00"
+  "timestamp": "2025-11-04T13:48:16.654517+00:00"
 }

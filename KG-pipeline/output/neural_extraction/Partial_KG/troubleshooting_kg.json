@@ -1,12 +1,12 @@
 {
   "document_code": "KG_TROUBLESHOOTING",
-  "ingestion_id": "f69ce884-a38f-4a45-b291-ec4b3bcfd339",
+  "ingestion_id": "4b29fc52-64a9-4eb6-b671-027c55e01c7a",
   "extraction_version": "neural_v1.2",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
     "model": "gpt-4o-mini",
     "prompt_id": "neural_extraction_v1_hardened",
-    "temperature": 0.2,
+    "temperature": 0.15,
     "max_tokens": 1500
   },
   "allowed_types": [
@@ -25,10 +25,10 @@
   ],
   "entities": [
     {
+      "type": "FailureMode",
+      "name": "flow meter blocked",
       "id": "ns:FM/flow_meter_blocked",
-      "type": "FailureMode",
-      "name": "Flow meter blocked",
-      "confidence": 0.95,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -47,10 +47,10 @@
       ]
     },
     {
-      "id": "ns:RA/clean_or_replace_flow_meter",
       "type": "RepairAction",
-      "name": "Clean or replace flow meter",
-      "confidence": 0.92,
+      "name": "clean or replace",
+      "id": "ns:RA/clean_or_replace",
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -69,10 +69,10 @@
       ]
     },
     {
+      "type": "FailureMode",
+      "name": "pyramide plate blocked",
       "id": "ns:FM/pyramide_plate_blocked",
-      "type": "FailureMode",
-      "name": "Pyramide plate blocked",
-      "confidence": 0.93,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -91,10 +91,10 @@
       ]
     },
     {
-      "id": "ns:RA/replace_compact_brewing_unit",
       "type": "RepairAction",
-      "name": "Replace compact brewing unit",
-      "confidence": 0.9,
+      "name": "replace the compact brewing unit",
+      "id": "ns:RA/replace_the_compact_brewing_unit",
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -113,10 +113,10 @@
       ]
     },
     {
+      "type": "FailureMode",
+      "name": "coffee machine is calcified",
       "id": "ns:FM/coffee_machine_is_calcified",
-      "type": "FailureMode",
-      "name": "Coffee machine is calcified",
-      "confidence": 0.94,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -135,10 +135,10 @@
       ]
     },
     {
+      "type": "RepairAction",
+      "name": "descale coffee machine",
       "id": "ns:RA/descale_coffee_machine",
-      "type": "RepairAction",
-      "name": "Descale coffee machine",
-      "confidence": 0.91,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -157,10 +157,10 @@
       ]
     },
     {
+      "type": "FailureMode",
+      "name": "unit leaks",
       "id": "ns:FM/unit_leaks",
-      "type": "FailureMode",
-      "name": "Unit leaks",
-      "confidence": 0.92,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -179,10 +179,10 @@
       ]
     },
     {
+      "type": "RepairAction",
+      "name": "replace defective hoses and seals",
       "id": "ns:RA/replace_defective_hoses_and_seals",
-      "type": "RepairAction",
-      "name": "Replace defective hoses and seals",
-      "confidence": 0.89,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -201,10 +201,10 @@
       ]
     },
     {
+      "type": "FailureMode",
+      "name": "rust visible in water",
       "id": "ns:FM/rust_visible_in_water",
-      "type": "FailureMode",
-      "name": "Rust visible in water",
-      "confidence": 0.88,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -223,10 +223,10 @@
       ]
     },
     {
-      "id": "ns:RA/descale_and_rinse_coffee_machine",
       "type": "RepairAction",
-      "name": "Descale and rinse coffee machine",
-      "confidence": 0.87,
+      "name": "descale and rinse coffee machine again",
+      "id": "ns:RA/descale_and_rinse_coffee_machine_again",
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -245,10 +245,10 @@
       ]
     },
     {
+      "type": "FailureMode",
+      "name": "milk frother damaged",
       "id": "ns:FM/milk_frother_damaged",
-      "type": "FailureMode",
-      "name": "Milk frother damaged",
-      "confidence": 0.9,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -267,10 +267,10 @@
       ]
     },
     {
+      "type": "RepairAction",
+      "name": "replace lid/seal",
       "id": "ns:RA/replace_lidseal",
-      "type": "RepairAction",
-      "name": "Replace lid/seal",
-      "confidence": 0.85,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -289,10 +289,10 @@
       ]
     },
     {
+      "type": "FailureMode",
+      "name": "jug badly scratched",
       "id": "ns:FM/jug_badly_scratched",
-      "type": "FailureMode",
-      "name": "Jug badly scratched",
-      "confidence": 0.89,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -311,10 +311,10 @@
       ]
     },
     {
+      "type": "RepairAction",
+      "name": "replace milk frother",
       "id": "ns:RA/replace_milk_frother",
-      "type": "RepairAction",
-      "name": "Replace milk frother",
-      "confidence": 0.86,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -333,10 +333,10 @@
       ]
     },
     {
+      "type": "FailureMode",
+      "name": "whisks damaged",
       "id": "ns:FM/whisks_damaged",
-      "type": "FailureMode",
-      "name": "Whisks damaged",
-      "confidence": 0.88,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -355,10 +355,10 @@
       ]
     },
     {
+      "type": "RepairAction",
+      "name": "replace whisks",
       "id": "ns:RA/replace_whisks",
-      "type": "RepairAction",
-      "name": "Replace whisks",
-      "confidence": 0.84,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -377,10 +377,10 @@
       ]
     },
     {
-      "id": "ns:FM/coffee_machine_does_not_function",
       "type": "FailureMode",
-      "name": "Coffee machine does not function",
-      "confidence": 0.91,
+      "name": "coffee machine not switch off automatically",
+      "id": "ns:FM/coffee_machine_not_switch_off_automatically",
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -399,10 +399,10 @@
       ]
     },
     {
+      "type": "RepairAction",
+      "name": "replace connector on platform",
       "id": "ns:RA/replace_connector_on_platform",
-      "type": "RepairAction",
-      "name": "Replace connector on platform",
-      "confidence": 0.83,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_2",
@@ -421,10 +421,10 @@
       ]
     },
     {
-      "id": "ns:RA/disassembly",
       "type": "RepairAction",
-      "name": "Disassembly",
-      "confidence": 0.95,
+      "name": "disassembly",
+      "id": "ns:RA/disassembly",
+      "confidence": 1.0,
       "spans": [
         {
           "section_id": "sec_4",
@@ -443,10 +443,10 @@
       ]
     },
     {
-      "id": "ns:Tool/special_disassembly_tool",
       "type": "Tool",
-      "name": "Special disassembly tool",
-      "confidence": 0.92,
+      "name": "disassembly tool",
+      "id": "ns:Tool/disassembly_tool",
+      "confidence": 1.0,
       "spans": [
         {
           "section_id": "sec_4",
@@ -465,10 +465,10 @@
       ]
     },
     {
-      "id": "ns:FM/snap_connections_breaking",
       "type": "FailureMode",
-      "name": "Snap connections breaking",
-      "confidence": 0.89,
+      "name": "risk of fatal electrical shock",
+      "id": "ns:FM/risk_of_fatal_electrical_shock",
+      "confidence": 1.0,
       "spans": [
         {
           "section_id": "sec_4",
@@ -487,32 +487,10 @@
       ]
     },
     {
-      "id": "ns:FM/overtightened_screws",
       "type": "FailureMode",
-      "name": "Overtightened screws",
-      "confidence": 0.87,
-      "spans": [
-        {
-          "section_id": "sec_4",
-          "section_title": "Citiz service manual  52 REPAIRS",
-          "page_start": 4,
-          "page_end": 4,
-          "source_text": "Section: Citiz service manual  52 REPAIRS... (p.4-4)"
-        },
-        {
-          "section_id": "sec_5",
-          "section_title": "Citiz service manual  53 REPAIRS",
-          "page_start": 5,
-          "page_end": 5,
-          "source_text": "Section: Citiz service manual  53 REPAIRS... (p.5-5)"
-        }
-      ]
-    },
-    {
-      "id": "ns:MT/cooling_down_the_coffee_machine",
-      "type": "MaintenanceTask",
-      "name": "Cooling down the coffee machine",
-      "confidence": 0.9,
+      "name": "danger of burns",
+      "id": "ns:FM/danger_of_burns",
+      "confidence": 1.0,
       "spans": [
         {
           "section_id": "sec_4",
@@ -531,94 +509,9 @@
       ]
     }
   ],
-  "relations": [
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/flow_meter_blocked",
-      "to_ref": "ns:RA/clean_or_replace_flow_meter",
-      "confidence": 0.95
-    },
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/pyramide_plate_blocked",
-      "to_ref": "ns:RA/replace_compact_brewing_unit",
-      "confidence": 0.93
-    },
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/coffee_machine_is_calcified",
-      "to_ref": "ns:RA/descale_coffee_machine",
-      "confidence": 0.94
-    },
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/unit_leaks",
-      "to_ref": "ns:RA/replace_compact_brewing_unit",
-      "confidence": 0.92
-    },
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/unit_leaks",
-      "to_ref": "ns:RA/replace_defective_hoses_and_seals",
-      "confidence": 0.89
-    },
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/rust_visible_in_water",
-      "to_ref": "ns:RA/descale_and_rinse_coffee_machine",
-      "confidence": 0.88
-    },
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/milk_frother_damaged",
-      "to_ref": "ns:RA/replace_lidseal",
-      "confidence": 0.9
-    },
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/jug_badly_scratched",
-      "to_ref": "ns:RA/replace_milk_frother",
-      "confidence": 0.89
-    },
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/whisks_damaged",
-      "to_ref": "ns:RA/replace_whisks",
-      "confidence": 0.88
-    },
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/coffee_machine_does_not_function",
-      "to_ref": "ns:RA/replace_connector_on_platform",
-      "confidence": 0.91
-    },
-    {
-      "type": "requiresTool",
-      "from_ref": "ns:RA/disassembly",
-      "to_ref": "ns:Tool/special_disassembly_tool",
-      "confidence": 0.93
-    },
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/snap_connections_breaking",
-      "to_ref": "ns:RA/disassembly",
-      "confidence": 0.88
-    },
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/overtightened_screws",
-      "to_ref": "ns:RA/disassembly",
-      "confidence": 0.85
-    },
-    {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/snap_connections_breaking",
-      "to_ref": "ns:MT/cooling_down_the_coffee_machine",
-      "confidence": 0.91
-    }
-  ],
+  "relations": [],
   "provenance": {
-    "overall_confidence": 0.9,
+    "overall_confidence": 0.5,
     "documents_processed": [
       "3_Diagnostic Rules and failures_Service Manual-49-54.parsed.json"
     ],
@@ -656,25 +549,69 @@
     "notes": "Neural extraction for profile troubleshooting with provenance tracking and semantic normalization"
   },
   "quality": {
-    "json_valid": true,
-    "entities_count": 23,
-    "relations_count": 14,
-    "warnings": [],
-    "overall_confidence": 0.9,
-    "avg_entity_confidence": 0.896,
-    "avg_relation_confidence": 0.904,
+    "json_valid": false,
+    "entities_count": 22,
+    "relations_count": 0,
+    "warnings": [
+      "Relation 0 missing 'type'",
+      "Relation 0 missing 'from_ref'",
+      "Relation 0 missing 'to_ref'",
+      "Relation 0 missing 'confidence'",
+      "Relation 1 missing 'type'",
+      "Relation 1 missing 'from_ref'",
+      "Relation 1 missing 'to_ref'",
+      "Relation 1 missing 'confidence'",
+      "Relation 2 missing 'type'",
+      "Relation 2 missing 'from_ref'",
+      "Relation 2 missing 'to_ref'",
+      "Relation 2 missing 'confidence'",
+      "Relation 3 missing 'type'",
+      "Relation 3 missing 'from_ref'",
+      "Relation 3 missing 'to_ref'",
+      "Relation 3 missing 'confidence'",
+      "Relation 4 missing 'type'",
+      "Relation 4 missing 'from_ref'",
+      "Relation 4 missing 'to_ref'",
+      "Relation 4 missing 'confidence'",
+      "Relation 5 missing 'type'",
+      "Relation 5 missing 'from_ref'",
+      "Relation 5 missing 'to_ref'",
+      "Relation 5 missing 'confidence'",
+      "Relation 6 missing 'type'",
+      "Relation 6 missing 'from_ref'",
+      "Relation 6 missing 'to_ref'",
+      "Relation 6 missing 'confidence'",
+      "Relation 7 missing 'type'",
+      "Relation 7 missing 'from_ref'",
+      "Relation 7 missing 'to_ref'",
+      "Relation 7 missing 'confidence'",
+      "Relation 8 missing 'type'",
+      "Relation 8 missing 'from_ref'",
+      "Relation 8 missing 'to_ref'",
+      "Relation 8 missing 'confidence'",
+      "Relation 0 missing 'type'",
+      "Relation 0 missing 'from_ref'",
+      "Relation 0 missing 'to_ref'",
+      "Relation 0 missing 'confidence'",
+      "Relation 1 missing 'type'",
+      "Relation 1 missing 'from_ref'",
+      "Relation 1 missing 'to_ref'",
+      "Relation 1 missing 'confidence'",
+      "Relation 2 missing 'type'",
+      "Relation 2 missing 'from_ref'",
+      "Relation 2 missing 'to_ref'",
+      "Relation 2 missing 'confidence'"
+    ],
+    "overall_confidence": 0.5,
+    "avg_entity_confidence": 1.0,
+    "avg_relation_confidence": 0,
     "entity_type_distribution": {
       "FailureMode": 11,
       "RepairAction": 10,
-      "Tool": 1,
-      "MaintenanceTask": 1
+      "Tool": 1
     },
-    "relation_type_distribution": {
-      "affects": 12,
-      "requiresTool": 1,
-      "mitigatedBy": 1
-    },
+    "relation_type_distribution": {},
     "profile": "troubleshooting",
-    "generated_at": "2025-11-04T10:44:38.540157+00:00"
+    "generated_at": "2025-11-04T13:49:37.548285+00:00"
   }
 }

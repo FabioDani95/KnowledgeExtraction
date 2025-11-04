@@ -2,10 +2,10 @@
   "extraction": {
     "entities": [
       {
-        "id": "MM_01",
         "type": "MachineMode",
-        "name": "Descaling Mode",
-        "confidence": 0.95,
+        "name": "descaling mode",
+        "id": "MM_01",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_procedure_p12",
@@ -52,10 +52,60 @@
         ]
       },
       {
+        "type": "ProcessStep",
+        "name": "Fill water tank with 0.1l decalcifier and 0.5l water",
         "id": "PS_01",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p12",
+            "section_title": "Citiz service manual  42 MAINTENANCE",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: Citiz service manual  42 MAINTENANCE... (p.12-12)"
+          },
+          {
+            "section_id": "sec_procedure_p13",
+            "section_title": "Citiz service manual  43 MAINTENANCE",
+            "page_start": 13,
+            "page_end": 13,
+            "source_text": "Section: Citiz service manual  43 MAINTENANCE... (p.13-13)"
+          },
+          {
+            "section_id": "sec_procedure_p14",
+            "section_title": "Citiz service manual  44 MAINTENANCE",
+            "page_start": 14,
+            "page_end": 14,
+            "source_text": "Section: Citiz service manual  44 MAINTENANCE... (p.14-14)"
+          },
+          {
+            "section_id": "sec_procedure_p15",
+            "section_title": "Citiz service manual  45 MAINTENANCE",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: Citiz service manual  45 MAINTENANCE... (p.15-15)"
+          },
+          {
+            "section_id": "sec_procedure_p16",
+            "section_title": "Citiz service manual  46 MAINTENANCE",
+            "page_start": 16,
+            "page_end": 16,
+            "source_text": "Section: Citiz service manual  46 MAINTENANCE... (p.16-16)"
+          },
+          {
+            "section_id": "sec_procedure_p17",
+            "section_title": "Citiz service manual  47 MAINTENANCE",
+            "page_start": 17,
+            "page_end": 17,
+            "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
+          }
+        ]
+      },
+      {
         "type": "ProcessStep",
         "name": "Press both coffee buttons simultaneously for at least 3sec",
-        "confidence": 0.9,
+        "id": "PS_02",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_procedure_p12",
@@ -102,10 +152,10 @@
         ]
       },
       {
-        "id": "PS_02",
         "type": "ProcessStep",
         "name": "Press any button to start pump",
-        "confidence": 0.9,
+        "id": "PS_03",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_procedure_p12",
@@ -152,10 +202,110 @@
         ]
       },
       {
-        "id": "PS_03",
         "type": "ProcessStep",
-        "name": "Wait until water tank is empty",
-        "confidence": 0.9,
+        "name": "Rinse and clean water tank thoroughly",
+        "id": "PS_04",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p12",
+            "section_title": "Citiz service manual  42 MAINTENANCE",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: Citiz service manual  42 MAINTENANCE... (p.12-12)"
+          },
+          {
+            "section_id": "sec_procedure_p13",
+            "section_title": "Citiz service manual  43 MAINTENANCE",
+            "page_start": 13,
+            "page_end": 13,
+            "source_text": "Section: Citiz service manual  43 MAINTENANCE... (p.13-13)"
+          },
+          {
+            "section_id": "sec_procedure_p14",
+            "section_title": "Citiz service manual  44 MAINTENANCE",
+            "page_start": 14,
+            "page_end": 14,
+            "source_text": "Section: Citiz service manual  44 MAINTENANCE... (p.14-14)"
+          },
+          {
+            "section_id": "sec_procedure_p15",
+            "section_title": "Citiz service manual  45 MAINTENANCE",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: Citiz service manual  45 MAINTENANCE... (p.15-15)"
+          },
+          {
+            "section_id": "sec_procedure_p16",
+            "section_title": "Citiz service manual  46 MAINTENANCE",
+            "page_start": 16,
+            "page_end": 16,
+            "source_text": "Section: Citiz service manual  46 MAINTENANCE... (p.16-16)"
+          },
+          {
+            "section_id": "sec_procedure_p17",
+            "section_title": "Citiz service manual  47 MAINTENANCE",
+            "page_start": 17,
+            "page_end": 17,
+            "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Eject capsules or check if capsules are removed",
+        "id": "PS_05",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_procedure_p12",
+            "section_title": "Citiz service manual  42 MAINTENANCE",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: Citiz service manual  42 MAINTENANCE... (p.12-12)"
+          },
+          {
+            "section_id": "sec_procedure_p13",
+            "section_title": "Citiz service manual  43 MAINTENANCE",
+            "page_start": 13,
+            "page_end": 13,
+            "source_text": "Section: Citiz service manual  43 MAINTENANCE... (p.13-13)"
+          },
+          {
+            "section_id": "sec_procedure_p14",
+            "section_title": "Citiz service manual  44 MAINTENANCE",
+            "page_start": 14,
+            "page_end": 14,
+            "source_text": "Section: Citiz service manual  44 MAINTENANCE... (p.14-14)"
+          },
+          {
+            "section_id": "sec_procedure_p15",
+            "section_title": "Citiz service manual  45 MAINTENANCE",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: Citiz service manual  45 MAINTENANCE... (p.15-15)"
+          },
+          {
+            "section_id": "sec_procedure_p16",
+            "section_title": "Citiz service manual  46 MAINTENANCE",
+            "page_start": 16,
+            "page_end": 16,
+            "source_text": "Section: Citiz service manual  46 MAINTENANCE... (p.16-16)"
+          },
+          {
+            "section_id": "sec_procedure_p17",
+            "section_title": "Citiz service manual  47 MAINTENANCE",
+            "page_start": 17,
+            "page_end": 17,
+            "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Press any button on a core unit to start pumps",
+        "id": "PS_06",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_procedure_p12",
@@ -204,22 +354,24 @@
     ],
     "relations": [
       {
-        "type": "appliesDuring",
-        "from_ref": "MM_01",
-        "to_ref": "PS_01",
-        "confidence": 0.92
+        "type": "precedes",
+        "source": "PS_01",
+        "target": "PS_02"
       },
       {
         "type": "appliesDuring",
-        "from_ref": "MM_01",
-        "to_ref": "PS_02",
-        "confidence": 0.92
+        "source": "PS_02",
+        "target": "MM_01"
       },
       {
-        "type": "appliesDuring",
-        "from_ref": "MM_01",
-        "to_ref": "PS_03",
-        "confidence": 0.92
+        "type": "precedes",
+        "source": "PS_03",
+        "target": "PS_04"
+      },
+      {
+        "type": "precedes",
+        "source": "PS_05",
+        "target": "PS_06"
       }
     ]
   },
@@ -279,5 +431,5 @@
       "char_end": 14171
     }
   ],
-  "timestamp": "2025-11-04T10:44:12.836671+00:00"
+  "timestamp": "2025-11-04T13:49:08.157996+00:00"
 }

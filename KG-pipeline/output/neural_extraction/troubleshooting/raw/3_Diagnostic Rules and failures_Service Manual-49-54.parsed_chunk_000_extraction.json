@@ -2,10 +2,10 @@
   "extraction": {
     "entities": [
       {
+        "type": "FailureMode",
+        "name": "flow meter blocked",
         "id": "FM_01",
-        "type": "FailureMode",
-        "name": "Flow meter blocked",
-        "confidence": 0.95,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -24,10 +24,10 @@
         ]
       },
       {
+        "type": "RepairAction",
+        "name": "clean or replace",
         "id": "RA_01",
-        "type": "RepairAction",
-        "name": "Clean or replace flow meter",
-        "confidence": 0.92,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -46,10 +46,10 @@
         ]
       },
       {
+        "type": "FailureMode",
+        "name": "pyramide plate blocked",
         "id": "FM_02",
-        "type": "FailureMode",
-        "name": "Pyramide plate blocked",
-        "confidence": 0.93,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -68,10 +68,10 @@
         ]
       },
       {
+        "type": "RepairAction",
+        "name": "replace the compact brewing unit",
         "id": "RA_02",
-        "type": "RepairAction",
-        "name": "Replace compact brewing unit",
-        "confidence": 0.9,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -90,10 +90,10 @@
         ]
       },
       {
+        "type": "FailureMode",
+        "name": "coffee machine is calcified",
         "id": "FM_03",
-        "type": "FailureMode",
-        "name": "Coffee machine is calcified",
-        "confidence": 0.94,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -112,10 +112,10 @@
         ]
       },
       {
+        "type": "RepairAction",
+        "name": "descale coffee machine",
         "id": "RA_03",
-        "type": "RepairAction",
-        "name": "Descale coffee machine",
-        "confidence": 0.91,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -134,10 +134,10 @@
         ]
       },
       {
+        "type": "FailureMode",
+        "name": "unit leaks",
         "id": "FM_04",
-        "type": "FailureMode",
-        "name": "Unit leaks",
-        "confidence": 0.92,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -156,10 +156,10 @@
         ]
       },
       {
+        "type": "RepairAction",
+        "name": "replace defective hoses and seals",
         "id": "RA_04",
-        "type": "RepairAction",
-        "name": "Replace compact brewing unit",
-        "confidence": 0.9,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -178,32 +178,10 @@
         ]
       },
       {
-        "id": "RA_05",
-        "type": "RepairAction",
-        "name": "Replace defective hoses and seals",
-        "confidence": 0.89,
-        "spans": [
-          {
-            "section_id": "sec_2",
-            "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-            "page_start": 2,
-            "page_end": 2,
-            "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-          },
-          {
-            "section_id": "sec_3",
-            "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-            "page_start": 3,
-            "page_end": 3,
-            "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-          }
-        ]
-      },
-      {
+        "type": "FailureMode",
+        "name": "rust visible in water",
         "id": "FM_05",
-        "type": "FailureMode",
-        "name": "Rust visible in water",
-        "confidence": 0.88,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -222,10 +200,10 @@
         ]
       },
       {
-        "id": "RA_06",
         "type": "RepairAction",
-        "name": "Descale and rinse coffee machine",
-        "confidence": 0.87,
+        "name": "descale and rinse coffee machine again",
+        "id": "RA_05",
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -244,10 +222,10 @@
         ]
       },
       {
+        "type": "FailureMode",
+        "name": "milk frother damaged",
         "id": "FM_06",
-        "type": "FailureMode",
-        "name": "Milk frother damaged",
-        "confidence": 0.9,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -266,10 +244,10 @@
         ]
       },
       {
-        "id": "RA_07",
         "type": "RepairAction",
-        "name": "Replace lid/seal",
-        "confidence": 0.85,
+        "name": "replace lid/seal",
+        "id": "RA_06",
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -288,10 +266,10 @@
         ]
       },
       {
+        "type": "FailureMode",
+        "name": "jug badly scratched",
         "id": "FM_07",
-        "type": "FailureMode",
-        "name": "Jug badly scratched",
-        "confidence": 0.89,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -310,10 +288,10 @@
         ]
       },
       {
-        "id": "RA_08",
         "type": "RepairAction",
-        "name": "Replace milk frother",
-        "confidence": 0.86,
+        "name": "replace milk frother",
+        "id": "RA_07",
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -332,10 +310,10 @@
         ]
       },
       {
+        "type": "FailureMode",
+        "name": "whisks damaged",
         "id": "FM_08",
-        "type": "FailureMode",
-        "name": "Whisks damaged",
-        "confidence": 0.88,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -354,10 +332,10 @@
         ]
       },
       {
-        "id": "RA_09",
         "type": "RepairAction",
-        "name": "Replace whisks",
-        "confidence": 0.84,
+        "name": "replace whisks",
+        "id": "RA_08",
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -376,10 +354,10 @@
         ]
       },
       {
+        "type": "FailureMode",
+        "name": "coffee machine not switch off automatically",
         "id": "FM_09",
-        "type": "FailureMode",
-        "name": "Coffee machine does not function",
-        "confidence": 0.91,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -398,10 +376,10 @@
         ]
       },
       {
-        "id": "RA_10",
         "type": "RepairAction",
-        "name": "Replace connector on platform",
-        "confidence": 0.83,
+        "name": "replace connector on platform",
+        "id": "RA_09",
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_2",
@@ -422,64 +400,49 @@
     ],
     "relations": [
       {
-        "type": "affects",
-        "from_ref": "FM_01",
-        "to_ref": "RA_01",
-        "confidence": 0.95
+        "source": "FM_01",
+        "target": "RA_01",
+        "relation": "mitigatedBy"
       },
       {
-        "type": "affects",
-        "from_ref": "FM_02",
-        "to_ref": "RA_02",
-        "confidence": 0.93
+        "source": "FM_02",
+        "target": "RA_02",
+        "relation": "mitigatedBy"
       },
       {
-        "type": "affects",
-        "from_ref": "FM_03",
-        "to_ref": "RA_03",
-        "confidence": 0.94
+        "source": "FM_03",
+        "target": "RA_03",
+        "relation": "mitigatedBy"
       },
       {
-        "type": "affects",
-        "from_ref": "FM_04",
-        "to_ref": "RA_04",
-        "confidence": 0.92
+        "source": "FM_04",
+        "target": "RA_04",
+        "relation": "mitigatedBy"
       },
       {
-        "type": "affects",
-        "from_ref": "FM_04",
-        "to_ref": "RA_05",
-        "confidence": 0.89
+        "source": "FM_05",
+        "target": "RA_05",
+        "relation": "mitigatedBy"
       },
       {
-        "type": "affects",
-        "from_ref": "FM_05",
-        "to_ref": "RA_06",
-        "confidence": 0.88
+        "source": "FM_06",
+        "target": "RA_06",
+        "relation": "mitigatedBy"
       },
       {
-        "type": "affects",
-        "from_ref": "FM_06",
-        "to_ref": "RA_07",
-        "confidence": 0.9
+        "source": "FM_07",
+        "target": "RA_07",
+        "relation": "mitigatedBy"
       },
       {
-        "type": "affects",
-        "from_ref": "FM_07",
-        "to_ref": "RA_08",
-        "confidence": 0.89
+        "source": "FM_08",
+        "target": "RA_08",
+        "relation": "mitigatedBy"
       },
       {
-        "type": "affects",
-        "from_ref": "FM_08",
-        "to_ref": "RA_09",
-        "confidence": 0.88
-      },
-      {
-        "type": "affects",
-        "from_ref": "FM_09",
-        "to_ref": "RA_10",
-        "confidence": 0.91
+        "source": "FM_09",
+        "target": "RA_09",
+        "relation": "mitigatedBy"
       }
     ]
   },
@@ -503,5 +466,5 @@
       "char_end": 2688
     }
   ],
-  "timestamp": "2025-11-04T10:44:33.041671+00:00"
+  "timestamp": "2025-11-04T13:49:31.355283+00:00"
 }

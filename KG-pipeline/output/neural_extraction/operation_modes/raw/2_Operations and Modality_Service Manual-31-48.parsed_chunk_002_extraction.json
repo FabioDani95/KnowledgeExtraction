@@ -2,53 +2,9 @@
   "extraction": {
     "entities": [
       {
-        "id": "PM_01",
-        "type": "MachineMode",
+        "type": "ProcessStep",
         "name": "Empty water system",
-        "confidence": 0.95,
-        "spans": [
-          {
-            "section_id": "sec_procedure_p7",
-            "section_title": "Citiz service manual  37 OPERATION",
-            "page_start": 7,
-            "page_end": 7,
-            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
-          },
-          {
-            "section_id": "sec_procedure_p8",
-            "section_title": "Citiz service manual  38 MAINTENANCE",
-            "page_start": 8,
-            "page_end": 8,
-            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
-          },
-          {
-            "section_id": "sec_procedure_p9",
-            "section_title": "Citiz service manual  39 MAINTENANCE",
-            "page_start": 9,
-            "page_end": 9,
-            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
-          },
-          {
-            "section_id": "sec_procedure_p10",
-            "section_title": "Citiz service manual  40 MAINTENANCE",
-            "page_start": 10,
-            "page_end": 10,
-            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
-          },
-          {
-            "section_id": "sec_generic_p11",
-            "section_title": "Operational content (page 11)",
-            "page_start": 11,
-            "page_end": 11,
-            "source_text": "Section: Operational content (page 11)... (p.11-11)"
-          }
-        ]
-      },
-      {
         "id": "PS_01",
-        "type": "ProcessStep",
-        "name": "Switch off coffee machine",
-        "confidence": 0.92,
         "spans": [
           {
             "section_id": "sec_procedure_p7",
@@ -88,10 +44,9 @@
         ]
       },
       {
+        "type": "ProcessStep",
+        "name": "Daily maintenance and cleaning",
         "id": "PS_02",
-        "type": "ProcessStep",
-        "name": "Remove water tank",
-        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_procedure_p7",
@@ -131,10 +86,9 @@
         ]
       },
       {
+        "type": "ProcessStep",
+        "name": "After last coffee or at the end of day",
         "id": "PS_03",
-        "type": "ProcessStep",
-        "name": "Place a beaker under the coffee outlet",
-        "confidence": 0.89,
         "spans": [
           {
             "section_id": "sec_procedure_p7",
@@ -174,10 +128,9 @@
         ]
       },
       {
+        "type": "ProcessStep",
+        "name": "Milk frother of model Citiz & milk",
         "id": "PS_04",
-        "type": "ProcessStep",
-        "name": "Press and hold button 'small cup'",
-        "confidence": 0.91,
         "spans": [
           {
             "section_id": "sec_procedure_p7",
@@ -217,96 +170,9 @@
         ]
       },
       {
+        "type": "ProcessStep",
+        "name": "Descaling",
         "id": "PS_05",
-        "type": "ProcessStep",
-        "name": "Switch the coffee machine on again",
-        "confidence": 0.93,
-        "spans": [
-          {
-            "section_id": "sec_procedure_p7",
-            "section_title": "Citiz service manual  37 OPERATION",
-            "page_start": 7,
-            "page_end": 7,
-            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
-          },
-          {
-            "section_id": "sec_procedure_p8",
-            "section_title": "Citiz service manual  38 MAINTENANCE",
-            "page_start": 8,
-            "page_end": 8,
-            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
-          },
-          {
-            "section_id": "sec_procedure_p9",
-            "section_title": "Citiz service manual  39 MAINTENANCE",
-            "page_start": 9,
-            "page_end": 9,
-            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
-          },
-          {
-            "section_id": "sec_procedure_p10",
-            "section_title": "Citiz service manual  40 MAINTENANCE",
-            "page_start": 10,
-            "page_end": 10,
-            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
-          },
-          {
-            "section_id": "sec_generic_p11",
-            "section_title": "Operational content (page 11)",
-            "page_start": 11,
-            "page_end": 11,
-            "source_text": "Section: Operational content (page 11)... (p.11-11)"
-          }
-        ]
-      },
-      {
-        "id": "PS_06",
-        "type": "ProcessStep",
-        "name": "Release button 'small cup'",
-        "confidence": 0.88,
-        "spans": [
-          {
-            "section_id": "sec_procedure_p7",
-            "section_title": "Citiz service manual  37 OPERATION",
-            "page_start": 7,
-            "page_end": 7,
-            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
-          },
-          {
-            "section_id": "sec_procedure_p8",
-            "section_title": "Citiz service manual  38 MAINTENANCE",
-            "page_start": 8,
-            "page_end": 8,
-            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
-          },
-          {
-            "section_id": "sec_procedure_p9",
-            "section_title": "Citiz service manual  39 MAINTENANCE",
-            "page_start": 9,
-            "page_end": 9,
-            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
-          },
-          {
-            "section_id": "sec_procedure_p10",
-            "section_title": "Citiz service manual  40 MAINTENANCE",
-            "page_start": 10,
-            "page_end": 10,
-            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
-          },
-          {
-            "section_id": "sec_generic_p11",
-            "section_title": "Operational content (page 11)",
-            "page_start": 11,
-            "page_end": 11,
-            "source_text": "Section: Operational content (page 11)... (p.11-11)"
-          }
-        ]
-      },
-      {
-        "id": "PS_07",
-        "type": "ProcessStep",
-        "name": "Switch off the coffee machine",
-        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_procedure_p7",
@@ -348,46 +214,24 @@
     ],
     "relations": [
       {
-        "type": "appliesDuring",
-        "from_ref": "PM_01",
-        "to_ref": "PS_01",
-        "confidence": 0.94
+        "type": "precedes",
+        "source": "PS_01",
+        "target": "PS_02"
       },
       {
-        "type": "appliesDuring",
-        "from_ref": "PM_01",
-        "to_ref": "PS_02",
-        "confidence": 0.93
+        "type": "precedes",
+        "source": "PS_02",
+        "target": "PS_03"
       },
       {
-        "type": "appliesDuring",
-        "from_ref": "PM_01",
-        "to_ref": "PS_03",
-        "confidence": 0.91
+        "type": "precedes",
+        "source": "PS_03",
+        "target": "PS_04"
       },
       {
-        "type": "appliesDuring",
-        "from_ref": "PM_01",
-        "to_ref": "PS_04",
-        "confidence": 0.92
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "PM_01",
-        "to_ref": "PS_05",
-        "confidence": 0.9
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "PM_01",
-        "to_ref": "PS_06",
-        "confidence": 0.89
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "PM_01",
-        "to_ref": "PS_07",
-        "confidence": 0.88
+        "type": "precedes",
+        "source": "PS_04",
+        "target": "PS_05"
       }
     ]
   },
@@ -438,5 +282,5 @@
       "char_end": 10835
     }
   ],
-  "timestamp": "2025-11-04T10:44:07.775817+00:00"
+  "timestamp": "2025-11-04T13:48:57.390475+00:00"
 }

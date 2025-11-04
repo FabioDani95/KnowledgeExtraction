@@ -2,9 +2,9 @@
   "extraction": {
     "entities": [
       {
-        "id": "C_01",
-        "type": "Component",
-        "name": "Button prints",
+        "id": "PR_01",
+        "type": "Product",
+        "name": "Citiz",
         "confidence": 0.95,
         "spans": [
           {
@@ -87,96 +87,10 @@
         ]
       },
       {
-        "id": "C_02",
-        "type": "Component",
-        "name": "Capsule bay",
-        "confidence": 0.95,
-        "spans": [
-          {
-            "section_id": "sec_0",
-            "section_title": "Preface",
-            "page_start": 2,
-            "page_end": 12,
-            "source_text": "Section: Preface... (p.2-12)"
-          },
-          {
-            "section_id": "sec_3_1_1",
-            "section_title": "3.1.1 Interior view ­ core unit, D­range",
-            "page_start": 2,
-            "page_end": 3,
-            "source_text": "Section: 3.1.1 Interior view ­ core unit, D­range... (p.2-3)"
-          },
-          {
-            "section_id": "sec_3_2",
-            "section_title": "3.2 Overview ­ core unit, C­range",
-            "page_start": 3,
-            "page_end": 5,
-            "source_text": "Section: 3.2 Overview ­ core unit, C­range... (p.3-5)"
-          },
-          {
-            "section_id": "sec_3_2_1",
-            "section_title": "3.2.1 Interior view ­ core unit, C­range",
-            "page_start": 4,
-            "page_end": 5,
-            "source_text": "Section: 3.2.1 Interior view ­ core unit, C­range... (p.4-5)"
-          },
-          {
-            "section_id": "sec_3_3",
-            "section_title": "3.3 Overview ­ model Citiz",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: 3.3 Overview ­ model Citiz... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_3_the_core_units_of",
-            "section_title": "The core units of",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: The core units of... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_3_citiz_service_manual_14_main_components",
-            "section_title": "Citiz service manual  14 MAIN COMPONENTS",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: Citiz service manual  14 MAIN COMPONENTS... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_4",
-            "section_title": "3.4 Overview ­ model Citiz & milk",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: 3.4 Overview ­ model Citiz & milk... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_the_core_units_of",
-            "section_title": "The core units of",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: The core units of... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_citiz_service_manual_15_main_components",
-            "section_title": "Citiz service manual  15 MAIN COMPONENTS",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: Citiz service manual  15 MAIN COMPONENTS... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_1",
-            "section_title": "3.4.1 Overview ­ milk frother AERO3",
-            "page_start": 7,
-            "page_end": 8,
-            "source_text": "Section: 3.4.1 Overview ­ milk frother AERO3... (p.7-8)"
-          }
-        ]
-      },
-      {
-        "id": "C_03",
-        "type": "Component",
+        "id": "CT_01",
+        "type": "ComponentType",
         "name": "Brewing unit",
-        "ofType_ref": "CT_TMBU",
-        "confidence": 0.92,
+        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_0",
@@ -258,11 +172,10 @@
         ]
       },
       {
-        "id": "C_04",
-        "type": "Component",
+        "id": "CT_02",
+        "type": "ComponentType",
         "name": "Pump",
-        "ofType_ref": "CT_Invensys_CP4_SP",
-        "confidence": 0.93,
+        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_0",
@@ -344,11 +257,10 @@
         ]
       },
       {
-        "id": "C_05",
-        "type": "Component",
+        "id": "CT_03",
+        "type": "ComponentType",
         "name": "Flowmeter",
-        "ofType_ref": "CT_FHKSC12",
-        "confidence": 0.91,
+        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_0",
@@ -430,8 +342,8 @@
         ]
       },
       {
-        "id": "C_06",
-        "type": "Component",
+        "id": "CT_04",
+        "type": "ComponentType",
         "name": "Electronic control board",
         "confidence": 0.9,
         "spans": [
@@ -515,11 +427,10 @@
         ]
       },
       {
-        "id": "C_07",
-        "type": "Component",
+        "id": "CT_05",
+        "type": "ComponentType",
         "name": "Self priming device",
-        "ofType_ref": "CT_APD",
-        "confidence": 0.89,
+        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_0",
@@ -601,10 +512,10 @@
         ]
       },
       {
-        "id": "C_08",
-        "type": "Component",
-        "name": "NTC temperature sensor",
-        "confidence": 0.88,
+        "id": "CT_06",
+        "type": "ComponentType",
+        "name": "Temperature sensor",
+        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_0",
@@ -686,11 +597,10 @@
         ]
       },
       {
-        "id": "C_09",
-        "type": "Component",
+        "id": "CT_07",
+        "type": "ComponentType",
         "name": "Thermoblock",
-        "ofType_ref": "CT_EF_2003",
-        "confidence": 0.94,
+        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_0",
@@ -772,10 +682,10 @@
         ]
       },
       {
-        "id": "C_10",
-        "type": "Component",
+        "id": "CT_08",
+        "type": "ComponentType",
         "name": "Drip grid",
-        "confidence": 0.87,
+        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_0",
@@ -857,179 +767,8 @@
         ]
       },
       {
-        "id": "C_11",
-        "type": "Component",
-        "name": "Drip tray",
-        "confidence": 0.86,
-        "spans": [
-          {
-            "section_id": "sec_0",
-            "section_title": "Preface",
-            "page_start": 2,
-            "page_end": 12,
-            "source_text": "Section: Preface... (p.2-12)"
-          },
-          {
-            "section_id": "sec_3_1_1",
-            "section_title": "3.1.1 Interior view ­ core unit, D­range",
-            "page_start": 2,
-            "page_end": 3,
-            "source_text": "Section: 3.1.1 Interior view ­ core unit, D­range... (p.2-3)"
-          },
-          {
-            "section_id": "sec_3_2",
-            "section_title": "3.2 Overview ­ core unit, C­range",
-            "page_start": 3,
-            "page_end": 5,
-            "source_text": "Section: 3.2 Overview ­ core unit, C­range... (p.3-5)"
-          },
-          {
-            "section_id": "sec_3_2_1",
-            "section_title": "3.2.1 Interior view ­ core unit, C­range",
-            "page_start": 4,
-            "page_end": 5,
-            "source_text": "Section: 3.2.1 Interior view ­ core unit, C­range... (p.4-5)"
-          },
-          {
-            "section_id": "sec_3_3",
-            "section_title": "3.3 Overview ­ model Citiz",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: 3.3 Overview ­ model Citiz... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_3_the_core_units_of",
-            "section_title": "The core units of",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: The core units of... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_3_citiz_service_manual_14_main_components",
-            "section_title": "Citiz service manual  14 MAIN COMPONENTS",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: Citiz service manual  14 MAIN COMPONENTS... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_4",
-            "section_title": "3.4 Overview ­ model Citiz & milk",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: 3.4 Overview ­ model Citiz & milk... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_the_core_units_of",
-            "section_title": "The core units of",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: The core units of... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_citiz_service_manual_15_main_components",
-            "section_title": "Citiz service manual  15 MAIN COMPONENTS",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: Citiz service manual  15 MAIN COMPONENTS... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_1",
-            "section_title": "3.4.1 Overview ­ milk frother AERO3",
-            "page_start": 7,
-            "page_end": 8,
-            "source_text": "Section: 3.4.1 Overview ­ milk frother AERO3... (p.7-8)"
-          }
-        ]
-      },
-      {
-        "id": "C_12",
-        "type": "Component",
-        "name": "Core unit",
-        "ofType_ref": "CT_C_range",
-        "confidence": 0.95,
-        "spans": [
-          {
-            "section_id": "sec_0",
-            "section_title": "Preface",
-            "page_start": 2,
-            "page_end": 12,
-            "source_text": "Section: Preface... (p.2-12)"
-          },
-          {
-            "section_id": "sec_3_1_1",
-            "section_title": "3.1.1 Interior view ­ core unit, D­range",
-            "page_start": 2,
-            "page_end": 3,
-            "source_text": "Section: 3.1.1 Interior view ­ core unit, D­range... (p.2-3)"
-          },
-          {
-            "section_id": "sec_3_2",
-            "section_title": "3.2 Overview ­ core unit, C­range",
-            "page_start": 3,
-            "page_end": 5,
-            "source_text": "Section: 3.2 Overview ­ core unit, C­range... (p.3-5)"
-          },
-          {
-            "section_id": "sec_3_2_1",
-            "section_title": "3.2.1 Interior view ­ core unit, C­range",
-            "page_start": 4,
-            "page_end": 5,
-            "source_text": "Section: 3.2.1 Interior view ­ core unit, C­range... (p.4-5)"
-          },
-          {
-            "section_id": "sec_3_3",
-            "section_title": "3.3 Overview ­ model Citiz",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: 3.3 Overview ­ model Citiz... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_3_the_core_units_of",
-            "section_title": "The core units of",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: The core units of... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_3_citiz_service_manual_14_main_components",
-            "section_title": "Citiz service manual  14 MAIN COMPONENTS",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: Citiz service manual  14 MAIN COMPONENTS... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_4",
-            "section_title": "3.4 Overview ­ model Citiz & milk",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: 3.4 Overview ­ model Citiz & milk... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_the_core_units_of",
-            "section_title": "The core units of",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: The core units of... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_citiz_service_manual_15_main_components",
-            "section_title": "Citiz service manual  15 MAIN COMPONENTS",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: Citiz service manual  15 MAIN COMPONENTS... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_1",
-            "section_title": "3.4.1 Overview ­ milk frother AERO3",
-            "page_start": 7,
-            "page_end": 8,
-            "source_text": "Section: 3.4.1 Overview ­ milk frother AERO3... (p.7-8)"
-          }
-        ]
-      },
-      {
-        "id": "C_13",
-        "type": "Component",
+        "id": "CT_09",
+        "type": "ComponentType",
         "name": "Water tank",
         "confidence": 0.9,
         "spans": [
@@ -1113,266 +852,182 @@
         ]
       },
       {
-        "id": "C_14",
-        "type": "Component",
-        "name": "Water tank cover",
-        "confidence": 0.89,
-        "spans": [
-          {
-            "section_id": "sec_0",
-            "section_title": "Preface",
-            "page_start": 2,
-            "page_end": 12,
-            "source_text": "Section: Preface... (p.2-12)"
-          },
-          {
-            "section_id": "sec_3_1_1",
-            "section_title": "3.1.1 Interior view ­ core unit, D­range",
-            "page_start": 2,
-            "page_end": 3,
-            "source_text": "Section: 3.1.1 Interior view ­ core unit, D­range... (p.2-3)"
-          },
-          {
-            "section_id": "sec_3_2",
-            "section_title": "3.2 Overview ­ core unit, C­range",
-            "page_start": 3,
-            "page_end": 5,
-            "source_text": "Section: 3.2 Overview ­ core unit, C­range... (p.3-5)"
-          },
-          {
-            "section_id": "sec_3_2_1",
-            "section_title": "3.2.1 Interior view ­ core unit, C­range",
-            "page_start": 4,
-            "page_end": 5,
-            "source_text": "Section: 3.2.1 Interior view ­ core unit, C­range... (p.4-5)"
-          },
-          {
-            "section_id": "sec_3_3",
-            "section_title": "3.3 Overview ­ model Citiz",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: 3.3 Overview ­ model Citiz... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_3_the_core_units_of",
-            "section_title": "The core units of",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: The core units of... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_3_citiz_service_manual_14_main_components",
-            "section_title": "Citiz service manual  14 MAIN COMPONENTS",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: Citiz service manual  14 MAIN COMPONENTS... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_4",
-            "section_title": "3.4 Overview ­ model Citiz & milk",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: 3.4 Overview ­ model Citiz & milk... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_the_core_units_of",
-            "section_title": "The core units of",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: The core units of... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_citiz_service_manual_15_main_components",
-            "section_title": "Citiz service manual  15 MAIN COMPONENTS",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: Citiz service manual  15 MAIN COMPONENTS... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_1",
-            "section_title": "3.4.1 Overview ­ milk frother AERO3",
-            "page_start": 7,
-            "page_end": 8,
-            "source_text": "Section: 3.4.1 Overview ­ milk frother AERO3... (p.7-8)"
-          }
-        ]
-      },
-      {
-        "id": "C_15",
-        "type": "Component",
-        "name": "Power cord",
-        "confidence": 0.88,
-        "spans": [
-          {
-            "section_id": "sec_0",
-            "section_title": "Preface",
-            "page_start": 2,
-            "page_end": 12,
-            "source_text": "Section: Preface... (p.2-12)"
-          },
-          {
-            "section_id": "sec_3_1_1",
-            "section_title": "3.1.1 Interior view ­ core unit, D­range",
-            "page_start": 2,
-            "page_end": 3,
-            "source_text": "Section: 3.1.1 Interior view ­ core unit, D­range... (p.2-3)"
-          },
-          {
-            "section_id": "sec_3_2",
-            "section_title": "3.2 Overview ­ core unit, C­range",
-            "page_start": 3,
-            "page_end": 5,
-            "source_text": "Section: 3.2 Overview ­ core unit, C­range... (p.3-5)"
-          },
-          {
-            "section_id": "sec_3_2_1",
-            "section_title": "3.2.1 Interior view ­ core unit, C­range",
-            "page_start": 4,
-            "page_end": 5,
-            "source_text": "Section: 3.2.1 Interior view ­ core unit, C­range... (p.4-5)"
-          },
-          {
-            "section_id": "sec_3_3",
-            "section_title": "3.3 Overview ­ model Citiz",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: 3.3 Overview ­ model Citiz... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_3_the_core_units_of",
-            "section_title": "The core units of",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: The core units of... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_3_citiz_service_manual_14_main_components",
-            "section_title": "Citiz service manual  14 MAIN COMPONENTS",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: Citiz service manual  14 MAIN COMPONENTS... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_4",
-            "section_title": "3.4 Overview ­ model Citiz & milk",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: 3.4 Overview ­ model Citiz & milk... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_the_core_units_of",
-            "section_title": "The core units of",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: The core units of... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_citiz_service_manual_15_main_components",
-            "section_title": "Citiz service manual  15 MAIN COMPONENTS",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: Citiz service manual  15 MAIN COMPONENTS... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_1",
-            "section_title": "3.4.1 Overview ­ milk frother AERO3",
-            "page_start": 7,
-            "page_end": 8,
-            "source_text": "Section: 3.4.1 Overview ­ milk frother AERO3... (p.7-8)"
-          }
-        ]
-      },
-      {
-        "id": "C_16",
-        "type": "Component",
-        "name": "ON/OFF switch",
-        "confidence": 0.87,
-        "spans": [
-          {
-            "section_id": "sec_0",
-            "section_title": "Preface",
-            "page_start": 2,
-            "page_end": 12,
-            "source_text": "Section: Preface... (p.2-12)"
-          },
-          {
-            "section_id": "sec_3_1_1",
-            "section_title": "3.1.1 Interior view ­ core unit, D­range",
-            "page_start": 2,
-            "page_end": 3,
-            "source_text": "Section: 3.1.1 Interior view ­ core unit, D­range... (p.2-3)"
-          },
-          {
-            "section_id": "sec_3_2",
-            "section_title": "3.2 Overview ­ core unit, C­range",
-            "page_start": 3,
-            "page_end": 5,
-            "source_text": "Section: 3.2 Overview ­ core unit, C­range... (p.3-5)"
-          },
-          {
-            "section_id": "sec_3_2_1",
-            "section_title": "3.2.1 Interior view ­ core unit, C­range",
-            "page_start": 4,
-            "page_end": 5,
-            "source_text": "Section: 3.2.1 Interior view ­ core unit, C­range... (p.4-5)"
-          },
-          {
-            "section_id": "sec_3_3",
-            "section_title": "3.3 Overview ­ model Citiz",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: 3.3 Overview ­ model Citiz... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_3_the_core_units_of",
-            "section_title": "The core units of",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: The core units of... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_3_citiz_service_manual_14_main_components",
-            "section_title": "Citiz service manual  14 MAIN COMPONENTS",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: Citiz service manual  14 MAIN COMPONENTS... (p.5-6)"
-          },
-          {
-            "section_id": "sec_3_4",
-            "section_title": "3.4 Overview ­ model Citiz & milk",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: 3.4 Overview ­ model Citiz & milk... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_the_core_units_of",
-            "section_title": "The core units of",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: The core units of... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_citiz_service_manual_15_main_components",
-            "section_title": "Citiz service manual  15 MAIN COMPONENTS",
-            "page_start": 6,
-            "page_end": 8,
-            "source_text": "Section: Citiz service manual  15 MAIN COMPONENTS... (p.6-8)"
-          },
-          {
-            "section_id": "sec_3_4_1",
-            "section_title": "3.4.1 Overview ­ milk frother AERO3",
-            "page_start": 7,
-            "page_end": 8,
-            "source_text": "Section: 3.4.1 Overview ­ milk frother AERO3... (p.7-8)"
-          }
-        ]
-      },
-      {
-        "id": "C_17",
-        "type": "Component",
+        "id": "CT_10",
+        "type": "ComponentType",
         "name": "Milk frother",
-        "ofType_ref": "CT_Aero_3",
-        "confidence": 0.92,
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_0",
+            "section_title": "Preface",
+            "page_start": 2,
+            "page_end": 12,
+            "source_text": "Section: Preface... (p.2-12)"
+          },
+          {
+            "section_id": "sec_3_1_1",
+            "section_title": "3.1.1 Interior view ­ core unit, D­range",
+            "page_start": 2,
+            "page_end": 3,
+            "source_text": "Section: 3.1.1 Interior view ­ core unit, D­range... (p.2-3)"
+          },
+          {
+            "section_id": "sec_3_2",
+            "section_title": "3.2 Overview ­ core unit, C­range",
+            "page_start": 3,
+            "page_end": 5,
+            "source_text": "Section: 3.2 Overview ­ core unit, C­range... (p.3-5)"
+          },
+          {
+            "section_id": "sec_3_2_1",
+            "section_title": "3.2.1 Interior view ­ core unit, C­range",
+            "page_start": 4,
+            "page_end": 5,
+            "source_text": "Section: 3.2.1 Interior view ­ core unit, C­range... (p.4-5)"
+          },
+          {
+            "section_id": "sec_3_3",
+            "section_title": "3.3 Overview ­ model Citiz",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: 3.3 Overview ­ model Citiz... (p.5-6)"
+          },
+          {
+            "section_id": "sec_3_3_the_core_units_of",
+            "section_title": "The core units of",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: The core units of... (p.5-6)"
+          },
+          {
+            "section_id": "sec_3_3_citiz_service_manual_14_main_components",
+            "section_title": "Citiz service manual  14 MAIN COMPONENTS",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  14 MAIN COMPONENTS... (p.5-6)"
+          },
+          {
+            "section_id": "sec_3_4",
+            "section_title": "3.4 Overview ­ model Citiz & milk",
+            "page_start": 6,
+            "page_end": 8,
+            "source_text": "Section: 3.4 Overview ­ model Citiz & milk... (p.6-8)"
+          },
+          {
+            "section_id": "sec_3_4_the_core_units_of",
+            "section_title": "The core units of",
+            "page_start": 6,
+            "page_end": 8,
+            "source_text": "Section: The core units of... (p.6-8)"
+          },
+          {
+            "section_id": "sec_3_4_citiz_service_manual_15_main_components",
+            "section_title": "Citiz service manual  15 MAIN COMPONENTS",
+            "page_start": 6,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  15 MAIN COMPONENTS... (p.6-8)"
+          },
+          {
+            "section_id": "sec_3_4_1",
+            "section_title": "3.4.1 Overview ­ milk frother AERO3",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: 3.4.1 Overview ­ milk frother AERO3... (p.7-8)"
+          }
+        ]
+      },
+      {
+        "id": "PS_01",
+        "type": "ParameterSpec",
+        "name": "Milk level",
+        "nominal_value": 2,
+        "unit_raw": "L",
+        "confidence": 0.85,
+        "spans": [
+          {
+            "section_id": "sec_0",
+            "section_title": "Preface",
+            "page_start": 2,
+            "page_end": 12,
+            "source_text": "Section: Preface... (p.2-12)"
+          },
+          {
+            "section_id": "sec_3_1_1",
+            "section_title": "3.1.1 Interior view ­ core unit, D­range",
+            "page_start": 2,
+            "page_end": 3,
+            "source_text": "Section: 3.1.1 Interior view ­ core unit, D­range... (p.2-3)"
+          },
+          {
+            "section_id": "sec_3_2",
+            "section_title": "3.2 Overview ­ core unit, C­range",
+            "page_start": 3,
+            "page_end": 5,
+            "source_text": "Section: 3.2 Overview ­ core unit, C­range... (p.3-5)"
+          },
+          {
+            "section_id": "sec_3_2_1",
+            "section_title": "3.2.1 Interior view ­ core unit, C­range",
+            "page_start": 4,
+            "page_end": 5,
+            "source_text": "Section: 3.2.1 Interior view ­ core unit, C­range... (p.4-5)"
+          },
+          {
+            "section_id": "sec_3_3",
+            "section_title": "3.3 Overview ­ model Citiz",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: 3.3 Overview ­ model Citiz... (p.5-6)"
+          },
+          {
+            "section_id": "sec_3_3_the_core_units_of",
+            "section_title": "The core units of",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: The core units of... (p.5-6)"
+          },
+          {
+            "section_id": "sec_3_3_citiz_service_manual_14_main_components",
+            "section_title": "Citiz service manual  14 MAIN COMPONENTS",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  14 MAIN COMPONENTS... (p.5-6)"
+          },
+          {
+            "section_id": "sec_3_4",
+            "section_title": "3.4 Overview ­ model Citiz & milk",
+            "page_start": 6,
+            "page_end": 8,
+            "source_text": "Section: 3.4 Overview ­ model Citiz & milk... (p.6-8)"
+          },
+          {
+            "section_id": "sec_3_4_the_core_units_of",
+            "section_title": "The core units of",
+            "page_start": 6,
+            "page_end": 8,
+            "source_text": "Section: The core units of... (p.6-8)"
+          },
+          {
+            "section_id": "sec_3_4_citiz_service_manual_15_main_components",
+            "section_title": "Citiz service manual  15 MAIN COMPONENTS",
+            "page_start": 6,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  15 MAIN COMPONENTS... (p.6-8)"
+          },
+          {
+            "section_id": "sec_3_4_1",
+            "section_title": "3.4.1 Overview ­ milk frother AERO3",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: 3.4.1 Overview ­ milk frother AERO3... (p.7-8)"
+          }
+        ]
+      },
+      {
+        "id": "UN_01",
+        "type": "Unit",
+        "name": "L",
+        "confidence": 0.85,
         "spans": [
           {
             "section_id": "sec_0",
@@ -1457,98 +1112,74 @@
     "relations": [
       {
         "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_01",
-        "confidence": 0.85
+        "from_ref": "PR_01",
+        "to_ref": "CT_01",
+        "confidence": 0.9
       },
       {
         "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_02",
-        "confidence": 0.85
+        "from_ref": "PR_01",
+        "to_ref": "CT_02",
+        "confidence": 0.9
       },
       {
         "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_03",
-        "confidence": 0.85
+        "from_ref": "PR_01",
+        "to_ref": "CT_03",
+        "confidence": 0.9
       },
       {
         "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_04",
-        "confidence": 0.85
+        "from_ref": "PR_01",
+        "to_ref": "CT_04",
+        "confidence": 0.9
       },
       {
         "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_05",
-        "confidence": 0.85
+        "from_ref": "PR_01",
+        "to_ref": "CT_05",
+        "confidence": 0.9
       },
       {
         "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_06",
-        "confidence": 0.85
+        "from_ref": "PR_01",
+        "to_ref": "CT_06",
+        "confidence": 0.9
       },
       {
         "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_07",
-        "confidence": 0.85
+        "from_ref": "PR_01",
+        "to_ref": "CT_07",
+        "confidence": 0.9
       },
       {
         "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_08",
-        "confidence": 0.85
+        "from_ref": "PR_01",
+        "to_ref": "CT_08",
+        "confidence": 0.9
       },
       {
         "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_09",
-        "confidence": 0.85
+        "from_ref": "PR_01",
+        "to_ref": "CT_09",
+        "confidence": 0.9
       },
       {
         "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_10",
+        "from_ref": "PR_01",
+        "to_ref": "CT_10",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasSpec",
+        "from_ref": "CT_10",
+        "to_ref": "PS_01",
         "confidence": 0.85
       },
       {
-        "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_11",
-        "confidence": 0.85
-      },
-      {
-        "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_13",
-        "confidence": 0.85
-      },
-      {
-        "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_14",
-        "confidence": 0.85
-      },
-      {
-        "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_15",
-        "confidence": 0.85
-      },
-      {
-        "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_16",
-        "confidence": 0.85
-      },
-      {
-        "type": "hasPart",
-        "from_ref": "C_12",
-        "to_ref": "C_17",
+        "type": "hasUnit",
+        "from_ref": "PS_01",
+        "to_ref": "UN_01",
         "confidence": 0.85
       }
     ]
@@ -1654,5 +1285,5 @@
       "char_end": 3952
     }
   ],
-  "timestamp": "2025-11-04T10:42:06.224096+00:00"
+  "timestamp": "2025-11-04T13:45:01.243028+00:00"
 }

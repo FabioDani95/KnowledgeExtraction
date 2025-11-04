@@ -2,10 +2,10 @@
   "extraction": {
     "entities": [
       {
-        "id": "MM_01",
         "type": "MachineMode",
         "name": "Emptying mode",
-        "confidence": 0.95,
+        "id": "MM_01",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_mode_table_p5",
@@ -24,10 +24,10 @@
         ]
       },
       {
-        "id": "MM_02",
         "type": "MachineMode",
         "name": "Resetting mode",
-        "confidence": 0.92,
+        "id": "MM_02",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_mode_table_p5",
@@ -46,10 +46,10 @@
         ]
       },
       {
-        "id": "MM_03",
         "type": "MachineMode",
         "name": "Power save mode",
-        "confidence": 0.93,
+        "id": "MM_03",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_mode_table_p5",
@@ -68,10 +68,10 @@
         ]
       },
       {
-        "id": "MM_04",
         "type": "MachineMode",
         "name": "Failure mode",
-        "confidence": 0.9,
+        "id": "MM_04",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_mode_table_p5",
@@ -90,10 +90,10 @@
         ]
       },
       {
-        "id": "MM_05",
         "type": "MachineMode",
         "name": "Standby mode",
-        "confidence": 0.91,
+        "id": "MM_05",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_mode_table_p5",
@@ -112,10 +112,10 @@
         ]
       },
       {
+        "type": "MachineMode",
+        "name": "Hot milk / milk froth preparation",
         "id": "MM_06",
-        "type": "MachineMode",
-        "name": "Hot milk preparation",
-        "confidence": 0.94,
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_mode_table_p5",
@@ -134,10 +134,340 @@
         ]
       },
       {
-        "id": "MM_07",
         "type": "MachineMode",
-        "name": "Cold milk preparation",
-        "confidence": 0.94,
+        "name": "Cold milk froth preparation",
+        "id": "MM_07",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Switch off machine",
+        "id": "PS_01",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Press and hold small coffee button",
+        "id": "PS_02",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Switch on machine",
+        "id": "PS_03",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Start pump",
+        "id": "PS_04",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Stop pump after 10s",
+        "id": "PS_05",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Heat up thermoblock to 105°C",
+        "id": "PS_06",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Go to standby mode",
+        "id": "PS_07",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Reset the programmed large and small coffee volumes to factory setting",
+        "id": "PS_08",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Indicate the resetting mode for 3 s",
+        "id": "PS_09",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Reduce thermoblock temperature",
+        "id": "PS_10",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Switch LED indication to power save mode",
+        "id": "PS_11",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Press any coffee button to activate ready mode",
+        "id": "PS_12",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Switch off the machine",
+        "id": "PS_13",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Keep start button pressed for approx. 2sec",
+        "id": "PS_14",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_mode_table_p5",
+            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          },
+          {
+            "section_id": "sec_procedure_p6",
+            "section_title": "Citiz service manual  36 OPERATION",
+            "page_start": 6,
+            "page_end": 6,
+            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          }
+        ]
+      },
+      {
+        "type": "ProcessStep",
+        "name": "Release 'large cup' button",
+        "id": "PS_15",
+        "confidence": 1.0,
         "spans": [
           {
             "section_id": "sec_mode_table_p5",
@@ -156,38 +486,7 @@
         ]
       }
     ],
-    "relations": [
-      {
-        "type": "precedes",
-        "from_ref": "MM_01",
-        "to_ref": "MM_05",
-        "confidence": 0.89
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "MM_02",
-        "to_ref": "MM_01",
-        "confidence": 0.87
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "MM_03",
-        "to_ref": "MM_01",
-        "confidence": 0.88
-      },
-      {
-        "type": "verifies",
-        "from_ref": "MM_04",
-        "to_ref": "MM_06",
-        "confidence": 0.85
-      },
-      {
-        "type": "verifies",
-        "from_ref": "MM_04",
-        "to_ref": "MM_07",
-        "confidence": 0.85
-      }
-    ]
+    "relations": []
   },
   "chunk_provenance": [
     {
@@ -209,5 +508,5 @@
       "char_end": 6893
     }
   ],
-  "timestamp": "2025-11-04T10:43:58.567931+00:00"
+  "timestamp": "2025-11-04T13:48:46.902143+00:00"
 }

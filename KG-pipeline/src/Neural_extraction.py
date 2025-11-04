@@ -427,13 +427,64 @@ def build_extraction_prompt(
     Args:
         simplified: If True, use a more constrained prompt for retry attempts
     """
+    allowed_types_str = ", ".join(allowed_types)
+    allowed_relations_str = ", ".join(allowed_relations)
+
+    profile_rules: List[str] = []
+    profile_examples = ""
+
+    if profile_name == "troubleshooting":
+        profile_rules.append(
+            "Se il testo contiene parole chiave come 'failure', 'fault', 'error', 'malfunction', assegna sempre type=FailureMode (mai MachineMode)."
+        )
+        profile_rules.append(
+            f"Limita le entità ai soli tipi consentiti: {allowed_types_str}."
+        )
+    elif profile_name == "product_technical":
+        profile_rules.append(
+            "Per ogni specifica numerica crea un'entità ParameterSpec collegata al Product/Component con hasSpec e collega un'entità Unit tramite hasUnit."
+        )
+        profile_rules.append(
+            "Non collegare mai direttamente un'Unit a Product o Component: l'arco hasUnit deve partire dal ParameterSpec."
+        )
+        profile_rules.append(
+            "Se presente un valore numerico, usa i campi nominal_value (numero) e unit_raw (stringa UCUM quando possibile)."
+        )
+        profile_examples = """Esempio:
+```json
+{
+  "entities": [
+    {"id": "PR_01", "type": "Product", "name": "Espresso Machine", "confidence": 0.93},
+    {"id": "PS_01", "type": "ParameterSpec", "name": "Steam pressure", "nominal_value": 1.2, "unit_raw": "bar", "confidence": 0.9},
+    {"id": "UN_01", "type": "Unit", "name": "bar", "confidence": 0.9}
+  ],
+  "relations": [
+    {"type": "hasSpec", "from_ref": "PR_01", "to_ref": "PS_01", "confidence": 0.9},
+    {"type": "hasUnit", "from_ref": "PS_01", "to_ref": "UN_01", "confidence": 0.88}
+  ]
+}
+```"""
+
+    common_rules = [
+        "Rispondere solo con JSON valido, senza testo extra o commenti.",
+        f"Usa esclusivamente questi tipi di entità: {allowed_types_str}.",
+        f"Limita le relazioni a: {allowed_relations_str}.",
+        "Deduplica entità con la stessa coppia (type, name) mantenendo quella con confidence più alta.",
+        "Mantieni gli ID coerenti nel formato <TIPO_ABBR>_<NUM> (es. CT_01, FM_02).",
+    ]
+
+    all_rules = common_rules + profile_rules
+    rules_block = "\n".join(f"{idx + 1}. {rule}" for idx, rule in enumerate(all_rules))
+
     if simplified:
-        # Simplified prompt for retry attempts
-        prompt = f"""Extract entities and relations from this technical manual text. Return ONLY valid JSON, no comments or extra text.
+        prompt = f"""Extract entities and relations from the following technical text. Return ONLY valid JSON, no comments or extra text.
 
 Profile: {profile_name}
-Allowed entity types: {', '.join(allowed_types)}
-Allowed relations: {', '.join(allowed_relations)}
+Allowed entity types: {allowed_types_str}
+Allowed relations: {allowed_relations_str}
+Rules:
+- No duplicate entities with the same (type, name).
+- Apply profile-specific constraints: {"; ".join(profile_rules) if profile_rules else "respect allowed types and relations only."}
 
 Required JSON format:
 {{
@@ -446,7 +497,6 @@ Text:
 
 JSON output:"""
     else:
-        # Full detailed prompt
         prompt = f"""Analizza il seguente testo estratto da un manuale tecnico e restituisci SOLO UN JSON VALIDO conforme a questo schema:
 
 {{ "entities": [...], "relations": [...] }}
@@ -462,25 +512,9 @@ JSON output:"""
 {json.dumps(allowed_relations, indent=2)}
 
 **Regole obbligatorie**:
-1. Estrarre SOLO entità e relazioni pertinenti al profilo "{profile_name}".
-2. Ogni entità DEVE avere: id (stringa univoca), type (uno dei tipi ammessi sopra), name (nome dell'entità), confidence (numero 0-1).
-3. Le relazioni DEVONO indicare: type (una delle relazioni ammesse sopra), from_ref (id entità sorgente), to_ref (id entità destinazione), confidence (numero 0-1).
-4. Gli ID nel formato: <TIPO_ABBR>_<NUM> (es: CT_01 per ComponentType, C_01 per Component).
-5. JSON DEVE essere valido: virgole corrette, niente virgole finali, stringhe tra doppi apici.
-6. NON aggiungere testo fuori dal JSON.
-7. Proprietà opzionali se rilevanti: ofType_ref, nominal_value, unit_raw, min_value, max_value.
+{rules_block}
 
-**Esempio output corretto**:
-
-{{
-  "entities": [
-    {{"id": "CT_01", "type": "ComponentType", "name": "Thermoblock", "confidence": 0.94}},
-    {{"id": "C_01", "type": "Component", "name": "Pump", "ofType_ref": "CT_Pump", "confidence": 0.91}}
-  ],
-  "relations": [
-    {{"type": "hasPart", "from_ref": "C_01", "to_ref": "CT_01", "confidence": 0.88}}
-  ]
-}}
+{profile_examples}
 
 **Testo da analizzare**:
 
@@ -893,21 +927,39 @@ def normalize_extraction(data: dict, profile_name: str) -> dict:
     # Step 1: Deduplicate and normalize entities
     entities, id_mapping = deduplicate_entities(entities, profile_name)
 
-    # Step 2: Update relation references with new IDs
-    for relation in relations:
-        relation["from_ref"] = id_mapping.get(relation["from_ref"], relation["from_ref"])
-        relation["to_ref"] = id_mapping.get(relation["to_ref"], relation["to_ref"])
+    # Step 2: Update relation references with new IDs, skipping malformed relations
+    normalized_relations = []
+    logger = logging.getLogger(f"neural_extraction.normalize.{profile_name}")
+
+    for idx, relation in enumerate(relations):
+        from_ref = relation.get("from_ref")
+        to_ref = relation.get("to_ref")
+        rel_type = relation.get("type")
+
+        if not from_ref or not to_ref or not rel_type:
+            logger.warning(
+                "Skipping relation %s missing required fields (type=%s, from_ref=%s, to_ref=%s)",
+                idx,
+                rel_type,
+                from_ref,
+                to_ref,
+            )
+            continue
+
+        relation["from_ref"] = id_mapping.get(from_ref, from_ref)
+        relation["to_ref"] = id_mapping.get(to_ref, to_ref)
+        normalized_relations.append(relation)
 
     # Step 3: Fix troubleshooting semantics if needed
     if profile_name == "troubleshooting":
-        entities, relations = fix_troubleshooting_semantics(entities, relations)
+        entities, normalized_relations = fix_troubleshooting_semantics(entities, normalized_relations)
 
     # Step 4: Deduplicate relations
-    relations = deduplicate_relations(relations)
+    normalized_relations = deduplicate_relations(normalized_relations)
 
     return {
         "entities": entities,
-        "relations": relations,
+        "relations": normalized_relations,
     }
 
 

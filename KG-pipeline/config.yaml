@@ -67,6 +67,38 @@ logging:
   level: "INFO"           # (DEBUG, INFO, WARNING, ERROR)
   format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 
+# === Symbolic Merge Settings ===
+merge_settings:
+  allowed_entity_types:
+    - "Product"
+    - "Component"
+    - "ComponentType"
+    - "RatingPlate"
+    - "ParameterSpec"
+    - "Unit"
+    - "MachineMode"
+    - "ProcessStep"
+    - "State"
+    - "FailureMode"
+    - "RepairAction"
+    - "Tool"
+    - "Consumable"
+    - "MaintenanceTask"
+  allowed_relation_types:
+    - "hasPart"
+    - "belongsTo"
+    - "instanceOf"
+    - "hasSpec"
+    - "hasUnit"
+    - "connectedTo"
+    - "precedes"
+    - "appliesDuring"
+    - "verifies"
+    - "requiresTool"
+    - "requiresConsumable"
+    - "resolves"
+    - "leadsTo"
+
 # === Neural Extractor Module ===
 neural_extractor:
   enabled: false
@@ -74,7 +106,7 @@ neural_extractor:
   model: "gpt-4o-mini"
   #model: "gpt-4o"             # gpt-4o-mini: più economico; aumenta a gpt-4o per qualità maggiore
   api_key_env: "OPENAI_API_KEY"
-  temperature: 0.2                 # temperatura per estrazione (0.1-0.3 consigliato)
+  temperature: 0.15                # temperatura bassa per output più deterministici (0.1-0.2 consigliato)
   max_output_tokens: 1500
   request_timeout: 60              # timeout (secondi) per le chiamate al modello
   max_tokens_per_chunk: 1000       # massimo numero di token per chunk di testo

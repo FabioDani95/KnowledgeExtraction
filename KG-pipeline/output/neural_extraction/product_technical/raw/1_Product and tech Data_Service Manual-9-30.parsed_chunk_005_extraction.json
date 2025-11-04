@@ -2,12 +2,10 @@
   "extraction": {
     "entities": [
       {
-        "id": "C_01",
-        "type": "Component",
+        "id": "CT_01",
+        "type": "ComponentType",
         "name": "Jug",
-        "confidence": 0.95,
-        "nominal_value": "91 x 170",
-        "unit_raw": "mm",
+        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_4_2_5",
@@ -19,12 +17,44 @@
         ]
       },
       {
-        "id": "C_02",
-        "type": "Component",
+        "id": "PS_01",
+        "type": "ParameterSpec",
+        "name": "Diameter",
+        "nominal_value": 91,
+        "unit_raw": "mm",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "PS_02",
+        "type": "ParameterSpec",
+        "name": "Height",
+        "nominal_value": 170,
+        "unit_raw": "mm",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "CT_02",
+        "type": "ComponentType",
         "name": "Whisk",
-        "confidence": 0.93,
-        "nominal_value": "33 x 32",
-        "unit_raw": "mm",
+        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_4_2_5",
@@ -36,12 +66,61 @@
         ]
       },
       {
-        "id": "C_03",
-        "type": "Component",
+        "id": "PS_03",
+        "type": "ParameterSpec",
+        "name": "Whisk Diameter",
+        "nominal_value": 33,
+        "unit_raw": "mm",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "PS_04",
+        "type": "ParameterSpec",
+        "name": "Whisk Height",
+        "nominal_value": 32,
+        "unit_raw": "mm",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "CT_03",
+        "type": "ComponentType",
         "name": "Mixer",
-        "confidence": 0.92,
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "PS_05",
+        "type": "ParameterSpec",
+        "name": "Mixer Dimensions",
         "nominal_value": "15 x 34 x 32",
         "unit_raw": "mm",
+        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_4_2_5",
@@ -53,12 +132,57 @@
         ]
       },
       {
-        "id": "C_04",
-        "type": "Component",
+        "id": "CT_04",
+        "type": "ComponentType",
         "name": "Weight",
         "confidence": 0.9,
-        "nominal_value": "0.7",
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "PS_06",
+        "type": "ParameterSpec",
+        "name": "Weight",
+        "nominal_value": 0.7,
         "unit_raw": "kg",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "UN_01",
+        "type": "Unit",
+        "name": "mm",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "UN_02",
+        "type": "Unit",
+        "name": "kg",
+        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_4_2_5",
@@ -72,22 +196,76 @@
     ],
     "relations": [
       {
-        "type": "hasPart",
-        "from_ref": "C_01",
-        "to_ref": "C_02",
-        "confidence": 0.85
+        "type": "hasSpec",
+        "from_ref": "CT_01",
+        "to_ref": "PS_01",
+        "confidence": 0.9
       },
       {
-        "type": "hasPart",
-        "from_ref": "C_01",
-        "to_ref": "C_03",
-        "confidence": 0.85
+        "type": "hasSpec",
+        "from_ref": "CT_01",
+        "to_ref": "PS_02",
+        "confidence": 0.9
       },
       {
-        "type": "hasPart",
-        "from_ref": "C_01",
-        "to_ref": "C_04",
-        "confidence": 0.85
+        "type": "hasSpec",
+        "from_ref": "CT_02",
+        "to_ref": "PS_03",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasSpec",
+        "from_ref": "CT_02",
+        "to_ref": "PS_04",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasSpec",
+        "from_ref": "CT_03",
+        "to_ref": "PS_05",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasSpec",
+        "from_ref": "CT_04",
+        "to_ref": "PS_06",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasUnit",
+        "from_ref": "PS_01",
+        "to_ref": "UN_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasUnit",
+        "from_ref": "PS_02",
+        "to_ref": "UN_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasUnit",
+        "from_ref": "PS_03",
+        "to_ref": "UN_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasUnit",
+        "from_ref": "PS_04",
+        "to_ref": "UN_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasUnit",
+        "from_ref": "PS_05",
+        "to_ref": "UN_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasUnit",
+        "from_ref": "PS_06",
+        "to_ref": "UN_02",
+        "confidence": 0.9
       }
     ]
   },
@@ -102,5 +280,5 @@
       "char_end": 19903
     }
   ],
-  "timestamp": "2025-11-04T10:43:41.821880+00:00"
+  "timestamp": "2025-11-04T13:47:54.585051+00:00"
 }
