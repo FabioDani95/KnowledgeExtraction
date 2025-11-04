@@ -1,11 +1,11 @@
 {
   "document_code": "KG_PRODUCT_TECHNICAL",
-  "ingestion_id": "c881bd65-253f-40a2-94a4-784b041cb776",
-  "extraction_version": "neural_v1.0",
+  "ingestion_id": "3a3c51b6-c475-468c-a551-2c1e597725d6",
+  "extraction_version": "neural_v1.1",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
-    "model": "gpt-4o-mini",
-    "prompt_id": "neural_extraction_v1",
+    "model": "gpt-4o",
+    "prompt_id": "neural_extraction_v1_hardened",
     "temperature": 0.2,
     "max_tokens": 1500
   },
@@ -28,583 +28,884 @@
   ],
   "entities": [
     {
-      "id": "P_01",
+      "id": "ns:Component/button_prints",
+      "type": "Component",
+      "name": "Button prints",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/capsule_bay",
+      "type": "Component",
+      "name": "Capsule bay",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/brewing_unit",
+      "type": "Component",
+      "name": "Brewing unit",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/pump",
+      "type": "Component",
+      "name": "Pump",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/flowmeter",
+      "type": "Component",
+      "name": "Flowmeter",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/electronic_control_board",
+      "type": "Component",
+      "name": "Electronic control board",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/self_priming_device",
+      "type": "Component",
+      "name": "Self priming device",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/ntc_temperature_sensor",
+      "type": "Component",
+      "name": "NTC temperature sensor",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/thermoblock",
+      "type": "Component",
+      "name": "Thermoblock",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/cup_support",
+      "type": "Component",
+      "name": "Cup support",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/waste_water_container",
+      "type": "Component",
+      "name": "Waste water container",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/capsule_container",
+      "type": "Component",
+      "name": "Capsule container",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/side_panel_left",
+      "type": "Component",
+      "name": "Side panel, left",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/side_panel_right",
+      "type": "Component",
+      "name": "Side panel, right",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/coffee_nozzle",
+      "type": "Component",
+      "name": "Coffee nozzle",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/steam_cover",
+      "type": "Component",
+      "name": "Steam cover",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/closing_handle",
+      "type": "Component",
+      "name": "Closing handle",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/button_small_cup",
+      "type": "Component",
+      "name": "Button \"small cup\"",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/button_large_cup",
+      "type": "Component",
+      "name": "Button \"large cup\"",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/top_cover",
+      "type": "Component",
+      "name": "Top cover",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/rear_cover",
+      "type": "Component",
+      "name": "Rear cover",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/drip_grid",
+      "type": "Component",
+      "name": "Drip grid",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/drip_tray",
+      "type": "Component",
+      "name": "Drip tray",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/core_unit",
+      "type": "Component",
+      "name": "Core unit",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/water_tank_cover",
+      "type": "Component",
+      "name": "Water tank cover",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/water_tank",
+      "type": "Component",
+      "name": "Water tank",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/water_tank_connector",
+      "type": "Component",
+      "name": "Water tank connector",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/power_cord",
+      "type": "Component",
+      "name": "Power cord",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/onoff_switch",
+      "type": "Component",
+      "name": "ON/OFF switch",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/platform",
+      "type": "Component",
+      "name": "Platform",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/milk_frother",
+      "type": "Component",
+      "name": "Milk frother",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/lid",
+      "type": "Component",
+      "name": "Lid",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/seal",
+      "type": "Component",
+      "name": "Seal",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/jug",
+      "type": "Component",
+      "name": "Jug",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/power_plug",
+      "type": "Component",
+      "name": "Power plug",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/start_button",
+      "type": "Component",
+      "name": "Start button",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/mixer_for_hot_milk",
+      "type": "Component",
+      "name": "Mixer for hot milk",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/spring_whisk_for_milk_foam",
+      "type": "Component",
+      "name": "Spring whisk for milk foam",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Product/aero3",
+      "type": "Product",
+      "name": "AERO3",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Product/citiz_milk",
+      "type": "Product",
+      "name": "Citiz & milk",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Product/citiz_co",
+      "type": "Product",
+      "name": "Citiz & Co",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Component/core_units",
+      "type": "Component",
+      "name": "Core units",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Component/flow_meter",
+      "type": "Component",
+      "name": "Flow meter",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Component/mini_brewing_unit",
+      "type": "Component",
+      "name": "Mini brewing unit",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Component/coffee_outlet",
+      "type": "Component",
+      "name": "Coffee outlet",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:RatingPlate/ef484_citiz_c110_red",
+      "type": "RatingPlate",
+      "name": "EF484 Citiz C110 red",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:RatingPlate/ef483_citiz_d110_black",
+      "type": "RatingPlate",
+      "name": "EF483 Citiz D110 black",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:RatingPlate/ef486_citiz_milk_c120_red",
+      "type": "RatingPlate",
+      "name": "EF486 Citiz & milk C120 red",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:RatingPlate/ef485_citiz_milk_d120_black",
+      "type": "RatingPlate",
+      "name": "EF485 Citiz & milk D120 black",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:RatingPlate/ef488_citiz_co_c130_red",
+      "type": "RatingPlate",
+      "name": "EF488 Citiz & Co C130 red",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:RatingPlate/ef487_citiz_co_d130_black",
+      "type": "RatingPlate",
+      "name": "EF487 Citiz & Co D130 black",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Product/turmix_tx_270",
       "type": "Product",
       "name": "Turmix TX 270",
       "confidence": 0.95
     },
     {
-      "id": "P_02",
+      "id": "ns:Product/turmix_tx_170",
+      "type": "Product",
+      "name": "Turmix TX 170",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Product/turmix_tx_370",
       "type": "Product",
       "name": "Turmix TX 370",
       "confidence": 0.95
     },
     {
-      "id": "RP_01",
+      "id": "ns:Product/citiz",
+      "type": "Product",
+      "name": "Citiz",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:RatingPlate/rating_plate_details_ef484_citiz_c110",
       "type": "RatingPlate",
       "name": "Rating plate details EF484 Citiz C110",
-      "confidence": 0.92
+      "confidence": 0.9
     },
     {
-      "id": "RP_02",
+      "id": "ns:RatingPlate/rating_plate_details_turmix_tx_170",
       "type": "RatingPlate",
-      "name": "Rating plate details EF488 Citiz & Co.",
-      "confidence": 0.92
+      "name": "Rating plate details Turmix TX 170",
+      "confidence": 0.9
     },
     {
-      "id": "CT_01",
+      "id": "ns:RatingPlate/rating_plate_details_turmix_tx_370",
+      "type": "RatingPlate",
+      "name": "Rating plate details Turmix TX 370",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:ComponentType/thermoblock",
       "type": "ComponentType",
       "name": "Thermoblock",
       "confidence": 0.94
     },
     {
-      "id": "CT_02",
+      "id": "ns:ComponentType/pump",
       "type": "ComponentType",
       "name": "Pump",
-      "confidence": 0.91
+      "confidence": 0.94
     },
     {
-      "id": "PS_01",
+      "id": "ns:PS/mains_voltage_for_citiz",
       "type": "ParameterSpec",
-      "name": "Voltage and power rating",
+      "name": "Mains voltage for Citiz",
+      "confidence": 0.92,
+      "nominal_value": "220-240 V / 50-60 Hz"
+    },
+    {
+      "id": "ns:PS/mains_voltage_for_citiz_milk",
+      "type": "ParameterSpec",
+      "name": "Mains voltage for Citiz & milk",
+      "confidence": 0.92,
+      "nominal_value": "220-240 V / 50-60 Hz"
+    },
+    {
+      "id": "ns:PS/mains_voltage_for_citiz_co",
+      "type": "ParameterSpec",
+      "name": "Mains voltage for Citiz & Co",
+      "confidence": 0.92,
+      "nominal_value": "220-240 V / 50-60 Hz"
+    },
+    {
+      "id": "ns:PS/power_rating_thermoblock",
+      "type": "ParameterSpec",
+      "name": "Power rating Thermoblock",
+      "confidence": 0.92,
+      "nominal_value": "1200 W"
+    },
+    {
+      "id": "ns:PS/power_rating_pump",
+      "type": "ParameterSpec",
+      "name": "Power rating Pump",
+      "confidence": 0.92,
+      "nominal_value": "55/60 W"
+    },
+    {
+      "id": "ns:PS/heating_up_power",
+      "type": "ParameterSpec",
+      "name": "Heating up power",
+      "nominal_value": "7.6",
+      "unit_raw": "Wh",
       "confidence": 0.9
     },
     {
-      "id": "PS_02",
+      "id": "ns:PS/small_cup_power",
       "type": "ParameterSpec",
-      "name": "Place of manufacture",
+      "name": "Small cup power",
+      "nominal_value": "4.3",
+      "unit_raw": "Wh",
       "confidence": 0.9
     },
     {
-      "id": "PS_03",
+      "id": "ns:PS/large_cup_power",
       "type": "ParameterSpec",
-      "name": "National approval sign of Russia",
+      "name": "Large cup power",
+      "nominal_value": "8.7",
+      "unit_raw": "Wh",
       "confidence": 0.9
     },
     {
-      "id": "PS_04",
+      "id": "ns:PS/standby_power",
       "type": "ParameterSpec",
-      "name": "Water tank",
-      "confidence": 0.91
-    },
-    {
-      "id": "PS_05",
-      "type": "ParameterSpec",
-      "name": "Barcode",
+      "name": "Standby power",
+      "nominal_value": "0.7",
+      "unit_raw": "Wh",
       "confidence": 0.9
     },
     {
-      "id": "PS_06",
+      "id": "ns:PS/pump_pressure_max",
       "type": "ParameterSpec",
-      "name": "Serial number",
+      "name": "Pump pressure max",
+      "nominal_value": "17.5",
+      "unit_raw": "bar",
       "confidence": 0.9
     },
     {
-      "id": "PS_07",
+      "id": "ns:PS/pump_pressure_during_coffee_preparation",
       "type": "ParameterSpec",
-      "name": "Machine type",
+      "name": "Pump pressure during coffee preparation",
+      "min_value": "9",
+      "max_value": "16",
+      "unit_raw": "bar",
       "confidence": 0.9
     },
     {
-      "id": "PS_08",
+      "id": "ns:PS/flow_performance",
       "type": "ParameterSpec",
-      "name": "Special disposal icon",
+      "name": "Flow performance",
+      "min_value": "120",
+      "max_value": "240",
+      "unit_raw": "ml/min",
       "confidence": 0.9
     },
     {
-      "id": "PS_09",
+      "id": "ns:PS/water_tank_capacity_citiz",
       "type": "ParameterSpec",
-      "name": "Sign of conformity (CE)",
+      "name": "Water tank capacity Citiz",
+      "nominal_value": "1.0",
+      "unit_raw": "l",
       "confidence": 0.9
     },
     {
-      "id": "PS_10",
+      "id": "ns:PS/water_tank_capacity_citiz_co",
       "type": "ParameterSpec",
-      "name": "Conform with RoHS guidelines",
+      "name": "Water tank capacity Citiz & Co",
+      "nominal_value": "1.4",
+      "unit_raw": "l",
       "confidence": 0.9
     },
     {
-      "id": "PS_11",
+      "id": "ns:PS/drip_tray_capacity_citiz",
       "type": "ParameterSpec",
-      "name": "Article number of the rating plate",
+      "name": "Drip tray capacity Citiz",
+      "nominal_value": "100",
+      "unit_raw": "ml",
       "confidence": 0.9
     },
     {
-      "id": "P_03",
-      "type": "Product",
-      "name": "Citiz & Co",
-      "confidence": 0.92
-    },
-    {
-      "id": "U_01",
-      "type": "Unit",
-      "name": "Wh",
-      "confidence": 0.95
-    },
-    {
-      "id": "U_02",
-      "type": "Unit",
-      "name": "bar",
-      "confidence": 0.95
-    },
-    {
-      "id": "U_03",
-      "type": "Unit",
-      "name": "ml/min",
-      "confidence": 0.95
-    },
-    {
-      "id": "U_04",
-      "type": "Unit",
-      "name": "l",
-      "confidence": 0.95
-    },
-    {
-      "id": "U_05",
-      "type": "Unit",
-      "name": "ml",
-      "confidence": 0.95
-    },
-    {
-      "id": "U_06",
-      "type": "Unit",
-      "name": "capsules",
-      "confidence": 0.95
-    },
-    {
-      "id": "U_07",
-      "type": "Unit",
-      "name": "°C",
-      "confidence": 0.95
-    },
-    {
-      "id": "C_01",
-      "type": "Component",
-      "name": "Jug",
-      "confidence": 0.95,
-      "dimensions": "91 x 170 mm"
-    },
-    {
-      "id": "PS_12",
+      "id": "ns:PS/drip_tray_capacity_citiz_co",
       "type": "ParameterSpec",
-      "name": "Temperature Hot milk",
-      "confidence": 0.81
+      "name": "Drip tray capacity Citiz & Co",
+      "nominal_value": "250",
+      "unit_raw": "ml",
+      "confidence": 0.9
     },
     {
-      "id": "PS_13",
+      "id": "ns:PS/capsule_container_capacity_citiz",
       "type": "ParameterSpec",
-      "name": "Temperature Foam milk",
-      "confidence": 0.81
+      "name": "Capsule container capacity Citiz",
+      "min_value": "9",
+      "max_value": "11",
+      "unit_raw": "capsules",
+      "confidence": 0.9
     },
     {
-      "id": "PS_14",
+      "id": "ns:PS/capsule_container_capacity_citiz_co",
+      "type": "ParameterSpec",
+      "name": "Capsule container capacity Citiz & Co",
+      "min_value": "18",
+      "max_value": "24",
+      "unit_raw": "capsules",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/operating_temperature",
+      "type": "ParameterSpec",
+      "name": "Operating temperature",
+      "min_value": "5",
+      "max_value": "45",
+      "unit_raw": "°C",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/storage_temperature",
+      "type": "ParameterSpec",
+      "name": "Storage temperature",
+      "min_value": "-25",
+      "max_value": "60",
+      "unit_raw": "°C",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/safety_temperature",
+      "type": "ParameterSpec",
+      "name": "Safety temperature",
+      "nominal_value": "167",
+      "unit_raw": "°C",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/coffee_temperature_at_outlet",
+      "type": "ParameterSpec",
+      "name": "Coffee temperature at outlet",
+      "nominal_value": "86",
+      "unit_raw": "°C",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/noise_during_brewing_cycle",
+      "type": "ParameterSpec",
+      "name": "Noise during brewing cycle",
+      "nominal_value": "60",
+      "unit_raw": "dB(A)",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/preheating_time",
+      "type": "ParameterSpec",
+      "name": "Preheating time",
+      "nominal_value": "60",
+      "unit_raw": "sec",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/cable_length",
+      "type": "ParameterSpec",
+      "name": "Cable length",
+      "nominal_value": "1.2",
+      "unit_raw": "m",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/mains_voltage_europe",
+      "type": "ParameterSpec",
+      "name": "Mains voltage Europe",
+      "nominal_value": "220-240",
+      "unit_raw": "V",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/mains_voltage_usacanada",
+      "type": "ParameterSpec",
+      "name": "Mains voltage USA/Canada",
+      "nominal_value": "120-127",
+      "unit_raw": "V",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/power_rating_220_240_v",
+      "type": "ParameterSpec",
+      "name": "Power rating 220-240 V",
+      "nominal_value": "410-490",
+      "unit_raw": "W",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/power_rating_110_127_v",
+      "type": "ParameterSpec",
+      "name": "Power rating 110-127 V",
+      "nominal_value": "380-505",
+      "unit_raw": "W",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/standby_operation",
+      "type": "ParameterSpec",
+      "name": "Standby operation",
+      "nominal_value": "< 1",
+      "unit_raw": "W",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/capacity_hot_milk",
+      "type": "ParameterSpec",
+      "name": "Capacity Hot milk",
+      "nominal_value": "240",
+      "unit_raw": "ml",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/capacity_hotcold_milk_for_milk_froth",
+      "type": "ParameterSpec",
+      "name": "Capacity Hot/cold milk for milk froth",
+      "nominal_value": "130",
+      "unit_raw": "ml",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/whisk_speed",
+      "type": "ParameterSpec",
+      "name": "Whisk speed",
+      "nominal_value": "2000-2700",
+      "unit_raw": "rpm",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/hot_milk_froth_preparation_time",
+      "type": "ParameterSpec",
+      "name": "Hot milk froth preparation time",
+      "nominal_value": "50-80",
+      "unit_raw": "sec",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/cold_milk_froth_preparation_time",
+      "type": "ParameterSpec",
+      "name": "Cold milk froth preparation time",
+      "nominal_value": "60-80",
+      "unit_raw": "sec",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/hot_milk_preparation_time",
+      "type": "ParameterSpec",
+      "name": "Hot milk preparation time",
+      "nominal_value": "120-180",
+      "unit_raw": "sec",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/hot_milk_temperature",
+      "type": "ParameterSpec",
+      "name": "Hot milk temperature",
+      "nominal_value": "60-70",
+      "unit_raw": "°C",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/foam_milk_temperature",
+      "type": "ParameterSpec",
+      "name": "Foam milk temperature",
+      "nominal_value": "60-70",
+      "unit_raw": "°C",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/noise_emission",
       "type": "ParameterSpec",
       "name": "Noise emission",
-      "confidence": 0.8
+      "nominal_value": "55",
+      "unit_raw": "dB(A)",
+      "confidence": 0.9
     },
     {
-      "id": "PS_15",
+      "id": "ns:PS/dimensions",
       "type": "ParameterSpec",
       "name": "Dimensions",
-      "confidence": 0.79
+      "nominal_value": "130 x 277 x 372",
+      "unit_raw": "mm",
+      "confidence": 0.9
     },
     {
-      "id": "PS_16",
+      "id": "ns:PS/cup_support_down",
       "type": "ParameterSpec",
-      "name": "Weight",
-      "confidence": 0.78
+      "name": "Cup support down",
+      "nominal_value": "85-90",
+      "unit_raw": "mm",
+      "confidence": 0.9
     },
     {
-      "id": "C_02",
+      "id": "ns:PS/cup_support_up",
+      "type": "ParameterSpec",
+      "name": "Cup support up",
+      "nominal_value": "150-155",
+      "unit_raw": "mm",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/weight_without_water",
+      "type": "ParameterSpec",
+      "name": "Weight without water",
+      "nominal_value": "3.4",
+      "unit_raw": "kg",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/dimensions_with_milk_frother",
+      "type": "ParameterSpec",
+      "name": "Dimensions with milk frother",
+      "nominal_value": "237 x 277 x 372",
+      "unit_raw": "mm",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:PS/weight_with_milk_frother",
+      "type": "ParameterSpec",
+      "name": "Weight with milk frother",
+      "nominal_value": "4.6",
+      "unit_raw": "kg",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Component/whisk",
       "type": "Component",
       "name": "Whisk",
-      "confidence": 0.92,
-      "dimensions": "33 x 32 mm"
+      "confidence": 0.95
     },
     {
-      "id": "C_03",
+      "id": "ns:Component/mixer",
       "type": "Component",
       "name": "Mixer",
-      "confidence": 0.9,
-      "dimensions": "15 x 34 x 32 mm"
+      "confidence": 0.95
     },
     {
-      "id": "C_04",
-      "type": "Component",
+      "id": "ns:PS/dimensions_of_jug",
+      "type": "ParameterSpec",
+      "name": "Dimensions of jug",
+      "confidence": 0.92,
+      "unit_raw": "mm",
+      "nominal_value": "91 x 170"
+    },
+    {
+      "id": "ns:PS/dimensions_of_whisk",
+      "type": "ParameterSpec",
+      "name": "Dimensions of whisk",
+      "confidence": 0.92,
+      "unit_raw": "mm",
+      "nominal_value": "33 x 32"
+    },
+    {
+      "id": "ns:PS/dimensions_of_mixer",
+      "type": "ParameterSpec",
+      "name": "Dimensions of mixer",
+      "confidence": 0.92,
+      "unit_raw": "mm",
+      "nominal_value": "15 x 34 x 32"
+    },
+    {
+      "id": "ns:PS/weight",
+      "type": "ParameterSpec",
       "name": "Weight",
-      "confidence": 0.89,
-      "value": 0.7,
-      "unit_raw": "kg"
+      "confidence": 0.92,
+      "unit_raw": "kg",
+      "nominal_value": "0.7"
     }
   ],
   "relations": [
     {
       "type": "hasRatingPlate",
-      "from_ref": "P_01",
-      "to_ref": "RP_01",
-      "confidence": 0.93
+      "from_ref": "ns:Product/turmix_tx_270",
+      "to_ref": "ns:RatingPlate/rating_plate_details_ef484_citiz_c110",
+      "confidence": 0.88
     },
     {
       "type": "hasRatingPlate",
-      "from_ref": "P_02",
-      "to_ref": "RP_02",
-      "confidence": 0.93
-    },
-    {
-      "type": "hasPart",
-      "from_ref": "P_01",
-      "to_ref": "CT_01",
+      "from_ref": "ns:Product/turmix_tx_170",
+      "to_ref": "ns:RatingPlate/rating_plate_details_turmix_tx_170",
       "confidence": 0.88
     },
     {
-      "type": "hasPart",
-      "from_ref": "P_01",
-      "to_ref": "CT_02",
+      "type": "hasRatingPlate",
+      "from_ref": "ns:Product/turmix_tx_370",
+      "to_ref": "ns:RatingPlate/rating_plate_details_turmix_tx_370",
       "confidence": 0.88
     },
     {
       "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_01",
+      "from_ref": "ns:Product/citiz",
+      "to_ref": "ns:PS/mains_voltage_for_citiz",
       "confidence": 0.85
     },
     {
       "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_02",
+      "from_ref": "ns:Product/citiz_milk",
+      "to_ref": "ns:PS/mains_voltage_for_citiz_milk",
       "confidence": 0.85
     },
     {
       "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_03",
+      "from_ref": "ns:Product/citiz_co",
+      "to_ref": "ns:PS/mains_voltage_for_citiz_co",
       "confidence": 0.85
     },
     {
       "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_04",
+      "from_ref": "ns:ComponentType/thermoblock",
+      "to_ref": "ns:PS/power_rating_thermoblock",
       "confidence": 0.85
     },
     {
       "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_05",
+      "from_ref": "ns:ComponentType/pump",
+      "to_ref": "ns:PS/power_rating_pump",
       "confidence": 0.85
     },
     {
       "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_06",
-      "confidence": 0.85
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_07",
-      "confidence": 0.85
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_08",
-      "confidence": 0.85
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_09",
-      "confidence": 0.85
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_10",
-      "confidence": 0.85
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_11",
-      "confidence": 0.85
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_01",
+      "from_ref": "ns:Component/jug",
+      "to_ref": "ns:PS/dimensions_of_jug",
       "confidence": 0.9
     },
     {
       "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_02",
+      "from_ref": "ns:Component/whisk",
+      "to_ref": "ns:PS/dimensions_of_whisk",
       "confidence": 0.9
     },
     {
       "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_03",
-      "confidence": 0.88
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_04",
-      "confidence": 0.91
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_05",
-      "confidence": 0.89
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_06",
-      "confidence": 0.87
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_01",
-      "to_ref": "PS_07",
+      "from_ref": "ns:Component/mixer",
+      "to_ref": "ns:PS/dimensions_of_mixer",
       "confidence": 0.9
     },
     {
-      "type": "hasUnit",
-      "from_ref": "PS_01",
-      "to_ref": "U_01",
-      "confidence": 0.95
-    },
-    {
-      "type": "hasUnit",
-      "from_ref": "PS_02",
-      "to_ref": "U_02",
-      "confidence": 0.95
-    },
-    {
-      "type": "hasUnit",
-      "from_ref": "PS_03",
-      "to_ref": "U_03",
-      "confidence": 0.95
-    },
-    {
-      "type": "hasUnit",
-      "from_ref": "PS_04",
-      "to_ref": "U_04",
-      "confidence": 0.95
-    },
-    {
-      "type": "hasUnit",
-      "from_ref": "PS_05",
-      "to_ref": "U_05",
-      "confidence": 0.95
-    },
-    {
-      "type": "hasUnit",
-      "from_ref": "PS_06",
-      "to_ref": "U_06",
-      "confidence": 0.95
-    },
-    {
-      "type": "hasUnit",
-      "from_ref": "PS_07",
-      "to_ref": "U_07",
-      "confidence": 0.95
-    },
-    {
       "type": "hasSpec",
-      "from_ref": "P_02",
-      "to_ref": "PS_01",
-      "confidence": 0.93
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_02",
-      "to_ref": "PS_02",
-      "confidence": 0.93
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_02",
-      "to_ref": "PS_04",
-      "confidence": 0.93
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_03",
-      "to_ref": "PS_01",
-      "confidence": 0.92
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_03",
-      "to_ref": "PS_02",
-      "confidence": 0.92
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "P_03",
-      "to_ref": "PS_04",
-      "confidence": 0.92
-    },
-    {
-      "type": "hasPart",
-      "from_ref": "P_01",
-      "to_ref": "C_01",
+      "from_ref": "ns:Component/jug",
+      "to_ref": "ns:PS/weight",
       "confidence": 0.9
     },
     {
-      "type": "hasPart",
-      "from_ref": "P_02",
-      "to_ref": "C_01",
-      "confidence": 0.88
+      "type": "hasSpec",
+      "from_ref": "ns:Component/whisk",
+      "to_ref": "ns:PS/weight",
+      "confidence": 0.9
     },
     {
       "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_01",
-      "confidence": 0.85
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_02",
-      "confidence": 0.85
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_03",
-      "confidence": 0.8
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_04",
-      "confidence": 0.88
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_05",
-      "confidence": 0.88
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_06",
-      "confidence": 0.87
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_07",
-      "confidence": 0.86
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_08",
-      "confidence": 0.84
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_09",
-      "confidence": 0.84
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_10",
-      "confidence": 0.83
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_11",
-      "confidence": 0.82
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_12",
-      "confidence": 0.81
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_13",
-      "confidence": 0.81
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_14",
-      "confidence": 0.8
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_15",
-      "confidence": 0.79
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "C_01",
-      "to_ref": "PS_16",
-      "confidence": 0.78
-    },
-    {
-      "type": "hasPart",
-      "from_ref": "C_01",
-      "to_ref": "C_02",
-      "confidence": 0.85
-    },
-    {
-      "type": "hasPart",
-      "from_ref": "C_01",
-      "to_ref": "C_03",
-      "confidence": 0.85
-    },
-    {
-      "type": "hasPart",
-      "from_ref": "C_01",
-      "to_ref": "C_04",
-      "confidence": 0.85
+      "from_ref": "ns:Component/mixer",
+      "to_ref": "ns:PS/weight",
+      "confidence": 0.9
     }
   ],
   "provenance": {
-    "overall_confidence": 0.89,
+    "overall_confidence": 0.901,
     "sections_used": [
       "1_Product and tech Data_Service Manual-9-30.parsed.json"
     ],
-    "notes": "Neural extraction for profile product_technical"
+    "notes": "Neural extraction for profile product_technical with semantic normalization"
   },
   "quality": {
     "json_valid": true,
-    "entities_count": 34,
-    "relations_count": 56,
+    "entities_count": 111,
+    "relations_count": 14,
     "warnings": [],
-    "overall_confidence": 0.89,
-    "avg_entity_confidence": 0.904,
-    "avg_relation_confidence": 0.876,
+    "overall_confidence": 0.901,
+    "avg_entity_confidence": 0.924,
+    "avg_relation_confidence": 0.878,
     "entity_type_distribution": {
-      "Product": 3,
-      "RatingPlate": 2,
+      "Component": 44,
+      "Product": 7,
+      "RatingPlate": 9,
       "ComponentType": 2,
-      "ParameterSpec": 16,
-      "Unit": 7,
-      "Component": 4
+      "ParameterSpec": 49
     },
     "relation_type_distribution": {
-      "hasRatingPlate": 2,
-      "hasPart": 7,
-      "hasSpec": 40,
-      "hasUnit": 7
+      "hasRatingPlate": 3,
+      "hasSpec": 11
     },
     "profile": "product_technical",
-    "generated_at": "2025-11-03T12:12:03.713744Z"
+    "generated_at": "2025-11-04T08:47:55.638113+00:00"
   }
 }

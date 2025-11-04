@@ -1,0 +1,192 @@
+{
+  "extraction": {
+    "entities": [
+      {
+        "id": "P_01",
+        "type": "Product",
+        "name": "Citiz",
+        "confidence": 0.95
+      },
+      {
+        "id": "P_02",
+        "type": "Product",
+        "name": "Citiz & milk",
+        "confidence": 0.95
+      },
+      {
+        "id": "P_03",
+        "type": "Product",
+        "name": "Citiz & Co",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_01",
+        "type": "Component",
+        "name": "Pump",
+        "confidence": 0.92
+      },
+      {
+        "id": "C_02",
+        "type": "Component",
+        "name": "Water tank",
+        "confidence": 0.92
+      },
+      {
+        "id": "C_03",
+        "type": "Component",
+        "name": "Drip tray",
+        "confidence": 0.92
+      },
+      {
+        "id": "C_04",
+        "type": "Component",
+        "name": "Capsule container",
+        "confidence": 0.92
+      },
+      {
+        "id": "PS_01",
+        "type": "ParameterSpec",
+        "name": "Heating up power",
+        "nominal_value": "7.6",
+        "unit_raw": "Wh",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_02",
+        "type": "ParameterSpec",
+        "name": "Small cup power",
+        "nominal_value": "4.3",
+        "unit_raw": "Wh",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_03",
+        "type": "ParameterSpec",
+        "name": "Large cup power",
+        "nominal_value": "8.7",
+        "unit_raw": "Wh",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_04",
+        "type": "ParameterSpec",
+        "name": "Standby power",
+        "nominal_value": "0.7",
+        "unit_raw": "Wh",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_05",
+        "type": "ParameterSpec",
+        "name": "Pump pressure max",
+        "nominal_value": "17.5",
+        "unit_raw": "bar",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_06",
+        "type": "ParameterSpec",
+        "name": "Pump pressure during coffee preparation",
+        "min_value": "9",
+        "max_value": "16",
+        "unit_raw": "bar",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_07",
+        "type": "ParameterSpec",
+        "name": "Flow performance",
+        "min_value": "120",
+        "max_value": "240",
+        "unit_raw": "ml/min",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_08",
+        "type": "ParameterSpec",
+        "name": "Water tank capacity Citiz",
+        "nominal_value": "1.0",
+        "unit_raw": "l",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_09",
+        "type": "ParameterSpec",
+        "name": "Water tank capacity Citiz & Co",
+        "nominal_value": "1.4",
+        "unit_raw": "l",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_10",
+        "type": "ParameterSpec",
+        "name": "Drip tray capacity Citiz",
+        "nominal_value": "100",
+        "unit_raw": "ml",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_11",
+        "type": "ParameterSpec",
+        "name": "Drip tray capacity Citiz & Co",
+        "nominal_value": "250",
+        "unit_raw": "ml",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_12",
+        "type": "ParameterSpec",
+        "name": "Capsule container capacity Citiz",
+        "min_value": "9",
+        "max_value": "11",
+        "unit_raw": "capsules",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_13",
+        "type": "ParameterSpec",
+        "name": "Capsule container capacity Citiz & Co",
+        "min_value": "18",
+        "max_value": "24",
+        "unit_raw": "capsules",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_14",
+        "type": "ParameterSpec",
+        "name": "Operating temperature",
+        "min_value": "5",
+        "max_value": "45",
+        "unit_raw": "°C",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_15",
+        "type": "ParameterSpec",
+        "name": "Storage temperature",
+        "min_value": "-25",
+        "max_value": "60",
+        "unit_raw": "°C",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_16",
+        "type": "ParameterSpec",
+        "name": "Safety temperature",
+        "nominal_value": "167",
+        "unit_raw": "°C",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_17",
+        "type": "ParameterSpec",
+        "name": "Coffee temperature at outlet",
+        "nominal_value": "86",
+        "unit_raw": "°C",
+        "confidence": 0.9
+      }
+    ],
+    "relations": []
+  },
+  "timestamp": "2025-11-04T08:47:34.216214+00:00"
+}

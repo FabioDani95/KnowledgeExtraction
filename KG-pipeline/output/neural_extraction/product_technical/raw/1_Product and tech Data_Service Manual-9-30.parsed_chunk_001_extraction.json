@@ -1,0 +1,212 @@
+{
+  "extraction": {
+    "entities": [
+      {
+        "id": "P_01",
+        "type": "Product",
+        "name": "AERO3",
+        "confidence": 0.95
+      },
+      {
+        "id": "P_02",
+        "type": "Product",
+        "name": "Citiz & milk",
+        "confidence": 0.95
+      },
+      {
+        "id": "P_03",
+        "type": "Product",
+        "name": "Citiz & Co",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_01",
+        "type": "Component",
+        "name": "Lid",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_02",
+        "type": "Component",
+        "name": "Seal",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_03",
+        "type": "Component",
+        "name": "Jug",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_04",
+        "type": "Component",
+        "name": "Power plug",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_05",
+        "type": "Component",
+        "name": "Start button",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_06",
+        "type": "Component",
+        "name": "Mixer for hot milk",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_07",
+        "type": "Component",
+        "name": "Spring whisk for milk foam",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_08",
+        "type": "Component",
+        "name": "Drip tray",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_09",
+        "type": "Component",
+        "name": "Drip grid",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_10",
+        "type": "Component",
+        "name": "ON/OFF switch",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_11",
+        "type": "Component",
+        "name": "Power cord",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_12",
+        "type": "Component",
+        "name": "Core units",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_13",
+        "type": "Component",
+        "name": "Water tank",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_14",
+        "type": "Component",
+        "name": "Water tank cover",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_15",
+        "type": "Component",
+        "name": "Platform",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_16",
+        "type": "Component",
+        "name": "Flow meter",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_17",
+        "type": "Component",
+        "name": "Pump",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_18",
+        "type": "Component",
+        "name": "Self priming device",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_19",
+        "type": "Component",
+        "name": "Thermoblock",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_20",
+        "type": "Component",
+        "name": "Mini brewing unit",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_21",
+        "type": "Component",
+        "name": "Capsule container",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_22",
+        "type": "Component",
+        "name": "Waste water container",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_23",
+        "type": "Component",
+        "name": "Water tank connector",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_24",
+        "type": "Component",
+        "name": "Coffee outlet",
+        "confidence": 0.9
+      },
+      {
+        "id": "C_25",
+        "type": "Component",
+        "name": "Brewing unit",
+        "confidence": 0.9
+      },
+      {
+        "id": "RP_01",
+        "type": "RatingPlate",
+        "name": "EF484 Citiz C110 red",
+        "confidence": 0.9
+      },
+      {
+        "id": "RP_02",
+        "type": "RatingPlate",
+        "name": "EF483 Citiz D110 black",
+        "confidence": 0.9
+      },
+      {
+        "id": "RP_03",
+        "type": "RatingPlate",
+        "name": "EF486 Citiz & milk C120 red",
+        "confidence": 0.9
+      },
+      {
+        "id": "RP_04",
+        "type": "RatingPlate",
+        "name": "EF485 Citiz & milk D120 black",
+        "confidence": 0.9
+      },
+      {
+        "id": "RP_05",
+        "type": "RatingPlate",
+        "name": "EF488 Citiz & Co C130 red",
+        "confidence": 0.9
+      },
+      {
+        "id": "RP_06",
+        "type": "RatingPlate",
+        "name": "EF487 Citiz & Co D130 black",
+        "confidence": 0.9
+      }
+    ],
+    "relations": []
+  },
+  "timestamp": "2025-11-04T08:47:09.450823+00:00"
+}

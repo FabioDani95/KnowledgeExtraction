@@ -1,21 +1,19 @@
 {
   "json_valid": true,
-  "entities_count": 15,
-  "relations_count": 22,
+  "entities_count": 68,
+  "relations_count": 44,
   "warnings": [],
-  "overall_confidence": 0.913,
-  "avg_entity_confidence": 0.929,
-  "avg_relation_confidence": 0.896,
+  "overall_confidence": 0.894,
+  "avg_entity_confidence": 0.931,
+  "avg_relation_confidence": 0.858,
   "entity_type_distribution": {
-    "MachineMode": 8,
-    "State": 2,
-    "ProcessStep": 5
+    "MachineMode": 14,
+    "ProcessStep": 54
   },
   "relation_type_distribution": {
-    "precedes": 13,
-    "appliesDuring": 8,
-    "verifies": 1
+    "precedes": 15,
+    "appliesDuring": 29
   },
   "profile": "operation_modes",
-  "generated_at": "2025-11-03T12:12:46.116451Z"
+  "generated_at": "2025-11-04T08:49:02.300860+00:00"
 }

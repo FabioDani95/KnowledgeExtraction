@@ -1,0 +1,225 @@
+{
+  "extraction": {
+    "entities": [
+      {
+        "id": "MM_01",
+        "type": "MachineMode",
+        "name": "Emptying mode",
+        "confidence": 0.95
+      },
+      {
+        "id": "MM_02",
+        "type": "MachineMode",
+        "name": "Resetting mode",
+        "confidence": 0.95
+      },
+      {
+        "id": "MM_03",
+        "type": "MachineMode",
+        "name": "Power save mode",
+        "confidence": 0.95
+      },
+      {
+        "id": "MM_04",
+        "type": "MachineMode",
+        "name": "Failure mode",
+        "confidence": 0.95
+      },
+      {
+        "id": "MM_05",
+        "type": "MachineMode",
+        "name": "Standby mode",
+        "confidence": 0.95
+      },
+      {
+        "id": "MM_06",
+        "type": "MachineMode",
+        "name": "Hot milk / milk froth preparation",
+        "confidence": 0.95
+      },
+      {
+        "id": "MM_07",
+        "type": "MachineMode",
+        "name": "Cold milk froth preparation",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_01",
+        "type": "ProcessStep",
+        "name": "Switch off machine",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_02",
+        "type": "ProcessStep",
+        "name": "Press and hold small coffee button",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_03",
+        "type": "ProcessStep",
+        "name": "Switch on machine",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_04",
+        "type": "ProcessStep",
+        "name": "Start pump",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_05",
+        "type": "ProcessStep",
+        "name": "Stop pump after 10s",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_06",
+        "type": "ProcessStep",
+        "name": "Heat up thermoblock to 105°C",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_07",
+        "type": "ProcessStep",
+        "name": "Switch off thermoblock",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_08",
+        "type": "ProcessStep",
+        "name": "Go to standby mode",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_09",
+        "type": "ProcessStep",
+        "name": "Reset the programmed large and small coffee volumes to factory setting",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_10",
+        "type": "ProcessStep",
+        "name": "Indicate the resetting mode for 3 s",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_11",
+        "type": "ProcessStep",
+        "name": "Reduce thermoblock temperature",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_12",
+        "type": "ProcessStep",
+        "name": "Switch LED indication to power save mode",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_13",
+        "type": "ProcessStep",
+        "name": "Press any coffee button to activate ready mode",
+        "confidence": 0.9
+      },
+      {
+        "id": "PS_14",
+        "type": "ProcessStep",
+        "name": "Switch LED indication to standby mode",
+        "confidence": 0.9
+      }
+    ],
+    "relations": [
+      {
+        "type": "precedes",
+        "from_ref": "MM_01",
+        "to_ref": "MM_05",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_01",
+        "to_ref": "MM_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_02",
+        "to_ref": "MM_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_03",
+        "to_ref": "MM_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_04",
+        "to_ref": "MM_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_05",
+        "to_ref": "MM_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_06",
+        "to_ref": "MM_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_07",
+        "to_ref": "MM_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_08",
+        "to_ref": "MM_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_09",
+        "to_ref": "MM_02",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_10",
+        "to_ref": "MM_02",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_11",
+        "to_ref": "MM_03",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_12",
+        "to_ref": "MM_03",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_13",
+        "to_ref": "MM_03",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_14",
+        "to_ref": "MM_05",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "timestamp": "2025-11-04T08:48:13.439774+00:00"
+}

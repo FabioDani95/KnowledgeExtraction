@@ -1,0 +1,236 @@
+{
+  "extraction": {
+    "entities": [
+      {
+        "id": "C_01",
+        "type": "Component",
+        "name": "Button prints",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_02",
+        "type": "Component",
+        "name": "Capsule bay",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_03",
+        "type": "Component",
+        "name": "Brewing unit",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_04",
+        "type": "Component",
+        "name": "Pump",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_05",
+        "type": "Component",
+        "name": "Flowmeter",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_06",
+        "type": "Component",
+        "name": "Electronic control board",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_07",
+        "type": "Component",
+        "name": "Self priming device",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_08",
+        "type": "Component",
+        "name": "NTC temperature sensor",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_09",
+        "type": "Component",
+        "name": "Thermoblock",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_10",
+        "type": "Component",
+        "name": "Cup support",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_11",
+        "type": "Component",
+        "name": "Waste water container",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_12",
+        "type": "Component",
+        "name": "Capsule container",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_13",
+        "type": "Component",
+        "name": "Side panel, left",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_14",
+        "type": "Component",
+        "name": "Side panel, right",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_15",
+        "type": "Component",
+        "name": "Coffee nozzle",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_16",
+        "type": "Component",
+        "name": "Steam cover",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_17",
+        "type": "Component",
+        "name": "Closing handle",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_18",
+        "type": "Component",
+        "name": "Button \"small cup\"",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_19",
+        "type": "Component",
+        "name": "Button \"large cup\"",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_20",
+        "type": "Component",
+        "name": "Top cover",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_21",
+        "type": "Component",
+        "name": "Rear cover",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_22",
+        "type": "Component",
+        "name": "Drip grid",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_23",
+        "type": "Component",
+        "name": "Drip tray",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_24",
+        "type": "Component",
+        "name": "Core unit",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_25",
+        "type": "Component",
+        "name": "Water tank cover",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_26",
+        "type": "Component",
+        "name": "Water tank",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_27",
+        "type": "Component",
+        "name": "Water tank connector",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_28",
+        "type": "Component",
+        "name": "Power cord",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_29",
+        "type": "Component",
+        "name": "ON/OFF switch",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_30",
+        "type": "Component",
+        "name": "Platform",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_31",
+        "type": "Component",
+        "name": "Milk frother",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_32",
+        "type": "Component",
+        "name": "Lid",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_33",
+        "type": "Component",
+        "name": "Seal",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_34",
+        "type": "Component",
+        "name": "Jug",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_35",
+        "type": "Component",
+        "name": "Power plug",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_36",
+        "type": "Component",
+        "name": "Start button",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_37",
+        "type": "Component",
+        "name": "Mixer for hot milk",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_38",
+        "type": "Component",
+        "name": "Spring whisk for milk foam",
+        "confidence": 0.95
+      }
+    ],
+    "relations": []
+  },
+  "timestamp": "2025-11-04T08:46:47.355192+00:00"
+}

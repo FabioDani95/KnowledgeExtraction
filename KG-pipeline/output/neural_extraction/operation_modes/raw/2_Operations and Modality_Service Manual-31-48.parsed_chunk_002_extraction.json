@@ -1,0 +1,176 @@
+{
+  "extraction": {
+    "entities": [
+      {
+        "id": "PS_01",
+        "type": "ProcessStep",
+        "name": "Switch off coffee machine",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_02",
+        "type": "ProcessStep",
+        "name": "Remove water tank",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_03",
+        "type": "ProcessStep",
+        "name": "Place a beaker under the coffee outlet",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_04",
+        "type": "ProcessStep",
+        "name": "Press and hold button 'small cup'",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_05",
+        "type": "ProcessStep",
+        "name": "Switch the coffee machine on again",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_06",
+        "type": "ProcessStep",
+        "name": "Release button 'small cup'",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_07",
+        "type": "ProcessStep",
+        "name": "Switch off the coffee machine",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_08",
+        "type": "ProcessStep",
+        "name": "Fill water tank with fresh potable water",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_09",
+        "type": "ProcessStep",
+        "name": "Insert water tank",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_10",
+        "type": "ProcessStep",
+        "name": "Attach whisk to milk frother",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_11",
+        "type": "ProcessStep",
+        "name": "Place milk frother on base plate connector",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_12",
+        "type": "ProcessStep",
+        "name": "Switch machine on",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_13",
+        "type": "ProcessStep",
+        "name": "Place a container under coffee outlet",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_14",
+        "type": "ProcessStep",
+        "name": "Rinse coffee machine by pressing button 'large cup'",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_15",
+        "type": "ProcessStep",
+        "name": "Switch machine off",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_16",
+        "type": "ProcessStep",
+        "name": "Check if capsule is ejected",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_17",
+        "type": "ProcessStep",
+        "name": "Empty and clean capsule container",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_18",
+        "type": "ProcessStep",
+        "name": "Empty, rinse and clean water tank",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_19",
+        "type": "ProcessStep",
+        "name": "Reassemble coffee machine",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_20",
+        "type": "ProcessStep",
+        "name": "Clean coffee machine with a damp cloth",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_21",
+        "type": "ProcessStep",
+        "name": "Remove milk frother from platform",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_22",
+        "type": "ProcessStep",
+        "name": "Remove lid and dismantle whisk",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_23",
+        "type": "ProcessStep",
+        "name": "Remove seal from lid",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_24",
+        "type": "ProcessStep",
+        "name": "Rinse and clean milk frother together with whisk or mixer, lid and seal",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_25",
+        "type": "ProcessStep",
+        "name": "Clean outside of milk frother with a damp cloth",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_26",
+        "type": "ProcessStep",
+        "name": "Reassemble milk frother",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_27",
+        "type": "ProcessStep",
+        "name": "Eject capsule or check if capsule is removed",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_28",
+        "type": "ProcessStep",
+        "name": "Remove and empty capsule/waste water container, drip tray and water tank",
+        "confidence": 0.95
+      }
+    ],
+    "relations": []
+  },
+  "timestamp": "2025-11-04T08:48:54.477892+00:00"
+}

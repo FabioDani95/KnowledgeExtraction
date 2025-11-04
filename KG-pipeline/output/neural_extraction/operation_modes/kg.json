@@ -1,11 +1,11 @@
 {
   "document_code": "KG_OPERATION_MODES",
-  "ingestion_id": "cad401e0-5333-4b93-93cf-c8783fb2bd3a",
-  "extraction_version": "neural_v1.0",
+  "ingestion_id": "7d3f2ec7-edf0-4e16-86a5-e223955c9de5",
+  "extraction_version": "neural_v1.1",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
-    "model": "gpt-4o-mini",
-    "prompt_id": "neural_extraction_v1",
+    "model": "gpt-4o",
+    "prompt_id": "neural_extraction_v1_hardened",
     "temperature": 0.2,
     "max_tokens": 1500
   },
@@ -22,256 +22,704 @@
   ],
   "entities": [
     {
-      "id": "MM_01",
+      "id": "ns:Mode/heat_up_mode",
       "type": "MachineMode",
       "name": "Heat up mode",
       "confidence": 0.95
     },
     {
-      "id": "MM_02",
+      "id": "ns:Mode/self_test_mode",
       "type": "MachineMode",
       "name": "Self test mode",
       "confidence": 0.95
     },
     {
-      "id": "MM_03",
+      "id": "ns:Mode/ready_mode",
       "type": "MachineMode",
       "name": "Ready mode",
       "confidence": 0.95
     },
     {
-      "id": "MM_04",
+      "id": "ns:Mode/brewing_mode",
       "type": "MachineMode",
       "name": "Brewing mode",
       "confidence": 0.95
     },
     {
-      "id": "MM_05",
+      "id": "ns:Mode/volume_brewing_mode",
       "type": "MachineMode",
       "name": "Volume brewing mode",
       "confidence": 0.95
     },
     {
-      "id": "MM_06",
+      "id": "ns:Mode/descaling_mode",
       "type": "MachineMode",
       "name": "Descaling mode",
       "confidence": 0.95
     },
     {
-      "id": "MM_07",
+      "id": "ns:Mode/descaling_mode_ready_state",
       "type": "MachineMode",
-      "name": "Cold milk froth preparation",
-      "confidence": 0.94
-    },
-    {
-      "id": "S_01",
-      "type": "State",
-      "name": "Coffee machine switched off",
-      "confidence": 0.92
-    },
-    {
-      "id": "S_02",
-      "type": "State",
-      "name": "Water system emptied",
+      "name": "Descaling mode ready state",
       "confidence": 0.9
     },
     {
-      "id": "PS_01",
-      "type": "ProcessStep",
-      "name": "Remove water tank",
-      "confidence": 0.93
+      "id": "ns:Mode/emptying_mode",
+      "type": "MachineMode",
+      "name": "Emptying mode",
+      "confidence": 0.95
     },
     {
-      "id": "PS_02",
-      "type": "ProcessStep",
-      "name": "Press both coffee buttons simultaneously",
-      "confidence": 0.93
+      "id": "ns:Mode/resetting_mode",
+      "type": "MachineMode",
+      "name": "Resetting mode",
+      "confidence": 0.95
     },
     {
-      "id": "PS_03",
+      "id": "ns:Mode/power_save_mode",
+      "type": "MachineMode",
+      "name": "Power save mode",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Mode/failure_mode",
+      "type": "MachineMode",
+      "name": "Failure mode",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Mode/standby_mode",
+      "type": "MachineMode",
+      "name": "Standby mode",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Mode/hot_milk_milk_froth_preparation",
+      "type": "MachineMode",
+      "name": "Hot milk / milk froth preparation",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Mode/cold_milk_froth_preparation",
+      "type": "MachineMode",
+      "name": "Cold milk froth preparation",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/switch_off_machine",
+      "type": "ProcessStep",
+      "name": "Switch off machine",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/press_and_hold_small_coffee_button",
+      "type": "ProcessStep",
+      "name": "Press and hold small coffee button",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/switch_on_machine",
+      "type": "ProcessStep",
+      "name": "Switch on machine",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/start_pump",
       "type": "ProcessStep",
       "name": "Start pump",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/stop_pump_after_10s",
+      "type": "ProcessStep",
+      "name": "Stop pump after 10s",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/heat_up_thermoblock_to_105c",
+      "type": "ProcessStep",
+      "name": "Heat up thermoblock to 105°C",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/switch_off_thermoblock",
+      "type": "ProcessStep",
+      "name": "Switch off thermoblock",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/go_to_standby_mode",
+      "type": "ProcessStep",
+      "name": "Go to standby mode",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/reset_the_programmed_large_and_small_coffee_volumes_to_factory_setting",
+      "type": "ProcessStep",
+      "name": "Reset the programmed large and small coffee volumes to factory setting",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/indicate_the_resetting_mode_for_3_s",
+      "type": "ProcessStep",
+      "name": "Indicate the resetting mode for 3 s",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/reduce_thermoblock_temperature",
+      "type": "ProcessStep",
+      "name": "Reduce thermoblock temperature",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/switch_led_indication_to_power_save_mode",
+      "type": "ProcessStep",
+      "name": "Switch LED indication to power save mode",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/press_any_coffee_button_to_activate_ready_mode",
+      "type": "ProcessStep",
+      "name": "Press any coffee button to activate ready mode",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/switch_led_indication_to_standby_mode",
+      "type": "ProcessStep",
+      "name": "Switch LED indication to standby mode",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/switch_off_coffee_machine",
+      "type": "ProcessStep",
+      "name": "Switch off coffee machine",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/remove_water_tank",
+      "type": "ProcessStep",
+      "name": "Remove water tank",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/place_a_beaker_under_the_coffee_outlet",
+      "type": "ProcessStep",
+      "name": "Place a beaker under the coffee outlet",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/press_and_hold_button_small_cup",
+      "type": "ProcessStep",
+      "name": "Press and hold button 'small cup'",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/switch_the_coffee_machine_on_again",
+      "type": "ProcessStep",
+      "name": "Switch the coffee machine on again",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/release_button_small_cup",
+      "type": "ProcessStep",
+      "name": "Release button 'small cup'",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/switch_off_the_coffee_machine",
+      "type": "ProcessStep",
+      "name": "Switch off the coffee machine",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/fill_water_tank_with_fresh_potable_water",
+      "type": "ProcessStep",
+      "name": "Fill water tank with fresh potable water",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/insert_water_tank",
+      "type": "ProcessStep",
+      "name": "Insert water tank",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/attach_whisk_to_milk_frother",
+      "type": "ProcessStep",
+      "name": "Attach whisk to milk frother",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/place_milk_frother_on_base_plate_connector",
+      "type": "ProcessStep",
+      "name": "Place milk frother on base plate connector",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/switch_machine_on",
+      "type": "ProcessStep",
+      "name": "Switch machine on",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/place_a_container_under_coffee_outlet",
+      "type": "ProcessStep",
+      "name": "Place a container under coffee outlet",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/rinse_coffee_machine_by_pressing_button_large_cup",
+      "type": "ProcessStep",
+      "name": "Rinse coffee machine by pressing button 'large cup'",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/switch_machine_off",
+      "type": "ProcessStep",
+      "name": "Switch machine off",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/check_if_capsule_is_ejected",
+      "type": "ProcessStep",
+      "name": "Check if capsule is ejected",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/empty_and_clean_capsule_container",
+      "type": "ProcessStep",
+      "name": "Empty and clean capsule container",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/empty_rinse_and_clean_water_tank",
+      "type": "ProcessStep",
+      "name": "Empty, rinse and clean water tank",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/reassemble_coffee_machine",
+      "type": "ProcessStep",
+      "name": "Reassemble coffee machine",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/clean_coffee_machine_with_a_damp_cloth",
+      "type": "ProcessStep",
+      "name": "Clean coffee machine with a damp cloth",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/remove_milk_frother_from_platform",
+      "type": "ProcessStep",
+      "name": "Remove milk frother from platform",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/remove_lid_and_dismantle_whisk",
+      "type": "ProcessStep",
+      "name": "Remove lid and dismantle whisk",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/remove_seal_from_lid",
+      "type": "ProcessStep",
+      "name": "Remove seal from lid",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/rinse_and_clean_milk_frother_together_with_whisk_or_mixer_lid_and_seal",
+      "type": "ProcessStep",
+      "name": "Rinse and clean milk frother together with whisk or mixer, lid and seal",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/clean_outside_of_milk_frother_with_a_damp_cloth",
+      "type": "ProcessStep",
+      "name": "Clean outside of milk frother with a damp cloth",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/reassemble_milk_frother",
+      "type": "ProcessStep",
+      "name": "Reassemble milk frother",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/eject_capsule_or_check_if_capsule_is_removed",
+      "type": "ProcessStep",
+      "name": "Eject capsule or check if capsule is removed",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/remove_and_empty_capsulewaste_water_container_drip_tray_and_water_tank",
+      "type": "ProcessStep",
+      "name": "Remove and empty capsule/waste water container, drip tray and water tank",
+      "confidence": 0.95
+    },
+    {
+      "id": "ns:Step/reassemble_coffee_machine_without_water_tank",
+      "type": "ProcessStep",
+      "name": "Reassemble coffee machine without water tank",
+      "confidence": 0.92
+    },
+    {
+      "id": "ns:Step/place_a_container_on_the_cup_support",
+      "type": "ProcessStep",
+      "name": "Place a container on the cup support",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/fill_the_water_tank_with_decalcifier_and_water",
+      "type": "ProcessStep",
+      "name": "Fill the water tank with decalcifier and water",
+      "confidence": 0.93
+    },
+    {
+      "id": "ns:Step/insert_water_tank_into_the_coffee_machine",
+      "type": "ProcessStep",
+      "name": "Insert water tank into the coffee machine",
       "confidence": 0.91
     },
     {
-      "id": "PS_04",
+      "id": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
       "type": "ProcessStep",
-      "name": "Rinse and clean water tank",
+      "name": "Press both coffee buttons simultaneously for at least 3sec",
+      "confidence": 0.94
+    },
+    {
+      "id": "ns:Step/press_any_button_to_start_pump",
+      "type": "ProcessStep",
+      "name": "Press any button to start pump",
       "confidence": 0.89
     },
     {
-      "id": "PS_05",
+      "id": "ns:Step/let_the_entire_solution_in_the_tank_run_through_the_system",
       "type": "ProcessStep",
-      "name": "Switch off the coffee machine",
+      "name": "Let the entire solution in the tank run through the system",
+      "confidence": 0.88
+    },
+    {
+      "id": "ns:Step/pour_descaling_solution_back_into_water_tank",
+      "type": "ProcessStep",
+      "name": "Pour descaling solution back into water tank",
       "confidence": 0.87
     },
     {
-      "id": "MM_233a58",
-      "type": "MachineMode",
-      "name": "Descaling Mode",
-      "confidence": 0.95
+      "id": "ns:Step/descale_again",
+      "type": "ProcessStep",
+      "name": "Descale again",
+      "confidence": 0.86
+    },
+    {
+      "id": "ns:Step/rinse_and_clean_water_tank_thoroughly",
+      "type": "ProcessStep",
+      "name": "Rinse and clean water tank thoroughly",
+      "confidence": 0.92
+    },
+    {
+      "id": "ns:Step/rinse_coffee_machine_by_pressing_any_button",
+      "type": "ProcessStep",
+      "name": "Rinse coffee machine by pressing any button",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec_to_end_descaling_mode",
+      "type": "ProcessStep",
+      "name": "Press both coffee buttons simultaneously for at least 3sec to end descaling mode",
+      "confidence": 0.93
     }
   ],
   "relations": [
     {
       "type": "precedes",
-      "from_ref": "MM_01",
-      "to_ref": "MM_02",
+      "from_ref": "ns:Mode/heat_up_mode",
+      "to_ref": "ns:Mode/self_test_mode",
       "confidence": 0.9
     },
     {
       "type": "precedes",
-      "from_ref": "MM_02",
-      "to_ref": "MM_03",
+      "from_ref": "ns:Mode/self_test_mode",
+      "to_ref": "ns:Mode/ready_mode",
       "confidence": 0.9
-    },
-    {
-      "type": "precedes",
-      "from_ref": "MM_03",
-      "to_ref": "MM_04",
-      "confidence": 0.9
-    },
-    {
-      "type": "precedes",
-      "from_ref": "MM_04",
-      "to_ref": "MM_05",
-      "confidence": 0.9
-    },
-    {
-      "type": "precedes",
-      "from_ref": "MM_05",
-      "to_ref": "MM_06",
-      "confidence": 0.9
-    },
-    {
-      "type": "precedes",
-      "from_ref": "MM_01",
-      "to_ref": "MM_05",
-      "confidence": 0.89
     },
     {
       "type": "appliesDuring",
-      "from_ref": "MM_01",
-      "to_ref": "MM_06",
-      "confidence": 0.87
+      "from_ref": "ns:Mode/ready_mode",
+      "to_ref": "ns:Mode/brewing_mode",
+      "confidence": 0.85
     },
     {
       "type": "appliesDuring",
-      "from_ref": "MM_01",
-      "to_ref": "MM_07",
-      "confidence": 0.87
+      "from_ref": "ns:Mode/ready_mode",
+      "to_ref": "ns:Mode/volume_brewing_mode",
+      "confidence": 0.85
     },
     {
-      "type": "precedes",
-      "from_ref": "MM_02",
-      "to_ref": "MM_01",
-      "confidence": 0.88
-    },
-    {
-      "type": "precedes",
-      "from_ref": "MM_03",
-      "to_ref": "MM_01",
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/ready_mode",
+      "to_ref": "ns:Mode/descaling_mode",
       "confidence": 0.85
     },
     {
       "type": "precedes",
-      "from_ref": "MM_04",
-      "to_ref": "MM_01",
-      "confidence": 0.86
-    },
-    {
-      "type": "precedes",
-      "from_ref": "PS_01",
-      "to_ref": "PS_02",
-      "confidence": 0.9
-    },
-    {
-      "type": "precedes",
-      "from_ref": "PS_02",
-      "to_ref": "PS_03",
-      "confidence": 0.89
-    },
-    {
-      "type": "precedes",
-      "from_ref": "PS_03",
-      "to_ref": "PS_04",
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:Mode/descaling_mode_ready_state",
       "confidence": 0.88
     },
     {
       "type": "precedes",
-      "from_ref": "PS_04",
-      "to_ref": "PS_05",
-      "confidence": 0.87
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "MM_01",
-      "to_ref": "S_01",
-      "confidence": 0.95
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "MM_01",
-      "to_ref": "S_02",
-      "confidence": 0.93
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "PS_01",
-      "to_ref": "MM_233a58",
-      "confidence": 0.94
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "PS_02",
-      "to_ref": "MM_233a58",
-      "confidence": 0.93
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "PS_03",
-      "to_ref": "MM_233a58",
-      "confidence": 0.91
-    },
-    {
-      "type": "verifies",
-      "from_ref": "S_01",
-      "to_ref": "MM_233a58",
+      "from_ref": "ns:Mode/emptying_mode",
+      "to_ref": "ns:Mode/standby_mode",
       "confidence": 0.9
     },
     {
       "type": "appliesDuring",
-      "from_ref": "PS_04",
-      "to_ref": "MM_233a58",
-      "confidence": 0.89
+      "from_ref": "ns:Step/switch_off_machine",
+      "to_ref": "ns:Mode/emptying_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/press_and_hold_small_coffee_button",
+      "to_ref": "ns:Mode/emptying_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/switch_on_machine",
+      "to_ref": "ns:Mode/emptying_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/start_pump",
+      "to_ref": "ns:Mode/emptying_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/stop_pump_after_10s",
+      "to_ref": "ns:Mode/emptying_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/heat_up_thermoblock_to_105c",
+      "to_ref": "ns:Mode/emptying_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/switch_off_thermoblock",
+      "to_ref": "ns:Mode/emptying_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/go_to_standby_mode",
+      "to_ref": "ns:Mode/emptying_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/reset_the_programmed_large_and_small_coffee_volumes_to_factory_setting",
+      "to_ref": "ns:Mode/resetting_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/indicate_the_resetting_mode_for_3_s",
+      "to_ref": "ns:Mode/resetting_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/reduce_thermoblock_temperature",
+      "to_ref": "ns:Mode/power_save_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/switch_led_indication_to_power_save_mode",
+      "to_ref": "ns:Mode/power_save_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/press_any_coffee_button_to_activate_ready_mode",
+      "to_ref": "ns:Mode/power_save_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/switch_led_indication_to_standby_mode",
+      "to_ref": "ns:Mode/standby_mode",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/reassemble_coffee_machine_without_water_tank",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 0.85
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/place_a_container_on_the_cup_support",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 0.85
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/fill_the_water_tank_with_decalcifier_and_water",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 0.85
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/insert_water_tank_into_the_coffee_machine",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 0.85
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 0.85
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/press_any_button_to_start_pump",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 0.85
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/let_the_entire_solution_in_the_tank_run_through_the_system",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 0.85
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/pour_descaling_solution_back_into_water_tank",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 0.85
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/descale_again",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 0.85
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/rinse_and_clean_water_tank_thoroughly",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 0.85
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/rinse_coffee_machine_by_pressing_any_button",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 0.85
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec_to_end_descaling_mode",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 0.85
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/reassemble_coffee_machine_without_water_tank",
+      "to_ref": "ns:Step/place_a_container_on_the_cup_support",
+      "confidence": 0.8
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/place_a_container_on_the_cup_support",
+      "to_ref": "ns:Step/fill_the_water_tank_with_decalcifier_and_water",
+      "confidence": 0.8
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/fill_the_water_tank_with_decalcifier_and_water",
+      "to_ref": "ns:Step/insert_water_tank_into_the_coffee_machine",
+      "confidence": 0.8
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/insert_water_tank_into_the_coffee_machine",
+      "to_ref": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
+      "confidence": 0.8
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
+      "to_ref": "ns:Step/press_any_button_to_start_pump",
+      "confidence": 0.8
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/press_any_button_to_start_pump",
+      "to_ref": "ns:Step/let_the_entire_solution_in_the_tank_run_through_the_system",
+      "confidence": 0.8
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/let_the_entire_solution_in_the_tank_run_through_the_system",
+      "to_ref": "ns:Step/pour_descaling_solution_back_into_water_tank",
+      "confidence": 0.8
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/pour_descaling_solution_back_into_water_tank",
+      "to_ref": "ns:Step/descale_again",
+      "confidence": 0.8
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/descale_again",
+      "to_ref": "ns:Step/rinse_and_clean_water_tank_thoroughly",
+      "confidence": 0.8
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/rinse_and_clean_water_tank_thoroughly",
+      "to_ref": "ns:Step/rinse_coffee_machine_by_pressing_any_button",
+      "confidence": 0.8
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/rinse_coffee_machine_by_pressing_any_button",
+      "to_ref": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec_to_end_descaling_mode",
+      "confidence": 0.8
     }
   ],
   "provenance": {
-    "overall_confidence": 0.913,
+    "overall_confidence": 0.894,
     "sections_used": [
       "2_Operations and Modality_Service Manual-31-48.parsed.json"
     ],
-    "notes": "Neural extraction for profile operation_modes"
+    "notes": "Neural extraction for profile operation_modes with semantic normalization"
   },
   "quality": {
     "json_valid": true,
-    "entities_count": 15,
-    "relations_count": 22,
+    "entities_count": 68,
+    "relations_count": 44,
     "warnings": [],
-    "overall_confidence": 0.913,
-    "avg_entity_confidence": 0.929,
-    "avg_relation_confidence": 0.896,
+    "overall_confidence": 0.894,
+    "avg_entity_confidence": 0.931,
+    "avg_relation_confidence": 0.858,
     "entity_type_distribution": {
-      "MachineMode": 8,
-      "State": 2,
-      "ProcessStep": 5
+      "MachineMode": 14,
+      "ProcessStep": 54
     },
     "relation_type_distribution": {
-      "precedes": 13,
-      "appliesDuring": 8,
-      "verifies": 1
+      "precedes": 15,
+      "appliesDuring": 29
     },
     "profile": "operation_modes",
-    "generated_at": "2025-11-03T12:12:46.116451Z"
+    "generated_at": "2025-11-04T08:49:02.300860+00:00"
   }
 }

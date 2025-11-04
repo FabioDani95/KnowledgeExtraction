@@ -1,22 +1,20 @@
 {
   "json_valid": true,
-  "entities_count": 21,
-  "relations_count": 14,
+  "entities_count": 26,
+  "relations_count": 15,
   "warnings": [],
-  "overall_confidence": 0.904,
-  "avg_entity_confidence": 0.908,
-  "avg_relation_confidence": 0.9,
+  "overall_confidence": 0.891,
+  "avg_entity_confidence": 0.893,
+  "avg_relation_confidence": 0.889,
   "entity_type_distribution": {
-    "FailureMode": 9,
-    "RepairAction": 10,
-    "Tool": 1,
-    "MaintenanceTask": 1
+    "FailureMode": 14,
+    "RepairAction": 11,
+    "Tool": 1
   },
   "relation_type_distribution": {
-    "affects": 12,
-    "requiresTool": 1,
-    "mitigatedBy": 1
+    "mitigatedBy": 14,
+    "requiresTool": 1
   },
   "profile": "troubleshooting",
-  "generated_at": "2025-11-03T12:13:08.799359Z"
+  "generated_at": "2025-11-04T08:49:15.341747+00:00"
 }

@@ -1,0 +1,95 @@
+{
+  "extraction": {
+    "entities": [
+      {
+        "id": "C_01",
+        "type": "Component",
+        "name": "Jug",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_02",
+        "type": "Component",
+        "name": "Whisk",
+        "confidence": 0.95
+      },
+      {
+        "id": "C_03",
+        "type": "Component",
+        "name": "Mixer",
+        "confidence": 0.95
+      },
+      {
+        "id": "PS_01",
+        "type": "ParameterSpec",
+        "name": "Dimensions of jug",
+        "confidence": 0.92,
+        "unit_raw": "mm",
+        "nominal_value": "91 x 170"
+      },
+      {
+        "id": "PS_02",
+        "type": "ParameterSpec",
+        "name": "Dimensions of whisk",
+        "confidence": 0.92,
+        "unit_raw": "mm",
+        "nominal_value": "33 x 32"
+      },
+      {
+        "id": "PS_03",
+        "type": "ParameterSpec",
+        "name": "Dimensions of mixer",
+        "confidence": 0.92,
+        "unit_raw": "mm",
+        "nominal_value": "15 x 34 x 32"
+      },
+      {
+        "id": "PS_04",
+        "type": "ParameterSpec",
+        "name": "Weight",
+        "confidence": 0.92,
+        "unit_raw": "kg",
+        "nominal_value": "0.7"
+      }
+    ],
+    "relations": [
+      {
+        "type": "hasSpec",
+        "from_ref": "C_01",
+        "to_ref": "PS_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasSpec",
+        "from_ref": "C_02",
+        "to_ref": "PS_02",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasSpec",
+        "from_ref": "C_03",
+        "to_ref": "PS_03",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasSpec",
+        "from_ref": "C_01",
+        "to_ref": "PS_04",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasSpec",
+        "from_ref": "C_02",
+        "to_ref": "PS_04",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasSpec",
+        "from_ref": "C_03",
+        "to_ref": "PS_04",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "timestamp": "2025-11-04T08:47:55.635616+00:00"
+}
