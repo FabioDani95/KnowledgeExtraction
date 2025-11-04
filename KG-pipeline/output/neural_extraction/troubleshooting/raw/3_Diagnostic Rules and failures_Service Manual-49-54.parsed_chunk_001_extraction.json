@@ -2,74 +2,62 @@
   "extraction": {
     "entities": [
       {
+        "id": "RM_01",
+        "type": "RepairAction",
+        "name": "Disassembly",
+        "confidence": 0.95
+      },
+      {
+        "id": "T_01",
+        "type": "Tool",
+        "name": "Special disassembly tool",
+        "confidence": 0.92
+      },
+      {
         "id": "FM_01",
         "type": "FailureMode",
-        "name": "Delicate snap connections",
-        "confidence": 0.85
+        "name": "Snap connections breaking",
+        "confidence": 0.89
       },
       {
         "id": "FM_02",
         "type": "FailureMode",
-        "name": "Risk of fatal electrical shock",
-        "confidence": 0.9
-      },
-      {
-        "id": "FM_03",
-        "type": "FailureMode",
-        "name": "Danger of burns",
-        "confidence": 0.88
-      },
-      {
-        "id": "RA_01",
-        "type": "RepairAction",
-        "name": "Use special disassembly tool",
+        "name": "Overtightened screws",
         "confidence": 0.87
       },
       {
-        "id": "RA_02",
-        "type": "RepairAction",
-        "name": "Disconnect the mains plug",
-        "confidence": 0.92
-      },
-      {
-        "id": "RA_03",
-        "type": "RepairAction",
-        "name": "Let coffee machine cool down",
-        "confidence": 0.89
-      },
-      {
-        "id": "Tool_01",
-        "type": "Tool",
-        "name": "Special disassembly tool",
+        "id": "MT_01",
+        "type": "MaintenanceTask",
+        "name": "Cooling down the coffee machine",
         "confidence": 0.9
       }
     ],
     "relations": [
       {
-        "type": "mitigatedBy",
-        "from_ref": "FM_01",
-        "to_ref": "RA_01",
+        "type": "requiresTool",
+        "from_ref": "RM_01",
+        "to_ref": "T_01",
+        "confidence": 0.93
+      },
+      {
+        "type": "affects",
+        "from_ref": "RM_01",
+        "to_ref": "FM_01",
+        "confidence": 0.88
+      },
+      {
+        "type": "affects",
+        "from_ref": "RM_01",
+        "to_ref": "FM_02",
         "confidence": 0.85
       },
       {
         "type": "mitigatedBy",
-        "from_ref": "FM_02",
-        "to_ref": "RA_02",
-        "confidence": 0.9
-      },
-      {
-        "type": "mitigatedBy",
-        "from_ref": "FM_03",
-        "to_ref": "RA_03",
-        "confidence": 0.88
-      },
-      {
-        "type": "requiresTool",
-        "from_ref": "RA_01",
-        "to_ref": "Tool_01",
+        "from_ref": "FM_01",
+        "to_ref": "MT_01",
         "confidence": 0.9
       }
     ]
   },
-  "timestamp": "2025-11-04T08:49:15.339799+00:00"
+  "timestamp": "2025-11-04T09:22:44.675933+00:00"
 }

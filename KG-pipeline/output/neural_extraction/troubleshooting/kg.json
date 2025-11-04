@@ -1,10 +1,10 @@
 {
   "document_code": "KG_TROUBLESHOOTING",
-  "ingestion_id": "c1e4f8ad-644c-404e-b660-8db3dd613df5",
+  "ingestion_id": "6a5fd31f-ca61-43a9-985c-e1244ac38998",
   "extraction_version": "neural_v1.1",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
-    "model": "gpt-4o",
+    "model": "gpt-4o-mini",
     "prompt_id": "neural_extraction_v1_hardened",
     "temperature": 0.2,
     "max_tokens": 1500
@@ -27,157 +27,115 @@
     {
       "id": "ns:FM/flow_meter_blocked",
       "type": "FailureMode",
-      "name": "flow meter blocked",
+      "name": "Flow meter blocked",
       "confidence": 0.95
-    },
-    {
-      "id": "ns:FM/pyramide_plate_blocked",
-      "type": "FailureMode",
-      "name": "pyramide plate blocked",
-      "confidence": 0.92
-    },
-    {
-      "id": "ns:FM/coffee_machine_is_calcified",
-      "type": "FailureMode",
-      "name": "coffee machine is calcified",
-      "confidence": 0.93
-    },
-    {
-      "id": "ns:FM/unit_leaks",
-      "type": "FailureMode",
-      "name": "unit leaks",
-      "confidence": 0.9
-    },
-    {
-      "id": "ns:FM/leak",
-      "type": "FailureMode",
-      "name": "leak",
-      "confidence": 0.88
-    },
-    {
-      "id": "ns:FM/damaged_milk_frother",
-      "type": "FailureMode",
-      "name": "damaged milk frother",
-      "confidence": 0.91
-    },
-    {
-      "id": "ns:FM/jug_badly_scratched",
-      "type": "FailureMode",
-      "name": "jug badly scratched",
-      "confidence": 0.89
-    },
-    {
-      "id": "ns:FM/whisks_damaged",
-      "type": "FailureMode",
-      "name": "whisks damaged",
-      "confidence": 0.87
-    },
-    {
-      "id": "ns:FM/milk_frother_not_working",
-      "type": "FailureMode",
-      "name": "milk frother not working",
-      "confidence": 0.86
-    },
-    {
-      "id": "ns:FM/milk_frother_not_switch_off_automatically",
-      "type": "FailureMode",
-      "name": "milk frother not switch off automatically",
-      "confidence": 0.85
-    },
-    {
-      "id": "ns:FM/milk_frother_cold",
-      "type": "FailureMode",
-      "name": "milk frother cold",
-      "confidence": 0.84
     },
     {
       "id": "ns:RA/clean_or_replace_flow_meter",
       "type": "RepairAction",
-      "name": "clean or replace flow meter",
-      "confidence": 0.95
+      "name": "Clean or replace flow meter",
+      "confidence": 0.92
+    },
+    {
+      "id": "ns:FM/pyramide_plate_blocked",
+      "type": "FailureMode",
+      "name": "Pyramide plate blocked",
+      "confidence": 0.93
     },
     {
       "id": "ns:RA/replace_compact_brewing_unit",
       "type": "RepairAction",
-      "name": "replace compact brewing unit",
-      "confidence": 0.92
+      "name": "Replace compact brewing unit",
+      "confidence": 0.9
+    },
+    {
+      "id": "ns:FM/coffee_machine_is_calcified",
+      "type": "FailureMode",
+      "name": "Coffee machine is calcified",
+      "confidence": 0.94
     },
     {
       "id": "ns:RA/descale_coffee_machine",
       "type": "RepairAction",
-      "name": "descale coffee machine",
-      "confidence": 0.93
+      "name": "Descale coffee machine",
+      "confidence": 0.91
+    },
+    {
+      "id": "ns:FM/unit_leaks",
+      "type": "FailureMode",
+      "name": "Unit leaks",
+      "confidence": 0.89
     },
     {
       "id": "ns:RA/replace_defective_hoses_and_seals",
       "type": "RepairAction",
-      "name": "replace defective hoses and seals",
-      "confidence": 0.9
+      "name": "Replace defective hoses and seals",
+      "confidence": 0.87
     },
     {
-      "id": "ns:RA/replace_milk_frother",
-      "type": "RepairAction",
-      "name": "replace milk frother",
-      "confidence": 0.91
+      "id": "ns:FM/milk_frother_damaged",
+      "type": "FailureMode",
+      "name": "Milk frother damaged",
+      "confidence": 0.9
     },
     {
       "id": "ns:RA/replace_lidseal",
       "type": "RepairAction",
-      "name": "replace lid/seal",
-      "confidence": 0.89
+      "name": "Replace lid/seal",
+      "confidence": 0.85
+    },
+    {
+      "id": "ns:FM/jug_badly_scratched",
+      "type": "FailureMode",
+      "name": "Jug badly scratched",
+      "confidence": 0.86
+    },
+    {
+      "id": "ns:RA/replace_milk_frother",
+      "type": "RepairAction",
+      "name": "Replace milk frother",
+      "confidence": 0.84
+    },
+    {
+      "id": "ns:FM/whisks_damaged",
+      "type": "FailureMode",
+      "name": "Whisks damaged",
+      "confidence": 0.83
     },
     {
       "id": "ns:RA/replace_whisks",
       "type": "RepairAction",
-      "name": "replace whisks",
-      "confidence": 0.87
+      "name": "Replace whisks",
+      "confidence": 0.82
     },
     {
-      "id": "ns:RA/replace_connector_on_platform",
+      "id": "ns:RA/disassembly",
       "type": "RepairAction",
-      "name": "replace connector on platform",
-      "confidence": 0.85
-    },
-    {
-      "id": "ns:FM/delicate_snap_connections",
-      "type": "FailureMode",
-      "name": "Delicate snap connections",
-      "confidence": 0.85
-    },
-    {
-      "id": "ns:FM/risk_of_fatal_electrical_shock",
-      "type": "FailureMode",
-      "name": "Risk of fatal electrical shock",
-      "confidence": 0.9
-    },
-    {
-      "id": "ns:FM/danger_of_burns",
-      "type": "FailureMode",
-      "name": "Danger of burns",
-      "confidence": 0.88
-    },
-    {
-      "id": "ns:RA/use_special_disassembly_tool",
-      "type": "RepairAction",
-      "name": "Use special disassembly tool",
-      "confidence": 0.87
-    },
-    {
-      "id": "ns:RA/disconnect_the_mains_plug",
-      "type": "RepairAction",
-      "name": "Disconnect the mains plug",
-      "confidence": 0.92
-    },
-    {
-      "id": "ns:RA/let_coffee_machine_cool_down",
-      "type": "RepairAction",
-      "name": "Let coffee machine cool down",
-      "confidence": 0.89
+      "name": "Disassembly",
+      "confidence": 0.95
     },
     {
       "id": "ns:Tool/special_disassembly_tool",
       "type": "Tool",
       "name": "Special disassembly tool",
+      "confidence": 0.92
+    },
+    {
+      "id": "ns:FM/snap_connections_breaking",
+      "type": "FailureMode",
+      "name": "Snap connections breaking",
+      "confidence": 0.89
+    },
+    {
+      "id": "ns:FM/overtightened_screws",
+      "type": "FailureMode",
+      "name": "Overtightened screws",
+      "confidence": 0.87
+    },
+    {
+      "id": "ns:MT/cooling_down_the_coffee_machine",
+      "type": "MaintenanceTask",
+      "name": "Cooling down the coffee machine",
       "confidence": 0.9
     }
   ],
@@ -186,95 +144,77 @@
       "type": "mitigatedBy",
       "from_ref": "ns:FM/flow_meter_blocked",
       "to_ref": "ns:RA/clean_or_replace_flow_meter",
-      "confidence": 0.95
+      "confidence": 0.92
     },
     {
       "type": "mitigatedBy",
       "from_ref": "ns:FM/pyramide_plate_blocked",
       "to_ref": "ns:RA/replace_compact_brewing_unit",
-      "confidence": 0.92
+      "confidence": 0.9
     },
     {
       "type": "mitigatedBy",
       "from_ref": "ns:FM/coffee_machine_is_calcified",
       "to_ref": "ns:RA/descale_coffee_machine",
-      "confidence": 0.93
+      "confidence": 0.91
     },
     {
       "type": "mitigatedBy",
       "from_ref": "ns:FM/unit_leaks",
       "to_ref": "ns:RA/replace_compact_brewing_unit",
-      "confidence": 0.9
-    },
-    {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/leak",
-      "to_ref": "ns:RA/replace_defective_hoses_and_seals",
       "confidence": 0.88
     },
     {
       "type": "mitigatedBy",
-      "from_ref": "ns:FM/damaged_milk_frother",
-      "to_ref": "ns:RA/replace_milk_frother",
-      "confidence": 0.91
+      "from_ref": "ns:FM/unit_leaks",
+      "to_ref": "ns:RA/replace_defective_hoses_and_seals",
+      "confidence": 0.87
+    },
+    {
+      "type": "mitigatedBy",
+      "from_ref": "ns:FM/milk_frother_damaged",
+      "to_ref": "ns:RA/replace_lidseal",
+      "confidence": 0.85
     },
     {
       "type": "mitigatedBy",
       "from_ref": "ns:FM/jug_badly_scratched",
       "to_ref": "ns:RA/replace_milk_frother",
-      "confidence": 0.89
+      "confidence": 0.84
     },
     {
       "type": "mitigatedBy",
       "from_ref": "ns:FM/whisks_damaged",
       "to_ref": "ns:RA/replace_whisks",
-      "confidence": 0.87
-    },
-    {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/milk_frother_not_working",
-      "to_ref": "ns:RA/replace_milk_frother",
-      "confidence": 0.86
-    },
-    {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/milk_frother_not_switch_off_automatically",
-      "to_ref": "ns:RA/replace_milk_frother",
-      "confidence": 0.85
-    },
-    {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/milk_frother_cold",
-      "to_ref": "ns:RA/replace_milk_frother",
-      "confidence": 0.84
-    },
-    {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/delicate_snap_connections",
-      "to_ref": "ns:RA/use_special_disassembly_tool",
-      "confidence": 0.85
-    },
-    {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/risk_of_fatal_electrical_shock",
-      "to_ref": "ns:RA/disconnect_the_mains_plug",
-      "confidence": 0.9
-    },
-    {
-      "type": "mitigatedBy",
-      "from_ref": "ns:FM/danger_of_burns",
-      "to_ref": "ns:RA/let_coffee_machine_cool_down",
-      "confidence": 0.88
+      "confidence": 0.82
     },
     {
       "type": "requiresTool",
-      "from_ref": "ns:RA/use_special_disassembly_tool",
+      "from_ref": "ns:RA/disassembly",
       "to_ref": "ns:Tool/special_disassembly_tool",
+      "confidence": 0.93
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:RA/disassembly",
+      "to_ref": "ns:FM/snap_connections_breaking",
+      "confidence": 0.88
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:RA/disassembly",
+      "to_ref": "ns:FM/overtightened_screws",
+      "confidence": 0.85
+    },
+    {
+      "type": "mitigatedBy",
+      "from_ref": "ns:FM/snap_connections_breaking",
+      "to_ref": "ns:MT/cooling_down_the_coffee_machine",
       "confidence": 0.9
     }
   ],
   "provenance": {
-    "overall_confidence": 0.891,
+    "overall_confidence": 0.885,
     "sections_used": [
       "3_Diagnostic Rules and failures_Service Manual-49-54.parsed.json"
     ],
@@ -282,22 +222,24 @@
   },
   "quality": {
     "json_valid": true,
-    "entities_count": 26,
-    "relations_count": 15,
+    "entities_count": 19,
+    "relations_count": 12,
     "warnings": [],
-    "overall_confidence": 0.891,
-    "avg_entity_confidence": 0.893,
-    "avg_relation_confidence": 0.889,
+    "overall_confidence": 0.885,
+    "avg_entity_confidence": 0.892,
+    "avg_relation_confidence": 0.879,
     "entity_type_distribution": {
-      "FailureMode": 14,
-      "RepairAction": 11,
-      "Tool": 1
+      "FailureMode": 9,
+      "RepairAction": 8,
+      "Tool": 1,
+      "MaintenanceTask": 1
     },
     "relation_type_distribution": {
-      "mitigatedBy": 14,
-      "requiresTool": 1
+      "mitigatedBy": 9,
+      "requiresTool": 1,
+      "affects": 2
     },
     "profile": "troubleshooting",
-    "generated_at": "2025-11-04T08:49:15.341747+00:00"
+    "generated_at": "2025-11-04T09:22:44.676760+00:00"
   }
 }

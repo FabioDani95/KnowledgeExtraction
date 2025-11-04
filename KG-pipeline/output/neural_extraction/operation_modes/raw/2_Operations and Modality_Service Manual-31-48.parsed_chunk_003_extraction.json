@@ -4,222 +4,48 @@
       {
         "id": "MM_01",
         "type": "MachineMode",
-        "name": "descaling mode",
+        "name": "Descaling Mode",
         "confidence": 0.95
       },
       {
         "id": "PS_01",
         "type": "ProcessStep",
-        "name": "Reassemble coffee machine without water tank",
-        "confidence": 0.92
+        "name": "Press both coffee buttons simultaneously for at least 3 seconds",
+        "confidence": 0.9
       },
       {
         "id": "PS_02",
         "type": "ProcessStep",
-        "name": "Place a container on the cup support",
+        "name": "Press any button to start pump",
         "confidence": 0.9
       },
       {
         "id": "PS_03",
         "type": "ProcessStep",
-        "name": "Fill the water tank with decalcifier and water",
-        "confidence": 0.93
-      },
-      {
-        "id": "PS_04",
-        "type": "ProcessStep",
-        "name": "Insert water tank into the coffee machine",
-        "confidence": 0.91
-      },
-      {
-        "id": "PS_05",
-        "type": "ProcessStep",
-        "name": "Press both coffee buttons simultaneously for at least 3sec",
-        "confidence": 0.94
-      },
-      {
-        "id": "PS_06",
-        "type": "ProcessStep",
-        "name": "Press any button to start pump",
-        "confidence": 0.89
-      },
-      {
-        "id": "PS_07",
-        "type": "ProcessStep",
-        "name": "Let the entire solution in the tank run through the system",
-        "confidence": 0.88
-      },
-      {
-        "id": "PS_08",
-        "type": "ProcessStep",
-        "name": "Pour descaling solution back into water tank",
-        "confidence": 0.87
-      },
-      {
-        "id": "PS_09",
-        "type": "ProcessStep",
-        "name": "Descale again",
-        "confidence": 0.86
-      },
-      {
-        "id": "PS_10",
-        "type": "ProcessStep",
-        "name": "Rinse and clean water tank thoroughly",
-        "confidence": 0.92
-      },
-      {
-        "id": "PS_11",
-        "type": "ProcessStep",
-        "name": "Rinse coffee machine by pressing any button",
+        "name": "Wait until water tank is empty",
         "confidence": 0.9
-      },
-      {
-        "id": "PS_12",
-        "type": "ProcessStep",
-        "name": "Press both coffee buttons simultaneously for at least 3sec to end descaling mode",
-        "confidence": 0.93
       }
     ],
     "relations": [
       {
         "type": "appliesDuring",
-        "from_ref": "PS_01",
-        "to_ref": "MM_01",
-        "confidence": 0.85
+        "from_ref": "MM_01",
+        "to_ref": "PS_01",
+        "confidence": 0.92
       },
       {
         "type": "appliesDuring",
-        "from_ref": "PS_02",
-        "to_ref": "MM_01",
-        "confidence": 0.85
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "PS_03",
-        "to_ref": "MM_01",
-        "confidence": 0.85
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "PS_04",
-        "to_ref": "MM_01",
-        "confidence": 0.85
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "PS_05",
-        "to_ref": "MM_01",
-        "confidence": 0.85
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "PS_06",
-        "to_ref": "MM_01",
-        "confidence": 0.85
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "PS_07",
-        "to_ref": "MM_01",
-        "confidence": 0.85
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "PS_08",
-        "to_ref": "MM_01",
-        "confidence": 0.85
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "PS_09",
-        "to_ref": "MM_01",
-        "confidence": 0.85
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "PS_10",
-        "to_ref": "MM_01",
-        "confidence": 0.85
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "PS_11",
-        "to_ref": "MM_01",
-        "confidence": 0.85
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "PS_12",
-        "to_ref": "MM_01",
-        "confidence": 0.85
-      },
-      {
-        "type": "precedes",
-        "from_ref": "PS_01",
+        "from_ref": "MM_01",
         "to_ref": "PS_02",
-        "confidence": 0.8
+        "confidence": 0.92
       },
       {
-        "type": "precedes",
-        "from_ref": "PS_02",
+        "type": "appliesDuring",
+        "from_ref": "MM_01",
         "to_ref": "PS_03",
-        "confidence": 0.8
-      },
-      {
-        "type": "precedes",
-        "from_ref": "PS_03",
-        "to_ref": "PS_04",
-        "confidence": 0.8
-      },
-      {
-        "type": "precedes",
-        "from_ref": "PS_04",
-        "to_ref": "PS_05",
-        "confidence": 0.8
-      },
-      {
-        "type": "precedes",
-        "from_ref": "PS_05",
-        "to_ref": "PS_06",
-        "confidence": 0.8
-      },
-      {
-        "type": "precedes",
-        "from_ref": "PS_06",
-        "to_ref": "PS_07",
-        "confidence": 0.8
-      },
-      {
-        "type": "precedes",
-        "from_ref": "PS_07",
-        "to_ref": "PS_08",
-        "confidence": 0.8
-      },
-      {
-        "type": "precedes",
-        "from_ref": "PS_08",
-        "to_ref": "PS_09",
-        "confidence": 0.8
-      },
-      {
-        "type": "precedes",
-        "from_ref": "PS_09",
-        "to_ref": "PS_10",
-        "confidence": 0.8
-      },
-      {
-        "type": "precedes",
-        "from_ref": "PS_10",
-        "to_ref": "PS_11",
-        "confidence": 0.8
-      },
-      {
-        "type": "precedes",
-        "from_ref": "PS_11",
-        "to_ref": "PS_12",
-        "confidence": 0.8
+        "confidence": 0.92
       }
     ]
   },
-  "timestamp": "2025-11-04T08:49:02.299080+00:00"
+  "timestamp": "2025-11-04T09:22:23.316808+00:00"
 }

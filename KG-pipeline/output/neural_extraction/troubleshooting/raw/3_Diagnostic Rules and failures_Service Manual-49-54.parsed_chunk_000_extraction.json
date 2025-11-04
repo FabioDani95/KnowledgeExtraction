@@ -4,186 +4,144 @@
       {
         "id": "FM_01",
         "type": "FailureMode",
-        "name": "flow meter blocked",
+        "name": "Flow meter blocked",
         "confidence": 0.95
+      },
+      {
+        "id": "RA_01",
+        "type": "RepairAction",
+        "name": "Clean or replace flow meter",
+        "confidence": 0.92
       },
       {
         "id": "FM_02",
         "type": "FailureMode",
-        "name": "pyramide plate blocked",
-        "confidence": 0.92
+        "name": "Pyramide plate blocked",
+        "confidence": 0.93
+      },
+      {
+        "id": "RA_02",
+        "type": "RepairAction",
+        "name": "Replace compact brewing unit",
+        "confidence": 0.9
       },
       {
         "id": "FM_03",
         "type": "FailureMode",
-        "name": "coffee machine is calcified",
-        "confidence": 0.93
+        "name": "Coffee machine is calcified",
+        "confidence": 0.94
+      },
+      {
+        "id": "RA_03",
+        "type": "RepairAction",
+        "name": "Descale coffee machine",
+        "confidence": 0.91
       },
       {
         "id": "FM_04",
         "type": "FailureMode",
-        "name": "unit leaks",
-        "confidence": 0.9
+        "name": "Unit leaks",
+        "confidence": 0.89
+      },
+      {
+        "id": "RA_04",
+        "type": "RepairAction",
+        "name": "Replace compact brewing unit",
+        "confidence": 0.88
+      },
+      {
+        "id": "RA_05",
+        "type": "RepairAction",
+        "name": "Replace defective hoses and seals",
+        "confidence": 0.87
       },
       {
         "id": "FM_05",
         "type": "FailureMode",
-        "name": "leak",
-        "confidence": 0.88
+        "name": "Milk frother damaged",
+        "confidence": 0.9
+      },
+      {
+        "id": "RA_06",
+        "type": "RepairAction",
+        "name": "Replace lid/seal",
+        "confidence": 0.85
       },
       {
         "id": "FM_06",
         "type": "FailureMode",
-        "name": "damaged milk frother",
-        "confidence": 0.91
+        "name": "Jug badly scratched",
+        "confidence": 0.86
+      },
+      {
+        "id": "RA_07",
+        "type": "RepairAction",
+        "name": "Replace milk frother",
+        "confidence": 0.84
       },
       {
         "id": "FM_07",
         "type": "FailureMode",
-        "name": "jug badly scratched",
-        "confidence": 0.89
+        "name": "Whisks damaged",
+        "confidence": 0.83
       },
       {
-        "id": "FM_08",
-        "type": "FailureMode",
-        "name": "whisks damaged",
-        "confidence": 0.87
-      },
-      {
-        "id": "FM_09",
-        "type": "FailureMode",
-        "name": "milk frother not working",
-        "confidence": 0.86
-      },
-      {
-        "id": "FM_10",
-        "type": "FailureMode",
-        "name": "milk frother not switch off automatically",
-        "confidence": 0.85
-      },
-      {
-        "id": "FM_11",
-        "type": "FailureMode",
-        "name": "milk frother cold",
-        "confidence": 0.84
-      },
-      {
-        "id": "RepairAction_01",
+        "id": "RA_08",
         "type": "RepairAction",
-        "name": "clean or replace flow meter",
-        "confidence": 0.95
-      },
-      {
-        "id": "RepairAction_02",
-        "type": "RepairAction",
-        "name": "replace compact brewing unit",
-        "confidence": 0.92
-      },
-      {
-        "id": "RepairAction_03",
-        "type": "RepairAction",
-        "name": "descale coffee machine",
-        "confidence": 0.93
-      },
-      {
-        "id": "RepairAction_04",
-        "type": "RepairAction",
-        "name": "replace defective hoses and seals",
-        "confidence": 0.9
-      },
-      {
-        "id": "RepairAction_05",
-        "type": "RepairAction",
-        "name": "replace milk frother",
-        "confidence": 0.91
-      },
-      {
-        "id": "RepairAction_06",
-        "type": "RepairAction",
-        "name": "replace lid/seal",
-        "confidence": 0.89
-      },
-      {
-        "id": "RepairAction_07",
-        "type": "RepairAction",
-        "name": "replace whisks",
-        "confidence": 0.87
-      },
-      {
-        "id": "RepairAction_08",
-        "type": "RepairAction",
-        "name": "replace connector on platform",
-        "confidence": 0.85
+        "name": "Replace whisks",
+        "confidence": 0.82
       }
     ],
     "relations": [
       {
         "type": "mitigatedBy",
         "from_ref": "FM_01",
-        "to_ref": "RepairAction_01",
-        "confidence": 0.95
-      },
-      {
-        "type": "mitigatedBy",
-        "from_ref": "FM_02",
-        "to_ref": "RepairAction_02",
+        "to_ref": "RA_01",
         "confidence": 0.92
       },
       {
         "type": "mitigatedBy",
-        "from_ref": "FM_03",
-        "to_ref": "RepairAction_03",
-        "confidence": 0.93
-      },
-      {
-        "type": "mitigatedBy",
-        "from_ref": "FM_04",
-        "to_ref": "RepairAction_02",
+        "from_ref": "FM_02",
+        "to_ref": "RA_02",
         "confidence": 0.9
       },
       {
         "type": "mitigatedBy",
-        "from_ref": "FM_05",
-        "to_ref": "RepairAction_04",
-        "confidence": 0.88
-      },
-      {
-        "type": "mitigatedBy",
-        "from_ref": "FM_06",
-        "to_ref": "RepairAction_05",
+        "from_ref": "FM_03",
+        "to_ref": "RA_03",
         "confidence": 0.91
       },
       {
         "type": "mitigatedBy",
-        "from_ref": "FM_07",
-        "to_ref": "RepairAction_05",
-        "confidence": 0.89
+        "from_ref": "FM_04",
+        "to_ref": "RA_04",
+        "confidence": 0.88
       },
       {
         "type": "mitigatedBy",
-        "from_ref": "FM_08",
-        "to_ref": "RepairAction_07",
+        "from_ref": "FM_04",
+        "to_ref": "RA_05",
         "confidence": 0.87
       },
       {
         "type": "mitigatedBy",
-        "from_ref": "FM_09",
-        "to_ref": "RepairAction_05",
-        "confidence": 0.86
-      },
-      {
-        "type": "mitigatedBy",
-        "from_ref": "FM_10",
-        "to_ref": "RepairAction_05",
+        "from_ref": "FM_05",
+        "to_ref": "RA_06",
         "confidence": 0.85
       },
       {
         "type": "mitigatedBy",
-        "from_ref": "FM_11",
-        "to_ref": "RepairAction_05",
+        "from_ref": "FM_06",
+        "to_ref": "RA_07",
         "confidence": 0.84
+      },
+      {
+        "type": "mitigatedBy",
+        "from_ref": "FM_07",
+        "to_ref": "RA_08",
+        "confidence": 0.82
       }
     ]
   },
-  "timestamp": "2025-11-04T08:49:10.630937+00:00"
+  "timestamp": "2025-11-04T09:22:37.360132+00:00"
 }

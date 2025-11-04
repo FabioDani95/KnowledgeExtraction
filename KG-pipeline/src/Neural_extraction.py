@@ -1043,6 +1043,10 @@ def main(argv: Optional[List[str]] = None) -> int:
     extractor_config = config.get("neural_extractor", {})
     profiles_config = config.get("neural_extraction_profiles", {})
 
+    model_name = extractor_config.get("model", "gpt-4o-mini")
+    provider_name = extractor_config.get("provider", "openai")
+    logging.info(f"Neural extractor configured provider/model: {provider_name}/{model_name}")
+
     if not profiles_config:
         logging.error("No neural_extraction_profiles found in config.yaml")
         return 1

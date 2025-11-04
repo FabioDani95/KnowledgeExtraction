@@ -11,36 +11,30 @@
         "id": "MM_02",
         "type": "MachineMode",
         "name": "Self test mode",
-        "confidence": 0.95
+        "confidence": 0.93
       },
       {
         "id": "MM_03",
         "type": "MachineMode",
         "name": "Ready mode",
-        "confidence": 0.95
+        "confidence": 0.94
       },
       {
         "id": "MM_04",
         "type": "MachineMode",
         "name": "Brewing mode",
-        "confidence": 0.95
+        "confidence": 0.92
       },
       {
         "id": "MM_05",
         "type": "MachineMode",
         "name": "Volume brewing mode",
-        "confidence": 0.95
+        "confidence": 0.91
       },
       {
         "id": "MM_06",
         "type": "MachineMode",
         "name": "Descaling mode",
-        "confidence": 0.95
-      },
-      {
-        "id": "MM_07",
-        "type": "MachineMode",
-        "name": "Descaling mode ready state",
         "confidence": 0.9
       }
     ],
@@ -49,39 +43,33 @@
         "type": "precedes",
         "from_ref": "MM_01",
         "to_ref": "MM_02",
-        "confidence": 0.9
+        "confidence": 0.89
       },
       {
         "type": "precedes",
         "from_ref": "MM_02",
         "to_ref": "MM_03",
-        "confidence": 0.9
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "MM_03",
-        "to_ref": "MM_04",
-        "confidence": 0.85
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "MM_03",
-        "to_ref": "MM_05",
-        "confidence": 0.85
-      },
-      {
-        "type": "appliesDuring",
-        "from_ref": "MM_03",
-        "to_ref": "MM_06",
-        "confidence": 0.85
+        "confidence": 0.88
       },
       {
         "type": "precedes",
-        "from_ref": "MM_06",
-        "to_ref": "MM_07",
-        "confidence": 0.88
+        "from_ref": "MM_03",
+        "to_ref": "MM_04",
+        "confidence": 0.87
+      },
+      {
+        "type": "precedes",
+        "from_ref": "MM_04",
+        "to_ref": "MM_05",
+        "confidence": 0.86
+      },
+      {
+        "type": "precedes",
+        "from_ref": "MM_05",
+        "to_ref": "MM_06",
+        "confidence": 0.85
       }
     ]
   },
-  "timestamp": "2025-11-04T08:48:06.172905+00:00"
+  "timestamp": "2025-11-04T09:21:55.053253+00:00"
 }

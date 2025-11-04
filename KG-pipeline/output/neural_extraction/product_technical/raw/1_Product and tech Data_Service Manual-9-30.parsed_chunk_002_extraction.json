@@ -10,50 +10,8 @@
       {
         "id": "P_02",
         "type": "Product",
-        "name": "Turmix TX 170",
-        "confidence": 0.95
-      },
-      {
-        "id": "P_03",
-        "type": "Product",
         "name": "Turmix TX 370",
         "confidence": 0.95
-      },
-      {
-        "id": "P_04",
-        "type": "Product",
-        "name": "Citiz",
-        "confidence": 0.95
-      },
-      {
-        "id": "P_05",
-        "type": "Product",
-        "name": "Citiz & milk",
-        "confidence": 0.95
-      },
-      {
-        "id": "P_06",
-        "type": "Product",
-        "name": "Citiz & Co",
-        "confidence": 0.95
-      },
-      {
-        "id": "RP_01",
-        "type": "RatingPlate",
-        "name": "Rating plate details EF484 Citiz C110",
-        "confidence": 0.9
-      },
-      {
-        "id": "RP_02",
-        "type": "RatingPlate",
-        "name": "Rating plate details Turmix TX 170",
-        "confidence": 0.9
-      },
-      {
-        "id": "RP_03",
-        "type": "RatingPlate",
-        "name": "Rating plate details Turmix TX 370",
-        "confidence": 0.9
       },
       {
         "id": "CT_01",
@@ -65,42 +23,19 @@
         "id": "CT_02",
         "type": "ComponentType",
         "name": "Pump",
-        "confidence": 0.94
+        "confidence": 0.91
       },
       {
-        "id": "PS_01",
-        "type": "ParameterSpec",
-        "name": "Mains voltage for Citiz",
-        "confidence": 0.92,
-        "nominal_value": "220-240 V / 50-60 Hz"
+        "id": "RP_01",
+        "type": "RatingPlate",
+        "name": "EF488",
+        "confidence": 0.9
       },
       {
-        "id": "PS_02",
-        "type": "ParameterSpec",
-        "name": "Mains voltage for Citiz & milk",
-        "confidence": 0.92,
-        "nominal_value": "220-240 V / 50-60 Hz"
-      },
-      {
-        "id": "PS_03",
-        "type": "ParameterSpec",
-        "name": "Mains voltage for Citiz & Co",
-        "confidence": 0.92,
-        "nominal_value": "220-240 V / 50-60 Hz"
-      },
-      {
-        "id": "PS_04",
-        "type": "ParameterSpec",
-        "name": "Power rating Thermoblock",
-        "confidence": 0.92,
-        "nominal_value": "1200 W"
-      },
-      {
-        "id": "PS_05",
-        "type": "ParameterSpec",
-        "name": "Power rating Pump",
-        "confidence": 0.92,
-        "nominal_value": "55/60 W"
+        "id": "RP_02",
+        "type": "RatingPlate",
+        "name": "EF484",
+        "confidence": 0.9
       }
     ],
     "relations": [
@@ -117,42 +52,30 @@
         "confidence": 0.88
       },
       {
-        "type": "hasRatingPlate",
-        "from_ref": "P_03",
-        "to_ref": "RP_03",
-        "confidence": 0.88
-      },
-      {
-        "type": "hasSpec",
-        "from_ref": "P_04",
-        "to_ref": "PS_01",
+        "type": "hasPart",
+        "from_ref": "P_01",
+        "to_ref": "CT_01",
         "confidence": 0.85
       },
       {
-        "type": "hasSpec",
-        "from_ref": "P_05",
-        "to_ref": "PS_02",
+        "type": "hasPart",
+        "from_ref": "P_01",
+        "to_ref": "CT_02",
         "confidence": 0.85
       },
       {
-        "type": "hasSpec",
-        "from_ref": "P_06",
-        "to_ref": "PS_03",
+        "type": "hasPart",
+        "from_ref": "P_02",
+        "to_ref": "CT_01",
         "confidence": 0.85
       },
       {
-        "type": "hasSpec",
-        "from_ref": "CT_01",
-        "to_ref": "PS_04",
-        "confidence": 0.85
-      },
-      {
-        "type": "hasSpec",
-        "from_ref": "CT_02",
-        "to_ref": "PS_05",
+        "type": "hasPart",
+        "from_ref": "P_02",
+        "to_ref": "CT_02",
         "confidence": 0.85
       }
     ]
   },
-  "timestamp": "2025-11-04T08:47:21.868958+00:00"
+  "timestamp": "2025-11-04T09:20:58.246171+00:00"
 }

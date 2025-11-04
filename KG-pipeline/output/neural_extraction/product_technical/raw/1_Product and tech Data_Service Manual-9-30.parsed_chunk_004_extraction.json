@@ -8,209 +8,153 @@
         "confidence": 0.95
       },
       {
-        "id": "P_02",
-        "type": "Product",
-        "name": "Citiz & Co",
-        "confidence": 0.95
+        "id": "CT_01",
+        "type": "ComponentType",
+        "name": "Milk Frother",
+        "confidence": 0.92
+      },
+      {
+        "id": "CT_02",
+        "type": "ComponentType",
+        "name": "Coffee Machine",
+        "confidence": 0.92
       },
       {
         "id": "C_01",
         "type": "Component",
-        "name": "milk frother",
-        "confidence": 0.92
+        "name": "Milk Frother Model 1",
+        "ofType_ref": "CT_01",
+        "confidence": 0.9
       },
       {
         "id": "C_02",
         "type": "Component",
-        "name": "core unit",
-        "confidence": 0.92
+        "name": "Milk Frother Model 2",
+        "ofType_ref": "CT_01",
+        "confidence": 0.9
+      },
+      {
+        "id": "P_02",
+        "type": "Product",
+        "name": "Coffee Machine Model",
+        "confidence": 0.93
       },
       {
         "id": "PS_01",
         "type": "ParameterSpec",
         "name": "Noise during brewing cycle",
-        "nominal_value": "60",
-        "unit_raw": "dB(A)",
-        "confidence": 0.9
+        "confidence": 0.85
       },
       {
         "id": "PS_02",
         "type": "ParameterSpec",
         "name": "Preheating time",
-        "nominal_value": "60",
-        "unit_raw": "sec",
-        "confidence": 0.9
+        "confidence": 0.85
       },
       {
         "id": "PS_03",
         "type": "ParameterSpec",
         "name": "Cable length",
-        "nominal_value": "1.2",
-        "unit_raw": "m",
-        "confidence": 0.9
+        "confidence": 0.85
       },
       {
         "id": "PS_04",
         "type": "ParameterSpec",
-        "name": "Mains voltage Europe",
-        "nominal_value": "220-240",
-        "unit_raw": "V",
-        "confidence": 0.9
+        "name": "Mains voltage",
+        "confidence": 0.85
       },
       {
         "id": "PS_05",
         "type": "ParameterSpec",
-        "name": "Mains voltage USA/Canada",
-        "nominal_value": "120-127",
-        "unit_raw": "V",
-        "confidence": 0.9
+        "name": "Power rating",
+        "confidence": 0.85
       },
       {
         "id": "PS_06",
         "type": "ParameterSpec",
-        "name": "Power rating 220-240 V",
-        "nominal_value": "410-490",
-        "unit_raw": "W",
-        "confidence": 0.9
+        "name": "Standby operation",
+        "confidence": 0.85
       },
       {
         "id": "PS_07",
         "type": "ParameterSpec",
-        "name": "Power rating 110-127 V",
-        "nominal_value": "380-505",
-        "unit_raw": "W",
-        "confidence": 0.9
+        "name": "Capacity",
+        "confidence": 0.85
       },
       {
         "id": "PS_08",
         "type": "ParameterSpec",
-        "name": "Standby operation",
-        "nominal_value": "< 1",
-        "unit_raw": "W",
-        "confidence": 0.9
+        "name": "Whisk speed",
+        "confidence": 0.85
       },
       {
         "id": "PS_09",
         "type": "ParameterSpec",
-        "name": "Capacity Hot milk",
-        "nominal_value": "240",
-        "unit_raw": "ml",
-        "confidence": 0.9
+        "name": "Preparation times",
+        "confidence": 0.85
       },
       {
         "id": "PS_10",
         "type": "ParameterSpec",
-        "name": "Capacity Hot/cold milk for milk froth",
-        "nominal_value": "130",
-        "unit_raw": "ml",
-        "confidence": 0.9
+        "name": "Temperature",
+        "confidence": 0.85
       },
       {
-        "id": "PS_11",
-        "type": "ParameterSpec",
-        "name": "Whisk speed",
-        "nominal_value": "2000-2700",
-        "unit_raw": "rpm",
-        "confidence": 0.9
+        "id": "U_01",
+        "type": "Unit",
+        "name": "dB(A)",
+        "confidence": 0.8
       },
       {
-        "id": "PS_12",
-        "type": "ParameterSpec",
-        "name": "Hot milk froth preparation time",
-        "nominal_value": "50-80",
-        "unit_raw": "sec",
-        "confidence": 0.9
+        "id": "U_02",
+        "type": "Unit",
+        "name": "sec",
+        "confidence": 0.8
       },
       {
-        "id": "PS_13",
-        "type": "ParameterSpec",
-        "name": "Cold milk froth preparation time",
-        "nominal_value": "60-80",
-        "unit_raw": "sec",
-        "confidence": 0.9
+        "id": "U_03",
+        "type": "Unit",
+        "name": "m",
+        "confidence": 0.8
       },
       {
-        "id": "PS_14",
-        "type": "ParameterSpec",
-        "name": "Hot milk preparation time",
-        "nominal_value": "120-180",
-        "unit_raw": "sec",
-        "confidence": 0.9
+        "id": "U_04",
+        "type": "Unit",
+        "name": "V",
+        "confidence": 0.8
       },
       {
-        "id": "PS_15",
-        "type": "ParameterSpec",
-        "name": "Hot milk temperature",
-        "nominal_value": "60-70",
-        "unit_raw": "°C",
-        "confidence": 0.9
+        "id": "U_05",
+        "type": "Unit",
+        "name": "Hz",
+        "confidence": 0.8
       },
       {
-        "id": "PS_16",
-        "type": "ParameterSpec",
-        "name": "Foam milk temperature",
-        "nominal_value": "60-70",
-        "unit_raw": "°C",
-        "confidence": 0.9
+        "id": "U_06",
+        "type": "Unit",
+        "name": "W",
+        "confidence": 0.8
       },
       {
-        "id": "PS_17",
-        "type": "ParameterSpec",
-        "name": "Noise emission",
-        "nominal_value": "55",
-        "unit_raw": "dB(A)",
-        "confidence": 0.9
+        "id": "U_07",
+        "type": "Unit",
+        "name": "ml",
+        "confidence": 0.8
       },
       {
-        "id": "PS_18",
-        "type": "ParameterSpec",
-        "name": "Dimensions",
-        "nominal_value": "130 x 277 x 372",
-        "unit_raw": "mm",
-        "confidence": 0.9
+        "id": "U_08",
+        "type": "Unit",
+        "name": "kg",
+        "confidence": 0.8
       },
       {
-        "id": "PS_19",
-        "type": "ParameterSpec",
-        "name": "Cup support down",
-        "nominal_value": "85-90",
-        "unit_raw": "mm",
-        "confidence": 0.9
-      },
-      {
-        "id": "PS_20",
-        "type": "ParameterSpec",
-        "name": "Cup support up",
-        "nominal_value": "150-155",
-        "unit_raw": "mm",
-        "confidence": 0.9
-      },
-      {
-        "id": "PS_21",
-        "type": "ParameterSpec",
-        "name": "Weight without water",
-        "nominal_value": "3.4",
-        "unit_raw": "kg",
-        "confidence": 0.9
-      },
-      {
-        "id": "PS_22",
-        "type": "ParameterSpec",
-        "name": "Dimensions with milk frother",
-        "nominal_value": "237 x 277 x 372",
-        "unit_raw": "mm",
-        "confidence": 0.9
-      },
-      {
-        "id": "PS_23",
-        "type": "ParameterSpec",
-        "name": "Weight with milk frother",
-        "nominal_value": "4.6",
-        "unit_raw": "kg",
-        "confidence": 0.9
+        "id": "U_09",
+        "type": "Unit",
+        "name": "rpm",
+        "confidence": 0.8
       }
     ],
     "relations": []
   },
-  "timestamp": "2025-11-04T08:47:50.378840+00:00"
+  "timestamp": "2025-11-04T09:21:40.081281+00:00"
 }
