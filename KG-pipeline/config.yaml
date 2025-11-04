@@ -71,7 +71,7 @@ logging:
 neural_extractor:
   enabled: false
   provider: "openai"               # 'openai' or other provider id used by the module
-  model: "gpt-4o-mini"             # modello predefinito per il modulo neurale
+  model: "gpt-4o"                  # gpt-4o: 5x più veloce di mini, qualità superiore
   api_key_env: "OPENAI_API_KEY"
   temperature: 0.2                 # temperatura per estrazione (0.1-0.3 consigliato)
   max_output_tokens: 1500
