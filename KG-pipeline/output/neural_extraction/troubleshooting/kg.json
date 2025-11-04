@@ -1,0 +1,269 @@
+{
+  "document_code": "KG_TROUBLESHOOTING",
+  "ingestion_id": "95ea9fd6-f1ab-461c-b2a2-c96e20f25c87",
+  "extraction_version": "neural_v1.0",
+  "datasource_code": "NEURAL_EXTRACTION",
+  "extractor": {
+    "model": "gpt-4o-mini",
+    "prompt_id": "neural_extraction_v1",
+    "temperature": 0.2,
+    "max_tokens": 1500
+  },
+  "allowed_types": [
+    "FailureMode",
+    "RepairAction",
+    "MaintenanceTask",
+    "Tool",
+    "Consumable"
+  ],
+  "allowed_relations": [
+    "affects",
+    "mitigatedBy",
+    "requiresTool",
+    "requiresConsumable",
+    "verifies"
+  ],
+  "entities": [
+    {
+      "id": "FM_01",
+      "type": "FailureMode",
+      "name": "Flow meter blocked",
+      "confidence": 0.95
+    },
+    {
+      "id": "RA_01",
+      "type": "RepairAction",
+      "name": "Disassembly",
+      "confidence": 0.95
+    },
+    {
+      "id": "FM_02",
+      "type": "FailureMode",
+      "name": "Pyramide plate blocked",
+      "confidence": 0.93
+    },
+    {
+      "id": "RA_02",
+      "type": "RepairAction",
+      "name": "Replace compact brewing unit",
+      "confidence": 0.9
+    },
+    {
+      "id": "FM_03",
+      "type": "FailureMode",
+      "name": "Coffee machine is calcified",
+      "confidence": 0.94
+    },
+    {
+      "id": "RA_03",
+      "type": "RepairAction",
+      "name": "Descale coffee machine",
+      "confidence": 0.91
+    },
+    {
+      "id": "FM_04",
+      "type": "FailureMode",
+      "name": "Unit leaks",
+      "confidence": 0.89
+    },
+    {
+      "id": "RA_04",
+      "type": "RepairAction",
+      "name": "Replace compact brewing unit",
+      "confidence": 0.9
+    },
+    {
+      "id": "RA_05",
+      "type": "RepairAction",
+      "name": "Replace defective hoses and seals",
+      "confidence": 0.88
+    },
+    {
+      "id": "FM_05",
+      "type": "FailureMode",
+      "name": "Rust visible in water",
+      "confidence": 0.87
+    },
+    {
+      "id": "RA_06",
+      "type": "RepairAction",
+      "name": "Descale and rinse coffee machine",
+      "confidence": 0.89
+    },
+    {
+      "id": "FM_06",
+      "type": "FailureMode",
+      "name": "Milk frother damaged",
+      "confidence": 0.92
+    },
+    {
+      "id": "RA_07",
+      "type": "RepairAction",
+      "name": "Replace lid/seal",
+      "confidence": 0.9
+    },
+    {
+      "id": "FM_07",
+      "type": "FailureMode",
+      "name": "Jug badly scratched",
+      "confidence": 0.88
+    },
+    {
+      "id": "RA_08",
+      "type": "RepairAction",
+      "name": "Replace milk frother",
+      "confidence": 0.91
+    },
+    {
+      "id": "FM_08",
+      "type": "FailureMode",
+      "name": "Whisks damaged",
+      "confidence": 0.89
+    },
+    {
+      "id": "RA_09",
+      "type": "RepairAction",
+      "name": "Replace whisks",
+      "confidence": 0.87
+    },
+    {
+      "id": "FM_09",
+      "type": "FailureMode",
+      "name": "Coffee machine does not function",
+      "confidence": 0.93
+    },
+    {
+      "id": "RA_10",
+      "type": "RepairAction",
+      "name": "Check connector on platform",
+      "confidence": 0.9
+    },
+    {
+      "id": "T_01",
+      "type": "Tool",
+      "name": "Special disassembly tool",
+      "confidence": 0.92
+    },
+    {
+      "id": "MT_01",
+      "type": "MaintenanceTask",
+      "name": "Observe max. torque for screw connections",
+      "confidence": 0.93
+    }
+  ],
+  "relations": [
+    {
+      "type": "affects",
+      "from_ref": "FM_01",
+      "to_ref": "RA_01",
+      "confidence": 0.95
+    },
+    {
+      "type": "affects",
+      "from_ref": "FM_02",
+      "to_ref": "RA_02",
+      "confidence": 0.93
+    },
+    {
+      "type": "affects",
+      "from_ref": "FM_03",
+      "to_ref": "RA_03",
+      "confidence": 0.94
+    },
+    {
+      "type": "affects",
+      "from_ref": "FM_04",
+      "to_ref": "RA_04",
+      "confidence": 0.89
+    },
+    {
+      "type": "affects",
+      "from_ref": "FM_04",
+      "to_ref": "RA_05",
+      "confidence": 0.88
+    },
+    {
+      "type": "affects",
+      "from_ref": "FM_05",
+      "to_ref": "RA_06",
+      "confidence": 0.87
+    },
+    {
+      "type": "affects",
+      "from_ref": "FM_06",
+      "to_ref": "RA_07",
+      "confidence": 0.92
+    },
+    {
+      "type": "affects",
+      "from_ref": "FM_07",
+      "to_ref": "RA_08",
+      "confidence": 0.88
+    },
+    {
+      "type": "affects",
+      "from_ref": "FM_08",
+      "to_ref": "RA_09",
+      "confidence": 0.89
+    },
+    {
+      "type": "affects",
+      "from_ref": "FM_09",
+      "to_ref": "RA_10",
+      "confidence": 0.93
+    },
+    {
+      "type": "requiresTool",
+      "from_ref": "RA_01",
+      "to_ref": "T_01",
+      "confidence": 0.91
+    },
+    {
+      "type": "affects",
+      "from_ref": "FM_01",
+      "to_ref": "RA_01",
+      "confidence": 0.89
+    },
+    {
+      "type": "affects",
+      "from_ref": "FM_02",
+      "to_ref": "MT_01",
+      "confidence": 0.87
+    },
+    {
+      "type": "mitigatedBy",
+      "from_ref": "FM_01",
+      "to_ref": "T_01",
+      "confidence": 0.85
+    }
+  ],
+  "provenance": {
+    "overall_confidence": 0.904,
+    "sections_used": [
+      "3_Diagnostic Rules and failures_Service Manual-49-54.parsed.json"
+    ],
+    "notes": "Neural extraction for profile troubleshooting"
+  },
+  "quality": {
+    "json_valid": true,
+    "entities_count": 21,
+    "relations_count": 14,
+    "warnings": [],
+    "overall_confidence": 0.904,
+    "avg_entity_confidence": 0.908,
+    "avg_relation_confidence": 0.9,
+    "entity_type_distribution": {
+      "FailureMode": 9,
+      "RepairAction": 10,
+      "Tool": 1,
+      "MaintenanceTask": 1
+    },
+    "relation_type_distribution": {
+      "affects": 12,
+      "requiresTool": 1,
+      "mitigatedBy": 1
+    },
+    "profile": "troubleshooting",
+    "generated_at": "2025-11-03T12:13:08.799359Z"
+  }
+}

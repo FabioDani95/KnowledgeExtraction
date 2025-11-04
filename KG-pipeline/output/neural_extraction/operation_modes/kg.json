@@ -1,0 +1,277 @@
+{
+  "document_code": "KG_OPERATION_MODES",
+  "ingestion_id": "cad401e0-5333-4b93-93cf-c8783fb2bd3a",
+  "extraction_version": "neural_v1.0",
+  "datasource_code": "NEURAL_EXTRACTION",
+  "extractor": {
+    "model": "gpt-4o-mini",
+    "prompt_id": "neural_extraction_v1",
+    "temperature": 0.2,
+    "max_tokens": 1500
+  },
+  "allowed_types": [
+    "MachineMode",
+    "State",
+    "ProcessStep",
+    "TestSpec"
+  ],
+  "allowed_relations": [
+    "precedes",
+    "appliesDuring",
+    "verifies"
+  ],
+  "entities": [
+    {
+      "id": "MM_01",
+      "type": "MachineMode",
+      "name": "Heat up mode",
+      "confidence": 0.95
+    },
+    {
+      "id": "MM_02",
+      "type": "MachineMode",
+      "name": "Self test mode",
+      "confidence": 0.95
+    },
+    {
+      "id": "MM_03",
+      "type": "MachineMode",
+      "name": "Ready mode",
+      "confidence": 0.95
+    },
+    {
+      "id": "MM_04",
+      "type": "MachineMode",
+      "name": "Brewing mode",
+      "confidence": 0.95
+    },
+    {
+      "id": "MM_05",
+      "type": "MachineMode",
+      "name": "Volume brewing mode",
+      "confidence": 0.95
+    },
+    {
+      "id": "MM_06",
+      "type": "MachineMode",
+      "name": "Descaling mode",
+      "confidence": 0.95
+    },
+    {
+      "id": "MM_07",
+      "type": "MachineMode",
+      "name": "Cold milk froth preparation",
+      "confidence": 0.94
+    },
+    {
+      "id": "S_01",
+      "type": "State",
+      "name": "Coffee machine switched off",
+      "confidence": 0.92
+    },
+    {
+      "id": "S_02",
+      "type": "State",
+      "name": "Water system emptied",
+      "confidence": 0.9
+    },
+    {
+      "id": "PS_01",
+      "type": "ProcessStep",
+      "name": "Remove water tank",
+      "confidence": 0.93
+    },
+    {
+      "id": "PS_02",
+      "type": "ProcessStep",
+      "name": "Press both coffee buttons simultaneously",
+      "confidence": 0.93
+    },
+    {
+      "id": "PS_03",
+      "type": "ProcessStep",
+      "name": "Start pump",
+      "confidence": 0.91
+    },
+    {
+      "id": "PS_04",
+      "type": "ProcessStep",
+      "name": "Rinse and clean water tank",
+      "confidence": 0.89
+    },
+    {
+      "id": "PS_05",
+      "type": "ProcessStep",
+      "name": "Switch off the coffee machine",
+      "confidence": 0.87
+    },
+    {
+      "id": "MM_233a58",
+      "type": "MachineMode",
+      "name": "Descaling Mode",
+      "confidence": 0.95
+    }
+  ],
+  "relations": [
+    {
+      "type": "precedes",
+      "from_ref": "MM_01",
+      "to_ref": "MM_02",
+      "confidence": 0.9
+    },
+    {
+      "type": "precedes",
+      "from_ref": "MM_02",
+      "to_ref": "MM_03",
+      "confidence": 0.9
+    },
+    {
+      "type": "precedes",
+      "from_ref": "MM_03",
+      "to_ref": "MM_04",
+      "confidence": 0.9
+    },
+    {
+      "type": "precedes",
+      "from_ref": "MM_04",
+      "to_ref": "MM_05",
+      "confidence": 0.9
+    },
+    {
+      "type": "precedes",
+      "from_ref": "MM_05",
+      "to_ref": "MM_06",
+      "confidence": 0.9
+    },
+    {
+      "type": "precedes",
+      "from_ref": "MM_01",
+      "to_ref": "MM_05",
+      "confidence": 0.89
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "MM_01",
+      "to_ref": "MM_06",
+      "confidence": 0.87
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "MM_01",
+      "to_ref": "MM_07",
+      "confidence": 0.87
+    },
+    {
+      "type": "precedes",
+      "from_ref": "MM_02",
+      "to_ref": "MM_01",
+      "confidence": 0.88
+    },
+    {
+      "type": "precedes",
+      "from_ref": "MM_03",
+      "to_ref": "MM_01",
+      "confidence": 0.85
+    },
+    {
+      "type": "precedes",
+      "from_ref": "MM_04",
+      "to_ref": "MM_01",
+      "confidence": 0.86
+    },
+    {
+      "type": "precedes",
+      "from_ref": "PS_01",
+      "to_ref": "PS_02",
+      "confidence": 0.9
+    },
+    {
+      "type": "precedes",
+      "from_ref": "PS_02",
+      "to_ref": "PS_03",
+      "confidence": 0.89
+    },
+    {
+      "type": "precedes",
+      "from_ref": "PS_03",
+      "to_ref": "PS_04",
+      "confidence": 0.88
+    },
+    {
+      "type": "precedes",
+      "from_ref": "PS_04",
+      "to_ref": "PS_05",
+      "confidence": 0.87
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "MM_01",
+      "to_ref": "S_01",
+      "confidence": 0.95
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "MM_01",
+      "to_ref": "S_02",
+      "confidence": 0.93
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "PS_01",
+      "to_ref": "MM_233a58",
+      "confidence": 0.94
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "PS_02",
+      "to_ref": "MM_233a58",
+      "confidence": 0.93
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "PS_03",
+      "to_ref": "MM_233a58",
+      "confidence": 0.91
+    },
+    {
+      "type": "verifies",
+      "from_ref": "S_01",
+      "to_ref": "MM_233a58",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "PS_04",
+      "to_ref": "MM_233a58",
+      "confidence": 0.89
+    }
+  ],
+  "provenance": {
+    "overall_confidence": 0.913,
+    "sections_used": [
+      "2_Operations and Modality_Service Manual-31-48.parsed.json"
+    ],
+    "notes": "Neural extraction for profile operation_modes"
+  },
+  "quality": {
+    "json_valid": true,
+    "entities_count": 15,
+    "relations_count": 22,
+    "warnings": [],
+    "overall_confidence": 0.913,
+    "avg_entity_confidence": 0.929,
+    "avg_relation_confidence": 0.896,
+    "entity_type_distribution": {
+      "MachineMode": 8,
+      "State": 2,
+      "ProcessStep": 5
+    },
+    "relation_type_distribution": {
+      "precedes": 13,
+      "appliesDuring": 8,
+      "verifies": 1
+    },
+    "profile": "operation_modes",
+    "generated_at": "2025-11-03T12:12:46.116451Z"
+  }
+}

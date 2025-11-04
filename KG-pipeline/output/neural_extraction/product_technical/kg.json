@@ -1,0 +1,610 @@
+{
+  "document_code": "KG_PRODUCT_TECHNICAL",
+  "ingestion_id": "c881bd65-253f-40a2-94a4-784b041cb776",
+  "extraction_version": "neural_v1.0",
+  "datasource_code": "NEURAL_EXTRACTION",
+  "extractor": {
+    "model": "gpt-4o-mini",
+    "prompt_id": "neural_extraction_v1",
+    "temperature": 0.2,
+    "max_tokens": 1500
+  },
+  "allowed_types": [
+    "Product",
+    "ComponentType",
+    "Component",
+    "ParameterSpec",
+    "Unit",
+    "RatingPlate"
+  ],
+  "allowed_relations": [
+    "hasPart",
+    "belongsTo",
+    "instanceOf",
+    "hasSpec",
+    "hasUnit",
+    "connectedTo",
+    "hasRatingPlate"
+  ],
+  "entities": [
+    {
+      "id": "P_01",
+      "type": "Product",
+      "name": "Turmix TX 270",
+      "confidence": 0.95
+    },
+    {
+      "id": "P_02",
+      "type": "Product",
+      "name": "Turmix TX 370",
+      "confidence": 0.95
+    },
+    {
+      "id": "RP_01",
+      "type": "RatingPlate",
+      "name": "Rating plate details EF484 Citiz C110",
+      "confidence": 0.92
+    },
+    {
+      "id": "RP_02",
+      "type": "RatingPlate",
+      "name": "Rating plate details EF488 Citiz & Co.",
+      "confidence": 0.92
+    },
+    {
+      "id": "CT_01",
+      "type": "ComponentType",
+      "name": "Thermoblock",
+      "confidence": 0.94
+    },
+    {
+      "id": "CT_02",
+      "type": "ComponentType",
+      "name": "Pump",
+      "confidence": 0.91
+    },
+    {
+      "id": "PS_01",
+      "type": "ParameterSpec",
+      "name": "Voltage and power rating",
+      "confidence": 0.9
+    },
+    {
+      "id": "PS_02",
+      "type": "ParameterSpec",
+      "name": "Place of manufacture",
+      "confidence": 0.9
+    },
+    {
+      "id": "PS_03",
+      "type": "ParameterSpec",
+      "name": "National approval sign of Russia",
+      "confidence": 0.9
+    },
+    {
+      "id": "PS_04",
+      "type": "ParameterSpec",
+      "name": "Water tank",
+      "confidence": 0.91
+    },
+    {
+      "id": "PS_05",
+      "type": "ParameterSpec",
+      "name": "Barcode",
+      "confidence": 0.9
+    },
+    {
+      "id": "PS_06",
+      "type": "ParameterSpec",
+      "name": "Serial number",
+      "confidence": 0.9
+    },
+    {
+      "id": "PS_07",
+      "type": "ParameterSpec",
+      "name": "Machine type",
+      "confidence": 0.9
+    },
+    {
+      "id": "PS_08",
+      "type": "ParameterSpec",
+      "name": "Special disposal icon",
+      "confidence": 0.9
+    },
+    {
+      "id": "PS_09",
+      "type": "ParameterSpec",
+      "name": "Sign of conformity (CE)",
+      "confidence": 0.9
+    },
+    {
+      "id": "PS_10",
+      "type": "ParameterSpec",
+      "name": "Conform with RoHS guidelines",
+      "confidence": 0.9
+    },
+    {
+      "id": "PS_11",
+      "type": "ParameterSpec",
+      "name": "Article number of the rating plate",
+      "confidence": 0.9
+    },
+    {
+      "id": "P_03",
+      "type": "Product",
+      "name": "Citiz & Co",
+      "confidence": 0.92
+    },
+    {
+      "id": "U_01",
+      "type": "Unit",
+      "name": "Wh",
+      "confidence": 0.95
+    },
+    {
+      "id": "U_02",
+      "type": "Unit",
+      "name": "bar",
+      "confidence": 0.95
+    },
+    {
+      "id": "U_03",
+      "type": "Unit",
+      "name": "ml/min",
+      "confidence": 0.95
+    },
+    {
+      "id": "U_04",
+      "type": "Unit",
+      "name": "l",
+      "confidence": 0.95
+    },
+    {
+      "id": "U_05",
+      "type": "Unit",
+      "name": "ml",
+      "confidence": 0.95
+    },
+    {
+      "id": "U_06",
+      "type": "Unit",
+      "name": "capsules",
+      "confidence": 0.95
+    },
+    {
+      "id": "U_07",
+      "type": "Unit",
+      "name": "°C",
+      "confidence": 0.95
+    },
+    {
+      "id": "C_01",
+      "type": "Component",
+      "name": "Jug",
+      "confidence": 0.95,
+      "dimensions": "91 x 170 mm"
+    },
+    {
+      "id": "PS_12",
+      "type": "ParameterSpec",
+      "name": "Temperature Hot milk",
+      "confidence": 0.81
+    },
+    {
+      "id": "PS_13",
+      "type": "ParameterSpec",
+      "name": "Temperature Foam milk",
+      "confidence": 0.81
+    },
+    {
+      "id": "PS_14",
+      "type": "ParameterSpec",
+      "name": "Noise emission",
+      "confidence": 0.8
+    },
+    {
+      "id": "PS_15",
+      "type": "ParameterSpec",
+      "name": "Dimensions",
+      "confidence": 0.79
+    },
+    {
+      "id": "PS_16",
+      "type": "ParameterSpec",
+      "name": "Weight",
+      "confidence": 0.78
+    },
+    {
+      "id": "C_02",
+      "type": "Component",
+      "name": "Whisk",
+      "confidence": 0.92,
+      "dimensions": "33 x 32 mm"
+    },
+    {
+      "id": "C_03",
+      "type": "Component",
+      "name": "Mixer",
+      "confidence": 0.9,
+      "dimensions": "15 x 34 x 32 mm"
+    },
+    {
+      "id": "C_04",
+      "type": "Component",
+      "name": "Weight",
+      "confidence": 0.89,
+      "value": 0.7,
+      "unit_raw": "kg"
+    }
+  ],
+  "relations": [
+    {
+      "type": "hasRatingPlate",
+      "from_ref": "P_01",
+      "to_ref": "RP_01",
+      "confidence": 0.93
+    },
+    {
+      "type": "hasRatingPlate",
+      "from_ref": "P_02",
+      "to_ref": "RP_02",
+      "confidence": 0.93
+    },
+    {
+      "type": "hasPart",
+      "from_ref": "P_01",
+      "to_ref": "CT_01",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasPart",
+      "from_ref": "P_01",
+      "to_ref": "CT_02",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_01",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_02",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_03",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_04",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_05",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_06",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_07",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_08",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_09",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_10",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_11",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_01",
+      "confidence": 0.9
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_02",
+      "confidence": 0.9
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_03",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_04",
+      "confidence": 0.91
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_05",
+      "confidence": 0.89
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_06",
+      "confidence": 0.87
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_01",
+      "to_ref": "PS_07",
+      "confidence": 0.9
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "PS_01",
+      "to_ref": "U_01",
+      "confidence": 0.95
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "PS_02",
+      "to_ref": "U_02",
+      "confidence": 0.95
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "PS_03",
+      "to_ref": "U_03",
+      "confidence": 0.95
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "PS_04",
+      "to_ref": "U_04",
+      "confidence": 0.95
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "PS_05",
+      "to_ref": "U_05",
+      "confidence": 0.95
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "PS_06",
+      "to_ref": "U_06",
+      "confidence": 0.95
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "PS_07",
+      "to_ref": "U_07",
+      "confidence": 0.95
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_02",
+      "to_ref": "PS_01",
+      "confidence": 0.93
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_02",
+      "to_ref": "PS_02",
+      "confidence": 0.93
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_02",
+      "to_ref": "PS_04",
+      "confidence": 0.93
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_03",
+      "to_ref": "PS_01",
+      "confidence": 0.92
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_03",
+      "to_ref": "PS_02",
+      "confidence": 0.92
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "P_03",
+      "to_ref": "PS_04",
+      "confidence": 0.92
+    },
+    {
+      "type": "hasPart",
+      "from_ref": "P_01",
+      "to_ref": "C_01",
+      "confidence": 0.9
+    },
+    {
+      "type": "hasPart",
+      "from_ref": "P_02",
+      "to_ref": "C_01",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_01",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_02",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_03",
+      "confidence": 0.8
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_04",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_05",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_06",
+      "confidence": 0.87
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_07",
+      "confidence": 0.86
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_08",
+      "confidence": 0.84
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_09",
+      "confidence": 0.84
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_10",
+      "confidence": 0.83
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_11",
+      "confidence": 0.82
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_12",
+      "confidence": 0.81
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_13",
+      "confidence": 0.81
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_14",
+      "confidence": 0.8
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_15",
+      "confidence": 0.79
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "C_01",
+      "to_ref": "PS_16",
+      "confidence": 0.78
+    },
+    {
+      "type": "hasPart",
+      "from_ref": "C_01",
+      "to_ref": "C_02",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasPart",
+      "from_ref": "C_01",
+      "to_ref": "C_03",
+      "confidence": 0.85
+    },
+    {
+      "type": "hasPart",
+      "from_ref": "C_01",
+      "to_ref": "C_04",
+      "confidence": 0.85
+    }
+  ],
+  "provenance": {
+    "overall_confidence": 0.89,
+    "sections_used": [
+      "1_Product and tech Data_Service Manual-9-30.parsed.json"
+    ],
+    "notes": "Neural extraction for profile product_technical"
+  },
+  "quality": {
+    "json_valid": true,
+    "entities_count": 34,
+    "relations_count": 56,
+    "warnings": [],
+    "overall_confidence": 0.89,
+    "avg_entity_confidence": 0.904,
+    "avg_relation_confidence": 0.876,
+    "entity_type_distribution": {
+      "Product": 3,
+      "RatingPlate": 2,
+      "ComponentType": 2,
+      "ParameterSpec": 16,
+      "Unit": 7,
+      "Component": 4
+    },
+    "relation_type_distribution": {
+      "hasRatingPlate": 2,
+      "hasPart": 7,
+      "hasSpec": 40,
+      "hasUnit": 7
+    },
+    "profile": "product_technical",
+    "generated_at": "2025-11-03T12:12:03.713744Z"
+  }
+}

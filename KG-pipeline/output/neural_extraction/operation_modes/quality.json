@@ -1,0 +1,21 @@
+{
+  "json_valid": true,
+  "entities_count": 15,
+  "relations_count": 22,
+  "warnings": [],
+  "overall_confidence": 0.913,
+  "avg_entity_confidence": 0.929,
+  "avg_relation_confidence": 0.896,
+  "entity_type_distribution": {
+    "MachineMode": 8,
+    "State": 2,
+    "ProcessStep": 5
+  },
+  "relation_type_distribution": {
+    "precedes": 13,
+    "appliesDuring": 8,
+    "verifies": 1
+  },
+  "profile": "operation_modes",
+  "generated_at": "2025-11-03T12:12:46.116451Z"
+}
