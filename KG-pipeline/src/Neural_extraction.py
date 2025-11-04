@@ -195,47 +195,186 @@ def safe_json_parse(response: str, logger: Optional[logging.Logger] = None) -> O
 
 # === Text Processing ===
 
-def extract_text_from_parsed(parsed_data: dict) -> str:
+def extract_text_with_provenance(parsed_data: dict) -> Tuple[str, List[Dict[str, Any]]]:
     """
-    Extract all relevant text from a parsed document JSON.
+    Extract text from parsed document with detailed provenance tracking.
 
-    Concatenates text from sections, tables, and figures to create
-    a comprehensive text corpus for neural extraction.
+    Returns:
+        (concatenated_text, provenance_map)
+
+        provenance_map: List of dicts with:
+        - text: text chunk
+        - section_id: section identifier
+        - section_title: section title
+        - page_start: starting page
+        - page_end: ending page
+        - char_start: start position in concatenated text
+        - char_end: end position in concatenated text
     """
     text_parts = []
+    provenance_map = []
+    current_pos = 0
 
     # Extract from sections
     sections = parsed_data.get("sections", [])
     for section in sections:
+        section_text_parts = []
+
+        # Main section text
         if section.get("text"):
-            text_parts.append(section["text"])
+            section_text_parts.append(section["text"])
 
         # Extract from tables
         for table in section.get("tables", []):
             if table.get("caption"):
-                text_parts.append(f"Table: {table['caption']}")
+                section_text_parts.append(f"Table: {table['caption']}")
             if table.get("text_content"):
-                text_parts.append(table["text_content"])
+                section_text_parts.append(table["text_content"])
 
         # Extract from figures
         for figure in section.get("figures", []):
             if figure.get("caption"):
-                text_parts.append(f"Figure: {figure['caption']}")
+                section_text_parts.append(f"Figure: {figure['caption']}")
 
             # Extract legend items
             for legend_item in figure.get("legend_items", []):
                 if legend_item.get("description"):
-                    text_parts.append(
+                    section_text_parts.append(
                         f"{legend_item.get('number', '')}) {legend_item['description']}"
                     )
 
-    return "\n\n".join(text_parts)
+        # Concatenate section text
+        if section_text_parts:
+            section_text = "\n\n".join(section_text_parts)
+            text_parts.append(section_text)
+
+            # Record provenance
+            char_start = current_pos
+            char_end = current_pos + len(section_text)
+
+            provenance_map.append({
+                "text": section_text,
+                "section_id": section.get("section_id", "unknown"),
+                "section_title": section.get("title", ""),
+                "page_start": section.get("page_start", 0),
+                "page_end": section.get("page_end", 0),
+                "char_start": char_start,
+                "char_end": char_end,
+            })
+
+            # Update position (adding 2 for \n\n separator)
+            current_pos = char_end + 2
+
+    concatenated_text = "\n\n".join(text_parts)
+    return concatenated_text, provenance_map
 
 
-def chunk_text(text: str, max_tokens: int = 1000) -> List[str]:
+def chunk_text_with_provenance(
+    text: str,
+    provenance_map: List[Dict[str, Any]],
+    max_tokens: int = 1000
+) -> List[Tuple[str, List[Dict[str, Any]]]]:
     """
-    Split text into chunks of approximately max_tokens.
+    Split text into chunks while maintaining provenance information.
 
+    Returns:
+        List of (chunk_text, chunk_provenance) tuples
+
+        chunk_provenance: List of sections that overlap with this chunk
+    """
+    max_chars = max_tokens * 4
+    chunks = []
+
+    # Split by paragraphs first
+    paragraphs = text.split("\n\n")
+    current_chunk = ""
+    current_chunk_start = 0
+
+    for para in paragraphs:
+        if len(current_chunk) + len(para) + 2 <= max_chars:
+            if current_chunk:
+                current_chunk += "\n\n" + para
+            else:
+                current_chunk = para
+                current_chunk_start = text.find(para)
+        else:
+            if current_chunk:
+                # Find provenance for this chunk
+                chunk_start = current_chunk_start
+                chunk_end = chunk_start + len(current_chunk)
+                chunk_prov = find_provenance_for_range(chunk_start, chunk_end, provenance_map)
+                chunks.append((current_chunk, chunk_prov))
+
+            current_chunk = para
+            current_chunk_start = text.find(para, current_chunk_start + len(current_chunk) if current_chunk else 0)
+
+    # Add last chunk
+    if current_chunk:
+        chunk_start = current_chunk_start
+        chunk_end = chunk_start + len(current_chunk)
+        chunk_prov = find_provenance_for_range(chunk_start, chunk_end, provenance_map)
+        chunks.append((current_chunk, chunk_prov))
+
+    return chunks
+
+
+def find_provenance_for_range(
+    start: int,
+    end: int,
+    provenance_map: List[Dict[str, Any]]
+) -> List[Dict[str, Any]]:
+    """
+    Find all provenance entries that overlap with the given character range.
+    """
+    overlapping = []
+    for prov in provenance_map:
+        # Check if ranges overlap
+        if not (prov["char_end"] <= start or prov["char_start"] >= end):
+            overlapping.append(prov)
+    return overlapping
+
+
+def inject_provenance_into_entities(
+    entities: List[dict],
+    chunk_provenance: List[Dict[str, Any]]
+) -> List[dict]:
+    """
+    Inject provenance information (section_id, pages) into extracted entities.
+    """
+    if not chunk_provenance:
+        return entities
+
+    # Collect all section IDs and page ranges from chunk provenance
+    section_ids = [p["section_id"] for p in chunk_provenance]
+    pages = set()
+    for p in chunk_provenance:
+        for page in range(p["page_start"], p["page_end"] + 1):
+            pages.add(page)
+
+    # Inject into entities
+    for entity in entities:
+        if "spans" not in entity or not entity["spans"]:
+            entity["spans"] = []
+
+        # Add span information from chunk provenance
+        for prov in chunk_provenance:
+            span = {
+                "section_id": prov["section_id"],
+                "page": prov["page_start"],  # Use first page of section
+                "source_text": f"From section: {prov['section_title'][:100]}"  # Truncate title
+            }
+            entity["spans"].append(span)
+
+    return entities
+
+
+# === Text Processing (continued) ===
+
+def chunk_text_legacy(text: str, max_tokens: int = 1000) -> List[str]:
+    """
+    Legacy chunk_text function for backwards compatibility.
+
+    Split text into chunks of approximately max_tokens.
     Uses simple heuristic: ~4 characters per token.
     """
     max_chars = max_tokens * 4
@@ -838,6 +977,7 @@ def process_profile(
     all_entities = []
     all_relations = []
     all_warnings = []
+    all_provenance_sections = {}  # Map section_id -> section details
 
     # Process each input file
     for input_file in input_files:
@@ -847,19 +987,43 @@ def process_profile(
         with input_file.open("r", encoding="utf-8") as fh:
             parsed_data = json.load(fh)
 
-        # Extract text
-        text = extract_text_from_parsed(parsed_data)
+        # Extract text with provenance tracking
+        text, provenance_map = extract_text_with_provenance(parsed_data)
         if not text:
             logger.warning(f"No text extracted from {input_file.name}")
             continue
 
-        # Split into chunks
-        chunks = chunk_text(text, extractor_config.get("max_tokens_per_chunk", 1000))
-        logger.info(f"Split text into {len(chunks)} chunk(s)")
+        # Record sections for final provenance
+        for prov in provenance_map:
+            section_id = prov["section_id"]
+            if section_id not in all_provenance_sections:
+                all_provenance_sections[section_id] = {
+                    "section_id": section_id,
+                    "title": prov["section_title"],
+                    "page_start": prov["page_start"],
+                    "page_end": prov["page_end"],
+                    "document": input_file.name,
+                }
+
+        # Split into chunks with provenance
+        chunks_with_prov = chunk_text_with_provenance(
+            text,
+            provenance_map,
+            extractor_config.get("max_tokens_per_chunk", 1000)
+        )
+        logger.info(f"Split text into {len(chunks_with_prov)} chunk(s)")
 
         # Process each chunk
-        for chunk_idx, chunk in enumerate(chunks):
-            logger.debug(f"Processing chunk {chunk_idx + 1}/{len(chunks)}")
+        for chunk_idx, (chunk, chunk_provenance) in enumerate(chunks_with_prov):
+            logger.debug(f"Processing chunk {chunk_idx + 1}/{len(chunks_with_prov)}")
+
+            # Log provenance for this chunk
+            if chunk_provenance:
+                sections_info = ", ".join([
+                    f"{p['section_id']} (p.{p['page_start']}-{p['page_end']})"
+                    for p in chunk_provenance[:3]  # Show first 3 sections
+                ])
+                logger.debug(f"  Chunk sources: {sections_info}")
 
             if dry_run:
                 # Build a dummy prompt just to show length
@@ -896,7 +1060,14 @@ def process_profile(
                 logger.warning(f"Failed to extract data for chunk {chunk_idx + 1} after retries")
                 continue
 
-            # Save raw output if enabled (save the final successful extraction)
+            # Inject provenance into extracted entities
+            if "entities" in extraction and chunk_provenance:
+                extraction["entities"] = inject_provenance_into_entities(
+                    extraction["entities"],
+                    chunk_provenance
+                )
+
+            # Save raw output if enabled (save the final successful extraction with provenance)
             if extractor_config.get("save_raw_outputs", True):
                 raw_dir = output_dir / "raw"
                 raw_dir.mkdir(exist_ok=True)
@@ -904,6 +1075,7 @@ def process_profile(
                 with raw_file.open("w", encoding="utf-8") as fh:
                     json.dump({
                         "extraction": extraction,
+                        "chunk_provenance": chunk_provenance,
                         "timestamp": datetime.now(timezone.utc).isoformat(),
                     }, fh, indent=2, ensure_ascii=False)
 
@@ -945,7 +1117,7 @@ def process_profile(
     kg_data = {
         "document_code": f"KG_{profile_name.upper()}",
         "ingestion_id": str(uuid.uuid4()),
-        "extraction_version": "neural_v1.1",
+        "extraction_version": "neural_v1.2",
         "datasource_code": "NEURAL_EXTRACTION",
         "extractor": {
             "model": extractor_config.get("model", "gpt-4o-mini"),
@@ -959,8 +1131,10 @@ def process_profile(
         "relations": final_relations,
         "provenance": {
             "overall_confidence": 0.0,  # Will be calculated in quality report
-            "sections_used": [f.name for f in input_files],
-            "notes": f"Neural extraction for profile {profile_name} with semantic normalization",
+            "documents_processed": [f.name for f in input_files],
+            "sections_used": list(all_provenance_sections.values()),
+            "total_sections": len(all_provenance_sections),
+            "notes": f"Neural extraction for profile {profile_name} with provenance tracking and semantic normalization",
         },
     }
 
