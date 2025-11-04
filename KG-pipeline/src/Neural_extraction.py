@@ -339,17 +339,12 @@ def inject_provenance_into_entities(
     chunk_provenance: List[Dict[str, Any]]
 ) -> List[dict]:
     """
-    Inject provenance information (section_id, pages) into extracted entities.
+    Inject provenance information (section_id, pages, title) into extracted entities.
+
+    Each entity gets detailed span information showing where it was found.
     """
     if not chunk_provenance:
         return entities
-
-    # Collect all section IDs and page ranges from chunk provenance
-    section_ids = [p["section_id"] for p in chunk_provenance]
-    pages = set()
-    for p in chunk_provenance:
-        for page in range(p["page_start"], p["page_end"] + 1):
-            pages.add(page)
 
     # Inject into entities
     for entity in entities:
@@ -358,12 +353,24 @@ def inject_provenance_into_entities(
 
         # Add span information from chunk provenance
         for prov in chunk_provenance:
+            # Create detailed span with all available information
             span = {
                 "section_id": prov["section_id"],
-                "page": prov["page_start"],  # Use first page of section
-                "source_text": f"From section: {prov['section_title'][:100]}"  # Truncate title
+                "section_title": prov["section_title"],
+                "page_start": prov["page_start"],
+                "page_end": prov["page_end"],
+                "source_text": f"Section: {prov['section_title'][:80]}... (p.{prov['page_start']}-{prov['page_end']})"
             }
-            entity["spans"].append(span)
+
+            # Avoid duplicate spans for same section
+            # Check if we already have a span for this section
+            already_exists = any(
+                s.get("section_id") == span["section_id"]
+                for s in entity["spans"]
+            )
+
+            if not already_exists:
+                entity["spans"].append(span)
 
     return entities
 
@@ -732,12 +739,32 @@ def deduplicate_entities(entities: List[dict], profile_name: str) -> Tuple[List[
         entity["id"] = new_id
 
         if key in entity_map:
-            # Duplicate found - keep the one with higher confidence
+            # Duplicate found - merge spans and keep entity with higher confidence
             existing = entity_map[key]
+
+            # Merge spans from both entities
+            existing_spans = existing.get("spans", [])
+            new_spans = entity.get("spans", [])
+            merged_spans = existing_spans + new_spans
+
+            # Deduplicate spans by section_id
+            seen_sections = set()
+            unique_spans = []
+            for span in merged_spans:
+                section_id = span.get("section_id", "")
+                if section_id and section_id not in seen_sections:
+                    seen_sections.add(section_id)
+                    unique_spans.append(span)
+
+            # Keep the entity with higher confidence, but merge spans
             if entity.get("confidence", 0) > existing.get("confidence", 0):
+                entity["spans"] = unique_spans
                 entity_map[key] = entity
                 # Update mapping to point to this entity
                 id_mapping[existing["id"]] = new_id
+            else:
+                existing["spans"] = unique_spans
+                entity_map[key] = existing
         else:
             entity_map[key] = entity
 
