@@ -9,16 +9,18 @@ generating three sub-KGs (product_technical, operation_modes, troubleshooting).
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import logging
 import os
 import re
 import sys
 import time
+import unicodedata
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 import yaml
 
@@ -45,6 +47,101 @@ def load_schema(schema_path: Path) -> dict:
     """Load JSON schema for validation."""
     with schema_path.open("r", encoding="utf-8") as fh:
         return json.load(fh)
+
+
+# === Utility Functions ===
+
+def slugify(text: str) -> str:
+    """
+    Convert text to a URL-safe slug.
+
+    Examples:
+        "Descaling Mode" -> "descaling_mode"
+        "NTC Temperature Sensor" -> "ntc_temperature_sensor"
+    """
+    # Normalize unicode characters
+    text = unicodedata.normalize('NFKD', text)
+    text = text.encode('ascii', 'ignore').decode('ascii')
+
+    # Convert to lowercase and replace spaces/special chars with underscore
+    text = re.sub(r'[^\w\s-]', '', text.lower())
+    text = re.sub(r'[-\s]+', '_', text)
+
+    return text.strip('_')
+
+
+def normalize_text(text: str) -> str:
+    """
+    Normalize text for comparison (lowercase, strip, normalize spaces).
+    """
+    return re.sub(r'\s+', ' ', text.strip().lower())
+
+
+def safe_json_parse(response: str, logger: Optional[logging.Logger] = None) -> Optional[dict]:
+    """
+    Extract and parse JSON from AI response with repair attempts.
+
+    Handles:
+    - Markdown code blocks
+    - Typographic quotes
+    - Trailing commas
+    - Missing commas
+    - Extra text around JSON
+    """
+    if logger is None:
+        logger = logging.getLogger(__name__)
+
+    # Try to find JSON in markdown code block
+    json_match = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", response, re.DOTALL)
+    if json_match:
+        json_str = json_match.group(1)
+    else:
+        # Try to find JSON directly
+        json_match = re.search(r"\{.*\}", response, re.DOTALL)
+        if json_match:
+            json_str = json_match.group(0)
+        else:
+            logger.warning("No JSON structure found in response")
+            return None
+
+    # Repair common JSON issues
+    # 1. Replace typographic quotes with standard quotes
+    json_str = json_str.replace('"', '"').replace('"', '"')
+    json_str = json_str.replace(''', "'").replace(''', "'")
+
+    # 2. Remove trailing commas before closing brackets
+    json_str = re.sub(r',(\s*[}\]])', r'\1', json_str)
+
+    # 3. Try to parse
+    try:
+        return json.loads(json_str)
+    except json.JSONDecodeError as exc:
+        logger.warning(f"Initial JSON parse failed: {exc}")
+
+        # Attempt 2: Try to fix missing commas between objects in arrays
+        try:
+            # Add comma between }{ patterns
+            json_str_fixed = re.sub(r'\}\s*\{', '},{', json_str)
+            return json.loads(json_str_fixed)
+        except json.JSONDecodeError:
+            pass
+
+        # Attempt 3: Try to extract just the entities and relations arrays
+        try:
+            entities_match = re.search(r'"entities"\s*:\s*(\[.*?\])', json_str, re.DOTALL)
+            relations_match = re.search(r'"relations"\s*:\s*(\[.*?\])', json_str, re.DOTALL)
+
+            if entities_match and relations_match:
+                reconstructed = {
+                    "entities": json.loads(entities_match.group(1)),
+                    "relations": json.loads(relations_match.group(1))
+                }
+                return reconstructed
+        except (json.JSONDecodeError, AttributeError):
+            pass
+
+        logger.error(f"Failed to parse JSON after repair attempts. First 200 chars: {json_str[:200]}")
+        return None
 
 
 # === Text Processing ===
@@ -125,40 +222,60 @@ def build_extraction_prompt(
     allowed_relations: List[str],
     schema_types: List[str],
     schema_relations: List[str],
+    simplified: bool = False,
 ) -> str:
     """
     Build a structured prompt for entity and relation extraction.
 
     The prompt is dynamically constructed based on the profile and schema.
+
+    Args:
+        simplified: If True, use a more constrained prompt for retry attempts
     """
-    prompt = f"""Analizza il seguente testo estratto da un manuale tecnico e restituisci un JSON conforme a questo schema:
+    if simplified:
+        # Simplified prompt for retry attempts
+        prompt = f"""Extract entities and relations from this technical manual text. Return ONLY valid JSON, no comments or extra text.
+
+Profile: {profile_name}
+Allowed entity types: {', '.join(allowed_types)}
+Allowed relations: {', '.join(allowed_relations)}
+
+Required JSON format:
+{{
+  "entities": [{{"id": "TYPE_01", "type": "Type", "name": "Name", "confidence": 0.9}}],
+  "relations": [{{"type": "relationType", "from_ref": "ID1", "to_ref": "ID2", "confidence": 0.9}}]
+}}
+
+Text:
+{text_chunk}
+
+JSON output:"""
+    else:
+        # Full detailed prompt
+        prompt = f"""Analizza il seguente testo estratto da un manuale tecnico e restituisci SOLO UN JSON VALIDO conforme a questo schema:
 
 {{ "entities": [...], "relations": [...] }}
+
+⚠️ IMPORTANTE: Rispondere SOLO con JSON valido, senza testo aggiuntivo, commenti o spiegazioni.
 
 **Profilo attivo**: {profile_name}
 
 **Tipi di entità ammessi per questo profilo**:
 {json.dumps(allowed_types, indent=2)}
 
-**Tipi di entità disponibili nello schema completo**:
-{json.dumps(schema_types, indent=2)}
-
 **Relazioni ammesse per questo profilo**:
 {json.dumps(allowed_relations, indent=2)}
 
-**Relazioni disponibili nello schema completo**:
-{json.dumps(schema_relations, indent=2)}
+**Regole obbligatorie**:
+1. Estrarre SOLO entità e relazioni pertinenti al profilo "{profile_name}".
+2. Ogni entità DEVE avere: id (stringa univoca), type (uno dei tipi ammessi sopra), name (nome dell'entità), confidence (numero 0-1).
+3. Le relazioni DEVONO indicare: type (una delle relazioni ammesse sopra), from_ref (id entità sorgente), to_ref (id entità destinazione), confidence (numero 0-1).
+4. Gli ID nel formato: <TIPO_ABBR>_<NUM> (es: CT_01 per ComponentType, C_01 per Component).
+5. JSON DEVE essere valido: virgole corrette, niente virgole finali, stringhe tra doppi apici.
+6. NON aggiungere testo fuori dal JSON.
+7. Proprietà opzionali se rilevanti: ofType_ref, nominal_value, unit_raw, min_value, max_value.
 
-**Regole**:
-1. Estrarre SOLO entità e relazioni pertinenti al profilo attivo "{profile_name}".
-2. Ogni entità deve avere: id (stringa univoca), type (uno dei tipi ammessi), name (nome dell'entità), confidence (numero tra 0 e 1).
-3. Le relazioni devono indicare: type (una delle relazioni ammesse), from_ref (id entità sorgente), to_ref (id entità destinazione), confidence (numero tra 0 e 1).
-4. Gli ID devono essere nel formato: <TIPO_ABBREVIATO>_<NUMERO> (es: CT_01 per ComponentType, C_01 per Component).
-5. Mantenere la struttura JSON valida e conforme allo schema.
-6. Non aggiungere testo fuori dal JSON.
-7. Se un'entità ha proprietà opzionali rilevanti (es: ofType_ref, nominal_value, unit_raw), includerle.
-
-**Esempio di output**:
+**Esempio output corretto**:
 
 {{
   "entities": [
@@ -174,7 +291,7 @@ def build_extraction_prompt(
 
 {text_chunk}
 
-**Output JSON**:"""
+**JSON output**:"""
 
     return prompt
 
@@ -211,27 +328,88 @@ def call_openai_api(
         return None
 
 
-def extract_json_from_response(response: str) -> Optional[dict]:
+def extract_with_retry(
+    client: OpenAI,
+    text_chunk: str,
+    profile_name: str,
+    allowed_types: List[str],
+    allowed_relations: List[str],
+    schema_types: List[str],
+    schema_relations: List[str],
+    extractor_config: dict,
+    logger: logging.Logger,
+    max_retries: int = 2,
+) -> Optional[dict]:
     """
-    Extract JSON from AI response, handling markdown code blocks.
-    """
-    # Try to find JSON in markdown code block
-    json_match = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", response, re.DOTALL)
-    if json_match:
-        json_str = json_match.group(1)
-    else:
-        # Try to find JSON directly
-        json_match = re.search(r"\{.*\}", response, re.DOTALL)
-        if json_match:
-            json_str = json_match.group(0)
-        else:
-            return None
+    Extract entities and relations with automatic retry on failure.
 
-    try:
-        return json.loads(json_str)
-    except json.JSONDecodeError as exc:
-        logging.error(f"Failed to parse JSON: {exc}")
-        return None
+    Retry strategy:
+    1. First attempt: Full detailed prompt with temperature from config
+    2. Second attempt: Simplified prompt with temperature 0.1
+    3. Third attempt: Simplified prompt with temperature 0.0
+    """
+    model = extractor_config.get("model", "gpt-4o-mini")
+    timeout = extractor_config.get("request_timeout", 60)
+    max_tokens = extractor_config.get("max_output_tokens", 1500)
+
+    for attempt in range(max_retries + 1):
+        # Adjust parameters based on attempt
+        if attempt == 0:
+            # First attempt: normal parameters
+            temperature = extractor_config.get("temperature", 0.2)
+            simplified = False
+        elif attempt == 1:
+            # Second attempt: simplified prompt, lower temperature
+            temperature = 0.1
+            simplified = True
+            logger.info("Retry attempt 1: using simplified prompt with temperature 0.1")
+        else:
+            # Third attempt: simplified prompt, temperature 0
+            temperature = 0.0
+            simplified = True
+            logger.info("Retry attempt 2: using simplified prompt with temperature 0.0")
+
+        # Build prompt
+        prompt = build_extraction_prompt(
+            text_chunk,
+            profile_name,
+            allowed_types,
+            allowed_relations,
+            schema_types,
+            schema_relations,
+            simplified=simplified,
+        )
+
+        # Call API
+        response = call_openai_api(
+            client,
+            prompt,
+            model,
+            temperature,
+            max_tokens,
+            timeout,
+        )
+
+        if not response:
+            logger.warning(f"No response from AI (attempt {attempt + 1}/{max_retries + 1})")
+            if attempt < max_retries:
+                time.sleep(2 ** attempt)  # Exponential backoff
+                continue
+            else:
+                return None
+
+        # Parse response with safe parser
+        extraction = safe_json_parse(response, logger)
+
+        if extraction and "entities" in extraction and "relations" in extraction:
+            return extraction
+        else:
+            logger.warning(f"Failed to extract valid JSON (attempt {attempt + 1}/{max_retries + 1})")
+            if attempt < max_retries:
+                time.sleep(2 ** attempt)
+                continue
+
+    return None
 
 
 # === Validation ===
@@ -306,65 +484,211 @@ def validate_extraction(
 
 # === Normalization ===
 
-def normalize_entity_id(entity_id: str, entity_type: str) -> str:
+def generate_deterministic_id(entity_type: str, entity_name: str, profile_name: str = "") -> str:
     """
-    Normalize entity ID to ensure consistent format.
+    Generate deterministic ID with namespace pattern.
+
+    Examples:
+        Product, "Citiz" -> "ns:Product/citiz"
+        ComponentType, "NTC Temperature Sensor" -> "ns:ComponentType/ntc_temperature_sensor"
+        MachineMode, "Descaling Mode" -> "ns:Mode/descaling_mode"
+        FailureMode, "No water flow" -> "ns:FM/no_water_flow"
     """
-    # Extract type abbreviation
-    type_abbrev = "".join([c for c in entity_type if c.isupper()])
-    if not type_abbrev:
-        type_abbrev = entity_type[:3].upper()
+    # Type-specific namespace prefixes
+    namespace_map = {
+        "Product": "Product",
+        "ComponentType": "ComponentType",
+        "Component": "Component",
+        "ParameterSpec": "PS",
+        "Unit": "Unit",
+        "MachineMode": "Mode",
+        "State": "State",
+        "ProcessStep": "Step",
+        "TestSpec": "Test",
+        "FailureMode": "FM",
+        "RepairAction": "RA",
+        "MaintenanceTask": "MT",
+        "Tool": "Tool",
+        "Consumable": "Consumable",
+        "RatingPlate": "RatingPlate",
+    }
 
-    # If ID already has correct format, keep it
-    if entity_id.startswith(f"{type_abbrev}_"):
-        return entity_id
+    prefix = namespace_map.get(entity_type, entity_type)
+    slug = slugify(entity_name)
 
-    # Otherwise, generate new ID
-    import hashlib
-    hash_val = hashlib.md5(entity_id.encode()).hexdigest()[:6]
-    return f"{type_abbrev}_{hash_val}"
+    return f"ns:{prefix}/{slug}"
 
 
-def normalize_entities(entities: List[dict]) -> List[dict]:
+def deduplicate_entities(entities: List[dict], profile_name: str) -> Tuple[List[dict], Dict[str, str]]:
     """
-    Normalize entity IDs and names.
+    Deduplicate entities by normalized name and type.
+
+    Returns:
+        (unique_entities, id_mapping)
     """
-    id_mapping = {}
-    normalized = []
+    # Map from (type, normalized_name) to entity
+    entity_map: Dict[Tuple[str, str], dict] = {}
+    id_mapping: Dict[str, str] = {}
 
     for entity in entities:
-        old_id = entity["id"]
-        new_id = normalize_entity_id(old_id, entity["type"])
+        entity_type = entity.get("type", "")
+        entity_name = entity.get("name", "")
+        normalized_name = normalize_text(entity_name)
+
+        key = (entity_type, normalized_name)
+
+        # Generate deterministic ID
+        new_id = generate_deterministic_id(entity_type, entity_name, profile_name)
+        old_id = entity.get("id", new_id)
         id_mapping[old_id] = new_id
-
         entity["id"] = new_id
-        entity["name"] = entity["name"].strip()
 
-        normalized.append(entity)
+        if key in entity_map:
+            # Duplicate found - keep the one with higher confidence
+            existing = entity_map[key]
+            if entity.get("confidence", 0) > existing.get("confidence", 0):
+                entity_map[key] = entity
+                # Update mapping to point to this entity
+                id_mapping[existing["id"]] = new_id
+        else:
+            entity_map[key] = entity
 
-    return normalized, id_mapping
+    unique_entities = list(entity_map.values())
+    return unique_entities, id_mapping
 
 
-def normalize_relations(relations: List[dict], id_mapping: Dict[str, str]) -> List[dict]:
+def deduplicate_relations(relations: List[dict]) -> List[dict]:
     """
-    Normalize relation references using the ID mapping.
-    """
-    normalized = []
+    Deduplicate relations by (type, from_ref, to_ref) key.
 
+    Keeps the relation with highest confidence.
+    """
+    relation_map: Dict[Tuple[str, str, str], dict] = {}
+
+    for relation in relations:
+        key = (
+            relation.get("type", ""),
+            relation.get("from_ref", ""),
+            relation.get("to_ref", ""),
+        )
+
+        if key in relation_map:
+            # Keep the one with higher confidence
+            existing = relation_map[key]
+            if relation.get("confidence", 0) > existing.get("confidence", 0):
+                relation_map[key] = relation
+        else:
+            relation_map[key] = relation
+
+    return list(relation_map.values())
+
+
+def fix_troubleshooting_semantics(
+    entities: List[dict],
+    relations: List[dict],
+) -> Tuple[List[dict], List[dict]]:
+    """
+    Fix semantic issues in troubleshooting profile:
+
+    1. FailureMode --mitigatedBy--> RepairAction (correct)
+    2. FailureMode --mitigatedBy--> Tool (wrong, should be via RepairAction)
+    3. RepairAction --requiresTool--> Tool
+    4. RepairAction --requiresConsumable--> Consumable
+    5. FailureMode --affects--> Component
+    """
+    # Build entity lookup
+    entity_by_id = {e["id"]: e for e in entities}
+
+    fixed_relations = []
+    new_entities = []
+    repair_action_counter = 0
+
+    for relation in relations:
+        rel_type = relation.get("type", "")
+        from_id = relation.get("from_ref", "")
+        to_id = relation.get("to_ref", "")
+
+        from_entity = entity_by_id.get(from_id)
+        to_entity = entity_by_id.get(to_id)
+
+        if not from_entity or not to_entity:
+            # Invalid reference, skip
+            continue
+
+        # Check for FailureMode --mitigatedBy--> Tool/Consumable
+        if (
+            rel_type == "mitigatedBy"
+            and from_entity.get("type") == "FailureMode"
+            and to_entity.get("type") in ["Tool", "Consumable"]
+        ):
+            # Create intermediate RepairAction
+            repair_action_counter += 1
+            ra_name = f"Use {to_entity.get('name', 'tool')}"
+            ra_id = f"ns:RA/use_{slugify(to_entity.get('name', 'tool'))}_{repair_action_counter}"
+
+            repair_action = {
+                "id": ra_id,
+                "type": "RepairAction",
+                "name": ra_name,
+                "confidence": relation.get("confidence", 0.8),
+            }
+
+            new_entities.append(repair_action)
+            entity_by_id[ra_id] = repair_action
+
+            # Add FailureMode --mitigatedBy--> RepairAction
+            fixed_relations.append({
+                "type": "mitigatedBy",
+                "from_ref": from_id,
+                "to_ref": ra_id,
+                "confidence": relation.get("confidence", 0.8),
+            })
+
+            # Add RepairAction --requiresTool/Consumable--> Tool/Consumable
+            req_type = "requiresTool" if to_entity.get("type") == "Tool" else "requiresConsumable"
+            fixed_relations.append({
+                "type": req_type,
+                "from_ref": ra_id,
+                "to_ref": to_id,
+                "confidence": relation.get("confidence", 0.8),
+            })
+        else:
+            # Keep relation as-is
+            fixed_relations.append(relation)
+
+    # Merge new entities
+    all_entities = entities + new_entities
+
+    return all_entities, fixed_relations
+
+
+def normalize_extraction(data: dict, profile_name: str) -> dict:
+    """
+    Normalize the entire extraction result.
+
+    Includes:
+    - Deterministic ID generation with namespace
+    - Entity deduplication
+    - Relation deduplication
+    - Semantic fixes for troubleshooting profile
+    """
+    entities = data.get("entities", [])
+    relations = data.get("relations", [])
+
+    # Step 1: Deduplicate and normalize entities
+    entities, id_mapping = deduplicate_entities(entities, profile_name)
+
+    # Step 2: Update relation references with new IDs
     for relation in relations:
         relation["from_ref"] = id_mapping.get(relation["from_ref"], relation["from_ref"])
         relation["to_ref"] = id_mapping.get(relation["to_ref"], relation["to_ref"])
-        normalized.append(relation)
 
-    return normalized
+    # Step 3: Fix troubleshooting semantics if needed
+    if profile_name == "troubleshooting":
+        entities, relations = fix_troubleshooting_semantics(entities, relations)
 
-
-def normalize_extraction(data: dict) -> dict:
-    """
-    Normalize the entire extraction result.
-    """
-    entities, id_mapping = normalize_entities(data.get("entities", []))
-    relations = normalize_relations(data.get("relations", []), id_mapping)
+    # Step 4: Deduplicate relations
+    relations = deduplicate_relations(relations)
 
     return {
         "entities": entities,
@@ -416,7 +740,7 @@ def generate_quality_report(
         "entity_type_distribution": entity_types,
         "relation_type_distribution": relation_types,
         "profile": profile_name,
-        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
     }
 
 
@@ -488,62 +812,51 @@ def process_profile(
         for chunk_idx, chunk in enumerate(chunks):
             logger.debug(f"Processing chunk {chunk_idx + 1}/{len(chunks)}")
 
-            # Build prompt
-            prompt = build_extraction_prompt(
+            if dry_run:
+                # Build a dummy prompt just to show length
+                prompt = build_extraction_prompt(
+                    chunk,
+                    profile_name,
+                    allowed_types,
+                    allowed_relations,
+                    schema_types,
+                    schema_relations,
+                )
+                logger.info(f"[DRY RUN] Would call AI with prompt length: {len(prompt)}")
+                continue
+
+            # Call AI with retry
+            if not client:
+                logger.error("OpenAI client not initialized")
+                return False
+
+            extraction = extract_with_retry(
+                client,
                 chunk,
                 profile_name,
                 allowed_types,
                 allowed_relations,
                 schema_types,
                 schema_relations,
+                extractor_config,
+                logger,
+                max_retries=2,
             )
 
-            if dry_run:
-                logger.info(f"[DRY RUN] Would call AI with prompt length: {len(prompt)}")
+            if not extraction:
+                logger.warning(f"Failed to extract data for chunk {chunk_idx + 1} after retries")
                 continue
 
-            # Call AI
-            if not client:
-                logger.error("OpenAI client not initialized")
-                return False
-
-            response = call_openai_api(
-                client,
-                prompt,
-                extractor_config.get("model", "gpt-4o-mini"),
-                extractor_config.get("temperature", 0.2),
-                extractor_config.get("max_output_tokens", 1500),
-                extractor_config.get("request_timeout", 60),
-            )
-
-            if not response:
-                logger.warning(f"No response from AI for chunk {chunk_idx + 1}")
-
-                # Retry with simplified prompt if enabled
-                if extractor_config.get("retry_on_failure", True):
-                    logger.info("Retrying with simplified prompt...")
-                    time.sleep(2)
-                    # TODO: Implement simplified prompt
-
-                continue
-
-            # Save raw output if enabled
+            # Save raw output if enabled (save the final successful extraction)
             if extractor_config.get("save_raw_outputs", True):
                 raw_dir = output_dir / "raw"
                 raw_dir.mkdir(exist_ok=True)
-                raw_file = raw_dir / f"{input_file.stem}_chunk_{chunk_idx:03d}_raw.json"
+                raw_file = raw_dir / f"{input_file.stem}_chunk_{chunk_idx:03d}_extraction.json"
                 with raw_file.open("w", encoding="utf-8") as fh:
                     json.dump({
-                        "prompt": prompt,
-                        "response": response,
-                        "timestamp": datetime.utcnow().isoformat() + "Z",
+                        "extraction": extraction,
+                        "timestamp": datetime.now(timezone.utc).isoformat(),
                     }, fh, indent=2, ensure_ascii=False)
-
-            # Parse response
-            extraction = extract_json_from_response(response)
-            if not extraction:
-                logger.warning(f"Failed to extract JSON from response for chunk {chunk_idx + 1}")
-                continue
 
             # Validate
             is_valid, warnings = validate_extraction(
@@ -553,11 +866,11 @@ def process_profile(
             )
 
             if not is_valid:
-                logger.warning(f"Validation failed for chunk {chunk_idx + 1}: {warnings}")
+                logger.warning(f"Validation failed for chunk {chunk_idx + 1}: {warnings[:5]}")  # Show first 5 warnings
                 all_warnings.extend(warnings)
 
             # Normalize
-            normalized = normalize_extraction(extraction)
+            normalized = normalize_extraction(extraction, profile_name)
 
             # Aggregate
             all_entities.extend(normalized.get("entities", []))
@@ -567,39 +880,38 @@ def process_profile(
         logger.info("[DRY RUN] Completed")
         return True
 
-    # Deduplicate entities by ID
-    unique_entities = {}
-    for entity in all_entities:
-        eid = entity["id"]
-        if eid not in unique_entities:
-            unique_entities[eid] = entity
-        else:
-            # Keep the one with higher confidence
-            if entity.get("confidence", 0) > unique_entities[eid].get("confidence", 0):
-                unique_entities[eid] = entity
+    # Final normalization and deduplication of aggregated data
+    logger.info(f"Applying final normalization and deduplication...")
+    final_normalized = normalize_extraction(
+        {"entities": all_entities, "relations": all_relations},
+        profile_name
+    )
 
-    final_entities = list(unique_entities.values())
+    final_entities = final_normalized["entities"]
+    final_relations = final_normalized["relations"]
+
+    logger.info(f"After deduplication: {len(final_entities)} entities, {len(final_relations)} relations")
 
     # Build final KG
     kg_data = {
         "document_code": f"KG_{profile_name.upper()}",
         "ingestion_id": str(uuid.uuid4()),
-        "extraction_version": "neural_v1.0",
+        "extraction_version": "neural_v1.1",
         "datasource_code": "NEURAL_EXTRACTION",
         "extractor": {
             "model": extractor_config.get("model", "gpt-4o-mini"),
-            "prompt_id": "neural_extraction_v1",
+            "prompt_id": "neural_extraction_v1_hardened",
             "temperature": extractor_config.get("temperature", 0.2),
             "max_tokens": extractor_config.get("max_output_tokens", 1500),
         },
         "allowed_types": allowed_types,
         "allowed_relations": allowed_relations,
         "entities": final_entities,
-        "relations": all_relations,
+        "relations": final_relations,
         "provenance": {
             "overall_confidence": 0.0,  # Will be calculated in quality report
             "sections_used": [f.name for f in input_files],
-            "notes": f"Neural extraction for profile {profile_name}",
+            "notes": f"Neural extraction for profile {profile_name} with semantic normalization",
         },
     }
 
@@ -614,7 +926,7 @@ def process_profile(
         json.dump(kg_data, fh, indent=2, ensure_ascii=False)
 
     logger.info(f"Saved KG to: {kg_file}")
-    logger.info(f"Entities: {len(final_entities)}, Relations: {len(all_relations)}")
+    logger.info(f"Entities: {len(final_entities)}, Relations: {len(final_relations)}")
 
     # Save quality report separately
     quality_file = output_dir / "quality.json"
