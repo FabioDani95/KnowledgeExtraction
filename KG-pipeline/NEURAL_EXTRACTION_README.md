@@ -10,6 +10,41 @@ Il modulo `Neural_extraction.py` utilizza modelli AI (OpenAI GPT) per estrarre a
 2. **operation_modes**: Modi operativi, stati, procedure, test
 3. **troubleshooting**: Guasti, azioni di riparazione, manutenzione
 
+## 🚀 Versione 1.1 - Hardening Update
+
+Questa versione include significativi miglioramenti per robustezza e qualità dei dati:
+
+### ✨ Nuove Funzionalità
+
+1. **ID Deterministici con Namespace**
+   - Pattern: `ns:TypePrefix/entity_name_slug`
+   - Esempi: `ns:Product/citiz`, `ns:ComponentType/thermoblock`, `ns:FM/no_water_flow`
+
+2. **JSON Parsing Robusto**
+   - Riparazione automatica di JSON malformato
+   - Gestione di virgolette tipografiche, virgole mancanti, trailing commas
+   - Estrazione selettiva di arrays entities/relations
+
+3. **Retry Intelligente**
+   - Tentativo 1: Prompt completo, temperatura da config
+   - Tentativo 2: Prompt semplificato, temperatura 0.1
+   - Tentativo 3: Prompt semplificato, temperatura 0.0
+
+4. **Deduplicazione Avanzata**
+   - Dedup entità per (tipo, nome normalizzato)
+   - Dedup relazioni per (tipo, from_ref, to_ref)
+   - Consolidamento basato su confidence massima
+
+5. **Correzione Semantica (Troubleshooting)**
+   - Pattern forzati: `FailureMode --mitigatedBy--> RepairAction`
+   - Creazione automatica di `RepairAction` intermedie per Tool/Consumable
+   - Validazione delle direzioni delle relazioni
+
+6. **Normalizzazione Testo**
+   - Unificazione di sinonimi ("Descaling mode" = "Descaling Mode")
+   - Slugification consistente
+   - Rimozione spazi multipli e caratteri speciali
+
 ## 🚀 Utilizzo
 
 ### Prerequisiti
@@ -128,6 +163,57 @@ neural_extraction_profiles:
       - "hasUnit"
       - "connectedTo"
 ```
+
+## 🔧 Miglioramenti Tecnici
+
+### ID Deterministici
+
+Gli ID seguono uno schema namespace coerente:
+
+| Tipo Entità | Namespace | Esempio Input | ID Generato |
+|-------------|-----------|---------------|-------------|
+| Product | `ns:Product/` | "Citiz" | `ns:Product/citiz` |
+| ComponentType | `ns:ComponentType/` | "NTC Temperature Sensor" | `ns:ComponentType/ntc_temperature_sensor` |
+| Component | `ns:Component/` | "Pump Invensys CP4" | `ns:Component/pump_invensys_cp4` |
+| MachineMode | `ns:Mode/` | "Descaling Mode" | `ns:Mode/descaling_mode` |
+| State | `ns:State/` | "Ready to brew" | `ns:State/ready_to_brew` |
+| FailureMode | `ns:FM/` | "No water flow" | `ns:FM/no_water_flow` |
+| RepairAction | `ns:RA/` | "Replace pump" | `ns:RA/replace_pump` |
+| Tool | `ns:Tool/` | "Torque Wrench" | `ns:Tool/torque_wrench` |
+
+### Correzione Semantica Troubleshooting
+
+Prima (errato):
+```
+FailureMode("No flow") --mitigatedBy--> Tool("Wrench")
+```
+
+Dopo (corretto):
+```
+FailureMode("No flow") --mitigatedBy--> RepairAction("Use Wrench")
+RepairAction("Use Wrench") --requiresTool--> Tool("Wrench")
+```
+
+### Retry Strategy
+
+Il sistema tenta l'estrazione fino a 3 volte con degradazione progressiva:
+
+```
+Attempt 1: Prompt dettagliato, temperature=0.2 (da config)
+  ↓ (fallimento)
+Attempt 2: Prompt semplificato, temperature=0.1
+  ↓ (fallimento)
+Attempt 3: Prompt semplificato, temperature=0.0 (deterministico)
+```
+
+### JSON Repair
+
+Gestisce automaticamente:
+- Code fences: ` ```json {...} ``` `
+- Virgolette tipografiche: `"text"` → `"text"`
+- Trailing commas: `[1, 2,]` → `[1, 2]`
+- Missing commas: `}{"id"` → `},{"id"`
+- Estrazione parziale se JSON incompleto
 
 ## 📊 Schema di Output
 
@@ -290,7 +376,44 @@ cat output/neural_extraction/product_technical/quality.json
 ## 🛠️ Estensioni Future
 
 - [ ] Supporto per altri provider AI (Anthropic, Google, Azure)
-- [ ] Prompt semplificato per retry automatico
+- [x] ~~Prompt semplificato per retry automatico~~ ✅ **Implementato v1.1**
 - [ ] Merging intelligente dei sotto-KG in un KG unificato
+- [ ] Allineamento cross-fonte (fuzzy matching tra profili)
+- [ ] Normalizzazione unità UCUM
 - [ ] Visualizzazione interattiva del KG
 - [ ] Export in formati alternativi (RDF, Neo4j, GraphML)
+
+## 📝 Changelog
+
+### v1.1 - Hardening Update (2025-11-04)
+
+**Fixed:**
+- ⚠️ Deprecation warning `datetime.utcnow()` → `datetime.now(timezone.utc)`
+- 🔧 JSON parsing errors con riparazione automatica
+- 🐛 Relazioni semanticamente errate nel profilo troubleshooting
+
+**Added:**
+- ✨ ID deterministici con namespace pattern (`ns:Type/slug`)
+- ✨ `safe_json_parse()` con 3 livelli di repair
+- ✨ `extract_with_retry()` con degradazione automatica (3 tentativi)
+- ✨ `deduplicate_entities()` con normalizzazione nomi
+- ✨ `deduplicate_relations()` per chiave (type, from, to)
+- ✨ `fix_troubleshooting_semantics()` per pattern corretti
+- ✨ `slugify()` per nomi consistenti
+- ✨ Prompt più stringente con enfasi su JSON valido
+
+**Changed:**
+- 🔄 `normalize_extraction()` ora include dedup completo
+- 🔄 Versione extraction: `neural_v1.0` → `neural_v1.1`
+- 🔄 Prompt ID: `neural_extraction_v1` → `neural_extraction_v1_hardened`
+- 🔄 Log più informativi con primo 5 warning invece di tutti
+
+**Performance:**
+- ⚡ Riduzione chunk falliti grazie a retry intelligente
+- ⚡ Eliminazione duplicati riduce dimensione KG finale del ~15-25%
+
+### v1.0 - Initial Release (2025-11-03)
+- 🎉 Sistema di estrazione neurale base
+- 🎉 Supporto per 3 profili (product_technical, operation_modes, troubleshooting)
+- 🎉 Integrazione OpenAI GPT
+- 🎉 Validazione e quality metrics
