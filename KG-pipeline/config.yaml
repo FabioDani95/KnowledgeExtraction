@@ -346,3 +346,27 @@ pipelines:
           - "(fatal electrical shock|burns|hot parts|injury)"
       generic:
         tag: "troubleshooting_text"
+
+# === KG Validation Settings ===
+validations:
+  json_shape:            { severity: error }
+  referential_integrity: { severity: error }
+  no_self_loops:         { severity: warn }
+
+  domain_range:
+    severity: error
+    rules:
+      hasUnit:            { domain: ["ParameterSpec"], range: ["Unit"] }
+      hasSpec:            { domain: ["Product","Component","ComponentType"], range: ["ParameterSpec"] }
+      requiresTool:       { domain: ["RepairAction"], range: ["Tool"] }
+      requiresConsumable: { domain: ["RepairAction"], range: ["Consumable"] }
+      precedes:           { domain: ["MachineMode","ProcessStep"], range: ["MachineMode","ProcessStep"] }
+
+  dedup_relations:  { severity: info }
+
+  precedes_acyclic: { severity: error }
+
+  units_required_if_numeric: { severity: warn }
+
+  min_confidence_entity:   { severity: warn, threshold: 0.75 }
+  min_confidence_relation: { severity: warn, threshold: 0.75 }
