@@ -1,0 +1,118 @@
+{
+  "_comment": "Esempio di KG con provenance completa - Neural Extraction v1.2",
+  "document_code": "KG_PRODUCT_TECHNICAL",
+  "extraction_version": "neural_v1.2",
+
+  "entities": [
+    {
+      "id": "ns:Component/pump_invensys_cp4",
+      "type": "Component",
+      "name": "Pump Invensys CP4",
+      "confidence": 0.91,
+      "spans": [
+        {
+          "section_id": "sec_3_1_1",
+          "section_title": "3.1.1 Interior view – core unit, D-range",
+          "page_start": 2,
+          "page_end": 3,
+          "source_text": "Section: 3.1.1 Interior view – core unit, D-range (p.2-3)"
+        },
+        {
+          "section_id": "sec_3_5",
+          "section_title": "3.5 Pump specifications",
+          "page_start": 8,
+          "page_end": 9,
+          "source_text": "Section: 3.5 Pump specifications (p.8-9)"
+        }
+      ]
+    },
+    {
+      "id": "ns:ComponentType/thermoblock",
+      "type": "ComponentType",
+      "name": "Thermoblock EF 2003",
+      "confidence": 0.94,
+      "spans": [
+        {
+          "section_id": "sec_3_1_1",
+          "section_title": "3.1.1 Interior view – core unit, D-range",
+          "page_start": 2,
+          "page_end": 3,
+          "source_text": "Section: 3.1.1 Interior view – core unit, D-range (p.2-3)"
+        }
+      ]
+    },
+    {
+      "id": "ns:ParameterSpec/pump_pressure",
+      "type": "ParameterSpec",
+      "name": "Pump pressure",
+      "nominal_value": 19,
+      "unit_raw": "bar",
+      "confidence": 0.88,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_pump_pressure",
+          "section_title": "4.2.1 Pump pressure",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: 4.2.1 Pump pressure (p.17-21)"
+        }
+      ]
+    }
+  ],
+
+  "relations": [
+    {
+      "type": "hasPart",
+      "from_ref": "ns:Product/citiz",
+      "to_ref": "ns:Component/pump_invensys_cp4",
+      "confidence": 0.87
+    }
+  ],
+
+  "provenance": {
+    "overall_confidence": 0.89,
+    "documents_processed": [
+      "1_Product and tech Data_Service Manual-9-30.parsed.json"
+    ],
+    "sections_used": [
+      {
+        "section_id": "sec_3_1_1",
+        "title": "3.1.1 Interior view – core unit, D-range",
+        "page_start": 2,
+        "page_end": 3,
+        "document": "1_Product and tech Data_Service Manual-9-30.parsed.json"
+      },
+      {
+        "section_id": "sec_3_5",
+        "title": "3.5 Pump specifications",
+        "page_start": 8,
+        "page_end": 9,
+        "document": "1_Product and tech Data_Service Manual-9-30.parsed.json"
+      },
+      {
+        "section_id": "sec_4_2_1_pump_pressure",
+        "title": "4.2.1 Pump pressure",
+        "page_start": 17,
+        "page_end": 21,
+        "document": "1_Product and tech Data_Service Manual-9-30.parsed.json"
+      }
+    ],
+    "total_sections": 42,
+    "notes": "Neural extraction for profile product_technical with provenance tracking and semantic normalization"
+  },
+
+  "quality": {
+    "json_valid": true,
+    "entities_count": 50,
+    "relations_count": 49,
+    "overall_confidence": 0.89,
+    "entity_type_distribution": {
+      "Component": 15,
+      "ComponentType": 12,
+      "ParameterSpec": 10,
+      "Unit": 5,
+      "Product": 3,
+      "RatingPlate": 5
+    }
+  }
+}
