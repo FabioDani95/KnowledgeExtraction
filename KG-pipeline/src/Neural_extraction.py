@@ -120,27 +120,76 @@ def safe_json_parse(response: str, logger: Optional[logging.Logger] = None) -> O
 
         # Attempt 2: Try to fix missing commas between objects in arrays
         try:
-            # Add comma between }{ patterns
-            json_str_fixed = re.sub(r'\}\s*\{', '},{', json_str)
+            # Add comma between }{ patterns (with potential newlines)
+            json_str_fixed = re.sub(r'\}[\s\n]*\{', '},{', json_str)
             return json.loads(json_str_fixed)
         except json.JSONDecodeError:
             pass
 
-        # Attempt 3: Try to extract just the entities and relations arrays
+        # Attempt 3: Fix missing commas after closing braces in arrays
         try:
-            entities_match = re.search(r'"entities"\s*:\s*(\[.*?\])', json_str, re.DOTALL)
-            relations_match = re.search(r'"relations"\s*:\s*(\[.*?\])', json_str, re.DOTALL)
-
-            if entities_match and relations_match:
-                reconstructed = {
-                    "entities": json.loads(entities_match.group(1)),
-                    "relations": json.loads(relations_match.group(1))
-                }
-                return reconstructed
-        except (json.JSONDecodeError, AttributeError):
+            # Pattern: } followed by newline and then { without comma
+            json_str_fixed = re.sub(r'\}(\s*\n\s*)(\{)', r'},\1\2', json_str)
+            return json.loads(json_str_fixed)
+        except json.JSONDecodeError:
             pass
 
-        logger.error(f"Failed to parse JSON after repair attempts. First 200 chars: {json_str[:200]}")
+        # Attempt 4: Fix missing commas between property values
+        try:
+            # Add comma between " and { if missing
+            json_str_fixed = re.sub(r'"\s*\n\s*"', '",\n"', json_str)
+            return json.loads(json_str_fixed)
+        except json.JSONDecodeError:
+            pass
+
+        # Attempt 5: Try to extract and fix entities array first
+        try:
+            entities_match = re.search(r'"entities"\s*:\s*\[(.*?)\]', json_str, re.DOTALL)
+            if entities_match:
+                entities_str = '[' + entities_match.group(1) + ']'
+                # Fix missing commas in entities array
+                entities_str = re.sub(r'\}[\s\n]*\{', '},{', entities_str)
+                entities = json.loads(entities_str)
+
+                # Try to extract relations
+                relations_match = re.search(r'"relations"\s*:\s*\[(.*?)\]', json_str, re.DOTALL)
+                relations = []
+                if relations_match:
+                    relations_str = '[' + relations_match.group(1) + ']'
+                    relations_str = re.sub(r'\}[\s\n]*\{', '},{', relations_str)
+                    try:
+                        relations = json.loads(relations_str)
+                    except json.JSONDecodeError:
+                        logger.warning("Could not parse relations, using entities only")
+
+                return {"entities": entities, "relations": relations}
+        except (json.JSONDecodeError, AttributeError) as e:
+            logger.warning(f"Attempt 5 failed: {e}")
+
+        # Attempt 6: Parse objects one by one
+        try:
+            # Extract individual entity objects
+            entity_pattern = r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)?\}'
+            entity_matches = re.findall(entity_pattern, json_str)
+
+            entities = []
+            for entity_str in entity_matches:
+                try:
+                    # Try to repair and parse individual entity
+                    entity_str = re.sub(r',(\s*[}\]])', r'\1', entity_str)
+                    entity = json.loads(entity_str)
+                    if 'id' in entity and 'type' in entity:  # Validate it's an entity
+                        entities.append(entity)
+                except json.JSONDecodeError:
+                    continue
+
+            if entities:
+                logger.info(f"Recovered {len(entities)} entities by parsing one-by-one")
+                return {"entities": entities, "relations": []}
+        except Exception as e:
+            logger.warning(f"Attempt 6 failed: {e}")
+
+        logger.error(f"Failed to parse JSON after all repair attempts. First 200 chars: {json_str[:200]}")
         return None
 
 
