@@ -53,7 +53,7 @@
       },
       {
         "type": "ProcessStep",
-        "name": "Fill water tank with 0.1l decalcifier and 0.5l water",
+        "name": "Fill water tank with decalcifier and water",
         "id": "PS_01",
         "confidence": 1.0,
         "spans": [
@@ -103,7 +103,7 @@
       },
       {
         "type": "ProcessStep",
-        "name": "Press both coffee buttons simultaneously for at least 3sec",
+        "name": "Press both coffee buttons simultaneously",
         "id": "PS_02",
         "confidence": 1.0,
         "spans": [
@@ -153,7 +153,7 @@
       },
       {
         "type": "ProcessStep",
-        "name": "Press any button to start pump",
+        "name": "Start pump",
         "id": "PS_03",
         "confidence": 1.0,
         "spans": [
@@ -203,7 +203,7 @@
       },
       {
         "type": "ProcessStep",
-        "name": "Rinse and clean water tank thoroughly",
+        "name": "Rinse and clean water tank",
         "id": "PS_04",
         "confidence": 1.0,
         "spans": [
@@ -253,7 +253,7 @@
       },
       {
         "type": "ProcessStep",
-        "name": "Eject capsules or check if capsules are removed",
+        "name": "Eject capsules",
         "id": "PS_05",
         "confidence": 1.0,
         "spans": [
@@ -391,5 +391,5 @@
       "char_end": 14171
     }
   ],
-  "timestamp": "2025-11-05T13:31:47.583656+00:00"
+  "timestamp": "2025-11-05T13:43:13.628992+00:00"
 }

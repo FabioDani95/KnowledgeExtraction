@@ -245,7 +245,7 @@
       },
       {
         "type": "RepairAction",
-        "name": "replace milk frother in agreement with customer",
+        "name": "replace milk frother",
         "id": "RA_06",
         "confidence": 1,
         "spans": [
@@ -311,7 +311,7 @@
       },
       {
         "type": "FailureMode",
-        "name": "coffee machine not switch off automatically",
+        "name": "milk frother not switch off automatically",
         "id": "FM_08",
         "confidence": 1,
         "spans": [
@@ -425,5 +425,5 @@
       "char_end": 2688
     }
   ],
-  "timestamp": "2025-11-05T13:32:12.915683+00:00"
+  "timestamp": "2025-11-05T13:43:32.757120+00:00"
 }

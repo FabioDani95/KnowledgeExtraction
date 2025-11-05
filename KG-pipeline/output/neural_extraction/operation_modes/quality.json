@@ -1,22 +1,21 @@
 {
   "json_valid": true,
-  "entities_count": 47,
-  "relations_count": 33,
+  "entities_count": 51,
+  "relations_count": 22,
   "warnings": [],
   "overall_confidence": 1.0,
   "avg_entity_confidence": 1.0,
   "avg_relation_confidence": 1.0,
   "entity_type_distribution": {
-    "MachineMode": 13,
+    "MachineMode": 15,
     "State": 11,
-    "ProcessStep": 22,
-    "TestSpec": 1
+    "ProcessStep": 25
   },
   "relation_type_distribution": {
     "precedes": 8,
-    "appliesDuring": 24,
-    "verifies": 1
+    "appliesDuring": 12,
+    "verifies": 2
   },
   "profile": "operation_modes",
-  "generated_at": "2025-11-05T13:31:47.586408+00:00"
+  "generated_at": "2025-11-05T13:43:13.630332+00:00"
 }

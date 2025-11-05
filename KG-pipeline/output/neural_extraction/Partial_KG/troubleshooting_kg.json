@@ -1,6 +1,6 @@
 {
   "document_code": "KG_TROUBLESHOOTING",
-  "ingestion_id": "e2b47733-e25a-46e0-a736-8088cac8da56",
+  "ingestion_id": "60ab3a42-42f8-49f0-a842-d4927e0c2f9e",
   "extraction_version": "neural_v1.2",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
@@ -268,8 +268,8 @@
     },
     {
       "type": "RepairAction",
-      "name": "replace milk frother in agreement with customer",
-      "id": "ns:RA/replace_milk_frother_in_agreement_with_customer",
+      "name": "replace milk frother",
+      "id": "ns:RA/replace_milk_frother",
       "confidence": 1,
       "spans": [
         {
@@ -334,8 +334,8 @@
     },
     {
       "type": "FailureMode",
-      "name": "coffee machine not switch off automatically",
-      "id": "ns:FM/coffee_machine_not_switch_off_automatically",
+      "name": "milk frother not switch off automatically",
+      "id": "ns:FM/milk_frother_not_switch_off_automatically",
       "confidence": 1,
       "spans": [
         {
@@ -499,7 +499,7 @@
     {
       "type": "affects",
       "from_ref": "ns:FM/jug_badly_scratched",
-      "to_ref": "ns:RA/replace_milk_frother_in_agreement_with_customer",
+      "to_ref": "ns:RA/replace_milk_frother",
       "confidence": 1
     },
     {
@@ -510,7 +510,7 @@
     },
     {
       "type": "affects",
-      "from_ref": "ns:FM/coffee_machine_not_switch_off_automatically",
+      "from_ref": "ns:FM/milk_frother_not_switch_off_automatically",
       "to_ref": "ns:RA/replace_connector_on_platform",
       "confidence": 1
     },
@@ -583,6 +583,6 @@
       "requiresTool": 1
     },
     "profile": "troubleshooting",
-    "generated_at": "2025-11-05T13:32:18.640035+00:00"
+    "generated_at": "2025-11-05T13:43:37.376521+00:00"
   }
 }

@@ -1,6 +1,6 @@
 {
   "document_code": "KG_OPERATION_MODES",
-  "ingestion_id": "2f4353d6-161b-42e0-8e87-bc430adbde6f",
+  "ingestion_id": "0e398c10-8fbb-4f1d-b6ef-e1ce522a7825",
   "extraction_version": "neural_v1.2",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
@@ -737,6 +737,48 @@
           "page_start": 6,
           "page_end": 6,
           "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+        },
+        {
+          "section_id": "sec_procedure_p12",
+          "section_title": "Citiz service manual  42 MAINTENANCE",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Citiz service manual  42 MAINTENANCE... (p.12-12)"
+        },
+        {
+          "section_id": "sec_procedure_p13",
+          "section_title": "Citiz service manual  43 MAINTENANCE",
+          "page_start": 13,
+          "page_end": 13,
+          "source_text": "Section: Citiz service manual  43 MAINTENANCE... (p.13-13)"
+        },
+        {
+          "section_id": "sec_procedure_p14",
+          "section_title": "Citiz service manual  44 MAINTENANCE",
+          "page_start": 14,
+          "page_end": 14,
+          "source_text": "Section: Citiz service manual  44 MAINTENANCE... (p.14-14)"
+        },
+        {
+          "section_id": "sec_procedure_p15",
+          "section_title": "Citiz service manual  45 MAINTENANCE",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Citiz service manual  45 MAINTENANCE... (p.15-15)"
+        },
+        {
+          "section_id": "sec_procedure_p16",
+          "section_title": "Citiz service manual  46 MAINTENANCE",
+          "page_start": 16,
+          "page_end": 16,
+          "source_text": "Section: Citiz service manual  46 MAINTENANCE... (p.16-16)"
+        },
+        {
+          "section_id": "sec_procedure_p17",
+          "section_title": "Citiz service manual  47 MAINTENANCE",
+          "page_start": 17,
+          "page_end": 17,
+          "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
         }
       ]
     },
@@ -808,8 +850,30 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Reset programmed volumes",
-      "id": "ns:Step/reset_programmed_volumes",
+      "name": "Reset programmed volumes to factory setting",
+      "id": "ns:Step/reset_programmed_volumes_to_factory_setting",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_mode_table_p5",
+          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+          "page_start": 5,
+          "page_end": 5,
+          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+        },
+        {
+          "section_id": "sec_procedure_p6",
+          "section_title": "Citiz service manual  36 OPERATION",
+          "page_start": 6,
+          "page_end": 6,
+          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+        }
+      ]
+    },
+    {
+      "type": "ProcessStep",
+      "name": "Indicate resetting mode for 3s",
+      "id": "ns:Step/indicate_resetting_mode_for_3s",
       "confidence": 1.0,
       "spans": [
         {
@@ -874,8 +938,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Indicate failure with coffee button LED",
-      "id": "ns:Step/indicate_failure_with_coffee_button_led",
+      "name": "Press any coffee button to activate ready mode",
+      "id": "ns:Step/press_any_coffee_button_to_activate_ready_mode",
       "confidence": 1.0,
       "spans": [
         {
@@ -896,8 +960,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Switch thermoblock off",
-      "id": "ns:Step/switch_thermoblock_off",
+      "name": "Switch off thermoblock",
+      "id": "ns:Step/switch_off_thermoblock",
       "confidence": 1.0,
       "spans": [
         {
@@ -917,9 +981,75 @@
       ]
     },
     {
-      "type": "TestSpec",
-      "name": "Factory settings",
-      "id": "ns:Test/factory_settings",
+      "type": "ProcessStep",
+      "name": "Switch off the machine",
+      "id": "ns:Step/switch_off_the_machine",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_mode_table_p5",
+          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+          "page_start": 5,
+          "page_end": 5,
+          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+        },
+        {
+          "section_id": "sec_procedure_p6",
+          "section_title": "Citiz service manual  36 OPERATION",
+          "page_start": 6,
+          "page_end": 6,
+          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+        }
+      ]
+    },
+    {
+      "type": "ProcessStep",
+      "name": "Prepare coffee as usual",
+      "id": "ns:Step/prepare_coffee_as_usual",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_mode_table_p5",
+          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+          "page_start": 5,
+          "page_end": 5,
+          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+        },
+        {
+          "section_id": "sec_procedure_p6",
+          "section_title": "Citiz service manual  36 OPERATION",
+          "page_start": 6,
+          "page_end": 6,
+          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+        }
+      ]
+    },
+    {
+      "type": "ProcessStep",
+      "name": "Keep coffee button pressed for 3 seconds",
+      "id": "ns:Step/keep_coffee_button_pressed_for_3_seconds",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_mode_table_p5",
+          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+          "page_start": 5,
+          "page_end": 5,
+          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+        },
+        {
+          "section_id": "sec_procedure_p6",
+          "section_title": "Citiz service manual  36 OPERATION",
+          "page_start": 6,
+          "page_end": 6,
+          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+        }
+      ]
+    },
+    {
+      "type": "ProcessStep",
+      "name": "Release button when desired fill level is reached",
+      "id": "ns:Step/release_button_when_desired_fill_level_is_reached",
       "confidence": 1.0,
       "spans": [
         {
@@ -1069,49 +1199,6 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Milk frother of model Citiz & milk",
-      "id": "ns:Step/milk_frother_of_model_citiz_milk",
-      "confidence": 1.0,
-      "spans": [
-        {
-          "section_id": "sec_procedure_p7",
-          "section_title": "Citiz service manual  37 OPERATION",
-          "page_start": 7,
-          "page_end": 7,
-          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
-        },
-        {
-          "section_id": "sec_procedure_p8",
-          "section_title": "Citiz service manual  38 MAINTENANCE",
-          "page_start": 8,
-          "page_end": 8,
-          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
-        },
-        {
-          "section_id": "sec_procedure_p9",
-          "section_title": "Citiz service manual  39 MAINTENANCE",
-          "page_start": 9,
-          "page_end": 9,
-          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
-        },
-        {
-          "section_id": "sec_procedure_p10",
-          "section_title": "Citiz service manual  40 MAINTENANCE",
-          "page_start": 10,
-          "page_end": 10,
-          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
-        },
-        {
-          "section_id": "sec_generic_p11",
-          "section_title": "Operational content (page 11)",
-          "page_start": 11,
-          "page_end": 11,
-          "source_text": "Section: Operational content (page 11)... (p.11-11)"
-        }
-      ]
-    },
-    {
-      "type": "ProcessStep",
       "name": "Descaling",
       "id": "ns:Step/descaling",
       "confidence": 1.0,
@@ -1154,9 +1241,52 @@
       ]
     },
     {
-      "type": "State",
-      "name": "Coffee machine off",
-      "id": "ns:State/coffee_machine_off",
+      "type": "MachineMode",
+      "name": "Citiz & Co",
+      "id": "ns:Mode/citiz_co",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_procedure_p7",
+          "section_title": "Citiz service manual  37 OPERATION",
+          "page_start": 7,
+          "page_end": 7,
+          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+        },
+        {
+          "section_id": "sec_procedure_p8",
+          "section_title": "Citiz service manual  38 MAINTENANCE",
+          "page_start": 8,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+        },
+        {
+          "section_id": "sec_procedure_p9",
+          "section_title": "Citiz service manual  39 MAINTENANCE",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+        },
+        {
+          "section_id": "sec_procedure_p10",
+          "section_title": "Citiz service manual  40 MAINTENANCE",
+          "page_start": 10,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+        },
+        {
+          "section_id": "sec_generic_p11",
+          "section_title": "Operational content (page 11)",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Operational content (page 11)... (p.11-11)"
+        }
+      ]
+    },
+    {
+      "type": "MachineMode",
+      "name": "Citiz & milk",
+      "id": "ns:Mode/citiz_milk",
       "confidence": 1.0,
       "spans": [
         {
@@ -1198,8 +1328,51 @@
     },
     {
       "type": "State",
-      "name": "Coffee machine on",
-      "id": "ns:State/coffee_machine_on",
+      "name": "Machine off",
+      "id": "ns:State/machine_off",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_procedure_p7",
+          "section_title": "Citiz service manual  37 OPERATION",
+          "page_start": 7,
+          "page_end": 7,
+          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+        },
+        {
+          "section_id": "sec_procedure_p8",
+          "section_title": "Citiz service manual  38 MAINTENANCE",
+          "page_start": 8,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+        },
+        {
+          "section_id": "sec_procedure_p9",
+          "section_title": "Citiz service manual  39 MAINTENANCE",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+        },
+        {
+          "section_id": "sec_procedure_p10",
+          "section_title": "Citiz service manual  40 MAINTENANCE",
+          "page_start": 10,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+        },
+        {
+          "section_id": "sec_generic_p11",
+          "section_title": "Operational content (page 11)",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Operational content (page 11)... (p.11-11)"
+        }
+      ]
+    },
+    {
+      "type": "State",
+      "name": "Machine on",
+      "id": "ns:State/machine_on",
       "confidence": 1.0,
       "spans": [
         {
@@ -1241,8 +1414,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Fill water tank with 0.1l decalcifier and 0.5l water",
-      "id": "ns:Step/fill_water_tank_with_01l_decalcifier_and_05l_water",
+      "name": "Fill water tank with decalcifier and water",
+      "id": "ns:Step/fill_water_tank_with_decalcifier_and_water",
       "confidence": 1.0,
       "spans": [
         {
@@ -1291,8 +1464,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Press both coffee buttons simultaneously for at least 3sec",
-      "id": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
+      "name": "Press both coffee buttons simultaneously",
+      "id": "ns:Step/press_both_coffee_buttons_simultaneously",
       "confidence": 1.0,
       "spans": [
         {
@@ -1341,8 +1514,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Press any button to start pump",
-      "id": "ns:Step/press_any_button_to_start_pump",
+      "name": "Rinse and clean water tank",
+      "id": "ns:Step/rinse_and_clean_water_tank",
       "confidence": 1.0,
       "spans": [
         {
@@ -1391,58 +1564,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Rinse and clean water tank thoroughly",
-      "id": "ns:Step/rinse_and_clean_water_tank_thoroughly",
-      "confidence": 1.0,
-      "spans": [
-        {
-          "section_id": "sec_procedure_p12",
-          "section_title": "Citiz service manual  42 MAINTENANCE",
-          "page_start": 12,
-          "page_end": 12,
-          "source_text": "Section: Citiz service manual  42 MAINTENANCE... (p.12-12)"
-        },
-        {
-          "section_id": "sec_procedure_p13",
-          "section_title": "Citiz service manual  43 MAINTENANCE",
-          "page_start": 13,
-          "page_end": 13,
-          "source_text": "Section: Citiz service manual  43 MAINTENANCE... (p.13-13)"
-        },
-        {
-          "section_id": "sec_procedure_p14",
-          "section_title": "Citiz service manual  44 MAINTENANCE",
-          "page_start": 14,
-          "page_end": 14,
-          "source_text": "Section: Citiz service manual  44 MAINTENANCE... (p.14-14)"
-        },
-        {
-          "section_id": "sec_procedure_p15",
-          "section_title": "Citiz service manual  45 MAINTENANCE",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: Citiz service manual  45 MAINTENANCE... (p.15-15)"
-        },
-        {
-          "section_id": "sec_procedure_p16",
-          "section_title": "Citiz service manual  46 MAINTENANCE",
-          "page_start": 16,
-          "page_end": 16,
-          "source_text": "Section: Citiz service manual  46 MAINTENANCE... (p.16-16)"
-        },
-        {
-          "section_id": "sec_procedure_p17",
-          "section_title": "Citiz service manual  47 MAINTENANCE",
-          "page_start": 17,
-          "page_end": 17,
-          "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
-        }
-      ]
-    },
-    {
-      "type": "ProcessStep",
-      "name": "Eject capsules or check if capsules are removed",
-      "id": "ns:Step/eject_capsules_or_check_if_capsules_are_removed",
+      "name": "Eject capsules",
+      "id": "ns:Step/eject_capsules",
       "confidence": 1.0,
       "spans": [
         {
@@ -1523,111 +1646,39 @@
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Mode/brewing_mode",
+      "from_ref": "ns:Mode/descaling_mode",
       "to_ref": "ns:State/emptying_evaporating",
       "confidence": 1
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Mode/volume_brewing_mode",
-      "to_ref": "ns:State/emptying_evaporating",
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:State/standby",
       "confidence": 1
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Mode/heat_up_mode",
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:State/resetting",
+      "confidence": 1
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/descaling_mode",
       "to_ref": "ns:State/power_save",
       "confidence": 1
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Mode/heat_up_mode",
+      "from_ref": "ns:Mode/descaling_mode",
       "to_ref": "ns:State/overheat",
       "confidence": 1
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Mode/heat_up_mode",
+      "from_ref": "ns:Mode/descaling_mode",
       "to_ref": "ns:State/power_save_activation",
       "confidence": 1
-    },
-    {
-      "type": "precedes",
-      "from_ref": "ns:Mode/emptying_mode",
-      "to_ref": "ns:Mode/standby_mode",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/emptying_mode",
-      "to_ref": "ns:Step/switch_off_machine",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/emptying_mode",
-      "to_ref": "ns:Step/press_and_hold_coffee_button",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/emptying_mode",
-      "to_ref": "ns:Step/switch_on_machine",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/resetting_mode",
-      "to_ref": "ns:Step/switch_off_machine",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/resetting_mode",
-      "to_ref": "ns:Step/press_and_hold_coffee_button",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/resetting_mode",
-      "to_ref": "ns:Step/switch_on_machine",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/power_save_mode",
-      "to_ref": "ns:Step/switch_off_machine",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/power_save_mode",
-      "to_ref": "ns:Step/press_and_hold_coffee_button",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/power_save_mode",
-      "to_ref": "ns:Step/switch_on_machine",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/failure_mode",
-      "to_ref": "ns:Step/indicate_failure_with_coffee_button_led",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/standby_mode",
-      "to_ref": "ns:Step/switch_thermoblock_off",
-      "confidence": 1.0
-    },
-    {
-      "type": "verifies",
-      "from_ref": "ns:Test/factory_settings",
-      "to_ref": "ns:Step/reset_programmed_volumes",
-      "confidence": 1.0
     },
     {
       "type": "precedes",
@@ -1638,54 +1689,60 @@
     {
       "type": "appliesDuring",
       "from_ref": "ns:Step/daily_maintenance_and_cleaning",
-      "to_ref": "ns:State/coffee_machine_on",
+      "to_ref": "ns:Mode/citiz_co",
       "confidence": 1.0
     },
     {
       "type": "appliesDuring",
+      "from_ref": "ns:Step/daily_maintenance_and_cleaning",
+      "to_ref": "ns:Mode/citiz_milk",
+      "confidence": 1.0
+    },
+    {
+      "type": "verifies",
       "from_ref": "ns:Step/after_last_coffee_or_at_the_end_of_day",
-      "to_ref": "ns:State/coffee_machine_off",
+      "to_ref": "ns:State/machine_off",
+      "confidence": 1.0
+    },
+    {
+      "type": "verifies",
+      "from_ref": "ns:Step/after_last_coffee_or_at_the_end_of_day",
+      "to_ref": "ns:State/machine_on",
+      "confidence": 1.0
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/daily_maintenance_and_cleaning",
+      "to_ref": "ns:Step/descaling",
       "confidence": 1.0
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Step/milk_frother_of_model_citiz_milk",
-      "to_ref": "ns:State/coffee_machine_on",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Step/descaling",
-      "to_ref": "ns:State/coffee_machine_off",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Step/fill_water_tank_with_01l_decalcifier_and_05l_water",
+      "from_ref": "ns:Step/fill_water_tank_with_decalcifier_and_water",
       "to_ref": "ns:Mode/descaling_mode",
       "confidence": 1.0
     },
     {
       "type": "precedes",
-      "from_ref": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
+      "from_ref": "ns:Step/press_both_coffee_buttons_simultaneously",
       "to_ref": "ns:Mode/descaling_mode",
       "confidence": 1.0
     },
     {
       "type": "precedes",
-      "from_ref": "ns:Step/press_any_button_to_start_pump",
+      "from_ref": "ns:Step/start_pump",
       "to_ref": "ns:Mode/descaling_mode",
       "confidence": 1.0
     },
     {
       "type": "precedes",
-      "from_ref": "ns:Step/rinse_and_clean_water_tank_thoroughly",
+      "from_ref": "ns:Step/rinse_and_clean_water_tank",
       "to_ref": "ns:Mode/descaling_mode",
       "confidence": 1.0
     },
     {
       "type": "precedes",
-      "from_ref": "ns:Step/eject_capsules_or_check_if_capsules_are_removed",
+      "from_ref": "ns:Step/eject_capsules",
       "to_ref": "ns:Mode/descaling_mode",
       "confidence": 1.0
     }
@@ -1814,24 +1871,23 @@
   },
   "quality": {
     "json_valid": true,
-    "entities_count": 47,
-    "relations_count": 33,
+    "entities_count": 51,
+    "relations_count": 22,
     "warnings": [],
     "overall_confidence": 1.0,
     "avg_entity_confidence": 1.0,
     "avg_relation_confidence": 1.0,
     "entity_type_distribution": {
-      "MachineMode": 13,
+      "MachineMode": 15,
       "State": 11,
-      "ProcessStep": 22,
-      "TestSpec": 1
+      "ProcessStep": 25
     },
     "relation_type_distribution": {
       "precedes": 8,
-      "appliesDuring": 24,
-      "verifies": 1
+      "appliesDuring": 12,
+      "verifies": 2
     },
     "profile": "operation_modes",
-    "generated_at": "2025-11-05T13:31:47.586408+00:00"
+    "generated_at": "2025-11-05T13:43:13.630332+00:00"
   }
 }

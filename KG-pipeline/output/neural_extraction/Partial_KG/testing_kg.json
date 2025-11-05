@@ -1,6 +1,6 @@
 {
   "document_code": "KG_TESTING",
-  "ingestion_id": "2bc0d68b-7a30-4e14-a344-ab270625a0a3",
+  "ingestion_id": "86901b10-a15c-48a0-8496-6e486feea6fb",
   "extraction_version": "neural_v1.2",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
@@ -1412,8 +1412,8 @@
     },
     {
       "type": "Measurement",
-      "name": "pressure measurement",
-      "id": "ns:Measurement/pressure_measurement",
+      "name": "pressure",
+      "id": "ns:Measurement/pressure",
       "confidence": 1.0,
       "nominal_value": 12,
       "unit_raw": "bar",
@@ -1464,8 +1464,8 @@
     },
     {
       "type": "Measurement",
-      "name": "water measurement",
-      "id": "ns:Measurement/water_measurement",
+      "name": "water volume",
+      "id": "ns:Measurement/water_volume",
       "confidence": 1.0,
       "min_value": 60,
       "max_value": 120,
@@ -1517,7 +1517,7 @@
     },
     {
       "type": "SafetyNotice",
-      "name": "dangerous mains voltage",
+      "name": "Dangerous mains voltage",
       "id": "ns:SafetyNotice/dangerous_mains_voltage",
       "confidence": 1.0,
       "spans": [
@@ -1567,7 +1567,7 @@
     },
     {
       "type": "SafetyNotice",
-      "name": "dangerous hot parts",
+      "name": "Dangerous hot parts",
       "id": "ns:SafetyNotice/dangerous_hot_parts",
       "confidence": 1.0,
       "spans": [
@@ -1706,6 +1706,8 @@
       "id": "ns:Measurement/coffee_temperature",
       "confidence": 0.9,
       "nominal_value": 86,
+      "min_value": 83,
+      "max_value": 89,
       "tolerance": 3,
       "unit_raw": "°C",
       "spans": [
@@ -1962,10 +1964,10 @@
       ]
     },
     {
-      "type": "Equipment",
-      "name": "Coffee Machine",
-      "id": "ns:Equipment/coffee_machine",
-      "confidence": 1.0,
+      "type": "AcceptanceCriterion",
+      "name": "NTC Resistance Range",
+      "id": "ns:AcceptanceCriterion/ntc_resistance_range",
+      "confidence": 0.9,
       "spans": [
         {
           "section_id": "sec_007",
@@ -2043,55 +2045,91 @@
           "page_start": 12,
           "page_end": 12,
           "source_text": "Section: 9.8.2 General... (p.12-12)"
+        }
+      ]
+    },
+    {
+      "type": "Equipment",
+      "name": "Coffee Machine",
+      "id": "ns:Equipment/coffee_machine",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+          "page_start": 7,
+          "page_end": 8,
+          "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
         },
         {
-          "section_id": "sec_024",
-          "section_title": "Description",
+          "section_id": "sec_008",
+          "section_title": "20 ml of coffee.",
+          "page_start": 8,
+          "page_end": 9,
+          "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+        },
+        {
+          "section_id": "sec_010",
+          "section_title": "Prerequisite",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Prerequisite... (p.9-9)"
+        },
+        {
+          "section_id": "sec_011",
+          "section_title": "9.6.1 Measure hot milk temperature",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+        },
+        {
+          "section_id": "sec_012",
+          "section_title": "9.6.2 Measure milk froth ratio",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+        },
+        {
+          "section_id": "sec_013",
+          "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+          "page_start": 9,
+          "page_end": 10,
+          "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+        },
+        {
+          "section_id": "sec_014",
+          "section_title": "9.7 NTC temperature sensor functionality",
+          "page_start": 10,
+          "page_end": 11,
+          "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+        },
+        {
+          "section_id": "sec_015",
+          "section_title": "Measurement table",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Measurement table... (p.11-11)"
+        },
+        {
+          "section_id": "sec_020",
+          "section_title": "35  95  60.90  65.86",
+          "page_start": 11,
+          "page_end": 12,
+          "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+        },
+        {
+          "section_id": "sec_022",
+          "section_title": "9.8.1 What coffee machine has to be tested and when?",
           "page_start": 12,
           "page_end": 12,
-          "source_text": "Section: Description... (p.12-12)"
+          "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
         },
         {
-          "section_id": "sec_026",
-          "section_title": "Test equipment",
+          "section_id": "sec_023",
+          "section_title": "9.8.2 General",
           "page_start": 12,
-          "page_end": 13,
-          "source_text": "Section: Test equipment... (p.12-13)"
-        },
-        {
-          "section_id": "sec_027",
-          "section_title": "9.8.3 Test sequence",
-          "page_start": 13,
-          "page_end": 14,
-          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
-        },
-        {
-          "section_id": "sec_028",
-          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
-          "page_start": 14,
-          "page_end": 15,
-          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
-        },
-        {
-          "section_id": "sec_030",
-          "section_title": "9.9.1 What coffee machines have to be tested and when?",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
-        },
-        {
-          "section_id": "sec_031",
-          "section_title": "9.9.2 General",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: 9.9.2 General... (p.15-15)"
-        },
-        {
-          "section_id": "sec_032",
-          "section_title": "Description",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: Description... (p.15-15)"
+          "page_end": 12,
+          "source_text": "Section: 9.8.2 General... (p.12-12)"
         }
       ]
     },
@@ -2099,7 +2137,7 @@
       "type": "NormativeReference",
       "name": "EN/IEC 60335-1",
       "id": "ns:NormativeReference/eniec_60335_1",
-      "confidence": 1.0,
+      "confidence": 0.9,
       "spans": [
         {
           "section_id": "sec_007",
@@ -2177,191 +2215,13 @@
           "page_start": 12,
           "page_end": 12,
           "source_text": "Section: 9.8.2 General... (p.12-12)"
-        },
-        {
-          "section_id": "sec_024",
-          "section_title": "Description",
-          "page_start": 12,
-          "page_end": 12,
-          "source_text": "Section: Description... (p.12-12)"
-        },
-        {
-          "section_id": "sec_026",
-          "section_title": "Test equipment",
-          "page_start": 12,
-          "page_end": 13,
-          "source_text": "Section: Test equipment... (p.12-13)"
-        },
-        {
-          "section_id": "sec_027",
-          "section_title": "9.8.3 Test sequence",
-          "page_start": 13,
-          "page_end": 14,
-          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
-        },
-        {
-          "section_id": "sec_028",
-          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
-          "page_start": 14,
-          "page_end": 15,
-          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
-        },
-        {
-          "section_id": "sec_030",
-          "section_title": "9.9.1 What coffee machines have to be tested and when?",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
-        },
-        {
-          "section_id": "sec_031",
-          "section_title": "9.9.2 General",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: 9.9.2 General... (p.15-15)"
-        },
-        {
-          "section_id": "sec_032",
-          "section_title": "Description",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: Description... (p.15-15)"
-        }
-      ]
-    },
-    {
-      "type": "TestCase",
-      "name": "Protective Earth Continuity Test",
-      "id": "ns:TestCase/protective_earth_continuity_test",
-      "confidence": 1.0,
-      "spans": [
-        {
-          "section_id": "sec_024",
-          "section_title": "Description",
-          "page_start": 12,
-          "page_end": 12,
-          "source_text": "Section: Description... (p.12-12)"
-        },
-        {
-          "section_id": "sec_026",
-          "section_title": "Test equipment",
-          "page_start": 12,
-          "page_end": 13,
-          "source_text": "Section: Test equipment... (p.12-13)"
-        },
-        {
-          "section_id": "sec_027",
-          "section_title": "9.8.3 Test sequence",
-          "page_start": 13,
-          "page_end": 14,
-          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
-        },
-        {
-          "section_id": "sec_028",
-          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
-          "page_start": 14,
-          "page_end": 15,
-          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
-        },
-        {
-          "section_id": "sec_030",
-          "section_title": "9.9.1 What coffee machines have to be tested and when?",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
-        },
-        {
-          "section_id": "sec_031",
-          "section_title": "9.9.2 General",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: 9.9.2 General... (p.15-15)"
-        },
-        {
-          "section_id": "sec_032",
-          "section_title": "Description",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: Description... (p.15-15)"
-        }
-      ]
-    },
-    {
-      "type": "TestCase",
-      "name": "Insulation Test",
-      "id": "ns:TestCase/insulation_test",
-      "confidence": 1.0,
-      "spans": [
-        {
-          "section_id": "sec_024",
-          "section_title": "Description",
-          "page_start": 12,
-          "page_end": 12,
-          "source_text": "Section: Description... (p.12-12)"
-        },
-        {
-          "section_id": "sec_026",
-          "section_title": "Test equipment",
-          "page_start": 12,
-          "page_end": 13,
-          "source_text": "Section: Test equipment... (p.12-13)"
-        },
-        {
-          "section_id": "sec_027",
-          "section_title": "9.8.3 Test sequence",
-          "page_start": 13,
-          "page_end": 14,
-          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
-        },
-        {
-          "section_id": "sec_028",
-          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
-          "page_start": 14,
-          "page_end": 15,
-          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
-        },
-        {
-          "section_id": "sec_030",
-          "section_title": "9.9.1 What coffee machines have to be tested and when?",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
-        },
-        {
-          "section_id": "sec_031",
-          "section_title": "9.9.2 General",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: 9.9.2 General... (p.15-15)"
-        },
-        {
-          "section_id": "sec_032",
-          "section_title": "Description",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: Description... (p.15-15)"
-        },
-        {
-          "section_id": "sec_033",
-          "section_title": "Test equipment",
-          "page_start": 15,
-          "page_end": 16,
-          "source_text": "Section: Test equipment... (p.15-16)"
-        },
-        {
-          "section_id": "sec_034",
-          "section_title": "9.9.3 Test sequence",
-          "page_start": 16,
-          "page_end": 17,
-          "source_text": "Section: 9.9.3 Test sequence... (p.16-17)"
         }
       ]
     },
     {
       "type": "Measurement",
-      "name": "Ground Resistance",
-      "id": "ns:Measurement/ground_resistance",
-      "confidence": 1.0,
+      "name": "Protective earth continuity resistance",
+      "id": "ns:Measurement/protective_earth_continuity_resistance",
       "nominal_value": null,
       "min_value": null,
       "max_value": 0.3,
@@ -2420,10 +2280,70 @@
       ]
     },
     {
-      "type": "NormativeReference",
-      "name": "DIN VDE 0701",
-      "id": "ns:NormativeReference/din_vde_0701",
-      "confidence": 1.0,
+      "type": "Measurement",
+      "name": "Insulation test voltage",
+      "id": "ns:Measurement/insulation_test_voltage",
+      "nominal_value": 500,
+      "min_value": null,
+      "max_value": null,
+      "tolerance": null,
+      "unit_raw": "V DC",
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "section_title": "Description",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Description... (p.12-12)"
+        },
+        {
+          "section_id": "sec_026",
+          "section_title": "Test equipment",
+          "page_start": 12,
+          "page_end": 13,
+          "source_text": "Section: Test equipment... (p.12-13)"
+        },
+        {
+          "section_id": "sec_027",
+          "section_title": "9.8.3 Test sequence",
+          "page_start": 13,
+          "page_end": 14,
+          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+        },
+        {
+          "section_id": "sec_028",
+          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+          "page_start": 14,
+          "page_end": 15,
+          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+        },
+        {
+          "section_id": "sec_030",
+          "section_title": "9.9.1 What coffee machines have to be tested and when?",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+        },
+        {
+          "section_id": "sec_031",
+          "section_title": "9.9.2 General",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.2 General... (p.15-15)"
+        },
+        {
+          "section_id": "sec_032",
+          "section_title": "Description",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Description... (p.15-15)"
+        }
+      ]
+    },
+    {
+      "type": "SafetyNotice",
+      "name": "Danger of electrocution",
+      "id": "ns:SafetyNotice/danger_of_electrocution",
       "spans": [
         {
           "section_id": "sec_024",
@@ -2483,6 +2403,55 @@
       "confidence": 1.0,
       "spans": [
         {
+          "section_id": "sec_024",
+          "section_title": "Description",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Description... (p.12-12)"
+        },
+        {
+          "section_id": "sec_026",
+          "section_title": "Test equipment",
+          "page_start": 12,
+          "page_end": 13,
+          "source_text": "Section: Test equipment... (p.12-13)"
+        },
+        {
+          "section_id": "sec_027",
+          "section_title": "9.8.3 Test sequence",
+          "page_start": 13,
+          "page_end": 14,
+          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+        },
+        {
+          "section_id": "sec_028",
+          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+          "page_start": 14,
+          "page_end": 15,
+          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+        },
+        {
+          "section_id": "sec_030",
+          "section_title": "9.9.1 What coffee machines have to be tested and when?",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+        },
+        {
+          "section_id": "sec_031",
+          "section_title": "9.9.2 General",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.2 General... (p.15-15)"
+        },
+        {
+          "section_id": "sec_032",
+          "section_title": "Description",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Description... (p.15-15)"
+        },
+        {
           "section_id": "sec_033",
           "section_title": "Test equipment",
           "page_start": 15,
@@ -2499,6 +2468,174 @@
       ]
     },
     {
+      "type": "AcceptanceCriterion",
+      "name": "Permissible ground resistance",
+      "id": "ns:AcceptanceCriterion/permissible_ground_resistance",
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "section_title": "Description",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Description... (p.12-12)"
+        },
+        {
+          "section_id": "sec_026",
+          "section_title": "Test equipment",
+          "page_start": 12,
+          "page_end": 13,
+          "source_text": "Section: Test equipment... (p.12-13)"
+        },
+        {
+          "section_id": "sec_027",
+          "section_title": "9.8.3 Test sequence",
+          "page_start": 13,
+          "page_end": 14,
+          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+        },
+        {
+          "section_id": "sec_028",
+          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+          "page_start": 14,
+          "page_end": 15,
+          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+        },
+        {
+          "section_id": "sec_030",
+          "section_title": "9.9.1 What coffee machines have to be tested and when?",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+        },
+        {
+          "section_id": "sec_031",
+          "section_title": "9.9.2 General",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.2 General... (p.15-15)"
+        },
+        {
+          "section_id": "sec_032",
+          "section_title": "Description",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Description... (p.15-15)"
+        }
+      ]
+    },
+    {
+      "type": "NormativeReference",
+      "name": "EN/IEC 603351",
+      "id": "ns:NormativeReference/eniec_603351",
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "section_title": "Description",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Description... (p.12-12)"
+        },
+        {
+          "section_id": "sec_026",
+          "section_title": "Test equipment",
+          "page_start": 12,
+          "page_end": 13,
+          "source_text": "Section: Test equipment... (p.12-13)"
+        },
+        {
+          "section_id": "sec_027",
+          "section_title": "9.8.3 Test sequence",
+          "page_start": 13,
+          "page_end": 14,
+          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+        },
+        {
+          "section_id": "sec_028",
+          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+          "page_start": 14,
+          "page_end": 15,
+          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+        },
+        {
+          "section_id": "sec_030",
+          "section_title": "9.9.1 What coffee machines have to be tested and when?",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+        },
+        {
+          "section_id": "sec_031",
+          "section_title": "9.9.2 General",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.2 General... (p.15-15)"
+        },
+        {
+          "section_id": "sec_032",
+          "section_title": "Description",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Description... (p.15-15)"
+        }
+      ]
+    },
+    {
+      "type": "NormativeReference",
+      "name": "DIN VDE 0701",
+      "id": "ns:NormativeReference/din_vde_0701",
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "section_title": "Description",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Description... (p.12-12)"
+        },
+        {
+          "section_id": "sec_026",
+          "section_title": "Test equipment",
+          "page_start": 12,
+          "page_end": 13,
+          "source_text": "Section: Test equipment... (p.12-13)"
+        },
+        {
+          "section_id": "sec_027",
+          "section_title": "9.8.3 Test sequence",
+          "page_start": 13,
+          "page_end": 14,
+          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+        },
+        {
+          "section_id": "sec_028",
+          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+          "page_start": 14,
+          "page_end": 15,
+          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+        },
+        {
+          "section_id": "sec_030",
+          "section_title": "9.9.1 What coffee machines have to be tested and when?",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+        },
+        {
+          "section_id": "sec_031",
+          "section_title": "9.9.2 General",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.2 General... (p.15-15)"
+        },
+        {
+          "section_id": "sec_032",
+          "section_title": "Description",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Description... (p.15-15)"
+        }
+      ]
+    },
+    {
       "type": "Measurement",
       "name": "insulation resistance",
       "id": "ns:Measurement/insulation_resistance",
@@ -2508,6 +2645,28 @@
       "max_value": null,
       "tolerance": null,
       "unit_raw": "Ohm",
+      "spans": [
+        {
+          "section_id": "sec_033",
+          "section_title": "Test equipment",
+          "page_start": 15,
+          "page_end": 16,
+          "source_text": "Section: Test equipment... (p.15-16)"
+        },
+        {
+          "section_id": "sec_034",
+          "section_title": "9.9.3 Test sequence",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: 9.9.3 Test sequence... (p.16-17)"
+        }
+      ]
+    },
+    {
+      "type": "TestCase",
+      "name": "insulation test",
+      "id": "ns:TestCase/insulation_test",
+      "confidence": 1.0,
       "spans": [
         {
           "section_id": "sec_033",
@@ -3021,26 +3180,26 @@
     },
     {
       "type": "requires",
-      "from_ref": "ns:Measurement/pressure_measurement",
-      "to_ref": "ns:Equipment/pressure_gauge_adapter",
-      "confidence": 1.0
-    },
-    {
-      "type": "requires",
-      "from_ref": "ns:Measurement/water_measurement",
-      "to_ref": "ns:Equipment/pressure_gauge_adapter",
-      "confidence": 1.0
-    },
-    {
-      "type": "validatedBy",
-      "from_ref": "ns:Measurement/pressure_measurement",
+      "from_ref": "ns:Equipment/pressure_gauge_adapter",
       "to_ref": "ns:Equipment/connecting_unit",
       "confidence": 1.0
     },
     {
-      "type": "validatedBy",
-      "from_ref": "ns:Measurement/pressure_measurement",
+      "type": "requires",
+      "from_ref": "ns:Equipment/pressure_gauge_adapter",
       "to_ref": "ns:Equipment/fixation_unit",
+      "confidence": 1.0
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:Measurement/pressure",
+      "to_ref": "ns:Equipment/pressure_gauge_adapter",
+      "confidence": 1.0
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:Measurement/water_volume",
+      "to_ref": "ns:Equipment/pressure_gauge_adapter",
       "confidence": 1.0
     },
     {
@@ -3056,6 +3215,12 @@
       "confidence": 1.0
     },
     {
+      "type": "requires",
+      "from_ref": "ns:TestCase/coffee_temperature_measurement",
+      "to_ref": "ns:Equipment/coffee_machine",
+      "confidence": 0.9
+    },
+    {
       "type": "validatedBy",
       "from_ref": "ns:TestCase/coffee_temperature_measurement",
       "to_ref": "ns:Measurement/coffee_temperature",
@@ -3068,52 +3233,46 @@
       "confidence": 0.9
     },
     {
+      "type": "constrainedBy",
+      "from_ref": "ns:Measurement/coffee_temperature",
+      "to_ref": "ns:AcceptanceCriterion/ntc_resistance_range",
+      "confidence": 0.9
+    },
+    {
       "type": "refersTo",
       "from_ref": "ns:SafetyNotice/ntc_temperature_sensor_handling",
-      "to_ref": "ns:Equipment/coffee_machine",
-      "confidence": 0.9
-    },
-    {
-      "type": "constrainedBy",
-      "from_ref": "ns:SafetyNotice/ntc_temperature_sensor_handling",
       "to_ref": "ns:NormativeReference/eniec_60335_1",
       "confidence": 0.9
     },
     {
-      "type": "requires",
-      "from_ref": "ns:TestCase/protective_earth_continuity_test",
-      "to_ref": "ns:Equipment/coffee_machine",
-      "confidence": 1.0
-    },
-    {
       "type": "validatedBy",
-      "from_ref": "ns:TestCase/protective_earth_continuity_test",
-      "to_ref": "ns:Measurement/ground_resistance",
-      "confidence": 1.0
-    },
-    {
-      "type": "validatedBy",
-      "from_ref": "ns:TestCase/insulation_test",
-      "to_ref": "ns:Measurement/ground_resistance",
-      "confidence": 1.0
+      "from_ref": "ns:Measurement/protective_earth_continuity_resistance",
+      "to_ref": "ns:Equipment/test_equipment",
+      "confidence": 1
     },
     {
       "type": "constrainedBy",
-      "from_ref": "ns:TestCase/protective_earth_continuity_test",
-      "to_ref": "ns:NormativeReference/eniec_60335_1",
-      "confidence": 1.0
+      "from_ref": "ns:Measurement/protective_earth_continuity_resistance",
+      "to_ref": "ns:AcceptanceCriterion/permissible_ground_resistance",
+      "confidence": 1
     },
     {
-      "type": "constrainedBy",
-      "from_ref": "ns:TestCase/insulation_test",
-      "to_ref": "ns:NormativeReference/eniec_60335_1",
-      "confidence": 1.0
+      "type": "refersTo",
+      "from_ref": "ns:AcceptanceCriterion/permissible_ground_resistance",
+      "to_ref": "ns:Measurement/protective_earth_continuity_resistance",
+      "confidence": 1
     },
     {
-      "type": "constrainedBy",
-      "from_ref": "ns:TestCase/insulation_test",
-      "to_ref": "ns:NormativeReference/din_vde_0701",
-      "confidence": 1.0
+      "type": "refersTo",
+      "from_ref": "ns:NormativeReference/eniec_603351",
+      "to_ref": "ns:Measurement/insulation_test_voltage",
+      "confidence": 1
+    },
+    {
+      "type": "refersTo",
+      "from_ref": "ns:NormativeReference/din_vde_0701",
+      "to_ref": "ns:Measurement/insulation_test_voltage",
+      "confidence": 1
     },
     {
       "type": "requires",
@@ -3141,7 +3300,7 @@
     }
   ],
   "provenance": {
-    "overall_confidence": 0.889,
+    "overall_confidence": 0.853,
     "documents_processed": [
       "5_Test and Validation_Service Manual-130-147.parsed.json"
     ],
@@ -3333,31 +3492,39 @@
     "notes": "Neural extraction for profile testing with provenance tracking and semantic normalization"
   },
   "quality": {
-    "json_valid": true,
-    "entities_count": 79,
+    "json_valid": false,
+    "entities_count": 83,
     "relations_count": 52,
-    "warnings": [],
-    "overall_confidence": 0.889,
-    "avg_entity_confidence": 0.892,
-    "avg_relation_confidence": 0.887,
+    "warnings": [
+      "Entity 0 missing 'confidence'",
+      "Entity 1 missing 'confidence'",
+      "Entity 2 missing 'confidence'",
+      "Entity 3 missing 'confidence'",
+      "Entity 4 missing 'confidence'",
+      "Entity 5 missing 'confidence'",
+      "Entity 6 missing 'confidence'"
+    ],
+    "overall_confidence": 0.853,
+    "avg_entity_confidence": 0.821,
+    "avg_relation_confidence": 0.885,
     "entity_type_distribution": {
-      "TestCase": 27,
-      "SafetyNotice": 7,
-      "Measurement": 17,
-      "AcceptanceCriterion": 11,
+      "TestCase": 26,
+      "SafetyNotice": 8,
+      "Measurement": 18,
+      "AcceptanceCriterion": 13,
       "CrossReference": 3,
       "ApplicabilityClause": 7,
       "Equipment": 5,
-      "NormativeReference": 2
+      "NormativeReference": 3
     },
     "relation_type_distribution": {
-      "validatedBy": 18,
-      "constrainedBy": 15,
-      "refersTo": 7,
+      "validatedBy": 17,
+      "constrainedBy": 13,
+      "refersTo": 10,
       "appliesTo": 8,
       "requires": 4
     },
     "profile": "testing",
-    "generated_at": "2025-11-05T13:33:09.239582+00:00"
+    "generated_at": "2025-11-05T13:44:31.161674+00:00"
   }
 }

@@ -1473,7 +1473,7 @@
       {
         "id": "CT_13",
         "type": "ComponentType",
-        "name": "Core units",
+        "name": "Water tank",
         "confidence": 0.9,
         "spans": [
           {
@@ -1586,7 +1586,7 @@
       {
         "id": "CT_14",
         "type": "ComponentType",
-        "name": "Water tank",
+        "name": "Water tank cover",
         "confidence": 0.9,
         "spans": [
           {
@@ -1699,7 +1699,7 @@
       {
         "id": "CT_15",
         "type": "ComponentType",
-        "name": "Water tank cover",
+        "name": "Platform",
         "confidence": 0.9,
         "spans": [
           {
@@ -1812,7 +1812,7 @@
       {
         "id": "CT_16",
         "type": "ComponentType",
-        "name": "Platform",
+        "name": "Flow meter",
         "confidence": 0.9,
         "spans": [
           {
@@ -1925,7 +1925,7 @@
       {
         "id": "CT_17",
         "type": "ComponentType",
-        "name": "Flow meter",
+        "name": "Pump",
         "confidence": 0.9,
         "spans": [
           {
@@ -2038,7 +2038,7 @@
       {
         "id": "CT_18",
         "type": "ComponentType",
-        "name": "Pump",
+        "name": "Self priming device",
         "confidence": 0.9,
         "spans": [
           {
@@ -2151,7 +2151,7 @@
       {
         "id": "CT_19",
         "type": "ComponentType",
-        "name": "Self priming device",
+        "name": "Thermoblock",
         "confidence": 0.9,
         "spans": [
           {
@@ -2264,7 +2264,7 @@
       {
         "id": "CT_20",
         "type": "ComponentType",
-        "name": "Thermoblock",
+        "name": "Mini brewing unit",
         "confidence": 0.9,
         "spans": [
           {
@@ -2377,119 +2377,6 @@
       {
         "id": "CT_21",
         "type": "ComponentType",
-        "name": "Mini brewing unit",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_3_4_1_aero3_is_part_of_the",
-            "section_title": "AERO3 is part of the",
-            "page_start": 7,
-            "page_end": 8,
-            "source_text": "Section: AERO3 is part of the... (p.7-8)"
-          },
-          {
-            "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
-            "section_title": "Citiz service manual  16 MAIN COMPONENTS",
-            "page_start": 7,
-            "page_end": 8,
-            "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
-          },
-          {
-            "section_id": "sec_3_5",
-            "section_title": "3.5 Overview ­ model Citiz & Co",
-            "page_start": 8,
-            "page_end": 9,
-            "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
-          },
-          {
-            "section_id": "sec_3_6_1",
-            "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
-            "page_start": 9,
-            "page_end": 10,
-            "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
-          },
-          {
-            "section_id": "sec_3_6_1_legend",
-            "section_title": "Legend",
-            "page_start": 9,
-            "page_end": 10,
-            "source_text": "Section: Legend... (p.9-10)"
-          },
-          {
-            "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
-            "section_title": "Citiz service manual  18 MAIN COMPONENTS",
-            "page_start": 9,
-            "page_end": 10,
-            "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
-          },
-          {
-            "section_id": "sec_3_6_2",
-            "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
-            "page_start": 10,
-            "page_end": 11,
-            "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
-          },
-          {
-            "section_id": "sec_3_6_3",
-            "section_title": "3.6.3 Water circuit of model Citiz & Co",
-            "page_start": 11,
-            "page_end": 12,
-            "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
-          },
-          {
-            "section_id": "sec_4_1_1_nespresso",
-            "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
-            "page_start": 12,
-            "page_end": 15,
-            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
-          },
-          {
-            "section_id": "sec_4_1_1_nespresso_this_overview_shows",
-            "section_title": "This overview shows",
-            "page_start": 12,
-            "page_end": 15,
-            "source_text": "Section: This overview shows... (p.12-15)"
-          },
-          {
-            "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
-            "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
-            "page_start": 12,
-            "page_end": 15,
-            "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
-          },
-          {
-            "section_id": "sec_4_1_1_delonghi",
-            "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
-            "page_start": 12,
-            "page_end": 15,
-            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
-          },
-          {
-            "section_id": "sec_4_1_1_koenig",
-            "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
-            "page_start": 12,
-            "page_end": 15,
-            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
-          },
-          {
-            "section_id": "sec_4_1_1_krups",
-            "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
-            "page_start": 12,
-            "page_end": 15,
-            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
-          },
-          {
-            "section_id": "sec_4_1_1_magimix",
-            "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
-            "page_start": 12,
-            "page_end": 15,
-            "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
-          }
-        ]
-      },
-      {
-        "id": "CT_22",
-        "type": "ComponentType",
         "name": "Capsule container",
         "confidence": 0.9,
         "spans": [
@@ -2601,7 +2488,7 @@
         ]
       },
       {
-        "id": "CT_23",
+        "id": "CT_22",
         "type": "ComponentType",
         "name": "Waste water container",
         "confidence": 0.9,
@@ -3232,5 +3119,5 @@
       "char_end": 7943
     }
   ],
-  "timestamp": "2025-11-05T13:28:37.906366+00:00"
+  "timestamp": "2025-11-05T13:39:46.241242+00:00"
 }

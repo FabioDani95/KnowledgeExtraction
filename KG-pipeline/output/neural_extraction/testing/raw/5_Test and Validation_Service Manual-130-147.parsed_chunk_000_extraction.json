@@ -153,7 +153,7 @@
       },
       {
         "type": "Measurement",
-        "name": "pressure measurement",
+        "name": "pressure",
         "id": "M_01",
         "confidence": 1.0,
         "nominal_value": 12,
@@ -205,7 +205,7 @@
       },
       {
         "type": "Measurement",
-        "name": "water measurement",
+        "name": "water volume",
         "id": "M_02",
         "confidence": 1.0,
         "min_value": 60,
@@ -258,7 +258,7 @@
       },
       {
         "type": "SafetyNotice",
-        "name": "dangerous mains voltage",
+        "name": "Dangerous mains voltage",
         "id": "SN_01",
         "confidence": 1.0,
         "spans": [
@@ -308,7 +308,7 @@
       },
       {
         "type": "SafetyNotice",
-        "name": "dangerous hot parts",
+        "name": "Dangerous hot parts",
         "id": "SN_02",
         "confidence": 1.0,
         "spans": [
@@ -360,26 +360,26 @@
     "relations": [
       {
         "type": "requires",
-        "from_ref": "M_01",
-        "to_ref": "EQ_01",
-        "confidence": 1.0
-      },
-      {
-        "type": "requires",
-        "from_ref": "M_02",
-        "to_ref": "EQ_01",
-        "confidence": 1.0
-      },
-      {
-        "type": "validatedBy",
-        "from_ref": "M_01",
+        "from_ref": "EQ_01",
         "to_ref": "EQ_02",
         "confidence": 1.0
       },
       {
+        "type": "requires",
+        "from_ref": "EQ_01",
+        "to_ref": "EQ_03",
+        "confidence": 1.0
+      },
+      {
         "type": "validatedBy",
         "from_ref": "M_01",
-        "to_ref": "EQ_03",
+        "to_ref": "EQ_01",
+        "confidence": 1.0
+      },
+      {
+        "type": "validatedBy",
+        "from_ref": "M_02",
+        "to_ref": "EQ_01",
         "confidence": 1.0
       },
       {
@@ -452,5 +452,5 @@
       "char_end": 3539
     }
   ],
-  "timestamp": "2025-11-05T13:32:34.514094+00:00"
+  "timestamp": "2025-11-05T13:43:49.847445+00:00"
 }

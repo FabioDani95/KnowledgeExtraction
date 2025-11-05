@@ -665,7 +665,7 @@
       },
       {
         "type": "hasSpec",
-        "from_ref": "PR_01",
+        "from_ref": "PR_02",
         "to_ref": "PS_02",
         "confidence": 0.9
       },
@@ -678,6 +678,12 @@
       {
         "type": "hasRatingPlate",
         "from_ref": "PR_01",
+        "to_ref": "RP_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasRatingPlate",
+        "from_ref": "PR_02",
         "to_ref": "RP_01",
         "confidence": 0.9
       }
@@ -802,5 +808,5 @@
       "char_end": 11793
     }
   ],
-  "timestamp": "2025-11-05T13:28:51.658250+00:00"
+  "timestamp": "2025-11-05T13:40:02.557041+00:00"
 }

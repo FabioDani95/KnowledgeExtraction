@@ -47,21 +47,6 @@
         ]
       },
       {
-        "id": "CT_04",
-        "type": "ComponentType",
-        "name": "Core Unit",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_4_2_5",
-            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
-            "page_start": 21,
-            "page_end": 21,
-            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
-          }
-        ]
-      },
-      {
         "id": "PS_01",
         "type": "ParameterSpec",
         "name": "Jug dimensions",
@@ -273,7 +258,7 @@
       },
       {
         "type": "hasSpec",
-        "from_ref": "CT_04",
+        "from_ref": "CT_01",
         "to_ref": "PS_08",
         "confidence": 0.9
       },
@@ -338,5 +323,5 @@
       "char_end": 19903
     }
   ],
-  "timestamp": "2025-11-05T13:30:26.986035+00:00"
+  "timestamp": "2025-11-05T13:41:50.858660+00:00"
 }

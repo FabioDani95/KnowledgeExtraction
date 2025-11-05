@@ -3,15 +3,15 @@
   "datasource_code": "SYMBOLIC_MERGE",
   "merge_info": {
     "source_files": [
-      "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/output/neural_extraction/Partial_KG/operation_modes_kg.json",
-      "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/output/neural_extraction/Partial_KG/product_technical_kg.json",
-      "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/output/neural_extraction/Partial_KG/testing_kg.json",
-      "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/output/neural_extraction/Partial_KG/troubleshooting_kg.json"
+      "output/neural_extraction/Partial_KG/operation_modes_kg.json",
+      "output/neural_extraction/Partial_KG/product_technical_kg.json",
+      "output/neural_extraction/Partial_KG/testing_kg.json",
+      "output/neural_extraction/Partial_KG/troubleshooting_kg.json"
     ],
     "priority_sources": [
       "NEURAL_EXTRACTION"
     ],
-    "merged_at": "2025-11-05T13:33:38.875869Z"
+    "merged_at": "2025-11-05T13:44:31.323920Z"
   },
   "entities": [
     {
@@ -730,6 +730,48 @@
           "page_start": 6,
           "page_end": 6,
           "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+        },
+        {
+          "section_id": "sec_procedure_p12",
+          "section_title": "Citiz service manual  42 MAINTENANCE",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Citiz service manual  42 MAINTENANCE... (p.12-12)"
+        },
+        {
+          "section_id": "sec_procedure_p13",
+          "section_title": "Citiz service manual  43 MAINTENANCE",
+          "page_start": 13,
+          "page_end": 13,
+          "source_text": "Section: Citiz service manual  43 MAINTENANCE... (p.13-13)"
+        },
+        {
+          "section_id": "sec_procedure_p14",
+          "section_title": "Citiz service manual  44 MAINTENANCE",
+          "page_start": 14,
+          "page_end": 14,
+          "source_text": "Section: Citiz service manual  44 MAINTENANCE... (p.14-14)"
+        },
+        {
+          "section_id": "sec_procedure_p15",
+          "section_title": "Citiz service manual  45 MAINTENANCE",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Citiz service manual  45 MAINTENANCE... (p.15-15)"
+        },
+        {
+          "section_id": "sec_procedure_p16",
+          "section_title": "Citiz service manual  46 MAINTENANCE",
+          "page_start": 16,
+          "page_end": 16,
+          "source_text": "Section: Citiz service manual  46 MAINTENANCE... (p.16-16)"
+        },
+        {
+          "section_id": "sec_procedure_p17",
+          "section_title": "Citiz service manual  47 MAINTENANCE",
+          "page_start": 17,
+          "page_end": 17,
+          "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
         }
       ]
     },
@@ -801,8 +843,30 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Reset programmed volumes",
-      "id": "ns:Step/reset_programmed_volumes",
+      "name": "Reset programmed volumes to factory setting",
+      "id": "ns:Step/reset_programmed_volumes_to_factory_setting",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_mode_table_p5",
+          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+          "page_start": 5,
+          "page_end": 5,
+          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+        },
+        {
+          "section_id": "sec_procedure_p6",
+          "section_title": "Citiz service manual  36 OPERATION",
+          "page_start": 6,
+          "page_end": 6,
+          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+        }
+      ]
+    },
+    {
+      "type": "ProcessStep",
+      "name": "Indicate resetting mode for 3s",
+      "id": "ns:Step/indicate_resetting_mode_for_3s",
       "confidence": 1.0,
       "spans": [
         {
@@ -867,8 +931,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Indicate failure with coffee button LED",
-      "id": "ns:Step/indicate_failure_with_coffee_button_led",
+      "name": "Press any coffee button to activate ready mode",
+      "id": "ns:Step/press_any_coffee_button_to_activate_ready_mode",
       "confidence": 1.0,
       "spans": [
         {
@@ -889,8 +953,96 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Switch thermoblock off",
-      "id": "ns:Step/switch_thermoblock_off",
+      "name": "Switch off thermoblock",
+      "id": "ns:Step/switch_off_thermoblock",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_mode_table_p5",
+          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+          "page_start": 5,
+          "page_end": 5,
+          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+        },
+        {
+          "section_id": "sec_procedure_p6",
+          "section_title": "Citiz service manual  36 OPERATION",
+          "page_start": 6,
+          "page_end": 6,
+          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+        }
+      ]
+    },
+    {
+      "type": "ProcessStep",
+      "name": "Switch off the machine",
+      "id": "ns:Step/switch_off_the_machine",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_mode_table_p5",
+          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+          "page_start": 5,
+          "page_end": 5,
+          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+        },
+        {
+          "section_id": "sec_procedure_p6",
+          "section_title": "Citiz service manual  36 OPERATION",
+          "page_start": 6,
+          "page_end": 6,
+          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+        }
+      ]
+    },
+    {
+      "type": "ProcessStep",
+      "name": "Prepare coffee as usual",
+      "id": "ns:Step/prepare_coffee_as_usual",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_mode_table_p5",
+          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+          "page_start": 5,
+          "page_end": 5,
+          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+        },
+        {
+          "section_id": "sec_procedure_p6",
+          "section_title": "Citiz service manual  36 OPERATION",
+          "page_start": 6,
+          "page_end": 6,
+          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+        }
+      ]
+    },
+    {
+      "type": "ProcessStep",
+      "name": "Keep coffee button pressed for 3 seconds",
+      "id": "ns:Step/keep_coffee_button_pressed_for_3_seconds",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_mode_table_p5",
+          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+          "page_start": 5,
+          "page_end": 5,
+          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+        },
+        {
+          "section_id": "sec_procedure_p6",
+          "section_title": "Citiz service manual  36 OPERATION",
+          "page_start": 6,
+          "page_end": 6,
+          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+        }
+      ]
+    },
+    {
+      "type": "ProcessStep",
+      "name": "Release button when desired fill level is reached",
+      "id": "ns:Step/release_button_when_desired_fill_level_is_reached",
       "confidence": 1.0,
       "spans": [
         {
@@ -1040,49 +1192,6 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Milk frother of model Citiz & milk",
-      "id": "ns:Step/milk_frother_of_model_citiz_milk",
-      "confidence": 1.0,
-      "spans": [
-        {
-          "section_id": "sec_procedure_p7",
-          "section_title": "Citiz service manual  37 OPERATION",
-          "page_start": 7,
-          "page_end": 7,
-          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
-        },
-        {
-          "section_id": "sec_procedure_p8",
-          "section_title": "Citiz service manual  38 MAINTENANCE",
-          "page_start": 8,
-          "page_end": 8,
-          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
-        },
-        {
-          "section_id": "sec_procedure_p9",
-          "section_title": "Citiz service manual  39 MAINTENANCE",
-          "page_start": 9,
-          "page_end": 9,
-          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
-        },
-        {
-          "section_id": "sec_procedure_p10",
-          "section_title": "Citiz service manual  40 MAINTENANCE",
-          "page_start": 10,
-          "page_end": 10,
-          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
-        },
-        {
-          "section_id": "sec_generic_p11",
-          "section_title": "Operational content (page 11)",
-          "page_start": 11,
-          "page_end": 11,
-          "source_text": "Section: Operational content (page 11)... (p.11-11)"
-        }
-      ]
-    },
-    {
-      "type": "ProcessStep",
       "name": "Descaling",
       "id": "ns:Step/descaling",
       "confidence": 1.0,
@@ -1125,9 +1234,52 @@
       ]
     },
     {
-      "type": "State",
-      "name": "Coffee machine off",
-      "id": "ns:State/coffee_machine_off",
+      "type": "MachineMode",
+      "name": "Citiz & Co",
+      "id": "ns:Mode/citiz_co",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_procedure_p7",
+          "section_title": "Citiz service manual  37 OPERATION",
+          "page_start": 7,
+          "page_end": 7,
+          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+        },
+        {
+          "section_id": "sec_procedure_p8",
+          "section_title": "Citiz service manual  38 MAINTENANCE",
+          "page_start": 8,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+        },
+        {
+          "section_id": "sec_procedure_p9",
+          "section_title": "Citiz service manual  39 MAINTENANCE",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+        },
+        {
+          "section_id": "sec_procedure_p10",
+          "section_title": "Citiz service manual  40 MAINTENANCE",
+          "page_start": 10,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+        },
+        {
+          "section_id": "sec_generic_p11",
+          "section_title": "Operational content (page 11)",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Operational content (page 11)... (p.11-11)"
+        }
+      ]
+    },
+    {
+      "type": "MachineMode",
+      "name": "Citiz & milk",
+      "id": "ns:Mode/citiz_milk",
       "confidence": 1.0,
       "spans": [
         {
@@ -1169,8 +1321,51 @@
     },
     {
       "type": "State",
-      "name": "Coffee machine on",
-      "id": "ns:State/coffee_machine_on",
+      "name": "Machine off",
+      "id": "ns:State/machine_off",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_procedure_p7",
+          "section_title": "Citiz service manual  37 OPERATION",
+          "page_start": 7,
+          "page_end": 7,
+          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+        },
+        {
+          "section_id": "sec_procedure_p8",
+          "section_title": "Citiz service manual  38 MAINTENANCE",
+          "page_start": 8,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+        },
+        {
+          "section_id": "sec_procedure_p9",
+          "section_title": "Citiz service manual  39 MAINTENANCE",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+        },
+        {
+          "section_id": "sec_procedure_p10",
+          "section_title": "Citiz service manual  40 MAINTENANCE",
+          "page_start": 10,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+        },
+        {
+          "section_id": "sec_generic_p11",
+          "section_title": "Operational content (page 11)",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Operational content (page 11)... (p.11-11)"
+        }
+      ]
+    },
+    {
+      "type": "State",
+      "name": "Machine on",
+      "id": "ns:State/machine_on",
       "confidence": 1.0,
       "spans": [
         {
@@ -1212,8 +1407,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Fill water tank with 0.1l decalcifier and 0.5l water",
-      "id": "ns:Step/fill_water_tank_with_01l_decalcifier_and_05l_water",
+      "name": "Fill water tank with decalcifier and water",
+      "id": "ns:Step/fill_water_tank_with_decalcifier_and_water",
       "confidence": 1.0,
       "spans": [
         {
@@ -1262,8 +1457,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Press both coffee buttons simultaneously for at least 3sec",
-      "id": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
+      "name": "Press both coffee buttons simultaneously",
+      "id": "ns:Step/press_both_coffee_buttons_simultaneously",
       "confidence": 1.0,
       "spans": [
         {
@@ -1312,8 +1507,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Press any button to start pump",
-      "id": "ns:Step/press_any_button_to_start_pump",
+      "name": "Rinse and clean water tank",
+      "id": "ns:Step/rinse_and_clean_water_tank",
       "confidence": 1.0,
       "spans": [
         {
@@ -1362,58 +1557,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Rinse and clean water tank thoroughly",
-      "id": "ns:Step/rinse_and_clean_water_tank_thoroughly",
-      "confidence": 1.0,
-      "spans": [
-        {
-          "section_id": "sec_procedure_p12",
-          "section_title": "Citiz service manual  42 MAINTENANCE",
-          "page_start": 12,
-          "page_end": 12,
-          "source_text": "Section: Citiz service manual  42 MAINTENANCE... (p.12-12)"
-        },
-        {
-          "section_id": "sec_procedure_p13",
-          "section_title": "Citiz service manual  43 MAINTENANCE",
-          "page_start": 13,
-          "page_end": 13,
-          "source_text": "Section: Citiz service manual  43 MAINTENANCE... (p.13-13)"
-        },
-        {
-          "section_id": "sec_procedure_p14",
-          "section_title": "Citiz service manual  44 MAINTENANCE",
-          "page_start": 14,
-          "page_end": 14,
-          "source_text": "Section: Citiz service manual  44 MAINTENANCE... (p.14-14)"
-        },
-        {
-          "section_id": "sec_procedure_p15",
-          "section_title": "Citiz service manual  45 MAINTENANCE",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: Citiz service manual  45 MAINTENANCE... (p.15-15)"
-        },
-        {
-          "section_id": "sec_procedure_p16",
-          "section_title": "Citiz service manual  46 MAINTENANCE",
-          "page_start": 16,
-          "page_end": 16,
-          "source_text": "Section: Citiz service manual  46 MAINTENANCE... (p.16-16)"
-        },
-        {
-          "section_id": "sec_procedure_p17",
-          "section_title": "Citiz service manual  47 MAINTENANCE",
-          "page_start": 17,
-          "page_end": 17,
-          "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
-        }
-      ]
-    },
-    {
-      "type": "ProcessStep",
-      "name": "Eject capsules or check if capsules are removed",
-      "id": "ns:Step/eject_capsules_or_check_if_capsules_are_removed",
+      "name": "Eject capsules",
+      "id": "ns:Step/eject_capsules",
       "confidence": 1.0,
       "spans": [
         {
@@ -2970,11 +3115,11 @@
       ]
     },
     {
-      "id": "ns:PS/milk_level",
+      "id": "ns:PS/milk_levels",
       "type": "ParameterSpec",
-      "name": "Milk level",
+      "name": "Milk levels",
       "nominal_value": 2,
-      "unit_raw": "L",
+      "unit_raw": "levels",
       "confidence": 0.85,
       "spans": [
         {
@@ -3053,140 +3198,6 @@
           "page_start": 7,
           "page_end": 8,
           "source_text": "Section: 3.4.1 Overview ­ milk frother AERO3... (p.7-8)"
-        }
-      ]
-    },
-    {
-      "id": "ns:Unit/l",
-      "type": "Unit",
-      "name": "L",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_0",
-          "section_title": "Preface",
-          "page_start": 2,
-          "page_end": 12,
-          "source_text": "Section: Preface... (p.2-12)"
-        },
-        {
-          "section_id": "sec_3_1_1",
-          "section_title": "3.1.1 Interior view ­ core unit, D­range",
-          "page_start": 2,
-          "page_end": 3,
-          "source_text": "Section: 3.1.1 Interior view ­ core unit, D­range... (p.2-3)"
-        },
-        {
-          "section_id": "sec_3_2",
-          "section_title": "3.2 Overview ­ core unit, C­range",
-          "page_start": 3,
-          "page_end": 5,
-          "source_text": "Section: 3.2 Overview ­ core unit, C­range... (p.3-5)"
-        },
-        {
-          "section_id": "sec_3_2_1",
-          "section_title": "3.2.1 Interior view ­ core unit, C­range",
-          "page_start": 4,
-          "page_end": 5,
-          "source_text": "Section: 3.2.1 Interior view ­ core unit, C­range... (p.4-5)"
-        },
-        {
-          "section_id": "sec_3_3",
-          "section_title": "3.3 Overview ­ model Citiz",
-          "page_start": 5,
-          "page_end": 6,
-          "source_text": "Section: 3.3 Overview ­ model Citiz... (p.5-6)"
-        },
-        {
-          "section_id": "sec_3_3_the_core_units_of",
-          "section_title": "The core units of",
-          "page_start": 5,
-          "page_end": 6,
-          "source_text": "Section: The core units of... (p.5-6)"
-        },
-        {
-          "section_id": "sec_3_3_citiz_service_manual_14_main_components",
-          "section_title": "Citiz service manual  14 MAIN COMPONENTS",
-          "page_start": 5,
-          "page_end": 6,
-          "source_text": "Section: Citiz service manual  14 MAIN COMPONENTS... (p.5-6)"
-        },
-        {
-          "section_id": "sec_3_4",
-          "section_title": "3.4 Overview ­ model Citiz & milk",
-          "page_start": 6,
-          "page_end": 8,
-          "source_text": "Section: 3.4 Overview ­ model Citiz & milk... (p.6-8)"
-        },
-        {
-          "section_id": "sec_3_4_the_core_units_of",
-          "section_title": "The core units of",
-          "page_start": 6,
-          "page_end": 8,
-          "source_text": "Section: The core units of... (p.6-8)"
-        },
-        {
-          "section_id": "sec_3_4_citiz_service_manual_15_main_components",
-          "section_title": "Citiz service manual  15 MAIN COMPONENTS",
-          "page_start": 6,
-          "page_end": 8,
-          "source_text": "Section: Citiz service manual  15 MAIN COMPONENTS... (p.6-8)"
-        },
-        {
-          "section_id": "sec_3_4_1",
-          "section_title": "3.4.1 Overview ­ milk frother AERO3",
-          "page_start": 7,
-          "page_end": 8,
-          "source_text": "Section: 3.4.1 Overview ­ milk frother AERO3... (p.7-8)"
-        },
-        {
-          "section_id": "sec_4_2_1_heating_up",
-          "section_title": "Heating up",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Heating up... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
-          "section_title": "Citiz service manual  26 TECHNICAL DATA",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_pump_pressure",
-          "section_title": "Pump pressure",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Pump pressure... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_water_tank",
-          "section_title": "Water tank",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Water tank... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_drip_tray",
-          "section_title": "Drip tray",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Drip tray... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_capsule_container",
-          "section_title": "Capsule container",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Capsule container... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_temperatures",
-          "section_title": "Temperatures",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Temperatures... (p.17-21)"
         }
       ]
     },
@@ -3300,6 +3311,55 @@
           "page_start": 12,
           "page_end": 15,
           "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_2_1_heating_up",
+          "section_title": "Heating up",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Heating up... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+          "section_title": "Citiz service manual  26 TECHNICAL DATA",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_pump_pressure",
+          "section_title": "Pump pressure",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Pump pressure... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_water_tank",
+          "section_title": "Water tank",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Water tank... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_drip_tray",
+          "section_title": "Drip tray",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Drip tray... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capsule_container",
+          "section_title": "Capsule container",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capsule container... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperatures",
+          "section_title": "Temperatures",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperatures... (p.17-21)"
         }
       ]
     },
@@ -4444,119 +4504,6 @@
       "id": "ns:ComponentType/power_cord",
       "type": "ComponentType",
       "name": "Power cord",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_3_4_1_aero3_is_part_of_the",
-          "section_title": "AERO3 is part of the",
-          "page_start": 7,
-          "page_end": 8,
-          "source_text": "Section: AERO3 is part of the... (p.7-8)"
-        },
-        {
-          "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
-          "section_title": "Citiz service manual  16 MAIN COMPONENTS",
-          "page_start": 7,
-          "page_end": 8,
-          "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
-        },
-        {
-          "section_id": "sec_3_5",
-          "section_title": "3.5 Overview ­ model Citiz & Co",
-          "page_start": 8,
-          "page_end": 9,
-          "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
-        },
-        {
-          "section_id": "sec_3_6_1",
-          "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
-          "page_start": 9,
-          "page_end": 10,
-          "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
-        },
-        {
-          "section_id": "sec_3_6_1_legend",
-          "section_title": "Legend",
-          "page_start": 9,
-          "page_end": 10,
-          "source_text": "Section: Legend... (p.9-10)"
-        },
-        {
-          "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
-          "section_title": "Citiz service manual  18 MAIN COMPONENTS",
-          "page_start": 9,
-          "page_end": 10,
-          "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
-        },
-        {
-          "section_id": "sec_3_6_2",
-          "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
-          "page_start": 10,
-          "page_end": 11,
-          "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
-        },
-        {
-          "section_id": "sec_3_6_3",
-          "section_title": "3.6.3 Water circuit of model Citiz & Co",
-          "page_start": 11,
-          "page_end": 12,
-          "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
-        },
-        {
-          "section_id": "sec_4_1_1_nespresso",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_nespresso_this_overview_shows",
-          "section_title": "This overview shows",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: This overview shows... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
-          "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_delonghi",
-          "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_koenig",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_krups",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_magimix",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
-        }
-      ]
-    },
-    {
-      "id": "ns:ComponentType/core_units",
-      "type": "ComponentType",
-      "name": "Core units",
       "confidence": 0.9,
       "spans": [
         {
@@ -6721,6 +6668,240 @@
       ]
     },
     {
+      "id": "ns:Product/citiz_co",
+      "type": "Product",
+      "name": "Citiz & Co",
+      "confidence": 0.92,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_heating_up",
+          "section_title": "Heating up",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Heating up... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+          "section_title": "Citiz service manual  26 TECHNICAL DATA",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_pump_pressure",
+          "section_title": "Pump pressure",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Pump pressure... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_water_tank",
+          "section_title": "Water tank",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Water tank... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_drip_tray",
+          "section_title": "Drip tray",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Drip tray... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capsule_container",
+          "section_title": "Capsule container",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capsule container... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperatures",
+          "section_title": "Temperatures",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperatures... (p.17-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/heating_energy_for_citiz",
+      "type": "ParameterSpec",
+      "name": "Heating energy for Citiz",
+      "nominal_value": 7.6,
+      "unit_raw": "Wh",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_heating_up",
+          "section_title": "Heating up",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Heating up... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+          "section_title": "Citiz service manual  26 TECHNICAL DATA",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_pump_pressure",
+          "section_title": "Pump pressure",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Pump pressure... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_water_tank",
+          "section_title": "Water tank",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Water tank... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_drip_tray",
+          "section_title": "Drip tray",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Drip tray... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capsule_container",
+          "section_title": "Capsule container",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capsule container... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperatures",
+          "section_title": "Temperatures",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperatures... (p.17-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/heating_energy_for_citiz_milk",
+      "type": "ParameterSpec",
+      "name": "Heating energy for Citiz & milk",
+      "nominal_value": 7.6,
+      "unit_raw": "Wh",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_heating_up",
+          "section_title": "Heating up",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Heating up... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+          "section_title": "Citiz service manual  26 TECHNICAL DATA",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_pump_pressure",
+          "section_title": "Pump pressure",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Pump pressure... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_water_tank",
+          "section_title": "Water tank",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Water tank... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_drip_tray",
+          "section_title": "Drip tray",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Drip tray... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capsule_container",
+          "section_title": "Capsule container",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capsule container... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperatures",
+          "section_title": "Temperatures",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperatures... (p.17-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/heating_energy_for_citiz_co",
+      "type": "ParameterSpec",
+      "name": "Heating energy for Citiz & Co",
+      "nominal_value": 14.9,
+      "unit_raw": "Wh",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_heating_up",
+          "section_title": "Heating up",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Heating up... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+          "section_title": "Citiz service manual  26 TECHNICAL DATA",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_pump_pressure",
+          "section_title": "Pump pressure",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Pump pressure... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_water_tank",
+          "section_title": "Water tank",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Water tank... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_drip_tray",
+          "section_title": "Drip tray",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Drip tray... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capsule_container",
+          "section_title": "Capsule container",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capsule container... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperatures",
+          "section_title": "Temperatures",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperatures... (p.17-21)"
+        }
+      ]
+    },
+    {
       "id": "ns:PS/heating_energy_for_small_cup",
       "type": "ParameterSpec",
       "name": "Heating energy for small cup",
@@ -6839,9 +7020,9 @@
       ]
     },
     {
-      "id": "ns:PS/standby_operation_energy",
+      "id": "ns:PS/heating_energy_for_standby_operation",
       "type": "ParameterSpec",
-      "name": "Standby operation energy",
+      "name": "Heating energy for standby operation",
       "nominal_value": 0.7,
       "unit_raw": "Wh",
       "confidence": 0.9,
@@ -6957,6 +7138,65 @@
       ]
     },
     {
+      "id": "ns:PS/coffee_preparation_pump_pressure",
+      "type": "ParameterSpec",
+      "name": "Coffee preparation pump pressure",
+      "nominal_value": 9,
+      "unit_raw": "bar",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_heating_up",
+          "section_title": "Heating up",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Heating up... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+          "section_title": "Citiz service manual  26 TECHNICAL DATA",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_pump_pressure",
+          "section_title": "Pump pressure",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Pump pressure... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_water_tank",
+          "section_title": "Water tank",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Water tank... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_drip_tray",
+          "section_title": "Drip tray",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Drip tray... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capsule_container",
+          "section_title": "Capsule container",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capsule container... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperatures",
+          "section_title": "Temperatures",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperatures... (p.17-21)"
+        }
+      ]
+    },
+    {
       "id": "ns:PS/flow_performance",
       "type": "ParameterSpec",
       "name": "Flow performance",
@@ -7016,9 +7256,9 @@
       ]
     },
     {
-      "id": "ns:PS/water_tank_capacity",
+      "id": "ns:PS/water_tank_capacity_for_citiz",
       "type": "ParameterSpec",
-      "name": "Water tank capacity",
+      "name": "Water tank capacity for Citiz",
       "nominal_value": 1.0,
       "unit_raw": "l",
       "confidence": 0.9,
@@ -7075,9 +7315,127 @@
       ]
     },
     {
-      "id": "ns:PS/drip_tray_capacity",
+      "id": "ns:PS/water_tank_capacity_for_citiz_milk",
       "type": "ParameterSpec",
-      "name": "Drip tray capacity",
+      "name": "Water tank capacity for Citiz & milk",
+      "nominal_value": 1.0,
+      "unit_raw": "l",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_heating_up",
+          "section_title": "Heating up",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Heating up... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+          "section_title": "Citiz service manual  26 TECHNICAL DATA",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_pump_pressure",
+          "section_title": "Pump pressure",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Pump pressure... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_water_tank",
+          "section_title": "Water tank",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Water tank... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_drip_tray",
+          "section_title": "Drip tray",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Drip tray... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capsule_container",
+          "section_title": "Capsule container",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capsule container... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperatures",
+          "section_title": "Temperatures",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperatures... (p.17-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/water_tank_capacity_for_citiz_co",
+      "type": "ParameterSpec",
+      "name": "Water tank capacity for Citiz & Co",
+      "nominal_value": 1.4,
+      "unit_raw": "l",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_heating_up",
+          "section_title": "Heating up",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Heating up... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+          "section_title": "Citiz service manual  26 TECHNICAL DATA",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_pump_pressure",
+          "section_title": "Pump pressure",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Pump pressure... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_water_tank",
+          "section_title": "Water tank",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Water tank... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_drip_tray",
+          "section_title": "Drip tray",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Drip tray... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capsule_container",
+          "section_title": "Capsule container",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capsule container... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperatures",
+          "section_title": "Temperatures",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperatures... (p.17-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/drip_tray_capacity_for_citiz",
+      "type": "ParameterSpec",
+      "name": "Drip tray capacity for Citiz",
       "nominal_value": 100,
       "unit_raw": "ml",
       "confidence": 0.9,
@@ -7134,10 +7492,187 @@
       ]
     },
     {
-      "id": "ns:PS/capsule_container_capacity",
+      "id": "ns:PS/drip_tray_capacity_for_citiz_milk",
       "type": "ParameterSpec",
-      "name": "Capsule container capacity",
-      "nominal_value": 9,
+      "name": "Drip tray capacity for Citiz & milk",
+      "nominal_value": 180,
+      "unit_raw": "ml",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_heating_up",
+          "section_title": "Heating up",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Heating up... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+          "section_title": "Citiz service manual  26 TECHNICAL DATA",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_pump_pressure",
+          "section_title": "Pump pressure",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Pump pressure... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_water_tank",
+          "section_title": "Water tank",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Water tank... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_drip_tray",
+          "section_title": "Drip tray",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Drip tray... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capsule_container",
+          "section_title": "Capsule container",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capsule container... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperatures",
+          "section_title": "Temperatures",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperatures... (p.17-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/drip_tray_capacity_for_citiz_co",
+      "type": "ParameterSpec",
+      "name": "Drip tray capacity for Citiz & Co",
+      "nominal_value": 250,
+      "unit_raw": "ml",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_heating_up",
+          "section_title": "Heating up",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Heating up... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+          "section_title": "Citiz service manual  26 TECHNICAL DATA",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_pump_pressure",
+          "section_title": "Pump pressure",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Pump pressure... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_water_tank",
+          "section_title": "Water tank",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Water tank... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_drip_tray",
+          "section_title": "Drip tray",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Drip tray... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capsule_container",
+          "section_title": "Capsule container",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capsule container... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperatures",
+          "section_title": "Temperatures",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperatures... (p.17-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/capsule_container_capacity_for_citiz",
+      "type": "ParameterSpec",
+      "name": "Capsule container capacity for Citiz",
+      "nominal_value": 10,
+      "unit_raw": "capsules",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_heating_up",
+          "section_title": "Heating up",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Heating up... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+          "section_title": "Citiz service manual  26 TECHNICAL DATA",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_pump_pressure",
+          "section_title": "Pump pressure",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Pump pressure... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_water_tank",
+          "section_title": "Water tank",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Water tank... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_drip_tray",
+          "section_title": "Drip tray",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Drip tray... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capsule_container",
+          "section_title": "Capsule container",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capsule container... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperatures",
+          "section_title": "Temperatures",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperatures... (p.17-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/capsule_container_capacity_for_citiz_co",
+      "type": "ParameterSpec",
+      "name": "Capsule container capacity for Citiz & Co",
+      "nominal_value": 10,
       "unit_raw": "capsules",
       "confidence": 0.9,
       "spans": [
@@ -7546,6 +8081,63 @@
       "id": "ns:Unit/mlmin",
       "type": "Unit",
       "name": "ml/min",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_heating_up",
+          "section_title": "Heating up",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Heating up... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+          "section_title": "Citiz service manual  26 TECHNICAL DATA",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_pump_pressure",
+          "section_title": "Pump pressure",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Pump pressure... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_water_tank",
+          "section_title": "Water tank",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Water tank... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_drip_tray",
+          "section_title": "Drip tray",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Drip tray... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capsule_container",
+          "section_title": "Capsule container",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capsule container... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperatures",
+          "section_title": "Temperatures",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperatures... (p.17-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:Unit/l",
+      "type": "Unit",
+      "name": "l",
       "confidence": 0.9,
       "spans": [
         {
@@ -8436,7 +9028,7 @@
     {
       "id": "ns:PS/power_rating_220_240_v",
       "type": "ParameterSpec",
-      "name": "Power rating 220-240 V",
+      "name": "Power rating (220-240 V)",
       "nominal_value": 410,
       "unit_raw": "W",
       "confidence": 0.9,
@@ -9432,21 +10024,6 @@
       ]
     },
     {
-      "id": "ns:ComponentType/core_unit",
-      "type": "ComponentType",
-      "name": "Core Unit",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_4_2_5",
-          "section_title": "4.2.5 Dimensions and weight ­ milk frother",
-          "page_start": 21,
-          "page_end": 21,
-          "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
-        }
-      ]
-    },
-    {
       "id": "ns:PS/jug_dimensions",
       "type": "ParameterSpec",
       "name": "Jug dimensions",
@@ -9856,8 +10433,8 @@
     },
     {
       "type": "RepairAction",
-      "name": "replace milk frother in agreement with customer",
-      "id": "ns:RA/replace_milk_frother_in_agreement_with_customer",
+      "name": "replace milk frother",
+      "id": "ns:RA/replace_milk_frother",
       "confidence": 1,
       "spans": [
         {
@@ -9922,8 +10499,8 @@
     },
     {
       "type": "FailureMode",
-      "name": "coffee machine not switch off automatically",
-      "id": "ns:FM/coffee_machine_not_switch_off_automatically",
+      "name": "milk frother not switch off automatically",
+      "id": "ns:FM/milk_frother_not_switch_off_automatically",
       "confidence": 1,
       "spans": [
         {
@@ -10086,105 +10663,39 @@
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Mode/brewing_mode",
+      "from_ref": "ns:Mode/descaling_mode",
       "to_ref": "ns:State/emptying_evaporating",
       "confidence": 1
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Mode/volume_brewing_mode",
-      "to_ref": "ns:State/emptying_evaporating",
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:State/standby",
       "confidence": 1
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Mode/heat_up_mode",
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:State/resetting",
+      "confidence": 1
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/descaling_mode",
       "to_ref": "ns:State/power_save",
       "confidence": 1
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Mode/heat_up_mode",
+      "from_ref": "ns:Mode/descaling_mode",
       "to_ref": "ns:State/overheat",
       "confidence": 1
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Mode/heat_up_mode",
+      "from_ref": "ns:Mode/descaling_mode",
       "to_ref": "ns:State/power_save_activation",
       "confidence": 1
-    },
-    {
-      "type": "precedes",
-      "from_ref": "ns:Mode/emptying_mode",
-      "to_ref": "ns:Mode/standby_mode",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/emptying_mode",
-      "to_ref": "ns:Step/switch_off_machine",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/emptying_mode",
-      "to_ref": "ns:Step/press_and_hold_coffee_button",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/emptying_mode",
-      "to_ref": "ns:Step/switch_on_machine",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/resetting_mode",
-      "to_ref": "ns:Step/switch_off_machine",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/resetting_mode",
-      "to_ref": "ns:Step/press_and_hold_coffee_button",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/resetting_mode",
-      "to_ref": "ns:Step/switch_on_machine",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/power_save_mode",
-      "to_ref": "ns:Step/switch_off_machine",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/power_save_mode",
-      "to_ref": "ns:Step/press_and_hold_coffee_button",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/power_save_mode",
-      "to_ref": "ns:Step/switch_on_machine",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/failure_mode",
-      "to_ref": "ns:Step/indicate_failure_with_coffee_button_led",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Mode/standby_mode",
-      "to_ref": "ns:Step/switch_thermoblock_off",
-      "confidence": 1.0
     },
     {
       "type": "precedes",
@@ -10195,54 +10706,60 @@
     {
       "type": "appliesDuring",
       "from_ref": "ns:Step/daily_maintenance_and_cleaning",
-      "to_ref": "ns:State/coffee_machine_on",
+      "to_ref": "ns:Mode/citiz_co",
       "confidence": 1.0
     },
     {
       "type": "appliesDuring",
+      "from_ref": "ns:Step/daily_maintenance_and_cleaning",
+      "to_ref": "ns:Mode/citiz_milk",
+      "confidence": 1.0
+    },
+    {
+      "type": "verifies",
       "from_ref": "ns:Step/after_last_coffee_or_at_the_end_of_day",
-      "to_ref": "ns:State/coffee_machine_off",
+      "to_ref": "ns:State/machine_off",
+      "confidence": 1.0
+    },
+    {
+      "type": "verifies",
+      "from_ref": "ns:Step/after_last_coffee_or_at_the_end_of_day",
+      "to_ref": "ns:State/machine_on",
+      "confidence": 1.0
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/daily_maintenance_and_cleaning",
+      "to_ref": "ns:Step/descaling",
       "confidence": 1.0
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Step/milk_frother_of_model_citiz_milk",
-      "to_ref": "ns:State/coffee_machine_on",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Step/descaling",
-      "to_ref": "ns:State/coffee_machine_off",
-      "confidence": 1.0
-    },
-    {
-      "type": "appliesDuring",
-      "from_ref": "ns:Step/fill_water_tank_with_01l_decalcifier_and_05l_water",
+      "from_ref": "ns:Step/fill_water_tank_with_decalcifier_and_water",
       "to_ref": "ns:Mode/descaling_mode",
       "confidence": 1.0
     },
     {
       "type": "precedes",
-      "from_ref": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
+      "from_ref": "ns:Step/press_both_coffee_buttons_simultaneously",
       "to_ref": "ns:Mode/descaling_mode",
       "confidence": 1.0
     },
     {
       "type": "precedes",
-      "from_ref": "ns:Step/press_any_button_to_start_pump",
+      "from_ref": "ns:Step/start_pump",
       "to_ref": "ns:Mode/descaling_mode",
       "confidence": 1.0
     },
     {
       "type": "precedes",
-      "from_ref": "ns:Step/rinse_and_clean_water_tank_thoroughly",
+      "from_ref": "ns:Step/rinse_and_clean_water_tank",
       "to_ref": "ns:Mode/descaling_mode",
       "confidence": 1.0
     },
     {
       "type": "precedes",
-      "from_ref": "ns:Step/eject_capsules_or_check_if_capsules_are_removed",
+      "from_ref": "ns:Step/eject_capsules",
       "to_ref": "ns:Mode/descaling_mode",
       "confidence": 1.0
     },
@@ -10309,14 +10826,8 @@
     {
       "type": "hasSpec",
       "from_ref": "ns:ComponentType/milk_frother",
-      "to_ref": "ns:PS/milk_level",
+      "to_ref": "ns:PS/milk_levels",
       "confidence": 0.85
-    },
-    {
-      "type": "hasUnit",
-      "from_ref": "ns:PS/milk_level",
-      "to_ref": "ns:Unit/l",
-      "confidence": 0.88
     },
     {
       "type": "hasSpec",
@@ -10332,7 +10843,7 @@
     },
     {
       "type": "hasSpec",
-      "from_ref": "ns:Product/turmix_tx_270_citiz_milk",
+      "from_ref": "ns:Product/turmix_tx_370_citiz_co",
       "to_ref": "ns:PS/power_rating",
       "confidence": 0.9
     },
@@ -10349,52 +10860,16 @@
       "confidence": 0.9
     },
     {
-      "type": "hasSpec",
-      "from_ref": "ns:Product/coffee_machine",
-      "to_ref": "ns:PS/preheating_time",
-      "confidence": 0.9
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "ns:Product/coffee_machine",
-      "to_ref": "ns:PS/cable_length",
-      "confidence": 0.9
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "ns:Product/coffee_machine",
-      "to_ref": "ns:PS/mains_voltage_europe",
-      "confidence": 0.9
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "ns:Product/coffee_machine",
-      "to_ref": "ns:PS/power_rating_220_240_v",
-      "confidence": 0.9
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "ns:Product/coffee_machine",
-      "to_ref": "ns:PS/capacity_hot_milk",
-      "confidence": 0.9
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "ns:Product/coffee_machine",
-      "to_ref": "ns:PS/whisk_speed",
-      "confidence": 0.9
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "ns:Product/coffee_machine",
-      "to_ref": "ns:PS/temperature_hot_milk",
-      "confidence": 0.9
-    },
-    {
       "type": "hasUnit",
       "from_ref": "ns:PS/noise_during_brewing_cycle",
       "to_ref": "ns:Unit/dba",
       "confidence": 0.88
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "ns:Product/coffee_machine",
+      "to_ref": "ns:PS/preheating_time",
+      "confidence": 0.9
     },
     {
       "type": "hasUnit",
@@ -10403,10 +10878,22 @@
       "confidence": 0.88
     },
     {
+      "type": "hasSpec",
+      "from_ref": "ns:Product/coffee_machine",
+      "to_ref": "ns:PS/cable_length",
+      "confidence": 0.9
+    },
+    {
       "type": "hasUnit",
       "from_ref": "ns:PS/cable_length",
       "to_ref": "ns:Unit/m",
       "confidence": 0.88
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "ns:Product/coffee_machine",
+      "to_ref": "ns:PS/mains_voltage_europe",
+      "confidence": 0.9
     },
     {
       "type": "hasUnit",
@@ -10415,10 +10902,22 @@
       "confidence": 0.88
     },
     {
+      "type": "hasSpec",
+      "from_ref": "ns:Product/coffee_machine",
+      "to_ref": "ns:PS/power_rating_220_240_v",
+      "confidence": 0.9
+    },
+    {
       "type": "hasUnit",
       "from_ref": "ns:PS/power_rating_220_240_v",
       "to_ref": "ns:Unit/w",
       "confidence": 0.88
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "ns:Product/coffee_machine",
+      "to_ref": "ns:PS/capacity_hot_milk",
+      "confidence": 0.9
     },
     {
       "type": "hasUnit",
@@ -10427,10 +10926,22 @@
       "confidence": 0.88
     },
     {
+      "type": "hasSpec",
+      "from_ref": "ns:Product/coffee_machine",
+      "to_ref": "ns:PS/whisk_speed",
+      "confidence": 0.9
+    },
+    {
       "type": "hasUnit",
       "from_ref": "ns:PS/whisk_speed",
       "to_ref": "ns:Unit/rpm",
       "confidence": 0.88
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "ns:Product/coffee_machine",
+      "to_ref": "ns:PS/temperature_hot_milk",
+      "confidence": 0.9
     },
     {
       "type": "hasUnit",
@@ -10482,7 +10993,7 @@
     },
     {
       "type": "hasSpec",
-      "from_ref": "ns:ComponentType/core_unit",
+      "from_ref": "ns:ComponentType/jug",
       "to_ref": "ns:PS/weight",
       "confidence": 0.9
     },
@@ -10573,6 +11084,100 @@
                 "page_start": 5,
                 "page_end": 5,
                 "source_text": "Section: Citiz service manual  53 REPAIRS... (p.5-5)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "severity": "warn",
+        "code": "units_required_if_numeric",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/milk_levels",
+        "details": {
+          "entity": {
+            "id": "ns:PS/milk_levels",
+            "type": "ParameterSpec",
+            "name": "Milk levels",
+            "nominal_value": 2,
+            "unit_raw": "levels",
+            "confidence": 0.85,
+            "spans": [
+              {
+                "section_id": "sec_0",
+                "section_title": "Preface",
+                "page_start": 2,
+                "page_end": 12,
+                "source_text": "Section: Preface... (p.2-12)"
+              },
+              {
+                "section_id": "sec_3_1_1",
+                "section_title": "3.1.1 Interior view ­ core unit, D­range",
+                "page_start": 2,
+                "page_end": 3,
+                "source_text": "Section: 3.1.1 Interior view ­ core unit, D­range... (p.2-3)"
+              },
+              {
+                "section_id": "sec_3_2",
+                "section_title": "3.2 Overview ­ core unit, C­range",
+                "page_start": 3,
+                "page_end": 5,
+                "source_text": "Section: 3.2 Overview ­ core unit, C­range... (p.3-5)"
+              },
+              {
+                "section_id": "sec_3_2_1",
+                "section_title": "3.2.1 Interior view ­ core unit, C­range",
+                "page_start": 4,
+                "page_end": 5,
+                "source_text": "Section: 3.2.1 Interior view ­ core unit, C­range... (p.4-5)"
+              },
+              {
+                "section_id": "sec_3_3",
+                "section_title": "3.3 Overview ­ model Citiz",
+                "page_start": 5,
+                "page_end": 6,
+                "source_text": "Section: 3.3 Overview ­ model Citiz... (p.5-6)"
+              },
+              {
+                "section_id": "sec_3_3_the_core_units_of",
+                "section_title": "The core units of",
+                "page_start": 5,
+                "page_end": 6,
+                "source_text": "Section: The core units of... (p.5-6)"
+              },
+              {
+                "section_id": "sec_3_3_citiz_service_manual_14_main_components",
+                "section_title": "Citiz service manual  14 MAIN COMPONENTS",
+                "page_start": 5,
+                "page_end": 6,
+                "source_text": "Section: Citiz service manual  14 MAIN COMPONENTS... (p.5-6)"
+              },
+              {
+                "section_id": "sec_3_4",
+                "section_title": "3.4 Overview ­ model Citiz & milk",
+                "page_start": 6,
+                "page_end": 8,
+                "source_text": "Section: 3.4 Overview ­ model Citiz & milk... (p.6-8)"
+              },
+              {
+                "section_id": "sec_3_4_the_core_units_of",
+                "section_title": "The core units of",
+                "page_start": 6,
+                "page_end": 8,
+                "source_text": "Section: The core units of... (p.6-8)"
+              },
+              {
+                "section_id": "sec_3_4_citiz_service_manual_15_main_components",
+                "section_title": "Citiz service manual  15 MAIN COMPONENTS",
+                "page_start": 6,
+                "page_end": 8,
+                "source_text": "Section: Citiz service manual  15 MAIN COMPONENTS... (p.6-8)"
+              },
+              {
+                "section_id": "sec_3_4_1",
+                "section_title": "3.4.1 Overview ­ milk frother AERO3",
+                "page_start": 7,
+                "page_end": 8,
+                "source_text": "Section: 3.4.1 Overview ­ milk frother AERO3... (p.7-8)"
               }
             ]
           }
@@ -10825,6 +11430,204 @@
       {
         "severity": "warn",
         "code": "units_required_if_numeric",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/heating_energy_for_citiz",
+        "details": {
+          "entity": {
+            "id": "ns:PS/heating_energy_for_citiz",
+            "type": "ParameterSpec",
+            "name": "Heating energy for Citiz",
+            "nominal_value": 7.6,
+            "unit_raw": "Wh",
+            "confidence": 0.9,
+            "spans": [
+              {
+                "section_id": "sec_4_2_1_heating_up",
+                "section_title": "Heating up",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Heating up... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+                "section_title": "Citiz service manual  26 TECHNICAL DATA",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_pump_pressure",
+                "section_title": "Pump pressure",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Pump pressure... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_water_tank",
+                "section_title": "Water tank",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Water tank... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_drip_tray",
+                "section_title": "Drip tray",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Drip tray... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_capsule_container",
+                "section_title": "Capsule container",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Capsule container... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_temperatures",
+                "section_title": "Temperatures",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Temperatures... (p.17-21)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "severity": "warn",
+        "code": "units_required_if_numeric",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/heating_energy_for_citiz_milk",
+        "details": {
+          "entity": {
+            "id": "ns:PS/heating_energy_for_citiz_milk",
+            "type": "ParameterSpec",
+            "name": "Heating energy for Citiz & milk",
+            "nominal_value": 7.6,
+            "unit_raw": "Wh",
+            "confidence": 0.9,
+            "spans": [
+              {
+                "section_id": "sec_4_2_1_heating_up",
+                "section_title": "Heating up",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Heating up... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+                "section_title": "Citiz service manual  26 TECHNICAL DATA",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_pump_pressure",
+                "section_title": "Pump pressure",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Pump pressure... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_water_tank",
+                "section_title": "Water tank",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Water tank... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_drip_tray",
+                "section_title": "Drip tray",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Drip tray... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_capsule_container",
+                "section_title": "Capsule container",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Capsule container... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_temperatures",
+                "section_title": "Temperatures",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Temperatures... (p.17-21)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "severity": "warn",
+        "code": "units_required_if_numeric",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/heating_energy_for_citiz_co",
+        "details": {
+          "entity": {
+            "id": "ns:PS/heating_energy_for_citiz_co",
+            "type": "ParameterSpec",
+            "name": "Heating energy for Citiz & Co",
+            "nominal_value": 14.9,
+            "unit_raw": "Wh",
+            "confidence": 0.9,
+            "spans": [
+              {
+                "section_id": "sec_4_2_1_heating_up",
+                "section_title": "Heating up",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Heating up... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+                "section_title": "Citiz service manual  26 TECHNICAL DATA",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_pump_pressure",
+                "section_title": "Pump pressure",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Pump pressure... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_water_tank",
+                "section_title": "Water tank",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Water tank... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_drip_tray",
+                "section_title": "Drip tray",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Drip tray... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_capsule_container",
+                "section_title": "Capsule container",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Capsule container... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_temperatures",
+                "section_title": "Temperatures",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Temperatures... (p.17-21)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "severity": "warn",
+        "code": "units_required_if_numeric",
         "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/heating_energy_for_small_cup",
         "details": {
           "entity": {
@@ -10957,12 +11760,12 @@
       {
         "severity": "warn",
         "code": "units_required_if_numeric",
-        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/standby_operation_energy",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/heating_energy_for_standby_operation",
         "details": {
           "entity": {
-            "id": "ns:PS/standby_operation_energy",
+            "id": "ns:PS/heating_energy_for_standby_operation",
             "type": "ParameterSpec",
-            "name": "Standby operation energy",
+            "name": "Heating energy for standby operation",
             "nominal_value": 0.7,
             "unit_raw": "Wh",
             "confidence": 0.9,
@@ -11089,6 +11892,72 @@
       {
         "severity": "warn",
         "code": "units_required_if_numeric",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/coffee_preparation_pump_pressure",
+        "details": {
+          "entity": {
+            "id": "ns:PS/coffee_preparation_pump_pressure",
+            "type": "ParameterSpec",
+            "name": "Coffee preparation pump pressure",
+            "nominal_value": 9,
+            "unit_raw": "bar",
+            "confidence": 0.9,
+            "spans": [
+              {
+                "section_id": "sec_4_2_1_heating_up",
+                "section_title": "Heating up",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Heating up... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+                "section_title": "Citiz service manual  26 TECHNICAL DATA",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_pump_pressure",
+                "section_title": "Pump pressure",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Pump pressure... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_water_tank",
+                "section_title": "Water tank",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Water tank... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_drip_tray",
+                "section_title": "Drip tray",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Drip tray... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_capsule_container",
+                "section_title": "Capsule container",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Capsule container... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_temperatures",
+                "section_title": "Temperatures",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Temperatures... (p.17-21)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "severity": "warn",
+        "code": "units_required_if_numeric",
         "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/flow_performance",
         "details": {
           "entity": {
@@ -11155,12 +12024,12 @@
       {
         "severity": "warn",
         "code": "units_required_if_numeric",
-        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/water_tank_capacity",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/water_tank_capacity_for_citiz",
         "details": {
           "entity": {
-            "id": "ns:PS/water_tank_capacity",
+            "id": "ns:PS/water_tank_capacity_for_citiz",
             "type": "ParameterSpec",
-            "name": "Water tank capacity",
+            "name": "Water tank capacity for Citiz",
             "nominal_value": 1.0,
             "unit_raw": "l",
             "confidence": 0.9,
@@ -11221,12 +12090,144 @@
       {
         "severity": "warn",
         "code": "units_required_if_numeric",
-        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/drip_tray_capacity",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/water_tank_capacity_for_citiz_milk",
         "details": {
           "entity": {
-            "id": "ns:PS/drip_tray_capacity",
+            "id": "ns:PS/water_tank_capacity_for_citiz_milk",
             "type": "ParameterSpec",
-            "name": "Drip tray capacity",
+            "name": "Water tank capacity for Citiz & milk",
+            "nominal_value": 1.0,
+            "unit_raw": "l",
+            "confidence": 0.9,
+            "spans": [
+              {
+                "section_id": "sec_4_2_1_heating_up",
+                "section_title": "Heating up",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Heating up... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+                "section_title": "Citiz service manual  26 TECHNICAL DATA",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_pump_pressure",
+                "section_title": "Pump pressure",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Pump pressure... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_water_tank",
+                "section_title": "Water tank",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Water tank... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_drip_tray",
+                "section_title": "Drip tray",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Drip tray... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_capsule_container",
+                "section_title": "Capsule container",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Capsule container... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_temperatures",
+                "section_title": "Temperatures",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Temperatures... (p.17-21)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "severity": "warn",
+        "code": "units_required_if_numeric",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/water_tank_capacity_for_citiz_co",
+        "details": {
+          "entity": {
+            "id": "ns:PS/water_tank_capacity_for_citiz_co",
+            "type": "ParameterSpec",
+            "name": "Water tank capacity for Citiz & Co",
+            "nominal_value": 1.4,
+            "unit_raw": "l",
+            "confidence": 0.9,
+            "spans": [
+              {
+                "section_id": "sec_4_2_1_heating_up",
+                "section_title": "Heating up",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Heating up... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+                "section_title": "Citiz service manual  26 TECHNICAL DATA",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_pump_pressure",
+                "section_title": "Pump pressure",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Pump pressure... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_water_tank",
+                "section_title": "Water tank",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Water tank... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_drip_tray",
+                "section_title": "Drip tray",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Drip tray... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_capsule_container",
+                "section_title": "Capsule container",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Capsule container... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_temperatures",
+                "section_title": "Temperatures",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Temperatures... (p.17-21)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "severity": "warn",
+        "code": "units_required_if_numeric",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/drip_tray_capacity_for_citiz",
+        "details": {
+          "entity": {
+            "id": "ns:PS/drip_tray_capacity_for_citiz",
+            "type": "ParameterSpec",
+            "name": "Drip tray capacity for Citiz",
             "nominal_value": 100,
             "unit_raw": "ml",
             "confidence": 0.9,
@@ -11287,13 +12288,211 @@
       {
         "severity": "warn",
         "code": "units_required_if_numeric",
-        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/capsule_container_capacity",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/drip_tray_capacity_for_citiz_milk",
         "details": {
           "entity": {
-            "id": "ns:PS/capsule_container_capacity",
+            "id": "ns:PS/drip_tray_capacity_for_citiz_milk",
             "type": "ParameterSpec",
-            "name": "Capsule container capacity",
-            "nominal_value": 9,
+            "name": "Drip tray capacity for Citiz & milk",
+            "nominal_value": 180,
+            "unit_raw": "ml",
+            "confidence": 0.9,
+            "spans": [
+              {
+                "section_id": "sec_4_2_1_heating_up",
+                "section_title": "Heating up",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Heating up... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+                "section_title": "Citiz service manual  26 TECHNICAL DATA",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_pump_pressure",
+                "section_title": "Pump pressure",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Pump pressure... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_water_tank",
+                "section_title": "Water tank",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Water tank... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_drip_tray",
+                "section_title": "Drip tray",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Drip tray... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_capsule_container",
+                "section_title": "Capsule container",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Capsule container... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_temperatures",
+                "section_title": "Temperatures",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Temperatures... (p.17-21)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "severity": "warn",
+        "code": "units_required_if_numeric",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/drip_tray_capacity_for_citiz_co",
+        "details": {
+          "entity": {
+            "id": "ns:PS/drip_tray_capacity_for_citiz_co",
+            "type": "ParameterSpec",
+            "name": "Drip tray capacity for Citiz & Co",
+            "nominal_value": 250,
+            "unit_raw": "ml",
+            "confidence": 0.9,
+            "spans": [
+              {
+                "section_id": "sec_4_2_1_heating_up",
+                "section_title": "Heating up",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Heating up... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+                "section_title": "Citiz service manual  26 TECHNICAL DATA",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_pump_pressure",
+                "section_title": "Pump pressure",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Pump pressure... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_water_tank",
+                "section_title": "Water tank",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Water tank... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_drip_tray",
+                "section_title": "Drip tray",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Drip tray... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_capsule_container",
+                "section_title": "Capsule container",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Capsule container... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_temperatures",
+                "section_title": "Temperatures",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Temperatures... (p.17-21)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "severity": "warn",
+        "code": "units_required_if_numeric",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/capsule_container_capacity_for_citiz",
+        "details": {
+          "entity": {
+            "id": "ns:PS/capsule_container_capacity_for_citiz",
+            "type": "ParameterSpec",
+            "name": "Capsule container capacity for Citiz",
+            "nominal_value": 10,
+            "unit_raw": "capsules",
+            "confidence": 0.9,
+            "spans": [
+              {
+                "section_id": "sec_4_2_1_heating_up",
+                "section_title": "Heating up",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Heating up... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_citiz_service_manual_26_technical_data",
+                "section_title": "Citiz service manual  26 TECHNICAL DATA",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Citiz service manual  26 TECHNICAL DATA... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_pump_pressure",
+                "section_title": "Pump pressure",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Pump pressure... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_water_tank",
+                "section_title": "Water tank",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Water tank... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_drip_tray",
+                "section_title": "Drip tray",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Drip tray... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_capsule_container",
+                "section_title": "Capsule container",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Capsule container... (p.17-21)"
+              },
+              {
+                "section_id": "sec_4_2_1_temperatures",
+                "section_title": "Temperatures",
+                "page_start": 17,
+                "page_end": 21,
+                "source_text": "Section: Temperatures... (p.17-21)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "severity": "warn",
+        "code": "units_required_if_numeric",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/capsule_container_capacity_for_citiz_co",
+        "details": {
+          "entity": {
+            "id": "ns:PS/capsule_container_capacity_for_citiz_co",
+            "type": "ParameterSpec",
+            "name": "Capsule container capacity for Citiz & Co",
+            "nominal_value": 10,
             "unit_raw": "capsules",
             "confidence": 0.9,
             "spans": [
@@ -11617,20 +12816,20 @@
     ],
     "counters": {
       "error": 1,
-      "warn": 14,
+      "warn": 24,
       "info": 0
     }
   },
   "quality": {
-    "entities_count": 151,
-    "relations_count": 81,
+    "entities_count": 164,
+    "relations_count": 70,
     "entity_type_distribution": {
-      "MachineMode": 13,
+      "MachineMode": 15,
       "State": 11,
-      "ProcessStep": 22,
-      "Product": 5,
-      "ComponentType": 31,
-      "ParameterSpec": 33,
+      "ProcessStep": 25,
+      "Product": 6,
+      "ComponentType": 29,
+      "ParameterSpec": 42,
       "Unit": 15,
       "RatingPlate": 1,
       "FailureMode": 11,
@@ -11639,14 +12838,15 @@
     },
     "relation_type_distribution": {
       "precedes": 8,
-      "appliesDuring": 24,
+      "appliesDuring": 12,
+      "verifies": 2,
       "hasPart": 10,
       "hasSpec": 19,
-      "hasUnit": 19,
+      "hasUnit": 18,
       "requiresTool": 1
     },
     "avg_entity_confidence": 0.945,
-    "avg_relation_confidence": 0.935,
+    "avg_relation_confidence": 0.927,
     "duplicates_collapsed": {
       "entities": 0,
       "relations": 0
@@ -11657,14 +12857,14 @@
     "cycles_found": 0,
     "coverage_metrics": {
       "product_component_hasSpec": {
-        "total_entities": 5,
-        "with_relation": 2,
-        "coverage_ratio": 0.4
+        "total_entities": 6,
+        "with_relation": 3,
+        "coverage_ratio": 0.5
       },
       "parameter_spec_hasUnit": {
-        "total_entities": 33,
-        "with_relation": 19,
-        "coverage_ratio": 0.576
+        "total_entities": 42,
+        "with_relation": 18,
+        "coverage_ratio": 0.429
       },
       "testcase_validatedBy": {
         "total_entities": 0,
@@ -11677,6 +12877,6 @@
         "coverage_ratio": 0.0
       }
     },
-    "generated_at": "2025-11-05T13:33:38.875678Z"
+    "generated_at": "2025-11-05T13:44:31.323704Z"
   }
 }

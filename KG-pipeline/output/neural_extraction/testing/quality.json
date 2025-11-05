@@ -1,28 +1,36 @@
 {
-  "json_valid": true,
-  "entities_count": 79,
+  "json_valid": false,
+  "entities_count": 83,
   "relations_count": 52,
-  "warnings": [],
-  "overall_confidence": 0.889,
-  "avg_entity_confidence": 0.892,
-  "avg_relation_confidence": 0.887,
+  "warnings": [
+    "Entity 0 missing 'confidence'",
+    "Entity 1 missing 'confidence'",
+    "Entity 2 missing 'confidence'",
+    "Entity 3 missing 'confidence'",
+    "Entity 4 missing 'confidence'",
+    "Entity 5 missing 'confidence'",
+    "Entity 6 missing 'confidence'"
+  ],
+  "overall_confidence": 0.853,
+  "avg_entity_confidence": 0.821,
+  "avg_relation_confidence": 0.885,
   "entity_type_distribution": {
-    "TestCase": 27,
-    "SafetyNotice": 7,
-    "Measurement": 17,
-    "AcceptanceCriterion": 11,
+    "TestCase": 26,
+    "SafetyNotice": 8,
+    "Measurement": 18,
+    "AcceptanceCriterion": 13,
     "CrossReference": 3,
     "ApplicabilityClause": 7,
     "Equipment": 5,
-    "NormativeReference": 2
+    "NormativeReference": 3
   },
   "relation_type_distribution": {
-    "validatedBy": 18,
-    "constrainedBy": 15,
-    "refersTo": 7,
+    "validatedBy": 17,
+    "constrainedBy": 13,
+    "refersTo": 10,
     "appliesTo": 8,
     "requires": 4
   },
   "profile": "testing",
-  "generated_at": "2025-11-05T13:33:09.239582+00:00"
+  "generated_at": "2025-11-05T13:44:31.161674+00:00"
 }
