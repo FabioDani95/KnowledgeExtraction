@@ -17,77 +17,9 @@
         ]
       },
       {
-        "id": "PS_01",
-        "type": "ParameterSpec",
-        "name": "Diameter",
-        "nominal_value": 91,
-        "unit_raw": "mm",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_4_2_5",
-            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
-            "page_start": 21,
-            "page_end": 21,
-            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
-          }
-        ]
-      },
-      {
-        "id": "PS_02",
-        "type": "ParameterSpec",
-        "name": "Height",
-        "nominal_value": 170,
-        "unit_raw": "mm",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_4_2_5",
-            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
-            "page_start": 21,
-            "page_end": 21,
-            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
-          }
-        ]
-      },
-      {
         "id": "CT_02",
         "type": "ComponentType",
         "name": "Whisk",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_4_2_5",
-            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
-            "page_start": 21,
-            "page_end": 21,
-            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
-          }
-        ]
-      },
-      {
-        "id": "PS_03",
-        "type": "ParameterSpec",
-        "name": "Whisk Diameter",
-        "nominal_value": 33,
-        "unit_raw": "mm",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_4_2_5",
-            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
-            "page_start": 21,
-            "page_end": 21,
-            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
-          }
-        ]
-      },
-      {
-        "id": "PS_04",
-        "type": "ParameterSpec",
-        "name": "Whisk Height",
-        "nominal_value": 32,
-        "unit_raw": "mm",
         "confidence": 0.9,
         "spans": [
           {
@@ -115,10 +47,25 @@
         ]
       },
       {
-        "id": "PS_05",
+        "id": "CT_04",
+        "type": "ComponentType",
+        "name": "Core Unit",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "PS_01",
         "type": "ParameterSpec",
-        "name": "Mixer Dimensions",
-        "nominal_value": "15 x 34 x 32",
+        "name": "Jug dimensions",
+        "nominal_value": 91,
         "unit_raw": "mm",
         "confidence": 0.9,
         "spans": [
@@ -132,9 +79,62 @@
         ]
       },
       {
-        "id": "CT_04",
-        "type": "ComponentType",
-        "name": "Weight",
+        "id": "PS_02",
+        "type": "ParameterSpec",
+        "name": "Jug height",
+        "nominal_value": 170,
+        "unit_raw": "mm",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "PS_03",
+        "type": "ParameterSpec",
+        "name": "Whisk dimensions",
+        "nominal_value": 33,
+        "unit_raw": "mm",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "PS_04",
+        "type": "ParameterSpec",
+        "name": "Whisk height",
+        "nominal_value": 32,
+        "unit_raw": "mm",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "PS_05",
+        "type": "ParameterSpec",
+        "name": "Mixer dimensions",
+        "nominal_value": 15,
+        "unit_raw": "mm",
         "confidence": 0.9,
         "spans": [
           {
@@ -148,6 +148,40 @@
       },
       {
         "id": "PS_06",
+        "type": "ParameterSpec",
+        "name": "Mixer height",
+        "nominal_value": 34,
+        "unit_raw": "mm",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "PS_07",
+        "type": "ParameterSpec",
+        "name": "Mixer width",
+        "nominal_value": 32,
+        "unit_raw": "mm",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_5",
+            "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "PS_08",
         "type": "ParameterSpec",
         "name": "Weight",
         "nominal_value": 0.7,
@@ -227,8 +261,20 @@
       },
       {
         "type": "hasSpec",
-        "from_ref": "CT_04",
+        "from_ref": "CT_03",
         "to_ref": "PS_06",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasSpec",
+        "from_ref": "CT_03",
+        "to_ref": "PS_07",
+        "confidence": 0.9
+      },
+      {
+        "type": "hasSpec",
+        "from_ref": "CT_04",
+        "to_ref": "PS_08",
         "confidence": 0.9
       },
       {
@@ -264,6 +310,18 @@
       {
         "type": "hasUnit",
         "from_ref": "PS_06",
+        "to_ref": "UN_01",
+        "confidence": 0.88
+      },
+      {
+        "type": "hasUnit",
+        "from_ref": "PS_07",
+        "to_ref": "UN_01",
+        "confidence": 0.88
+      },
+      {
+        "type": "hasUnit",
+        "from_ref": "PS_08",
         "to_ref": "UN_02",
         "confidence": 0.88
       }
@@ -280,5 +338,5 @@
       "char_end": 19903
     }
   ],
-  "timestamp": "2025-11-05T10:33:45.711796+00:00"
+  "timestamp": "2025-11-05T13:30:26.986035+00:00"
 }

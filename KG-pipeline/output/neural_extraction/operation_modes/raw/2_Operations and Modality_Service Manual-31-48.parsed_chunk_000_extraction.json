@@ -5,7 +5,7 @@
         "type": "MachineMode",
         "name": "Heat up mode",
         "id": "MM_01",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -34,7 +34,7 @@
         "type": "MachineMode",
         "name": "Self test mode",
         "id": "MM_02",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -63,7 +63,7 @@
         "type": "MachineMode",
         "name": "Ready mode",
         "id": "MM_03",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -92,7 +92,7 @@
         "type": "MachineMode",
         "name": "Brewing mode",
         "id": "MM_04",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -121,7 +121,7 @@
         "type": "MachineMode",
         "name": "Volume brewing mode",
         "id": "MM_05",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -150,7 +150,7 @@
         "type": "MachineMode",
         "name": "Descaling mode",
         "id": "MM_06",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -179,7 +179,7 @@
         "type": "State",
         "name": "Descaling ready",
         "id": "S_01",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -208,7 +208,7 @@
         "type": "State",
         "name": "Descaling pump on",
         "id": "S_02",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -237,7 +237,7 @@
         "type": "State",
         "name": "Descaling pump off",
         "id": "S_03",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -266,7 +266,7 @@
         "type": "State",
         "name": "Emptying / Evaporating",
         "id": "S_04",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -295,7 +295,7 @@
         "type": "State",
         "name": "Standby",
         "id": "S_05",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -324,7 +324,7 @@
         "type": "State",
         "name": "Resetting",
         "id": "S_06",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -353,7 +353,7 @@
         "type": "State",
         "name": "Power save",
         "id": "S_07",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -382,7 +382,7 @@
         "type": "State",
         "name": "Overheat",
         "id": "S_08",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -411,7 +411,7 @@
         "type": "State",
         "name": "Power save activation",
         "id": "S_09",
-        "confidence": 1.0,
+        "confidence": 1,
         "spans": [
           {
             "section_id": "sec_status_table_p2",
@@ -442,61 +442,61 @@
         "type": "precedes",
         "from_ref": "MM_01",
         "to_ref": "MM_03",
-        "confidence": 1.0
+        "confidence": 1
       },
       {
         "type": "precedes",
         "from_ref": "MM_02",
         "to_ref": "MM_03",
-        "confidence": 1.0
+        "confidence": 1
       },
       {
         "type": "appliesDuring",
         "from_ref": "MM_06",
         "to_ref": "S_01",
-        "confidence": 1.0
+        "confidence": 1
       },
       {
         "type": "appliesDuring",
         "from_ref": "MM_06",
         "to_ref": "S_02",
-        "confidence": 1.0
+        "confidence": 1
       },
       {
         "type": "appliesDuring",
         "from_ref": "MM_06",
         "to_ref": "S_03",
-        "confidence": 1.0
+        "confidence": 1
       },
       {
         "type": "appliesDuring",
         "from_ref": "MM_04",
         "to_ref": "S_04",
-        "confidence": 1.0
+        "confidence": 1
       },
       {
         "type": "appliesDuring",
         "from_ref": "MM_05",
         "to_ref": "S_04",
-        "confidence": 1.0
+        "confidence": 1
       },
       {
         "type": "appliesDuring",
         "from_ref": "MM_01",
         "to_ref": "S_07",
-        "confidence": 1.0
+        "confidence": 1
       },
       {
         "type": "appliesDuring",
         "from_ref": "MM_01",
         "to_ref": "S_08",
-        "confidence": 1.0
+        "confidence": 1
       },
       {
         "type": "appliesDuring",
         "from_ref": "MM_01",
         "to_ref": "S_09",
-        "confidence": 1.0
+        "confidence": 1
       }
     ]
   },
@@ -529,5 +529,5 @@
       "char_end": 3551
     }
   ],
-  "timestamp": "2025-11-05T10:34:11.673543+00:00"
+  "timestamp": "2025-11-05T13:30:44.482136+00:00"
 }

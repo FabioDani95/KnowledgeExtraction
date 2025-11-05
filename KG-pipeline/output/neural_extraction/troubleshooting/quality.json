@@ -1,20 +1,20 @@
 {
   "json_valid": true,
   "entities_count": 20,
-  "relations_count": 11,
+  "relations_count": 10,
   "warnings": [],
   "overall_confidence": 1.0,
   "avg_entity_confidence": 1.0,
   "avg_relation_confidence": 1.0,
   "entity_type_distribution": {
-    "FailureMode": 10,
-    "RepairAction": 9,
+    "FailureMode": 11,
+    "RepairAction": 8,
     "Tool": 1
   },
   "relation_type_distribution": {
-    "affects": 10,
+    "affects": 9,
     "requiresTool": 1
   },
   "profile": "troubleshooting",
-  "generated_at": "2025-11-05T10:35:35.231887+00:00"
+  "generated_at": "2025-11-05T13:32:18.640035+00:00"
 }

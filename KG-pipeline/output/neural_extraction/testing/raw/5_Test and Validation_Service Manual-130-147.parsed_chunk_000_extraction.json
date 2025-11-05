@@ -153,7 +153,7 @@
       },
       {
         "type": "Measurement",
-        "name": "pressure",
+        "name": "pressure measurement",
         "id": "M_01",
         "confidence": 1.0,
         "nominal_value": 12,
@@ -205,7 +205,7 @@
       },
       {
         "type": "Measurement",
-        "name": "water volume",
+        "name": "water measurement",
         "id": "M_02",
         "confidence": 1.0,
         "min_value": 60,
@@ -258,7 +258,7 @@
       },
       {
         "type": "SafetyNotice",
-        "name": "Dangerous mains voltage",
+        "name": "dangerous mains voltage",
         "id": "SN_01",
         "confidence": 1.0,
         "spans": [
@@ -308,58 +308,8 @@
       },
       {
         "type": "SafetyNotice",
-        "name": "Dangerous hot parts",
+        "name": "dangerous hot parts",
         "id": "SN_02",
-        "confidence": 1.0,
-        "spans": [
-          {
-            "section_id": "sec_001",
-            "section_title": "Section 1",
-            "page_start": 2,
-            "page_end": 2,
-            "source_text": "Section: Section 1... (p.2-2)"
-          },
-          {
-            "section_id": "sec_002",
-            "section_title": "9.2.2 Citiz pressure gauge adapter",
-            "page_start": 2,
-            "page_end": 3,
-            "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
-          },
-          {
-            "section_id": "sec_003",
-            "section_title": "9.3 Measure flow rate",
-            "page_start": 3,
-            "page_end": 4,
-            "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
-          },
-          {
-            "section_id": "sec_004",
-            "section_title": "9.4 Pressure and leakage checks",
-            "page_start": 4,
-            "page_end": 5,
-            "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
-          },
-          {
-            "section_id": "sec_005",
-            "section_title": "9.4.1 Preparations",
-            "page_start": 5,
-            "page_end": 6,
-            "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
-          },
-          {
-            "section_id": "sec_006",
-            "section_title": "9.4.2 Test run 9) Connect mains cable.",
-            "page_start": 6,
-            "page_end": 7,
-            "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
-          }
-        ]
-      },
-      {
-        "type": "AcceptanceCriterion",
-        "name": "pressure stability",
-        "id": "AC_01",
         "confidence": 1.0,
         "spans": [
           {
@@ -423,7 +373,13 @@
       {
         "type": "validatedBy",
         "from_ref": "M_01",
-        "to_ref": "AC_01",
+        "to_ref": "EQ_02",
+        "confidence": 1.0
+      },
+      {
+        "type": "validatedBy",
+        "from_ref": "M_01",
+        "to_ref": "EQ_03",
         "confidence": 1.0
       },
       {
@@ -496,5 +452,5 @@
       "char_end": 3539
     }
   ],
-  "timestamp": "2025-11-05T10:35:47.426534+00:00"
+  "timestamp": "2025-11-05T13:32:34.514094+00:00"
 }

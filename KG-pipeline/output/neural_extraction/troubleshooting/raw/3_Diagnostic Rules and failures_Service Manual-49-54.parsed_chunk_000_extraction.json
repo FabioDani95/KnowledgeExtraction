@@ -157,7 +157,7 @@
       },
       {
         "type": "RepairAction",
-        "name": "replace compact brewing unit",
+        "name": "replace defective hoses and seals",
         "id": "RA_04",
         "confidence": 1,
         "spans": [
@@ -178,30 +178,8 @@
         ]
       },
       {
-        "type": "RepairAction",
-        "name": "replace defective hoses and seals",
-        "id": "RA_05",
-        "confidence": 1,
-        "spans": [
-          {
-            "section_id": "sec_2",
-            "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-            "page_start": 2,
-            "page_end": 2,
-            "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-          },
-          {
-            "section_id": "sec_3",
-            "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-            "page_start": 3,
-            "page_end": 3,
-            "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-          }
-        ]
-      },
-      {
         "type": "FailureMode",
-        "name": "rust visible in water",
+        "name": "milk frother damaged",
         "id": "FM_05",
         "confidence": 1,
         "spans": [
@@ -223,8 +201,8 @@
       },
       {
         "type": "RepairAction",
-        "name": "descale and rinse coffee machine again",
-        "id": "RA_06",
+        "name": "replace lid/seal",
+        "id": "RA_05",
         "confidence": 1,
         "spans": [
           {
@@ -245,7 +223,7 @@
       },
       {
         "type": "FailureMode",
-        "name": "milk frother is damaged",
+        "name": "jug badly scratched",
         "id": "FM_06",
         "confidence": 1,
         "spans": [
@@ -267,8 +245,8 @@
       },
       {
         "type": "RepairAction",
-        "name": "replace lid/seal",
-        "id": "RA_07",
+        "name": "replace milk frother in agreement with customer",
+        "id": "RA_06",
         "confidence": 1,
         "spans": [
           {
@@ -289,7 +267,7 @@
       },
       {
         "type": "FailureMode",
-        "name": "milk frother is not functioning",
+        "name": "whisks damaged",
         "id": "FM_07",
         "confidence": 1,
         "spans": [
@@ -311,8 +289,30 @@
       },
       {
         "type": "RepairAction",
-        "name": "replace milk frother",
-        "id": "RA_08",
+        "name": "replace whisks",
+        "id": "RA_07",
+        "confidence": 1,
+        "spans": [
+          {
+            "section_id": "sec_2",
+            "section_title": "Citiz service manual  50 TROUBLESHOOTING",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
+          },
+          {
+            "section_id": "sec_3",
+            "section_title": "Citiz service manual  51 TROUBLESHOOTING",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
+          }
+        ]
+      },
+      {
+        "type": "FailureMode",
+        "name": "coffee machine not switch off automatically",
+        "id": "FM_08",
         "confidence": 1,
         "spans": [
           {
@@ -333,8 +333,8 @@
       },
       {
         "type": "RepairAction",
-        "name": "replace whisks",
-        "id": "RA_09",
+        "name": "replace connector on platform",
+        "id": "RA_08",
         "confidence": 1,
         "spans": [
           {
@@ -381,32 +381,26 @@
       },
       {
         "type": "affects",
-        "from_ref": "FM_04",
+        "from_ref": "FM_05",
         "to_ref": "RA_05",
         "confidence": 1
       },
       {
         "type": "affects",
-        "from_ref": "FM_05",
+        "from_ref": "FM_06",
         "to_ref": "RA_06",
         "confidence": 1
       },
       {
         "type": "affects",
-        "from_ref": "FM_06",
+        "from_ref": "FM_07",
         "to_ref": "RA_07",
         "confidence": 1
       },
       {
         "type": "affects",
-        "from_ref": "FM_07",
+        "from_ref": "FM_08",
         "to_ref": "RA_08",
-        "confidence": 1
-      },
-      {
-        "type": "affects",
-        "from_ref": "FM_06",
-        "to_ref": "RA_09",
         "confidence": 1
       }
     ]
@@ -431,5 +425,5 @@
       "char_end": 2688
     }
   ],
-  "timestamp": "2025-11-05T10:35:29.216305+00:00"
+  "timestamp": "2025-11-05T13:32:12.915683+00:00"
 }

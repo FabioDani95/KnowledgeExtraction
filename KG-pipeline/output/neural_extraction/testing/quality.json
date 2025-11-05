@@ -1,25 +1,28 @@
 {
   "json_valid": true,
-  "entities_count": 24,
-  "relations_count": 20,
+  "entities_count": 79,
+  "relations_count": 52,
   "warnings": [],
-  "overall_confidence": 0.975,
-  "avg_entity_confidence": 0.975,
-  "avg_relation_confidence": 0.975,
+  "overall_confidence": 0.889,
+  "avg_entity_confidence": 0.892,
+  "avg_relation_confidence": 0.887,
   "entity_type_distribution": {
-    "Equipment": 6,
-    "Measurement": 6,
-    "SafetyNotice": 4,
-    "AcceptanceCriterion": 3,
-    "TestCase": 3,
+    "TestCase": 27,
+    "SafetyNotice": 7,
+    "Measurement": 17,
+    "AcceptanceCriterion": 11,
+    "CrossReference": 3,
+    "ApplicabilityClause": 7,
+    "Equipment": 5,
     "NormativeReference": 2
   },
   "relation_type_distribution": {
-    "requires": 5,
-    "validatedBy": 6,
-    "refersTo": 4,
-    "constrainedBy": 5
+    "validatedBy": 18,
+    "constrainedBy": 15,
+    "refersTo": 7,
+    "appliesTo": 8,
+    "requires": 4
   },
   "profile": "testing",
-  "generated_at": "2025-11-05T10:36:24.775731+00:00"
+  "generated_at": "2025-11-05T13:33:09.239582+00:00"
 }

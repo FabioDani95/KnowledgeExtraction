@@ -1,6 +1,6 @@
 {
   "document_code": "KG_OPERATION_MODES",
-  "ingestion_id": "4b934dfa-20e9-4581-a8da-6f71355aa859",
+  "ingestion_id": "2f4353d6-161b-42e0-8e87-bc430adbde6f",
   "extraction_version": "neural_v1.2",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
@@ -25,7 +25,7 @@
       "type": "MachineMode",
       "name": "Heat up mode",
       "id": "ns:Mode/heat_up_mode",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -54,7 +54,7 @@
       "type": "MachineMode",
       "name": "Self test mode",
       "id": "ns:Mode/self_test_mode",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -83,7 +83,7 @@
       "type": "MachineMode",
       "name": "Ready mode",
       "id": "ns:Mode/ready_mode",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -112,7 +112,7 @@
       "type": "MachineMode",
       "name": "Brewing mode",
       "id": "ns:Mode/brewing_mode",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -141,7 +141,7 @@
       "type": "MachineMode",
       "name": "Volume brewing mode",
       "id": "ns:Mode/volume_brewing_mode",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -170,7 +170,7 @@
       "type": "MachineMode",
       "name": "Descaling mode",
       "id": "ns:Mode/descaling_mode",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -241,7 +241,7 @@
       "type": "State",
       "name": "Descaling ready",
       "id": "ns:State/descaling_ready",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -270,7 +270,7 @@
       "type": "State",
       "name": "Descaling pump on",
       "id": "ns:State/descaling_pump_on",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -299,7 +299,7 @@
       "type": "State",
       "name": "Descaling pump off",
       "id": "ns:State/descaling_pump_off",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -328,7 +328,7 @@
       "type": "State",
       "name": "Emptying / Evaporating",
       "id": "ns:State/emptying_evaporating",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -357,7 +357,7 @@
       "type": "State",
       "name": "Standby",
       "id": "ns:State/standby",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -386,7 +386,7 @@
       "type": "State",
       "name": "Resetting",
       "id": "ns:State/resetting",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -415,7 +415,7 @@
       "type": "State",
       "name": "Power save",
       "id": "ns:State/power_save",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -444,7 +444,7 @@
       "type": "State",
       "name": "Overheat",
       "id": "ns:State/overheat",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -473,7 +473,7 @@
       "type": "State",
       "name": "Power save activation",
       "id": "ns:State/power_save_activation",
-      "confidence": 1.0,
+      "confidence": 1,
       "spans": [
         {
           "section_id": "sec_status_table_p2",
@@ -808,30 +808,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Reset the programmed volumes",
-      "id": "ns:Step/reset_the_programmed_volumes",
-      "confidence": 1.0,
-      "spans": [
-        {
-          "section_id": "sec_mode_table_p5",
-          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
-          "page_start": 5,
-          "page_end": 5,
-          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
-        },
-        {
-          "section_id": "sec_procedure_p6",
-          "section_title": "Citiz service manual  36 OPERATION",
-          "page_start": 6,
-          "page_end": 6,
-          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
-        }
-      ]
-    },
-    {
-      "type": "ProcessStep",
-      "name": "Indicate the resetting mode",
-      "id": "ns:Step/indicate_the_resetting_mode",
+      "name": "Reset programmed volumes",
+      "id": "ns:Step/reset_programmed_volumes",
       "confidence": 1.0,
       "spans": [
         {
@@ -896,8 +874,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Press any coffee button to activate ready mode",
-      "id": "ns:Step/press_any_coffee_button_to_activate_ready_mode",
+      "name": "Indicate failure with coffee button LED",
+      "id": "ns:Step/indicate_failure_with_coffee_button_led",
       "confidence": 1.0,
       "spans": [
         {
@@ -918,8 +896,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Switch off thermoblock",
-      "id": "ns:Step/switch_off_thermoblock",
+      "name": "Switch thermoblock off",
+      "id": "ns:Step/switch_thermoblock_off",
       "confidence": 1.0,
       "spans": [
         {
@@ -939,9 +917,9 @@
       ]
     },
     {
-      "type": "ProcessStep",
-      "name": "Switch off the machine",
-      "id": "ns:Step/switch_off_the_machine",
+      "type": "TestSpec",
+      "name": "Factory settings",
+      "id": "ns:Test/factory_settings",
       "confidence": 1.0,
       "spans": [
         {
@@ -957,90 +935,6 @@
           "page_start": 6,
           "page_end": 6,
           "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
-        }
-      ]
-    },
-    {
-      "type": "MachineMode",
-      "name": "Citiz & Co",
-      "id": "ns:Mode/citiz_co",
-      "spans": [
-        {
-          "section_id": "sec_procedure_p7",
-          "section_title": "Citiz service manual  37 OPERATION",
-          "page_start": 7,
-          "page_end": 7,
-          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
-        },
-        {
-          "section_id": "sec_procedure_p8",
-          "section_title": "Citiz service manual  38 MAINTENANCE",
-          "page_start": 8,
-          "page_end": 8,
-          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
-        },
-        {
-          "section_id": "sec_procedure_p9",
-          "section_title": "Citiz service manual  39 MAINTENANCE",
-          "page_start": 9,
-          "page_end": 9,
-          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
-        },
-        {
-          "section_id": "sec_procedure_p10",
-          "section_title": "Citiz service manual  40 MAINTENANCE",
-          "page_start": 10,
-          "page_end": 10,
-          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
-        },
-        {
-          "section_id": "sec_generic_p11",
-          "section_title": "Operational content (page 11)",
-          "page_start": 11,
-          "page_end": 11,
-          "source_text": "Section: Operational content (page 11)... (p.11-11)"
-        }
-      ]
-    },
-    {
-      "type": "MachineMode",
-      "name": "Citiz & milk",
-      "id": "ns:Mode/citiz_milk",
-      "spans": [
-        {
-          "section_id": "sec_procedure_p7",
-          "section_title": "Citiz service manual  37 OPERATION",
-          "page_start": 7,
-          "page_end": 7,
-          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
-        },
-        {
-          "section_id": "sec_procedure_p8",
-          "section_title": "Citiz service manual  38 MAINTENANCE",
-          "page_start": 8,
-          "page_end": 8,
-          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
-        },
-        {
-          "section_id": "sec_procedure_p9",
-          "section_title": "Citiz service manual  39 MAINTENANCE",
-          "page_start": 9,
-          "page_end": 9,
-          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
-        },
-        {
-          "section_id": "sec_procedure_p10",
-          "section_title": "Citiz service manual  40 MAINTENANCE",
-          "page_start": 10,
-          "page_end": 10,
-          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
-        },
-        {
-          "section_id": "sec_generic_p11",
-          "section_title": "Operational content (page 11)",
-          "page_start": 11,
-          "page_end": 11,
-          "source_text": "Section: Operational content (page 11)... (p.11-11)"
         }
       ]
     },
@@ -1048,6 +942,7 @@
       "type": "ProcessStep",
       "name": "Empty water system",
       "id": "ns:Step/empty_water_system",
+      "confidence": 1.0,
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -1090,6 +985,7 @@
       "type": "ProcessStep",
       "name": "Daily maintenance and cleaning",
       "id": "ns:Step/daily_maintenance_and_cleaning",
+      "confidence": 1.0,
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -1132,6 +1028,7 @@
       "type": "ProcessStep",
       "name": "After last coffee or at the end of day",
       "id": "ns:Step/after_last_coffee_or_at_the_end_of_day",
+      "confidence": 1.0,
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -1172,8 +1069,52 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Descaling procedure",
-      "id": "ns:Step/descaling_procedure",
+      "name": "Milk frother of model Citiz & milk",
+      "id": "ns:Step/milk_frother_of_model_citiz_milk",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_procedure_p7",
+          "section_title": "Citiz service manual  37 OPERATION",
+          "page_start": 7,
+          "page_end": 7,
+          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+        },
+        {
+          "section_id": "sec_procedure_p8",
+          "section_title": "Citiz service manual  38 MAINTENANCE",
+          "page_start": 8,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+        },
+        {
+          "section_id": "sec_procedure_p9",
+          "section_title": "Citiz service manual  39 MAINTENANCE",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+        },
+        {
+          "section_id": "sec_procedure_p10",
+          "section_title": "Citiz service manual  40 MAINTENANCE",
+          "page_start": 10,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+        },
+        {
+          "section_id": "sec_generic_p11",
+          "section_title": "Operational content (page 11)",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Operational content (page 11)... (p.11-11)"
+        }
+      ]
+    },
+    {
+      "type": "ProcessStep",
+      "name": "Descaling",
+      "id": "ns:Step/descaling",
+      "confidence": 1.0,
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -1214,8 +1155,9 @@
     },
     {
       "type": "State",
-      "name": "Coffee machine not ready",
-      "id": "ns:State/coffee_machine_not_ready",
+      "name": "Coffee machine off",
+      "id": "ns:State/coffee_machine_off",
+      "confidence": 1.0,
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -1256,50 +1198,9 @@
     },
     {
       "type": "State",
-      "name": "Risk of electrical shock",
-      "id": "ns:State/risk_of_electrical_shock",
-      "spans": [
-        {
-          "section_id": "sec_procedure_p7",
-          "section_title": "Citiz service manual  37 OPERATION",
-          "page_start": 7,
-          "page_end": 7,
-          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
-        },
-        {
-          "section_id": "sec_procedure_p8",
-          "section_title": "Citiz service manual  38 MAINTENANCE",
-          "page_start": 8,
-          "page_end": 8,
-          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
-        },
-        {
-          "section_id": "sec_procedure_p9",
-          "section_title": "Citiz service manual  39 MAINTENANCE",
-          "page_start": 9,
-          "page_end": 9,
-          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
-        },
-        {
-          "section_id": "sec_procedure_p10",
-          "section_title": "Citiz service manual  40 MAINTENANCE",
-          "page_start": 10,
-          "page_end": 10,
-          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
-        },
-        {
-          "section_id": "sec_generic_p11",
-          "section_title": "Operational content (page 11)",
-          "page_start": 11,
-          "page_end": 11,
-          "source_text": "Section: Operational content (page 11)... (p.11-11)"
-        }
-      ]
-    },
-    {
-      "type": "State",
-      "name": "Risk of damage",
-      "id": "ns:State/risk_of_damage",
+      "name": "Coffee machine on",
+      "id": "ns:State/coffee_machine_on",
+      "confidence": 1.0,
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -1594,103 +1495,169 @@
       "type": "precedes",
       "from_ref": "ns:Mode/heat_up_mode",
       "to_ref": "ns:Mode/ready_mode",
-      "confidence": 1.0
+      "confidence": 1
     },
     {
       "type": "precedes",
       "from_ref": "ns:Mode/self_test_mode",
       "to_ref": "ns:Mode/ready_mode",
-      "confidence": 1.0
+      "confidence": 1
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/descaling_mode",
       "to_ref": "ns:State/descaling_ready",
-      "confidence": 1.0
+      "confidence": 1
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/descaling_mode",
       "to_ref": "ns:State/descaling_pump_on",
-      "confidence": 1.0
+      "confidence": 1
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/descaling_mode",
       "to_ref": "ns:State/descaling_pump_off",
-      "confidence": 1.0
+      "confidence": 1
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/brewing_mode",
       "to_ref": "ns:State/emptying_evaporating",
-      "confidence": 1.0
+      "confidence": 1
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/volume_brewing_mode",
       "to_ref": "ns:State/emptying_evaporating",
-      "confidence": 1.0
+      "confidence": 1
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/heat_up_mode",
       "to_ref": "ns:State/power_save",
-      "confidence": 1.0
+      "confidence": 1
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/heat_up_mode",
       "to_ref": "ns:State/overheat",
-      "confidence": 1.0
+      "confidence": 1
     },
     {
       "type": "appliesDuring",
       "from_ref": "ns:Mode/heat_up_mode",
       "to_ref": "ns:State/power_save_activation",
+      "confidence": 1
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Mode/emptying_mode",
+      "to_ref": "ns:Mode/standby_mode",
       "confidence": 1.0
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Step/empty_water_system",
-      "to_ref": "ns:Mode/citiz_co",
-      "confidence": 0.9
+      "from_ref": "ns:Mode/emptying_mode",
+      "to_ref": "ns:Step/switch_off_machine",
+      "confidence": 1.0
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Step/daily_maintenance_and_cleaning",
-      "to_ref": "ns:Mode/citiz_co",
-      "confidence": 0.9
+      "from_ref": "ns:Mode/emptying_mode",
+      "to_ref": "ns:Step/press_and_hold_coffee_button",
+      "confidence": 1.0
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Step/after_last_coffee_or_at_the_end_of_day",
-      "to_ref": "ns:Mode/citiz_co",
-      "confidence": 0.9
+      "from_ref": "ns:Mode/emptying_mode",
+      "to_ref": "ns:Step/switch_on_machine",
+      "confidence": 1.0
     },
     {
       "type": "appliesDuring",
-      "from_ref": "ns:Step/descaling_procedure",
-      "to_ref": "ns:Mode/citiz_co",
-      "confidence": 0.9
+      "from_ref": "ns:Mode/resetting_mode",
+      "to_ref": "ns:Step/switch_off_machine",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/resetting_mode",
+      "to_ref": "ns:Step/press_and_hold_coffee_button",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/resetting_mode",
+      "to_ref": "ns:Step/switch_on_machine",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/power_save_mode",
+      "to_ref": "ns:Step/switch_off_machine",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/power_save_mode",
+      "to_ref": "ns:Step/press_and_hold_coffee_button",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/power_save_mode",
+      "to_ref": "ns:Step/switch_on_machine",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/failure_mode",
+      "to_ref": "ns:Step/indicate_failure_with_coffee_button_led",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/standby_mode",
+      "to_ref": "ns:Step/switch_thermoblock_off",
+      "confidence": 1.0
+    },
+    {
+      "type": "verifies",
+      "from_ref": "ns:Test/factory_settings",
+      "to_ref": "ns:Step/reset_programmed_volumes",
+      "confidence": 1.0
     },
     {
       "type": "precedes",
       "from_ref": "ns:Step/empty_water_system",
-      "to_ref": "ns:State/coffee_machine_not_ready",
-      "confidence": 0.8
+      "to_ref": "ns:Step/daily_maintenance_and_cleaning",
+      "confidence": 1.0
     },
     {
-      "type": "verifies",
-      "from_ref": "ns:State/risk_of_electrical_shock",
-      "to_ref": "ns:Step/after_last_coffee_or_at_the_end_of_day",
-      "confidence": 0.85
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/daily_maintenance_and_cleaning",
+      "to_ref": "ns:State/coffee_machine_on",
+      "confidence": 1.0
     },
     {
-      "type": "verifies",
-      "from_ref": "ns:State/risk_of_damage",
-      "to_ref": "ns:Step/descaling_procedure",
-      "confidence": 0.85
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/after_last_coffee_or_at_the_end_of_day",
+      "to_ref": "ns:State/coffee_machine_off",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/milk_frother_of_model_citiz_milk",
+      "to_ref": "ns:State/coffee_machine_on",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/descaling",
+      "to_ref": "ns:State/coffee_machine_off",
+      "confidence": 1.0
     },
     {
       "type": "appliesDuring",
@@ -1724,7 +1691,7 @@
     }
   ],
   "provenance": {
-    "overall_confidence": 0.89,
+    "overall_confidence": 1.0,
     "documents_processed": [
       "2_Operations and Modality_Service Manual-31-48.parsed.json"
     ],
@@ -1846,34 +1813,25 @@
     "notes": "Neural extraction for profile operation_modes with provenance tracking and semantic normalization"
   },
   "quality": {
-    "json_valid": false,
-    "entities_count": 50,
-    "relations_count": 22,
-    "warnings": [
-      "Entity 0 missing 'confidence'",
-      "Entity 1 missing 'confidence'",
-      "Entity 2 missing 'confidence'",
-      "Entity 3 missing 'confidence'",
-      "Entity 4 missing 'confidence'",
-      "Entity 5 missing 'confidence'",
-      "Entity 6 missing 'confidence'",
-      "Entity 7 missing 'confidence'",
-      "Entity 8 missing 'confidence'"
-    ],
-    "overall_confidence": 0.89,
-    "avg_entity_confidence": 0.82,
-    "avg_relation_confidence": 0.959,
+    "json_valid": true,
+    "entities_count": 47,
+    "relations_count": 33,
+    "warnings": [],
+    "overall_confidence": 1.0,
+    "avg_entity_confidence": 1.0,
+    "avg_relation_confidence": 1.0,
     "entity_type_distribution": {
-      "MachineMode": 15,
-      "State": 12,
-      "ProcessStep": 23
+      "MachineMode": 13,
+      "State": 11,
+      "ProcessStep": 22,
+      "TestSpec": 1
     },
     "relation_type_distribution": {
-      "precedes": 7,
-      "appliesDuring": 13,
-      "verifies": 2
+      "precedes": 8,
+      "appliesDuring": 24,
+      "verifies": 1
     },
     "profile": "operation_modes",
-    "generated_at": "2025-11-05T10:35:07.398468+00:00"
+    "generated_at": "2025-11-05T13:31:47.586408+00:00"
   }
 }

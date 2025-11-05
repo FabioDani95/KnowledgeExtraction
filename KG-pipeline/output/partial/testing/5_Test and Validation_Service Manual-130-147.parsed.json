@@ -3,8 +3,8 @@
   "title": "5_Test and Validation_Service Manual-130-147",
   "datasource_code": "SRC_DOCS_PIPELINE5",
   "language": "en",
-  "ingestion_id": "5141e1a0-e02b-46db-bc33-c726a437fe58",
-  "created_utc": "2025-11-05T09:48:50.665631Z",
+  "ingestion_id": "b4bc9226-3024-4513-91b5-d27e482b5196",
+  "created_utc": "2025-11-05T13:27:24.871310Z",
   "source": {
     "uri": "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/source/testing/5_Test and Validation_Service Manual-130-147.pdf",
     "filename": "5_Test and Validation_Service Manual-130-147.pdf",
@@ -168,6 +168,7 @@
       ],
       "figures": [],
       "tags": [
+        "acceptance",
         "measurement",
         "safety",
         "test_case"
@@ -175,6 +176,7 @@
       "measurements": [
         {
           "type": "value",
+          "operator": null,
           "value": 12.0,
           "unit": "bar",
           "source_text": "gauge indicates 12 bar.",
@@ -182,6 +184,7 @@
         },
         {
           "type": "value",
+          "operator": null,
           "value": 30.0,
           "unit": "s",
           "source_text": "30sec.",
@@ -189,6 +192,7 @@
         },
         {
           "type": "value",
+          "operator": "=",
           "value": 120.0,
           "unit": "mL",
           "source_text": "120ml of water must be in the measur",
@@ -204,6 +208,7 @@
         },
         {
           "type": "value",
+          "operator": null,
           "value": 60.0,
           "unit": "mL",
           "source_text": "• Should < 60 ml leak out, then the pump",
@@ -211,6 +216,7 @@
         },
         {
           "type": "value",
+          "operator": null,
           "value": 4.0,
           "unit": "bar",
           "source_text": "while measuring (± 4 bar) means that",
@@ -224,11 +230,47 @@
         },
         {
           "text": "120ml of water must be in the measur",
-          "page": 4
+          "page": 4,
+          "operator": "=",
+          "value": 120.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "mL",
+          "source_text": "120ml of water must be in the measur"
+        },
+        {
+          "text": "• Should < 60 ml leak out, then the pump",
+          "page": 4,
+          "operator": "<",
+          "value": 60.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "mL",
+          "source_text": "• Should < 60 ml leak out, then the pump"
+        },
+        {
+          "text": "• Should < 60 ml leak out, then the pump",
+          "page": 4,
+          "operator": null,
+          "value": 60.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "mL",
+          "source_text": "• Should < 60 ml leak out, then the pump"
         },
         {
           "text": "while measuring (± 4 bar) means that",
-          "page": 4
+          "page": 4,
+          "operator": null,
+          "value": 4.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "bar",
+          "source_text": "while measuring (± 4 bar) means that"
         }
       ],
       "steps": [
@@ -320,12 +362,14 @@
       ],
       "figures": [],
       "tags": [
+        "acceptance",
         "measurement",
         "test_case"
       ],
       "measurements": [
         {
           "type": "value",
+          "operator": null,
           "value": 10.0,
           "unit": "s",
           "source_text": "for approximately 10 sec out of the",
@@ -333,6 +377,7 @@
         },
         {
           "type": "value",
+          "operator": "between",
           "value": 1619.0,
           "unit": "bar",
           "source_text": "between 1619bar (pressure check).",
@@ -340,6 +385,7 @@
         },
         {
           "type": "value",
+          "operator": null,
           "value": 23.0,
           "unit": "bar",
           "source_text": "pressure exceed 23 bar, switch off",
@@ -347,6 +393,7 @@
         },
         {
           "type": "value",
+          "operator": null,
           "value": 50.0,
           "unit": "s",
           "source_text": "than 50 sec with the valve closed.",
@@ -356,7 +403,14 @@
       "acceptance_criteria": [
         {
           "text": "between 1619bar (pressure check).",
-          "page": 6
+          "page": 6,
+          "operator": "between",
+          "value": 1619.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "bar",
+          "source_text": "between 1619bar (pressure check)."
         }
       ],
       "steps": [
@@ -402,6 +456,7 @@
       "measurements": [
         {
           "type": "value",
+          "operator": null,
           "value": 10.0,
           "unit": "s",
           "source_text": "button for approximately 10 sec to pre",
@@ -449,6 +504,7 @@
       ],
       "figures": [],
       "tags": [
+        "acceptance",
         "measurement",
         "test_case"
       ],
@@ -458,6 +514,7 @@
           "value": 86.0,
           "tolerance": 3.0,
           "unit": "°C",
+          "operator": "±",
           "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
           "page": 8
         },
@@ -466,11 +523,13 @@
           "value": 187.0,
           "tolerance": 5.4,
           "unit": "°F",
+          "operator": "±",
           "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
           "page": 8
         },
         {
           "type": "value",
+          "operator": null,
           "value": 86.0,
           "unit": "°C",
           "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
@@ -478,6 +537,7 @@
         },
         {
           "type": "value",
+          "operator": null,
           "value": 3.0,
           "unit": "°C",
           "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
@@ -485,6 +545,7 @@
         },
         {
           "type": "value",
+          "operator": null,
           "value": 187.0,
           "unit": "°F",
           "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
@@ -492,6 +553,7 @@
         },
         {
           "type": "value",
+          "operator": null,
           "value": 5.4,
           "unit": "°F",
           "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
@@ -505,7 +567,69 @@
         },
         {
           "text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
-          "page": 8
+          "page": 8,
+          "operator": "±",
+          "value": 86.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": 3.0,
+          "unit": "°C",
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        },
+        {
+          "text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+          "page": 8,
+          "operator": "±",
+          "value": 187.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": 5.4,
+          "unit": "°F",
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        },
+        {
+          "text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+          "page": 8,
+          "operator": null,
+          "value": 86.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "°C",
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        },
+        {
+          "text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+          "page": 8,
+          "operator": null,
+          "value": 3.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "°C",
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        },
+        {
+          "text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+          "page": 8,
+          "operator": null,
+          "value": 187.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "°F",
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        },
+        {
+          "text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+          "page": 8,
+          "operator": null,
+          "value": 5.4,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "°F",
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
         }
       ],
       "steps": [
@@ -539,6 +663,7 @@
       "measurements": [
         {
           "type": "value",
+          "operator": null,
           "value": 8.0,
           "unit": "°C",
           "source_text": "Use newly opened UHT, full fat or semiskimmed milk at fridge temperature (+8°C till",
@@ -546,6 +671,7 @@
         },
         {
           "type": "value",
+          "operator": null,
           "value": 10.0,
           "unit": "°C",
           "source_text": "+10°C) for the following tests only.",
@@ -584,11 +710,13 @@
       ],
       "figures": [],
       "tags": [
+        "acceptance",
         "measurement"
       ],
       "measurements": [
         {
           "type": "value",
+          "operator": null,
           "value": 240.0,
           "unit": "mL",
           "source_text": "• Prepare 240 ml hot milk in milk frother (use mixer without spring).",
@@ -596,6 +724,7 @@
         },
         {
           "type": "value",
+          "operator": "between",
           "value": 60.0,
           "unit": "°C",
           "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
@@ -603,6 +732,7 @@
         },
         {
           "type": "value",
+          "operator": "between",
           "value": 70.0,
           "unit": "°C",
           "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
@@ -610,6 +740,7 @@
         },
         {
           "type": "value",
+          "operator": "between",
           "value": 140.0,
           "unit": "°F",
           "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
@@ -617,6 +748,7 @@
         },
         {
           "type": "value",
+          "operator": "between",
           "value": 158.0,
           "unit": "°F",
           "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
@@ -626,7 +758,47 @@
       "acceptance_criteria": [
         {
           "text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
-          "page": 9
+          "page": 9,
+          "operator": "between",
+          "value": 60.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "°C",
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        },
+        {
+          "text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
+          "page": 9,
+          "operator": "between",
+          "value": 70.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "°C",
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        },
+        {
+          "text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
+          "page": 9,
+          "operator": "between",
+          "value": 140.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "°F",
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        },
+        {
+          "text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
+          "page": 9,
+          "operator": "between",
+          "value": 158.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "°F",
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
         }
       ],
       "steps": [
@@ -659,6 +831,7 @@
       "measurements": [
         {
           "type": "value",
+          "operator": null,
           "value": 120.0,
           "unit": "mL",
           "source_text": "• Prepare cold milk froth out of 120 ml milk in milk frother (use whisk with spring).",
@@ -748,6 +921,7 @@
         }
       ],
       "tags": [
+        "acceptance",
         "cross_reference",
         "measurement",
         "test_case"
@@ -912,7 +1086,9 @@
       "tables": [],
       "figures": [],
       "tags": [
+        "acceptance",
         "measurement",
+        "procedure",
         "test_case"
       ],
       "measurements": [],
@@ -961,6 +1137,7 @@
       ],
       "figures": [],
       "tags": [
+        "acceptance",
         "equipment",
         "measurement",
         "test_case"
@@ -1015,6 +1192,7 @@
       ],
       "figures": [],
       "tags": [
+        "acceptance",
         "measurement",
         "safety",
         "test_case"
@@ -1022,6 +1200,7 @@
       "measurements": [
         {
           "type": "value",
+          "operator": null,
           "value": 0.3,
           "unit": "Ω",
           "source_text": "0.3Ohm.",
@@ -1071,6 +1250,7 @@
       ],
       "figures": [],
       "tags": [
+        "acceptance",
         "cross_reference",
         "measurement",
         "test_case"
@@ -1078,6 +1258,7 @@
       "measurements": [
         {
           "type": "value",
+          "operator": null,
           "value": 0.3,
           "unit": "Ω",
           "source_text": "0.3Ohm.",
@@ -1199,13 +1380,16 @@
       "tables": [],
       "figures": [],
       "tags": [
+        "acceptance",
         "applicability",
         "measurement",
+        "procedure",
         "test_case"
       ],
       "measurements": [
         {
           "type": "value",
+          "operator": null,
           "value": 500.0,
           "unit": "V DC",
           "source_text": "is a very dangerous test because of a high test voltage (500 V DC).",
@@ -1251,6 +1435,7 @@
       ],
       "figures": [],
       "tags": [
+        "acceptance",
         "equipment",
         "measurement",
         "test_case"
@@ -1305,6 +1490,8 @@
       ],
       "figures": [],
       "tags": [
+        "acceptance",
+        "applicability",
         "measurement",
         "safety",
         "test_case"
@@ -1312,6 +1499,7 @@
       "measurements": [
         {
           "type": "value",
+          "operator": null,
           "value": 500.0,
           "unit": "V DC",
           "source_text": "an insulation test voltage of 500 V DC.",
@@ -1319,6 +1507,7 @@
         },
         {
           "type": "value",
+          "operator": ">",
           "value": 300.0,
           "unit": "kΩ",
           "source_text": "higher than 300kOhm",
@@ -1326,6 +1515,7 @@
         },
         {
           "type": "value",
+          "operator": null,
           "value": 0.0,
           "unit": "Ω",
           "source_text": "(300,000Ohm).",
@@ -1339,7 +1529,14 @@
         },
         {
           "text": "higher than 300kOhm",
-          "page": 16
+          "page": 16,
+          "operator": ">",
+          "value": 300.0,
+          "min_value": null,
+          "max_value": null,
+          "tolerance": null,
+          "unit": "kΩ",
+          "source_text": "higher than 300kOhm"
         }
       ],
       "steps": [
@@ -1360,7 +1557,9 @@
         "2) Press \"measure\" button.",
         "3) Read off displayed insulation resist"
       ],
-      "applicability": [],
+      "applicability": [
+        "Additional tests for coffee machine"
+      ],
       "cross_references": [],
       "text": "Danger of electrical shock/short circuit!\nDo not plug in the coffee machine during insulation test.\nDanger of electrical shock!\nDo not touch tip of test probes.\nDo not touch metallic parts of coffee machine during test.\nRead and observe safety instructions in user manual of test equipment.\nA Swiss power plug is\nshown here as an\nexample.\nUse a short circuit\nplug or special alliga\ntor clips etc. as sub\nstitute for this test adapter.\n1) Connect the phase and neutral pin of\nthe power plug together with a test\nadapter (procured by the repair\ncentre).\n2) Connect the black measuring cable to\nthe test adapter (see image).\n3) Turn the ONOFF machine's main\nswitch on position I (ON).\nSymbolic illustration\nof test equipment.\n4) Switch on test equipment and select\nan insulation test voltage of 500 V DC.\nSome test equipment\ndisplays test passed\nor failed instead of\nthe insulation resistance.\n5) Touch closing handle with red test\nprobe.\n6) Press \"measure\" button.\n7) Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300,000Ohm).\nCitiz service manual  146 FUNCTION TESTS\nThe coffee machine\nCitiz & Co has 2 test\nholes to check both\nthermoblocks.\nTest holes on bottom of Citiz / Citiz & milk / Citiz & Co  platforms\n8) Insert tip of red test probe in test hole\nand touch thermoblock.\n9) Press \"measure\" button.\n10)Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300’000Ohm).\n11)Switch off test equipment.\n12)Short red with black test probe to\nmake sure that test voltage is dis\ncharged.\n13)Fill in results in a test report.\nAdditional tests for coffee machine\nCitiz & milk:\n1) Touch upper metallic part of milk\nfrother with red test probe.\n2) Press \"measure\" button.\n3) Read off displayed insulation resist\nance or test result."
     }
@@ -1369,7 +1568,8 @@
     "skip_patterns": [
       "^(test\\s+report|quality\\s+check).*$",
       "^(confidential|internal use).*",
-      "^\\s*\\d+\\s*$"
+      "^\\s*\\d+\\s*$",
+      "^[\\-|\\s─═]+$"
     ],
     "max_chars_per_section": 10000,
     "allowed_entities": [],
@@ -1381,9 +1581,9 @@
     "figures_detected": 2,
     "safety_blocks_count": 3,
     "procedural_steps_count": 83,
-    "acceptance_criteria_count": 21,
+    "acceptance_criteria_count": 31,
     "measurements_extracted_count": 31,
-    "applicability_clauses_count": 7,
+    "applicability_clauses_count": 8,
     "notes": "26 sections extracted"
   },
   "discarded_blocks": [
@@ -1396,6 +1596,3033 @@
       "reason": "header",
       "text": "Test report",
       "page": 15
+    }
+  ],
+  "promoted_entities": [
+    {
+      "id": "TESTCASE_SEC_001",
+      "type": "TestCase",
+      "name": "Section 1",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_001",
+          "page": 2,
+          "source_text": "Section 1"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_002",
+      "type": "TestCase",
+      "name": "9.2.2 Citiz pressure gauge adapter",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_002",
+          "page": 2,
+          "source_text": "9.2.2 Citiz pressure gauge adapter"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_003",
+      "type": "TestCase",
+      "name": "9.3 Measure flow rate",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_003",
+          "page": 3,
+          "source_text": "9.3 Measure flow rate"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_004",
+      "type": "TestCase",
+      "name": "9.4 Pressure and leakage checks",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "9.4 Pressure and leakage checks"
+        }
+      ],
+      "metadata": {
+        "section_role": "warning",
+        "section_tags": [
+          "acceptance",
+          "measurement",
+          "safety",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "SAFETY_SEC_004",
+      "type": "SafetyNotice",
+      "name": "Safety notice - 9.4 Pressure and leakage checks",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "Check the following parts of the coffee machine for leakages:\n• Compact brewing unit\n• Hose connections\n• Thermoblock\n• Pump\n• Self priming device 8) Switch on coffee machine.\n9) After heating up, press the \"small cup\"\nbutton.\n10) Open the valve until water begins to\nflow.\n11) Close the valve until the pressure\ngauge indicates 12 bar.\nConstantly monitor the pressure\ngauge and if required readjust the\nvalve. As the temperature\nincreases, so does the pressure,\nreadjust the pressure to 12 bar\nwhen required.\n12) Carry out measurement for approx.\n30sec.\n13) Control measuring cup: at least 60\n120ml of water must be in the measur\ning cup.\n14) Open the valve and let water flow out\nof the pressure tester.\nNotices:\n• Should < 60 ml leak out, then the pump\nis defective or there is a leak in the\nwater system. • Large deviations in indicated pressure\nwhile measuring (± 4 bar) means that\nthe pump is defective.\nDangerous mains voltage inside the coffee machine!\nDo not touch any parts under voltage while checking for leakages!\nDangerous hot parts under pressure inside the coffee machine!\nDo not touch any hot/pressurized parts while checking for leakages!\nAlways wear protective goggles.\nCitiz service manual  134 FUNCTION TESTS"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_004",
+        "context": "Check the following parts of the coffee machine for leakages:\n• Compact brewing unit\n• Hose connections\n• Thermoblock\n• Pump\n• Self priming device 8) Switch on coffee machine.\n9) After heating up, press the \"small cup\"\nbutton.\n10) Open the valve until water begins to\nflow.\n11) Close the valve until the pressure\ngauge indicates 12 bar.\nConstantly monitor the pressure\ngauge and if required readjust the\nvalve. As the temperature\nincreases, so does the pressure,\nreadjust the pressure to 12 bar\nwhen required.\n12) Carry out measurement for approx.\n30sec.\n13) Control measuring cup: at least 60\n120ml of water must be in the measur\ning cup.\n14) Open the valve and let water flow out\nof the pressure tester.\nNotices:\n• Should < 60 ml leak out, then the pump\nis defective or there is a leak in the\nwater system. • Large deviations in indicated pressure\nwhile measuring (± 4 bar) means that\nthe pump is defective.\nDangerous mains voltage inside the coffee machine!\nDo not touch any parts under voltage while checking for leakages!\nDangerous hot parts under pressure inside the coffee machine!\nDo not touch any hot/pressurized parts while checking for leakages!\nAlways wear protective goggles.\nCitiz service manual  134 FUNCTION TESTS"
+      }
+    },
+    {
+      "id": "MEAS_SEC_004_01",
+      "type": "Measurement",
+      "name": "9.4 Pressure and leakage checks measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "gauge indicates 12 bar."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_004",
+        "context": "gauge indicates 12 bar.",
+        "operator": null
+      },
+      "nominal_value": 12.0,
+      "unit_raw": "bar"
+    },
+    {
+      "id": "MEAS_SEC_004_02",
+      "type": "Measurement",
+      "name": "9.4 Pressure and leakage checks measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "30sec."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_004",
+        "context": "30sec.",
+        "operator": null
+      },
+      "nominal_value": 30.0,
+      "unit_raw": "s"
+    },
+    {
+      "id": "MEAS_SEC_004_03",
+      "type": "Measurement",
+      "name": "9.4 Pressure and leakage checks measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "120ml of water must be in the measur"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_004",
+        "context": "120ml of water must be in the measur",
+        "operator": "="
+      },
+      "nominal_value": 120.0,
+      "unit_raw": "mL"
+    },
+    {
+      "id": "MEAS_SEC_004_04",
+      "type": "Measurement",
+      "name": "9.4 Pressure and leakage checks measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "• Should < 60 ml leak out, then the pump"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_004",
+        "context": "• Should < 60 ml leak out, then the pump",
+        "operator": "<"
+      },
+      "nominal_value": 60.0,
+      "unit_raw": "mL"
+    },
+    {
+      "id": "MEAS_SEC_004_05",
+      "type": "Measurement",
+      "name": "9.4 Pressure and leakage checks measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "• Should < 60 ml leak out, then the pump"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_004",
+        "context": "• Should < 60 ml leak out, then the pump",
+        "operator": null
+      },
+      "nominal_value": 60.0,
+      "unit_raw": "mL"
+    },
+    {
+      "id": "MEAS_SEC_004_06",
+      "type": "Measurement",
+      "name": "9.4 Pressure and leakage checks measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "while measuring (± 4 bar) means that"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_004",
+        "context": "while measuring (± 4 bar) means that",
+        "operator": null
+      },
+      "nominal_value": 4.0,
+      "unit_raw": "bar"
+    },
+    {
+      "id": "AC_SEC_004_01",
+      "type": "AcceptanceCriterion",
+      "name": "9.4 Pressure and leakage checks criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "13) Control measuring cup: at least 60"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_004"
+      }
+    },
+    {
+      "id": "AC_SEC_004_02",
+      "type": "AcceptanceCriterion",
+      "name": "9.4 Pressure and leakage checks criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "120ml of water must be in the measur"
+        }
+      ],
+      "metadata": {
+        "operator": "=",
+        "unit": "mL",
+        "value": 120.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_004"
+      }
+    },
+    {
+      "id": "AC_SEC_004_03",
+      "type": "AcceptanceCriterion",
+      "name": "9.4 Pressure and leakage checks criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "• Should < 60 ml leak out, then the pump"
+        }
+      ],
+      "metadata": {
+        "operator": "<",
+        "unit": "mL",
+        "value": 60.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_004"
+      }
+    },
+    {
+      "id": "AC_SEC_004_04",
+      "type": "AcceptanceCriterion",
+      "name": "9.4 Pressure and leakage checks criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "• Should < 60 ml leak out, then the pump"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": "mL",
+        "value": 60.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_004"
+      }
+    },
+    {
+      "id": "AC_SEC_004_05",
+      "type": "AcceptanceCriterion",
+      "name": "9.4 Pressure and leakage checks criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "while measuring (± 4 bar) means that"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": "bar",
+        "value": 4.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_004"
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_005",
+      "type": "TestCase",
+      "name": "9.4.1 Preparations",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_005",
+          "page": 5,
+          "source_text": "9.4.1 Preparations"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_006",
+      "type": "TestCase",
+      "name": "9.4.2 Test run 9) Connect mains cable.",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "9.4.2 Test run 9) Connect mains cable."
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "acceptance",
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "MEAS_SEC_006_01",
+      "type": "Measurement",
+      "name": "9.4.2 Test run 9) Connect mains cable. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "for approximately 10 sec out of the"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_006",
+        "context": "for approximately 10 sec out of the",
+        "operator": null
+      },
+      "nominal_value": 10.0,
+      "unit_raw": "s"
+    },
+    {
+      "id": "MEAS_SEC_006_02",
+      "type": "Measurement",
+      "name": "9.4.2 Test run 9) Connect mains cable. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "between 1619bar (pressure check)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_006",
+        "context": "between 1619bar (pressure check).",
+        "operator": "between"
+      },
+      "nominal_value": 1619.0,
+      "unit_raw": "bar"
+    },
+    {
+      "id": "MEAS_SEC_006_03",
+      "type": "Measurement",
+      "name": "9.4.2 Test run 9) Connect mains cable. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "pressure exceed 23 bar, switch off"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_006",
+        "context": "pressure exceed 23 bar, switch off",
+        "operator": null
+      },
+      "nominal_value": 23.0,
+      "unit_raw": "bar"
+    },
+    {
+      "id": "MEAS_SEC_006_04",
+      "type": "Measurement",
+      "name": "9.4.2 Test run 9) Connect mains cable. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "than 50 sec with the valve closed."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_006",
+        "context": "than 50 sec with the valve closed.",
+        "operator": null
+      },
+      "nominal_value": 50.0,
+      "unit_raw": "s"
+    },
+    {
+      "id": "AC_SEC_006_01",
+      "type": "AcceptanceCriterion",
+      "name": "9.4.2 Test run 9) Connect mains cable. criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "between 1619bar (pressure check)."
+        }
+      ],
+      "metadata": {
+        "operator": "between",
+        "unit": "bar",
+        "value": 1619.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_006"
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_007",
+      "type": "TestCase",
+      "name": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "page": 7,
+          "source_text": "9.5 Measure coffee temperature 15)Switch off the coffee machine."
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "MEAS_SEC_007_01",
+      "type": "Measurement",
+      "name": "9.5 Measure coffee temperature 15)Switch off the coffee machine. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "page": 7,
+          "source_text": "button for approximately 10 sec to pre"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_007",
+        "context": "button for approximately 10 sec to pre",
+        "operator": null
+      },
+      "nominal_value": 10.0,
+      "unit_raw": "s"
+    },
+    {
+      "id": "TESTCASE_SEC_008",
+      "type": "TestCase",
+      "name": "20 ml of coffee.",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "20 ml of coffee."
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "acceptance",
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "MEAS_SEC_008_01",
+      "type": "Measurement",
+      "name": "20 ml of coffee. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_008",
+        "context": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+        "operator": "±"
+      },
+      "nominal_value": 86.0,
+      "tolerance": 3.0,
+      "unit_raw": "°C"
+    },
+    {
+      "id": "MEAS_SEC_008_02",
+      "type": "Measurement",
+      "name": "20 ml of coffee. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_008",
+        "context": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+        "operator": "±"
+      },
+      "nominal_value": 187.0,
+      "tolerance": 5.4,
+      "unit_raw": "°F"
+    },
+    {
+      "id": "MEAS_SEC_008_03",
+      "type": "Measurement",
+      "name": "20 ml of coffee. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_008",
+        "context": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+        "operator": null
+      },
+      "nominal_value": 86.0,
+      "unit_raw": "°C"
+    },
+    {
+      "id": "MEAS_SEC_008_04",
+      "type": "Measurement",
+      "name": "20 ml of coffee. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_008",
+        "context": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+        "operator": null
+      },
+      "nominal_value": 3.0,
+      "unit_raw": "°C"
+    },
+    {
+      "id": "MEAS_SEC_008_05",
+      "type": "Measurement",
+      "name": "20 ml of coffee. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_008",
+        "context": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+        "operator": null
+      },
+      "nominal_value": 187.0,
+      "unit_raw": "°F"
+    },
+    {
+      "id": "MEAS_SEC_008_06",
+      "type": "Measurement",
+      "name": "20 ml of coffee. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_008",
+        "context": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+        "operator": null
+      },
+      "nominal_value": 5.4,
+      "unit_raw": "°F"
+    },
+    {
+      "id": "AC_SEC_008_01",
+      "type": "AcceptanceCriterion",
+      "name": "20 ml of coffee. criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "The coffee temperature should be"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_008"
+      }
+    },
+    {
+      "id": "AC_SEC_008_02",
+      "type": "AcceptanceCriterion",
+      "name": "20 ml of coffee. criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "metadata": {
+        "operator": "±",
+        "unit": "°C",
+        "value": 86.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": 3.0,
+        "section_id": "sec_008"
+      }
+    },
+    {
+      "id": "AC_SEC_008_03",
+      "type": "AcceptanceCriterion",
+      "name": "20 ml of coffee. criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "metadata": {
+        "operator": "±",
+        "unit": "°F",
+        "value": 187.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": 5.4,
+        "section_id": "sec_008"
+      }
+    },
+    {
+      "id": "AC_SEC_008_04",
+      "type": "AcceptanceCriterion",
+      "name": "20 ml of coffee. criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": "°C",
+        "value": 86.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_008"
+      }
+    },
+    {
+      "id": "AC_SEC_008_05",
+      "type": "AcceptanceCriterion",
+      "name": "20 ml of coffee. criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": "°C",
+        "value": 3.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_008"
+      }
+    },
+    {
+      "id": "AC_SEC_008_06",
+      "type": "AcceptanceCriterion",
+      "name": "20 ml of coffee. criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": "°F",
+        "value": 187.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_008"
+      }
+    },
+    {
+      "id": "AC_SEC_008_07",
+      "type": "AcceptanceCriterion",
+      "name": "20 ml of coffee. criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": "°F",
+        "value": 5.4,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_008"
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_010",
+      "type": "TestCase",
+      "name": "Prerequisite",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_010",
+          "page": 9,
+          "source_text": "Prerequisite"
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "measurement",
+          "precondition",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "MEAS_SEC_010_01",
+      "type": "Measurement",
+      "name": "Prerequisite measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_010",
+          "page": 9,
+          "source_text": "Use newly opened UHT, full fat or semiskimmed milk at fridge temperature (+8°C till"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_010",
+        "context": "Use newly opened UHT, full fat or semiskimmed milk at fridge temperature (+8°C till",
+        "operator": null
+      },
+      "nominal_value": 8.0,
+      "unit_raw": "°C"
+    },
+    {
+      "id": "MEAS_SEC_010_02",
+      "type": "Measurement",
+      "name": "Prerequisite measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_010",
+          "page": 9,
+          "source_text": "+10°C) for the following tests only."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_010",
+        "context": "+10°C) for the following tests only.",
+        "operator": null
+      },
+      "nominal_value": 10.0,
+      "unit_raw": "°C"
+    },
+    {
+      "id": "TESTCASE_SEC_011",
+      "type": "TestCase",
+      "name": "9.6.1 Measure hot milk temperature",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "9.6.1 Measure hot milk temperature"
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "acceptance",
+          "measurement"
+        ]
+      }
+    },
+    {
+      "id": "MEAS_SEC_011_01",
+      "type": "Measurement",
+      "name": "9.6.1 Measure hot milk temperature measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "• Prepare 240 ml hot milk in milk frother (use mixer without spring)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_011",
+        "context": "• Prepare 240 ml hot milk in milk frother (use mixer without spring).",
+        "operator": null
+      },
+      "nominal_value": 240.0,
+      "unit_raw": "mL"
+    },
+    {
+      "id": "MEAS_SEC_011_02",
+      "type": "Measurement",
+      "name": "9.6.1 Measure hot milk temperature measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_011",
+        "context": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
+        "operator": "between"
+      },
+      "nominal_value": 60.0,
+      "unit_raw": "°C"
+    },
+    {
+      "id": "MEAS_SEC_011_03",
+      "type": "Measurement",
+      "name": "9.6.1 Measure hot milk temperature measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_011",
+        "context": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
+        "operator": "between"
+      },
+      "nominal_value": 70.0,
+      "unit_raw": "°C"
+    },
+    {
+      "id": "MEAS_SEC_011_04",
+      "type": "Measurement",
+      "name": "9.6.1 Measure hot milk temperature measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_011",
+        "context": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
+        "operator": "between"
+      },
+      "nominal_value": 140.0,
+      "unit_raw": "°F"
+    },
+    {
+      "id": "MEAS_SEC_011_05",
+      "type": "Measurement",
+      "name": "9.6.1 Measure hot milk temperature measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_011",
+        "context": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
+        "operator": "between"
+      },
+      "nominal_value": 158.0,
+      "unit_raw": "°F"
+    },
+    {
+      "id": "AC_SEC_011_01",
+      "type": "AcceptanceCriterion",
+      "name": "9.6.1 Measure hot milk temperature criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ],
+      "metadata": {
+        "operator": "between",
+        "unit": "°C",
+        "value": 60.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_011"
+      }
+    },
+    {
+      "id": "AC_SEC_011_02",
+      "type": "AcceptanceCriterion",
+      "name": "9.6.1 Measure hot milk temperature criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ],
+      "metadata": {
+        "operator": "between",
+        "unit": "°C",
+        "value": 70.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_011"
+      }
+    },
+    {
+      "id": "AC_SEC_011_03",
+      "type": "AcceptanceCriterion",
+      "name": "9.6.1 Measure hot milk temperature criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ],
+      "metadata": {
+        "operator": "between",
+        "unit": "°F",
+        "value": 140.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_011"
+      }
+    },
+    {
+      "id": "AC_SEC_011_04",
+      "type": "AcceptanceCriterion",
+      "name": "9.6.1 Measure hot milk temperature criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ],
+      "metadata": {
+        "operator": "between",
+        "unit": "°F",
+        "value": 158.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_011"
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_012",
+      "type": "TestCase",
+      "name": "9.6.2 Measure milk froth ratio",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_012",
+          "page": 9,
+          "source_text": "9.6.2 Measure milk froth ratio"
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "measurement"
+        ]
+      }
+    },
+    {
+      "id": "MEAS_SEC_012_01",
+      "type": "Measurement",
+      "name": "9.6.2 Measure milk froth ratio measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_012",
+          "page": 9,
+          "source_text": "• Prepare cold milk froth out of 120 ml milk in milk frother (use whisk with spring)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_012",
+        "context": "• Prepare cold milk froth out of 120 ml milk in milk frother (use whisk with spring).",
+        "operator": null
+      },
+      "nominal_value": 120.0,
+      "unit_raw": "mL"
+    },
+    {
+      "id": "TESTCASE_SEC_013",
+      "type": "TestCase",
+      "name": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_013",
+          "page": 9,
+          "source_text": "60 sec after preparation....................................................................................x = 190 The disregard of this"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_014",
+      "type": "TestCase",
+      "name": "9.7 NTC temperature sensor functionality",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_014",
+          "page": 10,
+          "source_text": "9.7 NTC temperature sensor functionality"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "acceptance",
+          "cross_reference",
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "AC_SEC_014_01",
+      "type": "AcceptanceCriterion",
+      "name": "9.7 NTC temperature sensor functionality criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_014",
+          "page": 10,
+          "source_text": "The resistance of the NTC temperature sensor must be within a defined range, other"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_014"
+      }
+    },
+    {
+      "id": "XREF_SEC_014_01",
+      "type": "CrossReference",
+      "name": "Reference page 104",
+      "confidence": 0.75,
+      "spans": [
+        {
+          "section_id": "sec_014",
+          "page": 10,
+          "source_text": "from thermoblock (refer to page 104"
+        }
+      ],
+      "metadata": {
+        "target_page": 104,
+        "section_id": "sec_014"
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_015",
+      "type": "TestCase",
+      "name": "Measurement table",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_015",
+          "page": 11,
+          "source_text": "Measurement table"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement"
+        ]
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_020",
+      "type": "TestCase",
+      "name": "35  95  60.90  65.86",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_020",
+          "page": 11,
+          "source_text": "35  95  60.90  65.86"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_022",
+      "type": "TestCase",
+      "name": "9.8.1 What coffee machine has to be tested and when?",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "9.8.1 What coffee machine has to be tested and when?"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "applicability",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "APP_SEC_022_01",
+      "type": "ApplicabilityClause",
+      "name": "This test is only necessary",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "This test is only necessary"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_022"
+      }
+    },
+    {
+      "id": "APP_SEC_022_02",
+      "type": "ApplicabilityClause",
+      "name": "for class 1 equipment (threewire power cord with protective earth)",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "for class 1 equipment (threewire power cord with protective earth)"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_022"
+      }
+    },
+    {
+      "id": "APP_SEC_022_03",
+      "type": "ApplicabilityClause",
+      "name": "for models Citiz & milk, EF 485/486",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "for models Citiz & milk, EF 485/486"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_022"
+      }
+    },
+    {
+      "id": "APP_SEC_022_04",
+      "type": "ApplicabilityClause",
+      "name": "after a repair whenever a general disassembly of the platform and/or core unit was",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "after a repair whenever a general disassembly of the platform and/or core unit was"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_022"
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_023",
+      "type": "TestCase",
+      "name": "9.8.2 General",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_023",
+          "page": 12,
+          "source_text": "9.8.2 General"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_024",
+      "type": "TestCase",
+      "name": "Description",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "page": 12,
+          "source_text": "Description"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "acceptance",
+          "measurement",
+          "procedure",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "AC_SEC_024_01",
+      "type": "AcceptanceCriterion",
+      "name": "Description criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "page": 12,
+          "source_text": "Protective earth continuity measurements are made between the protective earth"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_024"
+      }
+    },
+    {
+      "id": "AC_SEC_024_02",
+      "type": "AcceptanceCriterion",
+      "name": "Description criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "page": 12,
+          "source_text": "the ground (earth) connection does not have an interruption between the plug and"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_024"
+      }
+    },
+    {
+      "id": "AC_SEC_024_03",
+      "type": "AcceptanceCriterion",
+      "name": "Description criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "page": 12,
+          "source_text": "the permissible ground resistance of those conductive, touchable parts is less than"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_024"
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_026",
+      "type": "TestCase",
+      "name": "Test equipment",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_026",
+          "page": 12,
+          "source_text": "Test equipment"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "acceptance",
+          "equipment",
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "AC_SEC_026_01",
+      "type": "AcceptanceCriterion",
+      "name": "Test equipment criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_026",
+          "page": 12,
+          "source_text": "tive earth continuity measurements. Detailed requirements and tolerances must be veri"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_026"
+      }
+    },
+    {
+      "id": "AC_SEC_026_02",
+      "type": "AcceptanceCriterion",
+      "name": "Test equipment criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_026",
+          "page": 12,
+          "source_text": "For legal reasons a repair or test report should be prepared and filed with following infor"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_026"
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_027",
+      "type": "TestCase",
+      "name": "9.8.3 Test sequence",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_027",
+          "page": 13,
+          "source_text": "9.8.3 Test sequence"
+        }
+      ],
+      "metadata": {
+        "section_role": "warning",
+        "section_tags": [
+          "acceptance",
+          "measurement",
+          "safety",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "SAFETY_SEC_027",
+      "type": "SafetyNotice",
+      "name": "Safety notice - 9.8.3 Test sequence",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_027",
+          "page": 13,
+          "source_text": "This test sequence is\nnot applicable for cof\nfee machines with\ntwowire power cords (with\nout ground pin).\nDanger of electrocution!\nDo not plug in the coffee machine during the protective earth continuity\ntest.\nRead and observe safety instructions in user manual of test equipment.\n1) Connect black measuring cable to\nground pin of power plug with an alli\ngator clip (example shown: Swiss\npower plug).\nSymbolic illustration\nof test equipment.\n2) Switch on test equipment and select\nprotective earth continuity test.\nThe coffee machine\nCitiz & Co has 2 test\nholes to check both\nthermoblocks.\nTest holes on bottom of Citiz / Citiz & milk / Citiz & Co  platforms\n3) Insert tip of red test probe in test hole\nand touch thermoblock.\n4) Press \"measure\" button and read off\ndisplayed resistance.\nThe resistance must be lower than\n0.3Ohm.\n5) Fill in measured value(s) in a test\nreport.\nCitiz service manual  143 FUNCTION TESTS"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_027",
+        "context": "This test sequence is\nnot applicable for cof\nfee machines with\ntwowire power cords (with\nout ground pin).\nDanger of electrocution!\nDo not plug in the coffee machine during the protective earth continuity\ntest.\nRead and observe safety instructions in user manual of test equipment.\n1) Connect black measuring cable to\nground pin of power plug with an alli\ngator clip (example shown: Swiss\npower plug).\nSymbolic illustration\nof test equipment.\n2) Switch on test equipment and select\nprotective earth continuity test.\nThe coffee machine\nCitiz & Co has 2 test\nholes to check both\nthermoblocks.\nTest holes on bottom of Citiz / Citiz & milk / Citiz & Co  platforms\n3) Insert tip of red test probe in test hole\nand touch thermoblock.\n4) Press \"measure\" button and read off\ndisplayed resistance.\nThe resistance must be lower than\n0.3Ohm.\n5) Fill in measured value(s) in a test\nreport.\nCitiz service manual  143 FUNCTION TESTS"
+      }
+    },
+    {
+      "id": "MEAS_SEC_027_01",
+      "type": "Measurement",
+      "name": "9.8.3 Test sequence measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_027",
+          "page": 13,
+          "source_text": "0.3Ohm."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_027",
+        "context": "0.3Ohm.",
+        "operator": null
+      },
+      "nominal_value": 0.3,
+      "unit_raw": "Ω"
+    },
+    {
+      "id": "AC_SEC_027_01",
+      "type": "AcceptanceCriterion",
+      "name": "9.8.3 Test sequence criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_027",
+          "page": 13,
+          "source_text": "The resistance must be lower than"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_027"
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_028",
+      "type": "TestCase",
+      "name": "9.8.4 What to do if the protective earth continuity test fails",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "9.8.4 What to do if the protective earth continuity test fails"
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "acceptance",
+          "cross_reference",
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "MEAS_SEC_028_01",
+      "type": "Measurement",
+      "name": "9.8.4 What to do if the protective earth continuity test fails measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "0.3Ohm."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_028",
+        "context": "0.3Ohm.",
+        "operator": null
+      },
+      "nominal_value": 0.3,
+      "unit_raw": "Ω"
+    },
+    {
+      "id": "AC_SEC_028_01",
+      "type": "AcceptanceCriterion",
+      "name": "9.8.4 What to do if the protective earth continuity test fails criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "• Clean ground contact on milk frother. Measure resistance between ground contact"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_028"
+      }
+    },
+    {
+      "id": "AC_SEC_028_02",
+      "type": "AcceptanceCriterion",
+      "name": "9.8.4 What to do if the protective earth continuity test fails criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "The resistance must be lower than"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_028"
+      }
+    },
+    {
+      "id": "XREF_SEC_028_01",
+      "type": "CrossReference",
+      "name": "Reference page 75",
+      "confidence": 0.75,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "• Check/measure ground connection in platform (refer to page 75)."
+        }
+      ],
+      "metadata": {
+        "target_page": 75,
+        "section_id": "sec_028"
+      }
+    },
+    {
+      "id": "XREF_SEC_028_02",
+      "type": "CrossReference",
+      "name": "Reference page 73",
+      "confidence": 0.75,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "• Check/measure ground connection on milk frother connector (refer to page 73 and"
+        }
+      ],
+      "metadata": {
+        "target_page": 73,
+        "section_id": "sec_028"
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_030",
+      "type": "TestCase",
+      "name": "9.9.1 What coffee machines have to be tested and when?",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_030",
+          "page": 15,
+          "source_text": "9.9.1 What coffee machines have to be tested and when?"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "applicability",
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "APP_SEC_030_01",
+      "type": "ApplicabilityClause",
+      "name": "for class 1 and 2 equipment (with/without  protective earth)",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_030",
+          "page": 15,
+          "source_text": "for class 1 and 2 equipment (with/without  protective earth)"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_030"
+      }
+    },
+    {
+      "id": "APP_SEC_030_02",
+      "type": "ApplicabilityClause",
+      "name": "after a repair whenever a general disassembly of the platform and/or core unit was",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_030",
+          "page": 15,
+          "source_text": "after a repair whenever a general disassembly of the platform and/or core unit was"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_030"
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_031",
+      "type": "TestCase",
+      "name": "9.9.2 General",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_031",
+          "page": 15,
+          "source_text": "9.9.2 General"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_032",
+      "type": "TestCase",
+      "name": "Description",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_032",
+          "page": 15,
+          "source_text": "Description"
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "acceptance",
+          "applicability",
+          "measurement",
+          "procedure",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "MEAS_SEC_032_01",
+      "type": "Measurement",
+      "name": "Description measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_032",
+          "page": 15,
+          "source_text": "is a very dangerous test because of a high test voltage (500 V DC)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_032",
+        "context": "is a very dangerous test because of a high test voltage (500 V DC).",
+        "operator": null
+      },
+      "nominal_value": 500.0,
+      "unit_raw": "V DC"
+    },
+    {
+      "id": "AC_SEC_032_01",
+      "type": "AcceptanceCriterion",
+      "name": "Description criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_032",
+          "page": 15,
+          "source_text": "test voltage is applied between phase/neutral and selected parts of the coffee machine."
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_032"
+      }
+    },
+    {
+      "id": "APP_SEC_032_01",
+      "type": "ApplicabilityClause",
+      "name": "ments after a repair,",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_032",
+          "page": 15,
+          "source_text": "ments after a repair,"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_032"
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_033",
+      "type": "TestCase",
+      "name": "Test equipment",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_033",
+          "page": 15,
+          "source_text": "Test equipment"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "acceptance",
+          "equipment",
+          "measurement",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "AC_SEC_033_01",
+      "type": "AcceptanceCriterion",
+      "name": "Test equipment criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_033",
+          "page": 15,
+          "source_text": "tion and withstanding voltage tests. Detailed requirements and tolerances must be veri"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_033"
+      }
+    },
+    {
+      "id": "AC_SEC_033_02",
+      "type": "AcceptanceCriterion",
+      "name": "Test equipment criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_033",
+          "page": 15,
+          "source_text": "For legal reasons a repair or test report should be prepared and filed with following infor"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_033"
+      }
+    },
+    {
+      "id": "TESTCASE_SEC_034",
+      "type": "TestCase",
+      "name": "9.9.3 Test sequence",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "9.9.3 Test sequence"
+        }
+      ],
+      "metadata": {
+        "section_role": "warning",
+        "section_tags": [
+          "acceptance",
+          "applicability",
+          "measurement",
+          "safety",
+          "test_case"
+        ]
+      }
+    },
+    {
+      "id": "SAFETY_SEC_034",
+      "type": "SafetyNotice",
+      "name": "Safety notice - 9.9.3 Test sequence",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "Danger of electrical shock/short circuit!\nDo not plug in the coffee machine during insulation test.\nDanger of electrical shock!\nDo not touch tip of test probes.\nDo not touch metallic parts of coffee machine during test.\nRead and observe safety instructions in user manual of test equipment.\nA Swiss power plug is\nshown here as an\nexample.\nUse a short circuit\nplug or special alliga\ntor clips etc. as sub\nstitute for this test adapter.\n1) Connect the phase and neutral pin of\nthe power plug together with a test\nadapter (procured by the repair\ncentre).\n2) Connect the black measuring cable to\nthe test adapter (see image).\n3) Turn the ONOFF machine's main\nswitch on position I (ON).\nSymbolic illustration\nof test equipment.\n4) Switch on test equipment and select\nan insulation test voltage of 500 V DC.\nSome test equipment\ndisplays test passed\nor failed instead of\nthe insulation resistance.\n5) Touch closing handle with red test\nprobe.\n6) Press \"measure\" button.\n7) Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300,000Ohm).\nCitiz service manual  146 FUNCTION TESTS\nThe coffee machine\nCitiz & Co has 2 test\nholes to check both\nthermoblocks.\nTest holes on bottom of Citiz / Citiz & milk / Citiz & Co  platforms\n8) Insert tip of red test probe in test hole\nand touch thermoblock.\n9) Press \"measure\" button.\n10)Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300’000Ohm).\n11)Switch off test equipment.\n12)Short red with black test probe to\nmake sure that test voltage is dis\ncharged.\n13)Fill in results in a test report.\nAdditional tests for coffee machine\nCitiz & milk:\n1) Touch upper metallic part of milk\nfrother with red test probe.\n2) Press \"measure\" button.\n3) Read off displayed insulation resist\nance or test result."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_034",
+        "context": "Danger of electrical shock/short circuit!\nDo not plug in the coffee machine during insulation test.\nDanger of electrical shock!\nDo not touch tip of test probes.\nDo not touch metallic parts of coffee machine during test.\nRead and observe safety instructions in user manual of test equipment.\nA Swiss power plug is\nshown here as an\nexample.\nUse a short circuit\nplug or special alliga\ntor clips etc. as sub\nstitute for this test adapter.\n1) Connect the phase and neutral pin of\nthe power plug together with a test\nadapter (procured by the repair\ncentre).\n2) Connect the black measuring cable to\nthe test adapter (see image).\n3) Turn the ONOFF machine's main\nswitch on position I (ON).\nSymbolic illustration\nof test equipment.\n4) Switch on test equipment and select\nan insulation test voltage of 500 V DC.\nSome test equipment\ndisplays test passed\nor failed instead of\nthe insulation resistance.\n5) Touch closing handle with red test\nprobe.\n6) Press \"measure\" button.\n7) Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300,000Ohm).\nCitiz service manual  146 FUNCTION TESTS\nThe coffee machine\nCitiz & Co has 2 test\nholes to check both\nthermoblocks.\nTest holes on bottom of Citiz / Citiz & milk / Citiz & Co  platforms\n8) Insert tip of red test probe in test hole\nand touch thermoblock.\n9) Press \"measure\" button.\n10)Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300’000Ohm).\n11)Switch off test equipment.\n12)Short red with black test probe to\nmake sure that test voltage is dis\ncharged.\n13)Fill in results in a test report.\nAdditional tests for coffee machine\nCitiz & milk:\n1) Touch upper metallic part of milk\nfrother with red test probe.\n2) Press \"measure\" button.\n3) Read off displayed insulation resist\nance or test result."
+      }
+    },
+    {
+      "id": "MEAS_SEC_034_01",
+      "type": "Measurement",
+      "name": "9.9.3 Test sequence measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "an insulation test voltage of 500 V DC."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_034",
+        "context": "an insulation test voltage of 500 V DC.",
+        "operator": null
+      },
+      "nominal_value": 500.0,
+      "unit_raw": "V DC"
+    },
+    {
+      "id": "MEAS_SEC_034_02",
+      "type": "Measurement",
+      "name": "9.9.3 Test sequence measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "higher than 300kOhm"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_034",
+        "context": "higher than 300kOhm",
+        "operator": ">"
+      },
+      "nominal_value": 300.0,
+      "unit_raw": "kΩ"
+    },
+    {
+      "id": "MEAS_SEC_034_03",
+      "type": "Measurement",
+      "name": "9.9.3 Test sequence measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "(300,000Ohm)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_034",
+        "context": "(300,000Ohm).",
+        "operator": null
+      },
+      "nominal_value": 0.0,
+      "unit_raw": "Ω"
+    },
+    {
+      "id": "AC_SEC_034_01",
+      "type": "AcceptanceCriterion",
+      "name": "9.9.3 Test sequence criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "The insulation resistance must be"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_034"
+      }
+    },
+    {
+      "id": "AC_SEC_034_02",
+      "type": "AcceptanceCriterion",
+      "name": "9.9.3 Test sequence criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "higher than 300kOhm"
+        }
+      ],
+      "metadata": {
+        "operator": ">",
+        "unit": "kΩ",
+        "value": 300.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_034"
+      }
+    },
+    {
+      "id": "APP_SEC_034_01",
+      "type": "ApplicabilityClause",
+      "name": "Additional tests for coffee machine",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "Additional tests for coffee machine"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_034"
+      }
+    }
+  ],
+  "promoted_relations": [
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_004",
+      "to_ref": "MEAS_SEC_004_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "gauge indicates 12 bar."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_004",
+      "to_ref": "MEAS_SEC_004_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "30sec."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_004",
+      "to_ref": "MEAS_SEC_004_03",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "120ml of water must be in the measur"
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_004",
+      "to_ref": "MEAS_SEC_004_04",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "• Should < 60 ml leak out, then the pump"
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_004",
+      "to_ref": "MEAS_SEC_004_05",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "• Should < 60 ml leak out, then the pump"
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_004",
+      "to_ref": "MEAS_SEC_004_06",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "while measuring (± 4 bar) means that"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_004",
+      "to_ref": "AC_SEC_004_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "13) Control measuring cup: at least 60"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_004",
+      "to_ref": "AC_SEC_004_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "120ml of water must be in the measur"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_004",
+      "to_ref": "AC_SEC_004_03",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "• Should < 60 ml leak out, then the pump"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_004",
+      "to_ref": "AC_SEC_004_04",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "• Should < 60 ml leak out, then the pump"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_004",
+      "to_ref": "AC_SEC_004_05",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "while measuring (± 4 bar) means that"
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_006",
+      "to_ref": "MEAS_SEC_006_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "for approximately 10 sec out of the"
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_006",
+      "to_ref": "MEAS_SEC_006_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "between 1619bar (pressure check)."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_006",
+      "to_ref": "MEAS_SEC_006_03",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "pressure exceed 23 bar, switch off"
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_006",
+      "to_ref": "MEAS_SEC_006_04",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "than 50 sec with the valve closed."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_006",
+      "to_ref": "AC_SEC_006_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "between 1619bar (pressure check)."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_007",
+      "to_ref": "MEAS_SEC_007_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "page": 7,
+          "source_text": "button for approximately 10 sec to pre"
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_008",
+      "to_ref": "MEAS_SEC_008_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_008",
+      "to_ref": "MEAS_SEC_008_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_008",
+      "to_ref": "MEAS_SEC_008_03",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_008",
+      "to_ref": "MEAS_SEC_008_04",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_008",
+      "to_ref": "MEAS_SEC_008_05",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_008",
+      "to_ref": "MEAS_SEC_008_06",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_008",
+      "to_ref": "AC_SEC_008_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "The coffee temperature should be"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_008",
+      "to_ref": "AC_SEC_008_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_008",
+      "to_ref": "AC_SEC_008_03",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_008",
+      "to_ref": "AC_SEC_008_04",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_008",
+      "to_ref": "AC_SEC_008_05",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_008",
+      "to_ref": "AC_SEC_008_06",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_008",
+      "to_ref": "AC_SEC_008_07",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_010",
+      "to_ref": "MEAS_SEC_010_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_010",
+          "page": 9,
+          "source_text": "Use newly opened UHT, full fat or semiskimmed milk at fridge temperature (+8°C till"
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_010",
+      "to_ref": "MEAS_SEC_010_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_010",
+          "page": 9,
+          "source_text": "+10°C) for the following tests only."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_011",
+      "to_ref": "MEAS_SEC_011_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "• Prepare 240 ml hot milk in milk frother (use mixer without spring)."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_011",
+      "to_ref": "MEAS_SEC_011_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_011",
+      "to_ref": "MEAS_SEC_011_03",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_011",
+      "to_ref": "MEAS_SEC_011_04",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_011",
+      "to_ref": "MEAS_SEC_011_05",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_011",
+      "to_ref": "AC_SEC_011_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_011",
+      "to_ref": "AC_SEC_011_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_011",
+      "to_ref": "AC_SEC_011_03",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_011",
+      "to_ref": "AC_SEC_011_04",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_012",
+      "to_ref": "MEAS_SEC_012_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_012",
+          "page": 9,
+          "source_text": "• Prepare cold milk froth out of 120 ml milk in milk frother (use whisk with spring)."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_014",
+      "to_ref": "AC_SEC_014_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_014",
+          "page": 10,
+          "source_text": "The resistance of the NTC temperature sensor must be within a defined range, other"
+        }
+      ]
+    },
+    {
+      "type": "refersTo",
+      "from_ref": "TESTCASE_SEC_014",
+      "to_ref": "XREF_SEC_014_01",
+      "confidence": 0.75,
+      "spans": [
+        {
+          "section_id": "sec_014",
+          "page": 10,
+          "source_text": "from thermoblock (refer to page 104"
+        }
+      ]
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "TESTCASE_SEC_022",
+      "to_ref": "APP_SEC_022_01",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "This test is only necessary"
+        }
+      ]
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "TESTCASE_SEC_022",
+      "to_ref": "APP_SEC_022_02",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "for class 1 equipment (threewire power cord with protective earth)"
+        }
+      ]
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "TESTCASE_SEC_022",
+      "to_ref": "APP_SEC_022_03",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "for models Citiz & milk, EF 485/486"
+        }
+      ]
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "TESTCASE_SEC_022",
+      "to_ref": "APP_SEC_022_04",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "after a repair whenever a general disassembly of the platform and/or core unit was"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_024",
+      "to_ref": "AC_SEC_024_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "page": 12,
+          "source_text": "Protective earth continuity measurements are made between the protective earth"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_024",
+      "to_ref": "AC_SEC_024_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "page": 12,
+          "source_text": "the ground (earth) connection does not have an interruption between the plug and"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_024",
+      "to_ref": "AC_SEC_024_03",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "page": 12,
+          "source_text": "the permissible ground resistance of those conductive, touchable parts is less than"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_026",
+      "to_ref": "AC_SEC_026_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_026",
+          "page": 12,
+          "source_text": "tive earth continuity measurements. Detailed requirements and tolerances must be veri"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_026",
+      "to_ref": "AC_SEC_026_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_026",
+          "page": 12,
+          "source_text": "For legal reasons a repair or test report should be prepared and filed with following infor"
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_027",
+      "to_ref": "MEAS_SEC_027_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_027",
+          "page": 13,
+          "source_text": "0.3Ohm."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_027",
+      "to_ref": "AC_SEC_027_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_027",
+          "page": 13,
+          "source_text": "The resistance must be lower than"
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_028",
+      "to_ref": "MEAS_SEC_028_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "0.3Ohm."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_028",
+      "to_ref": "AC_SEC_028_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "• Clean ground contact on milk frother. Measure resistance between ground contact"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_028",
+      "to_ref": "AC_SEC_028_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "The resistance must be lower than"
+        }
+      ]
+    },
+    {
+      "type": "refersTo",
+      "from_ref": "TESTCASE_SEC_028",
+      "to_ref": "XREF_SEC_028_01",
+      "confidence": 0.75,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "• Check/measure ground connection in platform (refer to page 75)."
+        }
+      ]
+    },
+    {
+      "type": "refersTo",
+      "from_ref": "TESTCASE_SEC_028",
+      "to_ref": "XREF_SEC_028_02",
+      "confidence": 0.75,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "• Check/measure ground connection on milk frother connector (refer to page 73 and"
+        }
+      ]
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "TESTCASE_SEC_030",
+      "to_ref": "APP_SEC_030_01",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_030",
+          "page": 15,
+          "source_text": "for class 1 and 2 equipment (with/without  protective earth)"
+        }
+      ]
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "TESTCASE_SEC_030",
+      "to_ref": "APP_SEC_030_02",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_030",
+          "page": 15,
+          "source_text": "after a repair whenever a general disassembly of the platform and/or core unit was"
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_032",
+      "to_ref": "MEAS_SEC_032_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_032",
+          "page": 15,
+          "source_text": "is a very dangerous test because of a high test voltage (500 V DC)."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_032",
+      "to_ref": "AC_SEC_032_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_032",
+          "page": 15,
+          "source_text": "test voltage is applied between phase/neutral and selected parts of the coffee machine."
+        }
+      ]
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "TESTCASE_SEC_032",
+      "to_ref": "APP_SEC_032_01",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_032",
+          "page": 15,
+          "source_text": "ments after a repair,"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_033",
+      "to_ref": "AC_SEC_033_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_033",
+          "page": 15,
+          "source_text": "tion and withstanding voltage tests. Detailed requirements and tolerances must be veri"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_033",
+      "to_ref": "AC_SEC_033_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_033",
+          "page": 15,
+          "source_text": "For legal reasons a repair or test report should be prepared and filed with following infor"
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_034",
+      "to_ref": "MEAS_SEC_034_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "an insulation test voltage of 500 V DC."
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_034",
+      "to_ref": "MEAS_SEC_034_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "higher than 300kOhm"
+        }
+      ]
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "TESTCASE_SEC_034",
+      "to_ref": "MEAS_SEC_034_03",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "(300,000Ohm)."
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_034",
+      "to_ref": "AC_SEC_034_01",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "The insulation resistance must be"
+        }
+      ]
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "TESTCASE_SEC_034",
+      "to_ref": "AC_SEC_034_02",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "higher than 300kOhm"
+        }
+      ]
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "TESTCASE_SEC_034",
+      "to_ref": "APP_SEC_034_01",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "Additional tests for coffee machine"
+        }
+      ]
     }
   ]
 }

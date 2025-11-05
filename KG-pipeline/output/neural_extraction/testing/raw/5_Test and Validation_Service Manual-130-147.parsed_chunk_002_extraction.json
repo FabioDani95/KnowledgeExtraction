@@ -117,7 +117,7 @@
       },
       {
         "type": "Equipment",
-        "name": "Coffee Machine Citiz & Co",
+        "name": "Coffee Machine",
         "id": "EQ_01",
         "confidence": 1.0,
         "spans": [
@@ -453,5 +453,5 @@
       "char_end": 11029
     }
   ],
-  "timestamp": "2025-11-05T10:36:13.845969+00:00"
+  "timestamp": "2025-11-05T13:32:57.547543+00:00"
 }

@@ -1,6 +1,6 @@
 {
   "document_code": "KG_TROUBLESHOOTING",
-  "ingestion_id": "d58213ba-5b4b-4f60-b6ba-df5ba6673e05",
+  "ingestion_id": "e2b47733-e25a-46e0-a736-8088cac8da56",
   "extraction_version": "neural_v1.2",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
@@ -180,28 +180,6 @@
     },
     {
       "type": "RepairAction",
-      "name": "replace compact brewing unit",
-      "id": "ns:RA/replace_compact_brewing_unit",
-      "confidence": 1,
-      "spans": [
-        {
-          "section_id": "sec_2",
-          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-          "page_start": 2,
-          "page_end": 2,
-          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-        },
-        {
-          "section_id": "sec_3",
-          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-          "page_start": 3,
-          "page_end": 3,
-          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-        }
-      ]
-    },
-    {
-      "type": "RepairAction",
       "name": "replace defective hoses and seals",
       "id": "ns:RA/replace_defective_hoses_and_seals",
       "confidence": 1,
@@ -224,52 +202,8 @@
     },
     {
       "type": "FailureMode",
-      "name": "rust visible in water",
-      "id": "ns:FM/rust_visible_in_water",
-      "confidence": 1,
-      "spans": [
-        {
-          "section_id": "sec_2",
-          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-          "page_start": 2,
-          "page_end": 2,
-          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-        },
-        {
-          "section_id": "sec_3",
-          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-          "page_start": 3,
-          "page_end": 3,
-          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-        }
-      ]
-    },
-    {
-      "type": "RepairAction",
-      "name": "descale and rinse coffee machine again",
-      "id": "ns:RA/descale_and_rinse_coffee_machine_again",
-      "confidence": 1,
-      "spans": [
-        {
-          "section_id": "sec_2",
-          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-          "page_start": 2,
-          "page_end": 2,
-          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-        },
-        {
-          "section_id": "sec_3",
-          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-          "page_start": 3,
-          "page_end": 3,
-          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-        }
-      ]
-    },
-    {
-      "type": "FailureMode",
-      "name": "milk frother is damaged",
-      "id": "ns:FM/milk_frother_is_damaged",
+      "name": "milk frother damaged",
+      "id": "ns:FM/milk_frother_damaged",
       "confidence": 1,
       "spans": [
         {
@@ -312,8 +246,8 @@
     },
     {
       "type": "FailureMode",
-      "name": "milk frother is not functioning",
-      "id": "ns:FM/milk_frother_is_not_functioning",
+      "name": "jug badly scratched",
+      "id": "ns:FM/jug_badly_scratched",
       "confidence": 1,
       "spans": [
         {
@@ -334,8 +268,30 @@
     },
     {
       "type": "RepairAction",
-      "name": "replace milk frother",
-      "id": "ns:RA/replace_milk_frother",
+      "name": "replace milk frother in agreement with customer",
+      "id": "ns:RA/replace_milk_frother_in_agreement_with_customer",
+      "confidence": 1,
+      "spans": [
+        {
+          "section_id": "sec_2",
+          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
+          "page_start": 2,
+          "page_end": 2,
+          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
+        },
+        {
+          "section_id": "sec_3",
+          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
+          "page_start": 3,
+          "page_end": 3,
+          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
+        }
+      ]
+    },
+    {
+      "type": "FailureMode",
+      "name": "whisks damaged",
+      "id": "ns:FM/whisks_damaged",
       "confidence": 1,
       "spans": [
         {
@@ -358,6 +314,50 @@
       "type": "RepairAction",
       "name": "replace whisks",
       "id": "ns:RA/replace_whisks",
+      "confidence": 1,
+      "spans": [
+        {
+          "section_id": "sec_2",
+          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
+          "page_start": 2,
+          "page_end": 2,
+          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
+        },
+        {
+          "section_id": "sec_3",
+          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
+          "page_start": 3,
+          "page_end": 3,
+          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
+        }
+      ]
+    },
+    {
+      "type": "FailureMode",
+      "name": "coffee machine not switch off automatically",
+      "id": "ns:FM/coffee_machine_not_switch_off_automatically",
+      "confidence": 1,
+      "spans": [
+        {
+          "section_id": "sec_2",
+          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
+          "page_start": 2,
+          "page_end": 2,
+          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
+        },
+        {
+          "section_id": "sec_3",
+          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
+          "page_start": 3,
+          "page_end": 3,
+          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
+        }
+      ]
+    },
+    {
+      "type": "RepairAction",
+      "name": "replace connector on platform",
+      "id": "ns:RA/replace_connector_on_platform",
       "confidence": 1,
       "spans": [
         {
@@ -487,37 +487,31 @@
     {
       "type": "affects",
       "from_ref": "ns:FM/unit_leaks",
-      "to_ref": "ns:RA/replace_compact_brewing_unit",
-      "confidence": 1
-    },
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/unit_leaks",
       "to_ref": "ns:RA/replace_defective_hoses_and_seals",
       "confidence": 1
     },
     {
       "type": "affects",
-      "from_ref": "ns:FM/rust_visible_in_water",
-      "to_ref": "ns:RA/descale_and_rinse_coffee_machine_again",
-      "confidence": 1
-    },
-    {
-      "type": "affects",
-      "from_ref": "ns:FM/milk_frother_is_damaged",
+      "from_ref": "ns:FM/milk_frother_damaged",
       "to_ref": "ns:RA/replace_lidseal",
       "confidence": 1
     },
     {
       "type": "affects",
-      "from_ref": "ns:FM/milk_frother_is_not_functioning",
-      "to_ref": "ns:RA/replace_milk_frother",
+      "from_ref": "ns:FM/jug_badly_scratched",
+      "to_ref": "ns:RA/replace_milk_frother_in_agreement_with_customer",
       "confidence": 1
     },
     {
       "type": "affects",
-      "from_ref": "ns:FM/milk_frother_is_damaged",
+      "from_ref": "ns:FM/whisks_damaged",
       "to_ref": "ns:RA/replace_whisks",
+      "confidence": 1
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/coffee_machine_not_switch_off_automatically",
+      "to_ref": "ns:RA/replace_connector_on_platform",
       "confidence": 1
     },
     {
@@ -574,21 +568,21 @@
   "quality": {
     "json_valid": true,
     "entities_count": 20,
-    "relations_count": 11,
+    "relations_count": 10,
     "warnings": [],
     "overall_confidence": 1.0,
     "avg_entity_confidence": 1.0,
     "avg_relation_confidence": 1.0,
     "entity_type_distribution": {
-      "FailureMode": 10,
-      "RepairAction": 9,
+      "FailureMode": 11,
+      "RepairAction": 8,
       "Tool": 1
     },
     "relation_type_distribution": {
-      "affects": 10,
+      "affects": 9,
       "requiresTool": 1
     },
     "profile": "troubleshooting",
-    "generated_at": "2025-11-05T10:35:35.231887+00:00"
+    "generated_at": "2025-11-05T13:32:18.640035+00:00"
   }
 }

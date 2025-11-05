@@ -1,6 +1,6 @@
 {
   "document_code": "KG_TESTING",
-  "ingestion_id": "7ba143e7-9fae-4a69-b42c-753219fb831f",
+  "ingestion_id": "2bc0d68b-7a30-4e14-a344-ab270625a0a3",
   "extraction_version": "neural_v1.2",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
@@ -27,6 +27,1239 @@
     "refersTo"
   ],
   "entities": [
+    {
+      "id": "ns:TestCase/section_1",
+      "type": "TestCase",
+      "name": "Section 1",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_001",
+          "page": 2,
+          "source_text": "Section 1"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/922_citiz_pressure_gauge_adapter",
+      "type": "TestCase",
+      "name": "9.2.2 Citiz pressure gauge adapter",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_002",
+          "page": 2,
+          "source_text": "9.2.2 Citiz pressure gauge adapter"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/93_measure_flow_rate",
+      "type": "TestCase",
+      "name": "9.3 Measure flow rate",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_003",
+          "page": 3,
+          "source_text": "9.3 Measure flow rate"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/94_pressure_and_leakage_checks",
+      "type": "TestCase",
+      "name": "9.4 Pressure and leakage checks",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "9.4 Pressure and leakage checks"
+        }
+      ],
+      "metadata": {
+        "section_role": "warning",
+        "section_tags": [
+          "acceptance",
+          "measurement",
+          "safety",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:SafetyNotice/safety_notice_94_pressure_and_leakage_checks",
+      "type": "SafetyNotice",
+      "name": "Safety notice - 9.4 Pressure and leakage checks",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "Check the following parts of the coffee machine for leakages:\n• Compact brewing unit\n• Hose connections\n• Thermoblock\n• Pump\n• Self priming device 8) Switch on coffee machine.\n9) After heating up, press the \"small cup\"\nbutton.\n10) Open the valve until water begins to\nflow.\n11) Close the valve until the pressure\ngauge indicates 12 bar.\nConstantly monitor the pressure\ngauge and if required readjust the\nvalve. As the temperature\nincreases, so does the pressure,\nreadjust the pressure to 12 bar\nwhen required.\n12) Carry out measurement for approx.\n30sec.\n13) Control measuring cup: at least 60\n120ml of water must be in the measur\ning cup.\n14) Open the valve and let water flow out\nof the pressure tester.\nNotices:\n• Should < 60 ml leak out, then the pump\nis defective or there is a leak in the\nwater system. • Large deviations in indicated pressure\nwhile measuring (± 4 bar) means that\nthe pump is defective.\nDangerous mains voltage inside the coffee machine!\nDo not touch any parts under voltage while checking for leakages!\nDangerous hot parts under pressure inside the coffee machine!\nDo not touch any hot/pressurized parts while checking for leakages!\nAlways wear protective goggles.\nCitiz service manual  134 FUNCTION TESTS"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_004",
+        "context": "Check the following parts of the coffee machine for leakages:\n• Compact brewing unit\n• Hose connections\n• Thermoblock\n• Pump\n• Self priming device 8) Switch on coffee machine.\n9) After heating up, press the \"small cup\"\nbutton.\n10) Open the valve until water begins to\nflow.\n11) Close the valve until the pressure\ngauge indicates 12 bar.\nConstantly monitor the pressure\ngauge and if required readjust the\nvalve. As the temperature\nincreases, so does the pressure,\nreadjust the pressure to 12 bar\nwhen required.\n12) Carry out measurement for approx.\n30sec.\n13) Control measuring cup: at least 60\n120ml of water must be in the measur\ning cup.\n14) Open the valve and let water flow out\nof the pressure tester.\nNotices:\n• Should < 60 ml leak out, then the pump\nis defective or there is a leak in the\nwater system. • Large deviations in indicated pressure\nwhile measuring (± 4 bar) means that\nthe pump is defective.\nDangerous mains voltage inside the coffee machine!\nDo not touch any parts under voltage while checking for leakages!\nDangerous hot parts under pressure inside the coffee machine!\nDo not touch any hot/pressurized parts while checking for leakages!\nAlways wear protective goggles.\nCitiz service manual  134 FUNCTION TESTS"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:Measurement/94_pressure_and_leakage_checks_measurement",
+      "type": "Measurement",
+      "name": "9.4 Pressure and leakage checks measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "gauge indicates 12 bar."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_004",
+        "context": "gauge indicates 12 bar.",
+        "operator": null
+      },
+      "nominal_value": 12.0,
+      "unit_raw": "bar",
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:AcceptanceCriterion/94_pressure_and_leakage_checks_criterion",
+      "type": "AcceptanceCriterion",
+      "name": "9.4 Pressure and leakage checks criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "13) Control measuring cup: at least 60"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_004"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/941_preparations",
+      "type": "TestCase",
+      "name": "9.4.1 Preparations",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_005",
+          "page": 5,
+          "source_text": "9.4.1 Preparations"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/942_test_run_9_connect_mains_cable",
+      "type": "TestCase",
+      "name": "9.4.2 Test run 9) Connect mains cable.",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "9.4.2 Test run 9) Connect mains cable."
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "acceptance",
+          "measurement",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:Measurement/942_test_run_9_connect_mains_cable_measurement",
+      "type": "Measurement",
+      "name": "9.4.2 Test run 9) Connect mains cable. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "for approximately 10 sec out of the"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_006",
+        "context": "for approximately 10 sec out of the",
+        "operator": null
+      },
+      "nominal_value": 10.0,
+      "unit_raw": "s",
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:AcceptanceCriterion/942_test_run_9_connect_mains_cable_criterion",
+      "type": "AcceptanceCriterion",
+      "name": "9.4.2 Test run 9) Connect mains cable. criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "between 1619bar (pressure check)."
+        }
+      ],
+      "metadata": {
+        "operator": "between",
+        "unit": "bar",
+        "value": 1619.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_006"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/95_measure_coffee_temperature_15switch_off_the_coffee_machine",
+      "type": "TestCase",
+      "name": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "page": 7,
+          "source_text": "9.5 Measure coffee temperature 15)Switch off the coffee machine."
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:Measurement/95_measure_coffee_temperature_15switch_off_the_coffee_machine_measurement",
+      "type": "Measurement",
+      "name": "9.5 Measure coffee temperature 15)Switch off the coffee machine. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "page": 7,
+          "source_text": "button for approximately 10 sec to pre"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_007",
+        "context": "button for approximately 10 sec to pre",
+        "operator": null
+      },
+      "nominal_value": 10.0,
+      "unit_raw": "s",
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/20_ml_of_coffee",
+      "type": "TestCase",
+      "name": "20 ml of coffee.",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "20 ml of coffee."
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "acceptance",
+          "measurement",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:Measurement/20_ml_of_coffee_measurement",
+      "type": "Measurement",
+      "name": "20 ml of coffee. measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_008",
+        "context": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+        "operator": "±"
+      },
+      "nominal_value": 86.0,
+      "tolerance": 3.0,
+      "unit_raw": "°C",
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:AcceptanceCriterion/20_ml_of_coffee_criterion",
+      "type": "AcceptanceCriterion",
+      "name": "20 ml of coffee. criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "The coffee temperature should be"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_008"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/prerequisite",
+      "type": "TestCase",
+      "name": "Prerequisite",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_010",
+          "page": 9,
+          "source_text": "Prerequisite"
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "measurement",
+          "precondition",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:Measurement/prerequisite_measurement",
+      "type": "Measurement",
+      "name": "Prerequisite measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_010",
+          "page": 9,
+          "source_text": "Use newly opened UHT, full fat or semiskimmed milk at fridge temperature (+8°C till"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_010",
+        "context": "Use newly opened UHT, full fat or semiskimmed milk at fridge temperature (+8°C till",
+        "operator": null
+      },
+      "nominal_value": 8.0,
+      "unit_raw": "°C",
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/961_measure_hot_milk_temperature",
+      "type": "TestCase",
+      "name": "9.6.1 Measure hot milk temperature",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "9.6.1 Measure hot milk temperature"
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "acceptance",
+          "measurement"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:Measurement/961_measure_hot_milk_temperature_measurement",
+      "type": "Measurement",
+      "name": "9.6.1 Measure hot milk temperature measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "• Prepare 240 ml hot milk in milk frother (use mixer without spring)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_011",
+        "context": "• Prepare 240 ml hot milk in milk frother (use mixer without spring).",
+        "operator": null
+      },
+      "nominal_value": 240.0,
+      "unit_raw": "mL",
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:AcceptanceCriterion/961_measure_hot_milk_temperature_criterion",
+      "type": "AcceptanceCriterion",
+      "name": "9.6.1 Measure hot milk temperature criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ],
+      "metadata": {
+        "operator": "between",
+        "unit": "°C",
+        "value": 60.0,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_011"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/962_measure_milk_froth_ratio",
+      "type": "TestCase",
+      "name": "9.6.2 Measure milk froth ratio",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_012",
+          "page": 9,
+          "source_text": "9.6.2 Measure milk froth ratio"
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "measurement"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:Measurement/962_measure_milk_froth_ratio_measurement",
+      "type": "Measurement",
+      "name": "9.6.2 Measure milk froth ratio measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_012",
+          "page": 9,
+          "source_text": "• Prepare cold milk froth out of 120 ml milk in milk frother (use whisk with spring)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_012",
+        "context": "• Prepare cold milk froth out of 120 ml milk in milk frother (use whisk with spring).",
+        "operator": null
+      },
+      "nominal_value": 120.0,
+      "unit_raw": "mL",
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/60_sec_after_preparationx_190_the_disregard_of_this",
+      "type": "TestCase",
+      "name": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_013",
+          "page": 9,
+          "source_text": "60 sec after preparation....................................................................................x = 190 The disregard of this"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/97_ntc_temperature_sensor_functionality",
+      "type": "TestCase",
+      "name": "9.7 NTC temperature sensor functionality",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_014",
+          "page": 10,
+          "source_text": "9.7 NTC temperature sensor functionality"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "acceptance",
+          "cross_reference",
+          "measurement",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:AcceptanceCriterion/97_ntc_temperature_sensor_functionality_criterion",
+      "type": "AcceptanceCriterion",
+      "name": "9.7 NTC temperature sensor functionality criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_014",
+          "page": 10,
+          "source_text": "The resistance of the NTC temperature sensor must be within a defined range, other"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_014"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:CrossReference/reference_page_104",
+      "type": "CrossReference",
+      "name": "Reference page 104",
+      "confidence": 0.75,
+      "spans": [
+        {
+          "section_id": "sec_014",
+          "page": 10,
+          "source_text": "from thermoblock (refer to page 104"
+        }
+      ],
+      "metadata": {
+        "target_page": 104,
+        "section_id": "sec_014"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/measurement_table",
+      "type": "TestCase",
+      "name": "Measurement table",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_015",
+          "page": 11,
+          "source_text": "Measurement table"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/35_95_6090_6586",
+      "type": "TestCase",
+      "name": "35  95  60.90  65.86",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_020",
+          "page": 11,
+          "source_text": "35  95  60.90  65.86"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "measurement",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/981_what_coffee_machine_has_to_be_tested_and_when",
+      "type": "TestCase",
+      "name": "9.8.1 What coffee machine has to be tested and when?",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "9.8.1 What coffee machine has to be tested and when?"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "applicability",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:ApplicabilityClause/this_test_is_only_necessary",
+      "type": "ApplicabilityClause",
+      "name": "This test is only necessary",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "This test is only necessary"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_022"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:ApplicabilityClause/for_class_1_equipment_threewire_power_cord_with_protective_earth",
+      "type": "ApplicabilityClause",
+      "name": "for class 1 equipment (threewire power cord with protective earth)",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "for class 1 equipment (threewire power cord with protective earth)"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_022"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:ApplicabilityClause/for_models_citiz_milk_ef_485486",
+      "type": "ApplicabilityClause",
+      "name": "for models Citiz & milk, EF 485/486",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "for models Citiz & milk, EF 485/486"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_022"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:ApplicabilityClause/after_a_repair_whenever_a_general_disassembly_of_the_platform_andor_core_unit_was",
+      "type": "ApplicabilityClause",
+      "name": "after a repair whenever a general disassembly of the platform and/or core unit was",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "after a repair whenever a general disassembly of the platform and/or core unit was"
+        },
+        {
+          "section_id": "sec_030",
+          "page": 15,
+          "source_text": "after a repair whenever a general disassembly of the platform and/or core unit was"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_022"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/982_general",
+      "type": "TestCase",
+      "name": "9.8.2 General",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_023",
+          "page": 12,
+          "source_text": "9.8.2 General"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/description",
+      "type": "TestCase",
+      "name": "Description",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "page": 12,
+          "source_text": "Description"
+        },
+        {
+          "section_id": "sec_032",
+          "page": 15,
+          "source_text": "Description"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "acceptance",
+          "measurement",
+          "procedure",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:AcceptanceCriterion/description_criterion",
+      "type": "AcceptanceCriterion",
+      "name": "Description criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "page": 12,
+          "source_text": "Protective earth continuity measurements are made between the protective earth"
+        },
+        {
+          "section_id": "sec_032",
+          "page": 15,
+          "source_text": "test voltage is applied between phase/neutral and selected parts of the coffee machine."
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_024"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/test_equipment",
+      "type": "TestCase",
+      "name": "Test equipment",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_026",
+          "page": 12,
+          "source_text": "Test equipment"
+        },
+        {
+          "section_id": "sec_033",
+          "page": 15,
+          "source_text": "Test equipment"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "acceptance",
+          "equipment",
+          "measurement",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:AcceptanceCriterion/test_equipment_criterion",
+      "type": "AcceptanceCriterion",
+      "name": "Test equipment criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_026",
+          "page": 12,
+          "source_text": "tive earth continuity measurements. Detailed requirements and tolerances must be veri"
+        },
+        {
+          "section_id": "sec_033",
+          "page": 15,
+          "source_text": "tion and withstanding voltage tests. Detailed requirements and tolerances must be veri"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_026"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/983_test_sequence",
+      "type": "TestCase",
+      "name": "9.8.3 Test sequence",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_027",
+          "page": 13,
+          "source_text": "9.8.3 Test sequence"
+        }
+      ],
+      "metadata": {
+        "section_role": "warning",
+        "section_tags": [
+          "acceptance",
+          "measurement",
+          "safety",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:SafetyNotice/safety_notice_983_test_sequence",
+      "type": "SafetyNotice",
+      "name": "Safety notice - 9.8.3 Test sequence",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_027",
+          "page": 13,
+          "source_text": "This test sequence is\nnot applicable for cof\nfee machines with\ntwowire power cords (with\nout ground pin).\nDanger of electrocution!\nDo not plug in the coffee machine during the protective earth continuity\ntest.\nRead and observe safety instructions in user manual of test equipment.\n1) Connect black measuring cable to\nground pin of power plug with an alli\ngator clip (example shown: Swiss\npower plug).\nSymbolic illustration\nof test equipment.\n2) Switch on test equipment and select\nprotective earth continuity test.\nThe coffee machine\nCitiz & Co has 2 test\nholes to check both\nthermoblocks.\nTest holes on bottom of Citiz / Citiz & milk / Citiz & Co  platforms\n3) Insert tip of red test probe in test hole\nand touch thermoblock.\n4) Press \"measure\" button and read off\ndisplayed resistance.\nThe resistance must be lower than\n0.3Ohm.\n5) Fill in measured value(s) in a test\nreport.\nCitiz service manual  143 FUNCTION TESTS"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_027",
+        "context": "This test sequence is\nnot applicable for cof\nfee machines with\ntwowire power cords (with\nout ground pin).\nDanger of electrocution!\nDo not plug in the coffee machine during the protective earth continuity\ntest.\nRead and observe safety instructions in user manual of test equipment.\n1) Connect black measuring cable to\nground pin of power plug with an alli\ngator clip (example shown: Swiss\npower plug).\nSymbolic illustration\nof test equipment.\n2) Switch on test equipment and select\nprotective earth continuity test.\nThe coffee machine\nCitiz & Co has 2 test\nholes to check both\nthermoblocks.\nTest holes on bottom of Citiz / Citiz & milk / Citiz & Co  platforms\n3) Insert tip of red test probe in test hole\nand touch thermoblock.\n4) Press \"measure\" button and read off\ndisplayed resistance.\nThe resistance must be lower than\n0.3Ohm.\n5) Fill in measured value(s) in a test\nreport.\nCitiz service manual  143 FUNCTION TESTS"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:Measurement/983_test_sequence_measurement",
+      "type": "Measurement",
+      "name": "9.8.3 Test sequence measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_027",
+          "page": 13,
+          "source_text": "0.3Ohm."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_027",
+        "context": "0.3Ohm.",
+        "operator": null
+      },
+      "nominal_value": 0.3,
+      "unit_raw": "Ω",
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:AcceptanceCriterion/983_test_sequence_criterion",
+      "type": "AcceptanceCriterion",
+      "name": "9.8.3 Test sequence criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_027",
+          "page": 13,
+          "source_text": "The resistance must be lower than"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_027"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/984_what_to_do_if_the_protective_earth_continuity_test_fails",
+      "type": "TestCase",
+      "name": "9.8.4 What to do if the protective earth continuity test fails",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "9.8.4 What to do if the protective earth continuity test fails"
+        }
+      ],
+      "metadata": {
+        "section_role": "table",
+        "section_tags": [
+          "acceptance",
+          "cross_reference",
+          "measurement",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:Measurement/984_what_to_do_if_the_protective_earth_continuity_test_fails_measurement",
+      "type": "Measurement",
+      "name": "9.8.4 What to do if the protective earth continuity test fails measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "0.3Ohm."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_028",
+        "context": "0.3Ohm.",
+        "operator": null
+      },
+      "nominal_value": 0.3,
+      "unit_raw": "Ω",
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:AcceptanceCriterion/984_what_to_do_if_the_protective_earth_continuity_test_fails_criterion",
+      "type": "AcceptanceCriterion",
+      "name": "9.8.4 What to do if the protective earth continuity test fails criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "• Clean ground contact on milk frother. Measure resistance between ground contact"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_028"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:CrossReference/reference_page_75",
+      "type": "CrossReference",
+      "name": "Reference page 75",
+      "confidence": 0.75,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "• Check/measure ground connection in platform (refer to page 75)."
+        }
+      ],
+      "metadata": {
+        "target_page": 75,
+        "section_id": "sec_028"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:CrossReference/reference_page_73",
+      "type": "CrossReference",
+      "name": "Reference page 73",
+      "confidence": 0.75,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "• Check/measure ground connection on milk frother connector (refer to page 73 and"
+        }
+      ],
+      "metadata": {
+        "target_page": 73,
+        "section_id": "sec_028"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/991_what_coffee_machines_have_to_be_tested_and_when",
+      "type": "TestCase",
+      "name": "9.9.1 What coffee machines have to be tested and when?",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_030",
+          "page": 15,
+          "source_text": "9.9.1 What coffee machines have to be tested and when?"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "applicability",
+          "measurement",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:ApplicabilityClause/for_class_1_and_2_equipment_withwithout_protective_earth",
+      "type": "ApplicabilityClause",
+      "name": "for class 1 and 2 equipment (with/without  protective earth)",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_030",
+          "page": 15,
+          "source_text": "for class 1 and 2 equipment (with/without  protective earth)"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_030"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/992_general",
+      "type": "TestCase",
+      "name": "9.9.2 General",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_031",
+          "page": 15,
+          "source_text": "9.9.2 General"
+        }
+      ],
+      "metadata": {
+        "section_role": "main",
+        "section_tags": [
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:Measurement/description_measurement",
+      "type": "Measurement",
+      "name": "Description measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_032",
+          "page": 15,
+          "source_text": "is a very dangerous test because of a high test voltage (500 V DC)."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_032",
+        "context": "is a very dangerous test because of a high test voltage (500 V DC).",
+        "operator": null
+      },
+      "nominal_value": 500.0,
+      "unit_raw": "V DC",
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:ApplicabilityClause/ments_after_a_repair",
+      "type": "ApplicabilityClause",
+      "name": "ments after a repair,",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_032",
+          "page": 15,
+          "source_text": "ments after a repair,"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_032"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:TestCase/993_test_sequence",
+      "type": "TestCase",
+      "name": "9.9.3 Test sequence",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "9.9.3 Test sequence"
+        }
+      ],
+      "metadata": {
+        "section_role": "warning",
+        "section_tags": [
+          "acceptance",
+          "applicability",
+          "measurement",
+          "safety",
+          "test_case"
+        ]
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:SafetyNotice/safety_notice_993_test_sequence",
+      "type": "SafetyNotice",
+      "name": "Safety notice - 9.9.3 Test sequence",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "Danger of electrical shock/short circuit!\nDo not plug in the coffee machine during insulation test.\nDanger of electrical shock!\nDo not touch tip of test probes.\nDo not touch metallic parts of coffee machine during test.\nRead and observe safety instructions in user manual of test equipment.\nA Swiss power plug is\nshown here as an\nexample.\nUse a short circuit\nplug or special alliga\ntor clips etc. as sub\nstitute for this test adapter.\n1) Connect the phase and neutral pin of\nthe power plug together with a test\nadapter (procured by the repair\ncentre).\n2) Connect the black measuring cable to\nthe test adapter (see image).\n3) Turn the ONOFF machine's main\nswitch on position I (ON).\nSymbolic illustration\nof test equipment.\n4) Switch on test equipment and select\nan insulation test voltage of 500 V DC.\nSome test equipment\ndisplays test passed\nor failed instead of\nthe insulation resistance.\n5) Touch closing handle with red test\nprobe.\n6) Press \"measure\" button.\n7) Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300,000Ohm).\nCitiz service manual  146 FUNCTION TESTS\nThe coffee machine\nCitiz & Co has 2 test\nholes to check both\nthermoblocks.\nTest holes on bottom of Citiz / Citiz & milk / Citiz & Co  platforms\n8) Insert tip of red test probe in test hole\nand touch thermoblock.\n9) Press \"measure\" button.\n10)Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300’000Ohm).\n11)Switch off test equipment.\n12)Short red with black test probe to\nmake sure that test voltage is dis\ncharged.\n13)Fill in results in a test report.\nAdditional tests for coffee machine\nCitiz & milk:\n1) Touch upper metallic part of milk\nfrother with red test probe.\n2) Press \"measure\" button.\n3) Read off displayed insulation resist\nance or test result."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_034",
+        "context": "Danger of electrical shock/short circuit!\nDo not plug in the coffee machine during insulation test.\nDanger of electrical shock!\nDo not touch tip of test probes.\nDo not touch metallic parts of coffee machine during test.\nRead and observe safety instructions in user manual of test equipment.\nA Swiss power plug is\nshown here as an\nexample.\nUse a short circuit\nplug or special alliga\ntor clips etc. as sub\nstitute for this test adapter.\n1) Connect the phase and neutral pin of\nthe power plug together with a test\nadapter (procured by the repair\ncentre).\n2) Connect the black measuring cable to\nthe test adapter (see image).\n3) Turn the ONOFF machine's main\nswitch on position I (ON).\nSymbolic illustration\nof test equipment.\n4) Switch on test equipment and select\nan insulation test voltage of 500 V DC.\nSome test equipment\ndisplays test passed\nor failed instead of\nthe insulation resistance.\n5) Touch closing handle with red test\nprobe.\n6) Press \"measure\" button.\n7) Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300,000Ohm).\nCitiz service manual  146 FUNCTION TESTS\nThe coffee machine\nCitiz & Co has 2 test\nholes to check both\nthermoblocks.\nTest holes on bottom of Citiz / Citiz & milk / Citiz & Co  platforms\n8) Insert tip of red test probe in test hole\nand touch thermoblock.\n9) Press \"measure\" button.\n10)Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300’000Ohm).\n11)Switch off test equipment.\n12)Short red with black test probe to\nmake sure that test voltage is dis\ncharged.\n13)Fill in results in a test report.\nAdditional tests for coffee machine\nCitiz & milk:\n1) Touch upper metallic part of milk\nfrother with red test probe.\n2) Press \"measure\" button.\n3) Read off displayed insulation resist\nance or test result."
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:Measurement/993_test_sequence_measurement",
+      "type": "Measurement",
+      "name": "9.9.3 Test sequence measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "an insulation test voltage of 500 V DC."
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_034",
+        "context": "an insulation test voltage of 500 V DC.",
+        "operator": null
+      },
+      "nominal_value": 500.0,
+      "unit_raw": "V DC",
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:AcceptanceCriterion/993_test_sequence_criterion",
+      "type": "AcceptanceCriterion",
+      "name": "9.9.3 Test sequence criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "The insulation resistance must be"
+        }
+      ],
+      "metadata": {
+        "operator": null,
+        "unit": null,
+        "value": null,
+        "min_value": null,
+        "max_value": null,
+        "tolerance": null,
+        "section_id": "sec_034"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "id": "ns:ApplicabilityClause/additional_tests_for_coffee_machine",
+      "type": "ApplicabilityClause",
+      "name": "Additional tests for coffee machine",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "Additional tests for coffee machine"
+        }
+      ],
+      "metadata": {
+        "section_id": "sec_034"
+      },
+      "_source": "SYMBOLIC_TESTING"
+    },
     {
       "type": "Equipment",
       "name": "pressure gauge adapter",
@@ -179,8 +1412,8 @@
     },
     {
       "type": "Measurement",
-      "name": "pressure",
-      "id": "ns:Measurement/pressure",
+      "name": "pressure measurement",
+      "id": "ns:Measurement/pressure_measurement",
       "confidence": 1.0,
       "nominal_value": 12,
       "unit_raw": "bar",
@@ -231,8 +1464,8 @@
     },
     {
       "type": "Measurement",
-      "name": "water volume",
-      "id": "ns:Measurement/water_volume",
+      "name": "water measurement",
+      "id": "ns:Measurement/water_measurement",
       "confidence": 1.0,
       "min_value": 60,
       "max_value": 120,
@@ -284,7 +1517,7 @@
     },
     {
       "type": "SafetyNotice",
-      "name": "Dangerous mains voltage",
+      "name": "dangerous mains voltage",
       "id": "ns:SafetyNotice/dangerous_mains_voltage",
       "confidence": 1.0,
       "spans": [
@@ -334,58 +1567,8 @@
     },
     {
       "type": "SafetyNotice",
-      "name": "Dangerous hot parts",
+      "name": "dangerous hot parts",
       "id": "ns:SafetyNotice/dangerous_hot_parts",
-      "confidence": 1.0,
-      "spans": [
-        {
-          "section_id": "sec_001",
-          "section_title": "Section 1",
-          "page_start": 2,
-          "page_end": 2,
-          "source_text": "Section: Section 1... (p.2-2)"
-        },
-        {
-          "section_id": "sec_002",
-          "section_title": "9.2.2 Citiz pressure gauge adapter",
-          "page_start": 2,
-          "page_end": 3,
-          "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
-        },
-        {
-          "section_id": "sec_003",
-          "section_title": "9.3 Measure flow rate",
-          "page_start": 3,
-          "page_end": 4,
-          "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
-        },
-        {
-          "section_id": "sec_004",
-          "section_title": "9.4 Pressure and leakage checks",
-          "page_start": 4,
-          "page_end": 5,
-          "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
-        },
-        {
-          "section_id": "sec_005",
-          "section_title": "9.4.1 Preparations",
-          "page_start": 5,
-          "page_end": 6,
-          "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
-        },
-        {
-          "section_id": "sec_006",
-          "section_title": "9.4.2 Test run 9) Connect mains cable.",
-          "page_start": 6,
-          "page_end": 7,
-          "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
-        }
-      ]
-    },
-    {
-      "type": "AcceptanceCriterion",
-      "name": "pressure stability",
-      "id": "ns:AcceptanceCriterion/pressure_stability",
       "confidence": 1.0,
       "spans": [
         {
@@ -779,95 +1962,10 @@
       ]
     },
     {
-      "type": "AcceptanceCriterion",
-      "name": "NTC Sensor Resistance Range",
-      "id": "ns:AcceptanceCriterion/ntc_sensor_resistance_range",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_007",
-          "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
-          "page_start": 7,
-          "page_end": 8,
-          "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
-        },
-        {
-          "section_id": "sec_008",
-          "section_title": "20 ml of coffee.",
-          "page_start": 8,
-          "page_end": 9,
-          "source_text": "Section: 20 ml of coffee.... (p.8-9)"
-        },
-        {
-          "section_id": "sec_010",
-          "section_title": "Prerequisite",
-          "page_start": 9,
-          "page_end": 9,
-          "source_text": "Section: Prerequisite... (p.9-9)"
-        },
-        {
-          "section_id": "sec_011",
-          "section_title": "9.6.1 Measure hot milk temperature",
-          "page_start": 9,
-          "page_end": 9,
-          "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
-        },
-        {
-          "section_id": "sec_012",
-          "section_title": "9.6.2 Measure milk froth ratio",
-          "page_start": 9,
-          "page_end": 9,
-          "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
-        },
-        {
-          "section_id": "sec_013",
-          "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
-          "page_start": 9,
-          "page_end": 10,
-          "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
-        },
-        {
-          "section_id": "sec_014",
-          "section_title": "9.7 NTC temperature sensor functionality",
-          "page_start": 10,
-          "page_end": 11,
-          "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
-        },
-        {
-          "section_id": "sec_015",
-          "section_title": "Measurement table",
-          "page_start": 11,
-          "page_end": 11,
-          "source_text": "Section: Measurement table... (p.11-11)"
-        },
-        {
-          "section_id": "sec_020",
-          "section_title": "35  95  60.90  65.86",
-          "page_start": 11,
-          "page_end": 12,
-          "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
-        },
-        {
-          "section_id": "sec_022",
-          "section_title": "9.8.1 What coffee machine has to be tested and when?",
-          "page_start": 12,
-          "page_end": 12,
-          "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
-        },
-        {
-          "section_id": "sec_023",
-          "section_title": "9.8.2 General",
-          "page_start": 12,
-          "page_end": 12,
-          "source_text": "Section: 9.8.2 General... (p.12-12)"
-        }
-      ]
-    },
-    {
       "type": "Equipment",
       "name": "Coffee Machine",
       "id": "ns:Equipment/coffee_machine",
-      "confidence": 0.9,
+      "confidence": 1.0,
       "spans": [
         {
           "section_id": "sec_007",
@@ -945,6 +2043,55 @@
           "page_start": 12,
           "page_end": 12,
           "source_text": "Section: 9.8.2 General... (p.12-12)"
+        },
+        {
+          "section_id": "sec_024",
+          "section_title": "Description",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Description... (p.12-12)"
+        },
+        {
+          "section_id": "sec_026",
+          "section_title": "Test equipment",
+          "page_start": 12,
+          "page_end": 13,
+          "source_text": "Section: Test equipment... (p.12-13)"
+        },
+        {
+          "section_id": "sec_027",
+          "section_title": "9.8.3 Test sequence",
+          "page_start": 13,
+          "page_end": 14,
+          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+        },
+        {
+          "section_id": "sec_028",
+          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+          "page_start": 14,
+          "page_end": 15,
+          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+        },
+        {
+          "section_id": "sec_030",
+          "section_title": "9.9.1 What coffee machines have to be tested and when?",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+        },
+        {
+          "section_id": "sec_031",
+          "section_title": "9.9.2 General",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.2 General... (p.15-15)"
+        },
+        {
+          "section_id": "sec_032",
+          "section_title": "Description",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Description... (p.15-15)"
         }
       ]
     },
@@ -1211,63 +2358,6 @@
       ]
     },
     {
-      "type": "Equipment",
-      "name": "Coffee Machine Citiz & Co",
-      "id": "ns:Equipment/coffee_machine_citiz_co",
-      "confidence": 1.0,
-      "spans": [
-        {
-          "section_id": "sec_024",
-          "section_title": "Description",
-          "page_start": 12,
-          "page_end": 12,
-          "source_text": "Section: Description... (p.12-12)"
-        },
-        {
-          "section_id": "sec_026",
-          "section_title": "Test equipment",
-          "page_start": 12,
-          "page_end": 13,
-          "source_text": "Section: Test equipment... (p.12-13)"
-        },
-        {
-          "section_id": "sec_027",
-          "section_title": "9.8.3 Test sequence",
-          "page_start": 13,
-          "page_end": 14,
-          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
-        },
-        {
-          "section_id": "sec_028",
-          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
-          "page_start": 14,
-          "page_end": 15,
-          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
-        },
-        {
-          "section_id": "sec_030",
-          "section_title": "9.9.1 What coffee machines have to be tested and when?",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
-        },
-        {
-          "section_id": "sec_031",
-          "section_title": "9.9.2 General",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: 9.9.2 General... (p.15-15)"
-        },
-        {
-          "section_id": "sec_032",
-          "section_title": "Description",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: Description... (p.15-15)"
-        }
-      ]
-    },
-    {
       "type": "Measurement",
       "name": "Ground Resistance",
       "id": "ns:Measurement/ground_resistance",
@@ -1482,21 +2572,475 @@
   ],
   "relations": [
     {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/94_pressure_and_leakage_checks",
+      "to_ref": "ns:Measurement/94_pressure_and_leakage_checks_measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "gauge indicates 12 bar."
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/94_pressure_and_leakage_checks",
+      "to_ref": "ns:AcceptanceCriterion/94_pressure_and_leakage_checks_criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_004",
+          "page": 4,
+          "source_text": "13) Control measuring cup: at least 60"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/942_test_run_9_connect_mains_cable",
+      "to_ref": "ns:Measurement/942_test_run_9_connect_mains_cable_measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "for approximately 10 sec out of the"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/942_test_run_9_connect_mains_cable",
+      "to_ref": "ns:AcceptanceCriterion/942_test_run_9_connect_mains_cable_criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_006",
+          "page": 6,
+          "source_text": "between 1619bar (pressure check)."
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/95_measure_coffee_temperature_15switch_off_the_coffee_machine",
+      "to_ref": "ns:Measurement/95_measure_coffee_temperature_15switch_off_the_coffee_machine_measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "page": 7,
+          "source_text": "button for approximately 10 sec to pre"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/20_ml_of_coffee",
+      "to_ref": "ns:Measurement/20_ml_of_coffee_measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F)."
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/20_ml_of_coffee",
+      "to_ref": "ns:AcceptanceCriterion/20_ml_of_coffee_criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_008",
+          "page": 8,
+          "source_text": "The coffee temperature should be"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/prerequisite",
+      "to_ref": "ns:Measurement/prerequisite_measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_010",
+          "page": 9,
+          "source_text": "Use newly opened UHT, full fat or semiskimmed milk at fridge temperature (+8°C till"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/961_measure_hot_milk_temperature",
+      "to_ref": "ns:Measurement/961_measure_hot_milk_temperature_measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "• Prepare 240 ml hot milk in milk frother (use mixer without spring)."
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/961_measure_hot_milk_temperature",
+      "to_ref": "ns:AcceptanceCriterion/961_measure_hot_milk_temperature_criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_011",
+          "page": 9,
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/962_measure_milk_froth_ratio",
+      "to_ref": "ns:Measurement/962_measure_milk_froth_ratio_measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_012",
+          "page": 9,
+          "source_text": "• Prepare cold milk froth out of 120 ml milk in milk frother (use whisk with spring)."
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/97_ntc_temperature_sensor_functionality",
+      "to_ref": "ns:AcceptanceCriterion/97_ntc_temperature_sensor_functionality_criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_014",
+          "page": 10,
+          "source_text": "The resistance of the NTC temperature sensor must be within a defined range, other"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "refersTo",
+      "from_ref": "ns:TestCase/97_ntc_temperature_sensor_functionality",
+      "to_ref": "ns:CrossReference/reference_page_104",
+      "confidence": 0.75,
+      "spans": [
+        {
+          "section_id": "sec_014",
+          "page": 10,
+          "source_text": "from thermoblock (refer to page 104"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "ns:TestCase/981_what_coffee_machine_has_to_be_tested_and_when",
+      "to_ref": "ns:ApplicabilityClause/this_test_is_only_necessary",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "This test is only necessary"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "ns:TestCase/981_what_coffee_machine_has_to_be_tested_and_when",
+      "to_ref": "ns:ApplicabilityClause/for_class_1_equipment_threewire_power_cord_with_protective_earth",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "for class 1 equipment (threewire power cord with protective earth)"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "ns:TestCase/981_what_coffee_machine_has_to_be_tested_and_when",
+      "to_ref": "ns:ApplicabilityClause/for_models_citiz_milk_ef_485486",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "for models Citiz & milk, EF 485/486"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "ns:TestCase/981_what_coffee_machine_has_to_be_tested_and_when",
+      "to_ref": "ns:ApplicabilityClause/after_a_repair_whenever_a_general_disassembly_of_the_platform_andor_core_unit_was",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_022",
+          "page": 12,
+          "source_text": "after a repair whenever a general disassembly of the platform and/or core unit was"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/description",
+      "to_ref": "ns:AcceptanceCriterion/description_criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "page": 12,
+          "source_text": "Protective earth continuity measurements are made between the protective earth"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/test_equipment",
+      "to_ref": "ns:AcceptanceCriterion/test_equipment_criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_026",
+          "page": 12,
+          "source_text": "tive earth continuity measurements. Detailed requirements and tolerances must be veri"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/983_test_sequence",
+      "to_ref": "ns:Measurement/983_test_sequence_measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_027",
+          "page": 13,
+          "source_text": "0.3Ohm."
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/983_test_sequence",
+      "to_ref": "ns:AcceptanceCriterion/983_test_sequence_criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_027",
+          "page": 13,
+          "source_text": "The resistance must be lower than"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/984_what_to_do_if_the_protective_earth_continuity_test_fails",
+      "to_ref": "ns:Measurement/984_what_to_do_if_the_protective_earth_continuity_test_fails_measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "0.3Ohm."
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/984_what_to_do_if_the_protective_earth_continuity_test_fails",
+      "to_ref": "ns:AcceptanceCriterion/984_what_to_do_if_the_protective_earth_continuity_test_fails_criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "• Clean ground contact on milk frother. Measure resistance between ground contact"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "refersTo",
+      "from_ref": "ns:TestCase/984_what_to_do_if_the_protective_earth_continuity_test_fails",
+      "to_ref": "ns:CrossReference/reference_page_75",
+      "confidence": 0.75,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "• Check/measure ground connection in platform (refer to page 75)."
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "refersTo",
+      "from_ref": "ns:TestCase/984_what_to_do_if_the_protective_earth_continuity_test_fails",
+      "to_ref": "ns:CrossReference/reference_page_73",
+      "confidence": 0.75,
+      "spans": [
+        {
+          "section_id": "sec_028",
+          "page": 14,
+          "source_text": "• Check/measure ground connection on milk frother connector (refer to page 73 and"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "ns:TestCase/991_what_coffee_machines_have_to_be_tested_and_when",
+      "to_ref": "ns:ApplicabilityClause/for_class_1_and_2_equipment_withwithout_protective_earth",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_030",
+          "page": 15,
+          "source_text": "for class 1 and 2 equipment (with/without  protective earth)"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "ns:TestCase/991_what_coffee_machines_have_to_be_tested_and_when",
+      "to_ref": "ns:ApplicabilityClause/after_a_repair_whenever_a_general_disassembly_of_the_platform_andor_core_unit_was",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_030",
+          "page": 15,
+          "source_text": "after a repair whenever a general disassembly of the platform and/or core unit was"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/description",
+      "to_ref": "ns:Measurement/description_measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_032",
+          "page": 15,
+          "source_text": "is a very dangerous test because of a high test voltage (500 V DC)."
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "ns:TestCase/description",
+      "to_ref": "ns:ApplicabilityClause/ments_after_a_repair",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_032",
+          "page": 15,
+          "source_text": "ments after a repair,"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/993_test_sequence",
+      "to_ref": "ns:Measurement/993_test_sequence_measurement",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "an insulation test voltage of 500 V DC."
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/993_test_sequence",
+      "to_ref": "ns:AcceptanceCriterion/993_test_sequence_criterion",
+      "confidence": 0.85,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "The insulation resistance must be"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
+      "type": "appliesTo",
+      "from_ref": "ns:TestCase/993_test_sequence",
+      "to_ref": "ns:ApplicabilityClause/additional_tests_for_coffee_machine",
+      "confidence": 0.8,
+      "spans": [
+        {
+          "section_id": "sec_034",
+          "page": 16,
+          "source_text": "Additional tests for coffee machine"
+        }
+      ],
+      "_source": "SYMBOLIC_TESTING"
+    },
+    {
       "type": "requires",
-      "from_ref": "ns:Measurement/pressure",
+      "from_ref": "ns:Measurement/pressure_measurement",
       "to_ref": "ns:Equipment/pressure_gauge_adapter",
       "confidence": 1.0
     },
     {
       "type": "requires",
-      "from_ref": "ns:Measurement/water_volume",
+      "from_ref": "ns:Measurement/water_measurement",
       "to_ref": "ns:Equipment/pressure_gauge_adapter",
       "confidence": 1.0
     },
     {
       "type": "validatedBy",
-      "from_ref": "ns:Measurement/pressure",
-      "to_ref": "ns:AcceptanceCriterion/pressure_stability",
+      "from_ref": "ns:Measurement/pressure_measurement",
+      "to_ref": "ns:Equipment/connecting_unit",
+      "confidence": 1.0
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:Measurement/pressure_measurement",
+      "to_ref": "ns:Equipment/fixation_unit",
       "confidence": 1.0
     },
     {
@@ -1512,12 +3056,6 @@
       "confidence": 1.0
     },
     {
-      "type": "requires",
-      "from_ref": "ns:TestCase/coffee_temperature_measurement",
-      "to_ref": "ns:Equipment/coffee_machine",
-      "confidence": 0.9
-    },
-    {
       "type": "validatedBy",
       "from_ref": "ns:TestCase/coffee_temperature_measurement",
       "to_ref": "ns:Measurement/coffee_temperature",
@@ -1530,13 +3068,13 @@
       "confidence": 0.9
     },
     {
-      "type": "constrainedBy",
-      "from_ref": "ns:Measurement/coffee_temperature",
-      "to_ref": "ns:AcceptanceCriterion/ntc_sensor_resistance_range",
+      "type": "refersTo",
+      "from_ref": "ns:SafetyNotice/ntc_temperature_sensor_handling",
+      "to_ref": "ns:Equipment/coffee_machine",
       "confidence": 0.9
     },
     {
-      "type": "refersTo",
+      "type": "constrainedBy",
       "from_ref": "ns:SafetyNotice/ntc_temperature_sensor_handling",
       "to_ref": "ns:NormativeReference/eniec_60335_1",
       "confidence": 0.9
@@ -1544,7 +3082,7 @@
     {
       "type": "requires",
       "from_ref": "ns:TestCase/protective_earth_continuity_test",
-      "to_ref": "ns:Equipment/coffee_machine_citiz_co",
+      "to_ref": "ns:Equipment/coffee_machine",
       "confidence": 1.0
     },
     {
@@ -1598,12 +3136,12 @@
     {
       "type": "refersTo",
       "from_ref": "ns:SafetyNotice/danger_of_electrical_shockshort_circuit",
-      "to_ref": "ns:Equipment/test_equipment",
+      "to_ref": "ns:TestCase/insulation_test",
       "confidence": 1.0
     }
   ],
   "provenance": {
-    "overall_confidence": 0.975,
+    "overall_confidence": 0.889,
     "documents_processed": [
       "5_Test and Validation_Service Manual-130-147.parsed.json"
     ],
@@ -1796,27 +3334,30 @@
   },
   "quality": {
     "json_valid": true,
-    "entities_count": 24,
-    "relations_count": 20,
+    "entities_count": 79,
+    "relations_count": 52,
     "warnings": [],
-    "overall_confidence": 0.975,
-    "avg_entity_confidence": 0.975,
-    "avg_relation_confidence": 0.975,
+    "overall_confidence": 0.889,
+    "avg_entity_confidence": 0.892,
+    "avg_relation_confidence": 0.887,
     "entity_type_distribution": {
-      "Equipment": 6,
-      "Measurement": 6,
-      "SafetyNotice": 4,
-      "AcceptanceCriterion": 3,
-      "TestCase": 3,
+      "TestCase": 27,
+      "SafetyNotice": 7,
+      "Measurement": 17,
+      "AcceptanceCriterion": 11,
+      "CrossReference": 3,
+      "ApplicabilityClause": 7,
+      "Equipment": 5,
       "NormativeReference": 2
     },
     "relation_type_distribution": {
-      "requires": 5,
-      "validatedBy": 6,
-      "refersTo": 4,
-      "constrainedBy": 5
+      "validatedBy": 18,
+      "constrainedBy": 15,
+      "refersTo": 7,
+      "appliesTo": 8,
+      "requires": 4
     },
     "profile": "testing",
-    "generated_at": "2025-11-05T10:36:24.775731+00:00"
+    "generated_at": "2025-11-05T13:33:09.239582+00:00"
   }
 }

@@ -1,24 +1,24 @@
 {
   "json_valid": true,
-  "entities_count": 81,
-  "relations_count": 47,
+  "entities_count": 85,
+  "relations_count": 49,
   "warnings": [],
   "overall_confidence": 0.897,
   "avg_entity_confidence": 0.902,
-  "avg_relation_confidence": 0.892,
+  "avg_relation_confidence": 0.891,
   "entity_type_distribution": {
-    "Product": 4,
-    "ComponentType": 30,
-    "ParameterSpec": 31,
+    "Product": 5,
+    "ComponentType": 31,
+    "ParameterSpec": 33,
     "Unit": 15,
     "RatingPlate": 1
   },
   "relation_type_distribution": {
-    "hasPart": 12,
-    "hasSpec": 17,
-    "hasUnit": 17,
+    "hasPart": 10,
+    "hasSpec": 19,
+    "hasUnit": 19,
     "hasRatingPlate": 1
   },
   "profile": "product_technical",
-  "generated_at": "2025-11-05T10:33:45.714630+00:00"
+  "generated_at": "2025-11-05T13:30:26.988103+00:00"
 }

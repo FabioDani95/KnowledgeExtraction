@@ -348,91 +348,6 @@
         ]
       },
       {
-        "type": "AcceptanceCriterion",
-        "name": "NTC Sensor Resistance Range",
-        "id": "AC_01",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_007",
-            "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
-            "page_start": 7,
-            "page_end": 8,
-            "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
-          },
-          {
-            "section_id": "sec_008",
-            "section_title": "20 ml of coffee.",
-            "page_start": 8,
-            "page_end": 9,
-            "source_text": "Section: 20 ml of coffee.... (p.8-9)"
-          },
-          {
-            "section_id": "sec_010",
-            "section_title": "Prerequisite",
-            "page_start": 9,
-            "page_end": 9,
-            "source_text": "Section: Prerequisite... (p.9-9)"
-          },
-          {
-            "section_id": "sec_011",
-            "section_title": "9.6.1 Measure hot milk temperature",
-            "page_start": 9,
-            "page_end": 9,
-            "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
-          },
-          {
-            "section_id": "sec_012",
-            "section_title": "9.6.2 Measure milk froth ratio",
-            "page_start": 9,
-            "page_end": 9,
-            "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
-          },
-          {
-            "section_id": "sec_013",
-            "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
-            "page_start": 9,
-            "page_end": 10,
-            "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
-          },
-          {
-            "section_id": "sec_014",
-            "section_title": "9.7 NTC temperature sensor functionality",
-            "page_start": 10,
-            "page_end": 11,
-            "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
-          },
-          {
-            "section_id": "sec_015",
-            "section_title": "Measurement table",
-            "page_start": 11,
-            "page_end": 11,
-            "source_text": "Section: Measurement table... (p.11-11)"
-          },
-          {
-            "section_id": "sec_020",
-            "section_title": "35  95  60.90  65.86",
-            "page_start": 11,
-            "page_end": 12,
-            "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
-          },
-          {
-            "section_id": "sec_022",
-            "section_title": "9.8.1 What coffee machine has to be tested and when?",
-            "page_start": 12,
-            "page_end": 12,
-            "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
-          },
-          {
-            "section_id": "sec_023",
-            "section_title": "9.8.2 General",
-            "page_start": 12,
-            "page_end": 12,
-            "source_text": "Section: 9.8.2 General... (p.12-12)"
-          }
-        ]
-      },
-      {
         "type": "Equipment",
         "name": "Coffee Machine",
         "id": "E_01",
@@ -605,12 +520,6 @@
     ],
     "relations": [
       {
-        "type": "requires",
-        "from_ref": "TC_01",
-        "to_ref": "E_01",
-        "confidence": 0.9
-      },
-      {
         "type": "validatedBy",
         "from_ref": "TC_01",
         "to_ref": "M_01",
@@ -623,13 +532,13 @@
         "confidence": 0.9
       },
       {
-        "type": "constrainedBy",
-        "from_ref": "M_01",
-        "to_ref": "AC_01",
+        "type": "refersTo",
+        "from_ref": "SN_01",
+        "to_ref": "E_01",
         "confidence": 0.9
       },
       {
-        "type": "refersTo",
+        "type": "constrainedBy",
         "from_ref": "SN_01",
         "to_ref": "NR_01",
         "confidence": 0.9
@@ -737,5 +646,5 @@
       "char_end": 7293
     }
   ],
-  "timestamp": "2025-11-05T10:36:00.081133+00:00"
+  "timestamp": "2025-11-05T13:32:45.105228+00:00"
 }

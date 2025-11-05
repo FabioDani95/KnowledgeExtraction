@@ -1,6 +1,6 @@
 {
   "document_code": "KG_PRODUCT_TECHNICAL",
-  "ingestion_id": "88204db1-07da-4ecd-bfa7-2e5acd701428",
+  "ingestion_id": "87ac11e4-9f1d-4353-b295-426fbc7830f7",
   "extraction_version": "neural_v1.2",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
@@ -109,90 +109,6 @@
           "page_start": 7,
           "page_end": 8,
           "source_text": "Section: 3.4.1 Overview ­ milk frother AERO3... (p.7-8)"
-        },
-        {
-          "section_id": "sec_4_1_1_turmix",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_2_turmix",
-          "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
-          "page_start": 15,
-          "page_end": 16,
-          "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
-        },
-        {
-          "section_id": "sec_4_1_3",
-          "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
-          "page_start": 16,
-          "page_end": 17,
-          "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
-        },
-        {
-          "section_id": "sec_4_1_3_manufacturing_plant",
-          "section_title": "Manufacturing plant",
-          "page_start": 16,
-          "page_end": 17,
-          "source_text": "Section: Manufacturing plant... (p.16-17)"
-        },
-        {
-          "section_id": "sec_4_2_1",
-          "section_title": "4.2.1 Technical data of coffee machines",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz",
-          "section_title": "Mains voltage for Citiz",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
-          "section_title": "Mains voltage for Citiz & milk",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
-          "section_title": "Mains voltage for Citiz & Co",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_approvals",
-          "section_title": "Approvals",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Approvals... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
-          "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
-          "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
-          "section_title": "Power ratings of coffee machine main components",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
         },
         {
           "section_id": "sec_4_2_1_heating_up",
@@ -517,90 +433,6 @@
           "page_start": 12,
           "page_end": 15,
           "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_turmix",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_2_turmix",
-          "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
-          "page_start": 15,
-          "page_end": 16,
-          "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
-        },
-        {
-          "section_id": "sec_4_1_3",
-          "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
-          "page_start": 16,
-          "page_end": 17,
-          "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
-        },
-        {
-          "section_id": "sec_4_1_3_manufacturing_plant",
-          "section_title": "Manufacturing plant",
-          "page_start": 16,
-          "page_end": 17,
-          "source_text": "Section: Manufacturing plant... (p.16-17)"
-        },
-        {
-          "section_id": "sec_4_2_1",
-          "section_title": "4.2.1 Technical data of coffee machines",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz",
-          "section_title": "Mains voltage for Citiz",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
-          "section_title": "Mains voltage for Citiz & milk",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
-          "section_title": "Mains voltage for Citiz & Co",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_approvals",
-          "section_title": "Approvals",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Approvals... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
-          "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
-          "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
-          "section_title": "Power ratings of coffee machine main components",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
         }
       ]
     },
@@ -1236,90 +1068,6 @@
           "page_start": 12,
           "page_end": 15,
           "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_turmix",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_2_turmix",
-          "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
-          "page_start": 15,
-          "page_end": 16,
-          "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
-        },
-        {
-          "section_id": "sec_4_1_3",
-          "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
-          "page_start": 16,
-          "page_end": 17,
-          "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
-        },
-        {
-          "section_id": "sec_4_1_3_manufacturing_plant",
-          "section_title": "Manufacturing plant",
-          "page_start": 16,
-          "page_end": 17,
-          "source_text": "Section: Manufacturing plant... (p.16-17)"
-        },
-        {
-          "section_id": "sec_4_2_1",
-          "section_title": "4.2.1 Technical data of coffee machines",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz",
-          "section_title": "Mains voltage for Citiz",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
-          "section_title": "Mains voltage for Citiz & milk",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
-          "section_title": "Mains voltage for Citiz & Co",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_approvals",
-          "section_title": "Approvals",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Approvals... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
-          "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
-          "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
-          "section_title": "Power ratings of coffee machine main components",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
         }
       ]
     },
@@ -2119,90 +1867,6 @@
           "page_start": 12,
           "page_end": 15,
           "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_turmix",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_2_turmix",
-          "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
-          "page_start": 15,
-          "page_end": 16,
-          "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
-        },
-        {
-          "section_id": "sec_4_1_3",
-          "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
-          "page_start": 16,
-          "page_end": 17,
-          "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
-        },
-        {
-          "section_id": "sec_4_1_3_manufacturing_plant",
-          "section_title": "Manufacturing plant",
-          "page_start": 16,
-          "page_end": 17,
-          "source_text": "Section: Manufacturing plant... (p.16-17)"
-        },
-        {
-          "section_id": "sec_4_2_1",
-          "section_title": "4.2.1 Technical data of coffee machines",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz",
-          "section_title": "Mains voltage for Citiz",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
-          "section_title": "Mains voltage for Citiz & milk",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
-          "section_title": "Mains voltage for Citiz & Co",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_approvals",
-          "section_title": "Approvals",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Approvals... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
-          "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
-          "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
-          "section_title": "Power ratings of coffee machine main components",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
         }
       ]
     },
@@ -3347,6 +3011,119 @@
       "id": "ns:ComponentType/power_cord",
       "type": "ComponentType",
       "name": "Power cord",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_3_4_1_aero3_is_part_of_the",
+          "section_title": "AERO3 is part of the",
+          "page_start": 7,
+          "page_end": 8,
+          "source_text": "Section: AERO3 is part of the... (p.7-8)"
+        },
+        {
+          "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
+          "section_title": "Citiz service manual  16 MAIN COMPONENTS",
+          "page_start": 7,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
+        },
+        {
+          "section_id": "sec_3_5",
+          "section_title": "3.5 Overview ­ model Citiz & Co",
+          "page_start": 8,
+          "page_end": 9,
+          "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
+        },
+        {
+          "section_id": "sec_3_6_1",
+          "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
+          "page_start": 9,
+          "page_end": 10,
+          "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
+        },
+        {
+          "section_id": "sec_3_6_1_legend",
+          "section_title": "Legend",
+          "page_start": 9,
+          "page_end": 10,
+          "source_text": "Section: Legend... (p.9-10)"
+        },
+        {
+          "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
+          "section_title": "Citiz service manual  18 MAIN COMPONENTS",
+          "page_start": 9,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
+        },
+        {
+          "section_id": "sec_3_6_2",
+          "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
+          "page_start": 10,
+          "page_end": 11,
+          "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
+        },
+        {
+          "section_id": "sec_3_6_3",
+          "section_title": "3.6.3 Water circuit of model Citiz & Co",
+          "page_start": 11,
+          "page_end": 12,
+          "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
+        },
+        {
+          "section_id": "sec_4_1_1_nespresso",
+          "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_1_nespresso_this_overview_shows",
+          "section_title": "This overview shows",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: This overview shows... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
+          "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_1_delonghi",
+          "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_1_koenig",
+          "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_1_krups",
+          "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_1_magimix",
+          "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+        }
+      ]
+    },
+    {
+      "id": "ns:ComponentType/core_units",
+      "type": "ComponentType",
+      "name": "Core units",
       "confidence": 0.9,
       "spans": [
         {
@@ -4639,9 +4416,101 @@
       ]
     },
     {
-      "id": "ns:Product/citiz_co",
+      "id": "ns:Product/turmix_tx_270_citiz_milk",
       "type": "Product",
-      "name": "Citiz & Co",
+      "name": "Turmix TX 270 - Citiz & milk",
+      "confidence": 0.95,
+      "spans": [
+        {
+          "section_id": "sec_4_1_1_turmix",
+          "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_2_turmix",
+          "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+          "page_start": 15,
+          "page_end": 16,
+          "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
+        },
+        {
+          "section_id": "sec_4_1_3",
+          "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_1_3_manufacturing_plant",
+          "section_title": "Manufacturing plant",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: Manufacturing plant... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_2_1",
+          "section_title": "4.2.1 Technical data of coffee machines",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+          "section_title": "Mains voltage for Citiz",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+          "section_title": "Mains voltage for Citiz & milk",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+          "section_title": "Mains voltage for Citiz & Co",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_approvals",
+          "section_title": "Approvals",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Approvals... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+          "section_title": "Power ratings of coffee machine main components",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:Product/turmix_tx_370_citiz_co",
+      "type": "Product",
+      "name": "Turmix TX 370 - Citiz & Co.",
       "confidence": 0.95,
       "spans": [
         {
@@ -5327,9 +5196,9 @@
       ]
     },
     {
-      "id": "ns:RatingPlate/rating_plate_for_citiz",
+      "id": "ns:RatingPlate/rating_plate_details_ef484_citiz_c110",
       "type": "RatingPlate",
-      "name": "Rating plate for Citiz",
+      "name": "Rating plate details EF484 Citiz C110",
       "confidence": 0.9,
       "spans": [
         {
@@ -5419,9 +5288,9 @@
       ]
     },
     {
-      "id": "ns:PS/heating_energy_consumption_small_cup",
+      "id": "ns:PS/heating_energy_for_small_cup",
       "type": "ParameterSpec",
-      "name": "Heating energy consumption (small cup)",
+      "name": "Heating energy for small cup",
       "nominal_value": 4.3,
       "unit_raw": "Wh",
       "confidence": 0.9,
@@ -5478,9 +5347,9 @@
       ]
     },
     {
-      "id": "ns:PS/heating_energy_consumption_large_cup",
+      "id": "ns:PS/heating_energy_for_large_cup",
       "type": "ParameterSpec",
-      "name": "Heating energy consumption (large cup)",
+      "name": "Heating energy for large cup",
       "nominal_value": 8.7,
       "unit_raw": "Wh",
       "confidence": 0.9,
@@ -5537,9 +5406,9 @@
       ]
     },
     {
-      "id": "ns:PS/standby_energy_consumption",
+      "id": "ns:PS/standby_operation_energy",
       "type": "ParameterSpec",
-      "name": "Standby energy consumption",
+      "name": "Standby operation energy",
       "nominal_value": 0.7,
       "unit_raw": "Wh",
       "confidence": 0.9,
@@ -5598,7 +5467,7 @@
     {
       "id": "ns:PS/max_permissible_pump_pressure",
       "type": "ParameterSpec",
-      "name": "Max. permissible pump pressure",
+      "name": "Max permissible pump pressure",
       "nominal_value": 17.5,
       "unit_raw": "bar",
       "confidence": 0.9,
@@ -7132,9 +7001,9 @@
       ]
     },
     {
-      "id": "ns:PS/power_rating_europe",
+      "id": "ns:PS/power_rating_220_240_v",
       "type": "ParameterSpec",
-      "name": "Power rating Europe",
+      "name": "Power rating 220-240 V",
       "nominal_value": 410,
       "unit_raw": "W",
       "confidence": 0.9,
@@ -8100,77 +7969,9 @@
       ]
     },
     {
-      "id": "ns:PS/diameter",
-      "type": "ParameterSpec",
-      "name": "Diameter",
-      "nominal_value": 91,
-      "unit_raw": "mm",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_4_2_5",
-          "section_title": "4.2.5 Dimensions and weight ­ milk frother",
-          "page_start": 21,
-          "page_end": 21,
-          "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
-        }
-      ]
-    },
-    {
-      "id": "ns:PS/height",
-      "type": "ParameterSpec",
-      "name": "Height",
-      "nominal_value": 170,
-      "unit_raw": "mm",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_4_2_5",
-          "section_title": "4.2.5 Dimensions and weight ­ milk frother",
-          "page_start": 21,
-          "page_end": 21,
-          "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
-        }
-      ]
-    },
-    {
       "id": "ns:ComponentType/whisk",
       "type": "ComponentType",
       "name": "Whisk",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_4_2_5",
-          "section_title": "4.2.5 Dimensions and weight ­ milk frother",
-          "page_start": 21,
-          "page_end": 21,
-          "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
-        }
-      ]
-    },
-    {
-      "id": "ns:PS/whisk_diameter",
-      "type": "ParameterSpec",
-      "name": "Whisk Diameter",
-      "nominal_value": 33,
-      "unit_raw": "mm",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_4_2_5",
-          "section_title": "4.2.5 Dimensions and weight ­ milk frother",
-          "page_start": 21,
-          "page_end": 21,
-          "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
-        }
-      ]
-    },
-    {
-      "id": "ns:PS/whisk_height",
-      "type": "ParameterSpec",
-      "name": "Whisk Height",
-      "nominal_value": 32,
-      "unit_raw": "mm",
       "confidence": 0.9,
       "spans": [
         {
@@ -8198,10 +7999,25 @@
       ]
     },
     {
-      "id": "ns:PS/mixer_dimensions",
+      "id": "ns:ComponentType/core_unit",
+      "type": "ComponentType",
+      "name": "Core Unit",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_5",
+          "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+          "page_start": 21,
+          "page_end": 21,
+          "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/jug_dimensions",
       "type": "ParameterSpec",
-      "name": "Mixer Dimensions",
-      "nominal_value": "15 x 34 x 32",
+      "name": "Jug dimensions",
+      "nominal_value": 91,
       "unit_raw": "mm",
       "confidence": 0.9,
       "spans": [
@@ -8215,9 +8031,96 @@
       ]
     },
     {
-      "id": "ns:ComponentType/weight",
-      "type": "ComponentType",
-      "name": "Weight",
+      "id": "ns:PS/jug_height",
+      "type": "ParameterSpec",
+      "name": "Jug height",
+      "nominal_value": 170,
+      "unit_raw": "mm",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_5",
+          "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+          "page_start": 21,
+          "page_end": 21,
+          "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/whisk_dimensions",
+      "type": "ParameterSpec",
+      "name": "Whisk dimensions",
+      "nominal_value": 33,
+      "unit_raw": "mm",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_5",
+          "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+          "page_start": 21,
+          "page_end": 21,
+          "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/whisk_height",
+      "type": "ParameterSpec",
+      "name": "Whisk height",
+      "nominal_value": 32,
+      "unit_raw": "mm",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_5",
+          "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+          "page_start": 21,
+          "page_end": 21,
+          "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/mixer_dimensions",
+      "type": "ParameterSpec",
+      "name": "Mixer dimensions",
+      "nominal_value": 15,
+      "unit_raw": "mm",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_5",
+          "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+          "page_start": 21,
+          "page_end": 21,
+          "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/mixer_height",
+      "type": "ParameterSpec",
+      "name": "Mixer height",
+      "nominal_value": 34,
+      "unit_raw": "mm",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_5",
+          "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+          "page_start": 21,
+          "page_end": 21,
+          "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/mixer_width",
+      "type": "ParameterSpec",
+      "name": "Mixer width",
+      "nominal_value": 32,
+      "unit_raw": "mm",
       "confidence": 0.9,
       "spans": [
         {
@@ -8352,14 +8255,8 @@
     },
     {
       "type": "hasSpec",
-      "from_ref": "ns:Product/citiz_milk",
+      "from_ref": "ns:Product/turmix_tx_270_citiz_milk",
       "to_ref": "ns:PS/mains_voltage",
-      "confidence": 0.9
-    },
-    {
-      "type": "hasSpec",
-      "from_ref": "ns:Product/citiz_milk",
-      "to_ref": "ns:PS/power_rating",
       "confidence": 0.9
     },
     {
@@ -8369,27 +8266,21 @@
       "confidence": 0.88
     },
     {
+      "type": "hasSpec",
+      "from_ref": "ns:Product/turmix_tx_270_citiz_milk",
+      "to_ref": "ns:PS/power_rating",
+      "confidence": 0.9
+    },
+    {
       "type": "hasUnit",
       "from_ref": "ns:PS/power_rating",
       "to_ref": "ns:Unit/w",
       "confidence": 0.88
     },
     {
-      "type": "hasPart",
-      "from_ref": "ns:Product/citiz_milk",
-      "to_ref": "ns:ComponentType/thermoblock",
-      "confidence": 0.9
-    },
-    {
-      "type": "hasPart",
-      "from_ref": "ns:Product/citiz_milk",
-      "to_ref": "ns:ComponentType/pump",
-      "confidence": 0.9
-    },
-    {
       "type": "hasRatingPlate",
-      "from_ref": "ns:Product/citiz_milk",
-      "to_ref": "ns:RatingPlate/rating_plate_for_citiz",
+      "from_ref": "ns:Product/turmix_tx_270_citiz_milk",
+      "to_ref": "ns:RatingPlate/rating_plate_details_ef484_citiz_c110",
       "confidence": 0.9
     },
     {
@@ -8399,22 +8290,10 @@
       "confidence": 0.9
     },
     {
-      "type": "hasUnit",
-      "from_ref": "ns:PS/noise_during_brewing_cycle",
-      "to_ref": "ns:Unit/dba",
-      "confidence": 0.88
-    },
-    {
       "type": "hasSpec",
       "from_ref": "ns:Product/coffee_machine",
       "to_ref": "ns:PS/preheating_time",
       "confidence": 0.9
-    },
-    {
-      "type": "hasUnit",
-      "from_ref": "ns:PS/preheating_time",
-      "to_ref": "ns:Unit/sec",
-      "confidence": 0.88
     },
     {
       "type": "hasSpec",
@@ -8423,34 +8302,16 @@
       "confidence": 0.9
     },
     {
-      "type": "hasUnit",
-      "from_ref": "ns:PS/cable_length",
-      "to_ref": "ns:Unit/m",
-      "confidence": 0.88
-    },
-    {
       "type": "hasSpec",
       "from_ref": "ns:Product/coffee_machine",
       "to_ref": "ns:PS/mains_voltage_europe",
       "confidence": 0.9
     },
     {
-      "type": "hasUnit",
-      "from_ref": "ns:PS/mains_voltage_europe",
-      "to_ref": "ns:Unit/v",
-      "confidence": 0.88
-    },
-    {
       "type": "hasSpec",
       "from_ref": "ns:Product/coffee_machine",
-      "to_ref": "ns:PS/power_rating_europe",
+      "to_ref": "ns:PS/power_rating_220_240_v",
       "confidence": 0.9
-    },
-    {
-      "type": "hasUnit",
-      "from_ref": "ns:PS/power_rating_europe",
-      "to_ref": "ns:Unit/w",
-      "confidence": 0.88
     },
     {
       "type": "hasSpec",
@@ -8459,28 +8320,58 @@
       "confidence": 0.9
     },
     {
-      "type": "hasUnit",
-      "from_ref": "ns:PS/capacity_hot_milk",
-      "to_ref": "ns:Unit/ml",
-      "confidence": 0.88
-    },
-    {
       "type": "hasSpec",
       "from_ref": "ns:Product/coffee_machine",
       "to_ref": "ns:PS/whisk_speed",
       "confidence": 0.9
     },
     {
-      "type": "hasUnit",
-      "from_ref": "ns:PS/whisk_speed",
-      "to_ref": "ns:Unit/rpm",
-      "confidence": 0.88
-    },
-    {
       "type": "hasSpec",
       "from_ref": "ns:Product/coffee_machine",
       "to_ref": "ns:PS/temperature_hot_milk",
       "confidence": 0.9
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "ns:PS/noise_during_brewing_cycle",
+      "to_ref": "ns:Unit/dba",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "ns:PS/preheating_time",
+      "to_ref": "ns:Unit/sec",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "ns:PS/cable_length",
+      "to_ref": "ns:Unit/m",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "ns:PS/mains_voltage_europe",
+      "to_ref": "ns:Unit/v",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "ns:PS/power_rating_220_240_v",
+      "to_ref": "ns:Unit/w",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "ns:PS/capacity_hot_milk",
+      "to_ref": "ns:Unit/ml",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "ns:PS/whisk_speed",
+      "to_ref": "ns:Unit/rpm",
+      "confidence": 0.88
     },
     {
       "type": "hasUnit",
@@ -8491,19 +8382,19 @@
     {
       "type": "hasSpec",
       "from_ref": "ns:ComponentType/jug",
-      "to_ref": "ns:PS/diameter",
+      "to_ref": "ns:PS/jug_dimensions",
       "confidence": 0.9
     },
     {
       "type": "hasSpec",
       "from_ref": "ns:ComponentType/jug",
-      "to_ref": "ns:PS/height",
+      "to_ref": "ns:PS/jug_height",
       "confidence": 0.9
     },
     {
       "type": "hasSpec",
       "from_ref": "ns:ComponentType/whisk",
-      "to_ref": "ns:PS/whisk_diameter",
+      "to_ref": "ns:PS/whisk_dimensions",
       "confidence": 0.9
     },
     {
@@ -8520,25 +8411,37 @@
     },
     {
       "type": "hasSpec",
-      "from_ref": "ns:ComponentType/weight",
+      "from_ref": "ns:ComponentType/mixer",
+      "to_ref": "ns:PS/mixer_height",
+      "confidence": 0.9
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "ns:ComponentType/mixer",
+      "to_ref": "ns:PS/mixer_width",
+      "confidence": 0.9
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "ns:ComponentType/core_unit",
       "to_ref": "ns:PS/weight",
       "confidence": 0.9
     },
     {
       "type": "hasUnit",
-      "from_ref": "ns:PS/diameter",
+      "from_ref": "ns:PS/jug_dimensions",
       "to_ref": "ns:Unit/mm",
       "confidence": 0.88
     },
     {
       "type": "hasUnit",
-      "from_ref": "ns:PS/height",
+      "from_ref": "ns:PS/jug_height",
       "to_ref": "ns:Unit/mm",
       "confidence": 0.88
     },
     {
       "type": "hasUnit",
-      "from_ref": "ns:PS/whisk_diameter",
+      "from_ref": "ns:PS/whisk_dimensions",
       "to_ref": "ns:Unit/mm",
       "confidence": 0.88
     },
@@ -8551,6 +8454,18 @@
     {
       "type": "hasUnit",
       "from_ref": "ns:PS/mixer_dimensions",
+      "to_ref": "ns:Unit/mm",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "ns:PS/mixer_height",
+      "to_ref": "ns:Unit/mm",
+      "confidence": 0.88
+    },
+    {
+      "type": "hasUnit",
+      "from_ref": "ns:PS/mixer_width",
       "to_ref": "ns:Unit/mm",
       "confidence": 0.88
     },
@@ -9007,26 +8922,26 @@
   },
   "quality": {
     "json_valid": true,
-    "entities_count": 81,
-    "relations_count": 47,
+    "entities_count": 85,
+    "relations_count": 49,
     "warnings": [],
     "overall_confidence": 0.897,
     "avg_entity_confidence": 0.902,
-    "avg_relation_confidence": 0.892,
+    "avg_relation_confidence": 0.891,
     "entity_type_distribution": {
-      "Product": 4,
-      "ComponentType": 30,
-      "ParameterSpec": 31,
+      "Product": 5,
+      "ComponentType": 31,
+      "ParameterSpec": 33,
       "Unit": 15,
       "RatingPlate": 1
     },
     "relation_type_distribution": {
-      "hasPart": 12,
-      "hasSpec": 17,
-      "hasUnit": 17,
+      "hasPart": 10,
+      "hasSpec": 19,
+      "hasUnit": 19,
       "hasRatingPlate": 1
     },
     "profile": "product_technical",
-    "generated_at": "2025-11-05T10:33:45.714630+00:00"
+    "generated_at": "2025-11-05T13:30:26.988103+00:00"
   }
 }

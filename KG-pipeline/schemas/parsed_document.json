@@ -56,6 +56,39 @@
       "tags": ["string"]
     }
   ],
+  "promoted_entities": [
+    {
+      "id": "string",
+      "type": "string",
+      "name": "string",
+      "confidence": "number",
+      "spans": [
+        {
+          "section_id": "string",
+          "page": "integer",
+          "char_start": "integer",
+          "char_end": "integer",
+          "source_text": "string"
+        }
+      ],
+      "metadata": "object"
+    }
+  ],
+  "promoted_relations": [
+    {
+      "type": "string",
+      "from_ref": "string",
+      "to_ref": "string",
+      "confidence": "number",
+      "spans": [
+        {
+          "section_id": "string",
+          "page": "integer",
+          "source_text": "string"
+        }
+      ]
+    }
+  ],
   "extraction_constraints": {
     "skip_patterns": ["string"],
     "max_chars_per_section": "integer",

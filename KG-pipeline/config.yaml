@@ -407,9 +407,11 @@ pipelines:
         header: "^(test\\s+report|quality\\s+check).*$"
         footer: "^(confidential|internal use).*"
         page_number: "^\\s*\\d+\\s*$"
+        decoration: "^[\\-|\\s─═]+$"
       section_heading_patterns:
         - "^(Test|Case|Scenario)\\s+\\d+"
         - "^([A-Z][A-Za-z0-9\\s]+):$"
+        - "^\\d+(\\.\\d+){0,3}\\s+[A-Z].+"
       test_case_keywords:
         outcome:
           - "pass"
@@ -423,8 +425,87 @@ pipelines:
         step:
           - "test"
           - "verification"
+          - "sequence"
       min_section_chars: 20
       default_role: "main"
+      safety_markers:
+        - "danger"
+        - "warning"
+        - "caution"
+        - "note"
+        - "notice"
+      acceptance_patterns:
+        - "must be"
+        - "should be"
+        - "shall be"
+        - "at least"
+        - "at most"
+        - "lower than"
+        - "less than"
+        - "greater than"
+        - "higher than"
+        - "between"
+        - "±"
+        - ">="
+        - "<="
+        - ">"
+        - "<"
+      unit_patterns:
+        - "bar"
+        - "ml"
+        - "°C"
+        - "°F"
+        - "C"
+        - "F"
+        - "Ohm"
+        - "Ω"
+        - "kOhm"
+        - "kΩ"
+        - "mA"
+        - "V DC"
+        - "VDC"
+        - "sec"
+        - "s"
+      block_markers:
+        precondition_markers:
+          - "prerequisite"
+          - "preparations"
+        procedure_markers:
+          - "test run"
+          - "test sequence"
+          - "procedure"
+          - "description"
+        equipment_markers:
+          - "test equipment"
+          - "tools"
+          - "measuring cup"
+          - "pressure tester"
+          - "multimeter"
+        applicability_markers:
+          - "only necessary"
+          - "for class"
+          - "for models"
+          - "after a repair"
+          - "additional tests"
+        measurement_markers:
+          - "measurement table"
+          - "measurement"
+          - "diagram"
+          - "graph"
+          - "ntc"
+        general_markers:
+          - "general"
+          - "overview"
+        safety_markers:
+          - "danger"
+          - "warning"
+          - "caution"
+          - "note"
+          - "notice"
+      step_markers_regex:
+        - "^\\d+\\)"
+        - "^\\d+\\.\\s"
+        - "^[•\\-–]\\s"
 
 # === KG Validation Settings ===
 validations:

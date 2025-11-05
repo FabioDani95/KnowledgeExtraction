@@ -5,6 +5,7 @@ import hashlib
 import logging
 import re
 import unicodedata
+from collections import defaultdict
 from datetime import datetime, timezone
 from io import StringIO
 from pathlib import Path
@@ -340,6 +341,7 @@ class TestingSymbolicParser(BaseSymbolicParser):
                 flush_current_section()
 
         quality = self._build_quality(sections, total_chars, discarded_chars, covered_chars)
+        promoted_entities, promoted_relations = self._promote_structured_entities(sections)
         metadata = self._infer_metadata(sections, document_path)
 
         result = {
@@ -355,6 +357,8 @@ class TestingSymbolicParser(BaseSymbolicParser):
             "extraction_constraints": self._extraction_constraints(),
             "quality": quality,
             "discarded_blocks": discarded_blocks,
+            "promoted_entities": promoted_entities,
+            "promoted_relations": promoted_relations,
         }
         return result
 
@@ -497,6 +501,28 @@ class TestingSymbolicParser(BaseSymbolicParser):
     ) -> None:
         line_lower = text_line.lower()
 
+        # Extract measurements first so other logic can reuse them
+        measurements = self._extract_measurements(text_line, page_number)
+        for measurement in measurements:
+            signature = (
+                measurement.get("type"),
+                measurement.get("value"),
+                measurement.get("unit"),
+                measurement.get("min"),
+                measurement.get("max"),
+                measurement.get("operator"),
+                measurement.get("tolerance"),
+            )
+            if signature in section["_measurement_signatures"]:
+                continue
+            section["_measurement_signatures"].add(signature)
+            section["measurements"].append(measurement)
+
+        if measurements:
+            section["tags"].add("measurement")
+            if section["role"] == "main":
+                section["role"] = "table"
+
         # Safety markers promote section role
         if any(
             line_lower.startswith(marker) or f"{marker} " in line_lower
@@ -524,37 +550,37 @@ class TestingSymbolicParser(BaseSymbolicParser):
                     section["tags"].add("applicability")
                 break
 
-        # Acceptance criteria
-        if any(phrase in line_lower for phrase in self.acceptance_phrases):
-            normalized = text_line.strip()
-            if normalized not in section["_acceptance_seen"]:
-                section["_acceptance_seen"].add(normalized)
-                section["acceptance_criteria"].append(
+        # Acceptance criteria derived from measurements or keywords
+        has_acceptance_phrase = any(
+            phrase in line_lower for phrase in self.acceptance_phrases
+        )
+        if has_acceptance_phrase or any(m.get("operator") for m in measurements):
+            acceptance_entries = self._build_acceptance_entries(
+                text_line, measurements, page_number
+            )
+            if not acceptance_entries and has_acceptance_phrase:
+                acceptance_entries.append(
                     {
-                        "text": normalized,
+                        "text": text_line.strip(),
                         "page": page_number,
                     }
                 )
 
-        # Measurements & thresholds
-        measurements = self._extract_measurements(text_line, page_number)
-        for measurement in measurements:
-            signature = (
-                measurement.get("type"),
-                measurement.get("value"),
-                measurement.get("unit"),
-                measurement.get("min"),
-                measurement.get("max"),
-                measurement.get("operator"),
-                measurement.get("tolerance"),
-            )
-            if signature not in section["_measurement_signatures"]:
-                section["_measurement_signatures"].add(signature)
-                section["measurements"].append(measurement)
-        if measurements:
-            section["tags"].add("measurement")
-            if section["role"] == "main":
-                section["role"] = "table"
+            for entry in acceptance_entries:
+                key = (
+                    entry.get("operator"),
+                    entry.get("value"),
+                    entry.get("min_value"),
+                    entry.get("max_value"),
+                    entry.get("tolerance"),
+                    entry.get("unit"),
+                    entry.get("text"),
+                )
+                if key in section["_acceptance_seen"]:
+                    continue
+                section["_acceptance_seen"].add(key)
+                section["acceptance_criteria"].append(entry)
+                section["tags"].add("acceptance")
 
         # Cross references
         for match in self.cross_ref_pattern.finditer(text_line):
@@ -577,11 +603,27 @@ class TestingSymbolicParser(BaseSymbolicParser):
                     {"figure_id": figure_id, "page": page_number, "caption": caption}
                 )
 
-        # Tables
+        # Tables / multi-column content
         self._handle_table_detection(section, text_line)
 
     def _extract_measurements(self, text_line: str, page_number: int) -> List[dict]:
         measurements: List[dict] = []
+        line_lower = text_line.lower()
+        word_operator = None
+
+        if "between" in line_lower:
+            word_operator = "between"
+        elif "at least" in line_lower or "minimum" in line_lower:
+            word_operator = ">="
+        elif "at most" in line_lower:
+            word_operator = "<="
+        elif "less than" in line_lower or "lower than" in line_lower:
+            word_operator = "<"
+        elif "greater than" in line_lower or "higher than" in line_lower:
+            word_operator = ">"
+        elif "must be" in line_lower or "should be" in line_lower or "shall be" in line_lower:
+            word_operator = "="
+
         for match in self.measurement_range_pattern.finditer(text_line):
             unit = self._normalize_unit(match.group("unit"))
             measurements.append(
@@ -590,6 +632,7 @@ class TestingSymbolicParser(BaseSymbolicParser):
                     "min": float(match.group("min")),
                     "max": float(match.group("max")),
                     "unit": unit,
+                    "operator": "between",
                     "source_text": text_line.strip(),
                     "page": page_number,
                 }
@@ -603,6 +646,7 @@ class TestingSymbolicParser(BaseSymbolicParser):
                     "value": float(match.group("center")),
                     "tolerance": float(match.group("tolerance")),
                     "unit": unit,
+                    "operator": "±",
                     "source_text": text_line.strip(),
                     "page": page_number,
                 }
@@ -626,6 +670,7 @@ class TestingSymbolicParser(BaseSymbolicParser):
             measurements.append(
                 {
                     "type": "value",
+                    "operator": word_operator,
                     "value": float(match.group("value")),
                     "unit": unit,
                     "source_text": text_line.strip(),
@@ -633,6 +678,29 @@ class TestingSymbolicParser(BaseSymbolicParser):
                 }
             )
         return measurements
+
+    def _build_acceptance_entries(
+        self,
+        text_line: str,
+        measurements: List[dict],
+        page_number: int,
+    ) -> List[dict]:
+        entries: List[dict] = []
+        for measurement in measurements:
+            entries.append(
+                {
+                    "text": text_line.strip(),
+                    "page": page_number,
+                    "operator": measurement.get("operator"),
+                    "value": measurement.get("value"),
+                    "min_value": measurement.get("min"),
+                    "max_value": measurement.get("max"),
+                    "tolerance": measurement.get("tolerance"),
+                    "unit": measurement.get("unit"),
+                    "source_text": measurement.get("source_text", text_line.strip()),
+                }
+            )
+        return entries
 
     @staticmethod
     def _normalize_unit(unit: str) -> str:
@@ -746,6 +814,223 @@ class TestingSymbolicParser(BaseSymbolicParser):
         for row in rows:
             writer.writerow(self._split_table_row(row))
         return buffer.getvalue().strip()
+
+    def _promote_structured_entities(
+        self,
+        sections: List[dict]
+    ) -> Tuple[List[dict], List[dict]]:
+        promoted_entities: List[dict] = []
+        promoted_relations: List[dict] = []
+        seen_entity_ids: set = set()
+        seen_relation_keys: set = set()
+        testcase_by_section: Dict[str, str] = {}
+        id_counters: defaultdict = defaultdict(int)
+
+        def next_id(prefix: str, section_id: str) -> str:
+            key = (prefix, section_id)
+            id_counters[key] += 1
+            return f"{prefix}_{section_id.upper()}_{id_counters[key]:02d}"
+
+        def make_span(section: dict, source_text: Optional[str]) -> dict:
+            span = {
+                "section_id": section.get("section_id"),
+                "page": section.get("page_start"),
+            }
+            if source_text:
+                span["source_text"] = source_text
+            return span
+
+        def add_entity(entity: dict) -> None:
+            if entity.get("id") in seen_entity_ids:
+                return
+            seen_entity_ids.add(entity.get("id"))
+            promoted_entities.append(entity)
+
+        def add_relation(relation: dict) -> None:
+            key = (
+                relation.get("type"),
+                relation.get("from_ref"),
+                relation.get("to_ref"),
+            )
+            if key in seen_relation_keys:
+                return
+            seen_relation_keys.add(key)
+            promoted_relations.append(relation)
+
+        for section in sections:
+            sec_id = section.get("section_id")
+            if not sec_id:
+                continue
+
+            tags = set(section.get("tags") or [])
+            title = section.get("title") or f"Section {sec_id}"
+            title_lower = title.lower()
+            is_test_section = (
+                "procedure" in tags
+                or "test_case" in tags
+                or "measurement" in tags
+                or "test" in title_lower
+            )
+
+            test_case_id: Optional[str] = None
+            if is_test_section:
+                test_case_id = f"TESTCASE_{sec_id.upper()}"
+                if sec_id not in testcase_by_section:
+                    testcase_by_section[sec_id] = test_case_id
+                    entity = {
+                        "id": test_case_id,
+                        "type": "TestCase",
+                        "name": title,
+                        "confidence": 0.9,
+                        "spans": [make_span(section, title)],
+                        "metadata": {
+                            "section_role": section.get("role"),
+                            "section_tags": sorted(tags),
+                        },
+                    }
+                    add_entity(entity)
+            else:
+                test_case_id = testcase_by_section.get(sec_id)
+
+            # Safety notices
+            if "safety" in tags or section.get("role") == "warning":
+                safety_id = f"SAFETY_{sec_id.upper()}"
+                if safety_id not in seen_entity_ids:
+                    entity = {
+                        "id": safety_id,
+                        "type": "SafetyNotice",
+                        "name": f"Safety notice - {title}",
+                        "confidence": 0.85,
+                        "spans": [make_span(section, section.get("text", ""))],
+                        "metadata": {
+                            "section_id": sec_id,
+                            "context": section.get("text", ""),
+                        },
+                    }
+                    add_entity(entity)
+
+            # Measurements
+            for measurement in section.get("measurements", []):
+                measurement_id = next_id("MEAS", sec_id)
+                entity = {
+                    "id": measurement_id,
+                    "type": "Measurement",
+                    "name": f"{title} measurement",
+                    "confidence": 0.85,
+                    "spans": [make_span(section, measurement.get("source_text"))],
+                    "metadata": {
+                        "section_id": sec_id,
+                        "context": measurement.get("source_text"),
+                        "operator": measurement.get("operator"),
+                    },
+                }
+                if measurement.get("value") is not None:
+                    entity["nominal_value"] = measurement.get("value")
+                if measurement.get("min") is not None:
+                    entity["min_value"] = measurement.get("min")
+                if measurement.get("max") is not None:
+                    entity["max_value"] = measurement.get("max")
+                if measurement.get("tolerance") is not None:
+                    entity["tolerance"] = measurement.get("tolerance")
+                if measurement.get("unit"):
+                    entity["unit_raw"] = measurement.get("unit")
+                add_entity(entity)
+
+                if test_case_id:
+                    relation = {
+                        "type": "validatedBy",
+                        "from_ref": test_case_id,
+                        "to_ref": measurement_id,
+                        "confidence": 0.85,
+                        "spans": [make_span(section, measurement.get("source_text"))],
+                    }
+                    add_relation(relation)
+
+            # Acceptance criteria
+            for criterion in section.get("acceptance_criteria", []):
+                acceptance_id = next_id("AC", sec_id)
+                entity = {
+                    "id": acceptance_id,
+                    "type": "AcceptanceCriterion",
+                    "name": f"{title} criterion",
+                    "confidence": 0.85,
+                    "spans": [make_span(section, criterion.get("source_text", criterion.get("text")))],
+                    "metadata": {
+                        "operator": criterion.get("operator"),
+                        "unit": criterion.get("unit"),
+                        "value": criterion.get("value"),
+                        "min_value": criterion.get("min_value"),
+                        "max_value": criterion.get("max_value"),
+                        "tolerance": criterion.get("tolerance"),
+                        "section_id": sec_id,
+                    },
+                }
+                add_entity(entity)
+
+                if test_case_id:
+                    relation = {
+                        "type": "constrainedBy",
+                        "from_ref": test_case_id,
+                        "to_ref": acceptance_id,
+                        "confidence": 0.85,
+                        "spans": [make_span(section, criterion.get("source_text", criterion.get("text")))],
+                    }
+                    add_relation(relation)
+
+            # Applicability clauses
+            for clause in section.get("applicability", []):
+                clause_id = next_id("APP", sec_id)
+                entity = {
+                    "id": clause_id,
+                    "type": "ApplicabilityClause",
+                    "name": clause,
+                    "confidence": 0.8,
+                    "spans": [make_span(section, clause)],
+                    "metadata": {
+                        "section_id": sec_id,
+                    },
+                }
+                add_entity(entity)
+
+                if test_case_id:
+                    relation = {
+                        "type": "appliesTo",
+                        "from_ref": test_case_id,
+                        "to_ref": clause_id,
+                        "confidence": 0.8,
+                        "spans": [make_span(section, clause)],
+                    }
+                    add_relation(relation)
+
+            # Cross references
+            for cross_ref in section.get("cross_references", []):
+                ref_page = cross_ref.get("page")
+                ref_text = cross_ref.get("text")
+                ref_id = next_id("XREF", sec_id)
+                entity = {
+                    "id": ref_id,
+                    "type": "CrossReference",
+                    "name": f"Reference page {ref_page}",
+                    "confidence": 0.75,
+                    "spans": [make_span(section, ref_text)],
+                    "metadata": {
+                        "target_page": ref_page,
+                        "section_id": sec_id,
+                    },
+                }
+                add_entity(entity)
+
+                if test_case_id:
+                    relation = {
+                        "type": "refersTo",
+                        "from_ref": test_case_id,
+                        "to_ref": ref_id,
+                        "confidence": 0.75,
+                        "spans": [make_span(section, ref_text)],
+                    }
+                    add_relation(relation)
+
+        return promoted_entities, promoted_relations
 
     def _infer_metadata(self, sections: List[dict], document_path: Path) -> dict:
         metadata = self._build_metadata_stub()

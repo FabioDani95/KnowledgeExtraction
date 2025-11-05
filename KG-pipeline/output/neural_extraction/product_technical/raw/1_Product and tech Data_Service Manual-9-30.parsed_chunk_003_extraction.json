@@ -61,7 +61,7 @@
       {
         "id": "PS_01",
         "type": "ParameterSpec",
-        "name": "Heating energy consumption (small cup)",
+        "name": "Heating energy for small cup",
         "nominal_value": 4.3,
         "unit_raw": "Wh",
         "confidence": 0.9,
@@ -120,7 +120,7 @@
       {
         "id": "PS_02",
         "type": "ParameterSpec",
-        "name": "Heating energy consumption (large cup)",
+        "name": "Heating energy for large cup",
         "nominal_value": 8.7,
         "unit_raw": "Wh",
         "confidence": 0.9,
@@ -179,7 +179,7 @@
       {
         "id": "PS_03",
         "type": "ParameterSpec",
-        "name": "Standby energy consumption",
+        "name": "Standby operation energy",
         "nominal_value": 0.7,
         "unit_raw": "Wh",
         "confidence": 0.9,
@@ -238,7 +238,7 @@
       {
         "id": "PS_04",
         "type": "ParameterSpec",
-        "name": "Max. permissible pump pressure",
+        "name": "Max permissible pump pressure",
         "nominal_value": 17.5,
         "unit_raw": "bar",
         "confidence": 0.9,
@@ -1233,5 +1233,5 @@
       "char_end": 15357
     }
   ],
-  "timestamp": "2025-11-05T10:32:59.106928+00:00"
+  "timestamp": "2025-11-05T13:29:26.687477+00:00"
 }

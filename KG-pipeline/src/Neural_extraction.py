@@ -3,12 +3,13 @@
 Neural Extraction Module for Knowledge Graph Generation
 
 This module performs AI-driven extraction of entities and relations from parsed documents,
-generating three sub-KGs (product_technical, operation_modes, troubleshooting).
+generating sub-KGs for product_technical, operation_modes, troubleshooting, and testing.
 """
 
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import logging
@@ -1080,6 +1081,27 @@ def process_profile(
         # Load parsed document
         with input_file.open("r", encoding="utf-8") as fh:
             parsed_data = json.load(fh)
+
+        promoted_entities = parsed_data.get("promoted_entities") or []
+        promoted_relations = parsed_data.get("promoted_relations") or []
+
+        if promoted_entities:
+            seed_source = f"SYMBOLIC_{profile_name.upper()}"
+            for entity in promoted_entities:
+                entity_copy = copy.deepcopy(entity)
+                entity_copy.setdefault("confidence", 0.9)
+                entity_copy.setdefault("type", "Unknown")
+                entity_copy["_source"] = seed_source
+                all_entities.append(entity_copy)
+
+        if promoted_relations:
+            seed_relation_source = f"SYMBOLIC_{profile_name.upper()}"
+            for relation in promoted_relations:
+                rel_copy = copy.deepcopy(relation)
+                rel_copy.setdefault("confidence", 0.9)
+                rel_copy.setdefault("type", "refersTo")
+                rel_copy["_source"] = seed_relation_source
+                all_relations.append(rel_copy)
 
         # Extract text with provenance tracking
         text, provenance_map = extract_text_with_provenance(parsed_data)
