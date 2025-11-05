@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Graph Extraction Pipeline</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Cytoscape.js from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>📊 Knowledge Graph Extraction Pipeline</h1>
+      <nav>
+        <a href="#upload" data-section="upload-section">📤 Upload</a>
+        <a href="#pipeline" data-section="pipeline-section">⚙️ Pipeline</a>
+        <a href="#graph" data-section="graph-section">🕸️ Knowledge Graph</a>
+        <a href="#stats" data-section="stats-section">📈 Statistics</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Upload Section -->
+    <section id="upload-section" class="section active">
+      <div class="card">
+        <h2>📤 Document Upload</h2>
+
+        <!-- Drop Zone -->
+        <div id="drop-zone">
+          <div class="icon">📁</div>
+          <p><strong>Drag and drop PDF files here</strong></p>
+          <p>or</p>
+          <button class="btn btn-primary" id="select-files-btn">Select Files</button>
+          <input type="file" id="file-input" multiple accept="application/pdf">
+        </div>
+
+        <!-- Target Folder Selection -->
+        <div class="form-group">
+          <label for="upload-target">Destination Folder</label>
+          <select id="upload-target">
+            <option value="">-- Select a folder --</option>
+          </select>
+        </div>
+
+        <!-- File Queue -->
+        <div id="file-queue">
+          <div class="empty-message">No files queued</div>
+        </div>
+
+        <!-- Actions -->
+        <div class="btn-group">
+          <button class="btn btn-success" id="upload-btn" disabled>
+            Upload Files
+          </button>
+          <button class="btn btn-secondary" id="clear-queue-btn" disabled>
+            Clear Queue
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pipeline Section -->
+    <section id="pipeline-section" class="section">
+      <div class="card">
+        <h2>⚙️ Pipeline Execution</h2>
+
+        <p class="mb-lg">
+          Execute the complete knowledge extraction pipeline: symbolic parsing,
+          neural extraction, and knowledge graph merging.
+        </p>
+
+        <button class="btn btn-primary" id="start-pipeline-btn">
+          ▶️ Start Pipeline
+        </button>
+
+        <!-- Job Status -->
+        <div id="job-status" class="mt-lg">
+          <h3>Job Status</h3>
+          <div class="detail-item">
+            <strong>Job ID:</strong> <span id="job-id">-</span>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="progress-bar-container">
+            <div id="progress-bar">
+              <span id="progress-text">Ready to start</span>
+            </div>
+          </div>
+
+          <!-- Logs -->
+          <div id="job-logs">
+            <div class="log-entry">Waiting for pipeline to start...</div>
+          </div>
+
+          <button class="btn btn-secondary mt-md" id="download-logs-btn">
+            📥 Download Complete Logs
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Knowledge Graph Section -->
+    <section id="graph-section" class="section">
+      <div class="card">
+        <h2>🕸️ Knowledge Graph Visualization</h2>
+
+        <!-- Controls Row -->
+        <div class="btn-group mb-md">
+          <select id="layout-select" class="form-control">
+            <option value="cose">Force-directed (COSE)</option>
+            <option value="circle">Circle</option>
+            <option value="grid">Grid</option>
+            <option value="breadthfirst">Breadth-first</option>
+            <option value="concentric">Concentric</option>
+          </select>
+
+          <button class="btn btn-secondary" id="reset-view-btn">
+            🔄 Reset View
+          </button>
+
+          <button class="btn btn-secondary" id="clear-filters-btn">
+            🗑️ Clear Filters
+          </button>
+
+          <button class="btn btn-success" id="export-png-btn">
+            💾 Export PNG
+          </button>
+
+          <button class="btn btn-success" id="export-json-btn">
+            💾 Export JSON
+          </button>
+
+          <button class="btn btn-success" id="export-csv-btn">
+            💾 Export CSV
+          </button>
+        </div>
+
+        <!-- Graph Stats -->
+        <div id="graph-stats" class="mb-md text-center">
+          <span>Loading graph...</span>
+        </div>
+
+        <!-- Graph Container -->
+        <div id="graph-container">
+          <div id="graph-canvas">
+            <!-- Cytoscape renders here -->
+            <div id="details-panel"></div>
+          </div>
+
+          <!-- Graph Controls -->
+          <div id="graph-controls">
+
+            <!-- Search -->
+            <div class="filter-group">
+              <h3>🔍 Search</h3>
+              <input
+                type="search"
+                id="search-input"
+                placeholder="Search nodes..."
+              >
+            </div>
+
+            <!-- Confidence Filter -->
+            <div class="filter-group">
+              <h3>📊 Confidence Threshold</h3>
+              <p>Minimum: <span id="confidence-value">0.00</span></p>
+              <input
+                type="range"
+                id="confidence-slider"
+                min="0"
+                max="1"
+                step="0.05"
+                value="0"
+              >
+            </div>
+
+            <!-- Node Type Filters -->
+            <div class="filter-group">
+              <h3>🏷️ Node Types</h3>
+              <div id="node-type-filters">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+
+            <!-- Edge Type Filters -->
+            <div class="filter-group">
+              <h3>🔗 Relationship Types</h3>
+              <div id="edge-type-filters">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="filter-group legend">
+              <h3>📖 Legend</h3>
+              <div class="legend-item">
+                <div class="legend-color" style="background: #3498db;"></div>
+                <span>High Confidence (≥0.85)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color" style="background: #f39c12; opacity: 0.8;"></div>
+                <span>Medium (0.70-0.84)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color" style="background: #e74c3c; opacity: 0.6;"></div>
+                <span>Low (&lt;0.70)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats-section" class="section">
+      <div class="card">
+        <h2>📈 Knowledge Graph Statistics</h2>
+
+        <!-- KPI Cards -->
+        <div id="stats-grid">
+          <div class="stat-card">
+            <span class="stat-value" id="stat-nodes">0</span>
+            <span class="stat-label">Total Nodes</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-value" id="stat-edges">0</span>
+            <span class="stat-label">Total Edges</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-value" id="stat-entity-types">0</span>
+            <span class="stat-label">Entity Types</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-value" id="stat-relation-types">0</span>
+            <span class="stat-label">Relation Types</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-value" id="stat-avg-confidence">0%</span>
+            <span class="stat-label">Avg Confidence</span>
+          </div>
+        </div>
+
+        <!-- Quality Metrics -->
+        <div class="card">
+          <h3>Quality Metrics</h3>
+          <p>
+            Detailed statistics about extraction quality, coverage targets,
+            and data integrity are displayed here.
+          </p>
+
+          <div class="detail-item">
+            <strong>Entity Confidence:</strong>
+            <span id="entity-confidence">87%</span>
+          </div>
+
+          <div class="detail-item">
+            <strong>Relationship Confidence:</strong>
+            <span id="relation-confidence">83%</span>
+          </div>
+
+          <div class="detail-item">
+            <strong>Duplicates Collapsed:</strong>
+            <span id="duplicates-collapsed">23</span>
+          </div>
+
+          <div class="detail-item">
+            <strong>Last Updated:</strong>
+            <span id="last-updated">-</span>
+          </div>
+        </div>
+
+        <!-- Coverage Targets -->
+        <div class="card mt-lg">
+          <h3>Coverage Targets</h3>
+          <p class="mb-md">
+            Key relationship coverage metrics for quality assurance.
+          </p>
+
+          <div class="detail-item">
+            <strong>TestCase → AcceptanceCriterion:</strong>
+            <div class="progress-bar-container">
+              <div style="width: 80%; background: var(--success); height: 100%; border-radius: 15px;"></div>
+            </div>
+            <small>Target: 80% | Current: 80%</small>
+          </div>
+
+          <div class="detail-item">
+            <strong>ParameterSpec → Unit:</strong>
+            <div class="progress-bar-container">
+              <div style="width: 90%; background: var(--success); height: 100%; border-radius: 15px;"></div>
+            </div>
+            <small>Target: 90% | Current: 90%</small>
+          </div>
+
+          <div class="detail-item">
+            <strong>Product/Component → ParameterSpec:</strong>
+            <div class="progress-bar-container">
+              <div style="width: 60%; background: var(--warning); height: 100%; border-radius: 15px;"></div>
+            </div>
+            <small>Target: 60% | Current: 60%</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 2rem; color: #7f8c8d;">
+    <p>Knowledge Graph Extraction Pipeline v1.0 | Built with ❤️ for technical documentation analysis</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/kg-viz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

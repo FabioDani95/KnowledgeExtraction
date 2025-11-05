@@ -1,0 +1,119 @@
+{
+  "apiBaseUrl": "http://localhost:8000",
+  "pollingInterval": 3000,
+  "maxFileSize": 104857600,
+  "maxFilesPerBatch": 10,
+  "allowedMimeTypes": ["application/pdf"],
+
+  "uploadTargets": {
+    "product_technical": {
+      "label": "Product & Technical Data",
+      "path": "source/product_technical",
+      "description": "Service manuals, technical specs, parts lists"
+    },
+    "operation_modes": {
+      "label": "Operation Modes",
+      "path": "source/operation_modes",
+      "description": "User manuals, operational guides, maintenance procedures"
+    },
+    "troubleshooting": {
+      "label": "Troubleshooting & Diagnostics",
+      "path": "source/troubleshooting",
+      "description": "Troubleshooting tables, error codes, diagnostic procedures"
+    },
+    "testing": {
+      "label": "Testing & Validation",
+      "path": "source/testing",
+      "description": "Test protocols, quality checks, validation procedures"
+    },
+    "repair_structure": {
+      "label": "Repair Structure",
+      "path": "source/repair_structure",
+      "description": "Repair manuals, assembly guides, disassembly procedures"
+    }
+  },
+
+  "nodeTypes": {
+    "Product": { "color": "#3498db", "icon": "📦" },
+    "Component": { "color": "#e74c3c", "icon": "🔧" },
+    "ComponentType": { "color": "#9b59b6", "icon": "🏷️" },
+    "ParameterSpec": { "color": "#f39c12", "icon": "📊" },
+    "Unit": { "color": "#16a085", "icon": "📏" },
+    "MachineMode": { "color": "#2ecc71", "icon": "⚙️" },
+    "State": { "color": "#1abc9c", "icon": "🔄" },
+    "ProcessStep": { "color": "#27ae60", "icon": "➡️" },
+    "FailureMode": { "color": "#c0392b", "icon": "❌" },
+    "RepairAction": { "color": "#d35400", "icon": "🔨" },
+    "Tool": { "color": "#7f8c8d", "icon": "🛠️" },
+    "Consumable": { "color": "#95a5a6", "icon": "📦" },
+    "MaintenanceTask": { "color": "#34495e", "icon": "🔧" },
+    "TestCase": { "color": "#8e44ad", "icon": "✅" },
+    "SafetyNotice": { "color": "#e67e22", "icon": "⚠️" },
+    "Measurement": { "color": "#3498db", "icon": "📐" },
+    "AcceptanceCriterion": { "color": "#27ae60", "icon": "✓" },
+    "Equipment": { "color": "#95a5a6", "icon": "🔬" },
+    "NormativeReference": { "color": "#34495e", "icon": "📖" },
+    "CrossReference": { "color": "#7f8c8d", "icon": "🔗" },
+    "ApplicabilityClause": { "color": "#16a085", "icon": "📋" },
+    "RatingPlate": { "color": "#f39c12", "icon": "🏷️" }
+  },
+
+  "edgeTypes": {
+    "hasPart": { "style": "solid", "color": "#3498db", "width": 2 },
+    "belongsTo": { "style": "solid", "color": "#9b59b6", "width": 2 },
+    "instanceOf": { "style": "dashed", "color": "#e74c3c", "width": 1.5 },
+    "hasSpec": { "style": "solid", "color": "#f39c12", "width": 2 },
+    "hasUnit": { "style": "solid", "color": "#16a085", "width": 2 },
+    "connectedTo": { "style": "dotted", "color": "#7f8c8d", "width": 1.5 },
+    "precedes": { "style": "solid", "color": "#2ecc71", "width": 2 },
+    "appliesDuring": { "style": "solid", "color": "#1abc9c", "width": 2 },
+    "verifies": { "style": "solid", "color": "#27ae60", "width": 2 },
+    "affects": { "style": "solid", "color": "#c0392b", "width": 2 },
+    "mitigatedBy": { "style": "solid", "color": "#d35400", "width": 2 },
+    "requiresTool": { "style": "dashed", "color": "#7f8c8d", "width": 1.5 },
+    "requiresConsumable": { "style": "dashed", "color": "#95a5a6", "width": 1.5 },
+    "requires": { "style": "dashed", "color": "#34495e", "width": 1.5 },
+    "validatedBy": { "style": "solid", "color": "#8e44ad", "width": 2 },
+    "appliesTo": { "style": "solid", "color": "#16a085", "width": 2 },
+    "constrainedBy": { "style": "solid", "color": "#e67e22", "width": 2 },
+    "refersTo": { "style": "dotted", "color": "#7f8c8d", "width": 1 },
+    "hasRatingPlate": { "style": "solid", "color": "#f39c12", "width": 2 }
+  },
+
+  "confidenceThresholds": {
+    "high": 0.85,
+    "medium": 0.70,
+    "low": 0.50
+  },
+
+  "coverageTargets": {
+    "testcase_constrainedBy": {
+      "description": "TestCase nodes with AcceptanceCriterion",
+      "target": 0.80
+    },
+    "testcase_validatedBy": {
+      "description": "TestCase nodes with Measurement",
+      "target": 0.75
+    },
+    "parameter_spec_hasUnit": {
+      "description": "ParameterSpec nodes with Unit",
+      "target": 0.90
+    },
+    "product_component_hasSpec": {
+      "description": "Product/Component nodes with ParameterSpec",
+      "target": 0.60
+    }
+  },
+
+  "pipelinePhases": [
+    "Parsing PDF documents",
+    "Symbolic extraction",
+    "Neural entity extraction",
+    "Relationship promotion",
+    "Knowledge graph merging",
+    "Validation & quality checks",
+    "Export final KG"
+  ],
+
+  "defaultLanguage": "en"
+}
