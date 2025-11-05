@@ -32,5 +32,17 @@
   "confidence": "Confidence",
   "from": "From",
   "to": "To",
-  "sources": "Sources"
+  "sources": "Sources",
+  "all_files_required": "All 4 files must be uploaded before starting the pipeline",
+  "all_files_selected": "All 4 files must be selected before uploading",
+  "file_uploaded": "Uploaded",
+  "file_ready": "Ready",
+  "file_required": "Required",
+  "files_uploaded_count": "files uploaded",
+  "uploading": "Uploading",
+  "all_files_uploaded": "All Files Uploaded",
+  "upload_all_files": "Upload All Files",
+  "clear_all_slots": "Clear All Slots",
+  "all_slots_cleared": "All slots cleared",
+  "go_to_pipeline": "Files uploaded! Do you want to go to the Pipeline section to start processing?"
 }

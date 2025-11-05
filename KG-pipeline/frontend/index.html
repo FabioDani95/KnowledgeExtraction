@@ -34,36 +34,130 @@
       <div class="card">
         <h2>📤 Document Upload</h2>
 
-        <!-- Drop Zone -->
-        <div id="drop-zone">
-          <div class="icon">📁</div>
-          <p><strong>Drag and drop PDF files here</strong></p>
-          <p>or</p>
-          <button class="btn btn-primary" id="select-files-btn">Select Files</button>
-          <input type="file" id="file-input" multiple accept="application/pdf">
+        <p class="mb-lg">
+          Upload the 4 required PDF documents to their dedicated slots.
+          All files must be uploaded before running the pipeline.
+        </p>
+
+        <!-- Upload Status Overview -->
+        <div class="upload-status-banner mb-lg">
+          <span id="upload-status-icon">⏳</span>
+          <span id="upload-status-text">0 of 4 files uploaded</span>
         </div>
 
-        <!-- Target Folder Selection -->
-        <div class="form-group">
-          <label for="upload-target">Destination Folder</label>
-          <select id="upload-target">
-            <option value="">-- Select a folder --</option>
-          </select>
-        </div>
+        <!-- File Slots -->
+        <div class="file-slots">
 
-        <!-- File Queue -->
-        <div id="file-queue">
-          <div class="empty-message">No files queued</div>
+          <!-- Slot 1: Product Technical -->
+          <div class="file-slot" data-slot="product_technical">
+            <div class="slot-header">
+              <span class="slot-number">1</span>
+              <span class="slot-title">Product & Technical Data</span>
+              <span class="slot-status" data-status="empty">❌ Required</span>
+            </div>
+            <div class="slot-body">
+              <input type="file" class="slot-input" accept="application/pdf" style="display: none;">
+              <div class="slot-dropzone">
+                <div class="slot-placeholder">
+                  <div class="slot-icon">📄</div>
+                  <p><strong>Click to select</strong> or drag PDF here</p>
+                  <small>Service manual chapters 1-4, technical specs, parts lists</small>
+                </div>
+                <div class="slot-file-info" style="display: none;">
+                  <div class="file-name-display"></div>
+                  <div class="file-size-display"></div>
+                  <button class="btn-remove-slot">Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slot 2: Operation Modes -->
+          <div class="file-slot" data-slot="operation_modes">
+            <div class="slot-header">
+              <span class="slot-number">2</span>
+              <span class="slot-title">Operation Modes</span>
+              <span class="slot-status" data-status="empty">❌ Required</span>
+            </div>
+            <div class="slot-body">
+              <input type="file" class="slot-input" accept="application/pdf" style="display: none;">
+              <div class="slot-dropzone">
+                <div class="slot-placeholder">
+                  <div class="slot-icon">📄</div>
+                  <p><strong>Click to select</strong> or drag PDF here</p>
+                  <small>User manuals, operational guides, maintenance procedures</small>
+                </div>
+                <div class="slot-file-info" style="display: none;">
+                  <div class="file-name-display"></div>
+                  <div class="file-size-display"></div>
+                  <button class="btn-remove-slot">Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slot 3: Troubleshooting -->
+          <div class="file-slot" data-slot="troubleshooting">
+            <div class="slot-header">
+              <span class="slot-number">3</span>
+              <span class="slot-title">Troubleshooting & Diagnostics</span>
+              <span class="slot-status" data-status="empty">❌ Required</span>
+            </div>
+            <div class="slot-body">
+              <input type="file" class="slot-input" accept="application/pdf" style="display: none;">
+              <div class="slot-dropzone">
+                <div class="slot-placeholder">
+                  <div class="slot-icon">📄</div>
+                  <p><strong>Click to select</strong> or drag PDF here</p>
+                  <small>Troubleshooting tables, error codes, diagnostic procedures</small>
+                </div>
+                <div class="slot-file-info" style="display: none;">
+                  <div class="file-name-display"></div>
+                  <div class="file-size-display"></div>
+                  <button class="btn-remove-slot">Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slot 4: Testing -->
+          <div class="file-slot" data-slot="testing">
+            <div class="slot-header">
+              <span class="slot-number">4</span>
+              <span class="slot-title">Testing & Validation</span>
+              <span class="slot-status" data-status="empty">❌ Required</span>
+            </div>
+            <div class="slot-body">
+              <input type="file" class="slot-input" accept="application/pdf" style="display: none;">
+              <div class="slot-dropzone">
+                <div class="slot-placeholder">
+                  <div class="slot-icon">📄</div>
+                  <p><strong>Click to select</strong> or drag PDF here</p>
+                  <small>Test protocols, quality checks, validation procedures</small>
+                </div>
+                <div class="slot-file-info" style="display: none;">
+                  <div class="file-name-display"></div>
+                  <div class="file-size-display"></div>
+                  <button class="btn-remove-slot">Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <!-- Actions -->
-        <div class="btn-group">
-          <button class="btn btn-success" id="upload-btn" disabled>
-            Upload Files
+        <div class="btn-group mt-lg">
+          <button class="btn btn-success btn-large" id="upload-all-btn" disabled>
+            ✅ Upload All Files
           </button>
-          <button class="btn btn-secondary" id="clear-queue-btn" disabled>
-            Clear Queue
+          <button class="btn btn-secondary" id="clear-all-slots-btn" disabled>
+            🗑️ Clear All
           </button>
+        </div>
+
+        <div class="upload-help mt-md">
+          <p><strong>ℹ️ Important:</strong> All 4 PDF files must be uploaded before you can run the pipeline.</p>
         </div>
       </div>
     </section>
@@ -290,6 +384,31 @@
         <!-- Graph Container -->
         <div id="graph-container">
           <div id="graph-canvas">
+            <!-- Empty State Banner -->
+            <div id="empty-graph-banner">
+              <div class="empty-banner-content">
+                <div class="empty-banner-icon">🕸️</div>
+                <h3>No Knowledge Graph Available</h3>
+                <p>Upload your PDF documents and run the pipeline to generate the knowledge graph.</p>
+                <div class="empty-banner-steps">
+                  <div class="banner-step">
+                    <span class="step-number">1</span>
+                    <span>Upload 4 PDF files</span>
+                  </div>
+                  <div class="banner-step">
+                    <span class="step-number">2</span>
+                    <span>Configure pipeline settings</span>
+                  </div>
+                  <div class="banner-step">
+                    <span class="step-number">3</span>
+                    <span>Run the pipeline</span>
+                  </div>
+                </div>
+                <button class="btn btn-primary" onclick="window.location.hash='upload-section'">
+                  Go to Upload
+                </button>
+              </div>
+            </div>
             <!-- Cytoscape renders here -->
             <div id="details-panel"></div>
           </div>
@@ -465,5 +584,6 @@
   <script src="js/api.js"></script>
   <script src="js/kg-viz.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/upload-slots.js"></script>
 </body>
 </html>

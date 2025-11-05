@@ -32,5 +32,17 @@
   "confidence": "Confidenza",
   "from": "Da",
   "to": "A",
-  "sources": "Fonti"
+  "sources": "Fonti",
+  "all_files_required": "Tutti i 4 file devono essere caricati prima di avviare la pipeline",
+  "all_files_selected": "Tutti i 4 file devono essere selezionati prima del caricamento",
+  "file_uploaded": "Caricato",
+  "file_ready": "Pronto",
+  "file_required": "Richiesto",
+  "files_uploaded_count": "file caricati",
+  "uploading": "Caricamento in corso",
+  "all_files_uploaded": "Tutti i File Caricati",
+  "upload_all_files": "Carica Tutti i File",
+  "clear_all_slots": "Cancella Tutti gli Slot",
+  "all_slots_cleared": "Tutti gli slot cancellati",
+  "go_to_pipeline": "File caricati! Vuoi andare alla sezione Pipeline per avviare l'elaborazione?"
 }
