@@ -14,7 +14,12 @@ const App = (function() {
     i18n: null,
     api: null,
     viz: null,
-    filesInQueue: [],
+    fileSlots: {
+      product_technical: null,
+      operation_modes: null,
+      troubleshooting: null,
+      testing: null
+    },
     currentJob: null,
     kgData: null,
     stats: null,
@@ -26,7 +31,8 @@ const App = (function() {
     },
     selectedNode: null,
     selectedEdge: null,
-    pollingInterval: null
+    pollingInterval: null,
+    hasKG: false
   };
 
   /**
@@ -53,13 +59,36 @@ const App = (function() {
       // Attach event listeners
       attachEventListeners();
 
-      // Load initial data
-      await loadKnowledgeGraph();
+      // Check if KG exists, otherwise show banner
+      await checkKGAvailability();
 
       showToast(t('app_initialized'), 'success');
     } catch (error) {
       console.error('Initialization error:', error);
       showToast(t('init_error') + ': ' + error.message, 'error');
+    }
+  }
+
+  /**
+   * Check if KG is available
+   */
+  async function checkKGAvailability() {
+    try {
+      const result = await state.api.getKG();
+      if (result.success && result.data && result.data.nodes && result.data.nodes.length > 0) {
+        state.hasKG = true;
+        document.getElementById('empty-graph-banner').classList.add('hidden');
+        state.kgData = result.data;
+        state.viz.render(state.kgData);
+        await loadStats();
+      } else {
+        state.hasKG = false;
+        document.getElementById('empty-graph-banner').classList.remove('hidden');
+      }
+    } catch (error) {
+      console.log('No KG available yet');
+      state.hasKG = false;
+      document.getElementById('empty-graph-banner').classList.remove('hidden');
     }
   }
 
@@ -88,16 +117,6 @@ const App = (function() {
    * Initialize UI components
    */
   function initUI() {
-    // Populate upload target selector
-    const targetSelect = document.getElementById('upload-target');
-    Object.entries(state.config.uploadTargets).forEach(([key, target]) => {
-      const option = document.createElement('option');
-      option.value = key;
-      option.textContent = target.label;
-      option.title = target.description;
-      targetSelect.appendChild(option);
-    });
-
     // Populate node type filters
     const nodeFilterContainer = document.getElementById('node-type-filters');
     Object.keys(state.config.nodeTypes).forEach(type => {
@@ -122,22 +141,16 @@ const App = (function() {
       edgeFilterContainer.appendChild(label);
     });
 
-    // Setup drag and drop
-    setupDragAndDrop();
+    // Setup file slots (from upload-slots.js)
+    if (window.App && window.App.setupFileSlots) {
+      window.App.setupFileSlots();
+    }
   }
 
   /**
    * Attach event listeners
    */
   function attachEventListeners() {
-    // File upload
-    document.getElementById('file-input').addEventListener('change', handleFileSelect);
-    document.getElementById('select-files-btn').addEventListener('click', () => {
-      document.getElementById('file-input').click();
-    });
-    document.getElementById('upload-btn').addEventListener('click', handleUpload);
-    document.getElementById('clear-queue-btn').addEventListener('click', clearFileQueue);
-
     // Pipeline
     document.getElementById('start-pipeline-btn').addEventListener('click', handleStartPipeline);
 
@@ -196,162 +209,18 @@ const App = (function() {
   }
 
   // ===== File Upload =====
-
-  function setupDragAndDrop() {
-    const dropZone = document.getElementById('drop-zone');
-
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-      dropZone.addEventListener(eventName, preventDefaults, false);
-    });
-
-    ['dragenter', 'dragover'].forEach(eventName => {
-      dropZone.addEventListener(eventName, () => dropZone.classList.add('drag-over'), false);
-    });
-
-    ['dragleave', 'drop'].forEach(eventName => {
-      dropZone.addEventListener(eventName, () => dropZone.classList.remove('drag-over'), false);
-    });
-
-    dropZone.addEventListener('drop', handleDrop, false);
-  }
-
-  function preventDefaults(e) {
-    e.preventDefault();
-    e.stopPropagation();
-  }
-
-  function handleDrop(e) {
-    const files = e.dataTransfer.files;
-    addFilesToQueue(files);
-  }
-
-  function handleFileSelect(e) {
-    const files = e.target.files;
-    addFilesToQueue(files);
-  }
-
-  function addFilesToQueue(files) {
-    Array.from(files).forEach(file => {
-      // Validate file
-      if (!validateFile(file)) return;
-
-      state.filesInQueue.push({
-        file,
-        id: generateId(),
-        status: 'pending',
-        progress: 0
-      });
-    });
-
-    updateFileQueueUI();
-  }
-
-  function validateFile(file) {
-    // Check MIME type
-    if (!state.config.allowedMimeTypes.includes(file.type)) {
-      showToast(`${file.name}: ${t('invalid_file_type')}`, 'error');
-      return false;
-    }
-
-    // Check file size
-    if (file.size > state.config.maxFileSize) {
-      showToast(`${file.name}: ${t('file_too_large')}`, 'error');
-      return false;
-    }
-
-    // Check queue size
-    if (state.filesInQueue.length >= state.config.maxFilesPerBatch) {
-      showToast(t('queue_full'), 'error');
-      return false;
-    }
-
-    return true;
-  }
-
-  function updateFileQueueUI() {
-    const queueList = document.getElementById('file-queue');
-    queueList.innerHTML = '';
-
-    if (state.filesInQueue.length === 0) {
-      queueList.innerHTML = `<div class="empty-message">${t('no_files_queued')}</div>`;
-      document.getElementById('upload-btn').disabled = true;
-      document.getElementById('clear-queue-btn').disabled = true;
-      return;
-    }
-
-    document.getElementById('upload-btn').disabled = false;
-    document.getElementById('clear-queue-btn').disabled = false;
-
-    state.filesInQueue.forEach((item, index) => {
-      const fileItem = document.createElement('div');
-      fileItem.className = `file-item status-${item.status}`;
-      fileItem.innerHTML = `
-        <div class="file-info">
-          <span class="file-name">${item.file.name}</span>
-          <span class="file-size">${formatFileSize(item.file.size)}</span>
-        </div>
-        <div class="file-status">
-          <span class="status-badge">${t('status_' + item.status)}</span>
-          <button class="btn-remove" onclick="App.removeFileFromQueue(${index})">×</button>
-        </div>
-      `;
-      queueList.appendChild(fileItem);
-    });
-  }
-
-  async function handleUpload() {
-    const targetFolder = document.getElementById('upload-target').value;
-    if (!targetFolder) {
-      showToast(t('select_target_folder'), 'error');
-      return;
-    }
-
-    const pendingFiles = state.filesInQueue.filter(item => item.status === 'pending');
-    if (pendingFiles.length === 0) {
-      showToast(t('no_files_to_upload'), 'warning');
-      return;
-    }
-
-    document.getElementById('upload-btn').disabled = true;
-
-    try {
-      const files = pendingFiles.map(item => item.file);
-      const result = await state.api.uploadFiles(files, targetFolder);
-
-      if (result.success) {
-        pendingFiles.forEach(item => {
-          item.status = 'completed';
-        });
-        showToast(t('upload_success') + `: ${result.data.count} ${t('files')}`, 'success');
-      } else {
-        throw new Error(result.message);
-      }
-    } catch (error) {
-      showToast(t('upload_error') + ': ' + error.message, 'error');
-      state.filesInQueue.forEach(item => {
-        if (item.status === 'uploading') {
-          item.status = 'error';
-        }
-      });
-    }
-
-    updateFileQueueUI();
-    document.getElementById('upload-btn').disabled = false;
-  }
-
-  function clearFileQueue() {
-    state.filesInQueue = [];
-    updateFileQueueUI();
-  }
-
-  function removeFileFromQueue(index) {
-    state.filesInQueue.splice(index, 1);
-    updateFileQueueUI();
-  }
+  // File upload is now handled by upload-slots.js
 
   // ===== Pipeline =====
 
   async function handleStartPipeline() {
+    // Validate all 4 files are uploaded
+    const filledCount = Object.values(state.fileSlots).filter(f => f !== null).length;
+    if (filledCount !== 4) {
+      showToast('All 4 files must be uploaded before starting the pipeline', 'error');
+      return;
+    }
+
     try {
       const result = await state.api.startPipeline();
 
@@ -432,6 +301,12 @@ const App = (function() {
 
       if (result.success) {
         state.kgData = result.data;
+        state.hasKG = true;
+
+        // Hide empty banner
+        document.getElementById('empty-graph-banner').classList.add('hidden');
+
+        // Render graph
         state.viz.render(state.kgData);
         showToast(t('kg_loaded'), 'success');
 
@@ -882,10 +757,12 @@ pipelines:
     document.body.removeChild(a);
   }
 
+  // Make state accessible to upload-slots.js
+  window.AppState = state;
+
   // Public API
   return {
     init,
-    removeFileFromQueue,
     closeDetailsPanel
   };
 })();
