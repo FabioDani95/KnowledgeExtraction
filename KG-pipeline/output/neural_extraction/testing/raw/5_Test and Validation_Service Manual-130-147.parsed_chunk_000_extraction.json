@@ -1,0 +1,500 @@
+{
+  "extraction": {
+    "entities": [
+      {
+        "type": "Equipment",
+        "name": "pressure gauge adapter",
+        "id": "EQ_01",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_001",
+            "section_title": "Section 1",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: Section 1... (p.2-2)"
+          },
+          {
+            "section_id": "sec_002",
+            "section_title": "9.2.2 Citiz pressure gauge adapter",
+            "page_start": 2,
+            "page_end": 3,
+            "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+          },
+          {
+            "section_id": "sec_003",
+            "section_title": "9.3 Measure flow rate",
+            "page_start": 3,
+            "page_end": 4,
+            "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+          },
+          {
+            "section_id": "sec_004",
+            "section_title": "9.4 Pressure and leakage checks",
+            "page_start": 4,
+            "page_end": 5,
+            "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+          },
+          {
+            "section_id": "sec_005",
+            "section_title": "9.4.1 Preparations",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+          },
+          {
+            "section_id": "sec_006",
+            "section_title": "9.4.2 Test run 9) Connect mains cable.",
+            "page_start": 6,
+            "page_end": 7,
+            "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+          }
+        ]
+      },
+      {
+        "type": "Equipment",
+        "name": "connecting unit",
+        "id": "EQ_02",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_001",
+            "section_title": "Section 1",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: Section 1... (p.2-2)"
+          },
+          {
+            "section_id": "sec_002",
+            "section_title": "9.2.2 Citiz pressure gauge adapter",
+            "page_start": 2,
+            "page_end": 3,
+            "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+          },
+          {
+            "section_id": "sec_003",
+            "section_title": "9.3 Measure flow rate",
+            "page_start": 3,
+            "page_end": 4,
+            "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+          },
+          {
+            "section_id": "sec_004",
+            "section_title": "9.4 Pressure and leakage checks",
+            "page_start": 4,
+            "page_end": 5,
+            "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+          },
+          {
+            "section_id": "sec_005",
+            "section_title": "9.4.1 Preparations",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+          },
+          {
+            "section_id": "sec_006",
+            "section_title": "9.4.2 Test run 9) Connect mains cable.",
+            "page_start": 6,
+            "page_end": 7,
+            "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+          }
+        ]
+      },
+      {
+        "type": "Equipment",
+        "name": "fixation unit",
+        "id": "EQ_03",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_001",
+            "section_title": "Section 1",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: Section 1... (p.2-2)"
+          },
+          {
+            "section_id": "sec_002",
+            "section_title": "9.2.2 Citiz pressure gauge adapter",
+            "page_start": 2,
+            "page_end": 3,
+            "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+          },
+          {
+            "section_id": "sec_003",
+            "section_title": "9.3 Measure flow rate",
+            "page_start": 3,
+            "page_end": 4,
+            "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+          },
+          {
+            "section_id": "sec_004",
+            "section_title": "9.4 Pressure and leakage checks",
+            "page_start": 4,
+            "page_end": 5,
+            "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+          },
+          {
+            "section_id": "sec_005",
+            "section_title": "9.4.1 Preparations",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+          },
+          {
+            "section_id": "sec_006",
+            "section_title": "9.4.2 Test run 9) Connect mains cable.",
+            "page_start": 6,
+            "page_end": 7,
+            "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+          }
+        ]
+      },
+      {
+        "type": "Measurement",
+        "name": "pressure",
+        "id": "M_01",
+        "confidence": 1.0,
+        "nominal_value": 12,
+        "unit_raw": "bar",
+        "spans": [
+          {
+            "section_id": "sec_001",
+            "section_title": "Section 1",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: Section 1... (p.2-2)"
+          },
+          {
+            "section_id": "sec_002",
+            "section_title": "9.2.2 Citiz pressure gauge adapter",
+            "page_start": 2,
+            "page_end": 3,
+            "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+          },
+          {
+            "section_id": "sec_003",
+            "section_title": "9.3 Measure flow rate",
+            "page_start": 3,
+            "page_end": 4,
+            "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+          },
+          {
+            "section_id": "sec_004",
+            "section_title": "9.4 Pressure and leakage checks",
+            "page_start": 4,
+            "page_end": 5,
+            "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+          },
+          {
+            "section_id": "sec_005",
+            "section_title": "9.4.1 Preparations",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+          },
+          {
+            "section_id": "sec_006",
+            "section_title": "9.4.2 Test run 9) Connect mains cable.",
+            "page_start": 6,
+            "page_end": 7,
+            "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+          }
+        ]
+      },
+      {
+        "type": "Measurement",
+        "name": "water volume",
+        "id": "M_02",
+        "confidence": 1.0,
+        "min_value": 60,
+        "max_value": 120,
+        "unit_raw": "ml",
+        "spans": [
+          {
+            "section_id": "sec_001",
+            "section_title": "Section 1",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: Section 1... (p.2-2)"
+          },
+          {
+            "section_id": "sec_002",
+            "section_title": "9.2.2 Citiz pressure gauge adapter",
+            "page_start": 2,
+            "page_end": 3,
+            "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+          },
+          {
+            "section_id": "sec_003",
+            "section_title": "9.3 Measure flow rate",
+            "page_start": 3,
+            "page_end": 4,
+            "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+          },
+          {
+            "section_id": "sec_004",
+            "section_title": "9.4 Pressure and leakage checks",
+            "page_start": 4,
+            "page_end": 5,
+            "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+          },
+          {
+            "section_id": "sec_005",
+            "section_title": "9.4.1 Preparations",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+          },
+          {
+            "section_id": "sec_006",
+            "section_title": "9.4.2 Test run 9) Connect mains cable.",
+            "page_start": 6,
+            "page_end": 7,
+            "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+          }
+        ]
+      },
+      {
+        "type": "SafetyNotice",
+        "name": "Dangerous mains voltage",
+        "id": "SN_01",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_001",
+            "section_title": "Section 1",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: Section 1... (p.2-2)"
+          },
+          {
+            "section_id": "sec_002",
+            "section_title": "9.2.2 Citiz pressure gauge adapter",
+            "page_start": 2,
+            "page_end": 3,
+            "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+          },
+          {
+            "section_id": "sec_003",
+            "section_title": "9.3 Measure flow rate",
+            "page_start": 3,
+            "page_end": 4,
+            "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+          },
+          {
+            "section_id": "sec_004",
+            "section_title": "9.4 Pressure and leakage checks",
+            "page_start": 4,
+            "page_end": 5,
+            "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+          },
+          {
+            "section_id": "sec_005",
+            "section_title": "9.4.1 Preparations",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+          },
+          {
+            "section_id": "sec_006",
+            "section_title": "9.4.2 Test run 9) Connect mains cable.",
+            "page_start": 6,
+            "page_end": 7,
+            "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+          }
+        ]
+      },
+      {
+        "type": "SafetyNotice",
+        "name": "Dangerous hot parts",
+        "id": "SN_02",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_001",
+            "section_title": "Section 1",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: Section 1... (p.2-2)"
+          },
+          {
+            "section_id": "sec_002",
+            "section_title": "9.2.2 Citiz pressure gauge adapter",
+            "page_start": 2,
+            "page_end": 3,
+            "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+          },
+          {
+            "section_id": "sec_003",
+            "section_title": "9.3 Measure flow rate",
+            "page_start": 3,
+            "page_end": 4,
+            "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+          },
+          {
+            "section_id": "sec_004",
+            "section_title": "9.4 Pressure and leakage checks",
+            "page_start": 4,
+            "page_end": 5,
+            "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+          },
+          {
+            "section_id": "sec_005",
+            "section_title": "9.4.1 Preparations",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+          },
+          {
+            "section_id": "sec_006",
+            "section_title": "9.4.2 Test run 9) Connect mains cable.",
+            "page_start": 6,
+            "page_end": 7,
+            "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+          }
+        ]
+      },
+      {
+        "type": "AcceptanceCriterion",
+        "name": "pressure stability",
+        "id": "AC_01",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_001",
+            "section_title": "Section 1",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: Section 1... (p.2-2)"
+          },
+          {
+            "section_id": "sec_002",
+            "section_title": "9.2.2 Citiz pressure gauge adapter",
+            "page_start": 2,
+            "page_end": 3,
+            "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+          },
+          {
+            "section_id": "sec_003",
+            "section_title": "9.3 Measure flow rate",
+            "page_start": 3,
+            "page_end": 4,
+            "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+          },
+          {
+            "section_id": "sec_004",
+            "section_title": "9.4 Pressure and leakage checks",
+            "page_start": 4,
+            "page_end": 5,
+            "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+          },
+          {
+            "section_id": "sec_005",
+            "section_title": "9.4.1 Preparations",
+            "page_start": 5,
+            "page_end": 6,
+            "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+          },
+          {
+            "section_id": "sec_006",
+            "section_title": "9.4.2 Test run 9) Connect mains cable.",
+            "page_start": 6,
+            "page_end": 7,
+            "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+          }
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "type": "requires",
+        "from_ref": "M_01",
+        "to_ref": "EQ_01",
+        "confidence": 1.0
+      },
+      {
+        "type": "requires",
+        "from_ref": "M_02",
+        "to_ref": "EQ_01",
+        "confidence": 1.0
+      },
+      {
+        "type": "validatedBy",
+        "from_ref": "M_01",
+        "to_ref": "AC_01",
+        "confidence": 1.0
+      },
+      {
+        "type": "refersTo",
+        "from_ref": "SN_01",
+        "to_ref": "EQ_01",
+        "confidence": 1.0
+      },
+      {
+        "type": "refersTo",
+        "from_ref": "SN_02",
+        "to_ref": "EQ_01",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "chunk_provenance": [
+    {
+      "text": "Citiz service manual  131 FUNCTION TESTS",
+      "section_id": "sec_001",
+      "section_title": "Section 1",
+      "page_start": 2,
+      "page_end": 2,
+      "char_start": 0,
+      "char_end": 40
+    },
+    {
+      "text": "This pressure gauge adapter is designed for the Citiz coffee machines.\nThe pressure gauge adapter has 2 parts:\n• A connecting unit (3) with a sealing cone that is inserted in the capsule cage of the\nbrewing unit.\n• A hand actuated fixation unit (4) to lock and seal the complete pressure gauge\nadapter in the brewing unit. 1) Quick action coupling for pressure\nhose\n2) Operating lever 3) Connecting unit\n4) Fixation unit\nCitiz service manual  132 FUNCTION TESTS",
+      "section_id": "sec_002",
+      "section_title": "9.2.2 Citiz pressure gauge adapter",
+      "page_start": 2,
+      "page_end": 3,
+      "char_start": 42,
+      "char_end": 503
+    },
+    {
+      "text": "The pressure adapter\nmust sit firmly in the\ncapsule bay.\n1) Fill and insert water tank.\n2) Open closing handle.\n3) Insert connecting unit of pressure\nadapter into capsule bay. Push back\nsealing cone into capsule cage.\n4) Insert fixation unit of pressure adapter\ninto capsule bay.\n5) Press down operating lever.\n6) Connect pressure hose to pressure\ntester.\n7) Place a measuring cup under the drain\nhose of the pressure tester.\nCitiz service manual  133 FUNCTION TESTS",
+      "section_id": "sec_003",
+      "section_title": "9.3 Measure flow rate",
+      "page_start": 3,
+      "page_end": 4,
+      "char_start": 505,
+      "char_end": 971
+    },
+    {
+      "text": "Check the following parts of the coffee machine for leakages:\n• Compact brewing unit\n• Hose connections\n• Thermoblock\n• Pump\n• Self priming device 8) Switch on coffee machine.\n9) After heating up, press the \"small cup\"\nbutton.\n10) Open the valve until water begins to\nflow.\n11) Close the valve until the pressure\ngauge indicates 12 bar.\nConstantly monitor the pressure\ngauge and if required readjust the\nvalve. As the temperature\nincreases, so does the pressure,\nreadjust the pressure to 12 bar\nwhen required.\n12) Carry out measurement for approx.\n30sec.\n13) Control measuring cup: at least 60\n120ml of water must be in the measur\ning cup.\n14) Open the valve and let water flow out\nof the pressure tester.\nNotices:\n• Should < 60 ml leak out, then the pump\nis defective or there is a leak in the\nwater system. • Large deviations in indicated pressure\nwhile measuring (± 4 bar) means that\nthe pump is defective.\nDangerous mains voltage inside the coffee machine!\nDo not touch any parts under voltage while checking for leakages!\nDangerous hot parts under pressure inside the coffee machine!\nDo not touch any hot/pressurized parts while checking for leakages!\nAlways wear protective goggles.\nCitiz service manual  134 FUNCTION TESTS",
+      "section_id": "sec_004",
+      "section_title": "9.4 Pressure and leakage checks",
+      "page_start": 4,
+      "page_end": 5,
+      "char_start": 973,
+      "char_end": 2202
+    },
+    {
+      "text": "Depending on core\nunit range, refer to\n\"Disassembly of core\nunit, Crange\" on page 91\nor \"Disassembly of core\nunit, Drange\" on page 109.\nThe pressure adapter\nmust sit firmly in the\ncapsule bay.\n1) Remove left side panel of core unit.\n2) Insert core unit back into platform.\n3) Fill and insert water tank.\n4) Insert connecting unit of pressure\nadapter into capsule bay. Push back\nsealing cone into capsule cage.\n5) Insert fixation unit of pressure adapter\ninto capsule bay.\n6) Press down operating lever.\n7) Connect pressure hose to pressure\ntester.\n8) Place a measuring cup under the drain\nhose of the pressure tester.\nCitiz service manual  135 FUNCTION TESTS",
+      "section_id": "sec_005",
+      "section_title": "9.4.1 Preparations",
+      "page_start": 5,
+      "page_end": 6,
+      "char_start": 2204,
+      "char_end": 2862
+    },
+    {
+      "text": "10) Switch on coffee machine.\n11) After heating up, press the \"small cup\"\nbutton.\n12) Open the valve and let the water flow\nfor approximately 10 sec out of the\ndrain hose.\n13) Close the valve completely. The pres\nsure stabilizes after increasing briefly\nbetween 1619bar (pressure check).\nThe pressure increases slowly with\nincreasing temperature. Should the\npressure exceed 23 bar, switch off\nthe coffee machine and release the\npressure by opening the valve.\nFor better visibility\nuse a flashlight.\n14) Check all connections under pressure\nfor audible and visible leaks.\nDo not run the pump for more\nthan 50 sec with the valve closed.\nCitiz service manual  136 FUNCTION TESTS",
+      "section_id": "sec_006",
+      "section_title": "9.4.2 Test run 9) Connect mains cable.",
+      "page_start": 6,
+      "page_end": 7,
+      "char_start": 2864,
+      "char_end": 3539
+    }
+  ],
+  "timestamp": "2025-11-05T10:35:47.426534+00:00"
+}

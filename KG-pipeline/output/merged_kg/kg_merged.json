@@ -5,12 +5,13 @@
     "source_files": [
       "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/output/neural_extraction/Partial_KG/operation_modes_kg.json",
       "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/output/neural_extraction/Partial_KG/product_technical_kg.json",
+      "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/output/neural_extraction/Partial_KG/testing_kg.json",
       "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/output/neural_extraction/Partial_KG/troubleshooting_kg.json"
     ],
     "priority_sources": [
       "NEURAL_EXTRACTION"
     ],
-    "merged_at": "2025-11-04T13:50:47.328544Z"
+    "merged_at": "2025-11-05T10:45:16.810546Z"
   },
   "entities": [
     {
@@ -668,8 +669,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Press and hold small coffee button",
-      "id": "ns:Step/press_and_hold_small_coffee_button",
+      "name": "Press and hold coffee button",
+      "id": "ns:Step/press_and_hold_coffee_button",
       "confidence": 1.0,
       "spans": [
         {
@@ -800,8 +801,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Reset the programmed large and small coffee volumes to factory setting",
-      "id": "ns:Step/reset_the_programmed_large_and_small_coffee_volumes_to_factory_setting",
+      "name": "Reset the programmed volumes",
+      "id": "ns:Step/reset_the_programmed_volumes",
       "confidence": 1.0,
       "spans": [
         {
@@ -822,8 +823,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Indicate the resetting mode for 3 s",
-      "id": "ns:Step/indicate_the_resetting_mode_for_3_s",
+      "name": "Indicate the resetting mode",
+      "id": "ns:Step/indicate_the_resetting_mode",
       "confidence": 1.0,
       "spans": [
         {
@@ -910,6 +911,28 @@
     },
     {
       "type": "ProcessStep",
+      "name": "Switch off thermoblock",
+      "id": "ns:Step/switch_off_thermoblock",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_mode_table_p5",
+          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+          "page_start": 5,
+          "page_end": 5,
+          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+        },
+        {
+          "section_id": "sec_procedure_p6",
+          "section_title": "Citiz service manual  36 OPERATION",
+          "page_start": 6,
+          "page_end": 6,
+          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+        }
+      ]
+    },
+    {
+      "type": "ProcessStep",
       "name": "Switch off the machine",
       "id": "ns:Step/switch_off_the_machine",
       "confidence": 1.0,
@@ -931,46 +954,86 @@
       ]
     },
     {
-      "type": "ProcessStep",
-      "name": "Keep start button pressed for approx. 2sec",
-      "id": "ns:Step/keep_start_button_pressed_for_approx_2sec",
-      "confidence": 1.0,
+      "type": "MachineMode",
+      "name": "Citiz & Co",
+      "id": "ns:Mode/citiz_co",
       "spans": [
         {
-          "section_id": "sec_mode_table_p5",
-          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
-          "page_start": 5,
-          "page_end": 5,
-          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          "section_id": "sec_procedure_p7",
+          "section_title": "Citiz service manual  37 OPERATION",
+          "page_start": 7,
+          "page_end": 7,
+          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
         },
         {
-          "section_id": "sec_procedure_p6",
-          "section_title": "Citiz service manual  36 OPERATION",
-          "page_start": 6,
-          "page_end": 6,
-          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          "section_id": "sec_procedure_p8",
+          "section_title": "Citiz service manual  38 MAINTENANCE",
+          "page_start": 8,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+        },
+        {
+          "section_id": "sec_procedure_p9",
+          "section_title": "Citiz service manual  39 MAINTENANCE",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+        },
+        {
+          "section_id": "sec_procedure_p10",
+          "section_title": "Citiz service manual  40 MAINTENANCE",
+          "page_start": 10,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+        },
+        {
+          "section_id": "sec_generic_p11",
+          "section_title": "Operational content (page 11)",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Operational content (page 11)... (p.11-11)"
         }
       ]
     },
     {
-      "type": "ProcessStep",
-      "name": "Release 'large cup' button",
-      "id": "ns:Step/release_large_cup_button",
-      "confidence": 1.0,
+      "type": "MachineMode",
+      "name": "Citiz & milk",
+      "id": "ns:Mode/citiz_milk",
       "spans": [
         {
-          "section_id": "sec_mode_table_p5",
-          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
-          "page_start": 5,
-          "page_end": 5,
-          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          "section_id": "sec_procedure_p7",
+          "section_title": "Citiz service manual  37 OPERATION",
+          "page_start": 7,
+          "page_end": 7,
+          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
         },
         {
-          "section_id": "sec_procedure_p6",
-          "section_title": "Citiz service manual  36 OPERATION",
-          "page_start": 6,
-          "page_end": 6,
-          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          "section_id": "sec_procedure_p8",
+          "section_title": "Citiz service manual  38 MAINTENANCE",
+          "page_start": 8,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+        },
+        {
+          "section_id": "sec_procedure_p9",
+          "section_title": "Citiz service manual  39 MAINTENANCE",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+        },
+        {
+          "section_id": "sec_procedure_p10",
+          "section_title": "Citiz service manual  40 MAINTENANCE",
+          "page_start": 10,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+        },
+        {
+          "section_id": "sec_generic_p11",
+          "section_title": "Operational content (page 11)",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Operational content (page 11)... (p.11-11)"
         }
       ]
     },
@@ -1102,8 +1165,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Milk frother of model Citiz & milk",
-      "id": "ns:Step/milk_frother_of_model_citiz_milk",
+      "name": "Descaling procedure",
+      "id": "ns:Step/descaling_procedure",
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -1143,9 +1206,93 @@
       ]
     },
     {
-      "type": "ProcessStep",
-      "name": "Descaling",
-      "id": "ns:Step/descaling",
+      "type": "State",
+      "name": "Coffee machine not ready",
+      "id": "ns:State/coffee_machine_not_ready",
+      "spans": [
+        {
+          "section_id": "sec_procedure_p7",
+          "section_title": "Citiz service manual  37 OPERATION",
+          "page_start": 7,
+          "page_end": 7,
+          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+        },
+        {
+          "section_id": "sec_procedure_p8",
+          "section_title": "Citiz service manual  38 MAINTENANCE",
+          "page_start": 8,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+        },
+        {
+          "section_id": "sec_procedure_p9",
+          "section_title": "Citiz service manual  39 MAINTENANCE",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+        },
+        {
+          "section_id": "sec_procedure_p10",
+          "section_title": "Citiz service manual  40 MAINTENANCE",
+          "page_start": 10,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+        },
+        {
+          "section_id": "sec_generic_p11",
+          "section_title": "Operational content (page 11)",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Operational content (page 11)... (p.11-11)"
+        }
+      ]
+    },
+    {
+      "type": "State",
+      "name": "Risk of electrical shock",
+      "id": "ns:State/risk_of_electrical_shock",
+      "spans": [
+        {
+          "section_id": "sec_procedure_p7",
+          "section_title": "Citiz service manual  37 OPERATION",
+          "page_start": 7,
+          "page_end": 7,
+          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+        },
+        {
+          "section_id": "sec_procedure_p8",
+          "section_title": "Citiz service manual  38 MAINTENANCE",
+          "page_start": 8,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+        },
+        {
+          "section_id": "sec_procedure_p9",
+          "section_title": "Citiz service manual  39 MAINTENANCE",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+        },
+        {
+          "section_id": "sec_procedure_p10",
+          "section_title": "Citiz service manual  40 MAINTENANCE",
+          "page_start": 10,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+        },
+        {
+          "section_id": "sec_generic_p11",
+          "section_title": "Operational content (page 11)",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Operational content (page 11)... (p.11-11)"
+        }
+      ]
+    },
+    {
+      "type": "State",
+      "name": "Risk of damage",
+      "id": "ns:State/risk_of_damage",
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -1435,56 +1582,6 @@
       ]
     },
     {
-      "type": "ProcessStep",
-      "name": "Press any button on a core unit to start pumps",
-      "id": "ns:Step/press_any_button_on_a_core_unit_to_start_pumps",
-      "confidence": 1.0,
-      "spans": [
-        {
-          "section_id": "sec_procedure_p12",
-          "section_title": "Citiz service manual  42 MAINTENANCE",
-          "page_start": 12,
-          "page_end": 12,
-          "source_text": "Section: Citiz service manual  42 MAINTENANCE... (p.12-12)"
-        },
-        {
-          "section_id": "sec_procedure_p13",
-          "section_title": "Citiz service manual  43 MAINTENANCE",
-          "page_start": 13,
-          "page_end": 13,
-          "source_text": "Section: Citiz service manual  43 MAINTENANCE... (p.13-13)"
-        },
-        {
-          "section_id": "sec_procedure_p14",
-          "section_title": "Citiz service manual  44 MAINTENANCE",
-          "page_start": 14,
-          "page_end": 14,
-          "source_text": "Section: Citiz service manual  44 MAINTENANCE... (p.14-14)"
-        },
-        {
-          "section_id": "sec_procedure_p15",
-          "section_title": "Citiz service manual  45 MAINTENANCE",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: Citiz service manual  45 MAINTENANCE... (p.15-15)"
-        },
-        {
-          "section_id": "sec_procedure_p16",
-          "section_title": "Citiz service manual  46 MAINTENANCE",
-          "page_start": 16,
-          "page_end": 16,
-          "source_text": "Section: Citiz service manual  46 MAINTENANCE... (p.16-16)"
-        },
-        {
-          "section_id": "sec_procedure_p17",
-          "section_title": "Citiz service manual  47 MAINTENANCE",
-          "page_start": 17,
-          "page_end": 17,
-          "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
-        }
-      ]
-    },
-    {
       "id": "ns:Product/citiz",
       "type": "Product",
       "name": "Citiz",
@@ -1566,6 +1663,90 @@
           "page_start": 7,
           "page_end": 8,
           "source_text": "Section: 3.4.1 Overview ­ milk frother AERO3... (p.7-8)"
+        },
+        {
+          "section_id": "sec_4_1_1_turmix",
+          "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_2_turmix",
+          "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+          "page_start": 15,
+          "page_end": 16,
+          "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
+        },
+        {
+          "section_id": "sec_4_1_3",
+          "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_1_3_manufacturing_plant",
+          "section_title": "Manufacturing plant",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: Manufacturing plant... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_2_1",
+          "section_title": "4.2.1 Technical data of coffee machines",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+          "section_title": "Mains voltage for Citiz",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+          "section_title": "Mains voltage for Citiz & milk",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+          "section_title": "Mains voltage for Citiz & Co",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_approvals",
+          "section_title": "Approvals",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Approvals... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+          "section_title": "Power ratings of coffee machine main components",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
         },
         {
           "section_id": "sec_4_2_1_heating_up",
@@ -1890,6 +2071,90 @@
           "page_start": 12,
           "page_end": 15,
           "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_1_turmix",
+          "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_2_turmix",
+          "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+          "page_start": 15,
+          "page_end": 16,
+          "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
+        },
+        {
+          "section_id": "sec_4_1_3",
+          "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_1_3_manufacturing_plant",
+          "section_title": "Manufacturing plant",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: Manufacturing plant... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_2_1",
+          "section_title": "4.2.1 Technical data of coffee machines",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+          "section_title": "Mains voltage for Citiz",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+          "section_title": "Mains voltage for Citiz & milk",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+          "section_title": "Mains voltage for Citiz & Co",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_approvals",
+          "section_title": "Approvals",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Approvals... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+          "section_title": "Power ratings of coffee machine main components",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
         }
       ]
     },
@@ -2525,6 +2790,90 @@
           "page_start": 12,
           "page_end": 15,
           "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_1_turmix",
+          "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_2_turmix",
+          "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+          "page_start": 15,
+          "page_end": 16,
+          "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
+        },
+        {
+          "section_id": "sec_4_1_3",
+          "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_1_3_manufacturing_plant",
+          "section_title": "Manufacturing plant",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: Manufacturing plant... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_2_1",
+          "section_title": "4.2.1 Technical data of coffee machines",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+          "section_title": "Mains voltage for Citiz",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+          "section_title": "Mains voltage for Citiz & milk",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+          "section_title": "Mains voltage for Citiz & Co",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_approvals",
+          "section_title": "Approvals",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Approvals... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+          "section_title": "Power ratings of coffee machine main components",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
         }
       ]
     },
@@ -3083,7 +3432,7 @@
     {
       "id": "ns:Unit/l",
       "type": "Unit",
-      "name": "l",
+      "name": "L",
       "confidence": 0.9,
       "spans": [
         {
@@ -3324,6 +3673,90 @@
           "page_start": 12,
           "page_end": 15,
           "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_1_turmix",
+          "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_2_turmix",
+          "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+          "page_start": 15,
+          "page_end": 16,
+          "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
+        },
+        {
+          "section_id": "sec_4_1_3",
+          "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_1_3_manufacturing_plant",
+          "section_title": "Manufacturing plant",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: Manufacturing plant... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_2_1",
+          "section_title": "4.2.1 Technical data of coffee machines",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+          "section_title": "Mains voltage for Citiz",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+          "section_title": "Mains voltage for Citiz & milk",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+          "section_title": "Mains voltage for Citiz & Co",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_approvals",
+          "section_title": "Approvals",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Approvals... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+          "section_title": "Power ratings of coffee machine main components",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
         }
       ]
     },
@@ -5256,119 +5689,6 @@
       ]
     },
     {
-      "id": "ns:ComponentType/coffee_outlet",
-      "type": "ComponentType",
-      "name": "Coffee outlet",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_3_4_1_aero3_is_part_of_the",
-          "section_title": "AERO3 is part of the",
-          "page_start": 7,
-          "page_end": 8,
-          "source_text": "Section: AERO3 is part of the... (p.7-8)"
-        },
-        {
-          "section_id": "sec_3_4_1_citiz_service_manual_16_main_components",
-          "section_title": "Citiz service manual  16 MAIN COMPONENTS",
-          "page_start": 7,
-          "page_end": 8,
-          "source_text": "Section: Citiz service manual  16 MAIN COMPONENTS... (p.7-8)"
-        },
-        {
-          "section_id": "sec_3_5",
-          "section_title": "3.5 Overview ­ model Citiz & Co",
-          "page_start": 8,
-          "page_end": 9,
-          "source_text": "Section: 3.5 Overview ­ model Citiz & Co... (p.8-9)"
-        },
-        {
-          "section_id": "sec_3_6_1",
-          "section_title": "3.6.1 Water circuit diagram of core unit (all Citiz versions)",
-          "page_start": 9,
-          "page_end": 10,
-          "source_text": "Section: 3.6.1 Water circuit diagram of core unit (all Citiz versions)... (p.9-10)"
-        },
-        {
-          "section_id": "sec_3_6_1_legend",
-          "section_title": "Legend",
-          "page_start": 9,
-          "page_end": 10,
-          "source_text": "Section: Legend... (p.9-10)"
-        },
-        {
-          "section_id": "sec_3_6_1_citiz_service_manual_18_main_components",
-          "section_title": "Citiz service manual  18 MAIN COMPONENTS",
-          "page_start": 9,
-          "page_end": 10,
-          "source_text": "Section: Citiz service manual  18 MAIN COMPONENTS... (p.9-10)"
-        },
-        {
-          "section_id": "sec_3_6_2",
-          "section_title": "3.6.2 Water circuit of models Citiz/Citiz & milk",
-          "page_start": 10,
-          "page_end": 11,
-          "source_text": "Section: 3.6.2 Water circuit of models Citiz/Citiz & milk... (p.10-11)"
-        },
-        {
-          "section_id": "sec_3_6_3",
-          "section_title": "3.6.3 Water circuit of model Citiz & Co",
-          "page_start": 11,
-          "page_end": 12,
-          "source_text": "Section: 3.6.3 Water circuit of model Citiz & Co... (p.11-12)"
-        },
-        {
-          "section_id": "sec_4_1_1_nespresso",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Nespresso",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Nespresso... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_nespresso_this_overview_shows",
-          "section_title": "This overview shows",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: This overview shows... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_nespresso_ef484_citiz_c110_red_ef483_citiz_d110_black",
-          "section_title": "EF484 Citiz C110 red  EF483 Citiz D110 black",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: EF484 Citiz C110 red  EF483 Citiz D110 black... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_delonghi",
-          "section_title": "4.1.1 Examples of brand specific rating plates - DeLonghi",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - DeLonghi... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_koenig",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Koenig",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Koenig... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_krups",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Krups",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Krups... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_1_magimix",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Magimix",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Magimix... (p.12-15)"
-        }
-      ]
-    },
-    {
       "id": "ns:PS/max_milk_level",
       "type": "ParameterSpec",
       "name": "Max milk level",
@@ -5873,101 +6193,9 @@
       ]
     },
     {
-      "id": "ns:Product/turmix_tx_270",
+      "id": "ns:Product/citiz_co",
       "type": "Product",
-      "name": "Turmix TX 270",
-      "confidence": 0.95,
-      "spans": [
-        {
-          "section_id": "sec_4_1_1_turmix",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_2_turmix",
-          "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
-          "page_start": 15,
-          "page_end": 16,
-          "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
-        },
-        {
-          "section_id": "sec_4_1_3",
-          "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
-          "page_start": 16,
-          "page_end": 17,
-          "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
-        },
-        {
-          "section_id": "sec_4_1_3_manufacturing_plant",
-          "section_title": "Manufacturing plant",
-          "page_start": 16,
-          "page_end": 17,
-          "source_text": "Section: Manufacturing plant... (p.16-17)"
-        },
-        {
-          "section_id": "sec_4_2_1",
-          "section_title": "4.2.1 Technical data of coffee machines",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz",
-          "section_title": "Mains voltage for Citiz",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
-          "section_title": "Mains voltage for Citiz & milk",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
-          "section_title": "Mains voltage for Citiz & Co",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_approvals",
-          "section_title": "Approvals",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Approvals... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
-          "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
-          "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
-          "section_title": "Power ratings of coffee machine main components",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
-        }
-      ]
-    },
-    {
-      "id": "ns:Product/turmix_tx_370",
-      "type": "Product",
-      "name": "Turmix TX 370",
+      "name": "Citiz & Co",
       "confidence": 0.95,
       "spans": [
         {
@@ -6062,6 +6290,100 @@
       "name": "Mains voltage",
       "nominal_value": 220,
       "unit_raw": "V",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_1_1_turmix",
+          "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_2_turmix",
+          "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+          "page_start": 15,
+          "page_end": 16,
+          "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
+        },
+        {
+          "section_id": "sec_4_1_3",
+          "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_1_3_manufacturing_plant",
+          "section_title": "Manufacturing plant",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: Manufacturing plant... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_2_1",
+          "section_title": "4.2.1 Technical data of coffee machines",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+          "section_title": "Mains voltage for Citiz",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+          "section_title": "Mains voltage for Citiz & milk",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+          "section_title": "Mains voltage for Citiz & Co",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_approvals",
+          "section_title": "Approvals",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Approvals... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+          "section_title": "Power ratings of coffee machine main components",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/power_rating",
+      "type": "ParameterSpec",
+      "name": "Power rating",
+      "nominal_value": 1200,
+      "unit_raw": "W",
       "confidence": 0.9,
       "spans": [
         {
@@ -6355,100 +6677,6 @@
       ]
     },
     {
-      "id": "ns:PS/power_rating",
-      "type": "ParameterSpec",
-      "name": "Power rating",
-      "nominal_value": 1200,
-      "unit_raw": "W",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_4_1_1_turmix",
-          "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
-          "page_start": 12,
-          "page_end": 15,
-          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
-        },
-        {
-          "section_id": "sec_4_1_2_turmix",
-          "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
-          "page_start": 15,
-          "page_end": 16,
-          "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
-        },
-        {
-          "section_id": "sec_4_1_3",
-          "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
-          "page_start": 16,
-          "page_end": 17,
-          "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
-        },
-        {
-          "section_id": "sec_4_1_3_manufacturing_plant",
-          "section_title": "Manufacturing plant",
-          "page_start": 16,
-          "page_end": 17,
-          "source_text": "Section: Manufacturing plant... (p.16-17)"
-        },
-        {
-          "section_id": "sec_4_2_1",
-          "section_title": "4.2.1 Technical data of coffee machines",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz",
-          "section_title": "Mains voltage for Citiz",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
-          "section_title": "Mains voltage for Citiz & milk",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
-          "section_title": "Mains voltage for Citiz & Co",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_approvals",
-          "section_title": "Approvals",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Approvals... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
-          "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
-          "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
-          "section_title": "Power ratings of coffee machine main components",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
-        }
-      ]
-    },
-    {
       "id": "ns:Unit/w",
       "type": "Unit",
       "name": "W",
@@ -6653,9 +6881,101 @@
       ]
     },
     {
-      "id": "ns:PS/heating_energy_consumption_for_small_cup",
+      "id": "ns:RatingPlate/rating_plate_for_citiz",
+      "type": "RatingPlate",
+      "name": "Rating plate for Citiz",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_1_1_turmix",
+          "section_title": "4.1.1 Examples of brand specific rating plates - Turmix",
+          "page_start": 12,
+          "page_end": 15,
+          "source_text": "Section: 4.1.1 Examples of brand specific rating plates - Turmix... (p.12-15)"
+        },
+        {
+          "section_id": "sec_4_1_2_turmix",
+          "section_title": "4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Citiz  EF484 Citiz C110 steel grey/Turmix TX 170 ­ Citiz - Turmix",
+          "page_start": 15,
+          "page_end": 16,
+          "source_text": "Section: 4.1.2 Rating plate details EF484 Citiz C110 fire engine red/ Turmix TX 170 ­ Cit... (p.15-16)"
+        },
+        {
+          "section_id": "sec_4_1_3",
+          "section_title": "4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: 4.1.3 Rating plate of milk frother (model Citiz & milk) By decoding the date... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_1_3_manufacturing_plant",
+          "section_title": "Manufacturing plant",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: Manufacturing plant... (p.16-17)"
+        },
+        {
+          "section_id": "sec_4_2_1",
+          "section_title": "4.2.1 Technical data of coffee machines",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: 4.2.1 Technical data of coffee machines... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz",
+          "section_title": "Mains voltage for Citiz",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_milk",
+          "section_title": "Mains voltage for Citiz & milk",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & milk... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage_for_citiz_and_co",
+          "section_title": "Mains voltage for Citiz & Co",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage for Citiz & Co... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_approvals",
+          "section_title": "Approvals",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Approvals... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ccc_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: CCC, KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_ktl_spring_saso_sabs_isi_iram_nom",
+          "section_title": "KTL, SPRING, SASO, SABS, ISI, IRAM, NOM",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: KTL, SPRING, SASO, SABS, ISI, IRAM, NOM... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_power_ratings_of_coffee_machine_main_components",
+          "section_title": "Power ratings of coffee machine main components",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Power ratings of coffee machine main components... (p.17-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:PS/heating_energy_consumption_small_cup",
       "type": "ParameterSpec",
-      "name": "Heating energy consumption for small cup",
+      "name": "Heating energy consumption (small cup)",
       "nominal_value": 4.3,
       "unit_raw": "Wh",
       "confidence": 0.9,
@@ -6712,9 +7032,9 @@
       ]
     },
     {
-      "id": "ns:PS/heating_energy_consumption_for_large_cup",
+      "id": "ns:PS/heating_energy_consumption_large_cup",
       "type": "ParameterSpec",
-      "name": "Heating energy consumption for large cup",
+      "name": "Heating energy consumption (large cup)",
       "nominal_value": 8.7,
       "unit_raw": "Wh",
       "confidence": 0.9,
@@ -6771,9 +7091,9 @@
       ]
     },
     {
-      "id": "ns:PS/standby_operation_energy_consumption",
+      "id": "ns:PS/standby_energy_consumption",
       "type": "ParameterSpec",
-      "name": "Standby operation energy consumption",
+      "name": "Standby energy consumption",
       "nominal_value": 0.7,
       "unit_raw": "Wh",
       "confidence": 0.9,
@@ -6832,7 +7152,7 @@
     {
       "id": "ns:PS/max_permissible_pump_pressure",
       "type": "ParameterSpec",
-      "name": "Max permissible pump pressure",
+      "name": "Max. permissible pump pressure",
       "nominal_value": 17.5,
       "unit_raw": "bar",
       "confidence": 0.9,
@@ -7642,13 +7962,125 @@
           "page_start": 17,
           "page_end": 21,
           "source_text": "Section: Temperatures... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_various_data",
+          "section_title": "Various data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Various data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage",
+          "section_title": "Mains voltage",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_the_milk_frother",
+          "section_title": "The milk frother",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: The milk frother... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capacity",
+          "section_title": "Capacity",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capacity... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_unit",
+          "section_title": "Unit",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Unit... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
+          "section_title": "Measured power W  452 506 407 445 485",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_intensity_of_current",
+          "section_title": "Intensity of current",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Intensity of current... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for_2",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
+          "section_title": "Measured power W  452 506 407 445 485",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for_3",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_performance_data",
+          "section_title": "Performance data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Performance data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_preparation_times",
+          "section_title": "Preparation times",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Preparation times... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperature",
+          "section_title": "Temperature",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperature... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_various_data_2",
+          "section_title": "Various data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Various data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_4",
+          "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
+          "page_start": 21,
+          "page_end": 21,
+          "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
         }
       ]
     },
     {
-      "id": "ns:Product/milk_frother",
+      "id": "ns:Product/coffee_machine",
       "type": "Product",
-      "name": "Milk Frother",
+      "name": "Coffee Machine",
       "confidence": 0.95,
       "spans": [
         {
@@ -7888,251 +8320,11 @@
       ]
     },
     {
-      "id": "ns:Unit/dba",
-      "type": "Unit",
-      "name": "dB(A)",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_4_2_1_various_data",
-          "section_title": "Various data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Various data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage",
-          "section_title": "Mains voltage",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_the_milk_frother",
-          "section_title": "The milk frother",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: The milk frother... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_capacity",
-          "section_title": "Capacity",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Capacity... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_unit",
-          "section_title": "Unit",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Unit... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
-          "section_title": "Measured power W  452 506 407 445 485",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_intensity_of_current",
-          "section_title": "Intensity of current",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Intensity of current... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for_2",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
-          "section_title": "Measured power W  452 506 407 445 485",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for_3",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_performance_data",
-          "section_title": "Performance data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Performance data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_preparation_times",
-          "section_title": "Preparation times",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Preparation times... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_temperature",
-          "section_title": "Temperature",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Temperature... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_various_data_2",
-          "section_title": "Various data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Various data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_4",
-          "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
-          "page_start": 21,
-          "page_end": 21,
-          "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
-        }
-      ]
-    },
-    {
       "id": "ns:PS/preheating_time",
       "type": "ParameterSpec",
       "name": "Preheating time",
       "nominal_value": 60,
       "unit_raw": "sec",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_4_2_1_various_data",
-          "section_title": "Various data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Various data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage",
-          "section_title": "Mains voltage",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_the_milk_frother",
-          "section_title": "The milk frother",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: The milk frother... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_capacity",
-          "section_title": "Capacity",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Capacity... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_unit",
-          "section_title": "Unit",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Unit... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
-          "section_title": "Measured power W  452 506 407 445 485",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_intensity_of_current",
-          "section_title": "Intensity of current",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Intensity of current... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for_2",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
-          "section_title": "Measured power W  452 506 407 445 485",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for_3",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_performance_data",
-          "section_title": "Performance data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Performance data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_preparation_times",
-          "section_title": "Preparation times",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Preparation times... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_temperature",
-          "section_title": "Temperature",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Temperature... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_various_data_2",
-          "section_title": "Various data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Various data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_4",
-          "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
-          "page_start": 21,
-          "page_end": 21,
-          "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
-        }
-      ]
-    },
-    {
-      "id": "ns:Unit/sec",
-      "type": "Unit",
-      "name": "sec",
       "confidence": 0.9,
       "spans": [
         {
@@ -8372,126 +8564,6 @@
       ]
     },
     {
-      "id": "ns:Unit/m",
-      "type": "Unit",
-      "name": "m",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_4_2_1_various_data",
-          "section_title": "Various data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Various data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage",
-          "section_title": "Mains voltage",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_the_milk_frother",
-          "section_title": "The milk frother",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: The milk frother... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_capacity",
-          "section_title": "Capacity",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Capacity... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_unit",
-          "section_title": "Unit",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Unit... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
-          "section_title": "Measured power W  452 506 407 445 485",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_intensity_of_current",
-          "section_title": "Intensity of current",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Intensity of current... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for_2",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
-          "section_title": "Measured power W  452 506 407 445 485",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for_3",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_performance_data",
-          "section_title": "Performance data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Performance data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_preparation_times",
-          "section_title": "Preparation times",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Preparation times... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_temperature",
-          "section_title": "Temperature",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Temperature... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_various_data_2",
-          "section_title": "Various data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Various data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_4",
-          "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
-          "page_start": 21,
-          "page_end": 21,
-          "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
-        }
-      ]
-    },
-    {
       "id": "ns:PS/mains_voltage_europe",
       "type": "ParameterSpec",
       "name": "Mains voltage Europe",
@@ -8614,10 +8686,10 @@
       ]
     },
     {
-      "id": "ns:PS/power_rating_220_240_v",
+      "id": "ns:PS/power_rating_europe",
       "type": "ParameterSpec",
-      "name": "Power rating (220-240 V)",
-      "nominal_value": 490,
+      "name": "Power rating Europe",
+      "nominal_value": 410,
       "unit_raw": "W",
       "confidence": 0.9,
       "spans": [
@@ -8736,9 +8808,9 @@
       ]
     },
     {
-      "id": "ns:PS/hot_milk_capacity",
+      "id": "ns:PS/capacity_hot_milk",
       "type": "ParameterSpec",
-      "name": "Hot milk capacity",
+      "name": "Capacity Hot milk",
       "nominal_value": 240,
       "unit_raw": "ml",
       "confidence": 0.9,
@@ -8980,6 +9052,488 @@
       ]
     },
     {
+      "id": "ns:PS/temperature_hot_milk",
+      "type": "ParameterSpec",
+      "name": "Temperature Hot milk",
+      "nominal_value": 70,
+      "unit_raw": "°C",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_various_data",
+          "section_title": "Various data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Various data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage",
+          "section_title": "Mains voltage",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_the_milk_frother",
+          "section_title": "The milk frother",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: The milk frother... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capacity",
+          "section_title": "Capacity",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capacity... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_unit",
+          "section_title": "Unit",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Unit... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
+          "section_title": "Measured power W  452 506 407 445 485",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_intensity_of_current",
+          "section_title": "Intensity of current",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Intensity of current... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for_2",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
+          "section_title": "Measured power W  452 506 407 445 485",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for_3",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_performance_data",
+          "section_title": "Performance data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Performance data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_preparation_times",
+          "section_title": "Preparation times",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Preparation times... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperature",
+          "section_title": "Temperature",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperature... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_various_data_2",
+          "section_title": "Various data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Various data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_4",
+          "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
+          "page_start": 21,
+          "page_end": 21,
+          "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:Unit/dba",
+      "type": "Unit",
+      "name": "dB(A)",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_various_data",
+          "section_title": "Various data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Various data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage",
+          "section_title": "Mains voltage",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_the_milk_frother",
+          "section_title": "The milk frother",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: The milk frother... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capacity",
+          "section_title": "Capacity",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capacity... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_unit",
+          "section_title": "Unit",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Unit... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
+          "section_title": "Measured power W  452 506 407 445 485",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_intensity_of_current",
+          "section_title": "Intensity of current",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Intensity of current... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for_2",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
+          "section_title": "Measured power W  452 506 407 445 485",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for_3",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_performance_data",
+          "section_title": "Performance data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Performance data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_preparation_times",
+          "section_title": "Preparation times",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Preparation times... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperature",
+          "section_title": "Temperature",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperature... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_various_data_2",
+          "section_title": "Various data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Various data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_4",
+          "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
+          "page_start": 21,
+          "page_end": 21,
+          "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:Unit/sec",
+      "type": "Unit",
+      "name": "sec",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_various_data",
+          "section_title": "Various data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Various data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage",
+          "section_title": "Mains voltage",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_the_milk_frother",
+          "section_title": "The milk frother",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: The milk frother... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capacity",
+          "section_title": "Capacity",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capacity... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_unit",
+          "section_title": "Unit",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Unit... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
+          "section_title": "Measured power W  452 506 407 445 485",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_intensity_of_current",
+          "section_title": "Intensity of current",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Intensity of current... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for_2",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
+          "section_title": "Measured power W  452 506 407 445 485",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for_3",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_performance_data",
+          "section_title": "Performance data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Performance data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_preparation_times",
+          "section_title": "Preparation times",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Preparation times... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperature",
+          "section_title": "Temperature",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperature... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_various_data_2",
+          "section_title": "Various data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Various data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_4",
+          "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
+          "page_start": 21,
+          "page_end": 21,
+          "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:Unit/m",
+      "type": "Unit",
+      "name": "m",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_1_various_data",
+          "section_title": "Various data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Various data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_mains_voltage",
+          "section_title": "Mains voltage",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Mains voltage... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_the_milk_frother",
+          "section_title": "The milk frother",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: The milk frother... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_capacity",
+          "section_title": "Capacity",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Capacity... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_unit",
+          "section_title": "Unit",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Unit... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
+          "section_title": "Measured power W  452 506 407 445 485",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_intensity_of_current",
+          "section_title": "Intensity of current",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Intensity of current... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for_2",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
+          "section_title": "Measured power W  452 506 407 445 485",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_consumption_for_3",
+          "section_title": "Consumption for",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Consumption for... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_performance_data",
+          "section_title": "Performance data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Performance data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_preparation_times",
+          "section_title": "Preparation times",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Preparation times... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_temperature",
+          "section_title": "Temperature",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Temperature... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_1_various_data_2",
+          "section_title": "Various data",
+          "page_start": 17,
+          "page_end": 21,
+          "source_text": "Section: Various data... (p.17-21)"
+        },
+        {
+          "section_id": "sec_4_2_4",
+          "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
+          "page_start": 21,
+          "page_end": 21,
+          "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
+        }
+      ]
+    },
+    {
       "id": "ns:Unit/rpm",
       "type": "Unit",
       "name": "rpm",
@@ -9096,255 +9650,6 @@
           "page_start": 21,
           "page_end": 21,
           "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
-        }
-      ]
-    },
-    {
-      "id": "ns:PS/weight_without_water",
-      "type": "ParameterSpec",
-      "name": "Weight without water",
-      "nominal_value": 3.4,
-      "unit_raw": "kg",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_4_2_1_various_data",
-          "section_title": "Various data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Various data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage",
-          "section_title": "Mains voltage",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_the_milk_frother",
-          "section_title": "The milk frother",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: The milk frother... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_capacity",
-          "section_title": "Capacity",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Capacity... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_unit",
-          "section_title": "Unit",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Unit... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
-          "section_title": "Measured power W  452 506 407 445 485",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_intensity_of_current",
-          "section_title": "Intensity of current",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Intensity of current... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for_2",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
-          "section_title": "Measured power W  452 506 407 445 485",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for_3",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_performance_data",
-          "section_title": "Performance data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Performance data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_preparation_times",
-          "section_title": "Preparation times",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Preparation times... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_temperature",
-          "section_title": "Temperature",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Temperature... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_various_data_2",
-          "section_title": "Various data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Various data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_4",
-          "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
-          "page_start": 21,
-          "page_end": 21,
-          "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
-        }
-      ]
-    },
-    {
-      "id": "ns:Unit/kg",
-      "type": "Unit",
-      "name": "kg",
-      "confidence": 0.9,
-      "spans": [
-        {
-          "section_id": "sec_4_2_1_various_data",
-          "section_title": "Various data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Various data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_mains_voltage",
-          "section_title": "Mains voltage",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Mains voltage... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_the_milk_frother",
-          "section_title": "The milk frother",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: The milk frother... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_capacity",
-          "section_title": "Capacity",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Capacity... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_unit",
-          "section_title": "Unit",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Unit... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
-          "section_title": "Measured power W  452 506 407 445 485",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_intensity_of_current",
-          "section_title": "Intensity of current",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Intensity of current... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for_2",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
-          "section_title": "Measured power W  452 506 407 445 485",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_consumption_for_3",
-          "section_title": "Consumption for",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Consumption for... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_performance_data",
-          "section_title": "Performance data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Performance data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_preparation_times",
-          "section_title": "Preparation times",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Preparation times... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_temperature",
-          "section_title": "Temperature",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Temperature... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_1_various_data_2",
-          "section_title": "Various data",
-          "page_start": 17,
-          "page_end": 21,
-          "source_text": "Section: Various data... (p.17-21)"
-        },
-        {
-          "section_id": "sec_4_2_4",
-          "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
-          "page_start": 21,
-          "page_end": 21,
-          "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
-        },
-        {
-          "section_id": "sec_4_2_5",
-          "section_title": "4.2.5 Dimensions and weight ­ milk frother",
-          "page_start": 21,
-          "page_end": 21,
-          "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
         }
       ]
     },
@@ -9499,6 +9804,21 @@
       "id": "ns:Unit/mm",
       "type": "Unit",
       "name": "mm",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_4_2_5",
+          "section_title": "4.2.5 Dimensions and weight ­ milk frother",
+          "page_start": 21,
+          "page_end": 21,
+          "source_text": "Section: 4.2.5 Dimensions and weight ­ milk frother... (p.21-21)"
+        }
+      ]
+    },
+    {
+      "id": "ns:Unit/kg",
+      "type": "Unit",
+      "name": "kg",
       "confidence": 0.9,
       "spans": [
         {
@@ -9666,6 +9986,28 @@
     },
     {
       "type": "RepairAction",
+      "name": "replace compact brewing unit",
+      "id": "ns:RA/replace_compact_brewing_unit",
+      "confidence": 1,
+      "spans": [
+        {
+          "section_id": "sec_2",
+          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
+          "page_start": 2,
+          "page_end": 2,
+          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
+        },
+        {
+          "section_id": "sec_3",
+          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
+          "page_start": 3,
+          "page_end": 3,
+          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
+        }
+      ]
+    },
+    {
+      "type": "RepairAction",
       "name": "replace defective hoses and seals",
       "id": "ns:RA/replace_defective_hoses_and_seals",
       "confidence": 1,
@@ -9732,8 +10074,8 @@
     },
     {
       "type": "FailureMode",
-      "name": "milk frother damaged",
-      "id": "ns:FM/milk_frother_damaged",
+      "name": "milk frother is damaged",
+      "id": "ns:FM/milk_frother_is_damaged",
       "confidence": 1,
       "spans": [
         {
@@ -9776,8 +10118,8 @@
     },
     {
       "type": "FailureMode",
-      "name": "jug badly scratched",
-      "id": "ns:FM/jug_badly_scratched",
+      "name": "milk frother is not functioning",
+      "id": "ns:FM/milk_frother_is_not_functioning",
       "confidence": 1,
       "spans": [
         {
@@ -9819,28 +10161,6 @@
       ]
     },
     {
-      "type": "FailureMode",
-      "name": "whisks damaged",
-      "id": "ns:FM/whisks_damaged",
-      "confidence": 1,
-      "spans": [
-        {
-          "section_id": "sec_2",
-          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-          "page_start": 2,
-          "page_end": 2,
-          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-        },
-        {
-          "section_id": "sec_3",
-          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-          "page_start": 3,
-          "page_end": 3,
-          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-        }
-      ]
-    },
-    {
       "type": "RepairAction",
       "name": "replace whisks",
       "id": "ns:RA/replace_whisks",
@@ -9863,53 +10183,9 @@
       ]
     },
     {
-      "type": "FailureMode",
-      "name": "coffee machine not switch off automatically",
-      "id": "ns:FM/coffee_machine_not_switch_off_automatically",
-      "confidence": 1,
-      "spans": [
-        {
-          "section_id": "sec_2",
-          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-          "page_start": 2,
-          "page_end": 2,
-          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-        },
-        {
-          "section_id": "sec_3",
-          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-          "page_start": 3,
-          "page_end": 3,
-          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-        }
-      ]
-    },
-    {
-      "type": "RepairAction",
-      "name": "replace connector on platform",
-      "id": "ns:RA/replace_connector_on_platform",
-      "confidence": 1,
-      "spans": [
-        {
-          "section_id": "sec_2",
-          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-          "page_start": 2,
-          "page_end": 2,
-          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-        },
-        {
-          "section_id": "sec_3",
-          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-          "page_start": 3,
-          "page_end": 3,
-          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-        }
-      ]
-    },
-    {
-      "type": "RepairAction",
-      "name": "disassembly",
-      "id": "ns:RA/disassembly",
+      "type": "Tool",
+      "name": "special disassembly tool",
+      "id": "ns:Tool/special_disassembly_tool",
       "confidence": 1.0,
       "spans": [
         {
@@ -9929,9 +10205,9 @@
       ]
     },
     {
-      "type": "Tool",
-      "name": "disassembly tool",
-      "id": "ns:Tool/disassembly_tool",
+      "type": "FailureMode",
+      "name": "delicate snap connections",
+      "id": "ns:FM/delicate_snap_connections",
       "confidence": 1.0,
       "spans": [
         {
@@ -9996,6 +10272,138 @@
     }
   ],
   "relations": [
+    {
+      "type": "precedes",
+      "from_ref": "ns:Mode/heat_up_mode",
+      "to_ref": "ns:Mode/ready_mode",
+      "confidence": 1.0
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Mode/self_test_mode",
+      "to_ref": "ns:Mode/ready_mode",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:State/descaling_ready",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:State/descaling_pump_on",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:State/descaling_pump_off",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/brewing_mode",
+      "to_ref": "ns:State/emptying_evaporating",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/volume_brewing_mode",
+      "to_ref": "ns:State/emptying_evaporating",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/heat_up_mode",
+      "to_ref": "ns:State/power_save",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/heat_up_mode",
+      "to_ref": "ns:State/overheat",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/heat_up_mode",
+      "to_ref": "ns:State/power_save_activation",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/empty_water_system",
+      "to_ref": "ns:Mode/citiz_co",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/daily_maintenance_and_cleaning",
+      "to_ref": "ns:Mode/citiz_co",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/after_last_coffee_or_at_the_end_of_day",
+      "to_ref": "ns:Mode/citiz_co",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/descaling_procedure",
+      "to_ref": "ns:Mode/citiz_co",
+      "confidence": 0.9
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/empty_water_system",
+      "to_ref": "ns:State/coffee_machine_not_ready",
+      "confidence": 0.8
+    },
+    {
+      "type": "verifies",
+      "from_ref": "ns:State/risk_of_electrical_shock",
+      "to_ref": "ns:Step/after_last_coffee_or_at_the_end_of_day",
+      "confidence": 0.85
+    },
+    {
+      "type": "verifies",
+      "from_ref": "ns:State/risk_of_damage",
+      "to_ref": "ns:Step/descaling_procedure",
+      "confidence": 0.85
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/fill_water_tank_with_01l_decalcifier_and_05l_water",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 1.0
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 1.0
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/press_any_button_to_start_pump",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 1.0
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/rinse_and_clean_water_tank_thoroughly",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 1.0
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/eject_capsules_or_check_if_capsules_are_removed",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 1.0
+    },
     {
       "type": "hasPart",
       "from_ref": "ns:Product/citiz",
@@ -10066,12 +10474,18 @@
       "type": "hasUnit",
       "from_ref": "ns:PS/milk_level",
       "to_ref": "ns:Unit/l",
-      "confidence": 0.85
+      "confidence": 0.88
     },
     {
       "type": "hasSpec",
-      "from_ref": "ns:Product/turmix_tx_270",
+      "from_ref": "ns:Product/citiz_milk",
       "to_ref": "ns:PS/mains_voltage",
+      "confidence": 0.9
+    },
+    {
+      "type": "hasSpec",
+      "from_ref": "ns:Product/citiz_milk",
+      "to_ref": "ns:PS/power_rating",
       "confidence": 0.9
     },
     {
@@ -10081,12 +10495,6 @@
       "confidence": 0.88
     },
     {
-      "type": "hasSpec",
-      "from_ref": "ns:Product/turmix_tx_270",
-      "to_ref": "ns:PS/power_rating",
-      "confidence": 0.9
-    },
-    {
       "type": "hasUnit",
       "from_ref": "ns:PS/power_rating",
       "to_ref": "ns:Unit/w",
@@ -10094,13 +10502,19 @@
     },
     {
       "type": "hasPart",
-      "from_ref": "ns:Product/turmix_tx_270",
-      "to_ref": "ns:Product/turmix_tx_370",
-      "confidence": 0.85
+      "from_ref": "ns:Product/citiz_milk",
+      "to_ref": "ns:ComponentType/thermoblock",
+      "confidence": 0.9
+    },
+    {
+      "type": "hasPart",
+      "from_ref": "ns:Product/citiz_milk",
+      "to_ref": "ns:ComponentType/pump",
+      "confidence": 0.9
     },
     {
       "type": "hasSpec",
-      "from_ref": "ns:Product/milk_frother",
+      "from_ref": "ns:Product/coffee_machine",
       "to_ref": "ns:PS/noise_during_brewing_cycle",
       "confidence": 0.9
     },
@@ -10112,7 +10526,7 @@
     },
     {
       "type": "hasSpec",
-      "from_ref": "ns:Product/milk_frother",
+      "from_ref": "ns:Product/coffee_machine",
       "to_ref": "ns:PS/preheating_time",
       "confidence": 0.9
     },
@@ -10124,7 +10538,7 @@
     },
     {
       "type": "hasSpec",
-      "from_ref": "ns:Product/milk_frother",
+      "from_ref": "ns:Product/coffee_machine",
       "to_ref": "ns:PS/cable_length",
       "confidence": 0.9
     },
@@ -10136,7 +10550,7 @@
     },
     {
       "type": "hasSpec",
-      "from_ref": "ns:Product/milk_frother",
+      "from_ref": "ns:Product/coffee_machine",
       "to_ref": "ns:PS/mains_voltage_europe",
       "confidence": 0.9
     },
@@ -10148,31 +10562,31 @@
     },
     {
       "type": "hasSpec",
-      "from_ref": "ns:Product/milk_frother",
-      "to_ref": "ns:PS/power_rating_220_240_v",
+      "from_ref": "ns:Product/coffee_machine",
+      "to_ref": "ns:PS/power_rating_europe",
       "confidence": 0.9
     },
     {
       "type": "hasUnit",
-      "from_ref": "ns:PS/power_rating_220_240_v",
+      "from_ref": "ns:PS/power_rating_europe",
       "to_ref": "ns:Unit/w",
       "confidence": 0.88
     },
     {
       "type": "hasSpec",
-      "from_ref": "ns:Product/milk_frother",
-      "to_ref": "ns:PS/hot_milk_capacity",
+      "from_ref": "ns:Product/coffee_machine",
+      "to_ref": "ns:PS/capacity_hot_milk",
       "confidence": 0.9
     },
     {
       "type": "hasUnit",
-      "from_ref": "ns:PS/hot_milk_capacity",
+      "from_ref": "ns:PS/capacity_hot_milk",
       "to_ref": "ns:Unit/ml",
       "confidence": 0.88
     },
     {
       "type": "hasSpec",
-      "from_ref": "ns:Product/milk_frother",
+      "from_ref": "ns:Product/coffee_machine",
       "to_ref": "ns:PS/whisk_speed",
       "confidence": 0.9
     },
@@ -10184,14 +10598,14 @@
     },
     {
       "type": "hasSpec",
-      "from_ref": "ns:Product/milk_frother",
-      "to_ref": "ns:PS/weight_without_water",
+      "from_ref": "ns:Product/coffee_machine",
+      "to_ref": "ns:PS/temperature_hot_milk",
       "confidence": 0.9
     },
     {
       "type": "hasUnit",
-      "from_ref": "ns:PS/weight_without_water",
-      "to_ref": "ns:Unit/kg",
+      "from_ref": "ns:PS/temperature_hot_milk",
+      "to_ref": "ns:Unit/c",
       "confidence": 0.88
     },
     {
@@ -10234,41 +10648,137 @@
       "type": "hasUnit",
       "from_ref": "ns:PS/diameter",
       "to_ref": "ns:Unit/mm",
-      "confidence": 0.9
+      "confidence": 0.88
     },
     {
       "type": "hasUnit",
       "from_ref": "ns:PS/height",
       "to_ref": "ns:Unit/mm",
-      "confidence": 0.9
+      "confidence": 0.88
     },
     {
       "type": "hasUnit",
       "from_ref": "ns:PS/whisk_diameter",
       "to_ref": "ns:Unit/mm",
-      "confidence": 0.9
+      "confidence": 0.88
     },
     {
       "type": "hasUnit",
       "from_ref": "ns:PS/whisk_height",
       "to_ref": "ns:Unit/mm",
-      "confidence": 0.9
+      "confidence": 0.88
     },
     {
       "type": "hasUnit",
       "from_ref": "ns:PS/mixer_dimensions",
       "to_ref": "ns:Unit/mm",
-      "confidence": 0.9
+      "confidence": 0.88
     },
     {
       "type": "hasUnit",
       "from_ref": "ns:PS/weight",
       "to_ref": "ns:Unit/kg",
-      "confidence": 0.9
+      "confidence": 0.88
+    },
+    {
+      "type": "requiresTool",
+      "from_ref": "ns:FM/delicate_snap_connections",
+      "to_ref": "ns:Tool/special_disassembly_tool",
+      "confidence": 1.0
     }
   ],
   "validation": {
     "issues": [
+      {
+        "severity": "error",
+        "code": "domain_range",
+        "message": "precedes range violation: State not in ['MachineMode', 'ProcessStep']",
+        "details": {
+          "relation": {
+            "type": "precedes",
+            "from_ref": "ns:Step/empty_water_system",
+            "to_ref": "ns:State/coffee_machine_not_ready",
+            "confidence": 0.8
+          },
+          "to_entity": {
+            "type": "State",
+            "name": "Coffee machine not ready",
+            "id": "ns:State/coffee_machine_not_ready",
+            "spans": [
+              {
+                "section_id": "sec_procedure_p7",
+                "section_title": "Citiz service manual  37 OPERATION",
+                "page_start": 7,
+                "page_end": 7,
+                "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+              },
+              {
+                "section_id": "sec_procedure_p8",
+                "section_title": "Citiz service manual  38 MAINTENANCE",
+                "page_start": 8,
+                "page_end": 8,
+                "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+              },
+              {
+                "section_id": "sec_procedure_p9",
+                "section_title": "Citiz service manual  39 MAINTENANCE",
+                "page_start": 9,
+                "page_end": 9,
+                "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+              },
+              {
+                "section_id": "sec_procedure_p10",
+                "section_title": "Citiz service manual  40 MAINTENANCE",
+                "page_start": 10,
+                "page_end": 10,
+                "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+              },
+              {
+                "section_id": "sec_generic_p11",
+                "section_title": "Operational content (page 11)",
+                "page_start": 11,
+                "page_end": 11,
+                "source_text": "Section: Operational content (page 11)... (p.11-11)"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "severity": "error",
+        "code": "domain_range",
+        "message": "requiresTool domain violation: FailureMode not in ['RepairAction']",
+        "details": {
+          "relation": {
+            "type": "requiresTool",
+            "from_ref": "ns:FM/delicate_snap_connections",
+            "to_ref": "ns:Tool/special_disassembly_tool",
+            "confidence": 1.0
+          },
+          "from_entity": {
+            "type": "FailureMode",
+            "name": "delicate snap connections",
+            "id": "ns:FM/delicate_snap_connections",
+            "confidence": 1.0,
+            "spans": [
+              {
+                "section_id": "sec_4",
+                "section_title": "Citiz service manual  52 REPAIRS",
+                "page_start": 4,
+                "page_end": 4,
+                "source_text": "Section: Citiz service manual  52 REPAIRS... (p.4-4)"
+              },
+              {
+                "section_id": "sec_5",
+                "section_title": "Citiz service manual  53 REPAIRS",
+                "page_start": 5,
+                "page_end": 5,
+                "source_text": "Section: Citiz service manual  53 REPAIRS... (p.5-5)"
+              }
+            ]
+          }
+        }
+      },
       {
         "severity": "warn",
         "code": "units_required_if_numeric",
@@ -10516,12 +11026,12 @@
       {
         "severity": "warn",
         "code": "units_required_if_numeric",
-        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/heating_energy_consumption_for_small_cup",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/heating_energy_consumption_small_cup",
         "details": {
           "entity": {
-            "id": "ns:PS/heating_energy_consumption_for_small_cup",
+            "id": "ns:PS/heating_energy_consumption_small_cup",
             "type": "ParameterSpec",
-            "name": "Heating energy consumption for small cup",
+            "name": "Heating energy consumption (small cup)",
             "nominal_value": 4.3,
             "unit_raw": "Wh",
             "confidence": 0.9,
@@ -10582,12 +11092,12 @@
       {
         "severity": "warn",
         "code": "units_required_if_numeric",
-        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/heating_energy_consumption_for_large_cup",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/heating_energy_consumption_large_cup",
         "details": {
           "entity": {
-            "id": "ns:PS/heating_energy_consumption_for_large_cup",
+            "id": "ns:PS/heating_energy_consumption_large_cup",
             "type": "ParameterSpec",
-            "name": "Heating energy consumption for large cup",
+            "name": "Heating energy consumption (large cup)",
             "nominal_value": 8.7,
             "unit_raw": "Wh",
             "confidence": 0.9,
@@ -10648,12 +11158,12 @@
       {
         "severity": "warn",
         "code": "units_required_if_numeric",
-        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/standby_operation_energy_consumption",
+        "message": "ParameterSpec with numeric value missing hasUnit: ns:PS/standby_energy_consumption",
         "details": {
           "entity": {
-            "id": "ns:PS/standby_operation_energy_consumption",
+            "id": "ns:PS/standby_energy_consumption",
             "type": "ParameterSpec",
-            "name": "Standby operation energy consumption",
+            "name": "Standby energy consumption",
             "nominal_value": 0.7,
             "unit_raw": "Wh",
             "confidence": 0.9,
@@ -10719,7 +11229,7 @@
           "entity": {
             "id": "ns:PS/max_permissible_pump_pressure",
             "type": "ParameterSpec",
-            "name": "Max permissible pump pressure",
+            "name": "Max. permissible pump pressure",
             "nominal_value": 17.5,
             "unit_raw": "bar",
             "confidence": 0.9,
@@ -11307,33 +11817,38 @@
       }
     ],
     "counters": {
-      "error": 0,
+      "error": 2,
       "warn": 14,
       "info": 0
     }
   },
   "quality": {
-    "entities_count": 152,
-    "relations_count": 45,
+    "entities_count": 151,
+    "relations_count": 69,
     "entity_type_distribution": {
-      "MachineMode": 13,
-      "State": 9,
-      "ProcessStep": 26,
-      "Product": 5,
-      "ComponentType": 31,
+      "MachineMode": 15,
+      "State": 12,
+      "ProcessStep": 23,
+      "Product": 4,
+      "ComponentType": 30,
       "ParameterSpec": 31,
       "Unit": 15,
-      "FailureMode": 11,
-      "RepairAction": 10,
+      "RatingPlate": 1,
+      "FailureMode": 10,
+      "RepairAction": 9,
       "Tool": 1
     },
     "relation_type_distribution": {
-      "hasPart": 11,
+      "precedes": 7,
+      "appliesDuring": 13,
+      "verifies": 2,
+      "hasPart": 12,
       "hasSpec": 17,
-      "hasUnit": 17
+      "hasUnit": 17,
+      "requiresTool": 1
     },
-    "avg_entity_confidence": 0.946,
-    "avg_relation_confidence": 0.892,
+    "avg_entity_confidence": 0.944,
+    "avg_relation_confidence": 0.915,
     "duplicates_collapsed": {
       "entities": 0,
       "relations": 0
@@ -11344,16 +11859,26 @@
     "cycles_found": 0,
     "coverage_metrics": {
       "product_component_hasSpec": {
-        "total_entities": 5,
+        "total_entities": 4,
         "with_relation": 2,
-        "coverage_ratio": 0.4
+        "coverage_ratio": 0.5
       },
       "parameter_spec_hasUnit": {
         "total_entities": 31,
         "with_relation": 17,
         "coverage_ratio": 0.548
+      },
+      "testcase_validatedBy": {
+        "total_entities": 0,
+        "with_relation": 0,
+        "coverage_ratio": 0.0
+      },
+      "testcase_constrainedBy": {
+        "total_entities": 0,
+        "with_relation": 0,
+        "coverage_ratio": 0.0
       }
     },
-    "generated_at": "2025-11-04T13:50:47.328090Z"
+    "generated_at": "2025-11-05T10:45:16.810332Z"
   }
 }

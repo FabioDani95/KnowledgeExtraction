@@ -235,37 +235,37 @@
         "type": "hasUnit",
         "from_ref": "PS_01",
         "to_ref": "UN_01",
-        "confidence": 0.9
+        "confidence": 0.88
       },
       {
         "type": "hasUnit",
         "from_ref": "PS_02",
         "to_ref": "UN_01",
-        "confidence": 0.9
+        "confidence": 0.88
       },
       {
         "type": "hasUnit",
         "from_ref": "PS_03",
         "to_ref": "UN_01",
-        "confidence": 0.9
+        "confidence": 0.88
       },
       {
         "type": "hasUnit",
         "from_ref": "PS_04",
         "to_ref": "UN_01",
-        "confidence": 0.9
+        "confidence": 0.88
       },
       {
         "type": "hasUnit",
         "from_ref": "PS_05",
         "to_ref": "UN_01",
-        "confidence": 0.9
+        "confidence": 0.88
       },
       {
         "type": "hasUnit",
         "from_ref": "PS_06",
         "to_ref": "UN_02",
-        "confidence": 0.9
+        "confidence": 0.88
       }
     ]
   },
@@ -280,5 +280,5 @@
       "char_end": 19903
     }
   ],
-  "timestamp": "2025-11-04T13:47:54.585051+00:00"
+  "timestamp": "2025-11-05T10:33:45.711796+00:00"
 }

@@ -25,7 +25,15 @@
     "MachineMode",
     "TestSpec",
     "RatingPlate",
-    "Document"
+    "Document",
+    "TestCase",
+    "SafetyNotice",
+    "Measurement",
+    "AcceptanceCriterion",
+    "Equipment",
+    "ApplicabilityClause",
+    "NormativeReference",
+    "CrossReference"
   ],
   "allowed_relations": [
     "hasPart",
@@ -41,7 +49,12 @@
     "appliesDuring",
     "verifies",
     "hasRatingPlate",
-    "connectedTo"
+    "connectedTo",
+    "requires",
+    "validatedBy",
+    "appliesTo",
+    "constrainedBy",
+    "refersTo"
   ],
   "entities": [
     {

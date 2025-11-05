@@ -1,0 +1,1822 @@
+{
+  "document_code": "KG_TESTING",
+  "ingestion_id": "7ba143e7-9fae-4a69-b42c-753219fb831f",
+  "extraction_version": "neural_v1.2",
+  "datasource_code": "NEURAL_EXTRACTION",
+  "extractor": {
+    "model": "gpt-4o-mini",
+    "prompt_id": "neural_extraction_v1_hardened",
+    "temperature": 0.15,
+    "max_tokens": 1500
+  },
+  "allowed_types": [
+    "TestCase",
+    "SafetyNotice",
+    "Measurement",
+    "AcceptanceCriterion",
+    "Equipment",
+    "ApplicabilityClause",
+    "NormativeReference",
+    "CrossReference"
+  ],
+  "allowed_relations": [
+    "requires",
+    "validatedBy",
+    "appliesTo",
+    "constrainedBy",
+    "refersTo"
+  ],
+  "entities": [
+    {
+      "type": "Equipment",
+      "name": "pressure gauge adapter",
+      "id": "ns:Equipment/pressure_gauge_adapter",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_001",
+          "section_title": "Section 1",
+          "page_start": 2,
+          "page_end": 2,
+          "source_text": "Section: Section 1... (p.2-2)"
+        },
+        {
+          "section_id": "sec_002",
+          "section_title": "9.2.2 Citiz pressure gauge adapter",
+          "page_start": 2,
+          "page_end": 3,
+          "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+        },
+        {
+          "section_id": "sec_003",
+          "section_title": "9.3 Measure flow rate",
+          "page_start": 3,
+          "page_end": 4,
+          "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+        },
+        {
+          "section_id": "sec_004",
+          "section_title": "9.4 Pressure and leakage checks",
+          "page_start": 4,
+          "page_end": 5,
+          "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+        },
+        {
+          "section_id": "sec_005",
+          "section_title": "9.4.1 Preparations",
+          "page_start": 5,
+          "page_end": 6,
+          "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+        },
+        {
+          "section_id": "sec_006",
+          "section_title": "9.4.2 Test run 9) Connect mains cable.",
+          "page_start": 6,
+          "page_end": 7,
+          "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+        }
+      ]
+    },
+    {
+      "type": "Equipment",
+      "name": "connecting unit",
+      "id": "ns:Equipment/connecting_unit",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_001",
+          "section_title": "Section 1",
+          "page_start": 2,
+          "page_end": 2,
+          "source_text": "Section: Section 1... (p.2-2)"
+        },
+        {
+          "section_id": "sec_002",
+          "section_title": "9.2.2 Citiz pressure gauge adapter",
+          "page_start": 2,
+          "page_end": 3,
+          "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+        },
+        {
+          "section_id": "sec_003",
+          "section_title": "9.3 Measure flow rate",
+          "page_start": 3,
+          "page_end": 4,
+          "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+        },
+        {
+          "section_id": "sec_004",
+          "section_title": "9.4 Pressure and leakage checks",
+          "page_start": 4,
+          "page_end": 5,
+          "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+        },
+        {
+          "section_id": "sec_005",
+          "section_title": "9.4.1 Preparations",
+          "page_start": 5,
+          "page_end": 6,
+          "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+        },
+        {
+          "section_id": "sec_006",
+          "section_title": "9.4.2 Test run 9) Connect mains cable.",
+          "page_start": 6,
+          "page_end": 7,
+          "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+        }
+      ]
+    },
+    {
+      "type": "Equipment",
+      "name": "fixation unit",
+      "id": "ns:Equipment/fixation_unit",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_001",
+          "section_title": "Section 1",
+          "page_start": 2,
+          "page_end": 2,
+          "source_text": "Section: Section 1... (p.2-2)"
+        },
+        {
+          "section_id": "sec_002",
+          "section_title": "9.2.2 Citiz pressure gauge adapter",
+          "page_start": 2,
+          "page_end": 3,
+          "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+        },
+        {
+          "section_id": "sec_003",
+          "section_title": "9.3 Measure flow rate",
+          "page_start": 3,
+          "page_end": 4,
+          "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+        },
+        {
+          "section_id": "sec_004",
+          "section_title": "9.4 Pressure and leakage checks",
+          "page_start": 4,
+          "page_end": 5,
+          "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+        },
+        {
+          "section_id": "sec_005",
+          "section_title": "9.4.1 Preparations",
+          "page_start": 5,
+          "page_end": 6,
+          "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+        },
+        {
+          "section_id": "sec_006",
+          "section_title": "9.4.2 Test run 9) Connect mains cable.",
+          "page_start": 6,
+          "page_end": 7,
+          "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+        }
+      ]
+    },
+    {
+      "type": "Measurement",
+      "name": "pressure",
+      "id": "ns:Measurement/pressure",
+      "confidence": 1.0,
+      "nominal_value": 12,
+      "unit_raw": "bar",
+      "spans": [
+        {
+          "section_id": "sec_001",
+          "section_title": "Section 1",
+          "page_start": 2,
+          "page_end": 2,
+          "source_text": "Section: Section 1... (p.2-2)"
+        },
+        {
+          "section_id": "sec_002",
+          "section_title": "9.2.2 Citiz pressure gauge adapter",
+          "page_start": 2,
+          "page_end": 3,
+          "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+        },
+        {
+          "section_id": "sec_003",
+          "section_title": "9.3 Measure flow rate",
+          "page_start": 3,
+          "page_end": 4,
+          "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+        },
+        {
+          "section_id": "sec_004",
+          "section_title": "9.4 Pressure and leakage checks",
+          "page_start": 4,
+          "page_end": 5,
+          "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+        },
+        {
+          "section_id": "sec_005",
+          "section_title": "9.4.1 Preparations",
+          "page_start": 5,
+          "page_end": 6,
+          "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+        },
+        {
+          "section_id": "sec_006",
+          "section_title": "9.4.2 Test run 9) Connect mains cable.",
+          "page_start": 6,
+          "page_end": 7,
+          "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+        }
+      ]
+    },
+    {
+      "type": "Measurement",
+      "name": "water volume",
+      "id": "ns:Measurement/water_volume",
+      "confidence": 1.0,
+      "min_value": 60,
+      "max_value": 120,
+      "unit_raw": "ml",
+      "spans": [
+        {
+          "section_id": "sec_001",
+          "section_title": "Section 1",
+          "page_start": 2,
+          "page_end": 2,
+          "source_text": "Section: Section 1... (p.2-2)"
+        },
+        {
+          "section_id": "sec_002",
+          "section_title": "9.2.2 Citiz pressure gauge adapter",
+          "page_start": 2,
+          "page_end": 3,
+          "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+        },
+        {
+          "section_id": "sec_003",
+          "section_title": "9.3 Measure flow rate",
+          "page_start": 3,
+          "page_end": 4,
+          "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+        },
+        {
+          "section_id": "sec_004",
+          "section_title": "9.4 Pressure and leakage checks",
+          "page_start": 4,
+          "page_end": 5,
+          "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+        },
+        {
+          "section_id": "sec_005",
+          "section_title": "9.4.1 Preparations",
+          "page_start": 5,
+          "page_end": 6,
+          "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+        },
+        {
+          "section_id": "sec_006",
+          "section_title": "9.4.2 Test run 9) Connect mains cable.",
+          "page_start": 6,
+          "page_end": 7,
+          "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+        }
+      ]
+    },
+    {
+      "type": "SafetyNotice",
+      "name": "Dangerous mains voltage",
+      "id": "ns:SafetyNotice/dangerous_mains_voltage",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_001",
+          "section_title": "Section 1",
+          "page_start": 2,
+          "page_end": 2,
+          "source_text": "Section: Section 1... (p.2-2)"
+        },
+        {
+          "section_id": "sec_002",
+          "section_title": "9.2.2 Citiz pressure gauge adapter",
+          "page_start": 2,
+          "page_end": 3,
+          "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+        },
+        {
+          "section_id": "sec_003",
+          "section_title": "9.3 Measure flow rate",
+          "page_start": 3,
+          "page_end": 4,
+          "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+        },
+        {
+          "section_id": "sec_004",
+          "section_title": "9.4 Pressure and leakage checks",
+          "page_start": 4,
+          "page_end": 5,
+          "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+        },
+        {
+          "section_id": "sec_005",
+          "section_title": "9.4.1 Preparations",
+          "page_start": 5,
+          "page_end": 6,
+          "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+        },
+        {
+          "section_id": "sec_006",
+          "section_title": "9.4.2 Test run 9) Connect mains cable.",
+          "page_start": 6,
+          "page_end": 7,
+          "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+        }
+      ]
+    },
+    {
+      "type": "SafetyNotice",
+      "name": "Dangerous hot parts",
+      "id": "ns:SafetyNotice/dangerous_hot_parts",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_001",
+          "section_title": "Section 1",
+          "page_start": 2,
+          "page_end": 2,
+          "source_text": "Section: Section 1... (p.2-2)"
+        },
+        {
+          "section_id": "sec_002",
+          "section_title": "9.2.2 Citiz pressure gauge adapter",
+          "page_start": 2,
+          "page_end": 3,
+          "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+        },
+        {
+          "section_id": "sec_003",
+          "section_title": "9.3 Measure flow rate",
+          "page_start": 3,
+          "page_end": 4,
+          "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+        },
+        {
+          "section_id": "sec_004",
+          "section_title": "9.4 Pressure and leakage checks",
+          "page_start": 4,
+          "page_end": 5,
+          "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+        },
+        {
+          "section_id": "sec_005",
+          "section_title": "9.4.1 Preparations",
+          "page_start": 5,
+          "page_end": 6,
+          "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+        },
+        {
+          "section_id": "sec_006",
+          "section_title": "9.4.2 Test run 9) Connect mains cable.",
+          "page_start": 6,
+          "page_end": 7,
+          "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+        }
+      ]
+    },
+    {
+      "type": "AcceptanceCriterion",
+      "name": "pressure stability",
+      "id": "ns:AcceptanceCriterion/pressure_stability",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_001",
+          "section_title": "Section 1",
+          "page_start": 2,
+          "page_end": 2,
+          "source_text": "Section: Section 1... (p.2-2)"
+        },
+        {
+          "section_id": "sec_002",
+          "section_title": "9.2.2 Citiz pressure gauge adapter",
+          "page_start": 2,
+          "page_end": 3,
+          "source_text": "Section: 9.2.2 Citiz pressure gauge adapter... (p.2-3)"
+        },
+        {
+          "section_id": "sec_003",
+          "section_title": "9.3 Measure flow rate",
+          "page_start": 3,
+          "page_end": 4,
+          "source_text": "Section: 9.3 Measure flow rate... (p.3-4)"
+        },
+        {
+          "section_id": "sec_004",
+          "section_title": "9.4 Pressure and leakage checks",
+          "page_start": 4,
+          "page_end": 5,
+          "source_text": "Section: 9.4 Pressure and leakage checks... (p.4-5)"
+        },
+        {
+          "section_id": "sec_005",
+          "section_title": "9.4.1 Preparations",
+          "page_start": 5,
+          "page_end": 6,
+          "source_text": "Section: 9.4.1 Preparations... (p.5-6)"
+        },
+        {
+          "section_id": "sec_006",
+          "section_title": "9.4.2 Test run 9) Connect mains cable.",
+          "page_start": 6,
+          "page_end": 7,
+          "source_text": "Section: 9.4.2 Test run 9) Connect mains cable.... (p.6-7)"
+        }
+      ]
+    },
+    {
+      "type": "TestCase",
+      "name": "Coffee Temperature Measurement",
+      "id": "ns:TestCase/coffee_temperature_measurement",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+          "page_start": 7,
+          "page_end": 8,
+          "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+        },
+        {
+          "section_id": "sec_008",
+          "section_title": "20 ml of coffee.",
+          "page_start": 8,
+          "page_end": 9,
+          "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+        },
+        {
+          "section_id": "sec_010",
+          "section_title": "Prerequisite",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Prerequisite... (p.9-9)"
+        },
+        {
+          "section_id": "sec_011",
+          "section_title": "9.6.1 Measure hot milk temperature",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+        },
+        {
+          "section_id": "sec_012",
+          "section_title": "9.6.2 Measure milk froth ratio",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+        },
+        {
+          "section_id": "sec_013",
+          "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+          "page_start": 9,
+          "page_end": 10,
+          "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+        },
+        {
+          "section_id": "sec_014",
+          "section_title": "9.7 NTC temperature sensor functionality",
+          "page_start": 10,
+          "page_end": 11,
+          "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+        },
+        {
+          "section_id": "sec_015",
+          "section_title": "Measurement table",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Measurement table... (p.11-11)"
+        },
+        {
+          "section_id": "sec_020",
+          "section_title": "35  95  60.90  65.86",
+          "page_start": 11,
+          "page_end": 12,
+          "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+        },
+        {
+          "section_id": "sec_022",
+          "section_title": "9.8.1 What coffee machine has to be tested and when?",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+        },
+        {
+          "section_id": "sec_023",
+          "section_title": "9.8.2 General",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.2 General... (p.12-12)"
+        }
+      ]
+    },
+    {
+      "type": "Measurement",
+      "name": "Coffee Temperature",
+      "id": "ns:Measurement/coffee_temperature",
+      "confidence": 0.9,
+      "nominal_value": 86,
+      "tolerance": 3,
+      "unit_raw": "°C",
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+          "page_start": 7,
+          "page_end": 8,
+          "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+        },
+        {
+          "section_id": "sec_008",
+          "section_title": "20 ml of coffee.",
+          "page_start": 8,
+          "page_end": 9,
+          "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+        },
+        {
+          "section_id": "sec_010",
+          "section_title": "Prerequisite",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Prerequisite... (p.9-9)"
+        },
+        {
+          "section_id": "sec_011",
+          "section_title": "9.6.1 Measure hot milk temperature",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+        },
+        {
+          "section_id": "sec_012",
+          "section_title": "9.6.2 Measure milk froth ratio",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+        },
+        {
+          "section_id": "sec_013",
+          "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+          "page_start": 9,
+          "page_end": 10,
+          "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+        },
+        {
+          "section_id": "sec_014",
+          "section_title": "9.7 NTC temperature sensor functionality",
+          "page_start": 10,
+          "page_end": 11,
+          "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+        },
+        {
+          "section_id": "sec_015",
+          "section_title": "Measurement table",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Measurement table... (p.11-11)"
+        },
+        {
+          "section_id": "sec_020",
+          "section_title": "35  95  60.90  65.86",
+          "page_start": 11,
+          "page_end": 12,
+          "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+        },
+        {
+          "section_id": "sec_022",
+          "section_title": "9.8.1 What coffee machine has to be tested and when?",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+        },
+        {
+          "section_id": "sec_023",
+          "section_title": "9.8.2 General",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.2 General... (p.12-12)"
+        }
+      ]
+    },
+    {
+      "type": "Measurement",
+      "name": "Milk Temperature",
+      "id": "ns:Measurement/milk_temperature",
+      "confidence": 0.9,
+      "min_value": 60,
+      "max_value": 70,
+      "unit_raw": "°C",
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+          "page_start": 7,
+          "page_end": 8,
+          "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+        },
+        {
+          "section_id": "sec_008",
+          "section_title": "20 ml of coffee.",
+          "page_start": 8,
+          "page_end": 9,
+          "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+        },
+        {
+          "section_id": "sec_010",
+          "section_title": "Prerequisite",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Prerequisite... (p.9-9)"
+        },
+        {
+          "section_id": "sec_011",
+          "section_title": "9.6.1 Measure hot milk temperature",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+        },
+        {
+          "section_id": "sec_012",
+          "section_title": "9.6.2 Measure milk froth ratio",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+        },
+        {
+          "section_id": "sec_013",
+          "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+          "page_start": 9,
+          "page_end": 10,
+          "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+        },
+        {
+          "section_id": "sec_014",
+          "section_title": "9.7 NTC temperature sensor functionality",
+          "page_start": 10,
+          "page_end": 11,
+          "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+        },
+        {
+          "section_id": "sec_015",
+          "section_title": "Measurement table",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Measurement table... (p.11-11)"
+        },
+        {
+          "section_id": "sec_020",
+          "section_title": "35  95  60.90  65.86",
+          "page_start": 11,
+          "page_end": 12,
+          "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+        },
+        {
+          "section_id": "sec_022",
+          "section_title": "9.8.1 What coffee machine has to be tested and when?",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+        },
+        {
+          "section_id": "sec_023",
+          "section_title": "9.8.2 General",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.2 General... (p.12-12)"
+        }
+      ]
+    },
+    {
+      "type": "SafetyNotice",
+      "name": "NTC Temperature Sensor Handling",
+      "id": "ns:SafetyNotice/ntc_temperature_sensor_handling",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+          "page_start": 7,
+          "page_end": 8,
+          "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+        },
+        {
+          "section_id": "sec_008",
+          "section_title": "20 ml of coffee.",
+          "page_start": 8,
+          "page_end": 9,
+          "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+        },
+        {
+          "section_id": "sec_010",
+          "section_title": "Prerequisite",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Prerequisite... (p.9-9)"
+        },
+        {
+          "section_id": "sec_011",
+          "section_title": "9.6.1 Measure hot milk temperature",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+        },
+        {
+          "section_id": "sec_012",
+          "section_title": "9.6.2 Measure milk froth ratio",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+        },
+        {
+          "section_id": "sec_013",
+          "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+          "page_start": 9,
+          "page_end": 10,
+          "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+        },
+        {
+          "section_id": "sec_014",
+          "section_title": "9.7 NTC temperature sensor functionality",
+          "page_start": 10,
+          "page_end": 11,
+          "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+        },
+        {
+          "section_id": "sec_015",
+          "section_title": "Measurement table",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Measurement table... (p.11-11)"
+        },
+        {
+          "section_id": "sec_020",
+          "section_title": "35  95  60.90  65.86",
+          "page_start": 11,
+          "page_end": 12,
+          "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+        },
+        {
+          "section_id": "sec_022",
+          "section_title": "9.8.1 What coffee machine has to be tested and when?",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+        },
+        {
+          "section_id": "sec_023",
+          "section_title": "9.8.2 General",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.2 General... (p.12-12)"
+        }
+      ]
+    },
+    {
+      "type": "AcceptanceCriterion",
+      "name": "NTC Sensor Resistance Range",
+      "id": "ns:AcceptanceCriterion/ntc_sensor_resistance_range",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+          "page_start": 7,
+          "page_end": 8,
+          "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+        },
+        {
+          "section_id": "sec_008",
+          "section_title": "20 ml of coffee.",
+          "page_start": 8,
+          "page_end": 9,
+          "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+        },
+        {
+          "section_id": "sec_010",
+          "section_title": "Prerequisite",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Prerequisite... (p.9-9)"
+        },
+        {
+          "section_id": "sec_011",
+          "section_title": "9.6.1 Measure hot milk temperature",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+        },
+        {
+          "section_id": "sec_012",
+          "section_title": "9.6.2 Measure milk froth ratio",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+        },
+        {
+          "section_id": "sec_013",
+          "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+          "page_start": 9,
+          "page_end": 10,
+          "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+        },
+        {
+          "section_id": "sec_014",
+          "section_title": "9.7 NTC temperature sensor functionality",
+          "page_start": 10,
+          "page_end": 11,
+          "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+        },
+        {
+          "section_id": "sec_015",
+          "section_title": "Measurement table",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Measurement table... (p.11-11)"
+        },
+        {
+          "section_id": "sec_020",
+          "section_title": "35  95  60.90  65.86",
+          "page_start": 11,
+          "page_end": 12,
+          "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+        },
+        {
+          "section_id": "sec_022",
+          "section_title": "9.8.1 What coffee machine has to be tested and when?",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+        },
+        {
+          "section_id": "sec_023",
+          "section_title": "9.8.2 General",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.2 General... (p.12-12)"
+        }
+      ]
+    },
+    {
+      "type": "Equipment",
+      "name": "Coffee Machine",
+      "id": "ns:Equipment/coffee_machine",
+      "confidence": 0.9,
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+          "page_start": 7,
+          "page_end": 8,
+          "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+        },
+        {
+          "section_id": "sec_008",
+          "section_title": "20 ml of coffee.",
+          "page_start": 8,
+          "page_end": 9,
+          "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+        },
+        {
+          "section_id": "sec_010",
+          "section_title": "Prerequisite",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Prerequisite... (p.9-9)"
+        },
+        {
+          "section_id": "sec_011",
+          "section_title": "9.6.1 Measure hot milk temperature",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+        },
+        {
+          "section_id": "sec_012",
+          "section_title": "9.6.2 Measure milk froth ratio",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+        },
+        {
+          "section_id": "sec_013",
+          "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+          "page_start": 9,
+          "page_end": 10,
+          "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+        },
+        {
+          "section_id": "sec_014",
+          "section_title": "9.7 NTC temperature sensor functionality",
+          "page_start": 10,
+          "page_end": 11,
+          "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+        },
+        {
+          "section_id": "sec_015",
+          "section_title": "Measurement table",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Measurement table... (p.11-11)"
+        },
+        {
+          "section_id": "sec_020",
+          "section_title": "35  95  60.90  65.86",
+          "page_start": 11,
+          "page_end": 12,
+          "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+        },
+        {
+          "section_id": "sec_022",
+          "section_title": "9.8.1 What coffee machine has to be tested and when?",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+        },
+        {
+          "section_id": "sec_023",
+          "section_title": "9.8.2 General",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.2 General... (p.12-12)"
+        }
+      ]
+    },
+    {
+      "type": "NormativeReference",
+      "name": "EN/IEC 60335-1",
+      "id": "ns:NormativeReference/eniec_60335_1",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_007",
+          "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+          "page_start": 7,
+          "page_end": 8,
+          "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+        },
+        {
+          "section_id": "sec_008",
+          "section_title": "20 ml of coffee.",
+          "page_start": 8,
+          "page_end": 9,
+          "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+        },
+        {
+          "section_id": "sec_010",
+          "section_title": "Prerequisite",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Prerequisite... (p.9-9)"
+        },
+        {
+          "section_id": "sec_011",
+          "section_title": "9.6.1 Measure hot milk temperature",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+        },
+        {
+          "section_id": "sec_012",
+          "section_title": "9.6.2 Measure milk froth ratio",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+        },
+        {
+          "section_id": "sec_013",
+          "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+          "page_start": 9,
+          "page_end": 10,
+          "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+        },
+        {
+          "section_id": "sec_014",
+          "section_title": "9.7 NTC temperature sensor functionality",
+          "page_start": 10,
+          "page_end": 11,
+          "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+        },
+        {
+          "section_id": "sec_015",
+          "section_title": "Measurement table",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Measurement table... (p.11-11)"
+        },
+        {
+          "section_id": "sec_020",
+          "section_title": "35  95  60.90  65.86",
+          "page_start": 11,
+          "page_end": 12,
+          "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+        },
+        {
+          "section_id": "sec_022",
+          "section_title": "9.8.1 What coffee machine has to be tested and when?",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+        },
+        {
+          "section_id": "sec_023",
+          "section_title": "9.8.2 General",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: 9.8.2 General... (p.12-12)"
+        },
+        {
+          "section_id": "sec_024",
+          "section_title": "Description",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Description... (p.12-12)"
+        },
+        {
+          "section_id": "sec_026",
+          "section_title": "Test equipment",
+          "page_start": 12,
+          "page_end": 13,
+          "source_text": "Section: Test equipment... (p.12-13)"
+        },
+        {
+          "section_id": "sec_027",
+          "section_title": "9.8.3 Test sequence",
+          "page_start": 13,
+          "page_end": 14,
+          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+        },
+        {
+          "section_id": "sec_028",
+          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+          "page_start": 14,
+          "page_end": 15,
+          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+        },
+        {
+          "section_id": "sec_030",
+          "section_title": "9.9.1 What coffee machines have to be tested and when?",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+        },
+        {
+          "section_id": "sec_031",
+          "section_title": "9.9.2 General",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.2 General... (p.15-15)"
+        },
+        {
+          "section_id": "sec_032",
+          "section_title": "Description",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Description... (p.15-15)"
+        }
+      ]
+    },
+    {
+      "type": "TestCase",
+      "name": "Protective Earth Continuity Test",
+      "id": "ns:TestCase/protective_earth_continuity_test",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "section_title": "Description",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Description... (p.12-12)"
+        },
+        {
+          "section_id": "sec_026",
+          "section_title": "Test equipment",
+          "page_start": 12,
+          "page_end": 13,
+          "source_text": "Section: Test equipment... (p.12-13)"
+        },
+        {
+          "section_id": "sec_027",
+          "section_title": "9.8.3 Test sequence",
+          "page_start": 13,
+          "page_end": 14,
+          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+        },
+        {
+          "section_id": "sec_028",
+          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+          "page_start": 14,
+          "page_end": 15,
+          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+        },
+        {
+          "section_id": "sec_030",
+          "section_title": "9.9.1 What coffee machines have to be tested and when?",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+        },
+        {
+          "section_id": "sec_031",
+          "section_title": "9.9.2 General",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.2 General... (p.15-15)"
+        },
+        {
+          "section_id": "sec_032",
+          "section_title": "Description",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Description... (p.15-15)"
+        }
+      ]
+    },
+    {
+      "type": "TestCase",
+      "name": "Insulation Test",
+      "id": "ns:TestCase/insulation_test",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "section_title": "Description",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Description... (p.12-12)"
+        },
+        {
+          "section_id": "sec_026",
+          "section_title": "Test equipment",
+          "page_start": 12,
+          "page_end": 13,
+          "source_text": "Section: Test equipment... (p.12-13)"
+        },
+        {
+          "section_id": "sec_027",
+          "section_title": "9.8.3 Test sequence",
+          "page_start": 13,
+          "page_end": 14,
+          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+        },
+        {
+          "section_id": "sec_028",
+          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+          "page_start": 14,
+          "page_end": 15,
+          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+        },
+        {
+          "section_id": "sec_030",
+          "section_title": "9.9.1 What coffee machines have to be tested and when?",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+        },
+        {
+          "section_id": "sec_031",
+          "section_title": "9.9.2 General",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.2 General... (p.15-15)"
+        },
+        {
+          "section_id": "sec_032",
+          "section_title": "Description",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Description... (p.15-15)"
+        },
+        {
+          "section_id": "sec_033",
+          "section_title": "Test equipment",
+          "page_start": 15,
+          "page_end": 16,
+          "source_text": "Section: Test equipment... (p.15-16)"
+        },
+        {
+          "section_id": "sec_034",
+          "section_title": "9.9.3 Test sequence",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: 9.9.3 Test sequence... (p.16-17)"
+        }
+      ]
+    },
+    {
+      "type": "Equipment",
+      "name": "Coffee Machine Citiz & Co",
+      "id": "ns:Equipment/coffee_machine_citiz_co",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "section_title": "Description",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Description... (p.12-12)"
+        },
+        {
+          "section_id": "sec_026",
+          "section_title": "Test equipment",
+          "page_start": 12,
+          "page_end": 13,
+          "source_text": "Section: Test equipment... (p.12-13)"
+        },
+        {
+          "section_id": "sec_027",
+          "section_title": "9.8.3 Test sequence",
+          "page_start": 13,
+          "page_end": 14,
+          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+        },
+        {
+          "section_id": "sec_028",
+          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+          "page_start": 14,
+          "page_end": 15,
+          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+        },
+        {
+          "section_id": "sec_030",
+          "section_title": "9.9.1 What coffee machines have to be tested and when?",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+        },
+        {
+          "section_id": "sec_031",
+          "section_title": "9.9.2 General",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.2 General... (p.15-15)"
+        },
+        {
+          "section_id": "sec_032",
+          "section_title": "Description",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Description... (p.15-15)"
+        }
+      ]
+    },
+    {
+      "type": "Measurement",
+      "name": "Ground Resistance",
+      "id": "ns:Measurement/ground_resistance",
+      "confidence": 1.0,
+      "nominal_value": null,
+      "min_value": null,
+      "max_value": 0.3,
+      "tolerance": null,
+      "unit_raw": "Ohm",
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "section_title": "Description",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Description... (p.12-12)"
+        },
+        {
+          "section_id": "sec_026",
+          "section_title": "Test equipment",
+          "page_start": 12,
+          "page_end": 13,
+          "source_text": "Section: Test equipment... (p.12-13)"
+        },
+        {
+          "section_id": "sec_027",
+          "section_title": "9.8.3 Test sequence",
+          "page_start": 13,
+          "page_end": 14,
+          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+        },
+        {
+          "section_id": "sec_028",
+          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+          "page_start": 14,
+          "page_end": 15,
+          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+        },
+        {
+          "section_id": "sec_030",
+          "section_title": "9.9.1 What coffee machines have to be tested and when?",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+        },
+        {
+          "section_id": "sec_031",
+          "section_title": "9.9.2 General",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.2 General... (p.15-15)"
+        },
+        {
+          "section_id": "sec_032",
+          "section_title": "Description",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Description... (p.15-15)"
+        }
+      ]
+    },
+    {
+      "type": "NormativeReference",
+      "name": "DIN VDE 0701",
+      "id": "ns:NormativeReference/din_vde_0701",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_024",
+          "section_title": "Description",
+          "page_start": 12,
+          "page_end": 12,
+          "source_text": "Section: Description... (p.12-12)"
+        },
+        {
+          "section_id": "sec_026",
+          "section_title": "Test equipment",
+          "page_start": 12,
+          "page_end": 13,
+          "source_text": "Section: Test equipment... (p.12-13)"
+        },
+        {
+          "section_id": "sec_027",
+          "section_title": "9.8.3 Test sequence",
+          "page_start": 13,
+          "page_end": 14,
+          "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+        },
+        {
+          "section_id": "sec_028",
+          "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+          "page_start": 14,
+          "page_end": 15,
+          "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+        },
+        {
+          "section_id": "sec_030",
+          "section_title": "9.9.1 What coffee machines have to be tested and when?",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+        },
+        {
+          "section_id": "sec_031",
+          "section_title": "9.9.2 General",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: 9.9.2 General... (p.15-15)"
+        },
+        {
+          "section_id": "sec_032",
+          "section_title": "Description",
+          "page_start": 15,
+          "page_end": 15,
+          "source_text": "Section: Description... (p.15-15)"
+        }
+      ]
+    },
+    {
+      "type": "Equipment",
+      "name": "test equipment",
+      "id": "ns:Equipment/test_equipment",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_033",
+          "section_title": "Test equipment",
+          "page_start": 15,
+          "page_end": 16,
+          "source_text": "Section: Test equipment... (p.15-16)"
+        },
+        {
+          "section_id": "sec_034",
+          "section_title": "9.9.3 Test sequence",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: 9.9.3 Test sequence... (p.16-17)"
+        }
+      ]
+    },
+    {
+      "type": "Measurement",
+      "name": "insulation resistance",
+      "id": "ns:Measurement/insulation_resistance",
+      "confidence": 1.0,
+      "nominal_value": null,
+      "min_value": 300000,
+      "max_value": null,
+      "tolerance": null,
+      "unit_raw": "Ohm",
+      "spans": [
+        {
+          "section_id": "sec_033",
+          "section_title": "Test equipment",
+          "page_start": 15,
+          "page_end": 16,
+          "source_text": "Section: Test equipment... (p.15-16)"
+        },
+        {
+          "section_id": "sec_034",
+          "section_title": "9.9.3 Test sequence",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: 9.9.3 Test sequence... (p.16-17)"
+        }
+      ]
+    },
+    {
+      "type": "SafetyNotice",
+      "name": "Danger of electrical shock/short circuit",
+      "id": "ns:SafetyNotice/danger_of_electrical_shockshort_circuit",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_033",
+          "section_title": "Test equipment",
+          "page_start": 15,
+          "page_end": 16,
+          "source_text": "Section: Test equipment... (p.15-16)"
+        },
+        {
+          "section_id": "sec_034",
+          "section_title": "9.9.3 Test sequence",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: 9.9.3 Test sequence... (p.16-17)"
+        }
+      ]
+    },
+    {
+      "type": "AcceptanceCriterion",
+      "name": "insulation resistance must be higher than 300kOhm",
+      "id": "ns:AcceptanceCriterion/insulation_resistance_must_be_higher_than_300kohm",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_033",
+          "section_title": "Test equipment",
+          "page_start": 15,
+          "page_end": 16,
+          "source_text": "Section: Test equipment... (p.15-16)"
+        },
+        {
+          "section_id": "sec_034",
+          "section_title": "9.9.3 Test sequence",
+          "page_start": 16,
+          "page_end": 17,
+          "source_text": "Section: 9.9.3 Test sequence... (p.16-17)"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "type": "requires",
+      "from_ref": "ns:Measurement/pressure",
+      "to_ref": "ns:Equipment/pressure_gauge_adapter",
+      "confidence": 1.0
+    },
+    {
+      "type": "requires",
+      "from_ref": "ns:Measurement/water_volume",
+      "to_ref": "ns:Equipment/pressure_gauge_adapter",
+      "confidence": 1.0
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:Measurement/pressure",
+      "to_ref": "ns:AcceptanceCriterion/pressure_stability",
+      "confidence": 1.0
+    },
+    {
+      "type": "refersTo",
+      "from_ref": "ns:SafetyNotice/dangerous_mains_voltage",
+      "to_ref": "ns:Equipment/pressure_gauge_adapter",
+      "confidence": 1.0
+    },
+    {
+      "type": "refersTo",
+      "from_ref": "ns:SafetyNotice/dangerous_hot_parts",
+      "to_ref": "ns:Equipment/pressure_gauge_adapter",
+      "confidence": 1.0
+    },
+    {
+      "type": "requires",
+      "from_ref": "ns:TestCase/coffee_temperature_measurement",
+      "to_ref": "ns:Equipment/coffee_machine",
+      "confidence": 0.9
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/coffee_temperature_measurement",
+      "to_ref": "ns:Measurement/coffee_temperature",
+      "confidence": 0.9
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/coffee_temperature_measurement",
+      "to_ref": "ns:Measurement/milk_temperature",
+      "confidence": 0.9
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:Measurement/coffee_temperature",
+      "to_ref": "ns:AcceptanceCriterion/ntc_sensor_resistance_range",
+      "confidence": 0.9
+    },
+    {
+      "type": "refersTo",
+      "from_ref": "ns:SafetyNotice/ntc_temperature_sensor_handling",
+      "to_ref": "ns:NormativeReference/eniec_60335_1",
+      "confidence": 0.9
+    },
+    {
+      "type": "requires",
+      "from_ref": "ns:TestCase/protective_earth_continuity_test",
+      "to_ref": "ns:Equipment/coffee_machine_citiz_co",
+      "confidence": 1.0
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/protective_earth_continuity_test",
+      "to_ref": "ns:Measurement/ground_resistance",
+      "confidence": 1.0
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/insulation_test",
+      "to_ref": "ns:Measurement/ground_resistance",
+      "confidence": 1.0
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/protective_earth_continuity_test",
+      "to_ref": "ns:NormativeReference/eniec_60335_1",
+      "confidence": 1.0
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/insulation_test",
+      "to_ref": "ns:NormativeReference/eniec_60335_1",
+      "confidence": 1.0
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/insulation_test",
+      "to_ref": "ns:NormativeReference/din_vde_0701",
+      "confidence": 1.0
+    },
+    {
+      "type": "requires",
+      "from_ref": "ns:TestCase/insulation_test",
+      "to_ref": "ns:Equipment/test_equipment",
+      "confidence": 1.0
+    },
+    {
+      "type": "validatedBy",
+      "from_ref": "ns:TestCase/insulation_test",
+      "to_ref": "ns:Measurement/insulation_resistance",
+      "confidence": 1.0
+    },
+    {
+      "type": "constrainedBy",
+      "from_ref": "ns:TestCase/insulation_test",
+      "to_ref": "ns:AcceptanceCriterion/insulation_resistance_must_be_higher_than_300kohm",
+      "confidence": 1.0
+    },
+    {
+      "type": "refersTo",
+      "from_ref": "ns:SafetyNotice/danger_of_electrical_shockshort_circuit",
+      "to_ref": "ns:Equipment/test_equipment",
+      "confidence": 1.0
+    }
+  ],
+  "provenance": {
+    "overall_confidence": 0.975,
+    "documents_processed": [
+      "5_Test and Validation_Service Manual-130-147.parsed.json"
+    ],
+    "sections_used": [
+      {
+        "section_id": "sec_001",
+        "title": "Section 1",
+        "page_start": 2,
+        "page_end": 2,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_002",
+        "title": "9.2.2 Citiz pressure gauge adapter",
+        "page_start": 2,
+        "page_end": 3,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_003",
+        "title": "9.3 Measure flow rate",
+        "page_start": 3,
+        "page_end": 4,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_004",
+        "title": "9.4 Pressure and leakage checks",
+        "page_start": 4,
+        "page_end": 5,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_005",
+        "title": "9.4.1 Preparations",
+        "page_start": 5,
+        "page_end": 6,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_006",
+        "title": "9.4.2 Test run 9) Connect mains cable.",
+        "page_start": 6,
+        "page_end": 7,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_007",
+        "title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+        "page_start": 7,
+        "page_end": 8,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_008",
+        "title": "20 ml of coffee.",
+        "page_start": 8,
+        "page_end": 9,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_010",
+        "title": "Prerequisite",
+        "page_start": 9,
+        "page_end": 9,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_011",
+        "title": "9.6.1 Measure hot milk temperature",
+        "page_start": 9,
+        "page_end": 9,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_012",
+        "title": "9.6.2 Measure milk froth ratio",
+        "page_start": 9,
+        "page_end": 9,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_013",
+        "title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+        "page_start": 9,
+        "page_end": 10,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_014",
+        "title": "9.7 NTC temperature sensor functionality",
+        "page_start": 10,
+        "page_end": 11,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_015",
+        "title": "Measurement table",
+        "page_start": 11,
+        "page_end": 11,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_020",
+        "title": "35  95  60.90  65.86",
+        "page_start": 11,
+        "page_end": 12,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_022",
+        "title": "9.8.1 What coffee machine has to be tested and when?",
+        "page_start": 12,
+        "page_end": 12,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_023",
+        "title": "9.8.2 General",
+        "page_start": 12,
+        "page_end": 12,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_024",
+        "title": "Description",
+        "page_start": 12,
+        "page_end": 12,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_026",
+        "title": "Test equipment",
+        "page_start": 12,
+        "page_end": 13,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_027",
+        "title": "9.8.3 Test sequence",
+        "page_start": 13,
+        "page_end": 14,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_028",
+        "title": "9.8.4 What to do if the protective earth continuity test fails",
+        "page_start": 14,
+        "page_end": 15,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_030",
+        "title": "9.9.1 What coffee machines have to be tested and when?",
+        "page_start": 15,
+        "page_end": 15,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_031",
+        "title": "9.9.2 General",
+        "page_start": 15,
+        "page_end": 15,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_032",
+        "title": "Description",
+        "page_start": 15,
+        "page_end": 15,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_033",
+        "title": "Test equipment",
+        "page_start": 15,
+        "page_end": 16,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      },
+      {
+        "section_id": "sec_034",
+        "title": "9.9.3 Test sequence",
+        "page_start": 16,
+        "page_end": 17,
+        "document": "5_Test and Validation_Service Manual-130-147.parsed.json"
+      }
+    ],
+    "total_sections": 26,
+    "notes": "Neural extraction for profile testing with provenance tracking and semantic normalization"
+  },
+  "quality": {
+    "json_valid": true,
+    "entities_count": 24,
+    "relations_count": 20,
+    "warnings": [],
+    "overall_confidence": 0.975,
+    "avg_entity_confidence": 0.975,
+    "avg_relation_confidence": 0.975,
+    "entity_type_distribution": {
+      "Equipment": 6,
+      "Measurement": 6,
+      "SafetyNotice": 4,
+      "AcceptanceCriterion": 3,
+      "TestCase": 3,
+      "NormativeReference": 2
+    },
+    "relation_type_distribution": {
+      "requires": 5,
+      "validatedBy": 6,
+      "refersTo": 4,
+      "constrainedBy": 5
+    },
+    "profile": "testing",
+    "generated_at": "2025-11-05T10:36:24.775731+00:00"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "document_code": "KG_TROUBLESHOOTING",
-  "ingestion_id": "4b29fc52-64a9-4eb6-b671-027c55e01c7a",
+  "ingestion_id": "d58213ba-5b4b-4f60-b6ba-df5ba6673e05",
   "extraction_version": "neural_v1.2",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
@@ -180,6 +180,28 @@
     },
     {
       "type": "RepairAction",
+      "name": "replace compact brewing unit",
+      "id": "ns:RA/replace_compact_brewing_unit",
+      "confidence": 1,
+      "spans": [
+        {
+          "section_id": "sec_2",
+          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
+          "page_start": 2,
+          "page_end": 2,
+          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
+        },
+        {
+          "section_id": "sec_3",
+          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
+          "page_start": 3,
+          "page_end": 3,
+          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
+        }
+      ]
+    },
+    {
+      "type": "RepairAction",
       "name": "replace defective hoses and seals",
       "id": "ns:RA/replace_defective_hoses_and_seals",
       "confidence": 1,
@@ -246,8 +268,8 @@
     },
     {
       "type": "FailureMode",
-      "name": "milk frother damaged",
-      "id": "ns:FM/milk_frother_damaged",
+      "name": "milk frother is damaged",
+      "id": "ns:FM/milk_frother_is_damaged",
       "confidence": 1,
       "spans": [
         {
@@ -290,8 +312,8 @@
     },
     {
       "type": "FailureMode",
-      "name": "jug badly scratched",
-      "id": "ns:FM/jug_badly_scratched",
+      "name": "milk frother is not functioning",
+      "id": "ns:FM/milk_frother_is_not_functioning",
       "confidence": 1,
       "spans": [
         {
@@ -333,28 +355,6 @@
       ]
     },
     {
-      "type": "FailureMode",
-      "name": "whisks damaged",
-      "id": "ns:FM/whisks_damaged",
-      "confidence": 1,
-      "spans": [
-        {
-          "section_id": "sec_2",
-          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-          "page_start": 2,
-          "page_end": 2,
-          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-        },
-        {
-          "section_id": "sec_3",
-          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-          "page_start": 3,
-          "page_end": 3,
-          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-        }
-      ]
-    },
-    {
       "type": "RepairAction",
       "name": "replace whisks",
       "id": "ns:RA/replace_whisks",
@@ -377,53 +377,9 @@
       ]
     },
     {
-      "type": "FailureMode",
-      "name": "coffee machine not switch off automatically",
-      "id": "ns:FM/coffee_machine_not_switch_off_automatically",
-      "confidence": 1,
-      "spans": [
-        {
-          "section_id": "sec_2",
-          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-          "page_start": 2,
-          "page_end": 2,
-          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-        },
-        {
-          "section_id": "sec_3",
-          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-          "page_start": 3,
-          "page_end": 3,
-          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-        }
-      ]
-    },
-    {
-      "type": "RepairAction",
-      "name": "replace connector on platform",
-      "id": "ns:RA/replace_connector_on_platform",
-      "confidence": 1,
-      "spans": [
-        {
-          "section_id": "sec_2",
-          "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-          "page_start": 2,
-          "page_end": 2,
-          "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-        },
-        {
-          "section_id": "sec_3",
-          "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-          "page_start": 3,
-          "page_end": 3,
-          "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-        }
-      ]
-    },
-    {
-      "type": "RepairAction",
-      "name": "disassembly",
-      "id": "ns:RA/disassembly",
+      "type": "Tool",
+      "name": "special disassembly tool",
+      "id": "ns:Tool/special_disassembly_tool",
       "confidence": 1.0,
       "spans": [
         {
@@ -443,9 +399,9 @@
       ]
     },
     {
-      "type": "Tool",
-      "name": "disassembly tool",
-      "id": "ns:Tool/disassembly_tool",
+      "type": "FailureMode",
+      "name": "delicate snap connections",
+      "id": "ns:FM/delicate_snap_connections",
       "confidence": 1.0,
       "spans": [
         {
@@ -509,9 +465,76 @@
       ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/flow_meter_blocked",
+      "to_ref": "ns:RA/clean_or_replace",
+      "confidence": 1
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/pyramide_plate_blocked",
+      "to_ref": "ns:RA/replace_the_compact_brewing_unit",
+      "confidence": 1
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/coffee_machine_is_calcified",
+      "to_ref": "ns:RA/descale_coffee_machine",
+      "confidence": 1
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/unit_leaks",
+      "to_ref": "ns:RA/replace_compact_brewing_unit",
+      "confidence": 1
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/unit_leaks",
+      "to_ref": "ns:RA/replace_defective_hoses_and_seals",
+      "confidence": 1
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/rust_visible_in_water",
+      "to_ref": "ns:RA/descale_and_rinse_coffee_machine_again",
+      "confidence": 1
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/milk_frother_is_damaged",
+      "to_ref": "ns:RA/replace_lidseal",
+      "confidence": 1
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/milk_frother_is_not_functioning",
+      "to_ref": "ns:RA/replace_milk_frother",
+      "confidence": 1
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/milk_frother_is_damaged",
+      "to_ref": "ns:RA/replace_whisks",
+      "confidence": 1
+    },
+    {
+      "type": "requiresTool",
+      "from_ref": "ns:FM/delicate_snap_connections",
+      "to_ref": "ns:Tool/special_disassembly_tool",
+      "confidence": 1.0
+    },
+    {
+      "type": "affects",
+      "from_ref": "ns:FM/risk_of_fatal_electrical_shock",
+      "to_ref": "ns:FM/danger_of_burns",
+      "confidence": 1.0
+    }
+  ],
   "provenance": {
-    "overall_confidence": 0.5,
+    "overall_confidence": 1.0,
     "documents_processed": [
       "3_Diagnostic Rules and failures_Service Manual-49-54.parsed.json"
     ],
@@ -549,69 +572,23 @@
     "notes": "Neural extraction for profile troubleshooting with provenance tracking and semantic normalization"
   },
   "quality": {
-    "json_valid": false,
-    "entities_count": 22,
-    "relations_count": 0,
-    "warnings": [
-      "Relation 0 missing 'type'",
-      "Relation 0 missing 'from_ref'",
-      "Relation 0 missing 'to_ref'",
-      "Relation 0 missing 'confidence'",
-      "Relation 1 missing 'type'",
-      "Relation 1 missing 'from_ref'",
-      "Relation 1 missing 'to_ref'",
-      "Relation 1 missing 'confidence'",
-      "Relation 2 missing 'type'",
-      "Relation 2 missing 'from_ref'",
-      "Relation 2 missing 'to_ref'",
-      "Relation 2 missing 'confidence'",
-      "Relation 3 missing 'type'",
-      "Relation 3 missing 'from_ref'",
-      "Relation 3 missing 'to_ref'",
-      "Relation 3 missing 'confidence'",
-      "Relation 4 missing 'type'",
-      "Relation 4 missing 'from_ref'",
-      "Relation 4 missing 'to_ref'",
-      "Relation 4 missing 'confidence'",
-      "Relation 5 missing 'type'",
-      "Relation 5 missing 'from_ref'",
-      "Relation 5 missing 'to_ref'",
-      "Relation 5 missing 'confidence'",
-      "Relation 6 missing 'type'",
-      "Relation 6 missing 'from_ref'",
-      "Relation 6 missing 'to_ref'",
-      "Relation 6 missing 'confidence'",
-      "Relation 7 missing 'type'",
-      "Relation 7 missing 'from_ref'",
-      "Relation 7 missing 'to_ref'",
-      "Relation 7 missing 'confidence'",
-      "Relation 8 missing 'type'",
-      "Relation 8 missing 'from_ref'",
-      "Relation 8 missing 'to_ref'",
-      "Relation 8 missing 'confidence'",
-      "Relation 0 missing 'type'",
-      "Relation 0 missing 'from_ref'",
-      "Relation 0 missing 'to_ref'",
-      "Relation 0 missing 'confidence'",
-      "Relation 1 missing 'type'",
-      "Relation 1 missing 'from_ref'",
-      "Relation 1 missing 'to_ref'",
-      "Relation 1 missing 'confidence'",
-      "Relation 2 missing 'type'",
-      "Relation 2 missing 'from_ref'",
-      "Relation 2 missing 'to_ref'",
-      "Relation 2 missing 'confidence'"
-    ],
-    "overall_confidence": 0.5,
+    "json_valid": true,
+    "entities_count": 20,
+    "relations_count": 11,
+    "warnings": [],
+    "overall_confidence": 1.0,
     "avg_entity_confidence": 1.0,
-    "avg_relation_confidence": 0,
+    "avg_relation_confidence": 1.0,
     "entity_type_distribution": {
-      "FailureMode": 11,
-      "RepairAction": 10,
+      "FailureMode": 10,
+      "RepairAction": 9,
       "Tool": 1
     },
-    "relation_type_distribution": {},
+    "relation_type_distribution": {
+      "affects": 10,
+      "requiresTool": 1
+    },
     "profile": "troubleshooting",
-    "generated_at": "2025-11-04T13:49:37.548285+00:00"
+    "generated_at": "2025-11-05T10:35:35.231887+00:00"
   }
 }

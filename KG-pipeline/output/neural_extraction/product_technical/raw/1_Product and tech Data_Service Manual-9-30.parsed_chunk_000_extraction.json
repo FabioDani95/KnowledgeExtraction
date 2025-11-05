@@ -1027,7 +1027,7 @@
         "id": "UN_01",
         "type": "Unit",
         "name": "L",
-        "confidence": 0.85,
+        "confidence": 0.9,
         "spans": [
           {
             "section_id": "sec_0",
@@ -1180,7 +1180,7 @@
         "type": "hasUnit",
         "from_ref": "PS_01",
         "to_ref": "UN_01",
-        "confidence": 0.85
+        "confidence": 0.88
       }
     ]
   },
@@ -1285,5 +1285,5 @@
       "char_end": 3952
     }
   ],
-  "timestamp": "2025-11-04T13:45:01.243028+00:00"
+  "timestamp": "2025-11-05T10:31:05.733928+00:00"
 }

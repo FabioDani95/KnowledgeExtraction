@@ -179,7 +179,7 @@
       },
       {
         "type": "ProcessStep",
-        "name": "Press and hold small coffee button",
+        "name": "Press and hold coffee button",
         "id": "PS_02",
         "confidence": 1.0,
         "spans": [
@@ -311,7 +311,7 @@
       },
       {
         "type": "ProcessStep",
-        "name": "Reset the programmed large and small coffee volumes to factory setting",
+        "name": "Reset the programmed volumes",
         "id": "PS_08",
         "confidence": 1.0,
         "spans": [
@@ -333,7 +333,7 @@
       },
       {
         "type": "ProcessStep",
-        "name": "Indicate the resetting mode for 3 s",
+        "name": "Indicate the resetting mode",
         "id": "PS_09",
         "confidence": 1.0,
         "spans": [
@@ -421,7 +421,7 @@
       },
       {
         "type": "ProcessStep",
-        "name": "Switch off the machine",
+        "name": "Switch off thermoblock",
         "id": "PS_13",
         "confidence": 1.0,
         "spans": [
@@ -443,30 +443,8 @@
       },
       {
         "type": "ProcessStep",
-        "name": "Keep start button pressed for approx. 2sec",
+        "name": "Switch off the machine",
         "id": "PS_14",
-        "confidence": 1.0,
-        "spans": [
-          {
-            "section_id": "sec_mode_table_p5",
-            "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
-            "page_start": 5,
-            "page_end": 5,
-            "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
-          },
-          {
-            "section_id": "sec_procedure_p6",
-            "section_title": "Citiz service manual  36 OPERATION",
-            "page_start": 6,
-            "page_end": 6,
-            "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
-          }
-        ]
-      },
-      {
-        "type": "ProcessStep",
-        "name": "Release 'large cup' button",
-        "id": "PS_15",
         "confidence": 1.0,
         "spans": [
           {
@@ -508,5 +486,5 @@
       "char_end": 6893
     }
   ],
-  "timestamp": "2025-11-04T13:48:46.902143+00:00"
+  "timestamp": "2025-11-05T10:34:44.554425+00:00"
 }

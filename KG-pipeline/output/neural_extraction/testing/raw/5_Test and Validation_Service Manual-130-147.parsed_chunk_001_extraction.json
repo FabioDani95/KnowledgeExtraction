@@ -1,0 +1,741 @@
+{
+  "extraction": {
+    "entities": [
+      {
+        "type": "TestCase",
+        "name": "Coffee Temperature Measurement",
+        "id": "TC_01",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_007",
+            "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+          },
+          {
+            "section_id": "sec_008",
+            "section_title": "20 ml of coffee.",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+          },
+          {
+            "section_id": "sec_010",
+            "section_title": "Prerequisite",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Prerequisite... (p.9-9)"
+          },
+          {
+            "section_id": "sec_011",
+            "section_title": "9.6.1 Measure hot milk temperature",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+          },
+          {
+            "section_id": "sec_012",
+            "section_title": "9.6.2 Measure milk froth ratio",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+          },
+          {
+            "section_id": "sec_013",
+            "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+          },
+          {
+            "section_id": "sec_014",
+            "section_title": "9.7 NTC temperature sensor functionality",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+          },
+          {
+            "section_id": "sec_015",
+            "section_title": "Measurement table",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Measurement table... (p.11-11)"
+          },
+          {
+            "section_id": "sec_020",
+            "section_title": "35  95  60.90  65.86",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+          },
+          {
+            "section_id": "sec_022",
+            "section_title": "9.8.1 What coffee machine has to be tested and when?",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+          },
+          {
+            "section_id": "sec_023",
+            "section_title": "9.8.2 General",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.2 General... (p.12-12)"
+          }
+        ]
+      },
+      {
+        "type": "Measurement",
+        "name": "Coffee Temperature",
+        "id": "M_01",
+        "confidence": 0.9,
+        "nominal_value": 86,
+        "tolerance": 3,
+        "unit_raw": "°C",
+        "spans": [
+          {
+            "section_id": "sec_007",
+            "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+          },
+          {
+            "section_id": "sec_008",
+            "section_title": "20 ml of coffee.",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+          },
+          {
+            "section_id": "sec_010",
+            "section_title": "Prerequisite",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Prerequisite... (p.9-9)"
+          },
+          {
+            "section_id": "sec_011",
+            "section_title": "9.6.1 Measure hot milk temperature",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+          },
+          {
+            "section_id": "sec_012",
+            "section_title": "9.6.2 Measure milk froth ratio",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+          },
+          {
+            "section_id": "sec_013",
+            "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+          },
+          {
+            "section_id": "sec_014",
+            "section_title": "9.7 NTC temperature sensor functionality",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+          },
+          {
+            "section_id": "sec_015",
+            "section_title": "Measurement table",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Measurement table... (p.11-11)"
+          },
+          {
+            "section_id": "sec_020",
+            "section_title": "35  95  60.90  65.86",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+          },
+          {
+            "section_id": "sec_022",
+            "section_title": "9.8.1 What coffee machine has to be tested and when?",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+          },
+          {
+            "section_id": "sec_023",
+            "section_title": "9.8.2 General",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.2 General... (p.12-12)"
+          }
+        ]
+      },
+      {
+        "type": "Measurement",
+        "name": "Milk Temperature",
+        "id": "M_02",
+        "confidence": 0.9,
+        "min_value": 60,
+        "max_value": 70,
+        "unit_raw": "°C",
+        "spans": [
+          {
+            "section_id": "sec_007",
+            "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+          },
+          {
+            "section_id": "sec_008",
+            "section_title": "20 ml of coffee.",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+          },
+          {
+            "section_id": "sec_010",
+            "section_title": "Prerequisite",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Prerequisite... (p.9-9)"
+          },
+          {
+            "section_id": "sec_011",
+            "section_title": "9.6.1 Measure hot milk temperature",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+          },
+          {
+            "section_id": "sec_012",
+            "section_title": "9.6.2 Measure milk froth ratio",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+          },
+          {
+            "section_id": "sec_013",
+            "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+          },
+          {
+            "section_id": "sec_014",
+            "section_title": "9.7 NTC temperature sensor functionality",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+          },
+          {
+            "section_id": "sec_015",
+            "section_title": "Measurement table",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Measurement table... (p.11-11)"
+          },
+          {
+            "section_id": "sec_020",
+            "section_title": "35  95  60.90  65.86",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+          },
+          {
+            "section_id": "sec_022",
+            "section_title": "9.8.1 What coffee machine has to be tested and when?",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+          },
+          {
+            "section_id": "sec_023",
+            "section_title": "9.8.2 General",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.2 General... (p.12-12)"
+          }
+        ]
+      },
+      {
+        "type": "SafetyNotice",
+        "name": "NTC Temperature Sensor Handling",
+        "id": "SN_01",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_007",
+            "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+          },
+          {
+            "section_id": "sec_008",
+            "section_title": "20 ml of coffee.",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+          },
+          {
+            "section_id": "sec_010",
+            "section_title": "Prerequisite",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Prerequisite... (p.9-9)"
+          },
+          {
+            "section_id": "sec_011",
+            "section_title": "9.6.1 Measure hot milk temperature",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+          },
+          {
+            "section_id": "sec_012",
+            "section_title": "9.6.2 Measure milk froth ratio",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+          },
+          {
+            "section_id": "sec_013",
+            "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+          },
+          {
+            "section_id": "sec_014",
+            "section_title": "9.7 NTC temperature sensor functionality",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+          },
+          {
+            "section_id": "sec_015",
+            "section_title": "Measurement table",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Measurement table... (p.11-11)"
+          },
+          {
+            "section_id": "sec_020",
+            "section_title": "35  95  60.90  65.86",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+          },
+          {
+            "section_id": "sec_022",
+            "section_title": "9.8.1 What coffee machine has to be tested and when?",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+          },
+          {
+            "section_id": "sec_023",
+            "section_title": "9.8.2 General",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.2 General... (p.12-12)"
+          }
+        ]
+      },
+      {
+        "type": "AcceptanceCriterion",
+        "name": "NTC Sensor Resistance Range",
+        "id": "AC_01",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_007",
+            "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+          },
+          {
+            "section_id": "sec_008",
+            "section_title": "20 ml of coffee.",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+          },
+          {
+            "section_id": "sec_010",
+            "section_title": "Prerequisite",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Prerequisite... (p.9-9)"
+          },
+          {
+            "section_id": "sec_011",
+            "section_title": "9.6.1 Measure hot milk temperature",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+          },
+          {
+            "section_id": "sec_012",
+            "section_title": "9.6.2 Measure milk froth ratio",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+          },
+          {
+            "section_id": "sec_013",
+            "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+          },
+          {
+            "section_id": "sec_014",
+            "section_title": "9.7 NTC temperature sensor functionality",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+          },
+          {
+            "section_id": "sec_015",
+            "section_title": "Measurement table",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Measurement table... (p.11-11)"
+          },
+          {
+            "section_id": "sec_020",
+            "section_title": "35  95  60.90  65.86",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+          },
+          {
+            "section_id": "sec_022",
+            "section_title": "9.8.1 What coffee machine has to be tested and when?",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+          },
+          {
+            "section_id": "sec_023",
+            "section_title": "9.8.2 General",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.2 General... (p.12-12)"
+          }
+        ]
+      },
+      {
+        "type": "Equipment",
+        "name": "Coffee Machine",
+        "id": "E_01",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_007",
+            "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+          },
+          {
+            "section_id": "sec_008",
+            "section_title": "20 ml of coffee.",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+          },
+          {
+            "section_id": "sec_010",
+            "section_title": "Prerequisite",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Prerequisite... (p.9-9)"
+          },
+          {
+            "section_id": "sec_011",
+            "section_title": "9.6.1 Measure hot milk temperature",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+          },
+          {
+            "section_id": "sec_012",
+            "section_title": "9.6.2 Measure milk froth ratio",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+          },
+          {
+            "section_id": "sec_013",
+            "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+          },
+          {
+            "section_id": "sec_014",
+            "section_title": "9.7 NTC temperature sensor functionality",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+          },
+          {
+            "section_id": "sec_015",
+            "section_title": "Measurement table",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Measurement table... (p.11-11)"
+          },
+          {
+            "section_id": "sec_020",
+            "section_title": "35  95  60.90  65.86",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+          },
+          {
+            "section_id": "sec_022",
+            "section_title": "9.8.1 What coffee machine has to be tested and when?",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+          },
+          {
+            "section_id": "sec_023",
+            "section_title": "9.8.2 General",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.2 General... (p.12-12)"
+          }
+        ]
+      },
+      {
+        "type": "NormativeReference",
+        "name": "EN/IEC 60335-1",
+        "id": "NR_01",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_007",
+            "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+            "page_start": 7,
+            "page_end": 8,
+            "source_text": "Section: 9.5 Measure coffee temperature 15)Switch off the coffee machine.... (p.7-8)"
+          },
+          {
+            "section_id": "sec_008",
+            "section_title": "20 ml of coffee.",
+            "page_start": 8,
+            "page_end": 9,
+            "source_text": "Section: 20 ml of coffee.... (p.8-9)"
+          },
+          {
+            "section_id": "sec_010",
+            "section_title": "Prerequisite",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Prerequisite... (p.9-9)"
+          },
+          {
+            "section_id": "sec_011",
+            "section_title": "9.6.1 Measure hot milk temperature",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.1 Measure hot milk temperature... (p.9-9)"
+          },
+          {
+            "section_id": "sec_012",
+            "section_title": "9.6.2 Measure milk froth ratio",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: 9.6.2 Measure milk froth ratio... (p.9-9)"
+          },
+          {
+            "section_id": "sec_013",
+            "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+            "page_start": 9,
+            "page_end": 10,
+            "source_text": "Section: 60 sec after preparation........................................................... (p.9-10)"
+          },
+          {
+            "section_id": "sec_014",
+            "section_title": "9.7 NTC temperature sensor functionality",
+            "page_start": 10,
+            "page_end": 11,
+            "source_text": "Section: 9.7 NTC temperature sensor functionality... (p.10-11)"
+          },
+          {
+            "section_id": "sec_015",
+            "section_title": "Measurement table",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Measurement table... (p.11-11)"
+          },
+          {
+            "section_id": "sec_020",
+            "section_title": "35  95  60.90  65.86",
+            "page_start": 11,
+            "page_end": 12,
+            "source_text": "Section: 35  95  60.90  65.86... (p.11-12)"
+          },
+          {
+            "section_id": "sec_022",
+            "section_title": "9.8.1 What coffee machine has to be tested and when?",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.1 What coffee machine has to be tested and when?... (p.12-12)"
+          },
+          {
+            "section_id": "sec_023",
+            "section_title": "9.8.2 General",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: 9.8.2 General... (p.12-12)"
+          }
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "type": "requires",
+        "from_ref": "TC_01",
+        "to_ref": "E_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "validatedBy",
+        "from_ref": "TC_01",
+        "to_ref": "M_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "validatedBy",
+        "from_ref": "TC_01",
+        "to_ref": "M_02",
+        "confidence": 0.9
+      },
+      {
+        "type": "constrainedBy",
+        "from_ref": "M_01",
+        "to_ref": "AC_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "refersTo",
+        "from_ref": "SN_01",
+        "to_ref": "NR_01",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "chunk_provenance": [
+    {
+      "text": "16)Open the valve and let water flow out\nof the pressure tester.\n1) Switch on coffee machine.\n2) Place a measuring cup on cup sup\nport.\nCitiz service manual  137 FUNCTION TESTS\n3) After heating up, press the \"small cup\"\nbutton for approximately 10 sec to pre\nheat the coffee outlet with hot water.\n4) Empty measuring cup and place it\nback on cup support.\n5) Insert capsule (Cosi is best suited).\n6) Press the \"small cup\" button again.\n7) Wait until the measuring cup contains",
+      "section_id": "sec_007",
+      "section_title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+      "page_start": 7,
+      "page_end": 8,
+      "char_start": 3541,
+      "char_end": 4016
+    },
+    {
+      "text": "8) Then measure the coffee temperature\napprox. 510mm under the coffee out\nlet.\nThe coffee temperature should be\n86°C ± 3 °C (187 °F ± 5.4 °F).\nCitiz service manual  138 FUNCTION TESTS",
+      "section_id": "sec_008",
+      "section_title": "20 ml of coffee.",
+      "page_start": 8,
+      "page_end": 9,
+      "char_start": 4018,
+      "char_end": 4201
+    },
+    {
+      "text": "Use newly opened UHT, full fat or semiskimmed milk at fridge temperature (+8°C till\n+10°C) for the following tests only.",
+      "section_id": "sec_010",
+      "section_title": "Prerequisite",
+      "page_start": 9,
+      "page_end": 9,
+      "char_start": 4203,
+      "char_end": 4323
+    },
+    {
+      "text": "• Prepare 240 ml hot milk in milk frother (use mixer without spring).\n• Measure temperature immediately after preparation in jug.\nThe milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
+      "section_id": "sec_011",
+      "section_title": "9.6.1 Measure hot milk temperature",
+      "page_start": 9,
+      "page_end": 9,
+      "char_start": 4325,
+      "char_end": 4535
+    },
+    {
+      "text": "• Prepare cold milk froth out of 120 ml milk in milk frother (use whisk with spring).\n• Empty content of milk frother into measuring beaker.\n• Determine the ratio x [%] of milk froth to liquid milk with following formula:\nApproximate values:\ndirect after preparation.....................................................................................x = 250",
+      "section_id": "sec_012",
+      "section_title": "9.6.2 Measure milk froth ratio",
+      "page_start": 9,
+      "page_end": 9,
+      "char_start": 4537,
+      "char_end": 4895
+    },
+    {
+      "text": "specification can\naffect the measuring\nresults.\nSpattered milk may\ncause burns. Only\nuse milk frother\nwith lid.\nx  H 2   H 1\nH 1                      100  ́ =\nCitiz service manual  139 FUNCTION TESTS",
+      "section_id": "sec_013",
+      "section_title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+      "page_start": 9,
+      "page_end": 10,
+      "char_start": 4897,
+      "char_end": 5096
+    },
+    {
+      "text": "The resistance of the NTC temperature sensor must be within a defined range, other\nwise the temperature regulation will not work properly and the coffee machine will stay/\ngo into failure mode.\nAn easy way to check the functionality of the NTC temperature sensor is to measure the\nohmic resistance at ambient temperature. With this measurement, most defect NTC\ntemperature sensors can be detected.\nAvoid contamination\nof sensor contact sur\nface during handling.\n1) Unplug NTC temperature sensor from\nelectronic control board.\n2) Remove NTC temperature sensor\nfrom thermoblock (refer to page 104\nand following).\n3) Measure temperature of sensor body\n(do not touch either temperature or\nNTC sensor by hand).\n4) Measure resistance of NTC tempera\nture sensor by connecting a multime\nter at the plug.\n5) Compare measuring values with fol\nlowing diagram or table.\nCitiz service manual  140 FUNCTION TESTS\nNTC Diagram\nNTC temperature s ensor, R/T characteristics\nGraph 1........................................................................................max. resistance value\nGraph 2.........................................................................................min. resistance value\n\nTable: lowing diagram or table.\n\nFigure: Graph 1........................................................................................max. resistance value\n\nFigure: Graph 2.........................................................................................min. resistance value",
+      "section_id": "sec_014",
+      "section_title": "9.7 NTC temperature sensor functionality",
+      "page_start": 10,
+      "page_end": 11,
+      "char_start": 5098,
+      "char_end": 6574
+    },
+    {
+      "text": "NTC temperature\n[°C] NTC temperature\n[°F] NTC min. resistance\n[kOhm] NTC max. resistance\n[kOhm]",
+      "section_id": "sec_015",
+      "section_title": "Measurement table",
+      "page_start": 11,
+      "page_end": 11,
+      "char_start": 6576,
+      "char_end": 6671
+    },
+    {
+      "text": "Citiz service manual  141 FUNCTION TESTS",
+      "section_id": "sec_020",
+      "section_title": "35  95  60.90  65.86",
+      "page_start": 11,
+      "page_end": 12,
+      "char_start": 6673,
+      "char_end": 6713
+    },
+    {
+      "text": "This test is only necessary\nfor class 1 equipment (threewire power cord with protective earth)\nfor models Citiz & milk, EF 485/486\nafter a repair whenever a general disassembly of the platform and/or core unit was\nperformed.",
+      "section_id": "sec_022",
+      "section_title": "9.8.1 What coffee machine has to be tested and when?",
+      "page_start": 12,
+      "page_end": 12,
+      "char_start": 6715,
+      "char_end": 6939
+    },
+    {
+      "text": "Legal regulation\nIn case of a repair/modification of the coffee machine, the repair centre is bound by law\nto protect the user/consumer by\nrestoring the regular condition of the appliance and\nperforming the respective tests according to EN/IEC 603351 “Safety of household\nand similar electrical appliances” and national regulations (e.g. DIN VDE 0701).",
+      "section_id": "sec_023",
+      "section_title": "9.8.2 General",
+      "page_start": 12,
+      "page_end": 12,
+      "char_start": 6941,
+      "char_end": 7293
+    }
+  ],
+  "timestamp": "2025-11-05T10:36:00.081133+00:00"
+}

@@ -163,6 +163,25 @@ neural_extraction_profiles:
       - "requiresConsumable"
       - "verifies"
 
+  testing:
+    input_glob: "output/partial/testing/*.json"
+    output_dir: "output/neural_extraction/testing"
+    class_map:
+      - "TestCase"
+      - "SafetyNotice"
+      - "Measurement"
+      - "AcceptanceCriterion"
+      - "Equipment"
+      - "ApplicabilityClause"
+      - "NormativeReference"
+      - "CrossReference"
+    relation_map:
+      - "requires"
+      - "validatedBy"
+      - "appliesTo"
+      - "constrainedBy"
+      - "refersTo"
+
 # === Pipeline Settings ===
 pipelines:
   product_technical:
@@ -378,6 +397,34 @@ pipelines:
           - "(fatal electrical shock|burns|hot parts|injury)"
       generic:
         tag: "troubleshooting_text"
+  testing:
+    enabled: true
+    source_dir: "source/testing"
+    output_dir: "output/partial/testing"
+    document_glob: "*.pdf"
+    symbolic:
+      skip_header_footer_patterns:
+        header: "^(test\\s+report|quality\\s+check).*$"
+        footer: "^(confidential|internal use).*"
+        page_number: "^\\s*\\d+\\s*$"
+      section_heading_patterns:
+        - "^(Test|Case|Scenario)\\s+\\d+"
+        - "^([A-Z][A-Za-z0-9\\s]+):$"
+      test_case_keywords:
+        outcome:
+          - "pass"
+          - "passed"
+          - "fail"
+          - "failed"
+        requirement:
+          - "requirement"
+          - "criteria"
+          - "expected result"
+        step:
+          - "test"
+          - "verification"
+      min_section_chars: 20
+      default_role: "main"
 
 # === KG Validation Settings ===
 validations:

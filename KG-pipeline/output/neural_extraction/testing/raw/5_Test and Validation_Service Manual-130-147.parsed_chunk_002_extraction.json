@@ -1,0 +1,457 @@
+{
+  "extraction": {
+    "entities": [
+      {
+        "type": "TestCase",
+        "name": "Protective Earth Continuity Test",
+        "id": "TC_01",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_024",
+            "section_title": "Description",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: Description... (p.12-12)"
+          },
+          {
+            "section_id": "sec_026",
+            "section_title": "Test equipment",
+            "page_start": 12,
+            "page_end": 13,
+            "source_text": "Section: Test equipment... (p.12-13)"
+          },
+          {
+            "section_id": "sec_027",
+            "section_title": "9.8.3 Test sequence",
+            "page_start": 13,
+            "page_end": 14,
+            "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+          },
+          {
+            "section_id": "sec_028",
+            "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+            "page_start": 14,
+            "page_end": 15,
+            "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+          },
+          {
+            "section_id": "sec_030",
+            "section_title": "9.9.1 What coffee machines have to be tested and when?",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+          },
+          {
+            "section_id": "sec_031",
+            "section_title": "9.9.2 General",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: 9.9.2 General... (p.15-15)"
+          },
+          {
+            "section_id": "sec_032",
+            "section_title": "Description",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: Description... (p.15-15)"
+          }
+        ]
+      },
+      {
+        "type": "TestCase",
+        "name": "Insulation Test",
+        "id": "TC_02",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_024",
+            "section_title": "Description",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: Description... (p.12-12)"
+          },
+          {
+            "section_id": "sec_026",
+            "section_title": "Test equipment",
+            "page_start": 12,
+            "page_end": 13,
+            "source_text": "Section: Test equipment... (p.12-13)"
+          },
+          {
+            "section_id": "sec_027",
+            "section_title": "9.8.3 Test sequence",
+            "page_start": 13,
+            "page_end": 14,
+            "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+          },
+          {
+            "section_id": "sec_028",
+            "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+            "page_start": 14,
+            "page_end": 15,
+            "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+          },
+          {
+            "section_id": "sec_030",
+            "section_title": "9.9.1 What coffee machines have to be tested and when?",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+          },
+          {
+            "section_id": "sec_031",
+            "section_title": "9.9.2 General",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: 9.9.2 General... (p.15-15)"
+          },
+          {
+            "section_id": "sec_032",
+            "section_title": "Description",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: Description... (p.15-15)"
+          }
+        ]
+      },
+      {
+        "type": "Equipment",
+        "name": "Coffee Machine Citiz & Co",
+        "id": "EQ_01",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_024",
+            "section_title": "Description",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: Description... (p.12-12)"
+          },
+          {
+            "section_id": "sec_026",
+            "section_title": "Test equipment",
+            "page_start": 12,
+            "page_end": 13,
+            "source_text": "Section: Test equipment... (p.12-13)"
+          },
+          {
+            "section_id": "sec_027",
+            "section_title": "9.8.3 Test sequence",
+            "page_start": 13,
+            "page_end": 14,
+            "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+          },
+          {
+            "section_id": "sec_028",
+            "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+            "page_start": 14,
+            "page_end": 15,
+            "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+          },
+          {
+            "section_id": "sec_030",
+            "section_title": "9.9.1 What coffee machines have to be tested and when?",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+          },
+          {
+            "section_id": "sec_031",
+            "section_title": "9.9.2 General",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: 9.9.2 General... (p.15-15)"
+          },
+          {
+            "section_id": "sec_032",
+            "section_title": "Description",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: Description... (p.15-15)"
+          }
+        ]
+      },
+      {
+        "type": "Measurement",
+        "name": "Ground Resistance",
+        "id": "M_01",
+        "confidence": 1.0,
+        "nominal_value": null,
+        "min_value": null,
+        "max_value": 0.3,
+        "tolerance": null,
+        "unit_raw": "Ohm",
+        "spans": [
+          {
+            "section_id": "sec_024",
+            "section_title": "Description",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: Description... (p.12-12)"
+          },
+          {
+            "section_id": "sec_026",
+            "section_title": "Test equipment",
+            "page_start": 12,
+            "page_end": 13,
+            "source_text": "Section: Test equipment... (p.12-13)"
+          },
+          {
+            "section_id": "sec_027",
+            "section_title": "9.8.3 Test sequence",
+            "page_start": 13,
+            "page_end": 14,
+            "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+          },
+          {
+            "section_id": "sec_028",
+            "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+            "page_start": 14,
+            "page_end": 15,
+            "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+          },
+          {
+            "section_id": "sec_030",
+            "section_title": "9.9.1 What coffee machines have to be tested and when?",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+          },
+          {
+            "section_id": "sec_031",
+            "section_title": "9.9.2 General",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: 9.9.2 General... (p.15-15)"
+          },
+          {
+            "section_id": "sec_032",
+            "section_title": "Description",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: Description... (p.15-15)"
+          }
+        ]
+      },
+      {
+        "type": "NormativeReference",
+        "name": "EN/IEC 60335-1",
+        "id": "NR_01",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_024",
+            "section_title": "Description",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: Description... (p.12-12)"
+          },
+          {
+            "section_id": "sec_026",
+            "section_title": "Test equipment",
+            "page_start": 12,
+            "page_end": 13,
+            "source_text": "Section: Test equipment... (p.12-13)"
+          },
+          {
+            "section_id": "sec_027",
+            "section_title": "9.8.3 Test sequence",
+            "page_start": 13,
+            "page_end": 14,
+            "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+          },
+          {
+            "section_id": "sec_028",
+            "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+            "page_start": 14,
+            "page_end": 15,
+            "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+          },
+          {
+            "section_id": "sec_030",
+            "section_title": "9.9.1 What coffee machines have to be tested and when?",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+          },
+          {
+            "section_id": "sec_031",
+            "section_title": "9.9.2 General",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: 9.9.2 General... (p.15-15)"
+          },
+          {
+            "section_id": "sec_032",
+            "section_title": "Description",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: Description... (p.15-15)"
+          }
+        ]
+      },
+      {
+        "type": "NormativeReference",
+        "name": "DIN VDE 0701",
+        "id": "NR_02",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_024",
+            "section_title": "Description",
+            "page_start": 12,
+            "page_end": 12,
+            "source_text": "Section: Description... (p.12-12)"
+          },
+          {
+            "section_id": "sec_026",
+            "section_title": "Test equipment",
+            "page_start": 12,
+            "page_end": 13,
+            "source_text": "Section: Test equipment... (p.12-13)"
+          },
+          {
+            "section_id": "sec_027",
+            "section_title": "9.8.3 Test sequence",
+            "page_start": 13,
+            "page_end": 14,
+            "source_text": "Section: 9.8.3 Test sequence... (p.13-14)"
+          },
+          {
+            "section_id": "sec_028",
+            "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+            "page_start": 14,
+            "page_end": 15,
+            "source_text": "Section: 9.8.4 What to do if the protective earth continuity test fails... (p.14-15)"
+          },
+          {
+            "section_id": "sec_030",
+            "section_title": "9.9.1 What coffee machines have to be tested and when?",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: 9.9.1 What coffee machines have to be tested and when?... (p.15-15)"
+          },
+          {
+            "section_id": "sec_031",
+            "section_title": "9.9.2 General",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: 9.9.2 General... (p.15-15)"
+          },
+          {
+            "section_id": "sec_032",
+            "section_title": "Description",
+            "page_start": 15,
+            "page_end": 15,
+            "source_text": "Section: Description... (p.15-15)"
+          }
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "type": "requires",
+        "from_ref": "TC_01",
+        "to_ref": "EQ_01",
+        "confidence": 1.0
+      },
+      {
+        "type": "validatedBy",
+        "from_ref": "TC_01",
+        "to_ref": "M_01",
+        "confidence": 1.0
+      },
+      {
+        "type": "validatedBy",
+        "from_ref": "TC_02",
+        "to_ref": "M_01",
+        "confidence": 1.0
+      },
+      {
+        "type": "constrainedBy",
+        "from_ref": "TC_01",
+        "to_ref": "NR_01",
+        "confidence": 1.0
+      },
+      {
+        "type": "constrainedBy",
+        "from_ref": "TC_02",
+        "to_ref": "NR_01",
+        "confidence": 1.0
+      },
+      {
+        "type": "constrainedBy",
+        "from_ref": "TC_02",
+        "to_ref": "NR_02",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "chunk_provenance": [
+    {
+      "text": "Protective earth continuity measurements are made between the protective earth\nterminal and conductive, touchable parts of the coffee machine where dangerous\nvoltage could occur if the basic insulation was to fail.\nThis test assures that\nthe ground (earth) connection does not have an interruption between the plug and\ntouchable, conductive housing parts\nthe permissible ground resistance of those conductive, touchable parts is less than",
+      "section_id": "sec_024",
+      "section_title": "Description",
+      "page_start": 12,
+      "page_end": 12,
+      "char_start": 7295,
+      "char_end": 7733
+    },
+    {
+      "text": "Special test equipment is needed that complies with the regulations to perform protec\ntive earth continuity measurements. Detailed requirements and tolerances must be veri\nfied by your local authorities or measurement supplier in any case.\nFor legal reasons a repair or test report should be prepared and filed with following infor\nmation\ncustomer (name, address)\ntype and serial number of coffee machine\ndate of repair/test(s)\nperformed test(s)/measuring value(s)\nused test equipment\nsignature Ask Nespresso for\nrecommendations\nabout test equipment.\nCitiz service manual  142 FUNCTION TESTS",
+      "section_id": "sec_026",
+      "section_title": "Test equipment",
+      "page_start": 12,
+      "page_end": 13,
+      "char_start": 7735,
+      "char_end": 8326
+    },
+    {
+      "text": "This test sequence is\nnot applicable for cof\nfee machines with\ntwowire power cords (with\nout ground pin).\nDanger of electrocution!\nDo not plug in the coffee machine during the protective earth continuity\ntest.\nRead and observe safety instructions in user manual of test equipment.\n1) Connect black measuring cable to\nground pin of power plug with an alli\ngator clip (example shown: Swiss\npower plug).\nSymbolic illustration\nof test equipment.\n2) Switch on test equipment and select\nprotective earth continuity test.\nThe coffee machine\nCitiz & Co has 2 test\nholes to check both\nthermoblocks.\nTest holes on bottom of Citiz / Citiz & milk / Citiz & Co  platforms\n3) Insert tip of red test probe in test hole\nand touch thermoblock.\n4) Press \"measure\" button and read off\ndisplayed resistance.\nThe resistance must be lower than\n0.3Ohm.\n5) Fill in measured value(s) in a test\nreport.\nCitiz service manual  143 FUNCTION TESTS",
+      "section_id": "sec_027",
+      "section_title": "9.8.3 Test sequence",
+      "page_start": 13,
+      "page_end": 14,
+      "char_start": 8328,
+      "char_end": 9245
+    },
+    {
+      "text": "• Check/measure ground connection in platform (refer to page 75).\n• Check/measure ground connection on milk frother connector (refer to page 73 and\npage 124 for wiring diagram). Replace milk frother connector if necessary.\n• Clean ground contact on milk frother. Measure resistance between ground contact\nand jug of milk frother. Replace milk frother if necessary. Do not damage\ninside coating of\nmilk frother jug with\nthe probe tip.\nAdditional test for coffee machine\nCitiz & milk:\n1) Touch upper metallic part of milk\nfrother with red test probe.\n2) Press \"measure\" button and read off\ndisplayed resistance.\n3) Repeat measurement on another\nmetallic spot of milk frother for verifica\ntion.\nThe resistance must be lower than\n0.3Ohm.\n4) Fill in measured value(s) in a test\nreport.\nCitiz service manual  144 FUNCTION TESTS",
+      "section_id": "sec_028",
+      "section_title": "9.8.4 What to do if the protective earth continuity test fails",
+      "page_start": 14,
+      "page_end": 15,
+      "char_start": 9247,
+      "char_end": 10068
+    },
+    {
+      "text": "This test is necessary\nfor class 1 and 2 equipment (with/without  protective earth)\nafter a repair whenever a general disassembly of the platform and/or core unit was\nperformed.",
+      "section_id": "sec_030",
+      "section_title": "9.9.1 What coffee machines have to be tested and when?",
+      "page_start": 15,
+      "page_end": 15,
+      "char_start": 10070,
+      "char_end": 10247
+    },
+    {
+      "text": "Legal regulation\nIn case of a repair/modification of the coffee machine, the repair centre is bound by law\nto protect the user/consumer by\nrestoring the regular condition of the appliance and\nperforming the respective tests according to EN/IEC 603351 “Safety of household\nand similar electrical appliances” and national regulations (e.g. DIN VDE 0701).",
+      "section_id": "sec_031",
+      "section_title": "9.9.2 General",
+      "page_start": 15,
+      "page_end": 15,
+      "char_start": 10249,
+      "char_end": 10601
+    },
+    {
+      "text": "The insulation test\nassures that wiring and insulation of the coffee machine fullfill the normative require\nments after a repair,\nrates the insulation capability of the coffee machine,\nis a very dangerous test because of a high test voltage (500 V DC).\nFor the insulation test, phase and neutral wire are shunted at the power plug. Then a\ntest voltage is applied between phase/neutral and selected parts of the coffee machine.",
+      "section_id": "sec_032",
+      "section_title": "Description",
+      "page_start": 15,
+      "page_end": 15,
+      "char_start": 10603,
+      "char_end": 11029
+    }
+  ],
+  "timestamp": "2025-11-05T10:36:13.845969+00:00"
+}

@@ -2,6 +2,90 @@
   "extraction": {
     "entities": [
       {
+        "type": "MachineMode",
+        "name": "Citiz & Co",
+        "id": "MM_01",
+        "spans": [
+          {
+            "section_id": "sec_procedure_p7",
+            "section_title": "Citiz service manual  37 OPERATION",
+            "page_start": 7,
+            "page_end": 7,
+            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+          },
+          {
+            "section_id": "sec_procedure_p8",
+            "section_title": "Citiz service manual  38 MAINTENANCE",
+            "page_start": 8,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+          },
+          {
+            "section_id": "sec_procedure_p9",
+            "section_title": "Citiz service manual  39 MAINTENANCE",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+          },
+          {
+            "section_id": "sec_procedure_p10",
+            "section_title": "Citiz service manual  40 MAINTENANCE",
+            "page_start": 10,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+          },
+          {
+            "section_id": "sec_generic_p11",
+            "section_title": "Operational content (page 11)",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Operational content (page 11)... (p.11-11)"
+          }
+        ]
+      },
+      {
+        "type": "MachineMode",
+        "name": "Citiz & milk",
+        "id": "MM_02",
+        "spans": [
+          {
+            "section_id": "sec_procedure_p7",
+            "section_title": "Citiz service manual  37 OPERATION",
+            "page_start": 7,
+            "page_end": 7,
+            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+          },
+          {
+            "section_id": "sec_procedure_p8",
+            "section_title": "Citiz service manual  38 MAINTENANCE",
+            "page_start": 8,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+          },
+          {
+            "section_id": "sec_procedure_p9",
+            "section_title": "Citiz service manual  39 MAINTENANCE",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+          },
+          {
+            "section_id": "sec_procedure_p10",
+            "section_title": "Citiz service manual  40 MAINTENANCE",
+            "page_start": 10,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+          },
+          {
+            "section_id": "sec_generic_p11",
+            "section_title": "Operational content (page 11)",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Operational content (page 11)... (p.11-11)"
+          }
+        ]
+      },
+      {
         "type": "ProcessStep",
         "name": "Empty water system",
         "id": "PS_01",
@@ -129,7 +213,7 @@
       },
       {
         "type": "ProcessStep",
-        "name": "Milk frother of model Citiz & milk",
+        "name": "Descaling procedure",
         "id": "PS_04",
         "spans": [
           {
@@ -170,9 +254,93 @@
         ]
       },
       {
-        "type": "ProcessStep",
-        "name": "Descaling",
-        "id": "PS_05",
+        "type": "State",
+        "name": "Coffee machine not ready",
+        "id": "S_01",
+        "spans": [
+          {
+            "section_id": "sec_procedure_p7",
+            "section_title": "Citiz service manual  37 OPERATION",
+            "page_start": 7,
+            "page_end": 7,
+            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+          },
+          {
+            "section_id": "sec_procedure_p8",
+            "section_title": "Citiz service manual  38 MAINTENANCE",
+            "page_start": 8,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+          },
+          {
+            "section_id": "sec_procedure_p9",
+            "section_title": "Citiz service manual  39 MAINTENANCE",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+          },
+          {
+            "section_id": "sec_procedure_p10",
+            "section_title": "Citiz service manual  40 MAINTENANCE",
+            "page_start": 10,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+          },
+          {
+            "section_id": "sec_generic_p11",
+            "section_title": "Operational content (page 11)",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Operational content (page 11)... (p.11-11)"
+          }
+        ]
+      },
+      {
+        "type": "State",
+        "name": "Risk of electrical shock",
+        "id": "S_02",
+        "spans": [
+          {
+            "section_id": "sec_procedure_p7",
+            "section_title": "Citiz service manual  37 OPERATION",
+            "page_start": 7,
+            "page_end": 7,
+            "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+          },
+          {
+            "section_id": "sec_procedure_p8",
+            "section_title": "Citiz service manual  38 MAINTENANCE",
+            "page_start": 8,
+            "page_end": 8,
+            "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+          },
+          {
+            "section_id": "sec_procedure_p9",
+            "section_title": "Citiz service manual  39 MAINTENANCE",
+            "page_start": 9,
+            "page_end": 9,
+            "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+          },
+          {
+            "section_id": "sec_procedure_p10",
+            "section_title": "Citiz service manual  40 MAINTENANCE",
+            "page_start": 10,
+            "page_end": 10,
+            "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+          },
+          {
+            "section_id": "sec_generic_p11",
+            "section_title": "Operational content (page 11)",
+            "page_start": 11,
+            "page_end": 11,
+            "source_text": "Section: Operational content (page 11)... (p.11-11)"
+          }
+        ]
+      },
+      {
+        "type": "State",
+        "name": "Risk of damage",
+        "id": "S_03",
         "spans": [
           {
             "section_id": "sec_procedure_p7",
@@ -214,24 +382,46 @@
     ],
     "relations": [
       {
-        "type": "precedes",
-        "source": "PS_01",
-        "target": "PS_02"
+        "type": "appliesDuring",
+        "from_ref": "PS_01",
+        "to_ref": "MM_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_02",
+        "to_ref": "MM_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_03",
+        "to_ref": "MM_01",
+        "confidence": 0.9
+      },
+      {
+        "type": "appliesDuring",
+        "from_ref": "PS_04",
+        "to_ref": "MM_01",
+        "confidence": 0.9
       },
       {
         "type": "precedes",
-        "source": "PS_02",
-        "target": "PS_03"
+        "from_ref": "PS_01",
+        "to_ref": "S_01",
+        "confidence": 0.8
       },
       {
-        "type": "precedes",
-        "source": "PS_03",
-        "target": "PS_04"
+        "type": "verifies",
+        "from_ref": "S_02",
+        "to_ref": "PS_03",
+        "confidence": 0.85
       },
       {
-        "type": "precedes",
-        "source": "PS_04",
-        "target": "PS_05"
+        "type": "verifies",
+        "from_ref": "S_03",
+        "to_ref": "PS_04",
+        "confidence": 0.85
       }
     ]
   },
@@ -282,5 +472,5 @@
       "char_end": 10835
     }
   ],
-  "timestamp": "2025-11-04T13:48:57.390475+00:00"
+  "timestamp": "2025-11-05T10:34:57.494157+00:00"
 }

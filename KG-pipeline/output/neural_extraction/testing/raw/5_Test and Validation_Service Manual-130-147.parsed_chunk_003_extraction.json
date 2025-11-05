@@ -1,0 +1,168 @@
+{
+  "extraction": {
+    "entities": [
+      {
+        "type": "Equipment",
+        "name": "test equipment",
+        "id": "EQ_01",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_033",
+            "section_title": "Test equipment",
+            "page_start": 15,
+            "page_end": 16,
+            "source_text": "Section: Test equipment... (p.15-16)"
+          },
+          {
+            "section_id": "sec_034",
+            "section_title": "9.9.3 Test sequence",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: 9.9.3 Test sequence... (p.16-17)"
+          }
+        ]
+      },
+      {
+        "type": "Measurement",
+        "name": "insulation resistance",
+        "id": "M_01",
+        "confidence": 1.0,
+        "nominal_value": null,
+        "min_value": 300000,
+        "max_value": null,
+        "tolerance": null,
+        "unit_raw": "Ohm",
+        "spans": [
+          {
+            "section_id": "sec_033",
+            "section_title": "Test equipment",
+            "page_start": 15,
+            "page_end": 16,
+            "source_text": "Section: Test equipment... (p.15-16)"
+          },
+          {
+            "section_id": "sec_034",
+            "section_title": "9.9.3 Test sequence",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: 9.9.3 Test sequence... (p.16-17)"
+          }
+        ]
+      },
+      {
+        "type": "TestCase",
+        "name": "insulation test",
+        "id": "TC_01",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_033",
+            "section_title": "Test equipment",
+            "page_start": 15,
+            "page_end": 16,
+            "source_text": "Section: Test equipment... (p.15-16)"
+          },
+          {
+            "section_id": "sec_034",
+            "section_title": "9.9.3 Test sequence",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: 9.9.3 Test sequence... (p.16-17)"
+          }
+        ]
+      },
+      {
+        "type": "SafetyNotice",
+        "name": "Danger of electrical shock/short circuit",
+        "id": "SN_01",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_033",
+            "section_title": "Test equipment",
+            "page_start": 15,
+            "page_end": 16,
+            "source_text": "Section: Test equipment... (p.15-16)"
+          },
+          {
+            "section_id": "sec_034",
+            "section_title": "9.9.3 Test sequence",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: 9.9.3 Test sequence... (p.16-17)"
+          }
+        ]
+      },
+      {
+        "type": "AcceptanceCriterion",
+        "name": "insulation resistance must be higher than 300kOhm",
+        "id": "AC_01",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_033",
+            "section_title": "Test equipment",
+            "page_start": 15,
+            "page_end": 16,
+            "source_text": "Section: Test equipment... (p.15-16)"
+          },
+          {
+            "section_id": "sec_034",
+            "section_title": "9.9.3 Test sequence",
+            "page_start": 16,
+            "page_end": 17,
+            "source_text": "Section: 9.9.3 Test sequence... (p.16-17)"
+          }
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "type": "requires",
+        "from_ref": "TC_01",
+        "to_ref": "EQ_01",
+        "confidence": 1.0
+      },
+      {
+        "type": "validatedBy",
+        "from_ref": "TC_01",
+        "to_ref": "M_01",
+        "confidence": 1.0
+      },
+      {
+        "type": "constrainedBy",
+        "from_ref": "TC_01",
+        "to_ref": "AC_01",
+        "confidence": 1.0
+      },
+      {
+        "type": "refersTo",
+        "from_ref": "SN_01",
+        "to_ref": "EQ_01",
+        "confidence": 1.0
+      }
+    ]
+  },
+  "chunk_provenance": [
+    {
+      "text": "Special test equipment is needed that complies with the regulations to perform insula\ntion and withstanding voltage tests. Detailed requirements and tolerances must be veri\nfied with your local authorities or measurement supplier in any case.\nIdeally the test equipment has a national power socket for testing, so that the coffee\nmachine can plugged in directly. Otherwise a special shunt is necessary to connect the\nphase and neutral pin of the coffee machine’s power plug.\nFor legal reasons a repair or test report should be prepared and filed with following infor\nmation\ncustomer (name, address)\ntype and serial number of coffee machine\ndate of repair/test(s)\nperformed test(s)/measuring value(s), test points\nused test equipment\nsignature Ask Nespresso for\nrecommendations\nabout test equipment.\nCitiz service manual  145 FUNCTION TESTS",
+      "section_id": "sec_033",
+      "section_title": "Test equipment",
+      "page_start": 15,
+      "page_end": 16,
+      "char_start": 11031,
+      "char_end": 11870
+    },
+    {
+      "text": "Danger of electrical shock/short circuit!\nDo not plug in the coffee machine during insulation test.\nDanger of electrical shock!\nDo not touch tip of test probes.\nDo not touch metallic parts of coffee machine during test.\nRead and observe safety instructions in user manual of test equipment.\nA Swiss power plug is\nshown here as an\nexample.\nUse a short circuit\nplug or special alliga\ntor clips etc. as sub\nstitute for this test adapter.\n1) Connect the phase and neutral pin of\nthe power plug together with a test\nadapter (procured by the repair\ncentre).\n2) Connect the black measuring cable to\nthe test adapter (see image).\n3) Turn the ONOFF machine's main\nswitch on position I (ON).\nSymbolic illustration\nof test equipment.\n4) Switch on test equipment and select\nan insulation test voltage of 500 V DC.\nSome test equipment\ndisplays test passed\nor failed instead of\nthe insulation resistance.\n5) Touch closing handle with red test\nprobe.\n6) Press \"measure\" button.\n7) Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300,000Ohm).\nCitiz service manual  146 FUNCTION TESTS\nThe coffee machine\nCitiz & Co has 2 test\nholes to check both\nthermoblocks.\nTest holes on bottom of Citiz / Citiz & milk / Citiz & Co  platforms\n8) Insert tip of red test probe in test hole\nand touch thermoblock.\n9) Press \"measure\" button.\n10)Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300’000Ohm).\n11)Switch off test equipment.\n12)Short red with black test probe to\nmake sure that test voltage is dis\ncharged.\n13)Fill in results in a test report.\nAdditional tests for coffee machine\nCitiz & milk:\n1) Touch upper metallic part of milk\nfrother with red test probe.\n2) Press \"measure\" button.\n3) Read off displayed insulation resist\nance or test result.",
+      "section_id": "sec_034",
+      "section_title": "9.9.3 Test sequence",
+      "page_start": 16,
+      "page_end": 17,
+      "char_start": 11872,
+      "char_end": 13725
+    }
+  ],
+  "timestamp": "2025-11-05T10:36:24.774384+00:00"
+}

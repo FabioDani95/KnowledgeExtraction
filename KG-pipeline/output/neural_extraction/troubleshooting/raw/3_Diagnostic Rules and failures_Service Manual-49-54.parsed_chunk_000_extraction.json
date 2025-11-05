@@ -157,8 +157,30 @@
       },
       {
         "type": "RepairAction",
-        "name": "replace defective hoses and seals",
+        "name": "replace compact brewing unit",
         "id": "RA_04",
+        "confidence": 1,
+        "spans": [
+          {
+            "section_id": "sec_2",
+            "section_title": "Citiz service manual  50 TROUBLESHOOTING",
+            "page_start": 2,
+            "page_end": 2,
+            "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
+          },
+          {
+            "section_id": "sec_3",
+            "section_title": "Citiz service manual  51 TROUBLESHOOTING",
+            "page_start": 3,
+            "page_end": 3,
+            "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
+          }
+        ]
+      },
+      {
+        "type": "RepairAction",
+        "name": "replace defective hoses and seals",
+        "id": "RA_05",
         "confidence": 1,
         "spans": [
           {
@@ -202,7 +224,7 @@
       {
         "type": "RepairAction",
         "name": "descale and rinse coffee machine again",
-        "id": "RA_05",
+        "id": "RA_06",
         "confidence": 1,
         "spans": [
           {
@@ -223,7 +245,7 @@
       },
       {
         "type": "FailureMode",
-        "name": "milk frother damaged",
+        "name": "milk frother is damaged",
         "id": "FM_06",
         "confidence": 1,
         "spans": [
@@ -246,7 +268,7 @@
       {
         "type": "RepairAction",
         "name": "replace lid/seal",
-        "id": "RA_06",
+        "id": "RA_07",
         "confidence": 1,
         "spans": [
           {
@@ -267,7 +289,7 @@
       },
       {
         "type": "FailureMode",
-        "name": "jug badly scratched",
+        "name": "milk frother is not functioning",
         "id": "FM_07",
         "confidence": 1,
         "spans": [
@@ -290,29 +312,7 @@
       {
         "type": "RepairAction",
         "name": "replace milk frother",
-        "id": "RA_07",
-        "confidence": 1,
-        "spans": [
-          {
-            "section_id": "sec_2",
-            "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-            "page_start": 2,
-            "page_end": 2,
-            "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-          },
-          {
-            "section_id": "sec_3",
-            "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-            "page_start": 3,
-            "page_end": 3,
-            "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-          }
-        ]
-      },
-      {
-        "type": "FailureMode",
-        "name": "whisks damaged",
-        "id": "FM_08",
+        "id": "RA_08",
         "confidence": 1,
         "spans": [
           {
@@ -334,50 +334,6 @@
       {
         "type": "RepairAction",
         "name": "replace whisks",
-        "id": "RA_08",
-        "confidence": 1,
-        "spans": [
-          {
-            "section_id": "sec_2",
-            "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-            "page_start": 2,
-            "page_end": 2,
-            "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-          },
-          {
-            "section_id": "sec_3",
-            "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-            "page_start": 3,
-            "page_end": 3,
-            "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-          }
-        ]
-      },
-      {
-        "type": "FailureMode",
-        "name": "coffee machine not switch off automatically",
-        "id": "FM_09",
-        "confidence": 1,
-        "spans": [
-          {
-            "section_id": "sec_2",
-            "section_title": "Citiz service manual  50 TROUBLESHOOTING",
-            "page_start": 2,
-            "page_end": 2,
-            "source_text": "Section: Citiz service manual  50 TROUBLESHOOTING... (p.2-2)"
-          },
-          {
-            "section_id": "sec_3",
-            "section_title": "Citiz service manual  51 TROUBLESHOOTING",
-            "page_start": 3,
-            "page_end": 3,
-            "source_text": "Section: Citiz service manual  51 TROUBLESHOOTING... (p.3-3)"
-          }
-        ]
-      },
-      {
-        "type": "RepairAction",
-        "name": "replace connector on platform",
         "id": "RA_09",
         "confidence": 1,
         "spans": [
@@ -400,49 +356,58 @@
     ],
     "relations": [
       {
-        "source": "FM_01",
-        "target": "RA_01",
-        "relation": "mitigatedBy"
+        "type": "affects",
+        "from_ref": "FM_01",
+        "to_ref": "RA_01",
+        "confidence": 1
       },
       {
-        "source": "FM_02",
-        "target": "RA_02",
-        "relation": "mitigatedBy"
+        "type": "affects",
+        "from_ref": "FM_02",
+        "to_ref": "RA_02",
+        "confidence": 1
       },
       {
-        "source": "FM_03",
-        "target": "RA_03",
-        "relation": "mitigatedBy"
+        "type": "affects",
+        "from_ref": "FM_03",
+        "to_ref": "RA_03",
+        "confidence": 1
       },
       {
-        "source": "FM_04",
-        "target": "RA_04",
-        "relation": "mitigatedBy"
+        "type": "affects",
+        "from_ref": "FM_04",
+        "to_ref": "RA_04",
+        "confidence": 1
       },
       {
-        "source": "FM_05",
-        "target": "RA_05",
-        "relation": "mitigatedBy"
+        "type": "affects",
+        "from_ref": "FM_04",
+        "to_ref": "RA_05",
+        "confidence": 1
       },
       {
-        "source": "FM_06",
-        "target": "RA_06",
-        "relation": "mitigatedBy"
+        "type": "affects",
+        "from_ref": "FM_05",
+        "to_ref": "RA_06",
+        "confidence": 1
       },
       {
-        "source": "FM_07",
-        "target": "RA_07",
-        "relation": "mitigatedBy"
+        "type": "affects",
+        "from_ref": "FM_06",
+        "to_ref": "RA_07",
+        "confidence": 1
       },
       {
-        "source": "FM_08",
-        "target": "RA_08",
-        "relation": "mitigatedBy"
+        "type": "affects",
+        "from_ref": "FM_07",
+        "to_ref": "RA_08",
+        "confidence": 1
       },
       {
-        "source": "FM_09",
-        "target": "RA_09",
-        "relation": "mitigatedBy"
+        "type": "affects",
+        "from_ref": "FM_06",
+        "to_ref": "RA_09",
+        "confidence": 1
       }
     ]
   },
@@ -466,5 +431,5 @@
       "char_end": 2688
     }
   ],
-  "timestamp": "2025-11-04T13:49:31.355283+00:00"
+  "timestamp": "2025-11-05T10:35:29.216305+00:00"
 }

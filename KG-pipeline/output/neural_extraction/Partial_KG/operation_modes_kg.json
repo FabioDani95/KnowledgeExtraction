@@ -1,6 +1,6 @@
 {
   "document_code": "KG_OPERATION_MODES",
-  "ingestion_id": "6d041659-79b5-4cb1-8aa2-11e1f3ab3f29",
+  "ingestion_id": "4b934dfa-20e9-4581-a8da-6f71355aa859",
   "extraction_version": "neural_v1.2",
   "datasource_code": "NEURAL_EXTRACTION",
   "extractor": {
@@ -676,8 +676,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Press and hold small coffee button",
-      "id": "ns:Step/press_and_hold_small_coffee_button",
+      "name": "Press and hold coffee button",
+      "id": "ns:Step/press_and_hold_coffee_button",
       "confidence": 1.0,
       "spans": [
         {
@@ -808,8 +808,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Reset the programmed large and small coffee volumes to factory setting",
-      "id": "ns:Step/reset_the_programmed_large_and_small_coffee_volumes_to_factory_setting",
+      "name": "Reset the programmed volumes",
+      "id": "ns:Step/reset_the_programmed_volumes",
       "confidence": 1.0,
       "spans": [
         {
@@ -830,8 +830,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Indicate the resetting mode for 3 s",
-      "id": "ns:Step/indicate_the_resetting_mode_for_3_s",
+      "name": "Indicate the resetting mode",
+      "id": "ns:Step/indicate_the_resetting_mode",
       "confidence": 1.0,
       "spans": [
         {
@@ -918,6 +918,28 @@
     },
     {
       "type": "ProcessStep",
+      "name": "Switch off thermoblock",
+      "id": "ns:Step/switch_off_thermoblock",
+      "confidence": 1.0,
+      "spans": [
+        {
+          "section_id": "sec_mode_table_p5",
+          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
+          "page_start": 5,
+          "page_end": 5,
+          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+        },
+        {
+          "section_id": "sec_procedure_p6",
+          "section_title": "Citiz service manual  36 OPERATION",
+          "page_start": 6,
+          "page_end": 6,
+          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+        }
+      ]
+    },
+    {
+      "type": "ProcessStep",
       "name": "Switch off the machine",
       "id": "ns:Step/switch_off_the_machine",
       "confidence": 1.0,
@@ -939,46 +961,86 @@
       ]
     },
     {
-      "type": "ProcessStep",
-      "name": "Keep start button pressed for approx. 2sec",
-      "id": "ns:Step/keep_start_button_pressed_for_approx_2sec",
-      "confidence": 1.0,
+      "type": "MachineMode",
+      "name": "Citiz & Co",
+      "id": "ns:Mode/citiz_co",
       "spans": [
         {
-          "section_id": "sec_mode_table_p5",
-          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
-          "page_start": 5,
-          "page_end": 5,
-          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          "section_id": "sec_procedure_p7",
+          "section_title": "Citiz service manual  37 OPERATION",
+          "page_start": 7,
+          "page_end": 7,
+          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
         },
         {
-          "section_id": "sec_procedure_p6",
-          "section_title": "Citiz service manual  36 OPERATION",
-          "page_start": 6,
-          "page_end": 6,
-          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          "section_id": "sec_procedure_p8",
+          "section_title": "Citiz service manual  38 MAINTENANCE",
+          "page_start": 8,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+        },
+        {
+          "section_id": "sec_procedure_p9",
+          "section_title": "Citiz service manual  39 MAINTENANCE",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+        },
+        {
+          "section_id": "sec_procedure_p10",
+          "section_title": "Citiz service manual  40 MAINTENANCE",
+          "page_start": 10,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+        },
+        {
+          "section_id": "sec_generic_p11",
+          "section_title": "Operational content (page 11)",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Operational content (page 11)... (p.11-11)"
         }
       ]
     },
     {
-      "type": "ProcessStep",
-      "name": "Release 'large cup' button",
-      "id": "ns:Step/release_large_cup_button",
-      "confidence": 1.0,
+      "type": "MachineMode",
+      "name": "Citiz & milk",
+      "id": "ns:Mode/citiz_milk",
       "spans": [
         {
-          "section_id": "sec_mode_table_p5",
-          "section_title": "5.3.2 Machine modes of milk frother AERO3 6 Emptying mode",
-          "page_start": 5,
-          "page_end": 5,
-          "source_text": "Section: 5.3.2 Machine modes of milk frother AERO3 6 Emptying mode... (p.5-5)"
+          "section_id": "sec_procedure_p7",
+          "section_title": "Citiz service manual  37 OPERATION",
+          "page_start": 7,
+          "page_end": 7,
+          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
         },
         {
-          "section_id": "sec_procedure_p6",
-          "section_title": "Citiz service manual  36 OPERATION",
-          "page_start": 6,
-          "page_end": 6,
-          "source_text": "Section: Citiz service manual  36 OPERATION... (p.6-6)"
+          "section_id": "sec_procedure_p8",
+          "section_title": "Citiz service manual  38 MAINTENANCE",
+          "page_start": 8,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+        },
+        {
+          "section_id": "sec_procedure_p9",
+          "section_title": "Citiz service manual  39 MAINTENANCE",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+        },
+        {
+          "section_id": "sec_procedure_p10",
+          "section_title": "Citiz service manual  40 MAINTENANCE",
+          "page_start": 10,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+        },
+        {
+          "section_id": "sec_generic_p11",
+          "section_title": "Operational content (page 11)",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Operational content (page 11)... (p.11-11)"
         }
       ]
     },
@@ -1110,8 +1172,8 @@
     },
     {
       "type": "ProcessStep",
-      "name": "Milk frother of model Citiz & milk",
-      "id": "ns:Step/milk_frother_of_model_citiz_milk",
+      "name": "Descaling procedure",
+      "id": "ns:Step/descaling_procedure",
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -1151,9 +1213,93 @@
       ]
     },
     {
-      "type": "ProcessStep",
-      "name": "Descaling",
-      "id": "ns:Step/descaling",
+      "type": "State",
+      "name": "Coffee machine not ready",
+      "id": "ns:State/coffee_machine_not_ready",
+      "spans": [
+        {
+          "section_id": "sec_procedure_p7",
+          "section_title": "Citiz service manual  37 OPERATION",
+          "page_start": 7,
+          "page_end": 7,
+          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+        },
+        {
+          "section_id": "sec_procedure_p8",
+          "section_title": "Citiz service manual  38 MAINTENANCE",
+          "page_start": 8,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+        },
+        {
+          "section_id": "sec_procedure_p9",
+          "section_title": "Citiz service manual  39 MAINTENANCE",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+        },
+        {
+          "section_id": "sec_procedure_p10",
+          "section_title": "Citiz service manual  40 MAINTENANCE",
+          "page_start": 10,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+        },
+        {
+          "section_id": "sec_generic_p11",
+          "section_title": "Operational content (page 11)",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Operational content (page 11)... (p.11-11)"
+        }
+      ]
+    },
+    {
+      "type": "State",
+      "name": "Risk of electrical shock",
+      "id": "ns:State/risk_of_electrical_shock",
+      "spans": [
+        {
+          "section_id": "sec_procedure_p7",
+          "section_title": "Citiz service manual  37 OPERATION",
+          "page_start": 7,
+          "page_end": 7,
+          "source_text": "Section: Citiz service manual  37 OPERATION... (p.7-7)"
+        },
+        {
+          "section_id": "sec_procedure_p8",
+          "section_title": "Citiz service manual  38 MAINTENANCE",
+          "page_start": 8,
+          "page_end": 8,
+          "source_text": "Section: Citiz service manual  38 MAINTENANCE... (p.8-8)"
+        },
+        {
+          "section_id": "sec_procedure_p9",
+          "section_title": "Citiz service manual  39 MAINTENANCE",
+          "page_start": 9,
+          "page_end": 9,
+          "source_text": "Section: Citiz service manual  39 MAINTENANCE... (p.9-9)"
+        },
+        {
+          "section_id": "sec_procedure_p10",
+          "section_title": "Citiz service manual  40 MAINTENANCE",
+          "page_start": 10,
+          "page_end": 10,
+          "source_text": "Section: Citiz service manual  40 MAINTENANCE... (p.10-10)"
+        },
+        {
+          "section_id": "sec_generic_p11",
+          "section_title": "Operational content (page 11)",
+          "page_start": 11,
+          "page_end": 11,
+          "source_text": "Section: Operational content (page 11)... (p.11-11)"
+        }
+      ]
+    },
+    {
+      "type": "State",
+      "name": "Risk of damage",
+      "id": "ns:State/risk_of_damage",
       "spans": [
         {
           "section_id": "sec_procedure_p7",
@@ -1441,61 +1587,144 @@
           "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
         }
       ]
-    },
-    {
-      "type": "ProcessStep",
-      "name": "Press any button on a core unit to start pumps",
-      "id": "ns:Step/press_any_button_on_a_core_unit_to_start_pumps",
-      "confidence": 1.0,
-      "spans": [
-        {
-          "section_id": "sec_procedure_p12",
-          "section_title": "Citiz service manual  42 MAINTENANCE",
-          "page_start": 12,
-          "page_end": 12,
-          "source_text": "Section: Citiz service manual  42 MAINTENANCE... (p.12-12)"
-        },
-        {
-          "section_id": "sec_procedure_p13",
-          "section_title": "Citiz service manual  43 MAINTENANCE",
-          "page_start": 13,
-          "page_end": 13,
-          "source_text": "Section: Citiz service manual  43 MAINTENANCE... (p.13-13)"
-        },
-        {
-          "section_id": "sec_procedure_p14",
-          "section_title": "Citiz service manual  44 MAINTENANCE",
-          "page_start": 14,
-          "page_end": 14,
-          "source_text": "Section: Citiz service manual  44 MAINTENANCE... (p.14-14)"
-        },
-        {
-          "section_id": "sec_procedure_p15",
-          "section_title": "Citiz service manual  45 MAINTENANCE",
-          "page_start": 15,
-          "page_end": 15,
-          "source_text": "Section: Citiz service manual  45 MAINTENANCE... (p.15-15)"
-        },
-        {
-          "section_id": "sec_procedure_p16",
-          "section_title": "Citiz service manual  46 MAINTENANCE",
-          "page_start": 16,
-          "page_end": 16,
-          "source_text": "Section: Citiz service manual  46 MAINTENANCE... (p.16-16)"
-        },
-        {
-          "section_id": "sec_procedure_p17",
-          "section_title": "Citiz service manual  47 MAINTENANCE",
-          "page_start": 17,
-          "page_end": 17,
-          "source_text": "Section: Citiz service manual  47 MAINTENANCE... (p.17-17)"
-        }
-      ]
     }
   ],
-  "relations": [],
+  "relations": [
+    {
+      "type": "precedes",
+      "from_ref": "ns:Mode/heat_up_mode",
+      "to_ref": "ns:Mode/ready_mode",
+      "confidence": 1.0
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Mode/self_test_mode",
+      "to_ref": "ns:Mode/ready_mode",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:State/descaling_ready",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:State/descaling_pump_on",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/descaling_mode",
+      "to_ref": "ns:State/descaling_pump_off",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/brewing_mode",
+      "to_ref": "ns:State/emptying_evaporating",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/volume_brewing_mode",
+      "to_ref": "ns:State/emptying_evaporating",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/heat_up_mode",
+      "to_ref": "ns:State/power_save",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/heat_up_mode",
+      "to_ref": "ns:State/overheat",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Mode/heat_up_mode",
+      "to_ref": "ns:State/power_save_activation",
+      "confidence": 1.0
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/empty_water_system",
+      "to_ref": "ns:Mode/citiz_co",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/daily_maintenance_and_cleaning",
+      "to_ref": "ns:Mode/citiz_co",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/after_last_coffee_or_at_the_end_of_day",
+      "to_ref": "ns:Mode/citiz_co",
+      "confidence": 0.9
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/descaling_procedure",
+      "to_ref": "ns:Mode/citiz_co",
+      "confidence": 0.9
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/empty_water_system",
+      "to_ref": "ns:State/coffee_machine_not_ready",
+      "confidence": 0.8
+    },
+    {
+      "type": "verifies",
+      "from_ref": "ns:State/risk_of_electrical_shock",
+      "to_ref": "ns:Step/after_last_coffee_or_at_the_end_of_day",
+      "confidence": 0.85
+    },
+    {
+      "type": "verifies",
+      "from_ref": "ns:State/risk_of_damage",
+      "to_ref": "ns:Step/descaling_procedure",
+      "confidence": 0.85
+    },
+    {
+      "type": "appliesDuring",
+      "from_ref": "ns:Step/fill_water_tank_with_01l_decalcifier_and_05l_water",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 1.0
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/press_both_coffee_buttons_simultaneously_for_at_least_3sec",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 1.0
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/press_any_button_to_start_pump",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 1.0
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/rinse_and_clean_water_tank_thoroughly",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 1.0
+    },
+    {
+      "type": "precedes",
+      "from_ref": "ns:Step/eject_capsules_or_check_if_capsules_are_removed",
+      "to_ref": "ns:Mode/descaling_mode",
+      "confidence": 1.0
+    }
+  ],
   "provenance": {
-    "overall_confidence": 0.448,
+    "overall_confidence": 0.89,
     "documents_processed": [
       "2_Operations and Modality_Service Manual-31-48.parsed.json"
     ],
@@ -1618,85 +1847,33 @@
   },
   "quality": {
     "json_valid": false,
-    "entities_count": 48,
-    "relations_count": 0,
+    "entities_count": 50,
+    "relations_count": 22,
     "warnings": [
-      "Relation 0 missing 'from_ref'",
-      "Relation 0 missing 'to_ref'",
-      "Relation 0 missing 'confidence'",
-      "Relation 1 missing 'from_ref'",
-      "Relation 1 missing 'to_ref'",
-      "Relation 1 missing 'confidence'",
-      "Relation 2 missing 'from_ref'",
-      "Relation 2 missing 'to_ref'",
-      "Relation 2 missing 'confidence'",
-      "Relation 3 missing 'from_ref'",
-      "Relation 3 missing 'to_ref'",
-      "Relation 3 missing 'confidence'",
-      "Relation 4 missing 'from_ref'",
-      "Relation 4 missing 'to_ref'",
-      "Relation 4 missing 'confidence'",
-      "Relation 5 missing 'from_ref'",
-      "Relation 5 missing 'to_ref'",
-      "Relation 5 missing 'confidence'",
-      "Relation 6 missing 'from_ref'",
-      "Relation 6 missing 'to_ref'",
-      "Relation 6 missing 'confidence'",
-      "Relation 7 missing 'from_ref'",
-      "Relation 7 missing 'to_ref'",
-      "Relation 7 missing 'confidence'",
-      "Relation 8 missing 'from_ref'",
-      "Relation 8 missing 'to_ref'",
-      "Relation 8 missing 'confidence'",
-      "Relation 9 missing 'from_ref'",
-      "Relation 9 missing 'to_ref'",
-      "Relation 9 missing 'confidence'",
-      "Relation 10 missing 'from_ref'",
-      "Relation 10 missing 'to_ref'",
-      "Relation 10 missing 'confidence'",
-      "Relation 11 missing 'from_ref'",
-      "Relation 11 missing 'to_ref'",
-      "Relation 11 missing 'confidence'",
       "Entity 0 missing 'confidence'",
       "Entity 1 missing 'confidence'",
       "Entity 2 missing 'confidence'",
       "Entity 3 missing 'confidence'",
       "Entity 4 missing 'confidence'",
-      "Relation 0 missing 'from_ref'",
-      "Relation 0 missing 'to_ref'",
-      "Relation 0 missing 'confidence'",
-      "Relation 1 missing 'from_ref'",
-      "Relation 1 missing 'to_ref'",
-      "Relation 1 missing 'confidence'",
-      "Relation 2 missing 'from_ref'",
-      "Relation 2 missing 'to_ref'",
-      "Relation 2 missing 'confidence'",
-      "Relation 3 missing 'from_ref'",
-      "Relation 3 missing 'to_ref'",
-      "Relation 3 missing 'confidence'",
-      "Relation 0 missing 'from_ref'",
-      "Relation 0 missing 'to_ref'",
-      "Relation 0 missing 'confidence'",
-      "Relation 1 missing 'from_ref'",
-      "Relation 1 missing 'to_ref'",
-      "Relation 1 missing 'confidence'",
-      "Relation 2 missing 'from_ref'",
-      "Relation 2 missing 'to_ref'",
-      "Relation 2 missing 'confidence'",
-      "Relation 3 missing 'from_ref'",
-      "Relation 3 missing 'to_ref'",
-      "Relation 3 missing 'confidence'"
+      "Entity 5 missing 'confidence'",
+      "Entity 6 missing 'confidence'",
+      "Entity 7 missing 'confidence'",
+      "Entity 8 missing 'confidence'"
     ],
-    "overall_confidence": 0.448,
-    "avg_entity_confidence": 0.896,
-    "avg_relation_confidence": 0,
+    "overall_confidence": 0.89,
+    "avg_entity_confidence": 0.82,
+    "avg_relation_confidence": 0.959,
     "entity_type_distribution": {
-      "MachineMode": 13,
-      "State": 9,
-      "ProcessStep": 26
+      "MachineMode": 15,
+      "State": 12,
+      "ProcessStep": 23
     },
-    "relation_type_distribution": {},
+    "relation_type_distribution": {
+      "precedes": 7,
+      "appliesDuring": 13,
+      "verifies": 2
+    },
     "profile": "operation_modes",
-    "generated_at": "2025-11-04T13:49:08.159380+00:00"
+    "generated_at": "2025-11-05T10:35:07.398468+00:00"
   }
 }

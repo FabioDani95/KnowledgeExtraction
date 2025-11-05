@@ -440,63 +440,63 @@
     "relations": [
       {
         "type": "precedes",
-        "source": "MM_01",
-        "target": "MM_03"
+        "from_ref": "MM_01",
+        "to_ref": "MM_03",
+        "confidence": 1.0
       },
       {
         "type": "precedes",
-        "source": "MM_02",
-        "target": "MM_03"
+        "from_ref": "MM_02",
+        "to_ref": "MM_03",
+        "confidence": 1.0
       },
       {
         "type": "appliesDuring",
-        "source": "MM_04",
-        "target": "S_01"
+        "from_ref": "MM_06",
+        "to_ref": "S_01",
+        "confidence": 1.0
       },
       {
         "type": "appliesDuring",
-        "source": "MM_05",
-        "target": "S_01"
+        "from_ref": "MM_06",
+        "to_ref": "S_02",
+        "confidence": 1.0
       },
       {
         "type": "appliesDuring",
-        "source": "MM_06",
-        "target": "S_02"
+        "from_ref": "MM_06",
+        "to_ref": "S_03",
+        "confidence": 1.0
       },
       {
         "type": "appliesDuring",
-        "source": "MM_06",
-        "target": "S_03"
+        "from_ref": "MM_04",
+        "to_ref": "S_04",
+        "confidence": 1.0
       },
       {
         "type": "appliesDuring",
-        "source": "MM_06",
-        "target": "S_04"
+        "from_ref": "MM_05",
+        "to_ref": "S_04",
+        "confidence": 1.0
       },
       {
         "type": "appliesDuring",
-        "source": "MM_06",
-        "target": "S_05"
+        "from_ref": "MM_01",
+        "to_ref": "S_07",
+        "confidence": 1.0
       },
       {
         "type": "appliesDuring",
-        "source": "MM_06",
-        "target": "S_06"
+        "from_ref": "MM_01",
+        "to_ref": "S_08",
+        "confidence": 1.0
       },
       {
         "type": "appliesDuring",
-        "source": "MM_06",
-        "target": "S_07"
-      },
-      {
-        "type": "appliesDuring",
-        "source": "MM_06",
-        "target": "S_08"
-      },
-      {
-        "type": "appliesDuring",
-        "source": "MM_06",
-        "target": "S_09"
+        "from_ref": "MM_01",
+        "to_ref": "S_09",
+        "confidence": 1.0
       }
     ]
   },
@@ -529,5 +529,5 @@
       "char_end": 3551
     }
   ],
-  "timestamp": "2025-11-04T13:48:16.654517+00:00"
+  "timestamp": "2025-11-05T10:34:11.673543+00:00"
 }

@@ -2,30 +2,8 @@
   "extraction": {
     "entities": [
       {
-        "type": "RepairAction",
-        "name": "disassembly",
-        "id": "RA_01",
-        "confidence": 1.0,
-        "spans": [
-          {
-            "section_id": "sec_4",
-            "section_title": "Citiz service manual  52 REPAIRS",
-            "page_start": 4,
-            "page_end": 4,
-            "source_text": "Section: Citiz service manual  52 REPAIRS... (p.4-4)"
-          },
-          {
-            "section_id": "sec_5",
-            "section_title": "Citiz service manual  53 REPAIRS",
-            "page_start": 5,
-            "page_end": 5,
-            "source_text": "Section: Citiz service manual  53 REPAIRS... (p.5-5)"
-          }
-        ]
-      },
-      {
         "type": "Tool",
-        "name": "disassembly tool",
+        "name": "special disassembly tool",
         "id": "T_01",
         "confidence": 1.0,
         "spans": [
@@ -47,7 +25,7 @@
       },
       {
         "type": "FailureMode",
-        "name": "risk of fatal electrical shock",
+        "name": "delicate snap connections",
         "id": "FM_01",
         "confidence": 1.0,
         "spans": [
@@ -69,8 +47,30 @@
       },
       {
         "type": "FailureMode",
-        "name": "danger of burns",
+        "name": "risk of fatal electrical shock",
         "id": "FM_02",
+        "confidence": 1.0,
+        "spans": [
+          {
+            "section_id": "sec_4",
+            "section_title": "Citiz service manual  52 REPAIRS",
+            "page_start": 4,
+            "page_end": 4,
+            "source_text": "Section: Citiz service manual  52 REPAIRS... (p.4-4)"
+          },
+          {
+            "section_id": "sec_5",
+            "section_title": "Citiz service manual  53 REPAIRS",
+            "page_start": 5,
+            "page_end": 5,
+            "source_text": "Section: Citiz service manual  53 REPAIRS... (p.5-5)"
+          }
+        ]
+      },
+      {
+        "type": "FailureMode",
+        "name": "danger of burns",
+        "id": "FM_03",
         "confidence": 1.0,
         "spans": [
           {
@@ -92,19 +92,16 @@
     ],
     "relations": [
       {
-        "source": "FM_01",
-        "target": "RA_01",
-        "relation": "affects"
+        "type": "requiresTool",
+        "from_ref": "FM_01",
+        "to_ref": "T_01",
+        "confidence": 1.0
       },
       {
-        "source": "FM_02",
-        "target": "RA_01",
-        "relation": "affects"
-      },
-      {
-        "source": "RA_01",
-        "target": "T_01",
-        "relation": "requiresTool"
+        "type": "affects",
+        "from_ref": "FM_02",
+        "to_ref": "FM_03",
+        "confidence": 1.0
       }
     ]
   },
@@ -128,5 +125,5 @@
       "char_end": 4663
     }
   ],
-  "timestamp": "2025-11-04T13:49:37.546598+00:00"
+  "timestamp": "2025-11-05T10:35:35.231108+00:00"
 }

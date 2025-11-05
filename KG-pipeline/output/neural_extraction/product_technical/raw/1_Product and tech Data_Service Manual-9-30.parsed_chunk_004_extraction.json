@@ -4,7 +4,7 @@
       {
         "id": "PR_01",
         "type": "Product",
-        "name": "Milk Frother",
+        "name": "Coffee Machine",
         "confidence": 0.95,
         "spans": [
           {
@@ -244,251 +244,11 @@
         ]
       },
       {
-        "id": "UN_01",
-        "type": "Unit",
-        "name": "dB(A)",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_4_2_1_various_data",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_mains_voltage",
-            "section_title": "Mains voltage",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Mains voltage... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_the_milk_frother",
-            "section_title": "The milk frother",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: The milk frother... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_capacity",
-            "section_title": "Capacity",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Capacity... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_unit",
-            "section_title": "Unit",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Unit... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_intensity_of_current",
-            "section_title": "Intensity of current",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Intensity of current... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_2",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_3",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_performance_data",
-            "section_title": "Performance data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Performance data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_preparation_times",
-            "section_title": "Preparation times",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Preparation times... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_temperature",
-            "section_title": "Temperature",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Temperature... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_various_data_2",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_4",
-            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
-            "page_start": 21,
-            "page_end": 21,
-            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
-          }
-        ]
-      },
-      {
         "id": "PS_02",
         "type": "ParameterSpec",
         "name": "Preheating time",
         "nominal_value": 60,
         "unit_raw": "sec",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_4_2_1_various_data",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_mains_voltage",
-            "section_title": "Mains voltage",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Mains voltage... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_the_milk_frother",
-            "section_title": "The milk frother",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: The milk frother... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_capacity",
-            "section_title": "Capacity",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Capacity... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_unit",
-            "section_title": "Unit",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Unit... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_intensity_of_current",
-            "section_title": "Intensity of current",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Intensity of current... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_2",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_3",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_performance_data",
-            "section_title": "Performance data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Performance data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_preparation_times",
-            "section_title": "Preparation times",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Preparation times... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_temperature",
-            "section_title": "Temperature",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Temperature... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_various_data_2",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_4",
-            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
-            "page_start": 21,
-            "page_end": 21,
-            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
-          }
-        ]
-      },
-      {
-        "id": "UN_02",
-        "type": "Unit",
-        "name": "sec",
         "confidence": 0.9,
         "spans": [
           {
@@ -728,126 +488,6 @@
         ]
       },
       {
-        "id": "UN_03",
-        "type": "Unit",
-        "name": "m",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_4_2_1_various_data",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_mains_voltage",
-            "section_title": "Mains voltage",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Mains voltage... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_the_milk_frother",
-            "section_title": "The milk frother",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: The milk frother... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_capacity",
-            "section_title": "Capacity",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Capacity... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_unit",
-            "section_title": "Unit",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Unit... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_intensity_of_current",
-            "section_title": "Intensity of current",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Intensity of current... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_2",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_3",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_performance_data",
-            "section_title": "Performance data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Performance data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_preparation_times",
-            "section_title": "Preparation times",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Preparation times... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_temperature",
-            "section_title": "Temperature",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Temperature... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_various_data_2",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_4",
-            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
-            "page_start": 21,
-            "page_end": 21,
-            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
-          }
-        ]
-      },
-      {
         "id": "PS_04",
         "type": "ParameterSpec",
         "name": "Mains voltage Europe",
@@ -970,251 +610,11 @@
         ]
       },
       {
-        "id": "UN_04",
-        "type": "Unit",
-        "name": "V",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_4_2_1_various_data",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_mains_voltage",
-            "section_title": "Mains voltage",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Mains voltage... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_the_milk_frother",
-            "section_title": "The milk frother",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: The milk frother... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_capacity",
-            "section_title": "Capacity",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Capacity... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_unit",
-            "section_title": "Unit",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Unit... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_intensity_of_current",
-            "section_title": "Intensity of current",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Intensity of current... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_2",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_3",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_performance_data",
-            "section_title": "Performance data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Performance data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_preparation_times",
-            "section_title": "Preparation times",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Preparation times... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_temperature",
-            "section_title": "Temperature",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Temperature... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_various_data_2",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_4",
-            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
-            "page_start": 21,
-            "page_end": 21,
-            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
-          }
-        ]
-      },
-      {
         "id": "PS_05",
         "type": "ParameterSpec",
-        "name": "Power rating (220-240 V)",
-        "nominal_value": 490,
+        "name": "Power rating Europe",
+        "nominal_value": 410,
         "unit_raw": "W",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_4_2_1_various_data",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_mains_voltage",
-            "section_title": "Mains voltage",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Mains voltage... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_the_milk_frother",
-            "section_title": "The milk frother",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: The milk frother... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_capacity",
-            "section_title": "Capacity",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Capacity... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_unit",
-            "section_title": "Unit",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Unit... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_intensity_of_current",
-            "section_title": "Intensity of current",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Intensity of current... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_2",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_3",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_performance_data",
-            "section_title": "Performance data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Performance data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_preparation_times",
-            "section_title": "Preparation times",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Preparation times... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_temperature",
-            "section_title": "Temperature",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Temperature... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_various_data_2",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_4",
-            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
-            "page_start": 21,
-            "page_end": 21,
-            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
-          }
-        ]
-      },
-      {
-        "id": "UN_05",
-        "type": "Unit",
-        "name": "W",
         "confidence": 0.9,
         "spans": [
           {
@@ -1334,129 +734,9 @@
       {
         "id": "PS_06",
         "type": "ParameterSpec",
-        "name": "Hot milk capacity",
+        "name": "Capacity Hot milk",
         "nominal_value": 240,
         "unit_raw": "ml",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_4_2_1_various_data",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_mains_voltage",
-            "section_title": "Mains voltage",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Mains voltage... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_the_milk_frother",
-            "section_title": "The milk frother",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: The milk frother... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_capacity",
-            "section_title": "Capacity",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Capacity... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_unit",
-            "section_title": "Unit",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Unit... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_intensity_of_current",
-            "section_title": "Intensity of current",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Intensity of current... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_2",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_3",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_performance_data",
-            "section_title": "Performance data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Performance data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_preparation_times",
-            "section_title": "Preparation times",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Preparation times... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_temperature",
-            "section_title": "Temperature",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Temperature... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_various_data_2",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_4",
-            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
-            "page_start": 21,
-            "page_end": 21,
-            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
-          }
-        ]
-      },
-      {
-        "id": "UN_06",
-        "type": "Unit",
-        "name": "ml",
         "confidence": 0.9,
         "spans": [
           {
@@ -1696,6 +976,848 @@
         ]
       },
       {
+        "id": "PS_08",
+        "type": "ParameterSpec",
+        "name": "Temperature Hot milk",
+        "nominal_value": 70,
+        "unit_raw": "°C",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_various_data",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage",
+            "section_title": "Mains voltage",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_the_milk_frother",
+            "section_title": "The milk frother",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: The milk frother... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capacity",
+            "section_title": "Capacity",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capacity... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_unit",
+            "section_title": "Unit",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Unit... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_intensity_of_current",
+            "section_title": "Intensity of current",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Intensity of current... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_2",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_3",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_performance_data",
+            "section_title": "Performance data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Performance data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_preparation_times",
+            "section_title": "Preparation times",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Preparation times... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperature",
+            "section_title": "Temperature",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperature... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_various_data_2",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_4",
+            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "UN_01",
+        "type": "Unit",
+        "name": "dB(A)",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_various_data",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage",
+            "section_title": "Mains voltage",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_the_milk_frother",
+            "section_title": "The milk frother",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: The milk frother... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capacity",
+            "section_title": "Capacity",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capacity... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_unit",
+            "section_title": "Unit",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Unit... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_intensity_of_current",
+            "section_title": "Intensity of current",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Intensity of current... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_2",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_3",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_performance_data",
+            "section_title": "Performance data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Performance data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_preparation_times",
+            "section_title": "Preparation times",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Preparation times... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperature",
+            "section_title": "Temperature",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperature... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_various_data_2",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_4",
+            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "UN_02",
+        "type": "Unit",
+        "name": "sec",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_various_data",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage",
+            "section_title": "Mains voltage",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_the_milk_frother",
+            "section_title": "The milk frother",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: The milk frother... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capacity",
+            "section_title": "Capacity",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capacity... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_unit",
+            "section_title": "Unit",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Unit... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_intensity_of_current",
+            "section_title": "Intensity of current",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Intensity of current... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_2",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_3",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_performance_data",
+            "section_title": "Performance data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Performance data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_preparation_times",
+            "section_title": "Preparation times",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Preparation times... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperature",
+            "section_title": "Temperature",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperature... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_various_data_2",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_4",
+            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "UN_03",
+        "type": "Unit",
+        "name": "m",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_various_data",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage",
+            "section_title": "Mains voltage",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_the_milk_frother",
+            "section_title": "The milk frother",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: The milk frother... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capacity",
+            "section_title": "Capacity",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capacity... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_unit",
+            "section_title": "Unit",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Unit... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_intensity_of_current",
+            "section_title": "Intensity of current",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Intensity of current... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_2",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_3",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_performance_data",
+            "section_title": "Performance data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Performance data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_preparation_times",
+            "section_title": "Preparation times",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Preparation times... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperature",
+            "section_title": "Temperature",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperature... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_various_data_2",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_4",
+            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "UN_04",
+        "type": "Unit",
+        "name": "V",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_various_data",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage",
+            "section_title": "Mains voltage",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_the_milk_frother",
+            "section_title": "The milk frother",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: The milk frother... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capacity",
+            "section_title": "Capacity",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capacity... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_unit",
+            "section_title": "Unit",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Unit... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_intensity_of_current",
+            "section_title": "Intensity of current",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Intensity of current... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_2",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_3",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_performance_data",
+            "section_title": "Performance data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Performance data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_preparation_times",
+            "section_title": "Preparation times",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Preparation times... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperature",
+            "section_title": "Temperature",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperature... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_various_data_2",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_4",
+            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "UN_05",
+        "type": "Unit",
+        "name": "W",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_various_data",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage",
+            "section_title": "Mains voltage",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_the_milk_frother",
+            "section_title": "The milk frother",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: The milk frother... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capacity",
+            "section_title": "Capacity",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capacity... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_unit",
+            "section_title": "Unit",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Unit... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_intensity_of_current",
+            "section_title": "Intensity of current",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Intensity of current... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_2",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_3",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_performance_data",
+            "section_title": "Performance data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Performance data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_preparation_times",
+            "section_title": "Preparation times",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Preparation times... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperature",
+            "section_title": "Temperature",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperature... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_various_data_2",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_4",
+            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
+          }
+        ]
+      },
+      {
+        "id": "UN_06",
+        "type": "Unit",
+        "name": "ml",
+        "confidence": 0.9,
+        "spans": [
+          {
+            "section_id": "sec_4_2_1_various_data",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_mains_voltage",
+            "section_title": "Mains voltage",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Mains voltage... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_the_milk_frother",
+            "section_title": "The milk frother",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: The milk frother... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_capacity",
+            "section_title": "Capacity",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Capacity... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_unit",
+            "section_title": "Unit",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Unit... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_intensity_of_current",
+            "section_title": "Intensity of current",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Intensity of current... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_2",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
+            "section_title": "Measured power W  452 506 407 445 485",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_consumption_for_3",
+            "section_title": "Consumption for",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Consumption for... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_performance_data",
+            "section_title": "Performance data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Performance data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_preparation_times",
+            "section_title": "Preparation times",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Preparation times... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_temperature",
+            "section_title": "Temperature",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Temperature... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_1_various_data_2",
+            "section_title": "Various data",
+            "page_start": 17,
+            "page_end": 21,
+            "source_text": "Section: Various data... (p.17-21)"
+          },
+          {
+            "section_id": "sec_4_2_4",
+            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
+            "page_start": 21,
+            "page_end": 21,
+            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
+          }
+        ]
+      },
+      {
         "id": "UN_07",
         "type": "Unit",
         "name": "rpm",
@@ -1816,131 +1938,9 @@
         ]
       },
       {
-        "id": "PS_08",
-        "type": "ParameterSpec",
-        "name": "Weight without water",
-        "nominal_value": 3.4,
-        "unit_raw": "kg",
-        "confidence": 0.9,
-        "spans": [
-          {
-            "section_id": "sec_4_2_1_various_data",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_mains_voltage",
-            "section_title": "Mains voltage",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Mains voltage... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_the_milk_frother",
-            "section_title": "The milk frother",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: The milk frother... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_capacity",
-            "section_title": "Capacity",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Capacity... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_unit",
-            "section_title": "Unit",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Unit... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_intensity_of_current",
-            "section_title": "Intensity of current",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Intensity of current... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_2",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_measured_power_w_452_506_407_445_485_2",
-            "section_title": "Measured power W  452 506 407 445 485",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Measured power W  452 506 407 445 485... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_consumption_for_3",
-            "section_title": "Consumption for",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Consumption for... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_performance_data",
-            "section_title": "Performance data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Performance data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_preparation_times",
-            "section_title": "Preparation times",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Preparation times... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_temperature",
-            "section_title": "Temperature",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Temperature... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_1_various_data_2",
-            "section_title": "Various data",
-            "page_start": 17,
-            "page_end": 21,
-            "source_text": "Section: Various data... (p.17-21)"
-          },
-          {
-            "section_id": "sec_4_2_4",
-            "section_title": "4.2.4 Dimensions and weight ­ model Citiz & milk",
-            "page_start": 21,
-            "page_end": 21,
-            "source_text": "Section: 4.2.4 Dimensions and weight ­ model Citiz & milk... (p.21-21)"
-          }
-        ]
-      },
-      {
         "id": "UN_08",
         "type": "Unit",
-        "name": "kg",
+        "name": "°C",
         "confidence": 0.9,
         "spans": [
           {
@@ -2303,5 +2303,5 @@
       "char_end": 19301
     }
   ],
-  "timestamp": "2025-11-04T13:47:31.528676+00:00"
+  "timestamp": "2025-11-05T10:33:31.190318+00:00"
 }

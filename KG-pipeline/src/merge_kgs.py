@@ -766,6 +766,23 @@ def generate_quality_report(
         if r.get('type') == 'hasUnit' and r.get('from_ref')
     } & parameter_spec_ids
 
+    testing_case_ids = {
+        e.get('id')
+        for e in entities
+        if e.get('id') and e.get('type') in {'TestCase'}
+    }
+    testing_cases_with_measurements = {
+        r.get('from_ref')
+        for r in relations
+        if r.get('type') == 'validatedBy' and r.get('from_ref')
+    } & testing_case_ids
+
+    testing_cases_with_acceptance = {
+        r.get('from_ref')
+        for r in relations
+        if r.get('type') == 'constrainedBy' and r.get('from_ref')
+    } & testing_case_ids
+
     coverage_metrics = {
         'product_component_hasSpec': {
             'total_entities': len(product_component_ids),
@@ -781,6 +798,22 @@ def generate_quality_report(
             'coverage_ratio': (
                 round(len(parameter_spec_with_unit) / len(parameter_spec_ids), 3)
                 if parameter_spec_ids else 0.0
+            ),
+        },
+        'testcase_validatedBy': {
+            'total_entities': len(testing_case_ids),
+            'with_relation': len(testing_cases_with_measurements),
+            'coverage_ratio': (
+                round(len(testing_cases_with_measurements) / len(testing_case_ids), 3)
+                if testing_case_ids else 0.0
+            ),
+        },
+        'testcase_constrainedBy': {
+            'total_entities': len(testing_case_ids),
+            'with_relation': len(testing_cases_with_acceptance),
+            'coverage_ratio': (
+                round(len(testing_cases_with_acceptance) / len(testing_case_ids), 3)
+                if testing_case_ids else 0.0
             ),
         },
     }
@@ -1114,6 +1147,23 @@ def merge_kgs(
         json.dump(merged_kg, f, indent=2, ensure_ascii=False)
 
     print(f"  Output written to: {output_path_obj}")
+    print("\n[Summary] Merged KG statistics")
+    print(f" - Entities: {quality_report.get('entities_count', len(deduplicated_entities))}")
+    print(f" - Relations: {quality_report.get('relations_count', len(fixed_relations))}")
+    print(f" - Distinct entity types: {len(quality_report.get('entity_type_distribution', {}))}")
+    print(f" - Distinct relation types: {len(quality_report.get('relation_type_distribution', {}))}")
+    print(f" - Average entity confidence: {quality_report.get('avg_entity_confidence', 0.0):.3f}")
+    print(f" - Average relation confidence: {quality_report.get('avg_relation_confidence', 0.0):.3f}")
+    print(f" - Duplicate entities collapsed: {quality_report.get('duplicates_collapsed', {}).get('entities', 0)}")
+    print(f" - Duplicate relations removed: {quality_report.get('duplicates_collapsed', {}).get('relations', 0)}")
+    coverage = quality_report.get('coverage_metrics', {})
+    if coverage:
+        print(" - Coverage metrics:")
+        for name, metric in coverage.items():
+            total = metric.get('total_entities')
+            covered = metric.get('with_relation')
+            ratio = metric.get('coverage_ratio')
+            print(f"   * {name}: {covered}/{total} ({ratio:.3f})")
     print("\n" + "=" * 80)
     print("KG Symbolic Merge - Completed Successfully")
     print("=" * 80)

@@ -1,0 +1,1401 @@
+{
+  "document_code": "5_TEST_AND_VALIDATION_SERVICE_MANUAL_130_147",
+  "title": "5_Test and Validation_Service Manual-130-147",
+  "datasource_code": "SRC_DOCS_PIPELINE5",
+  "language": "en",
+  "ingestion_id": "5141e1a0-e02b-46db-bc33-c726a437fe58",
+  "created_utc": "2025-11-05T09:48:50.665631Z",
+  "source": {
+    "uri": "/Users/fabio.daniele/Library/CloudStorage/OneDrive-Personal/Work/PhD/PhD_USI/Framework/Pipeline5_Document Knowledge Extraction/KnowledgeExtraction/KG-pipeline/source/testing/5_Test and Validation_Service Manual-130-147.pdf",
+    "filename": "5_Test and Validation_Service Manual-130-147.pdf",
+    "mime_type": "application/pdf",
+    "checksum_sha256": "281ead97449ca8c59f26d4038f7e05e35c808b2e5e3588139eb7befdf6c41513",
+    "page_count": 18
+  },
+  "metadata": {
+    "product_hint": null,
+    "model_hint": "Citiz",
+    "brand_hint": "Nespresso",
+    "doc_type": "service manual",
+    "version": null,
+    "year": null
+  },
+  "sections": [
+    {
+      "section_id": "sec_001",
+      "parent_id": null,
+      "title": "Section 1",
+      "title_normalized": "section_1",
+      "role": "main",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 2,
+      "page_end": 2,
+      "char_start": 0,
+      "char_end": 40,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_001_tbl_01",
+          "page": 2,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,131 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [],
+      "steps": [],
+      "applicability": [],
+      "cross_references": [],
+      "text": "Citiz service manual  131 FUNCTION TESTS"
+    },
+    {
+      "section_id": "sec_002",
+      "parent_id": null,
+      "title": "9.2.2 Citiz pressure gauge adapter",
+      "title_normalized": "922_citiz_pressure_gauge_adapter",
+      "role": "main",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 2,
+      "page_end": 3,
+      "char_start": 41,
+      "char_end": 502,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_002_tbl_01",
+          "page": 2,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,132 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [],
+      "steps": [
+        "• A connecting unit (3) with a sealing cone that is inserted in the capsule cage of the",
+        "• A hand actuated fixation unit (4) to lock and seal the complete pressure gauge",
+        "2) Operating lever 3) Connecting unit",
+        "4) Fixation unit"
+      ],
+      "applicability": [],
+      "cross_references": [],
+      "text": "This pressure gauge adapter is designed for the Citiz coffee machines.\nThe pressure gauge adapter has 2 parts:\n• A connecting unit (3) with a sealing cone that is inserted in the capsule cage of the\nbrewing unit.\n• A hand actuated fixation unit (4) to lock and seal the complete pressure gauge\nadapter in the brewing unit. 1) Quick action coupling for pressure\nhose\n2) Operating lever 3) Connecting unit\n4) Fixation unit\nCitiz service manual  132 FUNCTION TESTS"
+    },
+    {
+      "section_id": "sec_003",
+      "parent_id": null,
+      "title": "9.3 Measure flow rate",
+      "title_normalized": "93_measure_flow_rate",
+      "role": "main",
+      "level": 2,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 3,
+      "page_end": 4,
+      "char_start": 504,
+      "char_end": 970,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_003_tbl_01",
+          "page": 3,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,133 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [],
+      "steps": [
+        "1) Fill and insert water tank.",
+        "2) Open closing handle.",
+        "3) Insert connecting unit of pressure",
+        "4) Insert fixation unit of pressure adapter",
+        "5) Press down operating lever.",
+        "6) Connect pressure hose to pressure",
+        "7) Place a measuring cup under the drain"
+      ],
+      "applicability": [],
+      "cross_references": [],
+      "text": "The pressure adapter\nmust sit firmly in the\ncapsule bay.\n1) Fill and insert water tank.\n2) Open closing handle.\n3) Insert connecting unit of pressure\nadapter into capsule bay. Push back\nsealing cone into capsule cage.\n4) Insert fixation unit of pressure adapter\ninto capsule bay.\n5) Press down operating lever.\n6) Connect pressure hose to pressure\ntester.\n7) Place a measuring cup under the drain\nhose of the pressure tester.\nCitiz service manual  133 FUNCTION TESTS"
+    },
+    {
+      "section_id": "sec_004",
+      "parent_id": null,
+      "title": "9.4 Pressure and leakage checks",
+      "title_normalized": "94_pressure_and_leakage_checks",
+      "role": "warning",
+      "level": 2,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 4,
+      "page_end": 5,
+      "char_start": 972,
+      "char_end": 2201,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_004_tbl_01",
+          "page": 4,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,134 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "safety",
+        "test_case"
+      ],
+      "measurements": [
+        {
+          "type": "value",
+          "value": 12.0,
+          "unit": "bar",
+          "source_text": "gauge indicates 12 bar.",
+          "page": 4
+        },
+        {
+          "type": "value",
+          "value": 30.0,
+          "unit": "s",
+          "source_text": "30sec.",
+          "page": 4
+        },
+        {
+          "type": "value",
+          "value": 120.0,
+          "unit": "mL",
+          "source_text": "120ml of water must be in the measur",
+          "page": 4
+        },
+        {
+          "type": "threshold",
+          "operator": "<",
+          "value": 60.0,
+          "unit": "mL",
+          "source_text": "• Should < 60 ml leak out, then the pump",
+          "page": 4
+        },
+        {
+          "type": "value",
+          "value": 60.0,
+          "unit": "mL",
+          "source_text": "• Should < 60 ml leak out, then the pump",
+          "page": 4
+        },
+        {
+          "type": "value",
+          "value": 4.0,
+          "unit": "bar",
+          "source_text": "while measuring (± 4 bar) means that",
+          "page": 4
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "text": "13) Control measuring cup: at least 60",
+          "page": 4
+        },
+        {
+          "text": "120ml of water must be in the measur",
+          "page": 4
+        },
+        {
+          "text": "while measuring (± 4 bar) means that",
+          "page": 4
+        }
+      ],
+      "steps": [
+        "• Compact brewing unit",
+        "• Hose connections",
+        "• Thermoblock",
+        "• Pump",
+        "• Self priming device 8) Switch on coffee machine.",
+        "9) After heating up, press the \"small cup\"",
+        "10) Open the valve until water begins to",
+        "11) Close the valve until the pressure",
+        "12) Carry out measurement for approx.",
+        "13) Control measuring cup: at least 60",
+        "14) Open the valve and let water flow out",
+        "• Should < 60 ml leak out, then the pump"
+      ],
+      "applicability": [],
+      "cross_references": [],
+      "text": "Check the following parts of the coffee machine for leakages:\n• Compact brewing unit\n• Hose connections\n• Thermoblock\n• Pump\n• Self priming device 8) Switch on coffee machine.\n9) After heating up, press the \"small cup\"\nbutton.\n10) Open the valve until water begins to\nflow.\n11) Close the valve until the pressure\ngauge indicates 12 bar.\nConstantly monitor the pressure\ngauge and if required readjust the\nvalve. As the temperature\nincreases, so does the pressure,\nreadjust the pressure to 12 bar\nwhen required.\n12) Carry out measurement for approx.\n30sec.\n13) Control measuring cup: at least 60\n120ml of water must be in the measur\ning cup.\n14) Open the valve and let water flow out\nof the pressure tester.\nNotices:\n• Should < 60 ml leak out, then the pump\nis defective or there is a leak in the\nwater system. • Large deviations in indicated pressure\nwhile measuring (± 4 bar) means that\nthe pump is defective.\nDangerous mains voltage inside the coffee machine!\nDo not touch any parts under voltage while checking for leakages!\nDangerous hot parts under pressure inside the coffee machine!\nDo not touch any hot/pressurized parts while checking for leakages!\nAlways wear protective goggles.\nCitiz service manual  134 FUNCTION TESTS"
+    },
+    {
+      "section_id": "sec_005",
+      "parent_id": null,
+      "title": "9.4.1 Preparations",
+      "title_normalized": "941_preparations",
+      "role": "main",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 5,
+      "page_end": 6,
+      "char_start": 2203,
+      "char_end": 2861,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_005_tbl_01",
+          "page": 5,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,135 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [],
+      "steps": [
+        "1) Remove left side panel of core unit.",
+        "2) Insert core unit back into platform.",
+        "3) Fill and insert water tank.",
+        "4) Insert connecting unit of pressure",
+        "5) Insert fixation unit of pressure adapter",
+        "6) Press down operating lever.",
+        "7) Connect pressure hose to pressure",
+        "8) Place a measuring cup under the drain"
+      ],
+      "applicability": [],
+      "cross_references": [],
+      "text": "Depending on core\nunit range, refer to\n\"Disassembly of core\nunit, Crange\" on page 91\nor \"Disassembly of core\nunit, Drange\" on page 109.\nThe pressure adapter\nmust sit firmly in the\ncapsule bay.\n1) Remove left side panel of core unit.\n2) Insert core unit back into platform.\n3) Fill and insert water tank.\n4) Insert connecting unit of pressure\nadapter into capsule bay. Push back\nsealing cone into capsule cage.\n5) Insert fixation unit of pressure adapter\ninto capsule bay.\n6) Press down operating lever.\n7) Connect pressure hose to pressure\ntester.\n8) Place a measuring cup under the drain\nhose of the pressure tester.\nCitiz service manual  135 FUNCTION TESTS"
+    },
+    {
+      "section_id": "sec_006",
+      "parent_id": null,
+      "title": "9.4.2 Test run 9) Connect mains cable.",
+      "title_normalized": "942_test_run_9_connect_mains_cable",
+      "role": "table",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 6,
+      "page_end": 7,
+      "char_start": 2863,
+      "char_end": 3538,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_006_tbl_01",
+          "page": 6,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,136 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [
+        {
+          "type": "value",
+          "value": 10.0,
+          "unit": "s",
+          "source_text": "for approximately 10 sec out of the",
+          "page": 6
+        },
+        {
+          "type": "value",
+          "value": 1619.0,
+          "unit": "bar",
+          "source_text": "between 1619bar (pressure check).",
+          "page": 6
+        },
+        {
+          "type": "value",
+          "value": 23.0,
+          "unit": "bar",
+          "source_text": "pressure exceed 23 bar, switch off",
+          "page": 6
+        },
+        {
+          "type": "value",
+          "value": 50.0,
+          "unit": "s",
+          "source_text": "than 50 sec with the valve closed.",
+          "page": 6
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "text": "between 1619bar (pressure check).",
+          "page": 6
+        }
+      ],
+      "steps": [
+        "10) Switch on coffee machine.",
+        "11) After heating up, press the \"small cup\"",
+        "12) Open the valve and let the water flow",
+        "13) Close the valve completely. The pres",
+        "14) Check all connections under pressure"
+      ],
+      "applicability": [],
+      "cross_references": [],
+      "text": "10) Switch on coffee machine.\n11) After heating up, press the \"small cup\"\nbutton.\n12) Open the valve and let the water flow\nfor approximately 10 sec out of the\ndrain hose.\n13) Close the valve completely. The pres\nsure stabilizes after increasing briefly\nbetween 1619bar (pressure check).\nThe pressure increases slowly with\nincreasing temperature. Should the\npressure exceed 23 bar, switch off\nthe coffee machine and release the\npressure by opening the valve.\nFor better visibility\nuse a flashlight.\n14) Check all connections under pressure\nfor audible and visible leaks.\nDo not run the pump for more\nthan 50 sec with the valve closed.\nCitiz service manual  136 FUNCTION TESTS"
+    },
+    {
+      "section_id": "sec_007",
+      "parent_id": null,
+      "title": "9.5 Measure coffee temperature 15)Switch off the coffee machine.",
+      "title_normalized": "95_measure_coffee_temperature_15switch_off_the_coffee_machine",
+      "role": "table",
+      "level": 2,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 7,
+      "page_end": 8,
+      "char_start": 3540,
+      "char_end": 4015,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_007_tbl_01",
+          "page": 7,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,137 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [
+        {
+          "type": "value",
+          "value": 10.0,
+          "unit": "s",
+          "source_text": "button for approximately 10 sec to pre",
+          "page": 8
+        }
+      ],
+      "acceptance_criteria": [],
+      "steps": [
+        "16)Open the valve and let water flow out",
+        "1) Switch on coffee machine.",
+        "2) Place a measuring cup on cup sup",
+        "3) After heating up, press the \"small cup\"",
+        "4) Empty measuring cup and place it",
+        "5) Insert capsule (Cosi is best suited).",
+        "6) Press the \"small cup\" button again.",
+        "7) Wait until the measuring cup contains"
+      ],
+      "applicability": [],
+      "cross_references": [],
+      "text": "16)Open the valve and let water flow out\nof the pressure tester.\n1) Switch on coffee machine.\n2) Place a measuring cup on cup sup\nport.\nCitiz service manual  137 FUNCTION TESTS\n3) After heating up, press the \"small cup\"\nbutton for approximately 10 sec to pre\nheat the coffee outlet with hot water.\n4) Empty measuring cup and place it\nback on cup support.\n5) Insert capsule (Cosi is best suited).\n6) Press the \"small cup\" button again.\n7) Wait until the measuring cup contains"
+    },
+    {
+      "section_id": "sec_008",
+      "parent_id": null,
+      "title": "20 ml of coffee.",
+      "title_normalized": "20_ml_of_coffee",
+      "role": "table",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 8,
+      "page_end": 9,
+      "char_start": 4017,
+      "char_end": 4200,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_008_tbl_01",
+          "page": 8,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,138 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [
+        {
+          "type": "tolerance",
+          "value": 86.0,
+          "tolerance": 3.0,
+          "unit": "°C",
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+          "page": 8
+        },
+        {
+          "type": "tolerance",
+          "value": 187.0,
+          "tolerance": 5.4,
+          "unit": "°F",
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+          "page": 8
+        },
+        {
+          "type": "value",
+          "value": 86.0,
+          "unit": "°C",
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+          "page": 8
+        },
+        {
+          "type": "value",
+          "value": 3.0,
+          "unit": "°C",
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+          "page": 8
+        },
+        {
+          "type": "value",
+          "value": 187.0,
+          "unit": "°F",
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+          "page": 8
+        },
+        {
+          "type": "value",
+          "value": 5.4,
+          "unit": "°F",
+          "source_text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+          "page": 8
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "text": "The coffee temperature should be",
+          "page": 8
+        },
+        {
+          "text": "86°C ± 3 °C (187 °F ± 5.4 °F).",
+          "page": 8
+        }
+      ],
+      "steps": [
+        "8) Then measure the coffee temperature"
+      ],
+      "applicability": [],
+      "cross_references": [],
+      "text": "8) Then measure the coffee temperature\napprox. 510mm under the coffee out\nlet.\nThe coffee temperature should be\n86°C ± 3 °C (187 °F ± 5.4 °F).\nCitiz service manual  138 FUNCTION TESTS"
+    },
+    {
+      "section_id": "sec_010",
+      "parent_id": null,
+      "title": "Prerequisite",
+      "title_normalized": "prerequisite",
+      "role": "table",
+      "level": 2,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 9,
+      "page_end": 9,
+      "char_start": 4202,
+      "char_end": 4322,
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "precondition",
+        "test_case"
+      ],
+      "measurements": [
+        {
+          "type": "value",
+          "value": 8.0,
+          "unit": "°C",
+          "source_text": "Use newly opened UHT, full fat or semiskimmed milk at fridge temperature (+8°C till",
+          "page": 9
+        },
+        {
+          "type": "value",
+          "value": 10.0,
+          "unit": "°C",
+          "source_text": "+10°C) for the following tests only.",
+          "page": 9
+        }
+      ],
+      "acceptance_criteria": [],
+      "steps": [],
+      "applicability": [],
+      "cross_references": [],
+      "text": "Use newly opened UHT, full fat or semiskimmed milk at fridge temperature (+8°C till\n+10°C) for the following tests only."
+    },
+    {
+      "section_id": "sec_011",
+      "parent_id": null,
+      "title": "9.6.1 Measure hot milk temperature",
+      "title_normalized": "961_measure_hot_milk_temperature",
+      "role": "table",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 9,
+      "page_end": 9,
+      "char_start": 4323,
+      "char_end": 4533,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_011_tbl_01",
+          "page": 9,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "The milk temperature should be between + 60 °C and + 70 °C (140 °F,till 158°F)."
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "measurement"
+      ],
+      "measurements": [
+        {
+          "type": "value",
+          "value": 240.0,
+          "unit": "mL",
+          "source_text": "• Prepare 240 ml hot milk in milk frother (use mixer without spring).",
+          "page": 9
+        },
+        {
+          "type": "value",
+          "value": 60.0,
+          "unit": "°C",
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
+          "page": 9
+        },
+        {
+          "type": "value",
+          "value": 70.0,
+          "unit": "°C",
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
+          "page": 9
+        },
+        {
+          "type": "value",
+          "value": 140.0,
+          "unit": "°F",
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
+          "page": 9
+        },
+        {
+          "type": "value",
+          "value": 158.0,
+          "unit": "°F",
+          "source_text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
+          "page": 9
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "text": "The milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F).",
+          "page": 9
+        }
+      ],
+      "steps": [
+        "• Prepare 240 ml hot milk in milk frother (use mixer without spring).",
+        "• Measure temperature immediately after preparation in jug."
+      ],
+      "applicability": [],
+      "cross_references": [],
+      "text": "• Prepare 240 ml hot milk in milk frother (use mixer without spring).\n• Measure temperature immediately after preparation in jug.\nThe milk temperature should be between + 60 °C and + 70 °C (140 °F  till 158°F)."
+    },
+    {
+      "section_id": "sec_012",
+      "parent_id": null,
+      "title": "9.6.2 Measure milk froth ratio",
+      "title_normalized": "962_measure_milk_froth_ratio",
+      "role": "table",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 9,
+      "page_end": 9,
+      "char_start": 4534,
+      "char_end": 4892,
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "measurement"
+      ],
+      "measurements": [
+        {
+          "type": "value",
+          "value": 120.0,
+          "unit": "mL",
+          "source_text": "• Prepare cold milk froth out of 120 ml milk in milk frother (use whisk with spring).",
+          "page": 9
+        }
+      ],
+      "acceptance_criteria": [],
+      "steps": [
+        "• Prepare cold milk froth out of 120 ml milk in milk frother (use whisk with spring).",
+        "• Empty content of milk frother into measuring beaker.",
+        "• Determine the ratio x [%] of milk froth to liquid milk with following formula:"
+      ],
+      "applicability": [],
+      "cross_references": [],
+      "text": "• Prepare cold milk froth out of 120 ml milk in milk frother (use whisk with spring).\n• Empty content of milk frother into measuring beaker.\n• Determine the ratio x [%] of milk froth to liquid milk with following formula:\nApproximate values:\ndirect after preparation.....................................................................................x = 250"
+    },
+    {
+      "section_id": "sec_013",
+      "parent_id": null,
+      "title": "60 sec after preparation....................................................................................x = 190 The disregard of this",
+      "title_normalized": "60_sec_after_preparationx_190_the_disregard_of_this",
+      "role": "main",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 9,
+      "page_end": 10,
+      "char_start": 4893,
+      "char_end": 5092,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_013_tbl_01",
+          "page": 9,
+          "caption": null,
+          "n_rows": 3,
+          "n_cols": 3,
+          "csv": "x,H 2,H 1\r\nH 1,100,́ =\r\nCitiz service manual,139 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [],
+      "steps": [],
+      "applicability": [],
+      "cross_references": [],
+      "text": "specification can\naffect the measuring\nresults.\nSpattered milk may\ncause burns. Only\nuse milk frother\nwith lid.\nx  H 2   H 1\nH 1                      100  ́ =\nCitiz service manual  139 FUNCTION TESTS"
+    },
+    {
+      "section_id": "sec_014",
+      "parent_id": null,
+      "title": "9.7 NTC temperature sensor functionality",
+      "title_normalized": "97_ntc_temperature_sensor_functionality",
+      "role": "main",
+      "level": 2,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 10,
+      "page_end": 11,
+      "char_start": 5093,
+      "char_end": 6283,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_014_tbl_01",
+          "page": 10,
+          "caption": "lowing diagram or table.",
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,140 FUNCTION TESTS"
+        }
+      ],
+      "figures": [
+        {
+          "figure_id": "sec_014_fig_01",
+          "page": 11,
+          "caption": "Graph 1........................................................................................max. resistance value"
+        },
+        {
+          "figure_id": "sec_014_fig_02",
+          "page": 11,
+          "caption": "Graph 2.........................................................................................min. resistance value"
+        }
+      ],
+      "tags": [
+        "cross_reference",
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [
+        {
+          "text": "The resistance of the NTC temperature sensor must be within a defined range, other",
+          "page": 10
+        }
+      ],
+      "steps": [
+        "1) Unplug NTC temperature sensor from",
+        "2) Remove NTC temperature sensor",
+        "3) Measure temperature of sensor body",
+        "4) Measure resistance of NTC tempera",
+        "5) Compare measuring values with fol"
+      ],
+      "applicability": [],
+      "cross_references": [
+        {
+          "page": 104,
+          "text": "from thermoblock (refer to page 104"
+        }
+      ],
+      "text": "The resistance of the NTC temperature sensor must be within a defined range, other\nwise the temperature regulation will not work properly and the coffee machine will stay/\ngo into failure mode.\nAn easy way to check the functionality of the NTC temperature sensor is to measure the\nohmic resistance at ambient temperature. With this measurement, most defect NTC\ntemperature sensors can be detected.\nAvoid contamination\nof sensor contact sur\nface during handling.\n1) Unplug NTC temperature sensor from\nelectronic control board.\n2) Remove NTC temperature sensor\nfrom thermoblock (refer to page 104\nand following).\n3) Measure temperature of sensor body\n(do not touch either temperature or\nNTC sensor by hand).\n4) Measure resistance of NTC tempera\nture sensor by connecting a multime\nter at the plug.\n5) Compare measuring values with fol\nlowing diagram or table.\nCitiz service manual  140 FUNCTION TESTS\nNTC Diagram\nNTC temperature s ensor, R/T characteristics\nGraph 1........................................................................................max. resistance value\nGraph 2.........................................................................................min. resistance value"
+    },
+    {
+      "section_id": "sec_015",
+      "parent_id": null,
+      "title": "Measurement table",
+      "title_normalized": "measurement_table",
+      "role": "main",
+      "level": 2,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 11,
+      "page_end": 11,
+      "char_start": 6285,
+      "char_end": 6380,
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "measurement"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [],
+      "steps": [],
+      "applicability": [],
+      "cross_references": [],
+      "text": "NTC temperature\n[°C] NTC temperature\n[°F] NTC min. resistance\n[kOhm] NTC max. resistance\n[kOhm]"
+    },
+    {
+      "section_id": "sec_020",
+      "parent_id": null,
+      "title": "35  95  60.90  65.86",
+      "title_normalized": "35_95_6090_6586",
+      "role": "main",
+      "level": 1,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 11,
+      "page_end": 12,
+      "char_start": 6381,
+      "char_end": 6421,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_020_tbl_01",
+          "page": 11,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,141 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [],
+      "steps": [],
+      "applicability": [],
+      "cross_references": [],
+      "text": "Citiz service manual  141 FUNCTION TESTS"
+    },
+    {
+      "section_id": "sec_022",
+      "parent_id": null,
+      "title": "9.8.1 What coffee machine has to be tested and when?",
+      "title_normalized": "981_what_coffee_machine_has_to_be_tested_and_when",
+      "role": "main",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 12,
+      "char_start": 6423,
+      "char_end": 6647,
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "applicability",
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [],
+      "steps": [],
+      "applicability": [
+        "This test is only necessary",
+        "for class 1 equipment (threewire power cord with protective earth)",
+        "for models Citiz & milk, EF 485/486",
+        "after a repair whenever a general disassembly of the platform and/or core unit was"
+      ],
+      "cross_references": [],
+      "text": "This test is only necessary\nfor class 1 equipment (threewire power cord with protective earth)\nfor models Citiz & milk, EF 485/486\nafter a repair whenever a general disassembly of the platform and/or core unit was\nperformed."
+    },
+    {
+      "section_id": "sec_023",
+      "parent_id": null,
+      "title": "9.8.2 General",
+      "title_normalized": "982_general",
+      "role": "main",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 12,
+      "char_start": 6648,
+      "char_end": 7000,
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [],
+      "steps": [],
+      "applicability": [],
+      "cross_references": [],
+      "text": "Legal regulation\nIn case of a repair/modification of the coffee machine, the repair centre is bound by law\nto protect the user/consumer by\nrestoring the regular condition of the appliance and\nperforming the respective tests according to EN/IEC 603351 “Safety of household\nand similar electrical appliances” and national regulations (e.g. DIN VDE 0701)."
+    },
+    {
+      "section_id": "sec_024",
+      "parent_id": null,
+      "title": "Description",
+      "title_normalized": "description",
+      "role": "main",
+      "level": 2,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 12,
+      "char_start": 7001,
+      "char_end": 7439,
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [
+        {
+          "text": "Protective earth continuity measurements are made between the protective earth",
+          "page": 12
+        },
+        {
+          "text": "the ground (earth) connection does not have an interruption between the plug and",
+          "page": 12
+        },
+        {
+          "text": "the permissible ground resistance of those conductive, touchable parts is less than",
+          "page": 12
+        }
+      ],
+      "steps": [],
+      "applicability": [],
+      "cross_references": [],
+      "text": "Protective earth continuity measurements are made between the protective earth\nterminal and conductive, touchable parts of the coffee machine where dangerous\nvoltage could occur if the basic insulation was to fail.\nThis test assures that\nthe ground (earth) connection does not have an interruption between the plug and\ntouchable, conductive housing parts\nthe permissible ground resistance of those conductive, touchable parts is less than"
+    },
+    {
+      "section_id": "sec_026",
+      "parent_id": null,
+      "title": "Test equipment",
+      "title_normalized": "test_equipment",
+      "role": "main",
+      "level": 2,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 12,
+      "page_end": 13,
+      "char_start": 7440,
+      "char_end": 8031,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_026_tbl_01",
+          "page": 12,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,142 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "equipment",
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [
+        {
+          "text": "tive earth continuity measurements. Detailed requirements and tolerances must be veri",
+          "page": 12
+        },
+        {
+          "text": "For legal reasons a repair or test report should be prepared and filed with following infor",
+          "page": 12
+        }
+      ],
+      "steps": [],
+      "applicability": [],
+      "cross_references": [],
+      "text": "Special test equipment is needed that complies with the regulations to perform protec\ntive earth continuity measurements. Detailed requirements and tolerances must be veri\nfied by your local authorities or measurement supplier in any case.\nFor legal reasons a repair or test report should be prepared and filed with following infor\nmation\ncustomer (name, address)\ntype and serial number of coffee machine\ndate of repair/test(s)\nperformed test(s)/measuring value(s)\nused test equipment\nsignature Ask Nespresso for\nrecommendations\nabout test equipment.\nCitiz service manual  142 FUNCTION TESTS"
+    },
+    {
+      "section_id": "sec_027",
+      "parent_id": null,
+      "title": "9.8.3 Test sequence",
+      "title_normalized": "983_test_sequence",
+      "role": "warning",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 13,
+      "page_end": 14,
+      "char_start": 8045,
+      "char_end": 8962,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_027_tbl_01",
+          "page": 13,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Test holes on bottom of Citiz / Citiz & milk / Citiz & Co,platforms"
+        },
+        {
+          "table_id": "sec_027_tbl_02",
+          "page": 13,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,143 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "safety",
+        "test_case"
+      ],
+      "measurements": [
+        {
+          "type": "value",
+          "value": 0.3,
+          "unit": "Ω",
+          "source_text": "0.3Ohm.",
+          "page": 13
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "text": "The resistance must be lower than",
+          "page": 13
+        }
+      ],
+      "steps": [
+        "1) Connect black measuring cable to",
+        "2) Switch on test equipment and select",
+        "3) Insert tip of red test probe in test hole",
+        "4) Press \"measure\" button and read off",
+        "5) Fill in measured value(s) in a test"
+      ],
+      "applicability": [],
+      "cross_references": [],
+      "text": "This test sequence is\nnot applicable for cof\nfee machines with\ntwowire power cords (with\nout ground pin).\nDanger of electrocution!\nDo not plug in the coffee machine during the protective earth continuity\ntest.\nRead and observe safety instructions in user manual of test equipment.\n1) Connect black measuring cable to\nground pin of power plug with an alli\ngator clip (example shown: Swiss\npower plug).\nSymbolic illustration\nof test equipment.\n2) Switch on test equipment and select\nprotective earth continuity test.\nThe coffee machine\nCitiz & Co has 2 test\nholes to check both\nthermoblocks.\nTest holes on bottom of Citiz / Citiz & milk / Citiz & Co  platforms\n3) Insert tip of red test probe in test hole\nand touch thermoblock.\n4) Press \"measure\" button and read off\ndisplayed resistance.\nThe resistance must be lower than\n0.3Ohm.\n5) Fill in measured value(s) in a test\nreport.\nCitiz service manual  143 FUNCTION TESTS"
+    },
+    {
+      "section_id": "sec_028",
+      "parent_id": null,
+      "title": "9.8.4 What to do if the protective earth continuity test fails",
+      "title_normalized": "984_what_to_do_if_the_protective_earth_continuity_test_fails",
+      "role": "table",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 14,
+      "page_end": 15,
+      "char_start": 8964,
+      "char_end": 9785,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_028_tbl_01",
+          "page": 14,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,144 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "cross_reference",
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [
+        {
+          "type": "value",
+          "value": 0.3,
+          "unit": "Ω",
+          "source_text": "0.3Ohm.",
+          "page": 14
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "text": "• Clean ground contact on milk frother. Measure resistance between ground contact",
+          "page": 14
+        },
+        {
+          "text": "The resistance must be lower than",
+          "page": 14
+        }
+      ],
+      "steps": [
+        "• Check/measure ground connection in platform (refer to page 75).",
+        "• Check/measure ground connection on milk frother connector (refer to page 73 and",
+        "• Clean ground contact on milk frother. Measure resistance between ground contact",
+        "1) Touch upper metallic part of milk",
+        "2) Press \"measure\" button and read off",
+        "3) Repeat measurement on another",
+        "4) Fill in measured value(s) in a test"
+      ],
+      "applicability": [],
+      "cross_references": [
+        {
+          "page": 75,
+          "text": "• Check/measure ground connection in platform (refer to page 75)."
+        },
+        {
+          "page": 73,
+          "text": "• Check/measure ground connection on milk frother connector (refer to page 73 and"
+        }
+      ],
+      "text": "• Check/measure ground connection in platform (refer to page 75).\n• Check/measure ground connection on milk frother connector (refer to page 73 and\npage 124 for wiring diagram). Replace milk frother connector if necessary.\n• Clean ground contact on milk frother. Measure resistance between ground contact\nand jug of milk frother. Replace milk frother if necessary. Do not damage\ninside coating of\nmilk frother jug with\nthe probe tip.\nAdditional test for coffee machine\nCitiz & milk:\n1) Touch upper metallic part of milk\nfrother with red test probe.\n2) Press \"measure\" button and read off\ndisplayed resistance.\n3) Repeat measurement on another\nmetallic spot of milk frother for verifica\ntion.\nThe resistance must be lower than\n0.3Ohm.\n4) Fill in measured value(s) in a test\nreport.\nCitiz service manual  144 FUNCTION TESTS"
+    },
+    {
+      "section_id": "sec_030",
+      "parent_id": null,
+      "title": "9.9.1 What coffee machines have to be tested and when?",
+      "title_normalized": "991_what_coffee_machines_have_to_be_tested_and_when",
+      "role": "main",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 15,
+      "page_end": 15,
+      "char_start": 9787,
+      "char_end": 9964,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_030_tbl_01",
+          "page": 15,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "for class 1 and 2 equipment (with/without,protective earth)"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "applicability",
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [],
+      "steps": [],
+      "applicability": [
+        "for class 1 and 2 equipment (with/without  protective earth)",
+        "after a repair whenever a general disassembly of the platform and/or core unit was"
+      ],
+      "cross_references": [],
+      "text": "This test is necessary\nfor class 1 and 2 equipment (with/without  protective earth)\nafter a repair whenever a general disassembly of the platform and/or core unit was\nperformed."
+    },
+    {
+      "section_id": "sec_031",
+      "parent_id": null,
+      "title": "9.9.2 General",
+      "title_normalized": "992_general",
+      "role": "main",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 15,
+      "page_end": 15,
+      "char_start": 9965,
+      "char_end": 10317,
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [],
+      "steps": [],
+      "applicability": [],
+      "cross_references": [],
+      "text": "Legal regulation\nIn case of a repair/modification of the coffee machine, the repair centre is bound by law\nto protect the user/consumer by\nrestoring the regular condition of the appliance and\nperforming the respective tests according to EN/IEC 603351 “Safety of household\nand similar electrical appliances” and national regulations (e.g. DIN VDE 0701)."
+    },
+    {
+      "section_id": "sec_032",
+      "parent_id": null,
+      "title": "Description",
+      "title_normalized": "description",
+      "role": "table",
+      "level": 2,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 15,
+      "page_end": 15,
+      "char_start": 10318,
+      "char_end": 10744,
+      "is_suspect": false,
+      "tables": [],
+      "figures": [],
+      "tags": [
+        "applicability",
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [
+        {
+          "type": "value",
+          "value": 500.0,
+          "unit": "V DC",
+          "source_text": "is a very dangerous test because of a high test voltage (500 V DC).",
+          "page": 15
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "text": "test voltage is applied between phase/neutral and selected parts of the coffee machine.",
+          "page": 15
+        }
+      ],
+      "steps": [],
+      "applicability": [
+        "ments after a repair,"
+      ],
+      "cross_references": [],
+      "text": "The insulation test\nassures that wiring and insulation of the coffee machine fullfill the normative require\nments after a repair,\nrates the insulation capability of the coffee machine,\nis a very dangerous test because of a high test voltage (500 V DC).\nFor the insulation test, phase and neutral wire are shunted at the power plug. Then a\ntest voltage is applied between phase/neutral and selected parts of the coffee machine."
+    },
+    {
+      "section_id": "sec_033",
+      "parent_id": null,
+      "title": "Test equipment",
+      "title_normalized": "test_equipment",
+      "role": "main",
+      "level": 2,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 15,
+      "page_end": 16,
+      "char_start": 10745,
+      "char_end": 11584,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_033_tbl_01",
+          "page": 15,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,145 FUNCTION TESTS"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "equipment",
+        "measurement",
+        "test_case"
+      ],
+      "measurements": [],
+      "acceptance_criteria": [
+        {
+          "text": "tion and withstanding voltage tests. Detailed requirements and tolerances must be veri",
+          "page": 15
+        },
+        {
+          "text": "For legal reasons a repair or test report should be prepared and filed with following infor",
+          "page": 15
+        }
+      ],
+      "steps": [],
+      "applicability": [],
+      "cross_references": [],
+      "text": "Special test equipment is needed that complies with the regulations to perform insula\ntion and withstanding voltage tests. Detailed requirements and tolerances must be veri\nfied with your local authorities or measurement supplier in any case.\nIdeally the test equipment has a national power socket for testing, so that the coffee\nmachine can plugged in directly. Otherwise a special shunt is necessary to connect the\nphase and neutral pin of the coffee machine’s power plug.\nFor legal reasons a repair or test report should be prepared and filed with following infor\nmation\ncustomer (name, address)\ntype and serial number of coffee machine\ndate of repair/test(s)\nperformed test(s)/measuring value(s), test points\nused test equipment\nsignature Ask Nespresso for\nrecommendations\nabout test equipment.\nCitiz service manual  145 FUNCTION TESTS"
+    },
+    {
+      "section_id": "sec_034",
+      "parent_id": null,
+      "title": "9.9.3 Test sequence",
+      "title_normalized": "993_test_sequence",
+      "role": "warning",
+      "level": 3,
+      "language": "en",
+      "language_confidence": 1.0,
+      "page_start": 16,
+      "page_end": 17,
+      "char_start": 11598,
+      "char_end": 13451,
+      "is_suspect": false,
+      "tables": [
+        {
+          "table_id": "sec_034_tbl_01",
+          "page": 16,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Citiz service manual,146 FUNCTION TESTS"
+        },
+        {
+          "table_id": "sec_034_tbl_02",
+          "page": 16,
+          "caption": null,
+          "n_rows": 1,
+          "n_cols": 2,
+          "csv": "Test holes on bottom of Citiz / Citiz & milk / Citiz & Co,platforms"
+        }
+      ],
+      "figures": [],
+      "tags": [
+        "measurement",
+        "safety",
+        "test_case"
+      ],
+      "measurements": [
+        {
+          "type": "value",
+          "value": 500.0,
+          "unit": "V DC",
+          "source_text": "an insulation test voltage of 500 V DC.",
+          "page": 16
+        },
+        {
+          "type": "value",
+          "value": 300.0,
+          "unit": "kΩ",
+          "source_text": "higher than 300kOhm",
+          "page": 16
+        },
+        {
+          "type": "value",
+          "value": 0.0,
+          "unit": "Ω",
+          "source_text": "(300,000Ohm).",
+          "page": 16
+        }
+      ],
+      "acceptance_criteria": [
+        {
+          "text": "The insulation resistance must be",
+          "page": 16
+        },
+        {
+          "text": "higher than 300kOhm",
+          "page": 16
+        }
+      ],
+      "steps": [
+        "1) Connect the phase and neutral pin of",
+        "2) Connect the black measuring cable to",
+        "3) Turn the ONOFF machine's main",
+        "4) Switch on test equipment and select",
+        "5) Touch closing handle with red test",
+        "6) Press \"measure\" button.",
+        "7) Read off displayed insulation resist",
+        "8) Insert tip of red test probe in test hole",
+        "9) Press \"measure\" button.",
+        "10)Read off displayed insulation resist",
+        "11)Switch off test equipment.",
+        "12)Short red with black test probe to",
+        "13)Fill in results in a test report.",
+        "1) Touch upper metallic part of milk",
+        "2) Press \"measure\" button.",
+        "3) Read off displayed insulation resist"
+      ],
+      "applicability": [],
+      "cross_references": [],
+      "text": "Danger of electrical shock/short circuit!\nDo not plug in the coffee machine during insulation test.\nDanger of electrical shock!\nDo not touch tip of test probes.\nDo not touch metallic parts of coffee machine during test.\nRead and observe safety instructions in user manual of test equipment.\nA Swiss power plug is\nshown here as an\nexample.\nUse a short circuit\nplug or special alliga\ntor clips etc. as sub\nstitute for this test adapter.\n1) Connect the phase and neutral pin of\nthe power plug together with a test\nadapter (procured by the repair\ncentre).\n2) Connect the black measuring cable to\nthe test adapter (see image).\n3) Turn the ONOFF machine's main\nswitch on position I (ON).\nSymbolic illustration\nof test equipment.\n4) Switch on test equipment and select\nan insulation test voltage of 500 V DC.\nSome test equipment\ndisplays test passed\nor failed instead of\nthe insulation resistance.\n5) Touch closing handle with red test\nprobe.\n6) Press \"measure\" button.\n7) Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300,000Ohm).\nCitiz service manual  146 FUNCTION TESTS\nThe coffee machine\nCitiz & Co has 2 test\nholes to check both\nthermoblocks.\nTest holes on bottom of Citiz / Citiz & milk / Citiz & Co  platforms\n8) Insert tip of red test probe in test hole\nand touch thermoblock.\n9) Press \"measure\" button.\n10)Read off displayed insulation resist\nance or test result.\nThe insulation resistance must be\nhigher than 300kOhm\n(300’000Ohm).\n11)Switch off test equipment.\n12)Short red with black test probe to\nmake sure that test voltage is dis\ncharged.\n13)Fill in results in a test report.\nAdditional tests for coffee machine\nCitiz & milk:\n1) Touch upper metallic part of milk\nfrother with red test probe.\n2) Press \"measure\" button.\n3) Read off displayed insulation resist\nance or test result."
+    }
+  ],
+  "extraction_constraints": {
+    "skip_patterns": [
+      "^(test\\s+report|quality\\s+check).*$",
+      "^(confidential|internal use).*",
+      "^\\s*\\d+\\s*$"
+    ],
+    "max_chars_per_section": 10000,
+    "allowed_entities": [],
+    "allowed_relations": []
+  },
+  "quality": {
+    "text_coverage_ratio": 0.895,
+    "tables_extracted": 20,
+    "figures_detected": 2,
+    "safety_blocks_count": 3,
+    "procedural_steps_count": 83,
+    "acceptance_criteria_count": 21,
+    "measurements_extracted_count": 31,
+    "applicability_clauses_count": 7,
+    "notes": "26 sections extracted"
+  },
+  "discarded_blocks": [
+    {
+      "reason": "header",
+      "text": "Test report",
+      "page": 12
+    },
+    {
+      "reason": "header",
+      "text": "Test report",
+      "page": 15
+    }
+  ]
+}

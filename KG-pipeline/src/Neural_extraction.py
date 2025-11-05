@@ -464,6 +464,19 @@ def build_extraction_prompt(
   ]
 }
 ```"""
+    elif profile_name == "testing":
+        profile_rules.append(
+            "Crea entità TestCase, SafetyNotice, Measurement, AcceptanceCriterion, Equipment, ApplicabilityClause, NormativeReference, CrossReference quando il testo lo indica."
+        )
+        profile_rules.append(
+            "Collega i TestCase con le altre entità usando relazioni disponibili (es. requires→Equipment/ApplicabilityClause, validatedBy→Measurement, constrainedBy→AcceptanceCriterion, refersTo→CrossReference, appliesTo→ApplicabilityClause)."
+        )
+        profile_rules.append(
+            "Ogni relazione deve riferirsi a ID di entità esistenti; se non sei sicuro dei riferimenti esatti, ometti la relazione."
+        )
+        profile_rules.append(
+            "Includi nel Measurement eventuali valori, intervalli o tolleranze; usa i campi nominal_value/min_value/max_value/tolerance/unit_raw quando presenti nel testo."
+        )
 
     common_rules = [
         "Rispondere solo con JSON valido, senza testo extra o commenti.",
@@ -471,6 +484,7 @@ def build_extraction_prompt(
         f"Limita le relazioni a: {allowed_relations_str}.",
         "Deduplica entità con la stessa coppia (type, name) mantenendo quella con confidence più alta.",
         "Mantieni gli ID coerenti nel formato <TIPO_ABBR>_<NUM> (es. CT_01, FM_02).",
+        "Ogni relazione DEVE avere type, from_ref, to_ref, confidence e deve riferirsi a ID di entità presenti; se non puoi determinare entrambi i riferimenti, non emettere la relazione.",
     ]
 
     all_rules = common_rules + profile_rules
@@ -485,6 +499,7 @@ Allowed relations: {allowed_relations_str}
 Rules:
 - No duplicate entities with the same (type, name).
 - Apply profile-specific constraints: {"; ".join(profile_rules) if profile_rules else "respect allowed types and relations only."}
+- Emit relations only when from_ref/to_ref point to existing entity IDs; otherwise skip them.
 
 Required JSON format:
 {{
