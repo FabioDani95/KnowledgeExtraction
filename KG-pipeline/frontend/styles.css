@@ -12,7 +12,10 @@
   --danger: #e74c3c;
   --info: #16a085;
   --light: #ecf0f1;
-  --dark: #34495e;
+  --dark: #1a1a1a;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-muted: #555555;
   --border: #bdc3c7;
 
   /* Spacing */
@@ -59,7 +62,7 @@
 body {
   font-family: var(--font-family);
   font-size: var(--font-size-md);
-  color: var(--dark);
+  color: var(--text-primary);
   background-color: #f5f7fa;
   line-height: 1.6;
 }
@@ -135,7 +138,8 @@ header nav a:hover {
 .card h2 {
   font-size: var(--font-size-lg);
   margin-bottom: var(--spacing-md);
-  color: var(--secondary);
+  color: var(--text-primary);
+  font-weight: 600;
   border-bottom: 2px solid var(--light);
   padding-bottom: var(--spacing-sm);
 }
@@ -175,7 +179,7 @@ header nav a:hover {
   display: block;
   font-weight: 600;
   margin-bottom: var(--spacing-sm);
-  color: var(--secondary);
+  color: var(--text-primary);
 }
 
 .form-group select,
@@ -231,7 +235,7 @@ header nav a:hover {
 
 .file-size {
   font-size: var(--font-size-sm);
-  color: #7f8c8d;
+  color: var(--text-muted);
 }
 
 .file-status {
@@ -265,7 +269,7 @@ header nav a:hover {
 .empty-message {
   text-align: center;
   padding: var(--spacing-xl);
-  color: #7f8c8d;
+  color: var(--text-secondary);
   font-style: italic;
 }
 
@@ -407,7 +411,8 @@ header nav a:hover {
 .filter-group h3 {
   font-size: var(--font-size-md);
   margin-bottom: var(--spacing-sm);
-  color: var(--secondary);
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .filter-checkbox {
@@ -448,7 +453,8 @@ header nav a:hover {
 
 #details-panel h3 {
   margin-bottom: var(--spacing-md);
-  color: var(--secondary);
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .detail-item {
@@ -458,7 +464,7 @@ header nav a:hover {
 }
 
 .detail-item strong {
-  color: var(--secondary);
+  color: var(--text-primary);
 }
 
 .btn-close {
@@ -504,9 +510,10 @@ header nav a:hover {
 
 .stat-label {
   font-size: var(--font-size-sm);
-  color: #7f8c8d;
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  font-weight: 600;
 }
 
 /* Toast Notifications */
@@ -613,6 +620,44 @@ header nav a:hover {
   }
 }
 
+/* Configuration Section */
+.config-group {
+  background: #f8f9fa;
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.config-group h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.config-group small {
+  display: block;
+  margin-top: var(--spacing-xs);
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.btn-info {
+  background: var(--info);
+  color: white;
+}
+
+.btn-info:hover:not(:disabled) {
+  background: #138d75;
+}
+
 /* Utility Classes */
 .text-center { text-align: center; }
 .text-right { text-align: right; }
@@ -622,6 +667,7 @@ header nav a:hover {
 .mt-sm { margin-top: var(--spacing-sm); }
 .mt-md { margin-top: var(--spacing-md); }
 .mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
 
 /* Loading Spinner */
 .spinner {
