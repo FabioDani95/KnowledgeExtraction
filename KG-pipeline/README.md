@@ -494,6 +494,49 @@ Consistent text processing:
 
 ---
 
+## Frontend Interface
+
+The pipeline now includes a **lightweight web frontend** for easy interaction with the knowledge extraction system.
+
+### Features
+
+- **📤 Document Upload**: Drag-and-drop interface for PDF files with target folder selection
+- **⚙️ Pipeline Execution**: One-click pipeline start with real-time progress tracking
+- **🕸️ Interactive Graph Visualization**: Explore the knowledge graph with Cytoscape.js
+  - Multiple layouts (force-directed, circle, grid, hierarchical)
+  - Advanced filtering by node/edge types and confidence
+  - Full-text search across entities
+  - Detail inspection panels
+- **📈 Statistics Dashboard**: KPIs, quality metrics, and coverage targets
+- **💾 Export Options**: PNG, JSON, and CSV exports
+
+### Quick Start
+
+```bash
+# Navigate to frontend directory
+cd frontend
+
+# Start web server (choose one)
+python3 -m http.server 8080
+# or
+npx http-server -p 8080
+
+# Open browser
+open http://localhost:8080
+```
+
+**Architecture:**
+- `index.html` - Main UI structure
+- `js/api.js` - Backend API adapter (mock/real modes)
+- `js/kg-viz.js` - Graph visualization (Cytoscape.js wrapper)
+- `js/app.js` - Application orchestration
+- `styles.css` - Responsive styling
+- `config.json` - Configuration (endpoints, colors, types)
+
+For detailed frontend documentation, see [`frontend/README.md`](frontend/README.md).
+
+---
+
 ## Roadmap
 
 - [x] Modular vertical pipeline architecture
@@ -504,12 +547,13 @@ Consistent text processing:
 - [x] Advanced deduplication (entities and relations)
 - [x] Semantic correction for troubleshooting relationships
 - [x] Symbolic knowledge graph merger with validation
+- [x] **Interactive web frontend for visualization and exploration**
 - [ ] Additional pipeline profiles (repair structure, testing)
 - [ ] Support for alternative AI providers (Anthropic, Azure, Google)
 - [ ] Fuzzy matching for cross-profile entity alignment
 - [ ] UCUM unit normalization
-- [ ] Interactive knowledge graph visualization
 - [ ] Export formats (RDF, Neo4j, GraphML)
+- [ ] Backend REST API for frontend integration
 
 ---
 
