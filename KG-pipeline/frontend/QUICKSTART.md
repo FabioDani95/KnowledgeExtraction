@@ -1,40 +1,50 @@
 # Quick Start Guide
 
-## 🚀 Launch the Frontend (3 steps)
+## 🚀 Launch the Frontend (2 easy options)
 
-### 1. Navigate to the frontend directory
+### Option 1: Automated Startup (Recommended)
+
+Navigate to the frontend directory and run the startup script:
+
+**Linux/Mac:**
 ```bash
 cd KG-pipeline/frontend
+./start_frontend.sh
 ```
 
-### 2. Start a web server
-
-Choose one of the following options:
-
-**Option A: Python 3** (recommended)
-```bash
-python3 -m http.server 8080
+**Windows:**
+```cmd
+cd KG-pipeline\frontend
+start_frontend.bat
 ```
 
-**Option B: Python 2**
-```bash
-python -m SimpleHTTPServer 8080
-```
+This will automatically:
+- ✅ Install required Python packages
+- ✅ Start the upload server (port 8000)
+- ✅ Start the frontend web server (port 8080)
+- ✅ Open http://localhost:8080 in your browser
 
-**Option C: Node.js**
-```bash
-npx http-server -p 8080
-```
+### Option 2: Manual Startup
 
-**Option D: PHP**
-```bash
-php -S localhost:8080
-```
+If you prefer to start servers manually:
 
-### 3. Open in your browser
-```
-http://localhost:8080
-```
+1. **Install dependencies** (first time only):
+   ```bash
+   cd KG-pipeline/frontend
+   pip install -r requirements.txt
+   ```
+
+2. **Start upload server** (in one terminal):
+   ```bash
+   python3 upload_server.py
+   ```
+
+3. **Start frontend server** (in another terminal):
+   ```bash
+   python3 -m http.server 8080
+   ```
+
+4. **Open browser**: http://localhost:8080
 
 ---
 

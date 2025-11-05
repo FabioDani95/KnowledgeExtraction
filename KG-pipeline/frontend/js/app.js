@@ -166,6 +166,20 @@ const App = (function() {
     state.viz.on('edgeSelected', handleEdgeSelected);
     state.viz.on('rendered', updateGraphStats);
 
+    // Configuration
+    document.getElementById('config-temperature').addEventListener('input', (e) => {
+      document.getElementById('temp-value').textContent = parseFloat(e.target.value).toFixed(2);
+    });
+    document.getElementById('config-min-confidence-entity').addEventListener('input', (e) => {
+      document.getElementById('min-conf-entity-value').textContent = parseFloat(e.target.value).toFixed(2);
+    });
+    document.getElementById('config-min-confidence-relation').addEventListener('input', (e) => {
+      document.getElementById('min-conf-relation-value').textContent = parseFloat(e.target.value).toFixed(2);
+    });
+    document.getElementById('save-config-btn').addEventListener('click', handleSaveConfig);
+    document.getElementById('reset-config-btn').addEventListener('click', handleResetConfig);
+    document.getElementById('export-config-btn').addEventListener('click', handleExportConfig);
+
     // Section navigation
     document.querySelectorAll('[data-section]').forEach(link => {
       link.addEventListener('click', (e) => {
@@ -176,6 +190,9 @@ const App = (function() {
 
     // Handle URL hash navigation
     window.addEventListener('hashchange', handleHashChange);
+
+    // Load saved configuration
+    loadConfiguration();
   }
 
   // ===== File Upload =====
@@ -606,6 +623,184 @@ const App = (function() {
     });
 
     return csv;
+  }
+
+  // ===== Configuration =====
+
+  function loadConfiguration() {
+    try {
+      const saved = localStorage.getItem('pipelineConfig');
+      if (saved) {
+        const config = JSON.parse(saved);
+        applyConfiguration(config);
+      } else {
+        // Load defaults
+        applyConfiguration(getDefaultConfiguration());
+      }
+    } catch (error) {
+      console.error('Error loading configuration:', error);
+      showToast(t('config_load_error'), 'error');
+    }
+  }
+
+  function getDefaultConfiguration() {
+    return {
+      neural_extractor: {
+        model: 'gpt-4o-mini',
+        temperature: 0.15,
+        max_output_tokens: 1500,
+        request_timeout: 60,
+        max_tokens_per_chunk: 1000,
+        retry_on_failure: true,
+        save_raw_outputs: true
+      },
+      validations: {
+        min_confidence_entity: 0.75,
+        min_confidence_relation: 0.75
+      },
+      enabled_pipelines: {
+        product_technical: true,
+        operation_modes: true,
+        troubleshooting: true,
+        testing: true,
+        repair_structure: true
+      }
+    };
+  }
+
+  function applyConfiguration(config) {
+    // Neural extractor
+    document.getElementById('config-model').value = config.neural_extractor.model;
+    document.getElementById('config-temperature').value = config.neural_extractor.temperature;
+    document.getElementById('temp-value').textContent = config.neural_extractor.temperature.toFixed(2);
+    document.getElementById('config-max-tokens').value = config.neural_extractor.max_output_tokens;
+    document.getElementById('config-timeout').value = config.neural_extractor.request_timeout;
+    document.getElementById('config-chunk-size').value = config.neural_extractor.max_tokens_per_chunk;
+    document.getElementById('config-retry').checked = config.neural_extractor.retry_on_failure;
+    document.getElementById('config-save-raw').checked = config.neural_extractor.save_raw_outputs;
+
+    // Validations
+    document.getElementById('config-min-confidence-entity').value = config.validations.min_confidence_entity;
+    document.getElementById('min-conf-entity-value').textContent = config.validations.min_confidence_entity.toFixed(2);
+    document.getElementById('config-min-confidence-relation').value = config.validations.min_confidence_relation;
+    document.getElementById('min-conf-relation-value').textContent = config.validations.min_confidence_relation.toFixed(2);
+
+    // Enabled pipelines
+    document.getElementById('pipeline-product').checked = config.enabled_pipelines.product_technical;
+    document.getElementById('pipeline-operations').checked = config.enabled_pipelines.operation_modes;
+    document.getElementById('pipeline-troubleshooting').checked = config.enabled_pipelines.troubleshooting;
+    document.getElementById('pipeline-testing').checked = config.enabled_pipelines.testing;
+    document.getElementById('pipeline-repair').checked = config.enabled_pipelines.repair_structure;
+  }
+
+  function getConfigurationFromUI() {
+    return {
+      neural_extractor: {
+        model: document.getElementById('config-model').value,
+        temperature: parseFloat(document.getElementById('config-temperature').value),
+        max_output_tokens: parseInt(document.getElementById('config-max-tokens').value),
+        request_timeout: parseInt(document.getElementById('config-timeout').value),
+        max_tokens_per_chunk: parseInt(document.getElementById('config-chunk-size').value),
+        retry_on_failure: document.getElementById('config-retry').checked,
+        save_raw_outputs: document.getElementById('config-save-raw').checked
+      },
+      validations: {
+        min_confidence_entity: parseFloat(document.getElementById('config-min-confidence-entity').value),
+        min_confidence_relation: parseFloat(document.getElementById('config-min-confidence-relation').value)
+      },
+      enabled_pipelines: {
+        product_technical: document.getElementById('pipeline-product').checked,
+        operation_modes: document.getElementById('pipeline-operations').checked,
+        troubleshooting: document.getElementById('pipeline-troubleshooting').checked,
+        testing: document.getElementById('pipeline-testing').checked,
+        repair_structure: document.getElementById('pipeline-repair').checked
+      }
+    };
+  }
+
+  async function handleSaveConfig() {
+    try {
+      const config = getConfigurationFromUI();
+
+      // Save to localStorage
+      localStorage.setItem('pipelineConfig', JSON.stringify(config));
+
+      // Try to save to backend if available
+      try {
+        const result = await state.api.saveConfig(config);
+        if (result.success) {
+          showToast('Configuration saved to backend and browser', 'success');
+        }
+      } catch (e) {
+        console.warn('Could not save to backend:', e);
+        showToast('Configuration saved to browser only', 'warning');
+      }
+
+      // Show success message
+      const statusDiv = document.getElementById('config-status');
+      statusDiv.style.display = 'block';
+      setTimeout(() => {
+        statusDiv.style.display = 'none';
+      }, 3000);
+
+    } catch (error) {
+      console.error('Error saving configuration:', error);
+      showToast('Failed to save configuration', 'error');
+    }
+  }
+
+  function handleResetConfig() {
+    if (confirm('Reset all configuration to default values?')) {
+      const defaults = getDefaultConfiguration();
+      applyConfiguration(defaults);
+      localStorage.setItem('pipelineConfig', JSON.stringify(defaults));
+      showToast('Configuration reset to defaults', 'success');
+    }
+  }
+
+  function handleExportConfig() {
+    const config = getConfigurationFromUI();
+
+    // Convert to YAML-like format
+    const yaml = `# Knowledge Extraction Pipeline Configuration
+# Generated: ${new Date().toISOString()}
+
+neural_extractor:
+  enabled: true
+  provider: "openai"
+  model: "${config.neural_extractor.model}"
+  temperature: ${config.neural_extractor.temperature}
+  max_output_tokens: ${config.neural_extractor.max_output_tokens}
+  request_timeout: ${config.neural_extractor.request_timeout}
+  max_tokens_per_chunk: ${config.neural_extractor.max_tokens_per_chunk}
+  retry_on_failure: ${config.neural_extractor.retry_on_failure}
+  save_raw_outputs: ${config.neural_extractor.save_raw_outputs}
+
+validations:
+  min_confidence_entity:
+    severity: warn
+    threshold: ${config.validations.min_confidence_entity}
+  min_confidence_relation:
+    severity: warn
+    threshold: ${config.validations.min_confidence_relation}
+
+pipelines:
+  product_technical:
+    enabled: ${config.enabled_pipelines.product_technical}
+  operation_modes:
+    enabled: ${config.enabled_pipelines.operation_modes}
+  troubleshooting:
+    enabled: ${config.enabled_pipelines.troubleshooting}
+  testing:
+    enabled: ${config.enabled_pipelines.testing}
+  repair_structure:
+    enabled: ${config.enabled_pipelines.repair_structure}
+`;
+
+    const blob = new Blob([yaml], { type: 'text/yaml' });
+    const url = URL.createObjectURL(blob);
+    downloadFile(url, 'config.yaml');
+    showToast('Configuration exported as YAML', 'success');
   }
 
   // ===== Navigation =====
