@@ -210,35 +210,55 @@ const API = (function() {
      */
     async function getKG() {
       if (USE_MOCK) {
-        await delay(800);
+        await delay(500);
 
-        // Try multiple paths to load actual KG from filesystem
-        const paths = [
+        // PRIORITY: Try backend server first (this loads the REAL KG)
+        try {
+          console.log('🔍 Attempting to load KG from backend server...');
+          const response = await fetch('http://localhost:8000/kg/current');
+          if (response.ok) {
+            const data = await response.json();
+            // If response has success wrapper, unwrap it
+            const kg = data.success ? data.data : data;
+            const nodeCount = kg.entities?.length || 0;
+            const edgeCount = kg.relations?.length || 0;
+            console.log(`✅ Loaded REAL KG from backend: ${nodeCount} entities, ${edgeCount} relations`);
+            return {
+              success: true,
+              data: transformKGToGraph(kg)
+            };
+          }
+        } catch (e) {
+          console.warn('❌ Backend server not available:', e.message);
+        }
+
+        // Try file paths as fallback
+        const filePaths = [
           '../output/merged_kg/kg_merged.json',
-          '../../output/merged_kg/kg_merged.json',
-          'http://localhost:8000/kg/current'
+          '../../output/merged_kg/kg_merged.json'
         ];
 
-        for (const path of paths) {
+        for (const path of filePaths) {
           try {
             const response = await fetch(path);
             if (response.ok) {
-              const data = await response.json();
-              // If response has success wrapper, unwrap it
-              const kg = data.success ? data.data : data;
-              console.log(`✅ Loaded KG from ${path}:`, kg.entities?.length || 0, 'entities');
+              const kg = await response.json();
+              const nodeCount = kg.entities?.length || 0;
+              const edgeCount = kg.relations?.length || 0;
+              console.log(`✅ Loaded REAL KG from file ${path}: ${nodeCount} entities, ${edgeCount} relations`);
               return {
                 success: true,
                 data: transformKGToGraph(kg)
               };
             }
           } catch (e) {
-            console.log(`❌ Could not load KG from ${path}:`, e.message);
+            console.log(`❌ Could not load KG from ${path}`);
           }
         }
 
-        // Fallback to larger mock data
-        console.warn('⚠️ Could not load actual KG, using expanded mock data');
+        // LAST RESORT: Use mock data
+        console.error('⚠️ WARNING: Could not load actual KG from any source. Using mock data.');
+        console.error('⚠️ Make sure upload_server.py is running: python3 frontend/upload_server.py');
         return {
           success: true,
           data: getMockKG()
@@ -297,38 +317,52 @@ const API = (function() {
     async function getStats() {
       if (USE_MOCK) {
         await delay(400);
+
+        // PRIORITY: Try to get real stats from backend server
+        try {
+          console.log('🔍 Attempting to load stats from backend server...');
+          const response = await fetch('http://localhost:8000/kg/stats');
+          if (response.ok) {
+            const data = await response.json();
+            if (data.success) {
+              console.log(`✅ Loaded REAL stats from backend: ${data.data.nodeCount} nodes, ${data.data.edgeCount} edges`);
+              return data;
+            }
+          }
+        } catch (e) {
+          console.warn('❌ Could not load stats from backend:', e.message);
+        }
+
+        // Fallback to mock stats
+        console.warn('⚠️ Using mock statistics');
         return {
           success: true,
           data: {
-            nodeCount: 156,
-            edgeCount: 234,
+            nodeCount: 44,
+            edgeCount: 28,
             entityTypes: {
-              'Product': 3,
-              'Component': 25,
-              'ComponentType': 18,
-              'ParameterSpec': 45,
-              'Unit': 12,
-              'MachineMode': 8,
-              'State': 6,
-              'FailureMode': 15,
-              'RepairAction': 12,
-              'Tool': 8,
-              'TestCase': 4
+              'Product': 2,
+              'Component': 6,
+              'ComponentType': 4,
+              'ParameterSpec': 5,
+              'Unit': 5,
+              'MachineMode': 4,
+              'State': 4,
+              'FailureMode': 4,
+              'RepairAction': 4,
+              'Tool': 3,
+              'TestCase': 3
             },
             relationTypes: {
-              'hasPart': 35,
-              'hasSpec': 42,
-              'hasUnit': 40,
-              'instanceOf': 20,
-              'precedes': 15,
-              'mitigatedBy': 18,
-              'requiresTool': 10,
-              'validatedBy': 8,
-              'constrainedBy': 6
+              'hasPart': 8,
+              'hasSpec': 6,
+              'hasUnit': 5,
+              'instanceOf': 4,
+              'precedes': 3,
+              'mitigatedBy': 2
             },
             avgEntityConfidence: 0.87,
             avgRelationConfidence: 0.83,
-            duplicatesCollapsed: 23,
             lastUpdated: new Date().toISOString()
           }
         };

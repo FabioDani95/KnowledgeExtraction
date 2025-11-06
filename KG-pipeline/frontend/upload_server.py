@@ -188,6 +188,58 @@ def health_check():
     return jsonify({'status': 'ok', 'service': 'KG Pipeline Upload Server'})
 
 
+@app.route('/kg/stats', methods=['GET'])
+def get_kg_stats():
+    """Get statistics from the knowledge graph"""
+    try:
+        kg_path = BASE_DIR / 'output' / 'merged_kg' / 'kg_merged.json'
+
+        if not kg_path.exists():
+            return jsonify({'success': False, 'error': 'KG not found'}), 404
+
+        import json
+        with open(kg_path, 'r') as f:
+            kg_data = json.load(f)
+
+        entities = kg_data.get('entities', [])
+        relations = kg_data.get('relations', [])
+
+        # Calculate entity types
+        entity_types = {}
+        for entity in entities:
+            entity_type = entity.get('type', 'Unknown')
+            entity_types[entity_type] = entity_types.get(entity_type, 0) + 1
+
+        # Calculate relation types
+        relation_types = {}
+        for relation in relations:
+            rel_type = relation.get('type', 'Unknown')
+            relation_types[rel_type] = relation_types.get(rel_type, 0) + 1
+
+        # Calculate confidence averages
+        entity_confidences = [e.get('confidence', 1.0) for e in entities]
+        relation_confidences = [r.get('confidence', 1.0) for r in relations]
+
+        avg_entity_confidence = sum(entity_confidences) / len(entity_confidences) if entity_confidences else 0.0
+        avg_relation_confidence = sum(relation_confidences) / len(relation_confidences) if relation_confidences else 0.0
+
+        return jsonify({
+            'success': True,
+            'data': {
+                'nodeCount': len(entities),
+                'edgeCount': len(relations),
+                'entityTypes': entity_types,
+                'relationTypes': relation_types,
+                'avgEntityConfidence': avg_entity_confidence,
+                'avgRelationConfidence': avg_relation_confidence,
+                'lastUpdated': kg_data.get('metadata', {}).get('created_at', 'Unknown')
+            }
+        })
+
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+
 if __name__ == '__main__':
     print("=" * 60)
     print("Knowledge Graph Pipeline - Upload Server")
